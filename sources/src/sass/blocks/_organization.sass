@@ -1,0 +1,53 @@
+.organization
+   --color: #fff
+   color: var(--color)
+   position: relative
+   &__inner
+      height: 100%
+      min-height: 800px
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      padding: var(--section-padding) var(--padding)
+      position: relative
+      z-index: var(--z-index)
+   &__logo
+      width: 121px
+   &__title
+      color: var(--color)
+   .numbers
+      &__num,
+      &__text
+         color: var(--color)
+   &__row
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      align-items: flex-end
+      justify-content: space-between
+      grid-gap: 80px
+   &__left
+      @include margin-bottom(30px)
+   &__title
+      margin-bottom: 40px
+   &__text
+      max-width: 510px
+      @include fluidFontSize(13px, 15px, 360px, 1920px, 15px)
+   @include rh($rh)
+      &__inner
+         min-height: 100vh
+   @include md
+      &__inner
+         padding: 100px var(--padding) 50px
+         min-height: auto
+         .organization--2 &
+            padding: 130px var(--padding) 130px
+      &__row
+         grid-template-columns: 1fr
+         grid-gap: 40px
+   @include sm
+      &__row
+         grid-gap: 5px
+      &__left
+         @include margin-bottom(15px)
+      &__logo
+         width: 60px

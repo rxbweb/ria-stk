@@ -1,0 +1,22 @@
+.tags
+   display: flex
+   flex-wrap: wrap
+   gap: 10px
+   &__button
+      padding: 8px 15px
+      display: inline-block
+      border-radius: var(--border-radius)
+      background: #f3f3f3
+      font-weight: 400
+      font-size: 14px
+      color: #78848f
+      white-space: nowrap
+   @include ms
+      @include scroll-x(var(--padding))
+      flex-wrap: nowrap
+      overflow-x: auto
+      -ms-overflow-style: none
+      overflow: -moz-scrollbars-none
+      &::-webkit-scrollbar
+         width: 0
+         height: 0

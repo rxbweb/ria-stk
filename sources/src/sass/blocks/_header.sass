@@ -1,0 +1,75 @@
+.header
+   background: #fff
+   &__container
+      @include border-bottom()
+   &__top
+      padding: 20px 0
+      display: flex
+      justify-content: space-between
+      gap: 47px
+   &__logo
+      display: flex
+      align-items: center
+      flex-shrink: 0
+      gap: 15px
+      img:last-of-type
+         order: 1
+      &::after
+         content: ''
+         width: 1px
+         height: 100%
+         background: #cdcdcd
+   &__manage
+      display: flex
+      align-items: center
+      flex-grow: 1
+      gap: 30px
+   &__search
+      flex-grow: 1
+   &__bottom
+      display: flex
+      align-items: center
+   &__nav
+      flex-grow: 1
+      &-list
+         display: flex
+         justify-content: space-between
+         align-items: center
+         gap: 10px
+         color: #47535E
+         font-size: 14px
+         line-height: 120%
+      &-item
+         a
+            display: block
+            padding: 17px 0
+   &__burger
+      display: block
+      width: 24px
+      height: 11px
+      margin-left: 95px
+      flex-shrink: 0
+   &__basket
+      display: flex
+      align-items: center
+      position: relative
+      &-amount
+         width: 20px
+         height: 20px
+         display: flex
+         justify-content: center
+         align-items: center
+         border-radius: 2px
+         overflow: hidden
+         background: #282828
+         text-align: center
+         color: #fff
+         font-size: 10px
+         line-height: 120%
+         position: absolute
+         right: 2px
+         top: -6px   
+   &__controls
+      display: flex
+      align-items: center
+      gap: 20px

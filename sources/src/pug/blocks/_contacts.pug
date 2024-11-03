@@ -1,0 +1,50 @@
+section.section.section--contacts
+   .section__wrapper.container
+      .section__content
+         .contacts
+            .contacts__inner
+               .contacts__row
+                  .contacts__section
+                     h2.contacts__title.title Контакты
+                     address.contacts__address.address
+                        .address__list.address__list--second
+                           .address__item
+                              .address__icon
+                                 img(src="images/address/address-location.svg", alt="иконка" width="31" height="31")
+                              .address__text 115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»
+                           a.address__item(href="mailto:editor_site@mirq.ru")
+                              .address__icon
+                                 img(src="images/address/address-email.svg", alt="иконка" width="31" height="31")
+                              .address__text editor_site@mirq.ru
+                           a.address__item(href="tel:+74957716652")
+                              .address__icon
+                                 img(src="images/address/address-phone.svg", alt="иконка" width="31" height="31")
+                              .address__text +7 (495) 771 6652
+                     .contacts__map.map
+                        
+                  .contacts__right
+                     form.contacts__form.form(action="#")
+                        .form__header
+                           h2.form__title.title Остались вопросы?
+                           p.form__text Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.
+                        .form__main
+                           .form__top
+                              .form__box
+                                 label.form__label.form__label--half
+                                    input.form__input(type="text" placeholder="Имя")
+                                 label.form__label.form__label--half
+                                    input.form__input(type="text" placeholder="Фамилия")
+                                 label.form__label
+                                    input.form__input(type="email" placeholder="E-mail")
+                                 label.form__label
+                                    textarea.form__textarea(placeholder="Текст сообщения")
+                           .form__middle
+                              .form__agree
+                                 label.form__agree-label
+                                    input(type="checkbox")
+                                    span.form__agree-checkbox
+                                    span.form__agree-text
+                                       | Я согласен с 
+                                       a(href="#") Правилами обработки и хранения персональных данных
+                           .form__bottom
+                              button.form__button.button Подписаться

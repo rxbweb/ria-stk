@@ -1,0 +1,49 @@
+.listing
+   --listing-item-width: 365px
+   display: flex
+   flex-wrap: wrap
+   gap: 50px
+   counter-reset: custom-counter
+   list-style: none
+   &__item
+      width: var(--listing-item-width)
+      flex-basis: var(--listing-item-width)
+      padding-top: 150px
+      padding-left: 15px
+      border-left: var(--border)
+      display: flex
+      flex-direction: column
+      gap: 30px
+      counter-increment: custom-counter
+      position: relative
+      &::before
+         @extend .title
+         content: counter(custom-counter, decimal-leading-zero)
+         position: absolute
+         left: 15px
+         top: 10px
+         color: #cdcdcd
+      &:nth-child(n+10)::before
+         content: counter(custom-counter)
+   &__img
+      margin-top: auto
+      @include img-cover(62%, 10px)
+   @include md
+      &__item
+         padding-top: 100px
+   @media (max-width: $ms)
+      @include scroll-x(var(--padding))
+      gap: 30px
+      &__item
+         min-width: var(--listing-item-width)
+   @include sm
+      &__item
+         gap: 20px
+   @include xs
+      --listing-item-width: 85%
+      &__item
+         padding-top: 90px
+         padding-left: 10px
+         gap: 15px
+      &__img
+         min-height: 170px

@@ -1,0 +1,30 @@
+.tabs
+   &__list
+      @include margin-bottom(15px)
+   &__btn
+      @extend .title
+      @extend .title--fourth
+      color: #67686B
+      display: flex
+      gap: 15px
+      align-items: center
+      padding: 19px 20px
+      border-radius: 10px
+      border: var(--border-red)
+      &--active
+         background: var(--accent)
+         color: #fff
+   @include md
+      &__btn
+         padding: 14px 16px
+         border-radius: 8px
+   @media (max-width: $sm)
+      &__list
+         @include scroll-x(var(--padding))
+         @include margin-bottom(0)
+         display: flex
+         gap: 15px
+      &__btn
+         padding: 9px 12px
+         white-space: nowrap
+         letter-spacing: -0.48px

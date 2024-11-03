@@ -1,0 +1,21 @@
+.services
+   &__row
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      gap: var(--gap-large)
+   &__left
+      width: 550px
+      max-width: 100%
+   &__right
+      max-width: 780px
+      flex-grow: 1
+   @include md
+      &__left
+         width: auto
+
+.section
+   &--services
+      .section
+         &__header
+            margin-bottom: var(--gap-large)

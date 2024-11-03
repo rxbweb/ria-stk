@@ -1,0 +1,40 @@
+.accordion
+   &__list
+      @include margin-bottom(20px)
+   &__item
+      padding: 0 30px
+      border-radius: 15px
+      overflow: hidden
+   &__button
+      padding: 40px 0 20px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      border-bottom: 1px solid #d9d9d9
+      &-title
+         display: flex
+         align-items: center
+         gap: 30px
+   &__content
+      @include margin-bottom(30px)
+      padding: 20px 0 40px
+   &__magazines
+      padding: 15px 20px
+      display: grid
+      grid-template-columns: repeat(3, 220px)
+      grid-gap: 25px
+      background: #fff
+      border-radius: 15px
+      &-img
+         @include img-cover(100%, 10px)
+         background: #F3F3F3
+      &-info
+         @include margin-bottom(15px)
+         padding-top: 15px
+         text-align: center
+   &__info
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      grid-gap: 45px
+      &-col
+         @include margin-bottom(20px)

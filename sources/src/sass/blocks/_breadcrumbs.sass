@@ -1,0 +1,17 @@
+.breadcrumbs
+   &--second
+      position: absolute
+      top: 30px
+   &__list
+      display: flex
+      gap: 10px
+      a
+         opacity: 0.6
+         &:not(:first-child)
+            &::before
+               content: '/'
+               margin-right: 10px
+               position: relative
+               top: -2px
+         &:last-child
+            opacity: 1

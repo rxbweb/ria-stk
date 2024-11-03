@@ -1,0 +1,31 @@
+.projects
+   position: relative
+   &__swiper
+      margin-bottom: 40px
+      overflow: hidden
+   &__img
+      @include img-cover(67%, 10px)
+      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25)
+      border: var(--border-red)
+      overflow: hidden
+   &__info
+      padding-top: 30px
+   &__title
+      text-align: center
+      color: #4e525e
+   &__bottom
+      display: flex
+      flex-direction: column
+      align-items: center
+   @include ms
+      &__swiper
+         margin-bottom: 20px
+      &__info
+         padding-top: 20px
+
+.section
+   &--projects
+      .section
+         &__header
+            @include ms
+               margin-bottom: 8px

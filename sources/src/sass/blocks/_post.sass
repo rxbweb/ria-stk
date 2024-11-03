@@ -1,0 +1,28 @@
+.post
+   &__row
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: var(--gap)
+   &__text
+      @extend .text
+   &__description
+      padding: 25px
+      background: #fff
+      border-radius: var(--border-radius-15)
+      overflow: hidden
+      &-content
+         --description-gap: 25px
+         padding-bottom: var(--description-gap)
+         border-bottom: var(--border-red)
+         @include margin-bottom(var(--description-gap))
+   @include ms
+      &__row
+         grid-template-columns: 1fr
+   @include sm
+      &__row
+         grid-gap: var(--gap-3)
+   @include xs
+      &__description
+         padding: 15px
+         &-content
+            --description-gap: 10px

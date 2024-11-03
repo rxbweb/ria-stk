@@ -1,0 +1,14 @@
+.map
+   min-height: 314px
+   border-radius: var(--border-radius-15)
+   overflow: hidden
+   position: relative
+   & > ymaps,
+   & > ymaps > ymaps
+      width: 100% !important
+      height: 100% !important
+      position: absolute
+      inset: 0
+   @include xs
+      min-height: 200px
+      height: 200px

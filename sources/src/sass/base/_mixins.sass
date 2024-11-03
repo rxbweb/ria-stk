@@ -1,0 +1,130 @@
+@mixin r($width)
+   @media only screen and (max-width: $width)
+      @content
+@mixin rh($height)
+   @media only screen and (max-height: $height)
+      @content
+
+@mixin xl
+   @media (max-width: 1440px)
+      @content
+
+@mixin lg
+   @media (max-width: 1366px)
+      @content
+
+@mixin md
+   @media (max-width: 1200px)
+      @content
+
+@mixin ms
+   @media (max-width: 991px)
+      @content
+
+@mixin sm
+   @media (max-width: 767px)
+      @content
+
+@mixin xs
+   @media (max-width: 575px)
+      @content
+
+@mixin font-face($font-name,$font-file)
+   @font-face
+      font-family: '#{$font-name}'
+      font-display: swap
+      src: url('../fonts/#{$font-file}.woff') format('woff'), url('../fonts/#{$font-file}.woff2') format('woff2')
+
+// Fluid fonts
+// See https://habr.com/post/310186/
+// Also check _layout.sass, fix for Safari is required
+
+@function strip-unit($number)
+   @if type-of($number) == 'number' and not unitless($number)
+      @return $number / ($number * 0 + 1)
+   @return $number
+@function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px)
+   $f-min: strip-unit($f-min)
+   $f-max: strip-unit($f-max)
+   $w-min: strip-unit($w-min)
+   $w-max: strip-unit($w-max)
+
+   $k: ($f-max - $f-min)/($w-max - $w-min)
+   $b: $f-min - $k * $w-min
+
+   $b: $b + $units
+
+   @return calc( #{$k} * 100vw + #{$b} )
+
+@mixin fluidFontSize($f-min, $f-max, $w-min, $w-max, $fallback: false)
+   font-size: $f-min
+   @media (min-width: $w-min)
+      @if ($fallback)
+         font-size: $fallback
+         font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px)
+   @media (min-width: $w-max)
+      font-size: $f-max
+
+@mixin margin-bottom($margin)
+   & > *
+      margin-bottom: $margin
+      &:last-child
+         margin-bottom: 0
+
+@mixin border-bottom($border-color: #D5D3CB)
+   & > *
+      border-bottom: 1px solid $border-color
+      &:last-child
+         border-bottom: 0
+
+@mixin img-cover($padding: 0, $border-radius: 0)
+   padding-bottom: $padding
+   border-radius: $border-radius
+   position: relative
+   overflow: hidden
+   img,
+   video,
+   iframe
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+      position: absolute
+      inset: 0
+
+@mixin icomoon($icon, $color:"#ffffff", $font-size: 14px)
+   &::after
+      content: $icon
+      color: $color
+      font-size: $font-size
+      font-family: 'icomoon'
+      speak: none
+      font-style: normal
+      font-weight: normal
+      font-variant: normal
+      text-transform: none
+      line-height: 1
+      -webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+      display: inline-block
+
+@mixin width-increase($side-increase: 15px)
+   width: calc(100% + 2 * $side-increase)
+   padding-left: $side-increase
+   padding-right: $side-increase
+   margin-left: calc(-1 * $side-increase)
+   margin-right: calc(-1 * $side-increase)
+
+@mixin scroll-x($side-increase: 15px)
+   width: calc(100% + 2 * $side-increase)
+   padding-left: $side-increase
+   padding-right: $side-increase
+   margin-left: calc(-1 * $side-increase)
+   margin-right: calc(-1 * $side-increase)
+   flex-wrap: nowrap
+   overflow-x: auto
+   -ms-overflow-style: none
+   overflow: -moz-scrollbars-none
+   &::-webkit-scrollbar
+      width: 0
+      height: 0

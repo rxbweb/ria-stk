@@ -1,0 +1,24 @@
+.hero
+   &__main
+      display: grid
+      grid-template-columns: 640px 1fr
+      grid-gap: 86px
+   &__info
+      @include margin-bottom(30px)
+   &__text
+      margin-bottom: 50px
+      @include margin-bottom(15px)
+   &__content
+      max-width: 100%
+   &__books
+      display: none
+      &-img
+         &-swiper
+            width: 1000px
+            max-width: 100%
+            overflow: hidden
+            .swiper
+               &-wrapper
+                  width: 100%
+                  max-width: 100%
+                  overflow: hidden
