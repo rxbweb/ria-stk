@@ -9,18 +9,16 @@
       & > *:last-child
          margin-top: auto
    &__list
+      display: grid
       &--2
-         display: grid
          grid-template-columns: repeat(2, 1fr)
-         grid-gap: 20px
+         gap: 20px
       &--3
-         display: grid
          grid-template-columns: repeat(3, 1fr)
-         grid-gap: 70px
+         gap: 70px
       &--4
-         display: grid
          grid-template-columns: repeat(4, 1fr)
-         grid-gap: var(--gap)
+         gap: var(--gap)
    &__item
       padding: 21px 15px
       display: flex
@@ -53,6 +51,7 @@
          height: 100%
    @include md
       &__list
+         &--3,
          &--4
             grid-template-columns: repeat(2, 1fr)
       &__video
@@ -64,14 +63,12 @@
          inset: auto
    @include sm
       &__list
-         &--2
-            grid-template-columns: 1fr
-            grid-gap: 0
-   @include xs
-      &__list
+         &--2,
+         &--3,
          &--4
             grid-template-columns: 1fr
-            grid-gap: 0
+            gap: 0
+   @include xs
       &__item
          padding: 17px 15px
       &__video

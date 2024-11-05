@@ -1,0 +1,65 @@
+.history
+   &__inner
+      @include margin-bottom(50px)
+   &__row
+      display: grid
+      grid-template-columns: 34% 57.35%
+      justify-content: space-between
+      gap: 3%
+   &__dates
+      display: flex
+      align-items: center
+      justify-content: space-between
+      &-btn
+         @extend .title
+         @extend .title--second
+         padding-bottom: 5px
+         color: #67686B
+         letter-spacing: -0.72px
+         position: relative
+         &--active
+            color: var(--accent)
+            &::after
+               content: ''
+               position: absolute
+               bottom: 0
+               left: 0
+               right: 0
+               height: 1px
+               background: currentColor
+   &__swiper
+      position: relative
+      overflow: hidden
+   &__info
+      @include margin-bottom(30px)
+      padding-top: 40px
+      padding-bottom: 50px
+   &__img
+      @include img-cover(55%, var(--border-radius-15))
+      position: relative
+   &__controls
+      position: absolute
+      left: 0
+      bottom: 0
+      z-index: var(--z-index)
+   @include xl
+      &__row
+         grid-template-columns: 42% 54%
+         gap: 4%
+   @include md
+      &__inner
+         @include margin-bottom(30px)
+      &__row
+         grid-template-columns: 1fr
+         gap: var(--gap)
+      &__swiper
+         @include margin-bottom(30px)
+      &__info
+         padding: 0
+         @include margin-bottom(20px)
+      &__controls
+         position: static
+   @include sm
+      &__dates
+         @include scroll-x()
+         gap: 15px

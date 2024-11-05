@@ -5,6 +5,7 @@
    border-radius: 5px
    padding: 12px 20px
    color: var(--white)
+   font-size: var(--font-size)
    line-height: 120%
    text-align: center
    white-space: nowrap
@@ -94,6 +95,8 @@
       @include fluidFontSize(16px, 48px, 360px, 1920px, 32px)
    &--fourth
       @include fluidFontSize(16px, 40px, 360px, 1920px, 32px)
+   &--fifth
+      @include fluidFontSize(16px, 24px, 360px, 1920px, 20px)
    &--red
       color: var(--accent)
    &--small
@@ -103,8 +106,9 @@
    @include margin-bottom(var(--gap-3))
 
 .badge
-   width: 40px
-   height: 40px
+   --size: 40px
+   width: var(--size)
+   height: var(--size)
    border: var(--border-red)
    border-radius: 5px
    background: #fff
@@ -115,15 +119,24 @@
    flex-shrink: 0
    img
       max-width: 100%
-      width: 65%
+      max-height: 100%
       height: auto
    @include md
-      width: 36px
-      height: 36px
+      --size: 36px
+      img
+         transform: scale(0.9)
    @include sm
-      width: 32px
-      height: 32px
+      --size: 32px
       border-radius: 3px
+      img
+         transform: scale(0.8)
       &--second
-         width: 26px
-         height: 26px
+         --size: 26px
+   &--large
+      --size: 60px
+      @include md
+         --size: 50px
+      @include sm
+         --size: 40px
+         img
+            transform: scale(0.65)

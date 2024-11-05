@@ -4,7 +4,7 @@
       background: #f0f0f0
    &__menu
       display: flex
-      gap: 36px
+      gap: 40px
    &__left
       display: flex
       flex-direction: column
@@ -12,10 +12,12 @@
       align-items: flex-start
       flex-basis: 380px
    &__nav
+      font-size: 19px
+      line-height: 105%
       &-list
          display: grid
          grid-template-columns: repeat(2, 1fr)
-         grid-gap: 148px
+         gap: 148px
       &-col
          display: flex
          flex-direction: column
@@ -23,6 +25,8 @@
          gap: 24px
    &__address
       margin-left: auto
+      flex-basis: 470px
+      padding-right: 50px
    &__bottom
       padding: 20px 0
       background: var(--body-background)
@@ -42,3 +46,15 @@
    &__copy
       font-size: 14px
       color: #4d4d4d
+   @media (max-width: 1800px)
+      display: none
+      &__address
+         padding-right: 0
+         flex-basis: 420px
+      &__nav
+         margin: 0 auto
+         &-list
+            gap: 60px
+   @media (max-width: 1600px)
+      &__menu
+         gap: 30px

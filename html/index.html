@@ -23,8 +23,752 @@
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__container container">
+          <div class="header__top"><a class="header__logo" href="/"><img src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
+            <div class="header__manage">
+              <div class="header__search search">
+                <button class="search__button"><i class="icon icon-loop"></i></button>
+                <input class="search__input" type="text" placeholder="Искать....">
+                <div class="search__select">По сайту</div>
+              </div>
+              <div class="header__select select">
+                <div class="select__input">RU</div>
+              </div>
+            </div>
+            <div class="header__socials socials">
+              <div class="socials__list"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
+              <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+            </div>
+            <div class="header__controls">
+              <div class="header__basket"><a class="button button--img" href="#"><i class="icon icon-cart"></i></a>
+                <div class="header__basket-amount">99</div>
+              </div>
+              <div class="header__login"><a class="button button--white" href="#"><i class="icon icon-user"></i>Войти</a></div>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#">Журналы</a></li>
+                <li class="header__nav-item"><a href="#">Подписка</a></li>
+                <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
+                <li class="header__nav-item"><a href="#">Электронная библиотека</a></li>
+                <li class="header__nav-item"><a href="#">Абонентский доступ</a></li>
+                <li class="header__nav-item"><a href="#">Услуги</a></li>
+                <li class="header__nav-item"><a href="#">Мероприятия</a></li>
+                <li class="header__nav-item"><a href="#">О нас</a></li>
+                <li class="header__nav-item"><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <button class="header__burger"><img src="images/icons/burger.svg" alt="открыть меню" width="24" height="11"></button>
+          </div>
+        </div>
+      </div>
+    </header>
     <main class="main">
-    </main><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=5e6f3718-a525-41b0-832c-11d7f6b0f8a4" type="text/javascript"></script>
+      <section class="section section--border section--interest">
+        <div class="section__wrapper container">
+          <div class="section__header">
+            <div class="section__header-row">
+              <h2 class="section__header-title">Что вас интересует</h2>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="interest">
+              <div class="interest__inner">
+                <div class="interest__main">
+                  <div class="interest__left">
+                    <div class="interest__img"><img src="images/interest/interest.jpg" alt="картинка" width="518" height="487"></div>
+                  </div>
+                  <div class="interest__right">
+                    <div class="info__accordion accordion">
+                      <ul class="accordion__list">
+                        <li class="accordion__item"><a class="accordion__button" href="#">
+                            <div class="accordion__button-name">
+                              <div class="badge"><img src="images/badges/badge-04.svg" alt="иконка" width="24" height="24"></div>
+                              <h3 class="accordion__button-title title">Техническое регулирование</h3>
+                            </div>
+                            <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
+                          <div class="accordion__wrapper" style="display: none">
+                            <div class="accordion__content">
+                              <ul class="accordion__magazines">
+                                <li class="accordion__magazines-item">
+                                  <div class="accordion__magazines-img"><img src="images/accordion/accordion-magazine-01.jpg" alt="Cтандарты и качество"></div>
+                                  <div class="accordion__magazines-info">
+                                    <h4 class="accordion__magazines-title title title--small">Cтандарты и качество</h4>
+                                  </div>
+                                </li>
+                                <li class="accordion__magazines-item">
+                                  <div class="accordion__magazines-img"><img src="images/accordion/accordion-magazine-02.jpg" alt="Контроль и качество продукции"></div>
+                                  <div class="accordion__magazines-info">
+                                    <h4 class="accordion__magazines-title title title--small">Контроль и качество продукции</h4>
+                                  </div>
+                                </li>
+                                <li class="accordion__magazines-item">
+                                  <div class="accordion__magazines-img"><img src="images/accordion/accordion-magazine-03.jpg" alt="Business Excellence"></div>
+                                  <div class="accordion__magazines-info">
+                                    <h4 class="accordion__magazines-title title title--small">Business Excellence</h4>
+                                  </div>
+                                </li>
+                              </ul>
+                              <ul class="accordion__info">
+                                <div class="accordion__info-col">
+                                  <div class="button button--simple">Полезное</div>
+                                  <ul class="accordion__info-list">
+                                    <li><a class="button button--outline" href="#">Новости</a></li>
+                                    <li><a class="button button--outline" href="#">Статьи</a></li>
+                                    <li><a class="button button--outline" href="#">Тематические подборки</a></li>
+                                  </ul>
+                                </div>
+                                <div class="accordion__info-col">
+                                  <div class="button button--simple">Мероприятия</div>
+                                  <ul class="accordion__info-list">
+                                    <li><a class="button button--outline" href="#">Стандартизатор года — 2024</a></li>
+                                    <li><a class="button button--outline" href="#">Аккредитация. Компетентность</a></li>
+                                    <li><a class="button button--outline" href="#">ИННОПРОМ</a></li>
+                                  </ul>
+                                </div>
+                                <div class="accordion__info-col">
+                                  <div class="button button--simple">Услуги</div>
+                                  <ul class="accordion__info-list">
+                                    <li><a class="button button--outline" href="#">Реклама и продвижение</a></li>
+                                    <li><a class="button button--outline" href="#">Спецвыпуски на заказ</a></li>
+                                    <li><a class="button button--outline" href="#">Редакционно-издательские услуги</a></li>
+                                    <li><a class="button button--outline" href="#">Организация мероприятий</a></li>
+                                    <li><a class="button button--outline" href="#">Ярмарка вакансий</a></li>
+                                  </ul>
+                                </div>
+                              </ul>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="accordion__item"><a class="accordion__button" href="#">
+                            <div class="accordion__button-name">
+                              <div class="badge"><img src="images/badges/badge-05.svg" alt="иконка" width="24" height="24"></div>
+                              <h3 class="accordion__button-title title">Стандартизация</h3>
+                            </div>
+                            <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a></li>
+                        <li class="accordion__item"><a class="accordion__button" href="#">
+                            <div class="accordion__button-name">
+                              <div class="badge"><img src="images/badges/badge-06.svg" alt="иконка" width="21" height="21"></div>
+                              <h3 class="accordion__button-title title">Управление качеством</h3>
+                            </div>
+                            <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a></li>
+                        <li class="accordion__item"><a class="accordion__button" href="#">
+                            <div class="accordion__button-name">
+                              <div class="badge"><img src="images/badges/badge-07.svg" alt="иконка" width="26" height="26"></div>
+                              <h3 class="accordion__button-title title">Метрология</h3>
+                            </div>
+                            <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--news">
+        <div class="section__wrapper container">
+          <div class="section__header">
+            <div class="section__header-row">
+              <h2 class="section__header-title">Новости</h2><a class="section__header-button button button--icon" href="#"><span>Посмотреть все новости</span><i class="icon icon-arrow-small"></i></a>
+            </div>
+            <div class="section__header-bottom">
+              <div class="tags"><a class="tags__button" href="#">Название тегов длинного тега</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов длинного тега</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов длинного тега</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов длинного тега</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов длинного тега</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов длинного тега</a></div>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="news">
+              <div class="news__inner">
+                <div class="news__row">
+                  <ul class="news__list">
+                    <li class="news__item">
+                      <div class="news__left">
+                        <div class="news__img"><img src="images/news/news-01.jpg" alt="Новости"></div>
+                      </div>
+                      <div class="news__right">
+                        <div class="news__info">
+                          <div class="news__top">
+                            <p class="news__mark">Международное сотрудничество</p>
+                          </div>
+                          <h3 class="news__title title title--second">РИА «Стандарты и качество» отмечено благодарственным письмом от руководителя Росстандарта</h3><a class="news__button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="news__item">
+                      <div class="news__left">
+                        <div class="news__img"><img src="images/news/news-02.jpg" alt="Новости"></div>
+                      </div>
+                      <div class="news__right">
+                        <div class="news__info">
+                          <div class="news__top">
+                            <p class="news__date">01.01.24 14:34</p>
+                            <p class="news__mark">Международное сотрудничество</p>
+                          </div>
+                          <h3 class="news__title title title--second">В России появятся цифровые паспорта промышленной продукции</h3><a class="news__button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="news__item">
+                      <div class="news__left">
+                        <div class="news__img"><img src="images/news/news-03.jpg" alt="Новости"></div>
+                      </div>
+                      <div class="news__right">
+                        <div class="news__info">
+                          <div class="news__top">
+                            <p class="news__date">01.01.24 14:34</p>
+                            <p class="news__mark">Международное сотрудничество</p>
+                          </div>
+                          <h3 class="news__title title title--second">Опубликован новый рейтинг эффективности технических комитетов</h3><a class="news__button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <aside class="news__aside">
+                    <div class="news__articles">
+                      <ul class="news__articles-list">
+                        <li class="news__articles-item">
+                          <h3 class="news__articles-title title title--second">Обязательную маркировку медицинских перчаток введут в России с 2025 года</h3><a class="news__articles-button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                        </li>
+                        <li class="news__articles-item">
+                          <h3 class="news__articles-title title title--second">В России предложили выдавать предостережения бизнесу через систему маркировки</h3><a class="news__articles-button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                        </li>
+                        <li class="news__articles-item">
+                          <h3 class="news__articles-title title title--second">РИА «Стандарты и качество» отмечено благодарственным письмом от руководителя Росстандарта</h3><a class="news__articles-button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </aside>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section__footer"><a class="section__footer-button button button--icon" href="#"><span>Посмотреть все новости</span><i class="icon icon-arrow-small"></i></a></div>
+        </div>
+      </section>
+      <section class="section section--materials">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="materials">
+              <div class="materials__inner">
+                <div class="materials__row">
+                  <div class="materials__left">
+                    <h2 class="title">Полезные материалы</h2>
+                  </div>
+                  <div class="materials__right">
+                    <ol class="listing">
+                      <li class="listing__item">
+                        <h3 class="listing__title title title--second">Электронная библиотека</h3>
+                        <div class="listing__img"><img src="images/materials/materials-01.jpg" alt="картинка" width="350" height="222"></div>
+                      </li>
+                      <li class="listing__item">
+                        <h3 class="listing__title title title--second">Тематические подборки</h3>
+                        <div class="listing__img"><img src="images/materials/materials-02.jpg" alt="картинка" width="350" height="222"></div>
+                      </li>
+                      <li class="listing__item">
+                        <h3 class="listing__title title title--second">Глоссарий</h3>
+                        <div class="listing__img"><img src="images/materials/materials-03.jpg" alt="картинка" width="350" height="222"></div>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--projects">
+        <div class="section__bg"><img src="images/projects/projects-bg.jpg" alt="фоновая картинка" width="1920" height="858"></div>
+        <div class="section__wrapper container">
+          <div class="section__header">
+            <div class="section__header-column">
+              <h2 class="section__header-title">Спецпроекты</h2>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="projects">
+              <div class="projects__inner">
+                <div class="projects__swiper swiper js-projects-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="projects__item swiper-slide">
+                      <div class="projects__img"><img src="images/projects/projects-01.jpg" alt="картинка проекта"></div>
+                      <div class="projects__info">
+                        <h3 class="projects__title title title--second">Спецвыпуски</h3>
+                      </div>
+                    </div>
+                    <div class="projects__item swiper-slide">
+                      <div class="projects__img"><img src="images/projects/projects-02.jpg" alt="картинка проекта"></div>
+                      <div class="projects__info">
+                        <h3 class="projects__title title title--second">Зеленые проекты</h3>
+                      </div>
+                    </div>
+                    <div class="projects__item swiper-slide">
+                      <div class="projects__img"><img src="images/projects/projects-03.jpg" alt="картинка проекта"></div>
+                      <div class="projects__info">
+                        <h3 class="projects__title title title--second">Стандарты для устойчивого развития</h3>
+                      </div>
+                    </div>
+                    <div class="projects__item swiper-slide">
+                      <div class="projects__img"><img src="images/projects/projects-01.jpg" alt="картинка проекта"></div>
+                      <div class="projects__info">
+                        <h3 class="projects__title title title--second">Спецвыпуски</h3>
+                      </div>
+                    </div>
+                    <div class="projects__item swiper-slide">
+                      <div class="projects__img"><img src="images/projects/projects-02.jpg" alt="картинка проекта"></div>
+                      <div class="projects__info">
+                        <h3 class="projects__title title title--second">Зеленые проекты</h3>
+                      </div>
+                    </div>
+                    <div class="projects__item swiper-slide">
+                      <div class="projects__img"><img src="images/projects/projects-03.jpg" alt="картинка проекта"></div>
+                      <div class="projects__info">
+                        <h3 class="projects__title title title--second">Стандарты для устойчивого развития</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-controls">
+                    <button class="js-projects-prev swiper-button-prev"></button>
+                    <div class="swiper-pagination js-projects-pagination"></div>
+                    <button class="js-projects-next swiper-button-next"></button>
+                  </div>
+                </div>
+                <div class="projects__bottom"><a class="button" href="#">Посмотреть все спецпроекты</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--promo">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="promo">
+              <div class="promo__inner">
+                <ul class="promo__list">
+                  <li class="promo__item">
+                    <div class="promo__img"><img src="images/promo/promo-01.jpg" alt="картинка" width="800" height="468"></div>
+                    <div class="promo__info">
+                      <h2 class="promo__title">Стандартизатор года</h2>
+                    </div>
+                  </li>
+                  <li class="promo__item">
+                    <div class="promo__img"><img src="images/promo/promo-02.jpg" alt="картинка" width="800" height="468"></div>
+                    <div class="promo__info">
+                      <p class="promo__description">28-29 ноября 2024 года, Ярославль</p>
+                      <h2 class="promo__title">Лучший опыт - <br> для лучшей жизни</h2>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--news">
+        <div class="section__wrapper container">
+          <div class="section__header">
+            <div class="section__header-row">
+              <h2 class="section__header-title">Статьи</h2><a class="section__header-button button button--icon" href="#"><span>Посмотреть все статьи</span><i class="icon icon-arrow-small"></i></a>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="news">
+              <div class="news__inner">
+                <div class="news__row">
+                  <ul class="news__posts">
+                    <li class="news__posts-item">
+                      <div class="news__posts-img"><img src="images/news/news-articles-01.jpg" alt="картинка статьи" width="519" height="390"></div>
+                      <div class="news__posts-info">
+                        <h3 class="news__posts-title title title--second">Надежная доказательная база для оценки инвестпроектов</h3><a class="news__posts-button button button--outline" href="#"><span>Читать статью</span><i class="icon icon-arrow-small"></i></a>
+                      </div>
+                    </li>
+                    <li class="news__posts-item">
+                      <div class="news__posts-img"><img src="images/news/news-articles-02.jpg" alt="картинка статьи" width="519" height="390"></div>
+                      <div class="news__posts-info">
+                        <h3 class="news__posts-title title title--second">О нормативном регулировании в области использования атомной энергии</h3><a class="news__posts-button button button--outline" href="#"><span>Читать статью</span><i class="icon icon-arrow-small"></i></a>
+                      </div>
+                    </li>
+                  </ul>
+                  <aside class="news__aside">
+                    <div class="news__articles">
+                      <ul class="news__articles-list">
+                        <li class="news__articles-item">
+                          <h3 class="news__articles-title title title--second">Обязательную маркировку медицинских перчаток введут в России с 2025 года</h3><a class="news__articles-button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                        </li>
+                        <li class="news__articles-item">
+                          <h3 class="news__articles-title title title--second">В России предложили выдавать предостережения бизнесу через систему маркировки</h3><a class="news__articles-button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                        </li>
+                        <li class="news__articles-item">
+                          <h3 class="news__articles-title title title--second">РИА «Стандарты и качество» отмечено благодарственным письмом от руководителя Росстандарта</h3><a class="news__articles-button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </aside>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section__footer"><a class="section__footer-button button button--icon" href="#"><span>Посмотреть все статьи</span><i class="icon icon-arrow-small"></i></a></div>
+        </div>
+      </section>
+      <section class="section section--dispatch">
+        <div class="section__wrapper">
+          <div class="section__content">
+            <div class="dispatch">
+              <div class="bg-image"><img src="images/dispatch/dispatch-bg.jpg" alt="фоновая картинка" width="1920" height="750"></div>
+              <div class="dispatch__inner container">
+                <div class="dispatch__row">
+                  <form class="dispatch__form form" action="#">
+                    <div class="form__header">
+                      <h2 class="form__title title">Газета Quality News — качественные новости каждый четверг</h2>
+                      <p class="form__text">Электронная рассылка «Газета Quality News» — бесплатный новостной дайджест, результат ежедневного мониторинга деловой жизни профессионального сообщества. Подписывайтесь и будьте в курсе новостей из мира качества!</p>
+                    </div>
+                    <div class="form__main">
+                      <div class="form__top">
+                        <div class="form__box">
+                          <label class="form__label form__label--half">
+                            <input class="form__input" type="text" placeholder="Имя">
+                          </label>
+                          <label class="form__label form__label--half">
+                            <input class="form__input" type="text" placeholder="Фамилия">
+                          </label>
+                          <label class="form__label">
+                            <input class="form__input" type="email" placeholder="E-mail">
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form__middle">
+                        <div class="form__agree">
+                          <label class="form__agree-label">
+                            <input type="checkbox"><span class="form__agree-checkbox"></span><span class="form__agree-text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form__bottom">
+                        <button class="form__button button">Подписаться</button>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="dispatch__journal"><img src="images/dispatch/dispatch-journal.png" alt="журнал" width="787" height="750"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--details">
+        <div class="section__wrapper container">
+          <div class="section__header">
+            <div class="section__header-row">
+              <h2 class="section__header-title">Мероприятия</h2><a class="section__header-button button button--icon" href="#"><span>Посмотреть все мероприятия</span><i class="icon icon-arrow-small"></i></a>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="details">
+              <div class="details__inner">
+                <ul class="details__list">
+                  <li class="details__list-item">
+                    <div class="details__list-img"><img src="images/details/details-01.jpg" alt="Общероссийская общественная премия «Стандартизатор года — 2024»" width="520" height="292"></div>
+                    <div class="details__list-info">
+                      <h3 class="details__list-title title title--second">Общероссийская общественная премия «Стандартизатор года — 2024»</h3>
+                      <div class="details__list-text">
+                        <p>Место проведения: Город, Адрес, улица номер дома зала или офиса.</p>
+                      </div>
+                      <div class="details__list-tags tags"><a class="tags__button" href="#">Тег мероприятия: например выставка</a></div>
+                      <p class="details__list-date title title--third">29 октября – <br> 6 ноября 2024</p><a class="details__list-button button button--outline" href="#"><span>Подробнее</span><i class="icon icon-arrow-small"></i></a>
+                    </div>
+                  </li>
+                  <li class="details__list-item">
+                    <div class="details__list-img"><img src="images/details/details-02.jpg" alt="Форум «Российская неделя стандартизации»" width="520" height="292"></div>
+                    <div class="details__list-info">
+                      <h3 class="details__list-title title title--second">Форум «Российская неделя стандартизации»</h3>
+                      <div class="details__list-text">
+                        <p>Место проведения: Город, Адрес, улица номер дома зала или офиса.</p>
+                      </div>
+                      <div class="details__list-tags tags"><a class="tags__button" href="#">Тег мероприятия: например выставка</a></div>
+                      <p class="details__list-date title title--third">14 октября – <br> 21 октября 2024</p><a class="details__list-button button button--outline" href="#"><span>Подробнее</span><i class="icon icon-arrow-small"></i></a>
+                    </div>
+                  </li>
+                  <li class="details__list-item">
+                    <div class="details__list-img"><img src="images/details/details-03.jpg" alt="Форум «Лучший опыт для лучшей жизни»" width="520" height="292"></div>
+                    <div class="details__list-info">
+                      <h3 class="details__list-title title title--second">Форум «Лучший опыт для лучшей жизни»</h3>
+                      <div class="details__list-text">
+                        <p>Место проведения: Город, Адрес, улица номер дома зала или офиса.</p>
+                      </div>
+                      <div class="details__list-tags tags"><a class="tags__button" href="#">Тег мероприятия: например выставка</a></div>
+                      <p class="details__list-date title title--third">10 августа 2024</p><a class="details__list-button button button--outline" href="#"><span>Подробнее</span><i class="icon icon-arrow-small"></i></a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="section__footer"><a class="section__footer-button button button--icon" href="#"><span>Посмотреть все мероприятия</span><i class="icon icon-arrow-small"></i></a></div>
+        </div>
+      </section>
+      <section class="section section--numbers">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="numbers">
+              <div class="numbers__inner">
+                <div class="numbers__main">
+                  <div class="numbers__info">
+                    <h2 class="numbers__title title">О нас в цифрах</h2>
+                    <div class="numbers__video">
+                      <iframe src="https://vk.com/video_ext.php?oid=-44296658&amp;id=456239019&amp;hd=2&amp;" frameborder="0" width="980" height="584"></iframe>
+                    </div>
+                    <ul class="numbers__list">
+                      <li class="numbers__item">
+                        <div class="numbers__num title title--red">30 лет</div>
+                        <div class="numbers__text">на рынке профессиональной прессы</div>
+                      </li>
+                      <li class="numbers__item">
+                        <div class="numbers__num title title--red">2500+</div>
+                        <div class="numbers__text">авторов и экспертов со всего мира</div>
+                      </li>
+                      <li class="numbers__item">
+                        <div class="numbers__num title title--red">1500+</div>
+                        <div class="numbers__text">научных и популярных статей ежегодно</div>
+                      </li>
+                      <li class="numbers__item">
+                        <div class="numbers__num title title--red">100 000+</div>
+                        <div class="numbers__text">читателей ежемесячно</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--padding-none section--organization">
+        <div class="section__wrapper">
+          <div class="organization">
+            <div class="bg-image"><img src="images/organization/organization-bg.jpg" alt="фоновая картинка" width="1920" height="800"></div>
+            <div class="organization__inner container">
+              <div class="organization__row">
+                <div class="organization__left">
+                  <div class="organization__logo"><img src="images/icons/vok.png" alt="вок" width="121" height="121"></div>
+                  <h2 class="organization__title title">Всероссийская организация качества</h2>
+                  <p class="organization__text">Миссия Всероссийской организации качества (ВОК) — объединение усилий граждан и общественных организаций, предприятий и органов власти для содействия решению задач в области качества и конкурентоспособности отечественных продукции и услуг, формирование общероссийского движения за качество.</p>
+                  <div class="organization__bottom"><a class="button button--icon" href="#"> <span>Узнать больше</span>
+                      <div class="icon icon-arrow-small"></div></a></div>
+                </div>
+                <div class="organization__right">
+                  <div class="numbers">
+                    <ul class="numbers__list numbers__list--2">
+                      <li class="numbers__item">
+                        <div class="numbers__num title">100+</div>
+                        <div class="numbers__text">Отраслевых комитета</div>
+                      </li>
+                      <li class="numbers__item">
+                        <div class="numbers__num title">1000+</div>
+                        <div class="numbers__text">Членов организации</div>
+                      </li>
+                      <li class="numbers__item">
+                        <div class="numbers__num title">12</div>
+                        <div class="numbers__text">Отраслевых комитета</div>
+                      </li>
+                      <li class="numbers__item">
+                        <div class="numbers__num title">73</div>
+                        <div class="numbers__text">Отделения по всей России</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--partners">
+        <div class="section__bg"><img src="images/partners/partners-bg.jpg" alt="фоновая картинка" width="1920" height="612"></div>
+        <div class="section__wrapper container">
+          <div class="section__header">
+            <div class="section__header-column">
+              <h2 class="section__header-title">Наши партнеры</h2>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="partners">
+              <div class="partners__inner">
+                <div class="partners__swiper swiper js-partners-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-01.png" alt="russian register" width="169" height="120"></div>
+                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-02.png" alt="минпромторг России" width="169" height="120"></div>
+                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-03.png" alt="bureau veritas" width="169" height="120"></div>
+                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-04.png" alt="рст" width="169" height="120"></div>
+                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-05.png" alt="академия" width="169" height="120"></div>
+                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-06.png" alt="ростехсерт" width="169" height="120"></div>
+                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-01.png" alt="russian register" width="169" height="120"></div>
+                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-02.png" alt="минпромторг России" width="169" height="120"></div>
+                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-03.png" alt="bureau veritas" width="169" height="120"></div>
+                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-04.png" alt="рст" width="169" height="120"></div>
+                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-05.png" alt="академия" width="169" height="120"></div>
+                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-06.png" alt="ростехсерт" width="169" height="120"></div>
+                  </div>
+                  <div class="swiper-controls">
+                    <button class="js-partners-prev swiper-button-prev"></button>
+                    <div class="swiper-pagination js-partners-pagination"></div>
+                    <button class="js-partners-next swiper-button-next"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--services">
+        <div class="section__wrapper container">
+          <div class="section__header">
+            <div class="section__header-row section__header--border">
+              <h2 class="section__header-title">Услуги</h2>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="services">
+              <div class="services__inner">
+                <div class="services__row">
+                  <div class="services__left">
+                    <div class="tabs">
+                      <div class="tabs__list"><a class="tabs__btn tabs__btn--active" href="#">
+                          <div class="badge badge--second"><img src="images/badges/badge-01.svg" alt="иконка" width="20" height="20"></div><span>Реклама и продвижение</span></a><a class="tabs__btn" href="#">
+                          <div class="badge badge--second"><img src="images/badges/badge-02.svg" alt="иконка" width="25" height="20"></div><span>Спецвыпуски на заказ</span></a><a class="tabs__btn" href="#">
+                          <div class="badge badge--second"><img src="images/badges/badge-03.svg" alt="иконка" width="20" height="20"></div><span>Другие услуги</span></a></div>
+                    </div>
+                  </div>
+                  <div class="services__right">
+                    <ol class="listing">
+                      <li class="listing__item">
+                        <h3 class="listing__title title title--second">Реклама в журналах</h3>
+                        <div class="listing__img"><img src="images/materials/materials-01.jpg" alt="картинка" width="350" height="222"></div>
+                      </li>
+                      <li class="listing__item">
+                        <h3 class="listing__title title title--second">Реклама на сайте</h3>
+                        <div class="listing__img"><img src="images/materials/materials-02.jpg" alt="картинка" width="350" height="222"></div>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--contacts">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="contacts">
+              <div class="contacts__inner">
+                <div class="contacts__row">
+                  <div class="contacts__section">
+                    <h2 class="contacts__title title">Контакты</h2>
+                    <address class="contacts__address address">
+                      <div class="address__list address__list--second">
+                        <div class="address__item">
+                          <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
+                        </div><a class="address__item" href="mailto:editor_site@mirq.ru">
+                          <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">editor_site@mirq.ru</div></a><a class="address__item" href="tel:+74957716652">
+                          <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">+7 (495) 771 6652</div></a>
+                      </div>
+                    </address>
+                    <div class="contacts__map map"></div>
+                  </div>
+                  <div class="contacts__right">
+                    <form class="contacts__form form" action="#">
+                      <div class="form__header">
+                        <h2 class="form__title title">Остались вопросы?</h2>
+                        <p class="form__text">Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.</p>
+                      </div>
+                      <div class="form__main">
+                        <div class="form__top">
+                          <div class="form__box">
+                            <label class="form__label form__label--half">
+                              <input class="form__input" type="text" placeholder="Имя">
+                            </label>
+                            <label class="form__label form__label--half">
+                              <input class="form__input" type="text" placeholder="Фамилия">
+                            </label>
+                            <label class="form__label">
+                              <input class="form__input" type="email" placeholder="E-mail">
+                            </label>
+                            <label class="form__label">
+                              <textarea class="form__textarea" placeholder="Текст сообщения"></textarea>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__middle">
+                          <div class="form__agree">
+                            <label class="form__agree-label">
+                              <input type="checkbox"><span class="form__agree-checkbox"></span><span class="form__agree-text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__bottom">
+                          <button class="form__button button">Подписаться</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__menu container">
+            <div class="footer__left"><a class="footer__logo" href="#"><img src="images/icons/logo.svg" alt="СК — стандарты и качество"></a>
+              <div class="footer__copy"> 
+                <div>2000—2024 © РИА «Стандарты и качество»: cтандартизация, метрология, менеджмент качества.</div>
+                <div>Все права защищены и охраняются законом.</div>
+              </div>
+            </div>
+            <nav class="footer__nav">
+              <div class="footer__nav-list">
+                <div class="footer__nav-col"><a href="#">Журналы</a><a href="#">Подписка</a><a href="#">Электронная библиотека</a><a href="#">Абонементный доступ</a><a href="#">Quality News</a></div>
+                <div class="footer__nav-col"><a href="#">О нас</a><a href="#">Услуги</a><a href="#">Мероприятия</a><a href="#">Редакционная политика</a><a href="#">Авторам</a></div>
+              </div>
+            </nav>
+            <address class="footer__address address">
+              <div class="address__list"><a class="address__item" href="tel:+74957716652">
+                  <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">+7 (495) 771 6652</div></a><a class="address__item" href="mailto:editor_site@mirq.ru">
+                  <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">editor_site@mirq.ru</div></a>
+                <div class="address__item">
+                  <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
+                </div>
+                <div class="address__item">
+                  <div class="address__icon"><img src="images/address/address-time.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">
+                    <p>Пн-Чт 9:00-18:00 </p>
+                    <p>Пт 9:00-16:45</p>
+                    <p>Сб-Вс выходные</p>
+                  </div>
+                </div>
+              </div>
+            </address>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__legal container"><a href="#">Права использования электронных журналов</a><a href="#">Правила пользования сайтом</a><a href="#">Карта сайта</a><a href="#">Правила обработки и хранения персональных данных</a><a href="#">Соглашение пользователя</a><a href="#"><span>Разработка сайта</span><img src="images/icons/completo.svg" alt="completo" width="63" height="23"></a></div>
+        </div>
+      </div>
+    </footer><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=5e6f3718-a525-41b0-832c-11d7f6b0f8a4" type="text/javascript"></script>
     <script src="js/main.min.js"></script>
   </body>
 </html>

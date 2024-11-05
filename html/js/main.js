@@ -67,6 +67,23 @@ new Swiper(".js-projects-swiper", {
     }
   }
 });
+new Swiper(".js-history-swiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  effect: "fade",
+  speed: 500,
+  fadeEffect: {
+    crossFade: true
+  },
+  navigation: {
+    prevEl: ".js-history-prev",
+    nextEl: ".js-history-next"
+  },
+  pagination: {
+    el: ".js-history-pagination",
+    clickable: true
+  }
+});
 
 // new Swiper(".hero__books-img-swiper", {
 //    slidesPerView: 4,
@@ -85,7 +102,6 @@ new Swiper(".hero__books-img-swiper", {
 function init() {
   var mapElements = document.querySelectorAll('.map');
   if (mapElements.length === 0) {
-    console.log('Элементы с классом "map" не найдены.');
     return;
   }
   var markers = [{

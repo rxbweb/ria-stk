@@ -3,7 +3,20 @@
       display: grid
       grid-template-columns: var(--block-width) 1fr
       grid-gap: var(--gap)
-   &__left
    &__img
       border-radius: 15px
       overflow: hidden
+   @include md
+      &__main
+         grid-template-columns: 1fr
+      &__left
+         display: none
+
+.section
+   &--interest
+      @include md
+         margin: 0
+         padding: var(--section-padding) 0
+         &::before,
+         &::after
+            display: none

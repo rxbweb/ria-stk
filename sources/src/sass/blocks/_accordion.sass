@@ -10,11 +10,18 @@
       display: flex
       justify-content: space-between
       align-items: center
+      gap: 20px
       border-bottom: 1px solid #d9d9d9
-      &-title
+      &-name
          display: flex
          align-items: center
          gap: 30px
+      &-plus
+         width: 36px
+         height: 36px
+         flex-shrink: 0
+      &-title
+         @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)
    &__content
       @include margin-bottom(30px)
       padding: 20px 0 40px
@@ -38,3 +45,21 @@
       grid-gap: 45px
       &-col
          @include margin-bottom(20px)
+   @include md
+      &__list
+         @include margin-bottom(0)
+      &__item
+         padding: 0
+         border-radius: 0
+      &__button
+         padding: 20px 0
+         &-name
+            gap: 15px
+         &-plus
+            width: 30px
+            height: 30px
+   @include xs
+      &__button
+         &-plus
+            width: 20px
+            height: 20px

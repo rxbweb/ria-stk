@@ -1,13 +1,13 @@
 .listing
    --listing-item-width: 365px
-   display: flex
-   flex-wrap: wrap
+   display: grid
+   grid-template-columns: repeat(3, minmax(280px, var(--listing-item-width)))
    gap: 50px
    counter-reset: custom-counter
    list-style: none
+   &--2
+      grid-template-columns: repeat(2, minmax(280px, var(--listing-item-width)))
    &__item
-      width: var(--listing-item-width)
-      flex-basis: var(--listing-item-width)
       padding-top: 150px
       padding-left: 15px
       border-left: var(--border)
@@ -25,14 +25,19 @@
          color: #cdcdcd
       &:nth-child(n+10)::before
          content: counter(custom-counter)
+      .listing--icons &
+         padding-top: 0
+         &::before
+            display: none
    &__img
       margin-top: auto
-      @include img-cover(62%, 10px)
+      @include img-cover(63.5%, 10px)
    @include md
       &__item
          padding-top: 100px
    @media (max-width: $ms)
       @include scroll-x(var(--padding))
+      display: flex
       gap: 30px
       &__item
          min-width: var(--listing-item-width)
