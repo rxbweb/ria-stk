@@ -84,21 +84,50 @@ new Swiper(".js-history-swiper", {
     clickable: true
   }
 });
-
-// new Swiper(".hero__books-img-swiper", {
-//    slidesPerView: 4,
-//    spaceBetween: -30,
-//    grabCursor: true,
-//    pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//    },
-// });
-
 new Swiper(".hero__books-img-swiper", {
+  slidesPerView: "auto",
   effect: "cards",
-  grabCursor: true
+  grabCursor: true,
+  spaceBetween: 50,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  cardsEffect: {
+    slideShadows: false,
+    rotate: false,
+    perSlideOffset: 30,
+    perSlideRotate: 0
+  },
+  // on: {
+  //    init: function () {
+  //       const slides = this.slides;
+  //       slides.forEach((slide, index) => {
+  //          const content = slide.querySelector('img');
+  //          if (content) {
+  //             content.style.transform = `scale(${1 - index * 0.1})`;
+  //           }
+  //       });
+  //    },
+  // },
+  on: {
+    init: function init() {
+      applyScale(this);
+    },
+    slideChange: function slideChange() {
+      applyScale(this);
+    }
+  }
 });
+function applyScale(swiper) {
+  var slides = swiper.slides;
+  slides.forEach(function (slide, index) {
+    var content = slide.querySelector('img');
+    if (content) {
+      content.style.transform = "scale(".concat(1 - index * 0.1, ")");
+    }
+  });
+}
 function init() {
   var mapElements = document.querySelectorAll('.map');
   if (mapElements.length === 0) {

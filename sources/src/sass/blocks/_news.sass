@@ -7,10 +7,10 @@
    &__list
       border-top: var(--border)
    &__item
+      @extend .bottom-border
       min-height: 220px
       padding: 20px 0
       display: flex
-      border-bottom: var(--border)
    &__left
       min-width: 380px
       width: 380px
@@ -73,9 +73,8 @@
       grid-template-columns: repeat(2, 1fr)
       grid-gap: var(--gap)
       &-item
+         @extend .horizontal-border
          padding: 30px 0
-         border-top: var(--border)
-         border-bottom: var(--border)
          display: flex
          flex-direction: column
       &-img

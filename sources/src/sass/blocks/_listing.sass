@@ -8,14 +8,17 @@
    &--2
       grid-template-columns: repeat(2, minmax(280px, var(--listing-item-width)))
    &__item
+      @extend .left-border
       padding-top: 150px
-      padding-left: 15px
-      border-left: var(--border)
       display: flex
       flex-direction: column
       gap: 30px
       counter-increment: custom-counter
       position: relative
+      &:hover,
+      &:focus
+         &::before
+            color: var(--accent)
       &::before
          @extend .title
          content: counter(custom-counter, decimal-leading-zero)
@@ -23,6 +26,7 @@
          left: 15px
          top: 10px
          color: #cdcdcd
+         transition: all var(--duration) ease
       &:nth-child(n+10)::before
          content: counter(custom-counter)
       .listing--icons &

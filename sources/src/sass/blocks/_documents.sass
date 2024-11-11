@@ -4,13 +4,20 @@
       max-width: 1080px
       margin-left: auto
    &__link
+      @extend .title--second
+      @extend .bottom-border
       min-height: 108px
       padding: 30px 0
       display: flex
       align-items: center
       justify-content: space-between
       gap: 20px
-      border-bottom: 1px solid #cdcdcd
+      &:hover,
+      &:focus
+         .documents
+            &__icon
+               background: var(--accent)
+               color: #fff
    &__icon
       --size: 48px
       width: var(--size)
@@ -22,6 +29,7 @@
       flex-shrink: 0
       border: var(--border-red)
       color: var(--accent)
+      transition: var(--transition)
    @include md
       &__icon
          --size: 40px
@@ -33,3 +41,4 @@
    @include xs
       &__icon
          --size: 28px
+         font-size: 12px

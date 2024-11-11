@@ -45,6 +45,20 @@
       grid-gap: 45px
       &-col
          @include margin-bottom(20px)
+      &-list
+         @include margin-bottom(15px)
+      &-button
+         @extend .button--icon
+         width: 100%
+         display: flex
+         justify-content: space-between
+         align-items: center
+         padding-bottom: 4px
+         border-bottom: 1px solid #cdcdcd
+         .icon
+            width: 20px
+            height: 20px
+            font-size: 10px
    @include md
       &__list
          @include margin-bottom(0)

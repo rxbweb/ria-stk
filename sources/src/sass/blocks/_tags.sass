@@ -11,6 +11,11 @@
       font-size: 14px
       color: #78848f
       white-space: nowrap
+      transition: all var(--duration) ease
+      &:hover,
+      &:focus
+         background: #ffefef
+         color: var(--accent)
    @include ms
       @include scroll-x(var(--padding))
       flex-wrap: nowrap

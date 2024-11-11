@@ -22,6 +22,8 @@ $rh: 768px
    --white: #ffffff
    --black: #191c23
    --gray: #67686b
+   --hover-color: #9E1C18
+   --border-color: #d5d3cb
 
    --body-background: #FAFAFA
 
@@ -31,7 +33,7 @@ $rh: 768px
    --font-size: 16px
 
 
-   --border: 1px solid #d5d3cb
+   --border: 1px solid var(--border-color)
    --border-red: 1px solid var(--accent)
    --border-radius: 5px
    --border-radius-10: 10px
@@ -47,6 +49,8 @@ $rh: 768px
    --block-width: 520px
 
    --z-index: 5
+   --duration: .3s
+   --transition: all var(--duration) ease
 
    @media (max-width: $lg)
       --section-padding: 60px

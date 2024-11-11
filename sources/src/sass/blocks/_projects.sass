@@ -8,6 +8,26 @@
       box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25)
       border: var(--border-red)
       overflow: hidden
+      img
+         transition: all var(--duration) ease
+      &:hover,
+      &:focus
+         img
+            filter: grayscale(100%)
+         .projects
+            &__panel
+               opacity: 1
+   &__panel
+      position: absolute
+      z-index: var(--z-index)
+      inset: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 10px
+      opacity: 0
+      transition: all var(--duration) ease
+      background: rgba(#000, 0.5)
    &__info
       padding-top: 30px
    &__title

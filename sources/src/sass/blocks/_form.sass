@@ -39,6 +39,7 @@
       font-weight: 400
    &__agree
       color: #47535E
+      user-select: none
       input
          display: none
       a
@@ -49,12 +50,18 @@
          gap: 10px
          cursor: pointer
       &-checkbox
-         width: 22px
-         height: 22px
+         width: 20px
+         height: 20px
          margin-top: -2px
          flex-shrink: 0
          border: var(--border-red)
-         border-radius: 4px
+         border-radius: 5px
+         display: flex
+         justify-content: center
+         align-items: center
+         @include icomoon('\e90b', #fff, 8px)
+         input:checked ~ &
+            background: var(--accent)
    @include lg
       padding: 30px
       &__box

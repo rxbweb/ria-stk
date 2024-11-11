@@ -46,6 +46,12 @@
          flex-shrink: 0
          color: var(--accent)
          background: #fff
+         transition: all var(--duration) ease
+         &:hover,
+         &:focus
+            background: var(--accent)
+            &::after
+               color: #fff
          &::after
             font-size: 24px
    @include ms

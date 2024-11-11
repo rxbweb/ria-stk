@@ -1,19 +1,35 @@
 .details
    &__list
       border-top: var(--border)
-      &-item
+      &-box
+         @extend .bottom-border
          min-height: 342px
          padding: 25px 0
          padding-left: 25.6%
          display: flex
          gap: var(--gap)
-         border-bottom: var(--border)
          position: relative
          overflow: hidden
+         &:hover,
+         &:focus
+            .details
+               &__list
+                  &-date
+                     color: var(--accent)
+                  &-info
+                     .button
+                        .icon
+                           background: var(--accent)
+                           color: #fff
+                  &-img
+                     img
+                        transform: scale(1.1)
       &-img
          @include img-cover(20%, var(--border-radius-15))
          width: 42.7%
          z-index: 5
+         img
+            transition: var(--transition)
       &-info
          width: 45%
          max-width: 540px
@@ -31,9 +47,10 @@
          left: 0
          top: 25px
          color: #cdcdcd
+         transition: var(--transition)
    @include md
       &__list
-         &-item
+         &-box
             min-height: 300px
             padding-left: 0
          &-img,
@@ -51,7 +68,7 @@
             order: -2
    @include sm
       &__list
-         &-item
+         &-box
             padding: 25px 0 15px
             min-height: auto
             flex-direction: column
