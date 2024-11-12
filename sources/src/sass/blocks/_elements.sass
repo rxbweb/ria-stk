@@ -98,38 +98,36 @@
    color: var(--black)
    font-family: var(--second-font-family)
    &--main
-      @extend .title
       @include fluidFontSize(38px, 86px, 360px, 1920px, 52px)
    &--second
-      @extend .title
       @include fluidFontSize(16px, 24px, 360px, 1920px, 20px)
       line-height: 140%
       letter-spacing: -0.03em
    &--third
-      @extend .title
       @include fluidFontSize(16px, 48px, 360px, 1920px, 32px)
    &--fourth
-      @extend .title
       @include fluidFontSize(16px, 40px, 360px, 1920px, 32px)
    &--fifth
-      @extend .title
       @include fluidFontSize(16px, 24px, 360px, 1920px, 20px)
    &--red
-      @extend .title
       color: var(--accent)
    &--small
-      @extend .title
       @include fluidFontSize(16px, 16px, 360px, 1920px, 16px)
 
 .text
    @include margin-bottom(var(--gap-3))
+
+.fz-14
+   font-size: 14px
+   @include xs
+      font-size: 13px
 
 .badge
    --size: 40px
    width: var(--size)
    height: var(--size)
    border: var(--border-red)
-   border-radius: 5px
+   border-radius: var(--border-radius)
    background: #fff
    overflow: hidden
    display: flex
@@ -159,6 +157,9 @@
          --size: 40px
          img
             transform: scale(0.65)
+   &--label
+      width: 44px
+      height: 54px
 
 .left-border
    padding-left: 15px

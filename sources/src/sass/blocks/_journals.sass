@@ -1,0 +1,30 @@
+.journals
+   &__list
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      grid-gap: var(--gap)
+   &__item
+      padding: var(--gap)
+      background: url('../images/journals/journals-bg.jpg') no-repeat center / cover
+      border-radius: 30px
+      overflow: hidden
+   &__top
+      width: 100%
+      max-width: 240px
+      margin: 0 auto
+   &__img
+      @include img-cover(142%)
+      border-radius: var(--border-radius)
+      overflow: hidden
+   &__name
+      @extend .title
+      @extend .title--second
+   &__info
+      padding-top: 20px
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 25px
+   &__link
+      @extend .button
+      @extend .button--outline

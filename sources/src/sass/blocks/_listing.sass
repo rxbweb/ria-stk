@@ -1,12 +1,26 @@
 .listing
    --listing-item-width: 365px
-   display: grid
-   grid-template-columns: repeat(3, minmax(280px, var(--listing-item-width)))
-   gap: 50px
-   counter-reset: custom-counter
-   list-style: none
-   &--2
-      grid-template-columns: repeat(2, minmax(280px, var(--listing-item-width)))
+   &__row
+      display: flex
+      justify-content: space-between
+      gap: var(--gap)
+   &__aside
+      max-width: 550px
+   &__content
+      flex-grow: 1
+      flex-shrink: 0
+      display: flex
+      justify-content: flex-end
+   &__list
+      display: grid
+      grid-template-columns: repeat(3, minmax(280px, var(--listing-item-width)))
+      gap: 50px
+      counter-reset: custom-counter
+      list-style: none
+      &--2
+         grid-template-columns: repeat(2, minmax(280px, var(--listing-item-width)))
+      &--4
+         grid-template-columns: repeat(4, minmax(280px, var(--listing-item-width)))
    &__item
       @extend .left-border
       padding-top: 150px
@@ -29,20 +43,26 @@
          transition: all var(--duration) ease
       &:nth-child(n+10)::before
          content: counter(custom-counter)
-      .listing--icons &
+      .listing__list--icons &
          padding-top: 0
          &::before
             display: none
    &__img
       margin-top: auto
       @include img-cover(63.5%, 10px)
+   &__title
+      @extend .title
+      @extend .title--second
    @include md
+      &__row
+         flex-direction: column
       &__item
          padding-top: 100px
    @media (max-width: $ms)
-      @include scroll-x(var(--padding))
-      display: flex
-      gap: 30px
+      &__list
+         @include scroll-x(var(--padding))
+         display: flex
+         gap: 30px
       &__item
          min-width: var(--listing-item-width)
    @include sm

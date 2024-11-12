@@ -41,13 +41,22 @@
          color: #67686B
       &-button
          margin-top: auto
-      &-date
+      &-description
          width: 21.5%
          position: absolute
          left: 0
          top: 25px
          color: #cdcdcd
          transition: var(--transition)
+      &--2
+         @include ol()
+         .details
+            &__list
+               &-item
+                  &::before
+                     @extend .details__list-description
+                     @extend .title
+                     @extend .title--third
    @include md
       &__list
          &-box

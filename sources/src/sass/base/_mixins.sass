@@ -129,3 +129,31 @@
       width: 0
       height: 0
 
+@mixin ol($pseudo: 'before')
+   list-style-type: none
+   counter-reset: num
+   li
+      position: relative
+      @if $pseudo == 'before'
+         &::before
+            content: counter(num)
+            counter-increment: num
+            display: inline-block
+            position: absolute
+         &:nth-child(-n+9)::before
+            content: '0' counter(num)
+      @else
+         &::after
+            content: counter(num)
+            counter-increment: num
+            display: inline-block
+            position: absolute
+         &:nth-child(-n+9)::after
+            content: '0' counter(num)
+
+@mixin align-block()
+   display: flex
+   flex-direction: column
+   & > *
+      &:last-child
+         margin-top: auto
