@@ -1,0 +1,38 @@
+.authors
+   &__list
+      display: grid
+      grid-template-columns: repeat(6, 1fr)
+      grid-gap: 20px
+   &__item
+      display: flex
+      flex-direction: column
+   &__top
+      position: relative
+   &__label
+      position: absolute
+      top: 15px
+      left: 15px
+      z-index: var(--z-index)
+   &__img
+      border: 1px solid #c7c7c7
+      flex-shrink: 0
+      @include img-cover(120%, var(--border-radius-10))
+   &__info
+      padding-top: 20px
+      flex-grow: 1
+      @include align-block()
+      @include margin-bottom(20px)
+   &__description
+      margin-bottom: 15px
+      @extend .fz-14
+   &__name
+      @extend .title
+      @extend .title--second
+   @media (max-width: 1365px)
+      &__list
+         grid-template-columns: repeat(3, 1fr)
+   @include sm
+      &__list
+         display: flex
+      &__item
+         min-width: 290px
