@@ -160,3 +160,49 @@ if (typeof ymaps !== 'undefined') {
 } else {
   console.log('Яндекс карты не подключены.');
 }
+document.addEventListener('DOMContentLoaded', function () {
+  var navList = document.querySelector('.header__nav-list');
+  var wrapper = document.querySelector('.header__wrapper');
+  if (!navList || !wrapper) {
+    console.error('Required elements are missing.');
+    return;
+  }
+  var navItems = Array.from(navList.querySelectorAll('.header__nav-item'));
+  if (navItems.length === 0) {
+    console.error('No navigation items found.');
+    return;
+  }
+  function checkOverflow() {
+    // Возвращаем все элементы обратно в navList для повторной проверки
+    while (wrapper.firstChild) {
+      navList.appendChild(wrapper.firstChild);
+    }
+    var overflow = false;
+    var currentItems = Array.from(navList.querySelectorAll('.header__nav-item'));
+    currentItems.forEach(function (item) {
+      console.log('navList.scrollWidth ', navList.scrollWidth);
+      console.log('navList.clientWidth ', navList.clientWidth);
+      if (navList.scrollWidth > navList.clientWidth) {
+        overflow = true;
+        wrapper.appendChild(item);
+      }
+    });
+    if (overflow) {
+      // wrapper.style.display = 'block';
+    } else {
+      wrapper.style.display = 'none';
+    }
+  }
+  checkOverflow();
+  window.addEventListener('resize', checkOverflow);
+});
+$(document).ready(function () {
+  $('.accordion__button').on('click', function (e) {
+    e.preventDefault();
+    var $wrapper = $(this).next('.accordion__wrapper');
+    if ($wrapper.length) {
+      $wrapper.slideToggle(300);
+      $(this).parent('.accordion__item').toggleClass('is-active');
+    }
+  });
+});

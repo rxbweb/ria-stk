@@ -3,6 +3,7 @@
    font-size: 15px
    line-height: 120%
    &__input
+      @extend input
       padding: 13px 18px
       padding-right: 38px
       height: 100%
@@ -19,3 +20,10 @@
          right: 18px
          top: 50%
          transform: translateY(-50%)
+   @include sm
+      &__input
+         padding: 8px 10px
+         padding-right: 31px
+         line-height: 100%
+         &::after
+            right: 11px

@@ -26,7 +26,7 @@
     <header class="header">
       <div class="header__inner">
         <div class="header__container container">
-          <div class="header__top"><a class="header__logo" href="/"><img src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
+          <div class="header__top"><a class="header__logo" href="/"><img class="header__logo-main" src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img class="header__logo-vok" src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
             <div class="header__manage">
               <div class="header__search search">
                 <button class="search__button"><i class="icon icon-loop"></i></button>
@@ -38,14 +38,14 @@
               </div>
             </div>
             <div class="header__socials socials">
-              <div class="socials__list"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
+              <div class="socials__list socials__list--first"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
               <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
             </div>
             <div class="header__controls">
               <div class="header__basket"><a class="button button--img" href="#"><i class="icon icon-cart"></i></a>
                 <div class="header__basket-amount">99</div>
               </div>
-              <div class="header__login"><a class="button button--white" href="#"><i class="icon icon-user"></i>Войти</a></div>
+              <div class="header__login"><a class="button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a></div>
             </div>
           </div>
           <div class="header__bottom">
@@ -64,9 +64,44 @@
             </nav>
             <button class="header__burger"><img src="images/icons/burger.svg" alt="открыть меню" width="24" height="11"></button>
           </div>
+          <div class="header__wrapper"></div>
         </div>
       </div>
     </header>
+    <div class="menu">
+      <div class="menu__inner">
+        <div class="menu__container container">
+          <div class="menu__manage">
+            <div class="menu__search search">
+              <button class="search__button"><i class="icon icon-loop"></i></button>
+              <input class="search__input" type="text" placeholder="Искать....">
+              <div class="search__select">По сайту</div>
+            </div>
+            <div class="menu__select select">
+              <div class="select__input">RU</div>
+            </div>
+          </div>
+          <nav class="menu__nav">
+            <ul class="menu__nav-list">
+              <li><a href="#">Подписка</a></li>
+              <li><a href="#">Журналы</a></li>
+              <li><a href="#">Спецвыпуски</a></li>
+              <li><a href="#">Электронная библиотека</a></li>
+              <li><a href="#">Абонементный доступ</a></li>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Мероприятия</a></li>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="menu__logo"><img src="images/icons/vok.png" alt="вок" width="48" height="48"></div>
+          <div class="menu__socials socials">
+            <div class="socials__list"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
+            <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <main class="main">
       <section class="section">
         <div class="section__wrapper container">
