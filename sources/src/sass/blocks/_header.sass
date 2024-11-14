@@ -1,4 +1,5 @@
 .header
+   display: none
    background: #fff
    &__container
       @include border-bottom()
@@ -12,6 +13,10 @@
       align-items: center
       flex-shrink: 0
       gap: 15px
+      &-main
+         width: 178px
+      &-vok
+         width: 48px
       img:last-of-type
          order: 1
       &::after
@@ -26,29 +31,6 @@
       gap: 30px
    &__search
       flex-grow: 1
-   &__bottom
-      display: flex
-      align-items: center
-   &__nav
-      flex-grow: 1
-      &-list
-         display: flex
-         justify-content: space-between
-         align-items: center
-         gap: 10px
-         color: #47535E
-         font-size: 14px
-         line-height: 120%
-      &-item
-         a
-            display: block
-            padding: 17px 0
-   &__burger
-      display: block
-      width: 24px
-      height: 11px
-      margin-left: 95px
-      flex-shrink: 0
    &__basket
       display: flex
       align-items: center
@@ -73,5 +55,51 @@
       display: flex
       align-items: center
       gap: 20px
-   @media screen and (max-width: 1800px)
+   &__bottom
+      display: flex
+      align-items: center
+   &__nav
+      max-width: calc(100% - 120px)
+      flex-grow: 1
+      &-list
+         display: flex
+         justify-content: space-between
+         align-items: center
+         gap: 20px
+         color: #47535E
+         font-size: 14px
+         line-height: 120%
+      &-item
+         a
+            display: block
+            padding: 17px 0
+            white-space: nowrap
+   &__burger
+      display: block
+      width: 24px
+      height: 11px
+      margin-left: 95px
+      flex-shrink: 0
+   &__wrapper
       display: none
+   @media (max-width: 1600px)
+      &__top
+         gap: 30px
+      &__socials
+         .socials
+            &__list
+               &--first
+                  display: none
+   @include xl
+      &__nav
+         max-width: calc(100% - 85px)
+      &__burger
+         margin-left: 60px
+   @media (max-width: 1365px)
+      &__socials
+         display: none
+   @include ms
+      &__login
+         .button
+            span
+               display: none

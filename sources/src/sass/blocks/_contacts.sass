@@ -3,10 +3,10 @@
       padding-top: 90px
       border-top: var(--border)
    &__row
-      --grid-gap: 65px
+      --contacts-gap: 65px
       display: grid
-      grid-template-columns: calc(52% - var(--grid-gap)) 48%
-      grid-gap: var(--grid-gap)
+      grid-template-columns: calc(52% - var(--contacts-gap)) 48%
+      gap: var(--contacts-gap)
    &__section
       @include margin-bottom(30px)
       display: flex
@@ -17,7 +17,7 @@
       &__inner
          padding-top: 80px
       &__row
-         --grid-gap: 40px
+         --contacts-gap: 40px
          grid-template-columns: 1fr
       &__right
          display: flex

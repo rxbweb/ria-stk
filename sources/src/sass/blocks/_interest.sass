@@ -1,8 +1,12 @@
 .interest
    &__main
       display: grid
-      grid-template-columns: var(--block-width) 1fr
-      grid-gap: var(--gap)
+      grid-template-columns: minmax(20%, var(--block-width)) 1fr
+      gap: var(--gap)
+   &__left,
+   &__right
+      flex-grow: 1
+      overflow: hidden
    &__img
       border-radius: 15px
       overflow: hidden

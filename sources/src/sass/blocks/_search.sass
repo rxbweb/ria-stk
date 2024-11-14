@@ -11,6 +11,7 @@
       display: inline-flex
       justify-content: center
       align-items: center
+      font-size: 18px
    &__input
       width: 100%
       padding-left: 46px
@@ -26,3 +27,13 @@
       &::after
          margin-left: 5px
       @include icomoon('\e906', #999999, 8px)
+   @include sm
+      &__input
+         padding-left: 36px
+      &__button
+         left: 10px
+      &__select
+         font-size: 3px
+   @include xs
+      &__select
+         font-size: 12px

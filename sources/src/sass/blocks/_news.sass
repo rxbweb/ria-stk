@@ -3,7 +3,7 @@
    &__row
       display: grid
       grid-template-columns: calc(100% - var(--gap) - var(--aside-width)) var(--aside-width)
-      grid-gap: var(--gap)
+      gap: var(--gap)
    &__list
       border-top: var(--border)
    &__item
@@ -71,7 +71,7 @@
    &__posts
       display: grid
       grid-template-columns: repeat(2, 1fr)
-      grid-gap: var(--gap)
+      gap: var(--gap)
       &-item
          @extend .horizontal-border
          padding: 30px 0

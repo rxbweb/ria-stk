@@ -3,8 +3,11 @@
       @include margin-bottom(20px)
    &__item
       padding: 0 30px
-      border-radius: 15px
+      border-radius: var(--border-radius-15)
       overflow: hidden
+      transition: var(--transition)
+      &.is-active
+         background: #F3F3F3
    &__button
       padding: 40px 0 20px
       display: flex
@@ -20,18 +23,29 @@
          width: 36px
          height: 36px
          flex-shrink: 0
+         transition: var(--transition)
+         .is-active &
+            transform: rotate(45deg)
       &-title
          @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)
+   &__wrapper
+      display: none
    &__content
       @include margin-bottom(30px)
       padding: 20px 0 40px
-   &__magazines
+   &__box
+      width: 100%
+      max-width: 100%
       padding: 15px 20px
-      display: grid
-      grid-template-columns: repeat(3, 220px)
-      grid-gap: 25px
       background: #fff
-      border-radius: 15px
+      border-radius: var(--border-radius-15)
+   &__magazines
+      display: flex
+      flex-wrap: wrap
+      gap: 25px
+      &-item
+         width: 220px
+         min-width: 220px
       &-img
          @include img-cover(100%, 10px)
          background: #F3F3F3
@@ -42,7 +56,7 @@
    &__info
       display: grid
       grid-template-columns: repeat(3, 1fr)
-      grid-gap: 45px
+      gap: 45px
       &-col
          @include margin-bottom(20px)
       &-list
@@ -59,12 +73,15 @@
             width: 20px
             height: 20px
             font-size: 10px
+   @include xl
+      &__info
+         grid-template-columns: 1fr
+         gap: var(--gap)
    @include md
       &__list
          @include margin-bottom(0)
-      &__item
-         padding: 0
-         border-radius: 0
+      &__magazines
+         gap: 15px
       &__button
          padding: 20px 0
          &-name
@@ -72,7 +89,18 @@
          &-plus
             width: 30px
             height: 30px
+   @include sm
+      --magazines-padding: 15px
+      &__item
+         padding: 0 15px
+      &__box
+         padding: var(--magazines-padding)
+      &__magazines
+         @include scroll-x(var(--magazines-padding))
    @include xs
+      --magazines-padding: 10px
+      &__item
+         padding: 0 10px
       &__button
          &-plus
             width: 20px

@@ -3,8 +3,8 @@ header.header
       .header__container.container
          .header__top
             a.header__logo(href="/")
-               img(src="images/icons/logo.svg", alt="логотип" width="178" height="50")
-               img(src="images/icons/vok.png", alt="вок" width="48" height="48")
+               img.header__logo-main(src="images/icons/logo.svg", alt="логотип" width="178" height="50")
+               img.header__logo-vok(src="images/icons/vok.png", alt="вок" width="48" height="48")
             .header__manage
                .header__search.search
                   button.search__button
@@ -14,7 +14,7 @@ header.header
                .header__select.select
                   .select__input RU
             .header__socials.socials
-               .socials__list
+               .socials__list.socials__list--first
                   a.socials__link(href="#")
                      img(src="images/icons/socials-vk.svg", alt="vkontakte" width="26" height="26")
                   a.socials__link(href="#")
@@ -38,7 +38,7 @@ header.header
                .header__login
                   a.button.button--white(href="#")
                      i.icon.icon-user
-                     | Войти
+                     span Войти
          .header__bottom
             nav.header__nav
                ul.header__nav-list
@@ -62,3 +62,55 @@ header.header
                      a(href="#") Контакты
             button.header__burger
                img(src="images/icons/burger.svg", alt="открыть меню" width="24" height="11")
+         .header__wrapper
+
+.menu
+   .menu__inner
+      .menu__container.container
+         .menu__manage
+            .menu__search.search
+               button.search__button
+                  i.icon.icon-loop
+               input.search__input(type="text" placeholder="Искать....")
+               .search__select По сайту
+            .menu__select.select
+               .select__input RU
+         nav.menu__nav
+            ul.menu__nav-list
+               li
+                  a(href="#") Подписка
+               li
+                  a(href="#") Журналы
+               li
+                  a(href="#") Спецвыпуски
+               li
+                  a(href="#") Электронная библиотека
+               li
+                  a(href="#") Абонементный доступ
+               li
+                  a(href="#") Услуги
+               li
+                  a(href="#") Мероприятия
+               li
+                  a(href="#") О нас
+               li
+                  a(href="#") Контакты
+         .menu__logo
+            img(src="images/icons/vok.png", alt="вок" width="48" height="48")
+         .menu__socials.socials
+            .socials__list
+               a.socials__link(href="#")
+                  img(src="images/icons/socials-vk.svg", alt="vkontakte" width="26" height="26")
+               a.socials__link(href="#")
+                  img(src="images/icons/socials-tg.svg", alt="telegram" width="26" height="26")
+               a.socials__link(href="#")
+                  img(src="images/icons/socials-yt.svg", alt="youtube" width="26" height="26")
+               a.socials__link(href="#")
+                  img(src="images/icons/socials-dzen.svg", alt="dzen" width="26" height="26")
+            .socials__list.socials__list--second
+               a.socials__link(href="mailto:editor_site@mirq.ru")
+                  img(src="images/icons/socials-mail.svg", alt="mail" width="26" height="26")
+                  span editor_site@mirq.ru
+               a.socials__link(href="tel:+74957716652")
+                  img(src="images/icons/socials-phone.svg", alt="phone" width="26" height="26")
+                  span +7 (495) 771 6652
