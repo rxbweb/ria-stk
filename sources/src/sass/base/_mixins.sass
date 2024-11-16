@@ -71,6 +71,16 @@
       &:last-child
          margin-bottom: 0
 
+@mixin mt-auto()
+   & > *:last-child
+      margin-top: auto
+
+@mixin padding-bottom($padding)
+   & > *
+      padding-bottom: $padding
+      &:last-child
+         padding-bottom: 0
+
 @mixin border-bottom($border-color: #D5D3CB)
    & > *
       border-bottom: 1px solid $border-color
@@ -91,6 +101,33 @@
       object-position: center
       position: absolute
       inset: 0
+
+@mixin img-backdrop($size: 100px, $width: 50%, $height: 50%, $image)
+   width: $size
+   height: $size
+   flex-shrink: 0
+   border-radius: var(--border-radius-15)
+   border: 1px solid var(--accent)
+   background: #fff
+   overflow: hidden
+   position: relative
+   img
+      position: absolute
+      z-index: var(--z-index)
+      inset: 0
+      object-fit: cover
+      object-position: center
+   &::after
+      content: ''
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      width: $width
+      height: $height
+      background-image: $image
+      background-repeat: no-repeat
+      background-size: contain
 
 @mixin icomoon($icon, $color:"#ffffff", $font-size: 14px)
    &::after
