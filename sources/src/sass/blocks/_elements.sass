@@ -23,7 +23,7 @@
          display: inline-flex
          justify-content: center
          align-items: center
-         font-size: 13px
+         font-size: 14px
          border-radius: 5px
          border: 1px solid transparent
    &--icon
@@ -93,6 +93,33 @@
             height: 20px
             font-size: 10px
 
+.btn
+   --size: 48px
+   width: var(--size)
+   height: var(--size)
+   border-radius: 5px
+   display: flex
+   justify-content: center
+   align-items: center
+   flex-shrink: 0
+   border: var(--border-red)
+   color: var(--accent)
+   transition: var(--transition)
+   cursor: pointer
+   @include icomoon('\e90c', var(--accent), 20px)
+   &--left
+      transform: scaleX(-1)
+   @include md
+      --size: 40px
+   @include sm
+      &--small
+         --size: 32px
+   @include xs
+      &--small
+         --size: 28px
+         font-size: 12px
+
+
 .title
    @include fluidFontSize(32px, 64px, 360px, 1920px, 48px)
    font-weight: 500
@@ -112,6 +139,8 @@
       @include fluidFontSize(16px, 40px, 360px, 1920px, 32px)
    &--fifth
       @include fluidFontSize(16px, 24px, 360px, 1920px, 20px)
+   &--sixth
+      @include fluidFontSize(16px, 20px, 360px, 1920px, 20px)
    &--red
       color: var(--accent)
    &--small

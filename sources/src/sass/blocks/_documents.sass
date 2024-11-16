@@ -20,26 +20,5 @@
                background: var(--accent)
                color: #fff
    &__icon
-      --size: 48px
-      width: var(--size)
-      height: var(--size)
-      border-radius: 5px
-      display: flex
-      justify-content: center
-      align-items: center
-      flex-shrink: 0
-      border: var(--border-red)
-      color: var(--accent)
-      transition: var(--transition)
-   @include md
-      &__icon
-         --size: 40px
-   @include sm
-      &__link
-         padding: 20px 0
-      &__icon
-         --size: 32px
-   @include xs
-      &__icon
-         --size: 28px
-         font-size: 12px
+      @extend .btn
+      @extend .btn--small
