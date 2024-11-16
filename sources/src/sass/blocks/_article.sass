@@ -1,0 +1,132 @@
+.article
+   --elements-padding: 30px
+   --elements-margin: 15px
+   width: 100%
+   max-width: 1355px
+   margin: 0 auto
+   padding: 40px
+   background: #F4F4F4
+   border-radius: var(--border-radius-15)
+   overflow: hidden
+   &__inner
+      @include margin-bottom(var(--elements-padding))
+   &__header
+      @include margin-bottom(var(--elements-margin))
+   &__body
+      @include border-bottom(#191C23)
+      @include margin-bottom(var(--elements-padding))
+      @include padding-bottom(var(--elements-padding))
+   &__description
+      @extend .title
+      @extend .title--second
+      @extend .title--red
+   &__title
+      @extend .title
+   &__heading
+      @extend .title
+      @extend .title--second
+   &__img
+      border-radius: var(--border-radius-10)
+      overflow: hidden
+      img
+         width: 100%
+         height: auto
+   &__box
+      @include margin-bottom(var(--elements-margin))
+   &__authors
+      @include margin-bottom(var(--elements-margin))
+      &-list
+         padding-right: 7%
+         display: grid
+         grid-template-columns: repeat(2, 1fr)
+         gap: 15px 25px
+      &-item
+         display: flex
+         align-items: center
+         gap: 15px
+      &-img
+         @include img-backdrop(140px, 47%, 55%, url('../images/icons/user.svg'))
+      &-info
+         @include margin-bottom(10px)
+   &__info
+      &-inner
+         padding: 30px
+         background: #fff
+         border-radius: 20px
+         @include margin-bottom(40px)
+      &-section
+         @include margin-bottom(var(--elements-margin))
+      &-title
+         @extend .title
+         @extend .title--fourth
+   figure
+      @include margin-bottom(5px)
+   &__listing
+      li
+         position: relative
+         padding-left: 20px
+         &::before
+            content: '•'
+            position: absolute
+            left: 4px
+   &__materials
+      @include margin-bottom(15px)
+      &-item
+         display: flex
+         align-items: center
+         gap: 15px
+      &-img
+         @include img-backdrop(100px, 55%, 58%, url('../images/icons/document.svg'))
+      &-info
+         max-width: 774px
+         flex-grow: 1
+   &__themes
+      display: grid
+      grid-template-columns: repeat(3, minmax(auto, 360px))
+      gap: 30px
+      &-img
+         @include img-cover(80%, var(--border-radius-10))
+      &-info
+         padding-top: 15px
+         @include margin-bottom(5px)
+      &-title
+         @extend .title
+         @extend .title--sixth
+         @extend .title--red
+      &-text
+         @extend .fz-15
+   &__subscribe
+      &-inner
+         padding: 20px
+         background: #fff
+         border-radius: var(--border-radius-15)
+         display: flex
+         gap: 20px
+      &-content
+         width: 42.3%
+         flex-shrink: 0
+      &-img
+         height: 100%
+         @include img-cover(47%, var(--border-radius-15))
+      &-info
+         display: flex
+         flex-direction: column
+         align-items: flex-start
+         gap: 20px
+         @include mt-auto()
+      &-list
+         font-weight: 700
+         @extend .article__listing
+         @include margin-bottom(1px)
+   &__shop
+      padding: 30px 0
+      border-top: 1px solid #191C23
+      border-bottom: 1px solid #191C23
+      display: flex
+      gap: 80px
+      &-item
+         display: flex
+         align-items: center
+         gap: 20px
+      &-price
+         @extend .article__heading
