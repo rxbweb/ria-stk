@@ -1,0 +1,22 @@
+.pagination
+   width: 100%
+   max-width: 600px
+   margin: 0 auto
+   &__row,
+   &__list
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: 15px
+   &__page
+      color: rgba(#191C23, .4)
+      text-align: center
+      font-size: 24px
+      font-weight: 500
+      line-height: 140%
+      &.is-active
+         color: var(--accent)
+   &__button
+      @extend .btn
+      &:first-of-type
+         transform: scaleX(-1)
