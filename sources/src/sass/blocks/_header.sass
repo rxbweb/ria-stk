@@ -5,7 +5,6 @@
    top: 0
    left: 0
    right: 0
-
    &__container
       @include border-bottom()
    &__top
@@ -31,18 +30,18 @@
          background: #cdcdcd
    &__manage
       display: flex
-      align-items: center
       flex-grow: 1
       gap: 30px
    &__search
       flex-grow: 1
    &__basket
       display: flex
-      align-items: center
+      align-items: flex-start
       position: relative
       &-amount
-         width: 20px
-         height: 20px
+         --size: 20px
+         width: var(--size)
+         height: var(--size)
          display: flex
          justify-content: center
          align-items: center
@@ -58,8 +57,27 @@
          top: -6px   
    &__controls
       display: flex
-      align-items: center
       gap: 20px
+      .button
+         height: 46px
+   &__login
+      padding-left: 12px
+      padding-right: 12px
+      .icon
+         font-size: 20px
+   &__toggle
+      display: none
+      .icon
+         padding: 4px
+         position: relative
+         display: flex
+         flex-direction: column
+         justify-content: space-between
+         span
+            width: 14px
+            height: 2px
+            background: var(--accent)
+            border-radius: 2px
    &__bottom
       display: flex
       align-items: center
@@ -101,10 +119,51 @@
       &__burger
          margin-left: 60px
    @media (max-width: 1365px)
+      &__top,
+      &__manage
+         gap: 20px
       &__socials
          display: none
    @include ms
-      &__login
+      &__logo
+         &::after
+            display: none
+         &-main
+            width: 160px
+         &-vok
+            display: none
+      &__top
+         padding: 15px 0
+      &__bottom
+         display: none
+   @include sm
+      &__manage
+         display: none
+      &__controls
          .button
-            span
-               display: none
+            border-radius: 7px
+      &__toggle
+         display: inline-flex
+   @include xs
+      &__logo
+         flex-shrink: 1
+         &-main
+            width: 138px
+      &__controls
+         align-items: center
+         gap: 8px
+         .button
+            height: 36px
+      &__login,
+      &__basket .button
+         width: 36px
+      &__login
+         .icon
+            font-size: 14px
+         span
+            display: none
+      &__basket
+         &-amount
+            --size: 16px
+            right: -6px
+            top: -5px
