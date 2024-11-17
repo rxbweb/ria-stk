@@ -3,14 +3,15 @@
    &__row
       display: flex
       justify-content: space-between
+      flex-wrap: wrap
       gap: var(--gap)
    &__aside
       max-width: 550px
+   &__title
+      @extend .title
    &__content
-      flex-grow: 1
+      max-width: 100%
       flex-shrink: 0
-      display: flex
-      justify-content: flex-end
    &__list
       display: grid
       grid-template-columns: repeat(3, minmax(280px, var(--listing-item-width)))
@@ -50,20 +51,25 @@
    &__img
       margin-top: auto
       @include img-cover(63.5%, 10px)
-   &__title
+   &__name
       @extend .title
       @extend .title--second
+   @include xl
+      &__title
+         br
+            display: none
    @include md
       &__row
          flex-direction: column
       &__item
          padding-top: 100px
-   @media (max-width: $ms)
+   @include ms
       &__list
          @include scroll-x(var(--padding))
          display: flex
          gap: 30px
       &__item
+         width: var(--listing-item-width)
          min-width: var(--listing-item-width)
    @include sm
       &__item
