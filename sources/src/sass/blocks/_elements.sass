@@ -14,6 +14,10 @@
    &:hover,
    &:focus
       background: var(--hover-color)
+   .icon
+      display: flex
+      justify-content: center
+      align-items: center
    &--icon,
    &--outline
       .icon
@@ -64,6 +68,8 @@
       height: 46px
       padding: 12px
       font-size: 22px
+      display: flex
+      align-items: center
    &--white
       display: inline-flex
       align-items: center
@@ -92,6 +98,11 @@
             width: 20px
             height: 20px
             font-size: 10px
+      &--img
+         width: 36px
+         height: 36px
+         .icon
+            font-size: 16px
 
 .btn
    --size: 48px
