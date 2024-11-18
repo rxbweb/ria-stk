@@ -63,6 +63,9 @@
    &__login
       padding-left: 12px
       padding-right: 12px
+      display: flex
+      justify-content: center
+      align-items: center
       .icon
          font-size: 20px
    &__toggle
@@ -94,9 +97,16 @@
          line-height: 120%
       &-item
          a
-            display: block
             padding: 17px 0
             white-space: nowrap
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 10px
+            &.is-note
+               color: var(--accent)
+            .icon
+               font-size: 22px
    &__burger
       display: block
       width: 24px
@@ -158,6 +168,8 @@
       &__basket .button
          width: 36px
       &__login
+         padding-left: 8px
+         padding-right: 8px
          .icon
             font-size: 14px
          span
