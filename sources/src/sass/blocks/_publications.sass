@@ -1,0 +1,27 @@
+.publications
+   &__list
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      gap: var(--gap)
+   &__top
+      padding: 25px
+      border-radius: 15px
+      background: #F5F5F5
+      position: relative
+      overflow: hidden
+      display: flex
+      justify-content: center
+      align-items: center
+   &__img
+      width: 240px
+      @include img-cover(100%, var(--border-radius-10))      
+   &__info
+      padding-top: 20px
+      text-align: center
+      @include margin-bottom(5px)
+   &__name
+      @extend .title
+      @extend .title--fifth
+      letter-spacing: -0.72px
+   &__date
+      color: var(--accent)
