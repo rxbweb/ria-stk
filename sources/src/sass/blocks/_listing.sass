@@ -7,6 +7,8 @@
       gap: var(--gap)
    &__aside
       max-width: 550px
+      &--big
+         max-width: none
    &__title
       @extend .title
    &__content
@@ -22,6 +24,9 @@
          grid-template-columns: repeat(2, minmax(280px, var(--listing-item-width)))
       &--4
          grid-template-columns: repeat(4, minmax(280px, var(--listing-item-width)))
+      &--secondary
+         grid-template-columns: repeat(2, minmax(280px, 380px))
+         gap: 60px 40px
    &__item
       @extend .left-border
       padding-top: 150px
@@ -48,6 +53,10 @@
          padding-top: 0
          &::before
             display: none
+      .listing__list--secondary &
+         padding-left: 0
+         padding-bottom: 20px
+         @extend .bottom-border
    &__img
       margin-top: auto
       @include img-cover(63.5%, 10px)
