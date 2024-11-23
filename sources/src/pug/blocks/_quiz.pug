@@ -1,0 +1,121 @@
+section.section
+   .section__wrapper
+      .section__content
+         .quiz
+            .quiz__inner.container
+               .quiz__row
+                  form.quiz__form.form.form--large(action="#")
+                     .form__header.form__header--border
+                        h2.form__heading Какой журнал вам подходит?
+                     .form__main
+                        .form__list
+                           .form__col
+                              .form__col-item
+                                 h3.form__name
+                                    span.form__name-number 01
+                                    | Кто вы по профессии?
+                                 .form__box
+                                    label.form__radio
+                                       input(type="radio" name="profession")
+                                       span.form__radio-field
+                                       span Инженер-технолог
+                                    label.form__radio
+                                       input(type="radio" name="profession")
+                                       span.form__radio-field
+                                       span Метролог
+                                    label.form__radio
+                                       input(type="radio" name="profession")
+                                       span.form__radio-field
+                                       span Сотрудник лаборатории
+                                    label.form__radio
+                                       input(type="radio" name="profession")
+                                       span.form__radio-field
+                                       span Специалист в области стандартизации
+                                    label.form__radio
+                                       input(type="radio" name="profession")
+                                       span.form__radio-field
+                                       span Специалист в области сертификации
+                                    label.form__radio
+                                       input(type="radio" name="profession")
+                                       span.form__radio-field
+                                       span Специалист по качеству
+                                    label.form__radio
+                                       input(type="radio" name="profession")
+                                       span.form__radio-field
+                                       span Организатор здравоохранения
+                                    label.form__radio
+                                       input(type="radio" name="profession")
+                                       span.form__radio-field
+                                       span Руководитель организации
+                           .form__col
+                              .form__col-item
+                                 h3.form__name
+                                    span.form__name-number 02
+                                    | Тематика статьи?
+                                 .form__box
+                                    label.form__radio
+                                       input(type="radio" name="theme")
+                                       span.form__radio-field
+                                       span Техническое регулирование
+                                    label.form__radio
+                                       input(type="radio" name="theme")
+                                       span.form__radio-field
+                                       span Стандартизация
+                                    label.form__radio
+                                       input(type="radio" name="theme")
+                                       span.form__radio-field
+                                       span Обеспечение единства измерений
+                                    label.form__radio
+                                       input(type="radio" name="theme")
+                                       span.form__radio-field
+                                       span Развертывание СМК
+                                    label.form__radio
+                                       input(type="radio" name="theme")
+                                       span.form__radio-field
+                                       span Интегрированные системы менеджмента
+                                    label.form__radio
+                                       input(type="radio" name="theme")
+                                       span.form__radio-field
+                                       span Деловое совершенство
+                           .form__col
+                              .form__col-item
+                                 h3.form__name
+                                    span.form__name-number 03
+                                    | Научная статья?
+                                 .form__box
+                                    label.form__radio
+                                       input(type="radio" name="scientific")
+                                       span.form__radio-field
+                                       span Да
+                                    label.form__radio
+                                       input(type="radio" name="scientific")
+                                       span.form__radio-field
+                                       span Нет
+                              .form__col-item
+                                 h3.form__name
+                                    span.form__name-number 04
+                                    | Рецензируемый журнал?
+                                 .form__box
+                                    label.form__radio
+                                       input(type="radio" name="reviewed")
+                                       span.form__radio-field
+                                       span Да
+                                    label.form__radio
+                                       input(type="radio" name="reviewed")
+                                       span.form__radio-field
+                                       span Нет
+                        .form__footer
+                           button.button.button--icon 
+                              span Посмотреть результат
+                              i.icon.icon-arrow-small
+
+                  .quiz__result
+                     h2.quiz__result-title Вам подходит:
+                     .quiz__result-content
+                        .quiz__result-img
+                           img(src="images/journals/journals-01.png", alt="Стандарты и качество" width="200")
+                     .quiz__result-info
+                        h3.quiz__result-name стандарты и качество
+                        a.quiz__result-button.button.button--outline(href="#") 
+                           span Подробнее
+                           i.icon.icon-arrow-right

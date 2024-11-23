@@ -1,0 +1,25 @@
+.quiz
+   &__row
+      display: grid
+      grid-template-columns: 1fr var(--block-width)
+      gap: var(--gap)
+   &__result
+      --quiz-result-gap: 20px
+      @extend .white-box
+      text-align: center
+      @include margin-bottom(var(--quiz-result-gap))
+      &-title
+         @extend .title
+         @extend .title--fourth
+         margin-bottom: 40px
+      &-content
+         width: 100%
+         max-width: 200px
+         margin: 0 auto var(--quiz-result-gap)
+      &-img
+         @include img-cover(142%, var(--border-radius))
+      &-name
+         @extend .title
+         @extend .title--second
+      &-info
+         @include margin-bottom(var(--quiz-result-gap))
