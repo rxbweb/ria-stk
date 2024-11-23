@@ -194,3 +194,23 @@
    & > *
       &:last-child
          margin-top: auto
+
+@mixin link-line($color: currentColor, $height: 1px)
+   position: relative
+   &::after
+      content: ''
+      width: 0
+      position: absolute
+      bottom: 0
+      left: auto
+      right: 0
+      height: $height
+      background: currentColor
+      transition: var(--transition)
+   &:hover,
+   &:focus
+      color: $color
+      &::after
+         width: 100%
+         left: 0
+         right: auto
