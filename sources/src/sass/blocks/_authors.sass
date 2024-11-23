@@ -3,6 +3,9 @@
       display: grid
       grid-template-columns: repeat(6, 1fr)
       gap: 20px
+      &--3
+         grid-template-columns: repeat(3, 1fr)
+         gap: 30px
    &__item
       display: flex
       flex-direction: column
@@ -31,6 +34,9 @@
    @media (max-width: 1365px)
       &__list
          grid-template-columns: repeat(3, 1fr)
+   @include md
+      &__list
+         gap: 20px
    @include sm
       &__list
          display: flex
