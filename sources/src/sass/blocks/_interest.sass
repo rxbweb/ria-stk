@@ -8,8 +8,7 @@
       flex-grow: 1
       overflow: hidden
    &__img
-      border-radius: 15px
-      overflow: hidden
+      @include img-cover(94%, var(--border-radius-15))
    @include md
       &__main
          grid-template-columns: 1fr

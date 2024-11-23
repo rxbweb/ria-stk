@@ -5,22 +5,58 @@
       gap: 86px
    &__info
       @include margin-bottom(30px)
+   &__title
+      @extend .title
+      @extend .title--main
    &__text
       margin-bottom: 50px
       @include margin-bottom(15px)
    &__content
       max-width: 100%
    &__books
-      &-img
-         &-swiper
-            width: 1000px
-            max-width: 100%
-            overflow: hidden
-            .swiper
-               &-wrapper
-                  width: 100%
-                  max-width: 100%
-                  overflow: hidden
-               &-slide
-                  width: auto
-                  box-shadow: none
+      &-name
+         transform: translateY(-30px)
+         opacity: 0
+         transition: all var(--duration) ease
+         .swiper-slide-active &
+            opacity: 1
+      &-swiper
+         width: 1000px
+         max-width: 100%
+         .swiper
+            &-wrapper
+               width: 100%
+               max-width: 100%
+            &-slide
+               @extend .title
+               @extend .title--sixth
+               width: auto
+               opacity: 0
+               transform: scale(0.4)
+               transition: all var(--duration) ease
+               color: #4E525E
+               text-align: center
+               &-active
+                  transform: scale(1.2)
+                  opacity: 1
+                  z-index: 10
+               &__2
+                  transform: scale(1) translateX(10%)
+                  opacity: 1
+                  z-index: 9
+               &__3
+                  transform: scale(.90) translateX(20%)
+                  opacity: 1
+                  z-index: 8
+               &__4
+                  transform: scale(.73) translateX(30%)
+                  opacity: 1
+                  z-index: 7
+               &__5
+                  transform: scale(.48) translateX(25%)
+                  opacity: 1
+                  z-index: 6
+               &__6
+                  transform: scale(.35) translateX(-12%)
+                  opacity: 1
+                  z-index: 5

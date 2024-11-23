@@ -24,6 +24,8 @@
                   &-img
                      img
                         transform: scale(1.1)
+                  &-description
+                     color: var(--accent)
       &-img
          @include img-cover(20%, var(--border-radius-15))
          width: 42.7%
@@ -37,11 +39,16 @@
          flex-direction: column
          align-items: flex-start
          gap: 10px
+      &-title
+         @extend .title
+         @extend .title--second
       &-text
          color: #67686B
       &-button
          margin-top: auto
       &-description
+         @extend .title
+         @extend .title--third
          width: 21.5%
          position: absolute
          left: 0

@@ -27,6 +27,7 @@
          .is-active &
             transform: rotate(45deg)
       &-title
+         @extend .title
          @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)
    &__wrapper
       display: none
@@ -53,6 +54,9 @@
          @include margin-bottom(15px)
          padding-top: 15px
          text-align: center
+      &-title
+         @extend .title
+         @extend .title--small
    &__info
       display: grid
       grid-template-columns: repeat(3, 1fr)

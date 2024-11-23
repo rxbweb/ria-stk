@@ -26,7 +26,11 @@
       gap: 25px
       border-bottom: var(--border)
    &__num
+      @extend .title
+      @extend .title--red
       white-space: nowrap
+   &__title
+      @extend .title
    &__text
       padding-top: 4px
       flex-basis: 228px

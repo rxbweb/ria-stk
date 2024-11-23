@@ -31,6 +31,9 @@
       justify-content: space-between
       flex-wrap: wrap
       gap: 10px
+   &__title
+      @extend .title
+      @extend .title--second
    &__mark
       font-weight: 400
       font-size: 14px
@@ -66,6 +69,9 @@
          align-items: flex-start
          gap: 15px
          overflow: hidden
+      &-title
+         @extend .title
+         @extend .title--second
       &-button
          margin-top: auto
    &__posts
@@ -87,6 +93,9 @@
          align-items: flex-start
          flex-grow: 1
          gap: 15px
+      &-title
+         @extend .title
+         @extend .title--second
       &-button
          margin-top: auto
    @include xl

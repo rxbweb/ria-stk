@@ -6,6 +6,8 @@
       grid-template-columns: 34% 57.35%
       justify-content: space-between
       gap: 3%
+   &__title
+      @extend .title
    &__dates
       display: flex
       align-items: center
@@ -34,6 +36,10 @@
       @include margin-bottom(30px)
       padding-top: 40px
       padding-bottom: 50px
+   &__date
+      @extend .title
+      @extend .title--fourth
+      @extend .title--red
    &__img
       @include img-cover(55%, var(--border-radius-15))
       position: relative

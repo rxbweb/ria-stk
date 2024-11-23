@@ -15,6 +15,9 @@
          padding-bottom: var(--description-gap)
          border-bottom: var(--border-red)
          @include margin-bottom(var(--description-gap))
+      &-title
+         @extend .title
+         @extend .title--second
    @include ms
       &__row
          grid-template-columns: 1fr
