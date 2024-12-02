@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Документы</title>
+    <title>Книги</title>
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,10 +31,26 @@
               <div class="header__search search">
                 <button class="search__button"><i class="icon icon-loop"></i></button>
                 <input class="search__input" type="text" placeholder="Искать....">
-                <div class="search__select">По сайту</div>
+                <div class="search__select">
+                  <div class="select">
+                    <button class="select__active"><span>Везде</span></button>
+                    <div class="select__list">
+                      <button class="select__item is-active">Везде</button>
+                      <button class="select__item">По журналам</button>
+                      <button class="select__item">По книгам</button>
+                      <button class="select__item">По статьям</button>
+                      <button class="select__item">По новостям</button>
+                      <button class="select__item">По мероприятиям</button>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="header__select select">
-                <div class="select__input">RU</div>
+              <div class="select select--lang">
+                <div class="select__active"><span class="select__active-text">RU</span></div>
+                <div class="select__list">
+                  <button class="select__item is-active">RU</button>
+                  <button class="select__item">EN</button>
+                </div>
               </div>
             </div>
             <div class="header__socials socials">
@@ -44,14 +60,14 @@
             <div class="header__controls">
               <div class="header__basket"><a class="button button--img" href="#"><i class="icon icon-cart"></i></a>
                 <div class="header__basket-amount">99</div>
-              </div><a class="header__login button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span><span></span><span></span></i><span>Меню</span></a>
+              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span><span></span><span></span></i></a>
             </div>
           </div>
           <div class="header__bottom">
             <nav class="header__nav">
               <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="is-note" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
                 <li class="header__nav-item"><a href="#">Журналы</a></li>
-                <li class="header__nav-item"><a href="#">Подписка</a></li>
                 <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
                 <li class="header__nav-item"><a href="#">Электронная библиотека</a></li>
                 <li class="header__nav-item"><a href="#">Абонентский доступ</a></li>
@@ -74,10 +90,26 @@
             <div class="menu__search search">
               <button class="search__button"><i class="icon icon-loop"></i></button>
               <input class="search__input" type="text" placeholder="Искать....">
-              <div class="search__select">По сайту</div>
+              <div class="search__select">
+                <div class="select">
+                  <button class="select__active">Везде</button>
+                  <div class="select__list">
+                    <button class="select__item is-active">Везде</button>
+                    <button class="select__item">По журналам</button>
+                    <button class="select__item">По книгам</button>
+                    <button class="select__item">По статьям</button>
+                    <button class="select__item">По новостям</button>
+                    <button class="select__item">По мероприятиям</button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="menu__select select">
-              <div class="select__input">RU</div>
+            <div class="select select--lang">
+              <div class="select__active"><span class="select__active-text">RU</span></div>
+              <div class="select__list">
+                <button class="select__item is-active">RU</button>
+                <button class="select__item">EN</button>
+              </div>
             </div>
           </div>
           <nav class="menu__nav">
@@ -109,9 +141,9 @@
       </div>
       <section class="section">
         <div class="section__wrapper container">
-          <div class="section__header">
+          <div class="section__header section__header--margin">
             <div class="section__header-row">
-              <h1 class="section__header-title">Книги</h1>
+              <h1 class="section__header-heading">Книги</h1>
             </div>
           </div>
           <div class="section__content">
@@ -119,53 +151,358 @@
               <div class="books__inner">
                 <div class="books__section">
                   <div class="books__header">
-                    <h2 class="books__title">Хиты продаж</h2>
+                    <h2 class="books__title books__title--red">Хиты продаж</h2>
                   </div>
                   <div class="books__content">
                     <ul class="books__list">
                       <li class="books__item">
                         <div class="books__box">
+                          <button class="books__like"></button>
                           <div class="books__img"><img src="images/books/books-01.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <h3 class="books__name">Цифровое качество. Свод знаний о цифровой трансформации</h3>
                           <p class="books__price">3 500 руб.</p>
-                          <div class="books__manage"><a class="button" href="#">Купить книгу</a></div>
+                          <div class="books__manage"><a class="button button--icon" href="#"><span>Купить книгу</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-right"></i></a></div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
+                          <button class="books__like"></button>
                           <div class="books__img"><img src="images/books/books-02.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <h3 class="books__name">Процессный подход в требованиях ISO 45001:2018</h3>
                           <p class="books__price">5 600 руб.</p>
-                          <div class="books__manage"><a class="button" href="#">Купить книгу</a></div>
+                          <div class="books__manage"><a class="button button--icon" href="#"><span>Купить книгу</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-right"></i></a></div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
+                          <button class="books__like"></button>
                           <div class="books__img"><img src="images/books/books-03.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <h3 class="books__name">Внедрение системы энергетического менеджмента на соответствие международному стандарту ISO 50001:2011</h3>
                           <p class="books__price">14 900 руб.</p>
-                          <div class="books__manage"><a class="button" href="#">Купить книгу</a></div>
+                          <div class="books__manage"><a class="button button--icon" href="#"><span>Купить книгу</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-right"></i></a></div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
+                          <button class="books__like"></button>
                           <div class="books__img"><img src="images/books/books-04.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <h3 class="books__name">ISO 9001:2015. Международный стандарт на системы менеджмента качества. Наблюдения, интерпретация....</h3>
                           <p class="books__price">3 800 руб.</p>
-                          <div class="books__manage"><a class="button" href="#">Купить книгу</a></div>
+                          <div class="books__manage"><a class="button button--icon" href="#"><span>Купить книгу</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-right"></i></a></div>
                         </div>
                       </li>
                     </ul>
                   </div>
                 </div>
+                <div class="books__section">
+                  <div class="books__header">
+                    <h2 class="books__title">Все книги</h2>
+                  </div>
+                  <div class="books__content">
+                    <ul class="books__list">
+                      <li class="books__item">
+                        <div class="books__box">
+                          <button class="books__like"></button>
+                          <div class="books__img"><img src="images/books/books-01.png" alt="книга" width="380" height="380"></div>
+                        </div>
+                        <div class="books__info">
+                          <h3 class="books__name">Цифровое качество. Свод знаний о цифровой трансформации</h3>
+                          <p class="books__price">3 500 руб.</p>
+                          <div class="books__manage"><a class="button button--icon" href="#"><span>Купить книгу</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-right"></i></a></div>
+                        </div>
+                      </li>
+                      <li class="books__item">
+                        <div class="books__box">
+                          <button class="books__like"></button>
+                          <div class="books__img"><img src="images/books/books-02.png" alt="книга" width="380" height="380"></div>
+                        </div>
+                        <div class="books__info">
+                          <h3 class="books__name">Процессный подход в требованиях ISO 45001:2018</h3>
+                          <p class="books__price">5 600 руб.</p>
+                          <div class="books__manage"><a class="button button--icon" href="#"><span>Купить книгу</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-right"></i></a></div>
+                        </div>
+                      </li>
+                      <li class="books__item">
+                        <div class="books__box">
+                          <button class="books__like"></button>
+                          <div class="books__img"><img src="images/books/books-03.png" alt="книга" width="380" height="380"></div>
+                        </div>
+                        <div class="books__info">
+                          <h3 class="books__name">Внедрение системы энергетического менеджмента на соответствие международному стандарту ISO 50001:2011</h3>
+                          <p class="books__price">14 900 руб.</p>
+                          <div class="books__manage"><a class="button button--icon" href="#"><span>Купить книгу</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-right"></i></a></div>
+                        </div>
+                      </li>
+                      <li class="books__item">
+                        <div class="books__box">
+                          <button class="books__like"></button>
+                          <div class="books__img"><img src="images/books/books-04.png" alt="книга" width="380" height="380"></div>
+                        </div>
+                        <div class="books__info">
+                          <h3 class="books__name">ISO 9001:2015. Международный стандарт на системы менеджмента качества. Наблюдения, интерпретация....</h3>
+                          <p class="books__price">3 800 руб.</p>
+                          <div class="books__manage"><a class="button button--icon" href="#"><span>Купить книгу</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-right"></i></a></div>
+                        </div>
+                      </li>
+                      <li class="books__item">
+                        <div class="books__box">
+                          <button class="books__like"></button>
+                          <div class="books__img"><img src="images/books/books-05.png" alt="книга" width="380" height="380"></div>
+                        </div>
+                        <div class="books__info">
+                          <h3 class="books__name">ПРОТЕЗЫ И ИМПЛАНТАТЫ. Энциклопедия международных стандартов.</h3>
+                          <p class="books__price">7 500 руб.</p>
+                          <div class="books__manage"><a class="button button--icon" href="#"><span>Купить книгу</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-right"></i></a></div>
+                        </div>
+                      </li>
+                      <li class="books__item">
+                        <div class="books__box">
+                          <button class="books__like"></button>
+                          <div class="books__img"><img src="images/books/books-06.png" alt="книга" width="380" height="380"></div>
+                        </div>
+                        <div class="books__info">
+                          <h3 class="books__name">Аудит систем менеджмента на соответствие требованиям ISO 9001, ISO 14001, ISO 45001, ISO 50001. Практикум.</h3>
+                          <p class="books__price">2 300 руб.</p>
+                          <div class="books__manage"><a class="button button--icon" href="#"><span>Купить книгу</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-right"></i></a></div>
+                        </div>
+                      </li>
+                      <li class="books__item">
+                        <div class="books__box">
+                          <button class="books__like"></button>
+                          <div class="books__img"><img src="images/books/books-07.png" alt="книга" width="380" height="380"></div>
+                        </div>
+                        <div class="books__info">
+                          <h3 class="books__name">Очерки безопасности хирургических пациентов</h3>
+                          <p class="books__price">1 500 руб.</p>
+                          <div class="books__manage"><a class="button button--icon" href="#"><span>Купить книгу</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-right"></i></a></div>
+                        </div>
+                      </li>
+                      <li class="books__item">
+                        <div class="books__box">
+                          <button class="books__like"></button>
+                          <div class="books__img"><img src="images/books/books-08.png" alt="книга" width="380" height="380"></div>
+                        </div>
+                        <div class="books__info">
+                          <h3 class="books__name">Условия обеспечения устойчивого успеха. Как создать современную систему менеджмента организации..</h3>
+                          <p class="books__price">3 700 руб.</p>
+                          <div class="books__manage"><a class="button button--icon" href="#"><span>Купить книгу</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-right"></i></a></div>
+                        </div>
+                      </li>
+                      <li class="books__item">
+                        <div class="books__box">
+                          <button class="books__like"></button>
+                          <div class="books__img"><img src="images/books/books-09.png" alt="книга" width="380" height="380"></div>
+                        </div>
+                        <div class="books__info">
+                          <h3 class="books__name">Качество и эффективность — условия успеха. Методы совершенствования систем менеджмента организаций.</h3>
+                          <p class="books__price">1 120 руб.</p>
+                          <div class="books__manage"><a class="button button--icon" href="#"><span>Купить книгу</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-right"></i></a></div>
+                        </div>
+                      </li>
+                      <li class="books__item">
+                        <div class="books__box">
+                          <button class="books__like"></button>
+                          <div class="books__img"><img src="images/books/books-10.png" alt="книга" width="380" height="380"></div>
+                        </div>
+                        <div class="books__info">
+                          <h3 class="books__name">Энциклопедия международных стандартов ISO</h3>
+                          <p class="books__price">7 500 руб.</p>
+                          <div class="books__manage"><a class="button button--icon" href="#"><span>Купить книгу</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-right"></i></a></div>
+                        </div>
+                      </li>
+                      <li class="books__item">
+                        <div class="books__box">
+                          <button class="books__like"></button>
+                          <div class="books__img"><img src="images/books/books-11.png" alt="книга" width="380" height="380"></div>
+                        </div>
+                        <div class="books__info">
+                          <h3 class="books__name">Страна напуганных инженеров. Записки Гипа.</h3>
+                          <p class="books__price">460 руб.</p>
+                          <div class="books__manage"><a class="button button--icon" href="#"><span>Купить книгу</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-right"></i></a></div>
+                        </div>
+                      </li>
+                      <li class="books__item">
+                        <div class="books__box">
+                          <button class="books__like"></button>
+                          <div class="books__img"><img src="images/books/books-12.png" alt="книга" width="380" height="380"></div>
+                        </div>
+                        <div class="books__info">
+                          <h3 class="books__name">Пищевые продукты</h3>
+                          <p class="books__price">5 100 руб.</p>
+                          <div class="books__manage"><a class="button button--icon" href="#"><span>Купить книгу</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-right"></i></a></div>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="books__pagination">
+                      <div class="pagination">
+                        <div class="pagination__row">
+                          <button class="pagination__button"></button>
+                          <div class="pagination__list"><a class="pagination__page is-active" href="#">1</a><a class="pagination__page" href="#">2</a><a class="pagination__page" href="#">3</a><a class="pagination__page" href="#">...</a><a class="pagination__page" href="#">999</a></div>
+                          <button class="pagination__button"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--ticket">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="ticket">
+              <div class="ticket__inner">
+                <div class="ticket__row">
+                  <div class="ticket__info">
+                    <h2 class="ticket__title">Абонементный доступ</h2>
+                    <div class="ticket__text">
+                      <p>Приобретая абонемент, вы получаете полный доступ к фонду электронной библиотеки на ограниченный период времени. Абонемент будет выгоден при подготовке дипломных и научных работ, лекций и презентаций.</p>
+                    </div>
+                  </div>
+                  <div class="ticket__content">
+                    <div class="ticket__table">
+                      <div class="ticket__table-row">
+                        <div class="ticket__table-col">
+                          <p class="ticket__table-detail">Количество статей</p>
+                          <p class="ticket__table-primary">5 статей</p>
+                        </div>
+                        <div class="ticket__table-col">
+                          <p class="ticket__table-detail">Длительность доступа</p>
+                          <p class="ticket__table-primary">1 месяц</p>
+                        </div>
+                        <div class="ticket__table-col">
+                          <p class="ticket__table-detail">Цена</p>
+                          <p class="ticket__table-primary">700 руб.</p>
+                        </div>
+                        <div class="ticket__table-col"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a></div>
+                      </div>
+                      <div class="ticket__table-row">
+                        <div class="ticket__table-col">
+                          <p class="ticket__table-detail">Количество статей</p>
+                          <p class="ticket__table-primary">10 статей</p>
+                        </div>
+                        <div class="ticket__table-col">
+                          <p class="ticket__table-detail">Длительность доступа</p>
+                          <p class="ticket__table-primary">3 месяца</p>
+                        </div>
+                        <div class="ticket__table-col">
+                          <p class="ticket__table-detail">Цена</p>
+                          <p class="ticket__table-primary">1000 руб.</p>
+                        </div>
+                        <div class="ticket__table-col"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a></div>
+                      </div>
+                      <div class="ticket__table-row">
+                        <div class="ticket__table-col">
+                          <p class="ticket__table-detail">Количество статей</p>
+                          <p class="ticket__table-primary">Неограничено</p>
+                        </div>
+                        <div class="ticket__table-col">
+                          <p class="ticket__table-detail">Длительность доступа</p>
+                          <p class="ticket__table-primary">1 год</p>
+                        </div>
+                        <div class="ticket__table-col">
+                          <p class="ticket__table-detail">Цена</p>
+                          <p class="ticket__table-primary">30 000 руб.</p>
+                        </div>
+                        <div class="ticket__table-col"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--listing">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="listing">
+              <div class="listing__inner">
+                <div class="listing__row">
+                  <div class="listing__aside">
+                    <h2 class="listing__title">Полезные <br> материалы</h2>
+                  </div>
+                  <div class="listing__content">
+                    <ol class="listing__list">
+                      <li class="listing__item">
+                        <h3 class="listing__name">Электронная библиотека</h3>
+                        <div class="listing__img"><img src="images/materials/materials-01.jpg" alt="картинка" width="350" height="222"></div>
+                      </li>
+                      <li class="listing__item">
+                        <h3 class="listing__name">Тематические подборки</h3>
+                        <div class="listing__img"><img src="images/materials/materials-02.jpg" alt="картинка" width="350" height="222"></div>
+                      </li>
+                      <li class="listing__item">
+                        <h3 class="listing__name">Глоссарий</h3>
+                        <div class="listing__img"><img src="images/materials/materials-03.jpg" alt="картинка" width="350" height="222"></div>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--publications">
+        <div class="section__wrapper container">
+          <div class="section__header section__header--margin section__header--border">
+            <div class="section__header-row">
+              <h2 class="section__header-title">Журналы издательства</h2>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="publications">
+              <div class="publications__inner">
+                <ul class="publications__list">
+                  <li class="publications__item">
+                    <div class="publications__top">
+                      <div class="publications__img"><img src="images/publications/publications-01.jpg" alt="Стандарты и качество" width="240" height="330"></div>
+                    </div>
+                    <div class="publications__info">
+                      <h3 class="publications__name">Стандарты и качество</h3>
+                      <p class="publications__date">№10 октябрь 2024</p>
+                    </div>
+                  </li>
+                  <li class="publications__item">
+                    <div class="publications__top">
+                      <div class="publications__img"><img src="images/publications/publications-02.jpg" alt="Контроль качества продукции" width="240" height="330"></div>
+                    </div>
+                    <div class="publications__info">
+                      <h3 class="publications__name">Контроль качества продукции</h3>
+                      <p class="publications__date">№ 8 август 2024</p>
+                    </div>
+                  </li>
+                  <li class="publications__item">
+                    <div class="publications__top">
+                      <div class="publications__img"><img src="images/publications/publications-03.jpg" alt="Мир измерений" width="240" height="330"></div>
+                    </div>
+                    <div class="publications__info">
+                      <h3 class="publications__name">Мир измерений</h3>
+                      <p class="publications__date">№2 май 2024</p>
+                    </div>
+                  </li>
+                  <li class="publications__item">
+                    <div class="publications__top">
+                      <div class="publications__img"><img src="images/publications/publications-04.jpg" alt="Business Excellence" width="240" height="330"></div>
+                    </div>
+                    <div class="publications__info">
+                      <h3 class="publications__name">Business Excellence</h3>
+                      <p class="publications__date">№10 декабрь 2024</p>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -178,7 +515,7 @@
               <div class="contacts__inner">
                 <div class="contacts__row">
                   <div class="contacts__section">
-                    <h2 class="contacts__title title">Контакты</h2>
+                    <h2 class="contacts__title">Контакты</h2>
                     <address class="contacts__address address">
                       <div class="address__list address__list--second">
                         <div class="address__item">
@@ -196,7 +533,7 @@
                   <div class="contacts__right">
                     <form class="contacts__form form" action="#">
                       <div class="form__header">
-                        <h2 class="form__title title">Остались вопросы?</h2>
+                        <h2 class="form__title">Остались вопросы?</h2>
                         <p class="form__text">Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.</p>
                       </div>
                       <div class="form__main">
@@ -245,6 +582,7 @@
                 <div>2000—2024 © РИА «Стандарты и качество»: cтандартизация, метрология, менеджмент качества.</div>
                 <div>Все права защищены и охраняются законом.</div>
               </div>
+              <div class="footer__links"><a href="#">Карта сайта</a></div>
             </div>
             <nav class="footer__nav">
               <div class="footer__nav-list">

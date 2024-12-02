@@ -1,7 +1,9 @@
 extends base/_layout
 block head
-   title Главная
+   title Журналы
 block page
+
+   include blocks/breadcrumbs/_breadcrumbs-magazines 
    
    include blocks/journals/_journals-01
 
@@ -11,9 +13,13 @@ block page
 
    include blocks/listing/_listing-01
 
-   include blocks/_authors
+   include blocks/listing/_listing-05
+
+   include blocks/authors/_authors-01
 
    include blocks/_status
+
+   //- include blocks/_quiz
 
    include blocks/listing/_listing-04
 

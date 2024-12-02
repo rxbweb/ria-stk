@@ -10,9 +10,23 @@ header.header
                   button.search__button
                      i.icon.icon-loop
                   input.search__input(type="text" placeholder="Искать....")
-                  .search__select По сайту
-               .header__select.select
-                  .select__input RU
+                  .search__select
+                     .select
+                        button.select__active
+                           span Везде
+                        .select__list
+                           button.select__item.is-active Везде
+                           button.select__item По журналам
+                           button.select__item По книгам
+                           button.select__item По статьям
+                           button.select__item По новостям
+                           button.select__item По мероприятиям
+               .select.select--lang
+                  .select__active
+                     span.select__active-text RU
+                  .select__list
+                     button.select__item.is-active RU
+                     button.select__item EN
             .header__socials.socials
                .socials__list.socials__list--first
                   a.socials__link(href="#")
@@ -35,6 +49,8 @@ header.header
                   a.button.button--img(href="#")
                      i.icon.icon-cart
                   .header__basket-amount 99
+               a.header__favorite.button.button--img(href="#")
+                  i.icon.icon-heart
                a.header__login.button.button--white(href="#")
                   i.icon.icon-user
                   span Войти
@@ -43,7 +59,6 @@ header.header
                      span
                      span
                      span
-                  span Меню
          .header__bottom
             nav.header__nav
                ul.header__nav-list
@@ -79,9 +94,22 @@ header.header
                button.search__button
                   i.icon.icon-loop
                input.search__input(type="text" placeholder="Искать....")
-               .search__select По сайту
-            .menu__select.select
-               .select__input RU
+               .search__select
+                  .select
+                     button.select__active Везде
+                     .select__list
+                        button.select__item.is-active Везде
+                        button.select__item По журналам
+                        button.select__item По книгам
+                        button.select__item По статьям
+                        button.select__item По новостям
+                        button.select__item По мероприятиям
+            .select.select--lang
+               .select__active
+                  span.select__active-text RU
+               .select__list
+                  button.select__item.is-active RU
+                  button.select__item EN
          nav.menu__nav
             ul.menu__nav-list
                li

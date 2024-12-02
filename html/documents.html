@@ -31,10 +31,26 @@
               <div class="header__search search">
                 <button class="search__button"><i class="icon icon-loop"></i></button>
                 <input class="search__input" type="text" placeholder="Искать....">
-                <div class="search__select">По сайту</div>
+                <div class="search__select">
+                  <div class="select">
+                    <button class="select__active"><span>Везде</span></button>
+                    <div class="select__list">
+                      <button class="select__item is-active">Везде</button>
+                      <button class="select__item">По журналам</button>
+                      <button class="select__item">По книгам</button>
+                      <button class="select__item">По статьям</button>
+                      <button class="select__item">По новостям</button>
+                      <button class="select__item">По мероприятиям</button>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="header__select select">
-                <div class="select__input">RU</div>
+              <div class="select select--lang">
+                <div class="select__active"><span class="select__active-text">RU</span></div>
+                <div class="select__list">
+                  <button class="select__item is-active">RU</button>
+                  <button class="select__item">EN</button>
+                </div>
               </div>
             </div>
             <div class="header__socials socials">
@@ -44,14 +60,14 @@
             <div class="header__controls">
               <div class="header__basket"><a class="button button--img" href="#"><i class="icon icon-cart"></i></a>
                 <div class="header__basket-amount">99</div>
-              </div><a class="header__login button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span><span></span><span></span></i><span>Меню</span></a>
+              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span><span></span><span></span></i></a>
             </div>
           </div>
           <div class="header__bottom">
             <nav class="header__nav">
               <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="is-note" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
                 <li class="header__nav-item"><a href="#">Журналы</a></li>
-                <li class="header__nav-item"><a href="#">Подписка</a></li>
                 <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
                 <li class="header__nav-item"><a href="#">Электронная библиотека</a></li>
                 <li class="header__nav-item"><a href="#">Абонентский доступ</a></li>
@@ -74,10 +90,26 @@
             <div class="menu__search search">
               <button class="search__button"><i class="icon icon-loop"></i></button>
               <input class="search__input" type="text" placeholder="Искать....">
-              <div class="search__select">По сайту</div>
+              <div class="search__select">
+                <div class="select">
+                  <button class="select__active">Везде</button>
+                  <div class="select__list">
+                    <button class="select__item is-active">Везде</button>
+                    <button class="select__item">По журналам</button>
+                    <button class="select__item">По книгам</button>
+                    <button class="select__item">По статьям</button>
+                    <button class="select__item">По новостям</button>
+                    <button class="select__item">По мероприятиям</button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="menu__select select">
-              <div class="select__input">RU</div>
+            <div class="select select--lang">
+              <div class="select__active"><span class="select__active-text">RU</span></div>
+              <div class="select__list">
+                <button class="select__item is-active">RU</button>
+                <button class="select__item">EN</button>
+              </div>
             </div>
           </div>
           <nav class="menu__nav">
@@ -145,7 +177,7 @@
               <div class="contacts__inner">
                 <div class="contacts__row">
                   <div class="contacts__section">
-                    <h2 class="contacts__title title">Контакты</h2>
+                    <h2 class="contacts__title">Контакты</h2>
                     <address class="contacts__address address">
                       <div class="address__list address__list--second">
                         <div class="address__item">
@@ -163,7 +195,7 @@
                   <div class="contacts__right">
                     <form class="contacts__form form" action="#">
                       <div class="form__header">
-                        <h2 class="form__title title">Остались вопросы?</h2>
+                        <h2 class="form__title">Остались вопросы?</h2>
                         <p class="form__text">Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.</p>
                       </div>
                       <div class="form__main">
@@ -212,6 +244,7 @@
                 <div>2000—2024 © РИА «Стандарты и качество»: cтандартизация, метрология, менеджмент качества.</div>
                 <div>Все права защищены и охраняются законом.</div>
               </div>
+              <div class="footer__links"><a href="#">Карта сайта</a></div>
             </div>
             <nav class="footer__nav">
               <div class="footer__nav-list">
