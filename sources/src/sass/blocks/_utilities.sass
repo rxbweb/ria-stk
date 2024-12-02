@@ -1,4 +1,4 @@
-.visually-hidden:not(:focus):not(:active)
+.visually-hidden
    position: absolute
    width: 1px
    height: 1px
@@ -6,6 +6,9 @@
    border: 0
    padding: 0
    clip: rect(0 0 0 0)
+   overflow: hidden
+
+.no-scroll
    overflow: hidden
 
 .scroll-x

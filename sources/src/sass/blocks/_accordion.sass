@@ -1,4 +1,20 @@
 .accordion
+   &__row
+      display: grid
+      grid-template-columns: minmax(20%, var(--block-width)) 1fr
+      gap: var(--gap)
+   &__left,
+   &__right
+      flex-grow: 1
+      overflow: hidden
+   &__img
+      background: url(../images/interest/interest.jpg) no-repeat center / cover
+      @include img-cover(94%, var(--border-radius-15))
+   &__pic
+      opacity: 0
+      transition: var(--transition)
+      &.is-active
+         opacity: 1
    &__list
       @include margin-bottom(20px)
    &__item
@@ -82,8 +98,14 @@
          grid-template-columns: 1fr
          gap: var(--gap)
    @include md
+      &__row
+         grid-template-columns: 1fr
+      &__left
+         display: none
       &__list
          @include margin-bottom(0)
+      &__item
+         padding: 0 15px
       &__magazines
          gap: 15px
       &__button
@@ -96,16 +118,23 @@
    @include sm
       --magazines-padding: 15px
       &__item
-         padding: 0 15px
+         padding: 0 10px
       &__box
          padding: var(--magazines-padding)
       &__magazines
          @include scroll-x(var(--magazines-padding))
    @include xs
       --magazines-padding: 10px
-      &__item
-         padding: 0 10px
       &__button
          &-plus
             width: 20px
             height: 20px
+
+.section
+   &--accordion
+      @include md
+         margin: 0
+         padding: var(--section-padding) 0
+         &::before,
+         &::after
+            display: none

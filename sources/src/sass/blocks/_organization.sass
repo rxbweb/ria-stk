@@ -1,10 +1,24 @@
 .organization
    --color: #fff
+   height: 100vh
+   max-height: 800px
+   min-height: 750px
    color: var(--color)
    position: relative
+   &--2
+      max-height: 750px
+   .bg-image
+      img
+         transition: var(--transition)
+   &:hover
+      .bg-image
+         img
+            filter: grayscale(1)
+      .numbers
+         &__item
+            border-color: var(--accent)
    &__inner
       height: 100%
-      min-height: 800px
       display: flex
       flex-direction: column
       justify-content: flex-end
@@ -31,12 +45,24 @@
    &__title
       margin-bottom: 40px
    &__text
+      margin-bottom: 0
       max-width: 510px
+      max-height: 0
+      overflow: hidden
+      opacity: 0
+      transition: var(--transition)
+      .organization:hover &
+         max-height: 200px
+         margin-bottom: 30px
+         opacity: 1
       @include fluidFontSize(13px, 15px, 360px, 1920px, 15px)
    @include rh($rh)
       &__inner
          min-height: 100vh
    @include md
+      min-height: auto
+      max-height: none
+      height: auto
       &__inner
          padding: 100px var(--padding) 50px
          min-height: auto

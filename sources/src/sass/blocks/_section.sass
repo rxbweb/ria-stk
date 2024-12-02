@@ -35,7 +35,7 @@
          padding-bottom: 30px
          border-bottom: 1px solid #cdcdcd
       &--margin
-         margin-bottom: var(--gap)
+         margin-bottom: var(--gap-large)
       &-row
          display: flex
          justify-content: space-between
@@ -48,6 +48,9 @@
          align-items: center
       &-title
          @extend .title
+      &-heading
+         @extend .title
+         @extend .title--main
    &__footer
       padding-top: 25px
       display: none

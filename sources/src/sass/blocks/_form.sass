@@ -1,13 +1,16 @@
 .form
    @include margin-bottom(30px)
+   @extend .white-box
    width: 100%
    max-width: 772px
-   padding: 50px
-   box-shadow: 0 4px 15px 0 rgba(62, 62, 62, 0.15)
-   background: var(--white)
-   border-radius: 15px
+   &--large
+      max-width: 100%
    &__header
+      &--border
+         @extend .section__header--border
       @include margin-bottom(30px)
+   &__title
+      @extend .title
    &__main
       @include margin-bottom(20px)
    &__box
@@ -62,8 +65,72 @@
          @include icomoon('\e90b', #fff, 8px)
          input:checked ~ &
             background: var(--accent)
+   &__radio
+      display: flex
+      align-items: flex-start
+      gap: 5px
+      cursor: pointer
+      input
+         @extend .visually-hidden
+      &-field
+         width: 20px
+         height: 20px
+         flex-shrink: 0
+         border-radius: 50%
+         border: 1px solid var(--accent)
+         position: relative
+         &::after
+            content: ''
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%) scale(0)
+            opacity: 0
+            width: 12px
+            height: 12px
+            border-radius: 50%
+            background: var(--accent)
+            transition: all var(--duration) ease
+         input:checked ~ &::after
+            transform: translate(-50%, -50%) scale(1)
+            opacity: 1
+   &__list
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: 40px
+   &__block
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      gap: 15px
+   &__col
+      @include margin-bottom(30px)
+      &-item
+         @include margin-bottom(20px)
+   &__footer
+      display: flex
+      justify-content: flex-end
+   &__heading
+      @extend .title
+      @extend .title--fourth
+   &__name
+      @extend .title
+      @extend .title--second
+      line-height: 100%
+      &-number
+         color: var(--accent)
+         position: relative
+         margin-right: 5px
+         padding-right: 8px
+         &::after
+            content: ''
+            position: absolute
+            right: 0
+            top: 7px
+            bottom: 5px
+            width: 3px
+            background: var(--accent)
    @include lg
-      padding: 30px
       &__box
          gap: 15px
       &__label
@@ -71,7 +138,6 @@
             width: 100%
    @include sm
       @include margin-bottom(15px)
-      padding: 20px 15px
       &__header
          @include margin-bottom(15px)
       &__main

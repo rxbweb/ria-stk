@@ -63,7 +63,29 @@
                   &::before
                      @extend .details__list-description
                      @extend .title
-                     @extend .title--third
+                     @include fluidFontSize(32px, 64px, 360px, 1920px, 32px)
+               &-title
+                  @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)
+   @media (min-width: 1201px)
+      &__list
+         &--2
+            .details
+               &__list
+                  &-item
+                     &::before
+                        top: 36px
+                  &-box
+                     min-height: 290px
+                     padding: 40px 0
+                     padding-left: 17.1%
+                     gap: 140px
+                  &-img
+                     width: 28%
+                     padding-bottom: 15%
+                  &-info
+                     width: 50%
+                     max-width: 770px
+                     gap: 30px
    @include md
       &__list
          &-box
@@ -82,6 +104,15 @@
                display: none
          &-tags
             order: -2
+         &--2
+            .details
+               &__list
+                  &-item
+                     &::before
+                        font-size: 32px
+                        top: 15px
+                  &-box
+                     padding-top: 65px
    @include sm
       &__list
          &-box

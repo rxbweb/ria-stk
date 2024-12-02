@@ -1,8 +1,9 @@
 .hero
-   &__main
+   &__row
       display: grid
       grid-template-columns: 640px 1fr
       gap: 86px
+      overflow: hidden
    &__info
       @include margin-bottom(30px)
    &__title
@@ -13,12 +14,16 @@
       @include margin-bottom(15px)
    &__content
       max-width: 100%
+   &__slider
+      overflow: hidden
    &__books
+      &-figure
+         width: 396px
       &-name
          transform: translateY(-30px)
          opacity: 0
          transition: all var(--duration) ease
-         .swiper-slide-active &
+         .swiper-slide-active > .hero__books-figure &
             opacity: 1
       &-swiper
          width: 1000px
@@ -27,6 +32,11 @@
             &-wrapper
                width: 100%
                max-width: 100%
+               margin-bottom: 80px
+               padding-bottom: 15px
+            &-pagination
+               margin-right: 90px
+               text-align: right
             &-slide
                @extend .title
                @extend .title--sixth
@@ -36,27 +46,92 @@
                transition: all var(--duration) ease
                color: #4E525E
                text-align: center
+               user-select: none
                &-active
                   transform: scale(1.2)
                   opacity: 1
                   z-index: 10
+                  @media (max-width: 1700px)
+                     transform: scale(1)
                &__2
                   transform: scale(1) translateX(10%)
                   opacity: 1
                   z-index: 9
+                  @media (max-width: 1700px)
+                     transform: scale(.88) translateX(5%)
+                  @media (max-width: 1440px)
+                     transform: scale(.88) translateX(-19%)
+                  @include sm
+                     transform: scale(.88) translateX(1%)
+                  @include xs
+                     transform: scale(.88) translateX(30%)
                &__3
-                  transform: scale(.90) translateX(20%)
+                  transform: scale(.9) translateX(20%)
                   opacity: 1
                   z-index: 8
+                  @media (max-width: 1700px)
+                     transform: scale(.75) translateX(3%)
+                  @media (max-width: 1640px)
+                     transform: scale(.75) translateX(-5%)
+                  @media (max-width: 1440px)
+                     transform: scale(.75) translateX(-57%)
+                  @include sm
+                     transform: scale(.75) translateX(-12%)
+                  @include xs
+                     transform: scale(.75) translateX(55%)
                &__4
                   transform: scale(.73) translateX(30%)
                   opacity: 1
                   z-index: 7
+                  @media (max-width: 1700px)
+                     transform: scale(.65) translateX(0%)
+                  @media (max-width: 1640px)
+                     transform: scale(.65) translateX(-20%)
+                  @media (max-width: 1440px)
+                     opacity: 0
                &__5
                   transform: scale(.48) translateX(25%)
                   opacity: 1
                   z-index: 6
+                  @media (max-width: 1700px)
+                     transform: scale(.48) translateX(-25%)
+                  @media (max-width: 1640px)
+                     opacity: 0
                &__6
                   transform: scale(.35) translateX(-12%)
                   opacity: 1
                   z-index: 5
+                  @media (max-width: 1700px)
+                     opacity: 0
+   @media (max-width: 1640px)
+      &__row
+         gap: 30px
+   @include xl
+      &__row
+         grid-template-columns: 580px 1fr
+   @include lg
+      &__row
+         grid-template-columns: 500px 1fr
+   @media (max-width: 1260px)
+      &__row
+         grid-template-columns: 1fr
+      &__books
+         &-swiper
+            width: 100%
+            max-width: 1000px
+            margin: 0 auto
+            display: flex
+            justify-content: center
+   @include sm
+      &__books
+         overflow: hidden
+         &-swiper
+            width: calc(100vw - 2* var(--padding))
+            max-width: calc(100vw - 2* var(--padding))
+            .swiper
+               &-wrapper
+                  padding-bottom: 0
+         &-figure
+            width: 100%
+         &-name
+            display: none

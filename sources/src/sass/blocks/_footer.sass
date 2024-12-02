@@ -11,8 +11,17 @@
       flex-direction: column
       justify-content: space-between
       align-items: flex-start
-      gap: 30px
+      gap: 20px
       flex-basis: 380px
+   &__logo
+      margin-bottom: auto
+   &__links
+      a
+         text-decoration: underline
+         color: var(--black)
+         &:hover,
+         &:focus
+            text-decoration: none
    &__nav
       &-list
          font-size: 19px
@@ -26,11 +35,8 @@
          align-items: flex-start
          gap: 24px
          a
-            @extend .link-line
+            @include hover-line(black, 1px)
             transition: var(--transition)
-            &:hover,
-            &:focus
-               color: black
    &__address
       margin-left: auto
       flex-basis: 470px
@@ -116,6 +122,8 @@
          &--mob
             display: block
    @include sm
+      &__links
+         display: none
       &__top
          padding: 25px 0 50px
       &__copy

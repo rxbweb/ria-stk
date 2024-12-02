@@ -39,6 +39,9 @@
          gap: 20px
    @include sm
       &__list
-         display: flex
+         @include scroll-x()
       &__item
          min-width: 290px
+      &__info
+         padding-top: 15px
+         @include margin-bottom(10px)

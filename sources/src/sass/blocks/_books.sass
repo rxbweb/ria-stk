@@ -1,4 +1,14 @@
 .books
+   &__inner
+      @include margin-bottom(120px)
+   &__section
+      @include margin-bottom(var(--gap))
+   &__header
+      @extend .section__header--border
+   &__title
+      @extend .title
+      &--red
+         @extend .title--red
    &__content
       @include margin-bottom(60px)
    &__list
@@ -12,6 +22,13 @@
       @include img-cover(100%, var(--border-radius-15))
       background: #F5F5F5
       position: relative
+   &__like
+      position: absolute
+      top: 15px
+      right: 15px
+      z-index: var(--z-index)
+      @extend .btn
+      @extend .btn--like
    &__img
       position: absolute
       inset: 32px
@@ -37,6 +54,7 @@
    &__name
       @extend .title
       @extend .title--sixth
+      letter-spacing: -0.6px
    &__price
       @extend .title
       @extend .title--sixth

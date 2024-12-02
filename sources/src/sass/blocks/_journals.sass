@@ -10,7 +10,7 @@
       overflow: hidden
    &__top
       width: 100%
-      max-width: 240px
+      max-width: 54.5%
       margin: 0 auto
    &__img
       @include img-cover(142%)
@@ -28,3 +28,22 @@
    &__link
       @extend .button
       @extend .button--outline
+   @include md
+      &__top
+         max-width: 70%
+   @include ms
+      &__list
+         grid-template-columns: repeat(2, 1fr)
+      &__item
+         border-radius: 20px
+      &__info
+         gap: 20px
+   @include xs
+      &__list
+         grid-template-columns: 1fr
+      &__item
+         border-radius: 15px
+      &__top
+         max-width: 55%
+      &__info
+         gap: 10px

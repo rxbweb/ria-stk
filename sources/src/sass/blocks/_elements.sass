@@ -66,10 +66,11 @@
    &--img
       width: 46px
       height: 46px
-      padding: 12px
+      padding: 6px
       font-size: 22px
       display: flex
       align-items: center
+      justify-content: center
    &--white
       display: inline-flex
       align-items: center
@@ -120,18 +121,36 @@
    color: var(--accent)
    transition: var(--transition)
    cursor: pointer
-   @include icomoon('\e90c', var(--accent), 20px)
-   &--left
+   font-size: 20px
+   &:hover,
+   &:focus
+      background: var(--accent)
+      color: #fff
+   &--arrow
+      @include icomoon('\e90c', inherit, 20px)
+   &--arrow-left
+      @include icomoon('\e90c', inherit, 20px)
       transform: scaleX(-1)
+   &--like
+      border-radius: 10px
+      border: #fff
+      background: #fff
+      @include icomoon('\e910', inherit, 20px)
    @include md
       --size: 40px
    @include sm
       &--small
          --size: 32px
+      &--arrow
+         &::after
+            font-size: 16px
    @include xs
       &--small
          --size: 28px
          font-size: 12px
+      &--arrow
+         &::after
+            font-size: 12px
 
 
 .title
@@ -172,6 +191,17 @@
    font-size: 14px
    @include xs
       font-size: 13px
+
+.white-box
+   padding: 50px
+   box-shadow: 0 4px 15px 0 rgba(62, 62, 62, 0.15)
+   background: var(--white)
+   border-radius: 15px
+   overflow: hidden
+   @include lg
+      padding: 30px
+   @include sm
+      padding: 20px 15px
 
 .badge
    --size: 40px
@@ -218,6 +248,7 @@
    &::after
       content: ''
       position: absolute
+      top: auto
       left: 0
       top: 0
       bottom: 0
@@ -239,6 +270,8 @@
       left: 0
       right: 0
       bottom: 0
+      top: auto
+      width: 100%
       height: 1px
       background: var(--border-color)
       transition: all var(--duration) ease
@@ -271,7 +304,7 @@
          box-shadow: 0 1px 0 var(--accent)
          background: var(--accent)
 
-.link-line
+.hover-line
    position: relative
    &::after
       content: ''
