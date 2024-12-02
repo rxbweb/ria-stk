@@ -1,0 +1,49 @@
+.ticket
+   &__row
+      display: flex
+      justify-content: space-between
+      gap: var(--gap)
+   &__info
+      @include margin-bottom(var(--gap-2))
+   &__title
+      @extend .title
+   &__text
+      width: 100%
+      max-width: 662px
+      @include margin-bottom(15px)
+   &__content
+      flex-basis: 800px
+      flex-shrink: 0
+   &__table
+      @include margin-bottom(22px)
+      &-row
+         padding-bottom: 15px
+         display: flex
+         border-bottom: 1px solid #CDCDCD
+         & > *
+            &:nth-last-child(2)
+               margin-right: 40px
+            &:last-child
+               margin-left: auto
+         @include margin-right(76px)
+      &-col
+         @include margin-bottom(5px)
+         &:last-child
+            display: flex
+            flex-direction: column
+            justify-content: center
+      &-primary
+         @extend .title
+         @extend .title--second
+      .button
+         padding-left: 30px
+         padding-right: 30px
+   @media (max-width: 1365px)
+      &__row
+         flex-direction: column
+      &__table
+         &-col
+            &:nth-child(3)
+               min-width: 100px
+            &:last-child
+               margin-left: 0
