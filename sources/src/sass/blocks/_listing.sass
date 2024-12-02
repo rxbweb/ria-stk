@@ -77,6 +77,16 @@
          @include scroll-x(var(--padding))
          display: flex
          gap: 30px
+         &--default
+            width: 100%
+            margin: 0
+            padding: 0
+            flex-direction: column
+            flex-wrap: wrap
+            gap: 25px
+            .listing
+               &__item
+                  width: 100%
       &__item
          width: var(--listing-item-width)
          min-width: var(--listing-item-width)
