@@ -1,0 +1,36 @@
+.board
+   &__list
+      padding: 40px
+      border-radius: var(--border-radius-15)
+      background: #F5F5F5
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: var(--gap)
+   &__box
+      display: flex
+      gap: 20px
+      align-items: flex-start
+   &__img
+      width: 180px
+      height: 200px
+      flex-shrink: 0
+      background: #fff
+      @include img-cover(0, var(--border-radius-15))
+      @include icomoon('\e911', inherit, 50px)
+      &::after
+         position: absolute
+         left: 50%
+         top: 50%
+         transform: translate(-50%, -50%)
+         color: #CDCDCD
+      img
+         z-index: 5
+   &__info
+      align-self: stretch
+      @include align-block(10px)
+   &__name
+      @extend .title
+      @extend .title--second
+   &__text
+      @extend .fz-14
+      @include line-clamp(4)
