@@ -54,6 +54,7 @@
    &__name
       @extend .title
       @extend .title--sixth
+      @include line-clamp(3)
       letter-spacing: -0.6px
    &__price
       @extend .title
@@ -64,3 +65,6 @@
       display: flex
       gap: 20px
       align-items: center
+   &__swiper
+      overflow: hidden
+      @include margin-bottom(40px)
