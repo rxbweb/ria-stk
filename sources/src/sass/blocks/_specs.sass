@@ -1,0 +1,71 @@
+.specs
+   padding-bottom: 50px
+   position: relative
+   .breadcrumbs
+      margin-bottom: 0
+   &--2
+      .breadcrumbs
+         margin-bottom: 20px
+   &__inner
+      @include margin-bottom(30px)
+   &__header
+      margin-bottom: 40px
+   &__title
+      @extend .title
+      @extend .title--main
+   &__box
+      padding: 35px
+      border-radius: var(--border-radius-15)
+      background: #fff
+      overflow: hidden
+      display: flex
+      gap: 60px
+   &__img
+      padding: 26px
+      flex-basis: 665px
+      flex-shrink: 0
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: var(--border-radius-15)
+      background: #EFEFEF
+      overflow: hidden
+   &__info
+      padding: 40px 0
+      display: flex
+      flex-direction: column
+      @include margin-bottom(40px)
+      @include mt-auto()
+      .specs--2 &
+         @include margin-bottom(15px)
+         & > *:nth-last-child(2)
+            margin-bottom: 50px
+   &__isbn
+      @extend .title
+      @extend .title--second
+      @extend .title--red
+   &__name
+      max-width: 650px
+      margin-bottom: 25px
+      @extend .title
+      @extend .title--fourth
+   &__caption
+      @extend .title
+   &__table
+      width: 100%
+      max-width: 550px
+      @include margin-bottom(8px)
+      li
+         padding: 5px 0
+         border-bottom: 1px solid #CDCDCD
+         span
+            color: var(--accent)
+   &__manage
+      display: flex
+      align-items: center
+      @include margin-right(30px)
+   &__price
+      @extend .title
+      @extend .title--fourth
+      margin-right: 20px
+      color: #47535E
