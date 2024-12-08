@@ -1,0 +1,42 @@
+.content
+   &__row
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: var(--gap)
+   &__block
+      overflow: hidden
+      display: flex
+      flex-direction: column
+      @include margin-bottom(30px)
+   &__title
+      @extend .title
+   &__box
+      padding: 30px
+      border-radius: var(--border-radius-15)
+      background: #F3F3F3
+      overflow: hidden
+      flex-grow: 1
+      @extend .fs-18
+   &__text
+      @include margin-bottom(24px)
+   &__swiper
+      width: 100%
+      max-width: 100%
+      position: relative
+      user-select: none
+      overflow: hidden
+      &-img
+         padding: 0 40px
+         width: 100%
+         display: flex
+         justify-content: center
+         align-items: center
+      &-prev,
+      &-next
+         position: absolute
+         top: 50%
+         transform: translateY(-50%)
+      &-prev
+         left: 0
+      &-next
+         right: 0
