@@ -27,10 +27,20 @@
       font-size: 15px
       &-list
          @include margin-bottom(10px)
+         a
+            display: inline-flex
+            align-items: center
+            gap: 10px
+            &.is-icon
+               color: var(--accent)
+            .icon
+               margin-bottom: 2px
+               font-size: 18px
+               display: block
    &__logo
       width: 48px
       height: 48px
    @include ms
       --header-height: 77px
    @include xs
-      --header-height: 70px
+      --header-height: 69px
