@@ -86,16 +86,29 @@
    &__toggle
       display: none
       .icon
-         padding: 4px 3px
+         padding: 4px 2px
          position: relative
-         display: flex
-         flex-direction: column
-         justify-content: space-between
+         display: block
+         &::before,
+         &::after,
          span
+            content: ""
+            display: block
             width: 14px
             height: 2px
             background: var(--accent)
             border-radius: 2px
+            transition: var(--duration)
+         span
+            margin: 2px 0
+      &.is-active
+         .icon
+            &::before
+               transform: translateY(4px) rotate(135deg)
+            &::after
+               transform: translateY(-4px) rotate(-135deg)
+            span
+               transform: scale(0)
    &__bottom
       display: flex
       align-items: center
@@ -121,7 +134,7 @@
             gap: 10px
             position: relative
             @include hover-line(var(--accent), 2px)
-            &.is-note
+            &.is-icon
                color: var(--accent)
             .icon
                font-size: 22px
