@@ -1,18 +1,30 @@
+-
+   const numbers04 = [
+      {
+         num: '12 000+',
+         text: 'Статей в фонде библиотеки'
+      },
+      {
+         num: '2 500+',
+         text: 'Авторов и экспертов со всего мира'
+      },
+      {
+         num: '1 500+',
+         text: 'Пользователей ежедневно'
+      },
+      {
+         num: '24/7',
+         text: 'Круглосуточная доступность'
+      },
+   ]
+
 section.section.section--padding-small.section--numbers-2
    .section__wrapper.container
       .section__content
          .numbers
             .numbers__inner
                ul.numbers__list.numbers__list--4
-                  li.numbers__item
-                     .numbers__num 12 000+
-                     .numbers__text Статей в фонде библиотеки
-                  li.numbers__item
-                     .numbers__num 2 500+
-                     .numbers__text Авторов и экспертов со всего мира
-                  li.numbers__item
-                     .numbers__num 1 500+
-                     .numbers__text Пользователей ежедневно
-                  li.numbers__item
-                     .numbers__num 24/7
-                     .numbers__text Круглосуточная доступность
+                  each number in numbers04
+                     li.numbers__item
+                        .numbers__num=number.num
+                        .numbers__text!=number.text

@@ -1,24 +1,38 @@
+-
+   const numbers03 = [
+      {
+         num: '1 500 +',
+         text: 'научных и <br> популярных статей <br> ежегодно'
+      },
+      {
+         num: '150 000 +',
+         text: 'читателей <br> ежемесячно'
+      },
+      {
+         num: '27',
+         text: 'профессиональных <br> наград'
+      },
+      {
+         num: '30+',
+         text: 'лет на рынке <br> профессиональной <br> прессы'
+      },
+      {
+         num: '50+',
+         text: 'профессиональных <br> сотрудников'
+      },
+      {
+         num: '2 500 +',
+         text: 'авторов и экспертов со всего <br> мира'
+      },
+   ]
+
 section.section.section--padding-small.section--numbers
    .section__wrapper.container
       .section__content
          .numbers
             .numbers__inner
                ul.numbers__list.numbers__list--3
-                  li.numbers__item
-                     .numbers__num 1 500 +
-                     .numbers__text научных и #[br] популярных статей #[br] ежегодно
-                  li.numbers__item
-                     .numbers__num 150 000 +
-                     .numbers__text читателей #[br] ежемесячно
-                  li.numbers__item
-                     .numbers__num 27
-                     .numbers__text профессиональных #[br] наград
-                  li.numbers__item
-                     .numbers__num 30+
-                     .numbers__text лет на рынке #[br] профессиональной #[br] прессы
-                  li.numbers__item
-                     .numbers__num 50+
-                     .numbers__text профессиональных #[br] сотрудников
-                  li.numbers__item
-                     .numbers__num 2 500 +
-                     .numbers__text авторов и экспертов со всего #[br] мира
+                  each number in numbers03
+                     li.numbers__item
+                        .numbers__num=number.num
+                        .numbers__text!=number.text

@@ -1,3 +1,23 @@
+-
+   const numbers01 = [
+      {
+         num: '30 лет',
+         text: 'на рынке профессиональной прессы'
+      },
+      {
+         num: '2500+',
+         text: 'авторов и экспертов со всего мира'
+      },
+      {
+         num: '1500+',
+         text: 'научных и популярных статей ежегодно'
+      },
+      {
+         num: '100 000+',
+         text: 'читателей ежемесячно'
+      },
+   ]
+
 section.section.section--numbers
    .section__wrapper.container
       .section__content
@@ -9,15 +29,7 @@ section.section.section--numbers
                      .numbers__video
                         iframe(src="https://vk.com/video_ext.php?oid=-44296658&id=456239019&hd=2&", width="980" height="584")
                      ul.numbers__list
-                        li.numbers__item
-                           .numbers__num 30 лет
-                           .numbers__text на рынке профессиональной прессы
-                        li.numbers__item
-                           .numbers__num 2500+
-                           .numbers__text авторов и экспертов со всего мира
-                        li.numbers__item
-                           .numbers__num 1500+
-                           .numbers__text научных и популярных статей ежегодно
-                        li.numbers__item
-                           .numbers__num 100 000+
-                           .numbers__text читателей ежемесячно
+                        each number in numbers01
+                           li.numbers__item
+                              .numbers__num=number.num
+                              .numbers__text!=number.text
