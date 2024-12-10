@@ -1,3 +1,19 @@
+-
+   const journals02 = [
+      { 
+         src: 'images/journals/journals-01.png', 
+         title: 'стандарты и качество' 
+      },
+      { 
+         src: 'images/journals/journals-05.png', 
+         title: 'Business Excellence' 
+      },
+      { 
+         src: 'images/journals/journals-06.png', 
+         title: 'Методы менеджмента качества' 
+      }
+   ]
+
 section.section
    .section__wrapper.container
       .section__header
@@ -10,30 +26,13 @@ section.section
          .journals
             .journals__inner
                ul.journals__list
-                  li.journals__item
-                     .journals__top
-                        .journals__img
-                           img(src="images/journals/journals-01.png", alt="стандарты и качество" width="240" height="340")
-                     .journals__info
-                        h3.journals__name стандарты и качество
-                        a.journals__link(href="#") 
-                           span Подробнее
-                           i.icon.icon-arrow-small
-                  li.journals__item
-                     .journals__top
-                        .journals__img
-                           img(src="images/journals/journals-05.png", alt="Business Excellence" width="240" height="340")
-                     .journals__info
-                        h3.journals__name Business Excellence
-                        a.journals__link(href="#") 
-                           span Подробнее
-                           i.icon.icon-arrow-small
-                  li.journals__item
-                     .journals__top
-                        .journals__img
-                           img(src="images/journals/journals-06.png", alt="Методы менеджмента качества" width="240" height="340")
-                     .journals__info
-                        h3.journals__name Методы менеджмента качества
-                        a.journals__link(href="#") 
-                           span Подробнее
-                           i.icon.icon-arrow-small
+                  each journal in journals02
+                     li.journals__item
+                        .journals__top
+                           .journals__img
+                              img(src=journal.src, width="240", height="340")
+                        .journals__info
+                           h3.journals__name= journal.title
+                           a.journals__link(href="#") 
+                              span Подробнее
+                              i.icon.icon-arrow-small
