@@ -1,3 +1,19 @@
+-
+   const listings01 = [
+      {
+         name: 'Электронная библиотека',
+         image: 'images/materials/materials-01.jpg'
+      },
+      {
+         name: 'Тематические подборки',
+         image: 'images/materials/materials-02.jpg'
+      },
+      {
+         name: 'Глоссарий',
+         image: 'images/materials/materials-03.jpg'
+      },
+   ]
+
 section.section.section--listing
    .section__wrapper.container
       .section__content
@@ -8,15 +24,8 @@ section.section.section--listing
                      h2.listing__title Полезные #[br] материалы
                   .listing__content
                      ol.listing__list
-                        li.listing__item
-                           h3.listing__name Электронная библиотека
-                           .listing__img
-                              img(src="images/materials/materials-01.jpg", alt="картинка" width="350" height="222")
-                        li.listing__item
-                           h3.listing__name Тематические подборки
-                           .listing__img
-                              img(src="images/materials/materials-02.jpg", alt="картинка" width="350" height="222")
-                        li.listing__item
-                           h3.listing__name Глоссарий
-                           .listing__img
-                              img(src="images/materials/materials-03.jpg", alt="картинка" width="350" height="222")
+                        each listing in listings01
+                           li.listing__item
+                              h3.listing__name=listing.name
+                              .listing__img
+                                 img(src=listing.image, alt="картинка" width="350" height="222")

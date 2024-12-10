@@ -1,3 +1,21 @@
+-
+   const listings02 = [
+      {
+         title: 'Электронная библиотека',
+         text: 'Миссия РИА «Стандарты и качество» — нести людям идеи качества во всем их многообразии.',
+         badge: 'images/badges/badge-08.svg',
+         badgeSize: '32',
+         image: 'images/listing/listing-mission-01.jpg'
+      },
+      {
+         title: 'Тематические подборки',
+         text: 'Глобальный информационный центр, база знаний о качестве — доступный, удобный, информативный.',
+         badge: 'images/badges/badge-09.svg',
+         badgeSize: '43',
+         image: 'images/listing/listing-mission-02.jpg'
+      }
+   ]
+
 section.section.section--listing
    .section__wrapper.container
       .section__content
@@ -8,17 +26,11 @@ section.section.section--listing
                      h2.listing__title Миссия и видение компании
                   .listing__content
                      ol.listing__list.listing__list--icons.listing__list--2
-                        li.listing__item
-                           .badge.badge--large
-                              img(src="images/badges/badge-08.svg", alt="иконка" width="32" height="32")
-                           h3.listing__name Электронная библиотека
-                           p.listing__text Миссия РИА «Стандарты и качество» — нести людям идеи качества во всем их многообразии.
-                           .listing__img
-                              img(src="images/listing/listing-mission-01.jpg", alt="картинка" width="350" height="222")
-                        li.listing__item
-                           .badge.badge--large
-                              img(src="images/badges/badge-09.svg", alt="иконка" width="43" height="43")
-                           h3.listing__name Тематические подборки
-                           p.listing__text Миссия РИА «Стандарты и качество» — нести людям идеи качества во всем их многообразии.
-                           .listing__img
-                              img(src="images/listing/listing-mission-02.jpg", alt="картинка" width="350" height="222")
+                        each listing in listings02
+                           li.listing__item
+                              .badge.badge--large
+                                 img(src=listing.badge, alt="иконка" width=listing.badgeSize height=listing.badgeSize)
+                              h3.listing__name=listing.title
+                              p.listing__text=listing.text
+                              .listing__img
+                                 img(src=listing.image, alt="картинка" width="350" height="222")

@@ -1,3 +1,23 @@
+-
+   const listings03 = [
+      {
+         badge: 'images/badges/badge-10.svg',
+         title: 'Регулярное поступление актуальной информации'
+      },
+      {
+         badge: 'images/badges/badge-11.svg',
+         title: 'Постоянный и непрерывный процесс совершенствования компетенций'
+      },
+      {
+         badge: 'images/badges/badge-12.svg',
+         title: 'Формирование корпоративной базы знаний'
+      },
+      {
+         badge: 'images/badges/badge-13.svg',
+         title: 'Доступ к системе привилегий'
+      },
+   ]
+
 section.section.section--listing
    .section__wrapper.container
       .section__header
@@ -10,19 +30,8 @@ section.section.section--listing
          .listing
             .listing__inner
                ul.listing__list.listing__list--icons.listing__list--4.listing__list--default
-                  li.listing__item
-                     .badge.badge--large
-                        img(src="images/badges/badge-10.svg", alt="иконка" width="36" height="36")
-                     h3.listing__name Регулярное поступление актуальной информации
-                  li.listing__item
-                     .badge.badge--large
-                        img(src="images/badges/badge-11.svg", alt="иконка" width="36" height="36")
-                     h3.listing__name Постоянный и непрерывный процесс совершенствования компетенций
-                  li.listing__item
-                     .badge.badge--large
-                        img(src="images/badges/badge-12.svg", alt="иконка" width="36" height="36")
-                     h3.listing__name Формирование корпоративной базы знаний
-                  li.listing__item
-                     .badge.badge--large
-                        img(src="images/badges/badge-13.svg", alt="иконка" width="36" height="36")
-                     h3.listing__name Доступ к системе привилегий
+                  each listing in listings03
+                     li.listing__item
+                        .badge.badge--large
+                           img(src=listing.badge, alt="иконка" width="36" height="36")
+                        h3.listing__name=listing.title

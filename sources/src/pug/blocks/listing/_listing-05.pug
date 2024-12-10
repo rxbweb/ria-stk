@@ -1,3 +1,31 @@
+-
+   const listings05 = [
+      {
+         text: 'Экспертные статьи, позволяющие знаниям стать навыками',
+         badge: 'images/badges/badge-15.svg',
+         badgeWidth: '32',
+         badgeHeight: '32',
+      },
+      {
+         text: 'Междисциплинарный подход к исследованию темы',
+         badge: 'images/badges/badge-16.svg',
+         badgeWidth: '34',
+         badgeHeight: '32',
+      },
+      {
+         text: 'Авторы, чье <br> мнение интересно',
+         badge: 'images/badges/badge-17.svg',
+         badgeWidth: '34',
+         badgeHeight: '34',
+      },
+      {
+         text: 'Образцы лучших <br> практик',
+         badge: 'images/badges/badge-18.svg',
+         badgeWidth: '36',
+         badgeHeight: '36',
+      },
+   ]
+
 section.section.section--listing
    .section__wrapper.container
       .section__content
@@ -8,19 +36,8 @@ section.section.section--listing
                      h2.listing__title Наши преимущества
                   .listing__content
                      ol.listing__list.listing__list--icons.listing__list--secondary.listing__list--default
-                        li.listing__item
-                           .badge.badge--large
-                              img(src="images/badges/badge-15.svg", alt="иконка" width="32" height="32")
-                           h3.listing__name Экспертные  статьи, позволяющие знаниям стать навыками
-                        li.listing__item
-                           .badge.badge--large
-                              img(src="images/badges/badge-16.svg", alt="иконка" width="34" height="32")
-                           h3.listing__name Междисциплинарный подход к исследованию темы
-                        li.listing__item
-                           .badge.badge--large
-                              img(src="images/badges/badge-17.svg", alt="иконка" width="34" height="34")
-                           h3.listing__name Авторы, чье #[br] мнение интересно
-                        li.listing__item
-                           .badge.badge--large
-                              img(src="images/badges/badge-18.svg", alt="иконка" width="36" height="36")
-                           h3.listing__name Образцы лучших #[br] практик
+                        each listing in listings05
+                           li.listing__item
+                              .badge.badge--large
+                                 img(src=listing.badge, alt="иконка" width=listing.badgeWidth height=listing.badgeHeight)
+                              h3.listing__name!=listing.text

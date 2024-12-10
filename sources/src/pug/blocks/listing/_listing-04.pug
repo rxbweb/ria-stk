@@ -1,3 +1,23 @@
+-
+   const listings04 = [
+      {
+         title: 'Спецвыпуск журнала',
+         image: 'images/listing/listing-adv-01.jpg'
+      },
+      {
+         title: 'Реклама в журналах',
+         image: 'images/listing/listing-adv-02.jpg'
+      },
+      {
+         title: 'Реклама на сайте',
+         image: 'images/listing/listing-adv-03.jpg'
+      },
+      {
+         title: 'Спецпроект',
+         image: 'images/listing/listing-adv-04.jpg'
+      }
+   ]
+
 section.section.section--listing
    .section__wrapper.container
       .section__header
@@ -7,19 +27,8 @@ section.section.section--listing
          .listing
             .listing__inner
                ol.listing__list.listing__list--4
-                  li.listing__item
-                     h3.listing__name Спецвыпуск журнала
-                     .listing__img
-                        img(src="images/listing/listing-adv-01.jpg", alt="картинка" width="350" height="222")
-                  li.listing__item
-                     h3.listing__name Реклама в журналах
-                     .listing__img
-                        img(src="images/listing/listing-adv-02.jpg", alt="картинка" width="350" height="222")
-                  li.listing__item
-                     h3.listing__name Реклама на сайте
-                     .listing__img
-                        img(src="images/listing/listing-adv-03.jpg", alt="картинка" width="350" height="222")
-                  li.listing__item
-                     h3.listing__name Спецпроект
-                     .listing__img
-                        img(src="images/listing/listing-adv-04.jpg", alt="картинка" width="350" height="222")
+                  each listing in listings04
+                     li.listing__item
+                        h3.listing__name=listing.title
+                        .listing__img
+                           img(src=listing.image, alt="картинка" width="350" height="222")

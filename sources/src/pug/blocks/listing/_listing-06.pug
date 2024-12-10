@@ -1,3 +1,47 @@
+-
+   const listings06 = [
+      {
+         badge: 'images/badges/badge-15.svg',
+         badgeSize: '32',
+         title: 'Экспертные статьи, позволяющие знаниям стать навыками'
+      },
+      {
+         badge: 'images/badges/badge-16.svg',
+         badgeSize: '34',
+         title: 'Междисциплинарный подход к исследованию темы'
+      },
+      {
+         badge: 'images/badges/badge-17.svg',
+         badgeSize: '34',
+         title: 'Авторы, чье <br> мнение интересно'
+      },
+      {
+         badge: 'images/badges/badge-18.svg',
+         badgeSize: '36',
+         title: 'Образцы лучших <br> практик'
+      },
+      {
+         badge: 'images/badges/badge-15.svg',
+         badgeSize: '32',
+         title: 'Экспертные статьи, позволяющие знаниям стать навыками'
+      },
+      {
+         badge: 'images/badges/badge-16.svg',
+         badgeSize: '34',
+         title: 'Междисциплинарный подход к исследованию темы'
+      },
+      {
+         badge: 'images/badges/badge-17.svg',
+         badgeSize: '34',
+         title: 'Авторы, чье <br> мнение интересно'
+      },
+      {
+         badge: 'images/badges/badge-18.svg',
+         badgeSize: '36',
+         title: 'Образцы лучших <br> практик'
+      },
+   ]
+
 section.section.section--listing
    .section__wrapper.container
       .section__header
@@ -8,35 +52,8 @@ section.section.section--listing
             .listing__inner
                .listing__content
                   ol.listing__list.listing__list--icons.listing__list--4.listing__list--default
-                     li.listing__item
-                        .badge.badge--large
-                           img(src="images/badges/badge-15.svg", alt="иконка" width="32" height="32")
-                        h3.listing__name Экспертные  статьи, позволяющие знаниям стать навыками
-                     li.listing__item
-                        .badge.badge--large
-                           img(src="images/badges/badge-16.svg", alt="иконка" width="34" height="32")
-                        h3.listing__name Междисциплинарный подход к исследованию темы
-                     li.listing__item
-                        .badge.badge--large
-                           img(src="images/badges/badge-17.svg", alt="иконка" width="34" height="34")
-                        h3.listing__name Авторы, чье #[br] мнение интересно
-                     li.listing__item
-                        .badge.badge--large
-                           img(src="images/badges/badge-18.svg", alt="иконка" width="36" height="36")
-                        h3.listing__name Образцы лучших #[br] практик
-                     li.listing__item
-                        .badge.badge--large
-                           img(src="images/badges/badge-15.svg", alt="иконка" width="32" height="32")
-                        h3.listing__name Экспертные  статьи, позволяющие знаниям стать навыками
-                     li.listing__item
-                        .badge.badge--large
-                           img(src="images/badges/badge-16.svg", alt="иконка" width="34" height="32")
-                        h3.listing__name Междисциплинарный подход к исследованию темы
-                     li.listing__item
-                        .badge.badge--large
-                           img(src="images/badges/badge-17.svg", alt="иконка" width="34" height="34")
-                        h3.listing__name Авторы, чье #[br] мнение интересно
-                     li.listing__item
-                        .badge.badge--large
-                           img(src="images/badges/badge-18.svg", alt="иконка" width="36" height="36")
-                        h3.listing__name Образцы лучших #[br] практик
+                     each listing in listings06
+                        li.listing__item
+                           .badge.badge--large
+                              img(src=listing.badge, alt="иконка" width=listing.badgeSize height=listing.badgeSize)
+                           h3.listing__name=listing.title
