@@ -2,9 +2,6 @@
    .pagination__row
       button.pagination__button
       .pagination__list
-         a.pagination__page.is-active(href="#") 1
-         a.pagination__page(href="#") 2
-         a.pagination__page(href="#") 3
-         a.pagination__page(href="#") ...
-         a.pagination__page(href="#") 999
+         each page, index in [1, 2, 3, "...", 999]
+            a.pagination__page(href="#", class=(index === 0 ? "is-active" : "")) #{page}
       button.pagination__button
