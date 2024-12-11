@@ -1,0 +1,39 @@
+-
+   const links01 = [
+      {
+         text: "Свидетельство о внесении записи в Единый государственный реестр юридических лиц"
+      },
+      {
+         text: "Свидетельство о постановке на учет российской организации в налоговом органе по месту нахождения на территории Российской Федерации"
+      },
+      {
+         text: "Свидетельство о регистрации юридического лица"
+      },
+      {
+         text: "Карточка юридического лица"
+      },
+      {
+         text: "Устав ООО «РИА «Стандарты и качество»"
+      },
+      {
+         text: "Приказ о вступлении в должность генерального директора РИА «Стандарты и качество» "
+      },
+      {
+         text: "Информационное письмо об УСН из ИФНС (подтверждение)"
+      },
+   ]
+
+section.section.section--links
+   .section__wrapper.container
+      .section__header.section__header--border
+         .section__header-row
+            h2.section__header-title Документы
+      .section__content
+         .links
+            .links__inner
+               ul.links__list
+                  each link in links01
+                     li
+                        a.links__button(href="#")
+                           =link.text
+                           .links__icon
