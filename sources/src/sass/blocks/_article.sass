@@ -88,6 +88,12 @@
       gap: 30px
       &-img
          @include img-cover(80%, var(--border-radius-10))
+      &-label
+         @extend .badge
+         position: absolute
+         z-index: var(--z-index)
+         top: 15px
+         right: 15px
       &-info
          padding-top: 15px
          @include margin-bottom(5px)
@@ -96,7 +102,7 @@
          @extend .title--sixth
          @extend .title--red
       &-text
-         @extend .fz-15
+         @extend .fs-15
    &__subscribe
       &-inner
          padding: 20px
