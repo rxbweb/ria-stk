@@ -1,0 +1,30 @@
+- const years = ['1993', '1994', '1996', '1999', '2001', '2003', '2004', '2007', '2012', '2013', '2015', '2017', '2023']
+
+- const text = 'Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».'
+
+section.section.section--history
+   .section__wrapper.container
+      .section__content
+         .history
+            .history__inner
+               .history__row
+                  h2.history__title история компании
+                  .history__dates
+                     each year, index in years
+                        a.history__dates-btn(href="#", class=(index === 0 ? "history__dates-btn--active" : "")) #{year}
+               .history__main
+                  .history__swiper.js-history-swiper
+                     .swiper-wrapper
+                        each year in years
+                           .history__slide.swiper-slide
+                              .history__row
+                                 .history__info
+                                    p.history__date #{year}
+                                    p.history__text #{text}
+                                 .history__img
+                                    img(src="images/history/history-01.jpg", alt="1993" width="940" height="530")
+                     .history__controls
+                        .swiper-controls
+                           button.js-history-prev.swiper-button-prev
+                           .swiper-pagination.js-history-pagination
+                           button.js-history-next.swiper-button-next
