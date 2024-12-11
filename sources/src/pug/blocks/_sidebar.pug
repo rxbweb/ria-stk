@@ -2,64 +2,9 @@
    .sidebar__inner
       .sidebar__main
          .sidebar__list
-            a.sidebar__button(href="#")
-               .sidebar__icon
-                  svg
-                     use(href="images/sprites/main.stack.svg#svg-sidebar-01")
-               .sidebar__text О журнале
-            a.sidebar__button(href="#")
-               .sidebar__icon
-                  svg
-                     use(href="images/sprites/main.stack.svg#svg-sidebar-02")
-               .sidebar__text Подписка
-            a.sidebar__button(href="#")
-               .sidebar__icon
-                  svg
-                     use(href="images/sprites/main.stack.svg#svg-sidebar-03")
-               .sidebar__text Реклама
-            a.sidebar__button(href="#")
-               .sidebar__icon
-                  svg
-                     use(href="images/sprites/main.stack.svg#svg-sidebar-04")
-               .sidebar__text Архив
-            a.sidebar__button(href="#")
-               .sidebar__icon
-                  svg
-                     use(href="images/sprites/main.stack.svg#svg-sidebar-05")
-               .sidebar__text Отзывы
-         .sidebar__list
-            a.sidebar__button(href="#")
-               .sidebar__icon
-                  svg
-                     use(href="images/sprites/main.stack.svg#svg-sidebar-06")
-               .sidebar__text Отправить статью
-            a.sidebar__button(href="#")
-               .sidebar__icon
-                  svg
-                     use(href="images/sprites/main.stack.svg#svg-sidebar-07")
-               .sidebar__text Редакционная политика
-            a.sidebar__button(href="#")
-               .sidebar__icon
-                  svg
-                     use(href="images/sprites/main.stack.svg#svg-sidebar-08")
-               .sidebar__text Правила для авторов
-            a.sidebar__button(href="#")
-               .sidebar__icon
-                  svg
-                     use(href="images/sprites/main.stack.svg#svg-sidebar-09")
-               .sidebar__text Рецензирование
-            a.sidebar__button(href="#")
-               .sidebar__icon
-                  svg
-                     use(href="images/sprites/main.stack.svg#svg-sidebar-10")
-               .sidebar__text Редакция
-            a.sidebar__button(href="#")
-               .sidebar__icon
-                  svg
-                     use(href="images/sprites/main.stack.svg#svg-sidebar-11")
-               .sidebar__text Редсоветы
-            a.sidebar__button(href="#")
-               .sidebar__icon
-                  svg
-                     use(href="images/sprites/main.stack.svg#svg-sidebar-12")
-               .sidebar__text Авторы
+            each button, index in ['О журнале', 'Подписка', 'Реклама', 'Архив', 'Отзывы', 'Отправить статью', 'Редакционная политика', 'Правила для авторов', 'Рецензирование', 'Редакция', 'Редсоветы', 'Авторы']
+               a.sidebar__button(href="#")
+                  .sidebar__icon
+                     svg
+                        use(href=`images/sprites/main.stack.svg#svg-sidebar-${(index + 1).toString().padStart(2, '0')}`)
+                  .sidebar__text=button

@@ -1,0 +1,41 @@
+-
+   const publications01 = [
+      { 
+         src: 'images/publications/publications-01.jpg',
+         name: 'Стандарты и качество',
+         date: '№10 октябрь 2024'
+      },
+      { 
+         src: 'images/publications/publications-02.jpg',
+         name: 'Контроль качества продукции',
+         date: '№ 8 август 2024'
+      },
+      { 
+         src: 'images/publications/publications-03.jpg',
+         name: 'Мир измерений',
+         date: '№2 май 2024'
+      },
+      { 
+         src: 'images/publications/publications-04.jpg',
+         name: 'Business Excellence',
+         date: '№10 декабрь 2024'
+      }
+   ]
+
+section.section.section--publications
+   .section__wrapper.container
+      .section__header.section__header--margin.section__header--border
+         .section__header-row
+            h2.section__header-title Журналы издательства
+      .section__content
+         .publications
+            .publications__inner
+               ul.publications__list
+                  each publication in publications01
+                     li.publications__item
+                        .publications__top
+                           .publications__img
+                              img(src=publication.src, alt=publication.name, width="240", height="330")
+                        .publications__info
+                           h3.publications__name #{publication.name}
+                           p.publications__date #{publication.date}
