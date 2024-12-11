@@ -1,0 +1,103 @@
+-
+   const accountLinks = [
+      {
+         icon: {
+            src: 'images/badges/badge-25.svg',
+            width: '41',
+            height: '40'
+         },
+         title: 'Абонементный доступ',
+         value: '1'
+      },
+      {
+         icon: {
+            src: 'images/badges/badge-26.svg',
+            width: '41',
+            height: '40'
+         },
+         title: 'Электронные журналы'
+      },
+      {
+         icon: {
+            src: 'images/badges/badge-27.svg',
+            width: '34',
+            height: '40'
+         },
+         title: 'Статьи / Подборки',
+         value: '4'
+      },
+      {
+         icon: {
+            src: 'images/badges/badge-28.svg',
+            width: '36',
+            height: '46'
+         },
+         title: 'Книги'
+      },
+      {
+         icon: {
+            src: 'images/badges/badge-29.svg',
+            width: '34',
+            height: '36'
+         },
+         title: 'Мероприятия'
+      },
+      {
+         icon: {
+            src: 'images/badges/badge-30.svg',
+            width: '41',
+            height: '40'
+         },
+         title: 'Для авторов'
+      },
+      {
+         icon: {
+            src: 'images/badges/badge-31.svg',
+            width: '36',
+            height: '46'
+         },
+         title: 'Бонусная система'
+      },
+      {
+         icon: {
+            src: 'images/badges/badge-32.svg',
+            width: '34',
+            height: '31'
+         },
+         title: 'Избранное'
+      },
+      {
+         icon: {
+            src: 'images/badges/badge-33.svg',
+            width: '41',
+            height: '40'
+         },
+         title: 'Настройки профиля'
+      },
+      {
+         icon: {
+            src: 'images/badges/badge-34.svg',
+            width: '30',
+            height: '30'
+         },
+         title: 'Корзина'
+      }
+   ]
+
+section.section.section--padding-bottom-none.section--account
+   .section__wrapper.container
+      .section__header
+         .section__header-row
+            h1.section__header-heading Личный кабинет
+      .section__content
+         .account
+            .account__inner
+               .account__links
+                  each link in accountLinks
+                     a.account__links-btn(href="#")
+                        if link.value
+                           .account__links-value= link.value
+                        .account__links-icon
+                           img(src=link.icon.src, alt="иконка" width=link.icon.width height=link.icon.height)
+                        .account__links-info
+                           h2.account__links-title= link.title

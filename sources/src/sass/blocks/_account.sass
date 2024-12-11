@@ -1,0 +1,49 @@
+.account
+   &__links
+      display: grid
+      grid-template-columns: repeat(5, 1fr)
+      gap: var(--gap)
+      &-btn
+         padding: 40px
+         display: flex
+         flex-direction: column
+         align-items: center
+         gap: 20px
+         background: #F0F0F0
+         border-radius: var(--border-radius-15)
+         border: 1px solid transparent
+         text-align: center
+         transition: var(--transition)
+         position: relative
+         @include mt-auto()
+         &:hover,
+         &:focus
+            border-color: var(--accent)
+      &-value
+         --size: 28px
+         width: var(--size)
+         height: var(--size)
+         line-height: var(--size)
+         padding-top: 1px
+         position: absolute
+         top: 10px
+         right: 10px
+         color: #fff
+         text-align: center
+         background: var(--accent)
+         border-radius: var(--border-radius)
+         overflow: hidden
+         @extend .fs-18
+      &-icon
+         @extend .badge
+         @extend .badge--large
+      &-info
+         flex-grow: 1
+         display: flex
+         flex-direction: column
+         justify-content: center
+      &-title
+         width: 100%
+         max-width: 160px
+         @extend .title
+         @extend .title--second
