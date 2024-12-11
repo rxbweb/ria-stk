@@ -1,0 +1,78 @@
+-
+   const news01 = [
+      {
+         src: 'images/news/news-01.jpg',
+         mark: 'Международное сотрудничество',
+         title: 'РИА «Стандарты и качество» отмечено благодарственным письмом от руководителя Росстандарта'
+      },
+      {
+         src: 'images/news/news-02.jpg',
+         mark: 'Международное сотрудничество',
+         title: 'В России появятся цифровые паспорта промышленной продукции'
+      },
+      {
+         src: 'images/news/news-03.jpg',
+         mark: 'Международное сотрудничество',
+         title: 'Опубликован новый рейтинг эффективности технических комитетов'
+      }
+   ]
+
+section.section.section--news
+   .section__wrapper.container
+      .section__header
+         .section__header-row
+            h2.section__header-title Новости
+            a.section__header-button.button.button--icon(href="#")
+               span Посмотреть все новости
+               i.icon.icon-arrow-small
+         .section__header-bottom
+            .tags
+               a.tags__button(href="#") Название тегов длинного тега
+               a.tags__button(href="#") Название тегов
+               a.tags__button(href="#") Название тегов
+               a.tags__button(href="#") Название тегов
+               a.tags__button(href="#") Название тегов
+               a.tags__button(href="#") Название тегов длинного тега
+               a.tags__button(href="#") Название тегов
+               a.tags__button(href="#") Название тегов
+               a.tags__button(href="#") Название тегов длинного тега
+               a.tags__button(href="#") Название тегов
+               a.tags__button(href="#") Название тегов
+               a.tags__button(href="#") Название тегов длинного тега
+               a.tags__button(href="#") Название тегов
+               a.tags__button(href="#") Название тегов
+               a.tags__button(href="#") Название тегов длинного тега
+               a.tags__button(href="#") Название тегов
+               a.tags__button(href="#") Название тегов
+               a.tags__button(href="#") Название тегов длинного тега
+      .section__content
+         .news
+            .news__inner
+               .news__row
+                  ul.news__list
+                     each news in news01
+                        li.news__item
+                           .news__left
+                              .news__img
+                                 img(src=news.src, alt="Новости")
+                           .news__right
+                              .news__info
+                                 .news__top
+                                    p.news__mark #{news.mark}
+                                 h3.news__title #{news.title}
+                                 a.news__button.button.button--outline(href="#")
+                                    span Читать новость
+                                    i.icon.icon-arrow-small
+                  aside.news__aside
+                     .news__articles
+                        ul.news__articles-list
+                           each article in ['Обязательную маркировку медицинских перчаток введут в России с 2025 года', 'В России предложили выдавать предостережения бизнесу через систему маркировки', 'РИА «Стандарты и качество» отмечено благодарственным письмом от руководителя Росстандарта']
+                              li.news__articles-item
+                                 h3.news__articles-title= article
+                                 a.news__articles-button.button.button--outline(href="#")
+                                    span Читать новость
+                                    i.icon.icon-arrow-small
+      .section__footer
+         a.section__footer-button.button.button--icon(href="#")
+            span Посмотреть все новости
+            i.icon.icon-arrow-small
