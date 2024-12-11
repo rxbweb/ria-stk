@@ -89,10 +89,18 @@
          align-items: center
          padding-bottom: 4px
          border-bottom: 1px solid #cdcdcd
+         transition: var(--transition)
          .icon
             width: 20px
             height: 20px
             font-size: 10px
+            transition: var(--transition)
+         &:hover,
+         &:focus
+            border-color: var(--accent)
+            .icon
+               background: var(--accent)
+               color: #fff
    @include xl
       &__info
          grid-template-columns: 1fr

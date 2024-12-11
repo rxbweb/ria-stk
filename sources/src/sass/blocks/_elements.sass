@@ -184,12 +184,12 @@
 .text
    @include margin-bottom(var(--gap-3))
 
-.fz-14
+.fs-14
    font-size: 14px
    @include xs
       font-size: 13px
 
-.fz-15
+.fs-15
    font-size: 14px
    @include xs
       font-size: 13px
@@ -216,6 +216,7 @@
    border: var(--border-red)
    border-radius: var(--border-radius)
    background: #fff
+   color: var(--accent)
    overflow: hidden
    display: flex
    justify-content: center
@@ -225,6 +226,9 @@
       max-width: 100%
       max-height: 100%
       height: auto
+   .icon
+      &-lock
+         font-size: 24px
    @include md
       --size: 36px
       img
