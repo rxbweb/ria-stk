@@ -1,4 +1,11 @@
 .partners
+   padding: 120px 0 100px
+   position: relative
+   &__inner
+      @include margin-bottom(var(--gap))
+   &__title
+      @extend .title
+      text-align: center
    &__swiper
       user-select: none
       .swiper
@@ -17,3 +24,7 @@
          width: 54%
          img
             width: 77%
+   @include xl
+      padding: var(--section-padding) 0
+   @include sm
+      padding: 50px 0 38px

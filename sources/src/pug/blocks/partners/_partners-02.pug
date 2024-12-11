@@ -1,0 +1,62 @@
+-
+   const partners02 = [
+      { 
+         src: 'images/partners/partners-01.png', 
+         alt: 'russian register' 
+      },
+      { 
+         src: 'images/partners/partners-02.png', 
+         alt: 'минпромторг России' 
+      },
+      { 
+         src: 'images/partners/partners-03.png', 
+         alt: 'bureau veritas' 
+      },
+      { 
+         src: 'images/partners/partners-04.png', 
+         alt: 'рст' 
+      },
+      { 
+         src: 'images/partners/partners-05.png', 
+         alt: 'академия' 
+      },
+      { 
+         src: 'images/partners/partners-06.png', 
+         alt: 'ростехсерт' 
+      },
+      { 
+         src: 'images/partners/partners-01.png', 
+         alt: 'russian register' 
+      },
+      { 
+         src: 'images/partners/partners-02.png', 
+         alt: 'минпромторг России' 
+      },
+      { 
+         src: 'images/partners/partners-03.png', 
+         alt: 'bureau veritas' 
+      },
+      { 
+         src: 'images/partners/partners-04.png', 
+         alt: 'рст' 
+      }
+   ]
+
+section.section.section--partners
+   .section__wrapper
+      .section__content
+         .partners
+            .bg-image
+               img(src="images/partners/partners-bg.jpg", alt="фоновая картинка" width="1920" height="612")
+            .partners__inner.container
+               .partners__header
+                  .partners__title Наши партнеры
+               .partners__swiper.swiper.js-partners-swiper
+                  .swiper-wrapper
+                     each partner in partners02
+                        .partners__slide.swiper-slide
+                           img(src=partner.src, alt=partner.alt, width="169", height="120")
+                  .swiper-controls
+                     button.js-partners-prev.swiper-button-prev
+                     .swiper-pagination.js-partners-pagination
+                     button.js-partners-next.swiper-button-next
