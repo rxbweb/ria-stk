@@ -15,38 +15,11 @@ section.section
                                     span.form__name-number 01
                                     | Кто вы по профессии?
                                  .form__block
-                                    label.form__radio
-                                       input(type="radio" name="profession")
-                                       span.form__radio-field
-                                       span Инженер-технолог
-                                    label.form__radio
-                                       input(type="radio" name="profession")
-                                       span.form__radio-field
-                                       span Метролог
-                                    label.form__radio
-                                       input(type="radio" name="profession")
-                                       span.form__radio-field
-                                       span Сотрудник лаборатории
-                                    label.form__radio
-                                       input(type="radio" name="profession")
-                                       span.form__radio-field
-                                       span Специалист в области стандартизации
-                                    label.form__radio
-                                       input(type="radio" name="profession")
-                                       span.form__radio-field
-                                       span Специалист в области сертификации
-                                    label.form__radio
-                                       input(type="radio" name="profession")
-                                       span.form__radio-field
-                                       span Специалист по качеству
-                                    label.form__radio
-                                       input(type="radio" name="profession")
-                                       span.form__radio-field
-                                       span Организатор здравоохранения
-                                    label.form__radio
-                                       input(type="radio" name="profession")
-                                       span.form__radio-field
-                                       span Руководитель организации
+                                    each label in ['Инженер-технолог', 'Метролог', 'Сотрудник лаборатории', 'Специалист в области стандартизации', 'Специалист в области сертификации', 'Специалист по качеству', 'Организатор здравоохранения', 'Руководитель организации']
+                                       label.form__radio
+                                          input(type="radio" name="profession")
+                                          span.form__radio-field
+                                          span=label
                            .form__col
                               .form__col-item
                                  h3.form__name
