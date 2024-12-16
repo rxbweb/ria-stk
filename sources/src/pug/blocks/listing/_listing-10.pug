@@ -1,0 +1,20 @@
+-
+   const listings10 = [
+      {
+         title: 'Реклама в журналах',
+         src: 'images/materials/materials-01.jpg'
+      },
+      {
+         title: 'Реклама на сайте',
+         src: 'images/materials/materials-02.jpg'
+      }
+   ]
+
+.listing
+   ol.listing__list.listing__list--2
+      each listing in listings10
+         li.listing__item
+            a.listing__box(href="#")
+               h3.listing__name=listing.title
+               .listing__img
+                  img(src=listing.src, alt="картинка" width="350" height="222")
