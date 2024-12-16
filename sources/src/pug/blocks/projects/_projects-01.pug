@@ -11,6 +11,26 @@
       { 
          src: 'images/projects/projects-03.jpg',
          title: 'Стандарты для устойчивого развития'
+      },
+      { 
+         src: 'images/projects/projects-04.jpg',
+         title: 'Модель EFQM - путь к совершенству'
+      },
+      { 
+         src: 'images/projects/projects-01.jpg',
+         title: 'Спецвыпуски'
+      },
+      { 
+         src: 'images/projects/projects-02.jpg',
+         title: 'Зеленые проекты'
+      },
+      { 
+         src: 'images/projects/projects-03.jpg',
+         title: 'Стандарты для устойчивого развития'
+      },
+      { 
+         src: 'images/projects/projects-04.jpg',
+         title: 'Модель EFQM - путь к совершенству'
       }
    ]
 
@@ -30,10 +50,10 @@ section.section.section--projects
                         .projects__item.swiper-slide
                            .projects__img
                               img(src=project.src, alt=project.title)
-                           .projects__panel
-                              a.button.button--icon(href="#")
-                                 span Узнать больше
-                                 i.icon.icon-arrow-right
+                              .projects__panel
+                                 a.button.button--icon(href="#")
+                                    span Узнать больше
+                                    i.icon.icon-arrow-right
                            .projects__info
                               h3.projects__title #{project.title}
 
