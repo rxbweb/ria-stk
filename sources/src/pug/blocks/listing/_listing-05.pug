@@ -35,9 +35,10 @@ section.section.section--listing
                   .listing__aside.listing__aside--big
                      h2.listing__title Наши преимущества
                   .listing__content
-                     ol.listing__list.listing__list--icons.listing__list--secondary.listing__list--default
+                     ul.listing__list.listing__list--secondary.listing__list--default
                         each listing in listings05
                            li.listing__item
-                              .badge.badge--large
-                                 img(src=listing.badge, alt="иконка" width=listing.badgeWidth height=listing.badgeHeight)
-                              h3.listing__name!=listing.text
+                              .listing__box
+                                 .badge.badge--large
+                                    img(src=listing.badge, alt="иконка" width=listing.badgeWidth height=listing.badgeHeight)
+                                 h3.listing__name!=listing.text

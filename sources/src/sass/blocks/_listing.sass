@@ -30,42 +30,59 @@
       &--3
          grid-template-columns: repeat(3, 1fr)
          gap: 60px 40px
-   &__item
+      &--5
+         grid-template-columns: repeat(3, minmax(280px, 400px))
+         gap: 40px
+   &__box
       @extend .left-border
-      padding-top: 150px
+      height: 100%
       display: flex
       flex-direction: column
       gap: 30px
       counter-increment: custom-counter
       position: relative
-      &:hover,
-      &:focus
+      ol.listing__list &
+         padding-top: 150px
          &::before
-            color: var(--accent)
-      &::before
-         @extend .title
-         content: counter(custom-counter, decimal-leading-zero)
-         position: absolute
-         left: 15px
-         top: 10px
-         color: #cdcdcd
-         transition: all var(--duration) ease
+            @extend .title
+            content: counter(custom-counter, decimal-leading-zero)
+            position: absolute
+            left: 15px
+            top: 10px
+            color: #cdcdcd
+            transition: all var(--duration) ease
+         &:hover,
+         &:focus
+            &::before
+               color: var(--accent)
       &:nth-child(n+10)::before
          content: counter(custom-counter)
-      .listing__list--icons &
-         padding-top: 0
-         &::before
-            display: none
       .listing__list--secondary &
          padding-left: 0
          padding-bottom: 20px
          @extend .bottom-border
+      .listing__list--5 &
+         padding-left: 20px
+         gap: 0
+         @include margin-bottom(15px)
+         @include mt-auto()
    &__img
       margin-top: auto
       @include img-cover(63.5%, 10px)
+      img
+         transition: var(--transition)
+         .listing__box:hover &,
+         .listing__box:focus &
+            transform: scale(1.2)
    &__name
       @extend .title
       @extend .title--second
+   &__company
+      @extend .title
+      @extend .title--small
+      @extend .title--red
+   &__description
+      @extend .fs-14
    @include xl
       &__title
          br
@@ -73,7 +90,7 @@
    @include md
       &__row
          flex-direction: column
-      &__item
+      &__box
          padding-top: 100px
    @include ms
       &__list
@@ -88,17 +105,17 @@
             flex-wrap: wrap
             gap: 25px
             .listing
-               &__item
+               &__box
                   width: 100%
-      &__item
+      &__box
          width: var(--listing-item-width)
          min-width: var(--listing-item-width)
    @include sm
-      &__item
+      &__box
          gap: 20px
    @include xs
       --listing-item-width: 85%
-      &__item
+      &__box
          padding-top: 90px
          padding-left: 10px
          gap: 15px

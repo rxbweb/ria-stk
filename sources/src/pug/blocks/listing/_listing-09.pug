@@ -1,0 +1,56 @@
+-
+   const listings09 = [
+      {
+         badge: 'images/badges/badge-35.svg',
+         badgeWidth: '32',
+         badgeHeight: '32',
+         title: 'Экспертные  статьи, позволяющие <br> знаниям стать навыками'
+      },
+      {
+         badge: 'images/badges/badge-36.svg',
+         badgeWidth: '40',
+         badgeHeight: '40',
+         title: 'Междисциплинарный подход <br> к исследованию темы'
+      },
+      {
+         badge: 'images/badges/badge-37.svg',
+         badgeWidth: '34',
+         badgeHeight: '34',
+         title: 'Авторы, чье  мнение интересно'
+      },
+      {
+         badge: 'images/badges/badge-38.svg',
+         badgeWidth: '41',
+         badgeHeight: '40',
+         title: 'Печатная и электронная версии <br> журналов и книг'
+      },
+      {
+         badge: 'images/badges/badge-39.svg',
+         badgeWidth: '36',
+         badgeHeight: '46',
+         title: 'Бонусная система для постоянных <br> подписчиков'
+      },
+      {
+         badge: 'images/badges/badge-40.svg',
+         badgeWidth: '46',
+         badgeHeight: '34',
+         title: 'Удобные сервисы — электронная библиотека, <br> абонементный доступ и др.'
+      },
+   ]
+
+section.section.section--listing
+   .section__wrapper.container
+      .section__header
+         .section__header-row
+            h2.section__header-title Почему мы?
+      .section__content
+         .listing
+            .listing__inner
+               .listing__content
+                  ul.listing__list.listing__list--secondary.listing__list--3
+                     each listing in listings09
+                        li.listing__item
+                           .listing__box
+                              .badge.badge--large
+                                 img(src=listing.badge, alt="иконка" width=listing.badgeWidth height=listing.badgeHeight)
+                              h3.listing__name!=listing.title

@@ -47,9 +47,10 @@ section.section.section--listing
          .listing
             .listing__inner
                .listing__content
-                  ol.listing__list.listing__list--icons.listing__list--secondary.listing__list--3
+                  ul.listing__list.listing__list--secondary.listing__list--3
                      each listing in listings07
                         li.listing__item
-                           .badge.badge--large
-                              img(src=listing.badge, alt="иконка" width=listing.badgeWidth height=listing.badgeHeight)
-                           h3.listing__name!=listing.title
+                           .listing__box
+                              .badge.badge--large
+                                 img(src=listing.badge, alt="иконка" width=listing.badgeWidth height=listing.badgeHeight)
+                              h3.listing__name!=listing.title

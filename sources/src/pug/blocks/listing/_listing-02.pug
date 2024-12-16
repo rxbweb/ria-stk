@@ -25,12 +25,13 @@ section.section.section--listing
                   .listing__aside
                      h2.listing__title Миссия и видение компании
                   .listing__content
-                     ol.listing__list.listing__list--icons.listing__list--2
+                     ul.listing__list.listing__list--2
                         each listing in listings02
                            li.listing__item
-                              .badge.badge--large
-                                 img(src=listing.badge, alt="иконка" width=listing.badgeSize height=listing.badgeSize)
-                              h3.listing__name=listing.title
-                              p.listing__text=listing.text
-                              .listing__img
-                                 img(src=listing.image, alt="картинка" width="350" height="222")
+                              a.listing__box(href="#")
+                                 .badge.badge--large
+                                    img(src=listing.badge, alt="иконка" width=listing.badgeSize height=listing.badgeSize)
+                                 h3.listing__name=listing.title
+                                 p.listing__text=listing.text
+                                 .listing__img
+                                    img(src=listing.image, alt="картинка" width="350" height="222")

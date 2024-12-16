@@ -29,6 +29,7 @@ section.section.section--listing
                ol.listing__list.listing__list--4
                   each listing in listings04
                      li.listing__item
-                        h3.listing__name=listing.title
-                        .listing__img
-                           img(src=listing.image, alt="картинка" width="350" height="222")
+                        a.listing__box(href="#")
+                           h3.listing__name=listing.title
+                           .listing__img
+                              img(src=listing.image, alt="картинка" width="350" height="222")
