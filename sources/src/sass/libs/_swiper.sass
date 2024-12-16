@@ -1,0 +1,82 @@
+.swiper
+   @include margin-bottom(30px)
+   width: calc(100% + 24px)
+   padding: 12px
+   margin-left: -12px
+   margin-right: -12px
+   overflow: hidden
+   &-controls
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: 20px
+      user-select: none
+   .swiper-controls
+      margin-bottom: 0
+   &-pagination
+      width: auto !important
+      position: static
+      line-height: 0
+      &-bullet
+         margin: 0 !important
+         width: 22px
+         height: 2px
+         border-radius: 0
+         background: #c7c7c7
+         opacity: 1
+         &:first-child
+            border-top-left-radius: 2px
+            border-bottom-left-radius: 2px
+         &:last-child
+            border-top-right-radius: 2px
+            border-bottom-right-radius: 2px
+         &.swiper-pagination-bullet-active
+            background: var(--accent)
+            border-radius: 2px
+   &-bullets
+      display: flex
+      justify-content: center
+      gap: 13px
+      .swiper-pagination-bullet
+         width: 16px
+         height: 16px
+         border-radius: 50%
+         background: transparent
+         border: 1px solid var(--accent)
+         &-active
+            background: var(--accent)
+   &-button
+      &-prev,
+      &-next
+         width: 48px
+         height: 48px
+         margin: 0
+         border-radius: 5px
+         border: var(--border-red)
+         position: static
+         flex-shrink: 0
+         color: var(--accent)
+         background: #fff
+         transition: all var(--duration) ease
+         &:hover,
+         &:focus
+            background: var(--accent)
+            &::after
+               color: #fff
+         &::after
+            font-size: 24px
+   @include ms
+      @include margin-bottom(20px)
+      &-controls
+         gap: 10px
+      &-pagination
+         &-bullet
+            width: 31px
+      &-button
+         &-prev,
+         &-next
+            width: 40px
+            height: 40px
+            &::after
+               font-size: 16px
