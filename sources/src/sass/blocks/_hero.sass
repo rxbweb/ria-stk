@@ -3,6 +3,16 @@
    --info-width: 640px
    padding: var(--section-padding) 0
    position: relative
+   &--slider
+      padding: 0
+   &__slider
+      padding: var(--section-padding) 0
+      position: relative
+      overflow: hidden
+      &-bullets
+         position: absolute
+         top: auto !important
+         bottom: 30px !important
    &__row
       display: grid
       grid-template-columns: var(--info-width) 1fr
@@ -17,7 +27,7 @@
       @include margin-bottom(15px)
    &__content
       max-width: 100%
-      width: calc(1700px - var(--info-width) - var(--row-gap))
+      width: calc(1640px - var(--info-width) - var(--row-gap))
    &__books
       &-figure
          width: 396px
@@ -27,6 +37,18 @@
          transition: all var(--duration) ease
          .swiper-slide-active > .hero__books-figure &
             opacity: 1
+      &-controls
+         display: flex
+         justify-content: flex-end
+         align-items: center
+         gap: 8px
+         .js-books-pagination
+            &-current,
+            &-total
+               @extend .title
+               @extend .title--second
+               @extend .title--red
+               font-family: 'pragmatica', sans-serif
       &-swiper
          max-width: 100%
          .swiper
