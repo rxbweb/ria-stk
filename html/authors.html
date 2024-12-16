@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Авторы</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/android-chrome-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="yandex-tableau-widget" href="images/favicons/yandex-browser-manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__container container">
+          <div class="header__top"><a class="header__logo" href="/"><img class="header__logo-main" src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img class="header__logo-vok" src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
+            <div class="header__manage">
+              <div class="header__search search">
+                <button class="search__button"><i class="icon icon-loop"></i></button>
+                <input class="search__input" type="text" placeholder="Искать....">
+                <div class="search__select">
+                  <div class="select">
+                    <button class="select__active"><span>Везде</span></button>
+                    <div class="select__list">
+                      <button class="select__item is-active">Везде</button>
+                      <button class="select__item">По журналам</button>
+                      <button class="select__item">По книгам</button>
+                      <button class="select__item">По статьям</button>
+                      <button class="select__item">По новостям</button>
+                      <button class="select__item">По мероприятиям</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="select select--lang">
+                <div class="select__active"><span class="select__active-text">RU</span></div>
+                <div class="select__list">
+                  <button class="select__item is-active">RU</button>
+                  <button class="select__item">EN</button>
+                </div>
+              </div>
+            </div>
+            <div class="header__socials socials">
+              <div class="socials__list socials__list--first"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
+              <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+            </div>
+            <div class="header__controls">
+              <div class="header__basket"><a class="button button--img" href="#"><i class="icon icon-cart"></i></a>
+                <div class="header__basket-amount">99</div>
+              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
+                <li class="header__nav-item"><a href="#">Журналы</a></li>
+                <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
+                <li class="header__nav-item"><a href="#">Электронная библиотека</a></li>
+                <li class="header__nav-item"><a href="#">Абонентский доступ</a></li>
+                <li class="header__nav-item"><a href="#">Услуги</a></li>
+                <li class="header__nav-item"><a href="#">Мероприятия</a></li>
+                <li class="header__nav-item"><a href="#">О нас</a></li>
+                <li class="header__nav-item"><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <button class="header__burger"><img src="images/icons/burger.svg" alt="открыть меню" width="24" height="11"></button>
+          </div>
+          <div class="header__wrapper"></div>
+        </div>
+      </div>
+    </header>
+    <div class="menu">
+      <div class="menu__inner">
+        <div class="menu__container container">
+          <div class="menu__manage">
+            <div class="menu__search search">
+              <button class="search__button"><i class="icon icon-loop"></i></button>
+              <input class="search__input" type="text" placeholder="Искать....">
+              <div class="search__select">
+                <div class="select">
+                  <button class="select__active">Везде</button>
+                  <div class="select__list">
+                    <button class="select__item is-active">Везде</button>
+                    <button class="select__item">По журналам</button>
+                    <button class="select__item">По книгам</button>
+                    <button class="select__item">По статьям</button>
+                    <button class="select__item">По новостям</button>
+                    <button class="select__item">По мероприятиям</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="select select--lang">
+              <div class="select__active"><span class="select__active-text">RU</span></div>
+              <div class="select__list">
+                <button class="select__item is-active">RU</button>
+                <button class="select__item">EN</button>
+              </div>
+            </div>
+          </div>
+          <nav class="menu__nav">
+            <ul class="menu__nav-list">
+              <li><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
+              <li><a href="#">Журналы</a></li>
+              <li><a href="#">Спецвыпуски</a></li>
+              <li><a href="#">Электронная библиотека</a></li>
+              <li><a href="#">Абонементный доступ</a></li>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Мероприятия</a></li>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="menu__logo"><img src="images/icons/vok.png" alt="вок" width="48" height="48"></div>
+          <div class="menu__socials socials">
+            <div class="socials__list"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
+            <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <section class="section section--board section--padding-top-none">
+        <div class="section__wrapper container">
+          <div class="breadcrumbs">
+            <div class="breadcrumbs__inner">
+              <div class="breadcrumbs__list"><a href="#">Главная</a><a href="#">Авторы</a></div>
+            </div>
+          </div>
+          <div class="section__header section__header--margin">
+            <div class="section__header-row">
+              <h1 class="section__header-heading">Авторы</h1>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="board">
+              <div class="board__inner">
+                <ul class="board__list">
+                  <li class="board__item"><a class="board__box" href="#">
+                      <div class="board__img"><img src="images/board/board-18.jpg" alt="Адлер Юрий Павлович" width="180" height="200">
+                      </div>
+                      <div class="board__info">
+                        <p class="board__name">Адлер Юрий Павлович</p>
+                        <p class="board__text">Канд. техн. наук, профессор НИТУ «МИСиС», действительный член (академик) МОО «Академия проблем качества», член ASQ и ENBIS, член Международной гильдии профессионалов качества</p>
+                        <div class="button button--outline"><span>Подробнее</span><i class="icon icon-arrow-right"></i></div>
+                      </div></a></li>
+                  <li class="board__item"><a class="board__box" href="#">
+                      <div class="board__img"><img src="images/board/board-19.jpg" alt="Аронов Иосиф Зиновьевич" width="180" height="200">
+                      </div>
+                      <div class="board__info">
+                        <p class="board__name">Аронов Иосиф Зиновьевич</p>
+                        <p class="board__text">проф. МГИМО (У), советник генерального директора ФГБУ «Российский институт стандартизации», академик Академии проблем качества, член Международной гильдии профессионалов качества, д-р техн. Наук</p>
+                        <div class="button button--outline"><span>Подробнее</span><i class="icon icon-arrow-right"></i></div>
+                      </div></a></li>
+                  <li class="board__item"><a class="board__box" href="#">
+                      <div class="board__img"><img src="images/board/board-20.jpg" alt="Бас Виталий Николаевич" width="180" height="200">
+                      </div>
+                      <div class="board__info">
+                        <p class="board__name">Бас Виталий Николаевич</p>
+                        <p class="board__text">Доктор экономических наук, генеральный директор ФБУ «Ростест-Москва», вице-президент Метрологической академии, председатель Совета директоров ФБУ ЦСМ Росстандарта ЦФО РФ</p>
+                        <div class="button button--outline"><span>Подробнее</span><i class="icon icon-arrow-right"></i></div>
+                      </div></a></li>
+                  <li class="board__item"><a class="board__box" href="#">
+                      <div class="board__img"><img src="images/board/board-21.jpg" alt="Радомир Бошкович" width="180" height="200">
+                      </div>
+                      <div class="board__info">
+                        <p class="board__name">Радомир Бошкович</p>
+                        <p class="board__text">Международный консультант по вопросам построения СМК в медицинских организациях (Республика Сербия)</p>
+                        <div class="button button--outline"><span>Подробнее</span><i class="icon icon-arrow-right"></i></div>
+                      </div></a></li>
+                  <li class="board__item"><a class="board__box" href="#">
+                      <div class="board__img"><img src="images/board/board-22.jpg" alt="Головин Сергей Анатольевич" width="180" height="200">
+                      </div>
+                      <div class="board__info">
+                        <p class="board__name">Головин Сергей Анатольевич</p>
+                        <p class="board__text">Д-р тех. наук, профессор, председатель Межотраслевого совета</p>
+                        <div class="button button--outline"><span>Подробнее</span><i class="icon icon-arrow-right"></i></div>
+                      </div></a></li>
+                  <li class="board__item"><a class="board__box" href="#">
+                      <div class="board__img"><img src="images/board/board-23.jpg" alt="Горбашко Елена Анатольевна" width="180" height="200">
+                      </div>
+                      <div class="board__info">
+                        <p class="board__name">Горбашко Елена Анатольевна</p>
+                        <p class="board__text">Д-р экон. наук, профессор, проректор по научной работе, заведующая кафедрой «Экономика и управление качеством»</p>
+                        <div class="button button--outline"><span>Подробнее</span><i class="icon icon-arrow-right"></i></div>
+                      </div></a></li>
+                  <li class="board__item"><a class="board__box" href="#">
+                      <div class="board__img"><img src="images/board/board-24.jpg" alt="Иванов Игорь Владимирович" width="180" height="200">
+                      </div>
+                      <div class="board__info">
+                        <p class="board__name">Иванов Игорь Владимирович</p>
+                        <p class="board__text">Генеральный директор ФГБУ «Центр мониторинга и клинико-экономической экспертизы» Федеральной службы по надзору в сфере здравоохранения, канд. мед.</p>
+                        <div class="button button--outline"><span>Подробнее</span><i class="icon icon-arrow-right"></i></div>
+                      </div></a></li>
+                  <li class="board__item"><a class="board__box" href="#">
+                      <div class="board__img"><img src="images/board/board-25.jpg" alt="Игнаткович Алексей Сергеевич" width="180" height="200">
+                      </div>
+                      <div class="board__info">
+                        <p class="board__name">Игнаткович Алексей Сергеевич</p>
+                        <p class="board__text">координатор Метрологического образовательного кластера Росстандарта, начальник PR-службы ФГУП «ВНИИМ им. Д.И. Менделеева»</p>
+                        <div class="button button--outline"><span>Подробнее</span><i class="icon icon-arrow-right"></i></div>
+                      </div></a></li>
+                  <li class="board__item"><a class="board__box" href="#">
+                      <div class="board__img"><img src="images/board/board-26.jpg" alt="Куликов Олег Вильевич" width="180" height="200">
+                      </div>
+                      <div class="board__info">
+                        <p class="board__name">Куликов Олег Вильевич</p>
+                        <p class="board__text">Специалист ФГБУ «Центр мониторинга и клинико-экономической экспертизы» Федеральной службы по надзору в сфере здравоохранения</p>
+                        <div class="button button--outline"><span>Подробнее</span><i class="icon icon-arrow-right"></i></div>
+                      </div></a></li>
+                  <li class="board__item"><a class="board__box" href="#">
+                      <div class="board__img"><img src="images/board/board-27.jpg" alt="Кучаков Руслан Камилович" width="180" height="200">
+                      </div>
+                      <div class="board__info">
+                        <p class="board__name">Кучаков Руслан Камилович</p>
+                        <p class="board__text">Директор Института проблем правоприменения при Европейском университете в Санкт-Петербурге</p>
+                        <div class="button button--outline"><span>Подробнее</span><i class="icon icon-arrow-right"></i></div>
+                      </div></a></li>
+                  <li class="board__item"><a class="board__box" href="#">
+                      <div class="board__img"><img src="images/board/board-28.jpg" alt="Лапидус Вадим Аркадьевич" width="180" height="200">
+                      </div>
+                      <div class="board__info">
+                        <p class="board__name">Лапидус Вадим Аркадьевич</p>
+                        <p class="board__text">Генеральный директор ООО «Центр «Приоритет», действительный член (академик) Международной академии качества, доктор техн. наук</p>
+                        <div class="button button--outline"><span>Подробнее</span><i class="icon icon-arrow-right"></i></div>
+                      </div></a></li>
+                  <li class="board__item"><a class="board__box" href="#">
+                      <div class="board__img"><img src="images/board/board-29.jpg" alt="Минулин Ильдар Булатович" width="180" height="200">
+                      </div>
+                      <div class="board__info">
+                        <p class="board__name">Минулин Ильдар Булатович</p>
+                        <p class="board__text">главный специалист учебно-методического отдела ФГБУ «Центр мониторинга и клинико-экономической экспертизы» Росздравнадзора</p>
+                        <div class="button button--outline"><span>Подробнее</span><i class="icon icon-arrow-right"></i></div>
+                      </div></a></li>
+                  <li class="board__item"><a class="board__box" href="#">
+                      <div class="board__img"><img src="images/board/board-30.jpg" alt="Элькин Григорий Иосифович" width="180" height="200">
+                      </div>
+                      <div class="board__info">
+                        <p class="board__name">Элькин Григорий Иосифович</p>
+                        <p class="board__text">д-р экон. наук, профессор, ВС РФ АО «Объединенная приборостроительная корпорация», заместитель генерального директора — генеральный конструктор по АСУ и связи</p>
+                        <div class="button button--outline"><span>Подробнее</span><i class="icon icon-arrow-right"></i></div>
+                      </div></a></li>
+                  <li class="board__item"><a class="board__box" href="#">
+                      <div class="board__img"><img src="images/board/board-31.jpg" alt="Ройтберг Григорий Ефимович" width="180" height="200">
+                      </div>
+                      <div class="board__info">
+                        <p class="board__name">Ройтберг Григорий Ефимович</p>
+                        <p class="board__text">основатель и президент АО «Медицина» (клиника академика Ройтберга), заведующий кафедрой терапии и семейной медицины ФДПО ФГБОУ ВО РНИМУ им. Н.И. Пирогова Минздрава России, д-р мед. наук, академик РАН, профессор, Заслуженный врач РФ, лауреат Премии Правительства РФ в области образования, лауреат Премии Мэрии Москвы в области здравоохранения и медицины</p>
+                        <div class="button button--outline"><span>Подробнее</span><i class="icon icon-arrow-right"></i></div>
+                      </div></a></li>
+                  <li class="board__item"><a class="board__box" href="#">
+                      <div class="board__img"><img src="images/board/board-32.jpg" alt="Фалкин Дмитрий Владимирович" width="180" height="200">
+                      </div>
+                      <div class="board__info">
+                        <p class="board__name">Фалкин Дмитрий Владимирович</p>
+                        <p class="board__text">председатель Ассоциации «Компетентность и качество», член Всероссийской организации качества, председатель экспертного совета журнала «Контроль качества продукции»</p>
+                        <div class="button button--outline"><span>Подробнее</span><i class="icon icon-arrow-right"></i></div>
+                      </div></a></li>
+                </ul>
+                <div class="pagination">
+                  <div class="pagination__row">
+                    <button class="pagination__button"></button>
+                    <div class="pagination__list"><a class="pagination__page is-active" href="#">1</a><a class="pagination__page" href="#">2</a><a class="pagination__page" href="#">3</a><a class="pagination__page" href="#">...</a><a class="pagination__page" href="#">999</a>
+                    </div>
+                    <button class="pagination__button"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--status">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="status">
+              <div class="bg-image"><img src="images/status/status-bg.jpg" alt="фоновая картинка"></div>
+              <div class="status__inner">
+                <div class="status__row">
+                  <div class="status__info">
+                    <h2 class="status__title">Хотите подтвердить свой экспертный статус?</h2>
+                    <p class="status__text">Станьте автором журналов РИА «Стандарты и качество». Ждем как опытных, так и начинающих специалистов. Важна польза и подача материала. Приоритет отдается статьям практической направленности.</p><a class="button button--icon" href="#"><span>Подробнее</span><i class="icon icon-arrow-small"></i></a>
+                  </div>
+                  <div class="status__img"><img src="images/status/status-img.png" alt="картинка" width="570" height="500"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="books">
+              <div class="books__inner">
+                <div class="books__section">
+                  <div class="books__header">
+                    <h2 class="books__title">Реклама на других ресурсах</h2>
+                  </div>
+                  <div class="books__content">
+                    <div class="books__swiper">
+                      <div class="books__swiper-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="books__item">
+                              <div class="books__box">
+                                <button class="books__like"></button>
+                                <div class="books__img"><img src="images/books/books-13.png" alt="книга" width="380" height="380"></div>
+                              </div>
+                              <div class="books__info">
+                                <h3 class="books__name">Диджитал реклама</h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="books__item">
+                              <div class="books__box">
+                                <button class="books__like"></button>
+                                <div class="books__img"><img src="images/books/books-14.png" alt="книга" width="229" height="316"></div>
+                              </div>
+                              <div class="books__info">
+                                <h3 class="books__name">Методы менеджмента качества</h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="books__item">
+                              <div class="books__box">
+                                <button class="books__like"></button>
+                                <div class="books__img"><img src="images/books/books-15.png" alt="книга" width="229" height="316"></div>
+                              </div>
+                              <div class="books__info">
+                                <h3 class="books__name">Контроль качества продукции</h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="books__item">
+                              <div class="books__box">
+                                <button class="books__like"></button>
+                                <div class="books__img"><img src="images/books/books-16.png" alt="книга" width="229" height="316"></div>
+                              </div>
+                              <div class="books__info">
+                                <h3 class="books__name">Мир измерений</h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="books__item">
+                              <div class="books__box">
+                                <button class="books__like"></button>
+                                <div class="books__img"><img src="images/books/books-13.png" alt="книга" width="380" height="380"></div>
+                              </div>
+                              <div class="books__info">
+                                <h3 class="books__name">Диджитал реклама</h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="books__item">
+                              <div class="books__box">
+                                <button class="books__like"></button>
+                                <div class="books__img"><img src="images/books/books-14.png" alt="книга" width="229" height="316"></div>
+                              </div>
+                              <div class="books__info">
+                                <h3 class="books__name">Методы менеджмента качества</h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="books__item">
+                              <div class="books__box">
+                                <button class="books__like"></button>
+                                <div class="books__img"><img src="images/books/books-15.png" alt="книга" width="229" height="316"></div>
+                              </div>
+                              <div class="books__info">
+                                <h3 class="books__name">Контроль качества продукции</h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="books__item">
+                              <div class="books__box">
+                                <button class="books__like"></button>
+                                <div class="books__img"><img src="images/books/books-16.png" alt="книга" width="229" height="316"></div>
+                              </div>
+                              <div class="books__info">
+                                <h3 class="books__name">Мир измерений</h3>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-controls">
+                        <button class="js-books-prev swiper-button-prev"></button>
+                        <div class="swiper-pagination js-books-pagination"></div>
+                        <button class="js-books-next swiper-button-next"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--listing">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="listing">
+              <div class="listing__inner">
+                <div class="listing__row">
+                  <div class="listing__aside">
+                    <h2 class="listing__title">Отзывы</h2>
+                  </div>
+                  <div class="listing__content">
+                    <ul class="listing__list listing__list--5">
+                      <li class="listing__item">
+                        <div class="listing__box">
+                          <p class="listing__company">ФГУ «Ярославский ЦСМ»</p>
+                          <p class="listing__name">Чирков Александр Алексеевич</p>
+                          <p class="listing__description">Спасибо вам большое. Мне было очень приятно работать с вами! Можно быть уверенным, что с таким коллективом ваш уважаемый журнал ждет большое будущее. Всего вам доброго и творческих успехов.</p><a class="button button--outline" href="#"><span>Показать полностью</span><i class="icon icon-arrow-right"></i></a>
+                        </div>
+                      </li>
+                      <li class="listing__item">
+                        <div class="listing__box">
+                          <p class="listing__company">УК концерна «Русэлпром»</p>
+                          <p class="listing__name">Константин Разумов-Раздолов</p>
+                          <p class="listing__description">Добрый день, уважаемые коллеги! Получил очередной номер журнала. Очень познавательно и интересно, что после моей статьи опубликован комментарий эксперта. Это позволяет понять и принять к сведению мнение компетентного стороннего специалиста. Очень понравилось, большое спасибо!</p><a class="button button--outline" href="#"><span>Показать полностью</span><i class="icon icon-arrow-right"></i></a>
+                        </div>
+                      </li>
+                      <li class="listing__item">
+                        <div class="listing__box">
+                          <p class="listing__company">УК концерна «Русэлпром»</p>
+                          <p class="listing__name">Константин Разумов-Раздолов</p>
+                          <p class="listing__description">Добрый день, уважаемые коллеги! Получил очередной номер журнала. Очень познавательно и интересно, что после моей статьи опубликован комментарий эксперта. Это позволяет понять и принять к сведению мнение компетентного стороннего специалиста. Очень понравилось, большое спасибо!</p><a class="button button--outline" href="#"><span>Показать полностью</span><i class="icon icon-arrow-right"></i></a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--contacts">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="contacts">
+              <div class="contacts__inner">
+                <div class="contacts__row">
+                  <div class="contacts__section">
+                    <h2 class="contacts__title">Контакты</h2>
+                    <address class="contacts__address address">
+                      <div class="address__list address__list--second">
+                        <div class="address__item">
+                          <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
+                        </div><a class="address__item" href="mailto:editor_site@mirq.ru">
+                          <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">editor_site@mirq.ru</div></a><a class="address__item" href="tel:+74957716652">
+                          <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">+7 (495) 771 6652</div></a>
+                      </div>
+                    </address>
+                    <div class="contacts__map map"></div>
+                  </div>
+                  <div class="contacts__right">
+                    <form class="contacts__form form" action="#">
+                      <div class="form__header">
+                        <h2 class="form__title">Остались вопросы?</h2>
+                        <p class="form__text">Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.</p>
+                      </div>
+                      <div class="form__main">
+                        <div class="form__top">
+                          <div class="form__box">
+                            <label class="form__label form__label--half">
+                              <input class="form__input" type="text" placeholder="Имя">
+                            </label>
+                            <label class="form__label form__label--half">
+                              <input class="form__input" type="text" placeholder="Фамилия">
+                            </label>
+                            <label class="form__label">
+                              <input class="form__input" type="email" placeholder="E-mail">
+                            </label>
+                            <label class="form__label">
+                              <textarea class="form__textarea" placeholder="Текст сообщения"></textarea>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__middle">
+                          <div class="form__agree">
+                            <label class="form__agree-label">
+                              <input type="checkbox"><span class="form__agree-checkbox"></span><span class="form__agree-text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__bottom">
+                          <button class="form__button button">Подписаться</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__menu container">
+            <div class="footer__left"><a class="footer__logo" href="#"><img src="images/icons/logo.svg" alt="СК — стандарты и качество"></a>
+              <div class="footer__copy footer__copy--desktop">
+                <div>2000—2024 © РИА «Стандарты и качество»: cтандартизация, метрология, менеджмент качества.</div>
+                <div>Все права защищены и охраняются законом.</div>
+              </div>
+              <div class="footer__links"><a href="#">Карта сайта</a></div>
+            </div>
+            <nav class="footer__nav">
+              <div class="footer__nav-list">
+                <div class="footer__nav-col"><a href="#">Журналы</a><a href="#">Подписка</a><a href="#">Электронная библиотека</a><a href="#">Абонементный доступ</a><a href="#">Quality News</a></div>
+                <div class="footer__nav-col"><a href="#">О нас</a><a href="#">Услуги</a><a href="#">Мероприятия</a><a href="#">Редакционная политика</a><a href="#">Авторам</a></div>
+              </div>
+            </nav>
+            <address class="footer__address address">
+              <div class="address__list"><a class="address__item" href="tel:+74957716652">
+                  <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">+7 (495) 771 6652</div></a><a class="address__item" href="mailto:editor_site@mirq.ru">
+                  <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">editor_site@mirq.ru</div></a>
+                <div class="address__item">
+                  <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
+                </div>
+                <div class="address__item">
+                  <div class="address__icon"><img src="images/address/address-time.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">
+                    <p>Пн-Чт 9:00-18:00 </p>
+                    <p>Пт 9:00-16:45</p>
+                    <p>Сб-Вс выходные</p>
+                  </div>
+                </div>
+              </div>
+            </address>
+            <div class="footer__copy footer__copy--mob">
+              <div>2000—2024 © РИА «Стандарты и качество»: cтандартизация, метрология, менеджмент качества.</div>
+              <div>Все права защищены и охраняются законом.</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__legal container"><a href="#">Права использования электронных журналов</a><a href="#">Правила пользования сайтом</a><a href="#">Карта сайта</a><a href="#">Правила обработки и хранения персональных данных</a><a href="#">Соглашение пользователя</a><a href="#"><span>Разработка сайта</span><img src="images/icons/completo.svg" alt="completo" width="63" height="23"></a></div>
+        </div>
+      </div>
+    </footer><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=5e6f3718-a525-41b0-832c-11d7f6b0f8a4"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

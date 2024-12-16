@@ -60,13 +60,13 @@
             <div class="header__controls">
               <div class="header__basket"><a class="button button--img" href="#"><i class="icon icon-cart"></i></a>
                 <div class="header__basket-amount">99</div>
-              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span><span></span><span></span></i></a>
+              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
             </div>
           </div>
           <div class="header__bottom">
             <nav class="header__nav">
               <ul class="header__nav-list">
-                <li class="header__nav-item"><a class="is-note" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
+                <li class="header__nav-item"><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
                 <li class="header__nav-item"><a href="#">Журналы</a></li>
                 <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
                 <li class="header__nav-item"><a href="#">Электронная библиотека</a></li>
@@ -114,7 +114,7 @@
           </div>
           <nav class="menu__nav">
             <ul class="menu__nav-list">
-              <li><a href="#">Подписка</a></li>
+              <li><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
               <li><a href="#">Журналы</a></li>
               <li><a href="#">Спецвыпуски</a></li>
               <li><a href="#">Электронная библиотека</a></li>
@@ -152,7 +152,7 @@
                 <ul class="journals__list">
                   <li class="journals__item">
                     <div class="journals__top">
-                      <div class="journals__img"><img src="images/journals/journals-01.png" alt="стандарты и качество" width="240" height="340"></div>
+                      <div class="journals__img"><img src="images/journals/journals-01.png" width="240" height="340"></div>
                     </div>
                     <div class="journals__info">
                       <h3 class="journals__name">стандарты и качество</h3><a class="journals__link" href="#"> <span>Подробнее</span><i class="icon icon-arrow-small"></i></a>
@@ -160,7 +160,7 @@
                   </li>
                   <li class="journals__item">
                     <div class="journals__top">
-                      <div class="journals__img"><img src="images/journals/journals-05.png" alt="Business Excellence" width="240" height="340"></div>
+                      <div class="journals__img"><img src="images/journals/journals-05.png" width="240" height="340"></div>
                     </div>
                     <div class="journals__info">
                       <h3 class="journals__name">Business Excellence</h3><a class="journals__link" href="#"> <span>Подробнее</span><i class="icon icon-arrow-small"></i></a>
@@ -168,7 +168,7 @@
                   </li>
                   <li class="journals__item">
                     <div class="journals__top">
-                      <div class="journals__img"><img src="images/journals/journals-06.png" alt="Методы менеджмента качества" width="240" height="340"></div>
+                      <div class="journals__img"><img src="images/journals/journals-06.png" width="240" height="340"></div>
                     </div>
                     <div class="journals__info">
                       <h3 class="journals__name">Методы менеджмента качества</h3><a class="journals__link" href="#"> <span>Подробнее</span><i class="icon icon-arrow-small"></i></a>
@@ -190,22 +190,30 @@
           <div class="section__content">
             <div class="listing">
               <div class="listing__inner">
-                <ul class="listing__list listing__list--icons listing__list--4 listing__list--default">
+                <ul class="listing__list listing__list--4 listing__list--default">
                   <li class="listing__item">
-                    <div class="badge badge--large"><img src="images/badges/badge-10.svg" alt="иконка" width="36" height="36"></div>
-                    <h3 class="listing__name">Регулярное поступление актуальной информации</h3>
+                    <div class="listing__box">
+                      <div class="badge badge--large"><img src="images/badges/badge-10.svg" alt="иконка" width="36" height="36"></div>
+                      <h3 class="listing__name">Регулярное поступление актуальной информации</h3>
+                    </div>
                   </li>
                   <li class="listing__item">
-                    <div class="badge badge--large"><img src="images/badges/badge-11.svg" alt="иконка" width="36" height="36"></div>
-                    <h3 class="listing__name">Постоянный и непрерывный процесс совершенствования компетенций</h3>
+                    <div class="listing__box">
+                      <div class="badge badge--large"><img src="images/badges/badge-11.svg" alt="иконка" width="36" height="36"></div>
+                      <h3 class="listing__name">Постоянный и непрерывный процесс совершенствования компетенций</h3>
+                    </div>
                   </li>
                   <li class="listing__item">
-                    <div class="badge badge--large"><img src="images/badges/badge-12.svg" alt="иконка" width="36" height="36"></div>
-                    <h3 class="listing__name">Формирование корпоративной базы знаний</h3>
+                    <div class="listing__box">
+                      <div class="badge badge--large"><img src="images/badges/badge-12.svg" alt="иконка" width="36" height="36"></div>
+                      <h3 class="listing__name">Формирование корпоративной базы знаний</h3>
+                    </div>
                   </li>
                   <li class="listing__item">
-                    <div class="badge badge--large"><img src="images/badges/badge-13.svg" alt="иконка" width="36" height="36"></div>
-                    <h3 class="listing__name">Доступ к системе привилегий</h3>
+                    <div class="listing__box">
+                      <div class="badge badge--large"><img src="images/badges/badge-13.svg" alt="иконка" width="36" height="36"></div>
+                      <h3 class="listing__name">Доступ к системе привилегий</h3>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -224,18 +232,15 @@
                   </div>
                   <div class="listing__content">
                     <ol class="listing__list">
-                      <li class="listing__item">
-                        <h3 class="listing__name">Электронная библиотека</h3>
-                        <div class="listing__img"><img src="images/materials/materials-01.jpg" alt="картинка" width="350" height="222"></div>
-                      </li>
-                      <li class="listing__item">
-                        <h3 class="listing__name">Тематические подборки</h3>
-                        <div class="listing__img"><img src="images/materials/materials-02.jpg" alt="картинка" width="350" height="222"></div>
-                      </li>
-                      <li class="listing__item">
-                        <h3 class="listing__name">Глоссарий</h3>
-                        <div class="listing__img"><img src="images/materials/materials-03.jpg" alt="картинка" width="350" height="222"></div>
-                      </li>
+                      <li class="listing__item"><a class="listing__box" href="#">
+                          <h3 class="listing__name">Электронная библиотека</h3>
+                          <div class="listing__img"><img src="images/materials/materials-01.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                      <li class="listing__item"><a class="listing__box" href="#">
+                          <h3 class="listing__name">Тематические подборки</h3>
+                          <div class="listing__img"><img src="images/materials/materials-02.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                      <li class="listing__item"><a class="listing__box" href="#">
+                          <h3 class="listing__name">Глоссарий</h3>
+                          <div class="listing__img"><img src="images/materials/materials-03.jpg" alt="картинка" width="350" height="222"></div></a></li>
                     </ol>
                   </div>
                 </div>
@@ -318,40 +323,56 @@
             <div class="listing">
               <div class="listing__inner">
                 <div class="listing__content">
-                  <ol class="listing__list listing__list--icons listing__list--4 listing__list--default">
+                  <ul class="listing__list listing__list--4 listing__list--default">
                     <li class="listing__item">
-                      <div class="badge badge--large"><img src="images/badges/badge-15.svg" alt="иконка" width="32" height="32"></div>
-                      <h3 class="listing__name">Экспертные  статьи, позволяющие знаниям стать навыками</h3>
+                      <div class="listing__box">
+                        <div class="badge badge--large"><img src="images/badges/badge-15.svg" alt="иконка" width="32" height="32"></div>
+                        <h3 class="listing__name">Экспертные статьи, позволяющие знаниям стать навыками</h3>
+                      </div>
                     </li>
                     <li class="listing__item">
-                      <div class="badge badge--large"><img src="images/badges/badge-16.svg" alt="иконка" width="34" height="32"></div>
-                      <h3 class="listing__name">Междисциплинарный подход к исследованию темы</h3>
+                      <div class="listing__box">
+                        <div class="badge badge--large"><img src="images/badges/badge-16.svg" alt="иконка" width="34" height="34"></div>
+                        <h3 class="listing__name">Междисциплинарный подход к исследованию темы</h3>
+                      </div>
                     </li>
                     <li class="listing__item">
-                      <div class="badge badge--large"><img src="images/badges/badge-17.svg" alt="иконка" width="34" height="34"></div>
-                      <h3 class="listing__name">Авторы, чье <br> мнение интересно</h3>
+                      <div class="listing__box">
+                        <div class="badge badge--large"><img src="images/badges/badge-17.svg" alt="иконка" width="34" height="34"></div>
+                        <h3 class="listing__name">Авторы, чье &lt;br&gt; мнение интересно</h3>
+                      </div>
                     </li>
                     <li class="listing__item">
-                      <div class="badge badge--large"><img src="images/badges/badge-18.svg" alt="иконка" width="36" height="36"></div>
-                      <h3 class="listing__name">Образцы лучших <br> практик</h3>
+                      <div class="listing__box">
+                        <div class="badge badge--large"><img src="images/badges/badge-18.svg" alt="иконка" width="36" height="36"></div>
+                        <h3 class="listing__name">Образцы лучших &lt;br&gt; практик</h3>
+                      </div>
                     </li>
                     <li class="listing__item">
-                      <div class="badge badge--large"><img src="images/badges/badge-15.svg" alt="иконка" width="32" height="32"></div>
-                      <h3 class="listing__name">Экспертные  статьи, позволяющие знаниям стать навыками</h3>
+                      <div class="listing__box">
+                        <div class="badge badge--large"><img src="images/badges/badge-15.svg" alt="иконка" width="32" height="32"></div>
+                        <h3 class="listing__name">Экспертные статьи, позволяющие знаниям стать навыками</h3>
+                      </div>
                     </li>
                     <li class="listing__item">
-                      <div class="badge badge--large"><img src="images/badges/badge-16.svg" alt="иконка" width="34" height="32"></div>
-                      <h3 class="listing__name">Междисциплинарный подход к исследованию темы</h3>
+                      <div class="listing__box">
+                        <div class="badge badge--large"><img src="images/badges/badge-16.svg" alt="иконка" width="34" height="34"></div>
+                        <h3 class="listing__name">Междисциплинарный подход к исследованию темы</h3>
+                      </div>
                     </li>
                     <li class="listing__item">
-                      <div class="badge badge--large"><img src="images/badges/badge-17.svg" alt="иконка" width="34" height="34"></div>
-                      <h3 class="listing__name">Авторы, чье <br> мнение интересно</h3>
+                      <div class="listing__box">
+                        <div class="badge badge--large"><img src="images/badges/badge-17.svg" alt="иконка" width="34" height="34"></div>
+                        <h3 class="listing__name">Авторы, чье &lt;br&gt; мнение интересно</h3>
+                      </div>
                     </li>
                     <li class="listing__item">
-                      <div class="badge badge--large"><img src="images/badges/badge-18.svg" alt="иконка" width="36" height="36"></div>
-                      <h3 class="listing__name">Образцы лучших <br> практик</h3>
+                      <div class="listing__box">
+                        <div class="badge badge--large"><img src="images/badges/badge-18.svg" alt="иконка" width="36" height="36"></div>
+                        <h3 class="listing__name">Образцы лучших &lt;br&gt; практик</h3>
+                      </div>
                     </li>
-                  </ol>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -371,7 +392,9 @@
                 <ul class="authors__list">
                   <li class="authors__item">
                     <div class="authors__top">
-                      <div class="authors__label badge badge--label"><img src="images/badges/badge-14.svg" alt="иконка" width="24" height="28"></div>
+                      <div class="authors__label">
+                        <div class="authors__label-img"><img src="images/badges/badge-14.svg" alt="иконка" width="24" height="28"></div><span class="authors__label-text">Эксперт журнала</span>
+                      </div>
                       <div class="authors__img"><img src="images/authors/authors-01.jpg" alt="Аронов Иосиф Зиновьевич" width="256" height="310"></div>
                     </div>
                     <div class="authors__info">
@@ -390,7 +413,9 @@
                   </li>
                   <li class="authors__item">
                     <div class="authors__top">
-                      <div class="authors__label badge badge--label"><img src="images/badges/badge-14.svg" alt="иконка" width="24" height="28"></div>
+                      <div class="authors__label">
+                        <div class="authors__label-img"><img src="images/badges/badge-14.svg" alt="иконка" width="24" height="28"></div><span class="authors__label-text">Эксперт журнала</span>
+                      </div>
                       <div class="authors__img"><img src="images/authors/authors-03.jpg" alt="Адлер Юрий Павлович" width="256" height="310"></div>
                     </div>
                     <div class="authors__info">
@@ -409,7 +434,9 @@
                   </li>
                   <li class="authors__item">
                     <div class="authors__top">
-                      <div class="authors__label badge badge--label"><img src="images/badges/badge-14.svg" alt="иконка" width="24" height="28"></div>
+                      <div class="authors__label">
+                        <div class="authors__label-img"><img src="images/badges/badge-14.svg" alt="иконка" width="24" height="28"></div><span class="authors__label-text">Эксперт журнала</span>
+                      </div>
                       <div class="authors__img"><img src="images/authors/authors-01.jpg" alt="Аронов Иосиф Зиновьевич" width="256" height="310"></div>
                     </div>
                     <div class="authors__info">
@@ -460,7 +487,7 @@
           <div class="section__content">
             <div class="details">
               <div class="details__inner">
-                <ol class="details__list details__list--2">
+                <ol class="details__list details__list--nums">
                   <li class="details__list-item"><a class="details__list-box" href="#">
                       <div class="details__list-img"><img src="images/details/details-04.jpg" alt="Специалистам" width="380" height="210"></div>
                       <div class="details__list-info">
@@ -493,7 +520,7 @@
                       <div class="details__list-info">
                         <h3 class="details__list-title">ВУЗам</h3>
                         <div class="details__list-text">
-                          <p>Научные статьи, тематические подборки, комментарии экспертов, передовые идеи, новейшие теории, современные методологии и образцы лучших практик в области обеспечения и контроля качества</p>
+                          <p>Научные статьи, тематические подборки, комментарии экспертов, передовые идеи, новейшие теории, современные методологии и образцы лучших практик в области обеспечения и контроля качества.</p>
                         </div>
                         <div class="details__list-button button button--outline"><span>Подробнее</span><i class="icon icon-arrow-small"></i></div>
                       </div></a></li>

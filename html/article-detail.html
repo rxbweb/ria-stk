@@ -60,13 +60,13 @@
             <div class="header__controls">
               <div class="header__basket"><a class="button button--img" href="#"><i class="icon icon-cart"></i></a>
                 <div class="header__basket-amount">99</div>
-              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span><span></span><span></span></i></a>
+              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
             </div>
           </div>
           <div class="header__bottom">
             <nav class="header__nav">
               <ul class="header__nav-list">
-                <li class="header__nav-item"><a class="is-note" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
+                <li class="header__nav-item"><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
                 <li class="header__nav-item"><a href="#">Журналы</a></li>
                 <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
                 <li class="header__nav-item"><a href="#">Электронная библиотека</a></li>
@@ -114,7 +114,7 @@
           </div>
           <nav class="menu__nav">
             <ul class="menu__nav-list">
-              <li><a href="#">Подписка</a></li>
+              <li><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
               <li><a href="#">Журналы</a></li>
               <li><a href="#">Спецвыпуски</a></li>
               <li><a href="#">Электронная библиотека</a></li>
@@ -167,8 +167,7 @@
                     <use href="images/sprites/main.stack.svg#svg-sidebar-05"></use>
                   </svg>
                 </div>
-                <div class="sidebar__text">Отзывы</div></a></div>
-            <div class="sidebar__list"><a class="sidebar__button" href="#">
+                <div class="sidebar__text">Отзывы</div></a><a class="sidebar__button" href="#">
                 <div class="sidebar__icon">
                   <svg>
                     <use href="images/sprites/main.stack.svg#svg-sidebar-06"></use>
@@ -210,7 +209,8 @@
                     <use href="images/sprites/main.stack.svg#svg-sidebar-12"></use>
                   </svg>
                 </div>
-                <div class="sidebar__text">Авторы</div></a></div>
+                <div class="sidebar__text">Авторы</div></a>
+            </div>
           </div>
         </div>
       </div>
@@ -401,21 +401,27 @@
                     <h2 class="article__heading">Другие статьи по теме</h2>
                     <ul class="article__themes">
                       <li class="article__themes-item">
-                        <div class="article__themes-img"><img src="images/article/article-themes-01.jpg" alt="картинка" width="360" height="300"></div>
+                        <div class="article__themes-img">
+                          <div class="article__themes-label"><i class="icon icon-eye"></i></div><img src="images/article/article-themes-01.jpg" alt="картинка" width="360" height="300">
+                        </div>
                         <div class="article__themes-info">
                           <p class="article__themes-title">Об экспертизе стандартов организаций. Новые обстоятельства</p>
                           <p class="article__themes-text">Давид Гоготишвили, Александр Елфимов, Александр Балванович</p>
                         </div>
                       </li>
                       <li class="article__themes-item">
-                        <div class="article__themes-img"><img src="images/article/article-themes-02.jpg" alt="картинка" width="360" height="300"></div>
+                        <div class="article__themes-img">
+                          <div class="article__themes-label"><i class="icon icon-lock"></i></div><img src="images/article/article-themes-02.jpg" alt="картинка" width="360" height="300">
+                        </div>
                         <div class="article__themes-info">
                           <p class="article__themes-title">Терминология в стандартах и качество продукции. Причинно-следственные связи</p>
                           <p class="article__themes-text">Анатолий Головаш, Наталья Куршакова, Владимир Полеваев</p>
                         </div>
                       </li>
                       <li class="article__themes-item">
-                        <div class="article__themes-img"><img src="images/article/article-themes-03.jpg" alt="картинка" width="360" height="300"></div>
+                        <div class="article__themes-img">
+                          <div class="article__themes-label"><i class="icon icon-eye"></i></div><img src="images/article/article-themes-03.jpg" alt="картинка" width="360" height="300">
+                        </div>
                         <div class="article__themes-info">
                           <p class="article__themes-title">Стандарты как основа электромагнитной безопасности</p>
                           <p class="article__themes-text">Николай Файзрахманов, Максим Ломоносов</p>

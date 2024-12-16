@@ -87,88 +87,133 @@ new Swiper(".js-history-swiper", {
 new Swiper(".hero__slider", {
   slidesPerView: 1,
   spaceBetween: 20,
+  simulateTouch: false,
+  allowTouchMove: false,
   keyboard: true,
+  speed: 500,
+  // autoplay: {
+  //    delay: 10000,
+  //    disableOnInteraction: false,
+  // },
   pagination: {
     el: ".js-hero-bullets",
     clickable: true
   }
 });
-new Swiper(".hero__books-swiper", {
-  slidesPerView: 3,
-  spaceBetween: -195,
-  loop: true,
-  speed: 500,
-  centeredSlides: false,
+document.querySelectorAll(".hero__books-swiper").forEach(function (swiperContainer) {
+  var swiper = new Swiper(swiperContainer, {
+    slidesPerView: 3,
+    spaceBetween: -195,
+    loop: true,
+    speed: 700,
+    centeredSlides: false,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: swiperContainer.querySelector(".js-books-pagination"),
+      clickable: true
+    },
+    breakpoints: {
+      0: {
+        spaceBetween: -150,
+        centeredSlides: false
+      },
+      768: {
+        centeredSlides: false
+      },
+      1040: {
+        centeredSlides: true
+      },
+      1261: {
+        centeredSlides: false
+      },
+      1441: {
+        slidesPerView: 4,
+        spaceBetween: -195,
+        centeredSlides: false
+      },
+      1641: {
+        slidesPerView: 5,
+        spaceBetween: -195,
+        centeredSlides: false
+      },
+      1700: {
+        slidesPerView: 6,
+        spaceBetween: -195,
+        centeredSlides: false
+      }
+    },
+    on: {
+      init: function init() {
+        updateFractionPagination(this);
+        swiperClassHandler(this.activeIndex, swiperContainer.querySelectorAll('.hero__books-slide'));
+      },
+      slideChange: function slideChange() {
+        updateFractionPagination(this);
+        swiperClassHandler(this.activeIndex, swiperContainer.querySelectorAll('.hero__books-slide'));
+      }
+    }
+  });
+  swiperContainer.querySelectorAll('.swiper-slide').forEach(function (slide, index) {
+    slide.addEventListener('click', function () {
+      swiper.slideToLoop(index);
+    });
+  });
+});
+function updateFractionPagination(swiper) {
+  var fractionPaginationCurrent = swiper.el.querySelector(".js-books-pagination-current");
+  var fractionPaginationTotal = swiper.el.querySelector(".js-books-pagination-total");
+  if (fractionPaginationCurrent && fractionPaginationTotal) {
+    var currentIndex = swiper.realIndex + 1;
+    var totalSlides = swiper.slides.length;
+    fractionPaginationCurrent.innerHTML = currentIndex <= 9 ? "0".concat(currentIndex) : currentIndex;
+    fractionPaginationTotal.innerHTML = totalSlides <= 9 ? "0".concat(totalSlides) : totalSlides;
+  }
+}
+function swiperClassHandler(i, sliders) {
+  sliders.forEach(function (n) {
+    return n.classList.remove('swiper-slide__1', 'swiper-slide__2', 'swiper-slide__3', 'swiper-slide__4', 'swiper-slide__5', 'swiper-slide__6');
+  });
+  var _loop = function _loop(j) {
+    var slice = Array.from(sliders).slice(i + j - 1, i + j);
+    slice.forEach(function (n) {
+      return n.classList.add("swiper-slide__".concat(j));
+    });
+  };
+  for (var j = 1; j <= 6; j++) {
+    _loop(j);
+  }
+}
+new Swiper(".content__swiper-slider", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  keyboard: true,
+  effect: "fade",
+  speed: 300,
+  fadeEffect: {
+    crossFade: true
+  },
+  navigation: {
+    prevEl: ".content__swiper-prev",
+    nextEl: ".content__swiper-next"
+  }
+});
+new Swiper(".books__swiper-slider", {
+  slidesPerView: 4,
+  spaceBetween: 40,
+  keyboard: true,
   pagination: {
     el: ".js-books-pagination",
     clickable: true
   },
-  // autoplay: {
-  // 	delay: 4000,
-  // },
-  breakpoints: {
-    0: {
-      spaceBetween: -150,
-      centeredSlides: false
-    },
-    768: {
-      centeredSlides: false
-    },
-    1040: {
-      centeredSlides: true
-    },
-    1261: {
-      centeredSlides: false
-    },
-    1441: {
-      slidesPerView: 4,
-      spaceBetween: -195,
-      centeredSlides: false
-    },
-    1641: {
-      slidesPerView: 5,
-      spaceBetween: -195,
-      centeredSlides: false
-    },
-    1700: {
-      slidesPerView: 6,
-      spaceBetween: -195,
-      centeredSlides: false
-    }
-  },
-  on: {
-    init: function init() {
-      swiperClassHandler(this.activeIndex, '.hero__books-slide');
-    },
-    slideChange: function slideChange() {
-      swiperClassHandler(this.activeIndex, '.hero__books-slide');
-    }
+  navigation: {
+    prevEl: ".js-books-prev",
+    nextEl: ".js-books-next"
   }
 });
-function swiperClassHandler(i, csl) {
-  var sliders = document.querySelectorAll(csl);
-  sliders.forEach(function (n) {
-    return n.classList.remove('swiper-slide__1', 'swiper-slide__2', 'swiper-slide__3', 'swiper-slide__4', 'swiper-slide__5', 'swiper-slide__6');
-  });
-  Array.prototype.slice.call(sliders, i, i + 1).forEach(function (n) {
-    return n.classList.add('swiper-slide__1');
-  });
-  Array.prototype.slice.call(sliders, i + 1, i + 2).forEach(function (n) {
-    return n.classList.add('swiper-slide__2');
-  });
-  Array.prototype.slice.call(sliders, i + 2, i + 3).forEach(function (n) {
-    return n.classList.add('swiper-slide__3');
-  });
-  Array.prototype.slice.call(sliders, i + 3, i + 4).forEach(function (n) {
-    return n.classList.add('swiper-slide__4');
-  });
-  Array.prototype.slice.call(sliders, i + 4, i + 5).forEach(function (n) {
-    return n.classList.add('swiper-slide__5');
-  });
-  Array.prototype.slice.call(sliders, i + 5, i + 6).forEach(function (n) {
-    return n.classList.add('swiper-slide__6');
-  });
-}
 function init() {
   var mapElements = document.querySelectorAll('.map');
   if (mapElements.length === 0) {
@@ -205,12 +250,10 @@ document.addEventListener('DOMContentLoaded', function () {
   var navList = document.querySelector('.header__nav-list');
   var wrapper = document.querySelector('.header__wrapper');
   if (!navList || !wrapper) {
-    console.error('Required elements are missing.');
     return;
   }
   var navItems = Array.from(navList.querySelectorAll('.header__nav-item'));
   if (navItems.length === 0) {
-    console.error('No navigation items found.');
     return;
   }
   function checkOverflow() {
@@ -273,6 +316,7 @@ $(document).ready(function () {
   });
   $('.header__toggle').on('click', function (e) {
     e.preventDefault();
+    $(this).toggleClass('is-active');
     $('.menu').toggleClass('is-active');
     $('body').toggleClass('no-scroll');
   });

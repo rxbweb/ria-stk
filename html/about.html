@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Главная</title>
+    <title>О компании</title>
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,13 +60,13 @@
             <div class="header__controls">
               <div class="header__basket"><a class="button button--img" href="#"><i class="icon icon-cart"></i></a>
                 <div class="header__basket-amount">99</div>
-              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span><span></span><span></span></i></a>
+              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
             </div>
           </div>
           <div class="header__bottom">
             <nav class="header__nav">
               <ul class="header__nav-list">
-                <li class="header__nav-item"><a class="is-note" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
+                <li class="header__nav-item"><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
                 <li class="header__nav-item"><a href="#">Журналы</a></li>
                 <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
                 <li class="header__nav-item"><a href="#">Электронная библиотека</a></li>
@@ -114,7 +114,7 @@
           </div>
           <nav class="menu__nav">
             <ul class="menu__nav-list">
-              <li><a href="#">Подписка</a></li>
+              <li><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
               <li><a href="#">Журналы</a></li>
               <li><a href="#">Спецвыпуски</a></li>
               <li><a href="#">Электронная библиотека</a></li>
@@ -134,6 +134,34 @@
       </div>
     </div>
     <main class="main">
+      <section class="section section--hero section--padding-none">
+        <div class="section__wrapper">
+          <div class="section__content">
+            <div class="hero">
+              <div class="bg-image"><img src="images/hero/hero-bg.jpg" alt="фоновая картинка" width="1920" height="750"></div>
+              <div class="hero__inner container">
+                <div class="hero__slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="hero__row">
+                        <div class="hero__info">
+                          <h1 class="hero__title">О компании</h1>
+                          <div class="hero__text">
+                            <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством.</p>
+                          </div>
+                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>О компании и награды</span><i class="icon icon-arrow-small"></i></a></div>
+                        </div>
+                        <div class="hero__content"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-bullets js-hero-bullets"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="section section--padding-small section--numbers">
         <div class="section__wrapper container">
           <div class="section__content">
@@ -180,20 +208,18 @@
                     <h2 class="listing__title">Миссия и видение компании</h2>
                   </div>
                   <div class="listing__content">
-                    <ol class="listing__list listing__list--icons listing__list--2">
-                      <li class="listing__item">
-                        <div class="badge badge--large"><img src="images/badges/badge-08.svg" alt="иконка" width="32" height="32"></div>
-                        <h3 class="listing__name">Электронная библиотека</h3>
-                        <p class="listing__text">Миссия РИА «Стандарты и качество» — нести людям идеи качества во всем их многообразии.</p>
-                        <div class="listing__img"><img src="images/listing/listing-mission-01.jpg" alt="картинка" width="350" height="222"></div>
-                      </li>
-                      <li class="listing__item">
-                        <div class="badge badge--large"><img src="images/badges/badge-09.svg" alt="иконка" width="43" height="43"></div>
-                        <h3 class="listing__name">Тематические подборки</h3>
-                        <p class="listing__text">Миссия РИА «Стандарты и качество» — нести людям идеи качества во всем их многообразии.</p>
-                        <div class="listing__img"><img src="images/listing/listing-mission-02.jpg" alt="картинка" width="350" height="222"></div>
-                      </li>
-                    </ol>
+                    <ul class="listing__list listing__list--2">
+                      <li class="listing__item"><a class="listing__box" href="#">
+                          <div class="badge badge--large"><img src="images/badges/badge-08.svg" alt="иконка" width="32" height="32"></div>
+                          <h3 class="listing__name">Электронная библиотека</h3>
+                          <p class="listing__text">Миссия РИА «Стандарты и качество» — нести людям идеи качества во всем их многообразии.</p>
+                          <div class="listing__img"><img src="images/listing/listing-mission-01.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                      <li class="listing__item"><a class="listing__box" href="#">
+                          <div class="badge badge--large"><img src="images/badges/badge-09.svg" alt="иконка" width="43" height="43"></div>
+                          <h3 class="listing__name">Тематические подборки</h3>
+                          <p class="listing__text">Глобальный информационный центр, база знаний о качестве — доступный, удобный, информативный.</p>
+                          <div class="listing__img"><img src="images/listing/listing-mission-02.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -208,7 +234,8 @@
               <div class="history__inner">
                 <div class="history__row">
                   <h2 class="history__title">история компании</h2>
-                  <div class="history__dates"><a class="history__dates-btn history__dates-btn--active" href="#">1993</a><a class="history__dates-btn" href="#">1994</a><a class="history__dates-btn" href="#">1996</a><a class="history__dates-btn" href="#">1999</a><a class="history__dates-btn" href="#">2001</a><a class="history__dates-btn" href="#">2003</a><a class="history__dates-btn" href="#">2004</a><a class="history__dates-btn" href="#">2007</a><a class="history__dates-btn" href="#">2012</a><a class="history__dates-btn" href="#">2013</a><a class="history__dates-btn" href="#">2015</a><a class="history__dates-btn" href="#">2017</a><a class="history__dates-btn" href="#">2023</a></div>
+                  <div class="history__dates"><a class="history__dates-btn history__dates-btn--active" href="#">1993</a><a class="history__dates-btn" href="#">1994</a><a class="history__dates-btn" href="#">1996</a><a class="history__dates-btn" href="#">1999</a><a class="history__dates-btn" href="#">2001</a><a class="history__dates-btn" href="#">2003</a><a class="history__dates-btn" href="#">2004</a><a class="history__dates-btn" href="#">2007</a><a class="history__dates-btn" href="#">2012</a><a class="history__dates-btn" href="#">2013</a><a class="history__dates-btn" href="#">2015</a><a class="history__dates-btn" href="#">2017</a><a class="history__dates-btn" href="#">2023</a>
+                  </div>
                 </div>
                 <div class="history__main">
                   <div class="history__swiper js-history-swiper">
@@ -228,7 +255,7 @@
                             <p class="history__date">1994</p>
                             <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
                           </div>
-                          <div class="history__img"><img src="images/history/history-01.jpg" alt="1994" width="940" height="530"></div>
+                          <div class="history__img"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530"></div>
                         </div>
                       </div>
                       <div class="history__slide swiper-slide">
@@ -237,7 +264,7 @@
                             <p class="history__date">1996</p>
                             <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
                           </div>
-                          <div class="history__img"><img src="images/history/history-01.jpg" alt="1996" width="940" height="530"></div>
+                          <div class="history__img"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530"></div>
                         </div>
                       </div>
                       <div class="history__slide swiper-slide">
@@ -246,7 +273,88 @@
                             <p class="history__date">1999</p>
                             <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
                           </div>
-                          <div class="history__img"><img src="images/history/history-01.jpg" alt="1999" width="940" height="530"></div>
+                          <div class="history__img"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530"></div>
+                        </div>
+                      </div>
+                      <div class="history__slide swiper-slide">
+                        <div class="history__row">
+                          <div class="history__info">
+                            <p class="history__date">2001</p>
+                            <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
+                          </div>
+                          <div class="history__img"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530"></div>
+                        </div>
+                      </div>
+                      <div class="history__slide swiper-slide">
+                        <div class="history__row">
+                          <div class="history__info">
+                            <p class="history__date">2003</p>
+                            <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
+                          </div>
+                          <div class="history__img"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530"></div>
+                        </div>
+                      </div>
+                      <div class="history__slide swiper-slide">
+                        <div class="history__row">
+                          <div class="history__info">
+                            <p class="history__date">2004</p>
+                            <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
+                          </div>
+                          <div class="history__img"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530"></div>
+                        </div>
+                      </div>
+                      <div class="history__slide swiper-slide">
+                        <div class="history__row">
+                          <div class="history__info">
+                            <p class="history__date">2007</p>
+                            <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
+                          </div>
+                          <div class="history__img"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530"></div>
+                        </div>
+                      </div>
+                      <div class="history__slide swiper-slide">
+                        <div class="history__row">
+                          <div class="history__info">
+                            <p class="history__date">2012</p>
+                            <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
+                          </div>
+                          <div class="history__img"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530"></div>
+                        </div>
+                      </div>
+                      <div class="history__slide swiper-slide">
+                        <div class="history__row">
+                          <div class="history__info">
+                            <p class="history__date">2013</p>
+                            <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
+                          </div>
+                          <div class="history__img"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530"></div>
+                        </div>
+                      </div>
+                      <div class="history__slide swiper-slide">
+                        <div class="history__row">
+                          <div class="history__info">
+                            <p class="history__date">2015</p>
+                            <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
+                          </div>
+                          <div class="history__img"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530"></div>
+                        </div>
+                      </div>
+                      <div class="history__slide swiper-slide">
+                        <div class="history__row">
+                          <div class="history__info">
+                            <p class="history__date">2017</p>
+                            <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
+                          </div>
+                          <div class="history__img"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530"></div>
+                        </div>
+                      </div>
+                      <div class="history__slide swiper-slide">
+                        <div class="history__row">
+                          <div class="history__info">
+                            <p class="history__date">2023</p>
+                            <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
+                          </div>
+                          <div class="history__img"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530"></div>
                         </div>
                       </div>
                     </div>
@@ -319,42 +427,42 @@
                         <div class="people__photo"><img src="images/people/page-about/people-01.jpg" alt="Наталия Григорьевна Томсон" width="380" height="460"></div>
                         <div class="people__info">
                           <p class="people__name">Наталия Григорьевна Томсон</p>
-                          <p class="people__text">Основатель и председатель совета директоров РИА «Стандарты и качество», член Правления Всероссийской организации качества, член Комитета ТПП РФ по качеству продукции, член Международной Гильдии профессионалов качества.</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
+                          <p class="people__text">Основатель и председатель совета директоров РИА «Стандарты и качество», член Правления Всероссийской организации качества, член Комитета ТПП РФ по качеству продукции, член Международной Гильдии профессионалов качества.</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
                         </div>
                       </li>
                       <li class="people__item">
                         <div class="people__photo"><img src="images/people/page-about/people-02.jpg" alt="Геннадий Петрович Воронин" width="380" height="460"></div>
                         <div class="people__info">
                           <p class="people__name">Геннадий Петрович Воронин</p>
-                          <p class="people__text">Член совета директоров РИА «Стандарты и качество», главный редактор журнала «Стандарты и качество», президент Всероссийской организации качества, действительный государственный советник Российской Федерации I класса, доктор технических наук, доктор экономических наук, профессор.</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
+                          <p class="people__text">Член совета директоров РИА «Стандарты и качество», главный редактор журнала «Стандарты и качество», президент Всероссийской организации качества, действительный государственный советник Российской Федерации I класса, доктор технических наук, доктор экономических наук, профессор.</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
                         </div>
                       </li>
                       <li class="people__item">
                         <div class="people__photo"><img src="images/people/page-about/people-03.jpg" alt="Светлана Сергеевна Антонова" width="380" height="460"></div>
                         <div class="people__info">
                           <p class="people__name">Светлана Сергеевна Антонова</p>
-                          <p class="people__text">Генеральный директор и член совета директоров РИА «Стандарты и качество», главный редактор журнала «Менеджмент качества в медицине», вице-президент по информационной политике Всероссийской организации качества, эксперт премий Правительства Российской Федерации в области качества.</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
+                          <p class="people__text">Генеральный директор и член совета директоров РИА «Стандарты и качество», главный редактор журнала «Менеджмент качества в медицине», вице-президент по информационной политике Всероссийской организации качества, эксперт премий Правительства Российской Федерации в области качества.</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
                         </div>
                       </li>
                       <li class="people__item">
                         <div class="people__photo"><img src="images/people/page-about/people-04.jpg" alt="Алексей Игоревич Анискин" width="380" height="460"></div>
                         <div class="people__info">
                           <p class="people__name">Алексей Игоревич Анискин</p>
-                          <p class="people__text">Исполнительный директор, директор по развитию бизнеса и член совета директоров РИА «Стандарты и качество»</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
+                          <p class="people__text">Исполнительный директор, директор по развитию бизнеса и член совета директоров РИА «Стандарты и качество»</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
                         </div>
                       </li>
                       <li class="people__item">
                         <div class="people__photo"><img src="images/people/page-about/people-05.jpg" alt="Татьяна Владимировна Киселева" width="380" height="460"></div>
                         <div class="people__info">
                           <p class="people__name">Татьяна Владимировна Киселева</p>
-                          <p class="people__text">Главный редактор издательства РИА «Стандарты и качество»</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
+                          <p class="people__text">Главный редактор издательства РИА «Стандарты и качество»</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
                         </div>
                       </li>
                       <li class="people__item">
                         <div class="people__photo"><img src="images/people/page-about/people-06.jpg" alt="Андрей Игоревич Колесников" width="380" height="460"></div>
                         <div class="people__info">
                           <p class="people__name">Андрей Игоревич Колесников</p>
-                          <p class="people__text">Руководитель отдела маркетинга РИА «Стандарты и качество»</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
+                          <p class="people__text">Руководитель отдела маркетинга РИА «Стандарты и качество»</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
                         </div>
                       </li>
                     </ul>
@@ -365,7 +473,7 @@
           </div>
         </div>
       </section>
-      <section class="section section--documents">
+      <section class="section section--links">
         <div class="section__wrapper container">
           <div class="section__header section__header--border">
             <div class="section__header-row">
@@ -373,23 +481,23 @@
             </div>
           </div>
           <div class="section__content">
-            <div class="documents">
-              <div class="documents__inner">
-                <ul class="documents__list">
-                  <li><a class="documents__link" href="#">Свидетельство о внесении записи в Единый государственный реестр юридических лиц
-                      <div class="documents__icon"></div></a></li>
-                  <li><a class="documents__link" href="#">Свидетельство о постановке на учет российской организации в налоговом органе по месту нахождения на территории Российской Федерации
-                      <div class="documents__icon"></div></a></li>
-                  <li><a class="documents__link" href="#">Свидетельство о регистрации юридического лица
-                      <div class="documents__icon"></div></a></li>
-                  <li><a class="documents__link" href="#">Карточка юридического лица
-                      <div class="documents__icon"></div></a></li>
-                  <li><a class="documents__link" href="#">Устав ООО «РИА «Стандарты и качество»
-                      <div class="documents__icon"></div></a></li>
-                  <li><a class="documents__link" href="#">Приказ о вступлении в должность генерального директора РИА «Стандарты и качество» 
-                      <div class="documents__icon"></div></a></li>
-                  <li><a class="documents__link" href="#">Информационное письмо об УСН из ИФНС (подтверждение)
-                      <div class="documents__icon"></div></a></li>
+            <div class="links">
+              <div class="links__inner">
+                <ul class="links__list">
+                  <li><a class="links__button" href="#">Свидетельство о внесении записи в Единый государственный реестр юридических лиц
+                      <div class="links__icon"></div></a></li>
+                  <li><a class="links__button" href="#">Свидетельство о постановке на учет российской организации в налоговом органе по месту нахождения на территории Российской Федерации
+                      <div class="links__icon"></div></a></li>
+                  <li><a class="links__button" href="#">Свидетельство о регистрации юридического лица
+                      <div class="links__icon"></div></a></li>
+                  <li><a class="links__button" href="#">Карточка юридического лица
+                      <div class="links__icon"></div></a></li>
+                  <li><a class="links__button" href="#">Устав ООО «РИА «Стандарты и качество»
+                      <div class="links__icon"></div></a></li>
+                  <li><a class="links__button" href="#">Приказ о вступлении в должность генерального директора РИА «Стандарты и качество» 
+                      <div class="links__icon"></div></a></li>
+                  <li><a class="links__button" href="#">Информационное письмо об УСН из ИФНС (подтверждение)
+                      <div class="links__icon"></div></a></li>
                 </ul>
               </div>
             </div>
@@ -397,16 +505,14 @@
         </div>
       </section>
       <section class="section section--partners">
-        <div class="section__bg"><img src="images/partners/partners-bg.jpg" alt="фоновая картинка" width="1920" height="612"></div>
-        <div class="section__wrapper container">
-          <div class="section__header">
-            <div class="section__header-column">
-              <h2 class="section__header-title">Наши партнеры</h2>
-            </div>
-          </div>
+        <div class="section__wrapper">
           <div class="section__content">
             <div class="partners">
-              <div class="partners__inner">
+              <div class="bg-image"><img src="images/partners/partners-bg.jpg" alt="фоновая картинка" width="1920" height="612"></div>
+              <div class="partners__inner container">
+                <div class="partners__header">
+                  <div class="partners__title">Наши партнеры</div>
+                </div>
                 <div class="partners__swiper swiper js-partners-swiper">
                   <div class="swiper-wrapper">
                     <div class="partners__slide swiper-slide"><img src="images/partners/partners-01.png" alt="russian register" width="169" height="120"></div>

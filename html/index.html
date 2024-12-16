@@ -60,13 +60,13 @@
             <div class="header__controls">
               <div class="header__basket"><a class="button button--img" href="#"><i class="icon icon-cart"></i></a>
                 <div class="header__basket-amount">99</div>
-              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span><span></span><span></span></i></a>
+              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
             </div>
           </div>
           <div class="header__bottom">
             <nav class="header__nav">
               <ul class="header__nav-list">
-                <li class="header__nav-item"><a class="is-note" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
+                <li class="header__nav-item"><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
                 <li class="header__nav-item"><a href="#">Журналы</a></li>
                 <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
                 <li class="header__nav-item"><a href="#">Электронная библиотека</a></li>
@@ -114,7 +114,7 @@
           </div>
           <nav class="menu__nav">
             <ul class="menu__nav-list">
-              <li><a href="#">Подписка</a></li>
+              <li><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
               <li><a href="#">Журналы</a></li>
               <li><a href="#">Спецвыпуски</a></li>
               <li><a href="#">Электронная библиотека</a></li>
@@ -134,12 +134,12 @@
       </div>
     </div>
     <main class="main">
-      <section class="section section--hero">
-        <div class="section__bg"><img src="images/hero/hero-bg.jpg" alt="фоновая картинка" width="1920" height="750"></div>
-        <div class="section__wrapper container">
+      <section class="section section--hero section--padding-none">
+        <div class="section__wrapper">
           <div class="section__content">
-            <div class="hero">
-              <div class="hero__inner">
+            <div class="hero hero--slider">
+              <div class="bg-image"><img src="images/hero/hero-bg.jpg" alt="фоновая картинка" width="1920" height="750"></div>
+              <div class="hero__inner container">
                 <div class="hero__slider">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -188,6 +188,39 @@
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="518">
+                                        <div class="hero__books-name">МКМ</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="hero__books-controls">
+                                    <div class="js-books-pagination-current"></div>
+                                    <div class="js-books-pagination swiper-pagination"></div>
+                                    <div class="js-books-pagination-total"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="hero__row">
+                        <div class="hero__info">
+                          <h1 class="hero__title">Качество информации – наш стандарт</h1>
+                          <div class="hero__text">
+                            <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством, организатор деловых мероприятий, информационно-просветительский центр Всероссийской организации качества.</p>
+                          </div>
+                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-small"></i></a></div>
+                        </div>
+                        <div class="hero__content">
+                          <div class="hero__books">
+                            <div class="hero__books-inner">
+                              <div class="hero__books-content">
+                                <div class="hero__books-swiper">
+                                  <div class="swiper-wrapper">
+                                    <div class="swiper-slide hero__books-slide">
                                       <div class="hero__books-figure"><img src="images/hero/hero-slider-01.png" alt="стандарты и качество" width="396" height="512">
                                         <div class="hero__books-name">стандарты и качество</div>
                                       </div>
@@ -217,9 +250,142 @@
                                         <div class="hero__books-name">МКМ</div>
                                       </div>
                                     </div>
+                                    <div class="swiper-slide hero__books-slide">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="518">
+                                        <div class="hero__books-name">МКМ</div>
+                                      </div>
+                                    </div>
                                   </div>
                                   <div class="hero__books-controls">
+                                    <div class="js-books-pagination-current"></div>
                                     <div class="js-books-pagination swiper-pagination"></div>
+                                    <div class="js-books-pagination-total"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="hero__row">
+                        <div class="hero__info">
+                          <h1 class="hero__title">Качество информации – наш стандарт</h1>
+                          <div class="hero__text">
+                            <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством, организатор деловых мероприятий, информационно-просветительский центр Всероссийской организации качества.</p>
+                          </div>
+                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-small"></i></a></div>
+                        </div>
+                        <div class="hero__content">
+                          <div class="hero__books">
+                            <div class="hero__books-inner">
+                              <div class="hero__books-content">
+                                <div class="hero__books-swiper">
+                                  <div class="swiper-wrapper">
+                                    <div class="swiper-slide hero__books-slide">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-01.png" alt="стандарты и качество" width="396" height="512">
+                                        <div class="hero__books-name">стандарты и качество</div>
+                                      </div>
+                                    </div>
+                                    <div class="swiper-slide hero__books-slide">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-02.png" alt="методы менеджмента качества" width="396" height="512">
+                                        <div class="hero__books-name">методы менеджмента качества</div>
+                                      </div>
+                                    </div>
+                                    <div class="swiper-slide hero__books-slide">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-03.png" alt="контроль качества и продукции" width="396" height="521">
+                                        <div class="hero__books-name">контроль качества и продукции</div>
+                                      </div>
+                                    </div>
+                                    <div class="swiper-slide hero__books-slide">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-04.png" alt="мир измерений" width="396" height="517">
+                                        <div class="hero__books-name">мир измерений</div>
+                                      </div>
+                                    </div>
+                                    <div class="swiper-slide hero__books-slide">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-05.png" alt="business excellence" width="396" height="518">
+                                        <div class="hero__books-name">business excellence</div>
+                                      </div>
+                                    </div>
+                                    <div class="swiper-slide hero__books-slide">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="518">
+                                        <div class="hero__books-name">МКМ</div>
+                                      </div>
+                                    </div>
+                                    <div class="swiper-slide hero__books-slide">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="518">
+                                        <div class="hero__books-name">МКМ</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="hero__books-controls">
+                                    <div class="js-books-pagination-current"></div>
+                                    <div class="js-books-pagination swiper-pagination"></div>
+                                    <div class="js-books-pagination-total"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="hero__row">
+                        <div class="hero__info">
+                          <h1 class="hero__title">Качество информации – наш стандарт</h1>
+                          <div class="hero__text">
+                            <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством, организатор деловых мероприятий, информационно-просветительский центр Всероссийской организации качества.</p>
+                          </div>
+                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-small"></i></a></div>
+                        </div>
+                        <div class="hero__content">
+                          <div class="hero__books">
+                            <div class="hero__books-inner">
+                              <div class="hero__books-content">
+                                <div class="hero__books-swiper">
+                                  <div class="swiper-wrapper">
+                                    <div class="swiper-slide hero__books-slide">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-01.png" alt="стандарты и качество" width="396" height="512">
+                                        <div class="hero__books-name">стандарты и качество</div>
+                                      </div>
+                                    </div>
+                                    <div class="swiper-slide hero__books-slide">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-02.png" alt="методы менеджмента качества" width="396" height="512">
+                                        <div class="hero__books-name">методы менеджмента качества</div>
+                                      </div>
+                                    </div>
+                                    <div class="swiper-slide hero__books-slide">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-03.png" alt="контроль качества и продукции" width="396" height="521">
+                                        <div class="hero__books-name">контроль качества и продукции</div>
+                                      </div>
+                                    </div>
+                                    <div class="swiper-slide hero__books-slide">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-04.png" alt="мир измерений" width="396" height="517">
+                                        <div class="hero__books-name">мир измерений</div>
+                                      </div>
+                                    </div>
+                                    <div class="swiper-slide hero__books-slide">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-05.png" alt="business excellence" width="396" height="518">
+                                        <div class="hero__books-name">business excellence</div>
+                                      </div>
+                                    </div>
+                                    <div class="swiper-slide hero__books-slide">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="518">
+                                        <div class="hero__books-name">МКМ</div>
+                                      </div>
+                                    </div>
+                                    <div class="swiper-slide hero__books-slide">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="518">
+                                        <div class="hero__books-name">МКМ</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="hero__books-controls">
+                                    <div class="js-books-pagination-current"></div>
+                                    <div class="js-books-pagination swiper-pagination"></div>
+                                    <div class="js-books-pagination-total"></div>
                                   </div>
                                 </div>
                               </div>
@@ -229,8 +395,8 @@
                       </div>
                     </div>
                   </div>
+                  <div class="swiper-bullets js-hero-bullets hero__slider-bullets"></div>
                 </div>
-                <div class="swiper-bullets js-hero-bullets"></div>
               </div>
             </div>
           </div>
@@ -793,18 +959,15 @@
                   </div>
                   <div class="listing__content">
                     <ol class="listing__list">
-                      <li class="listing__item">
-                        <h3 class="listing__name">Электронная библиотека</h3>
-                        <div class="listing__img"><img src="images/materials/materials-01.jpg" alt="картинка" width="350" height="222"></div>
-                      </li>
-                      <li class="listing__item">
-                        <h3 class="listing__name">Тематические подборки</h3>
-                        <div class="listing__img"><img src="images/materials/materials-02.jpg" alt="картинка" width="350" height="222"></div>
-                      </li>
-                      <li class="listing__item">
-                        <h3 class="listing__name">Глоссарий</h3>
-                        <div class="listing__img"><img src="images/materials/materials-03.jpg" alt="картинка" width="350" height="222"></div>
-                      </li>
+                      <li class="listing__item"><a class="listing__box" href="#">
+                          <h3 class="listing__name">Электронная библиотека</h3>
+                          <div class="listing__img"><img src="images/materials/materials-01.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                      <li class="listing__item"><a class="listing__box" href="#">
+                          <h3 class="listing__name">Тематические подборки</h3>
+                          <div class="listing__img"><img src="images/materials/materials-02.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                      <li class="listing__item"><a class="listing__box" href="#">
+                          <h3 class="listing__name">Глоссарий</h3>
+                          <div class="listing__img"><img src="images/materials/materials-03.jpg" alt="картинка" width="350" height="222"></div></a></li>
                     </ol>
                   </div>
                 </div>
@@ -827,7 +990,7 @@
                 <div class="projects__swiper swiper js-projects-swiper">
                   <div class="swiper-wrapper">
                     <div class="projects__item swiper-slide">
-                      <div class="projects__img"><img src="images/projects/projects-01.jpg" alt="картинка проекта">
+                      <div class="projects__img"><img src="images/projects/projects-01.jpg" alt="Спецвыпуски">
                         <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-right"></i></a></div>
                       </div>
                       <div class="projects__info">
@@ -835,7 +998,7 @@
                       </div>
                     </div>
                     <div class="projects__item swiper-slide">
-                      <div class="projects__img"><img src="images/projects/projects-02.jpg" alt="картинка проекта">
+                      <div class="projects__img"><img src="images/projects/projects-02.jpg" alt="Зеленые проекты">
                         <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-right"></i></a></div>
                       </div>
                       <div class="projects__info">
@@ -843,7 +1006,7 @@
                       </div>
                     </div>
                     <div class="projects__item swiper-slide">
-                      <div class="projects__img"><img src="images/projects/projects-03.jpg" alt="картинка проекта">
+                      <div class="projects__img"><img src="images/projects/projects-03.jpg" alt="Стандарты для устойчивого развития">
                         <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-right"></i></a></div>
                       </div>
                       <div class="projects__info">
@@ -851,7 +1014,15 @@
                       </div>
                     </div>
                     <div class="projects__item swiper-slide">
-                      <div class="projects__img"><img src="images/projects/projects-01.jpg" alt="картинка проекта">
+                      <div class="projects__img"><img src="images/projects/projects-04.jpg" alt="Модель EFQM - путь к совершенству">
+                        <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-right"></i></a></div>
+                      </div>
+                      <div class="projects__info">
+                        <h3 class="projects__title">Модель EFQM - путь к совершенству</h3>
+                      </div>
+                    </div>
+                    <div class="projects__item swiper-slide">
+                      <div class="projects__img"><img src="images/projects/projects-01.jpg" alt="Спецвыпуски">
                         <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-right"></i></a></div>
                       </div>
                       <div class="projects__info">
@@ -859,7 +1030,7 @@
                       </div>
                     </div>
                     <div class="projects__item swiper-slide">
-                      <div class="projects__img"><img src="images/projects/projects-02.jpg" alt="картинка проекта">
+                      <div class="projects__img"><img src="images/projects/projects-02.jpg" alt="Зеленые проекты">
                         <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-right"></i></a></div>
                       </div>
                       <div class="projects__info">
@@ -867,11 +1038,19 @@
                       </div>
                     </div>
                     <div class="projects__item swiper-slide">
-                      <div class="projects__img"><img src="images/projects/projects-03.jpg" alt="картинка проекта">
+                      <div class="projects__img"><img src="images/projects/projects-03.jpg" alt="Стандарты для устойчивого развития">
                         <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-right"></i></a></div>
                       </div>
                       <div class="projects__info">
                         <h3 class="projects__title">Стандарты для устойчивого развития</h3>
+                      </div>
+                    </div>
+                    <div class="projects__item swiper-slide">
+                      <div class="projects__img"><img src="images/projects/projects-04.jpg" alt="Модель EFQM - путь к совершенству">
+                        <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-right"></i></a></div>
+                      </div>
+                      <div class="projects__info">
+                        <h3 class="projects__title">Модель EFQM - путь к совершенству</h3>
                       </div>
                     </div>
                   </div>
@@ -945,14 +1124,12 @@
                   <div class="services__right">
                     <div class="listing">
                       <ol class="listing__list listing__list--2">
-                        <li class="listing__item">
-                          <h3 class="listing__name">Реклама в журналах</h3>
-                          <div class="listing__img"><img src="images/materials/materials-01.jpg" alt="картинка" width="350" height="222"></div>
-                        </li>
-                        <li class="listing__item">
-                          <h3 class="listing__name">Реклама на сайте</h3>
-                          <div class="listing__img"><img src="images/materials/materials-02.jpg" alt="картинка" width="350" height="222"></div>
-                        </li>
+                        <li class="listing__item"><a class="listing__box" href="#">
+                            <h3 class="listing__name">Реклама в журналах</h3>
+                            <div class="listing__img"><img src="images/materials/materials-01.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                        <li class="listing__item"><a class="listing__box" href="#">
+                            <h3 class="listing__name">Реклама на сайте</h3>
+                            <div class="listing__img"><img src="images/materials/materials-02.jpg" alt="картинка" width="350" height="222"></div></a></li>
                       </ol>
                     </div>
                   </div>
@@ -1002,17 +1179,15 @@
           </div>
         </div>
       </section>
-      <section class="section section--partners">
-        <div class="section__bg"><img src="images/partners/partners-bg.jpg" alt="фоновая картинка" width="1920" height="612"></div>
-        <div class="section__wrapper container">
-          <div class="section__header">
-            <div class="section__header-column">
-              <h2 class="section__header-title">Наши партнеры</h2>
-            </div>
-          </div>
+      <section class="section section--partners section--padding-top-none">
+        <div class="section__wrapper">
           <div class="section__content">
             <div class="partners">
-              <div class="partners__inner">
+              <div class="bg-image"><img src="images/partners/partners-bg.jpg" alt="фоновая картинка" width="1920" height="612"></div>
+              <div class="partners__inner container">
+                <div class="partners__header">
+                  <div class="partners__title">Наши партнеры</div>
+                </div>
                 <div class="partners__swiper swiper js-partners-swiper">
                   <div class="swiper-wrapper">
                     <div class="partners__slide swiper-slide"><img src="images/partners/partners-01.png" alt="russian register" width="169" height="120"></div>
@@ -1021,10 +1196,6 @@
                     <div class="partners__slide swiper-slide"><img src="images/partners/partners-04.png" alt="рст" width="169" height="120"></div>
                     <div class="partners__slide swiper-slide"><img src="images/partners/partners-05.png" alt="академия" width="169" height="120"></div>
                     <div class="partners__slide swiper-slide"><img src="images/partners/partners-06.png" alt="ростехсерт" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-01.png" alt="russian register" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-02.png" alt="минпромторг России" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-03.png" alt="bureau veritas" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-04.png" alt="рст" width="169" height="120"></div>
                   </div>
                   <div class="swiper-controls">
                     <button class="js-partners-prev swiper-button-prev"></button>
