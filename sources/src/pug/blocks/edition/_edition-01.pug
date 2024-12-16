@@ -1,0 +1,70 @@
+-
+   const boardEdition01 = [
+      {
+         photo: 'images/board/board-01.jpg',
+         name: 'Белобрагин Виктор Яковлевич',
+         text: 'Заместитель главного редактора по научным вопросам, профессор, доктор экономических наук',
+      },
+      {
+         photo: 'images/board/board-13.jpg',
+         name: 'Быкова Наталья Георгиевна',
+         text: 'Заместитель главного редактора',
+      },
+      {
+         photo: 'images/board/board-14.jpg',
+         name: 'Макиева Алена Юрьевна',
+         text: 'Заместитель главного редактора',
+      },
+      {
+         photo: 'images/board/board-15.jpg',
+         name: 'Варфоломеева Наталья Рашитовна',
+         text: 'Ответственный секретарь',
+      },
+   ]
+
+section.section.section--edition.section--padding-top-none
+   .section__bg
+      img(src="images/edition/edition-bg.jpg", alt="фоновая картинка" width="1920" height="640")
+   .section__wrapper.container
+      include ../breadcrumbs/_breadcrumbs-editorial
+      .section__header
+         .section__header-row
+            h1.section__header-heading Редакция
+      .section__content
+         .edition
+            .edition__inner
+               .edition__main
+                  .edition__box
+                     h2.edition__title Главный редактор
+                     figure.edition__person
+                        .edition__person-img
+                           img(src="images/board/board-03.jpg", alt="Воронин Геннадий Петрович" width="480" height="360")
+                        figcaption.edition__person-info
+                           h3.edition__person-title Воронин Геннадий Петрович
+                           p.edition__person-text Президент Всероссийской организации качества, действительный государственный советник Российской Федерации I класса, доктор технических наук, доктор экономических наук, профессор
+                  .edition__box
+                     h2.edition__title Сотрудники редакции
+                     .edition__board.board
+                        .board__inner
+                           ul.board__list
+                              each board in boardEdition01
+                                 li.board__item
+                                    a.board__box(href="#")
+                                       .board__img
+                                          if board.photo
+                                             img(src=board.photo, alt=board.name width="180" height="200")
+                                       .board__info
+                                          p.board__name=board.name
+                                          p.board__text=board.text
+                     .edition__contacts
+                        h3.edition__contacts-title Контакты редакции
+                        .edition__contacts-contacts
+                              .address__list
+                                 a.address__item(href="mailto:stq-red@yandex.ru")
+                                    .address__icon
+                                       img(src="images/address/address-email.svg", alt="иконка" width="26" height="26")
+                                    .address__text stq-red@yandex.ru
+                                 a.address__item(href="tel:+74957716652")
+                                    .address__icon
+                                       img(src="images/address/address-phone.svg", alt="иконка" width="26" height="26")
+                                    .address__text +7 (495) 771 6652

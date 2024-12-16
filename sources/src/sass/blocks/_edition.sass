@@ -1,0 +1,64 @@
+.edition
+   &__main
+      padding: var(--gap)
+      display: grid
+      grid-template-columns: 480px 1fr
+      gap: var(--gap)
+      border-radius: var(--border-radius-20)
+      background: #ffffff
+      overflow: #E0E0E0
+      &--2
+         background: #E0E0E0
+   &__box
+      @include align-block(30px)
+   &__title
+      @extend .title
+      @extend .title--fourth
+   &__person
+      font-style: normal
+      @include margin-bottom(30px)
+      &-img
+         @include img-cover(75%, var(--border-radius-20))
+      &-info
+         @include margin-bottom(20px)
+      &-title
+         @extend .title
+         @extend .title--second
+      &-text
+         @extend .fs-14
+   &__contacts
+      padding: 12px 20px
+      padding-right: 50px
+      background: #F1F1F1
+      border-radius: var(--border-radius-15)
+      display: flex
+      justify-content: space-between
+      align-items: center
+      &-title
+         @extend .title
+         @extend .title--second
+      .address
+         &__list
+            flex-direction: row
+            gap: 40px
+         &__item
+            gap: 5px
+            font-size: 15px
+   .board
+      &__list
+         padding: 30px
+         grid-template-columns: repeat(2, 1fr)
+         gap: 30px 24px
+      &__img
+         width: 160px
+         height: 160px
+         border: 1px solid #C8C8C8
+      &__info
+         gap: 15px
+      &__text
+         margin-top: 0
+
+.section
+   &--edition
+      margin-bottom: var(--section-padding)
+      position: relative

@@ -1,0 +1,59 @@
+-
+   const boardEdition02 = [
+      {
+         photo: 'images/board/board-01.jpg',
+         name: 'Белобрагин Виктор Яковлевич',
+         text: 'Заместитель главного редактора по научным вопросам, профессор, доктор экономических наук',
+      },
+      {
+         photo: 'images/board/board-16.jpg',
+         name: 'Назаренко Виктор Владимирович',
+         text: 'Канд. экон. наук, Евразийская экономическая комиссия, министр по вопросам технического регулирования',
+      },
+      {
+         photo: 'images/board/board-17.jpg',
+         name: 'Окрепилов Владимир Валентинович',
+         text: 'Академик Российской академии наук, д-р экон. наук, профессор, ООО «Тест‑С.‑Петербург», директор',
+      },
+      {
+         photo: 'images/board/board-02.jpg',
+         name: 'Бокерия Лео Антонович',
+         text: 'Академик Российской академии наук, д-р мед. наук, Научный центр сердечно‐сосудистой хирургии им. А.Н. Бакулева, директор',
+      },
+   ]
+
+section.section
+   .section__wrapper.container
+      .section__header
+         .section__header-row.section__header--border
+            h1.section__header-title Редакционный совет
+      .section__content
+         .edition
+            .edition__inner
+               .edition__main.edition__main--2
+                  .edition__box
+                     h2.edition__title Председатель
+                     figure.edition__person
+                        .edition__person-img
+                           img(src="images/board/board-03.jpg", alt="Воронин Геннадий Петрович" width="480" height="360")
+                        figcaption.edition__person-info
+                           h3.edition__person-title Воронин Геннадий Петрович
+                           p.edition__person-text Президент Всероссийской организации качества, действительный государственный советник Российской Федерации I класса, доктор технических наук, доктор экономических наук, профессор
+                  .edition__box
+                     h2.edition__title Редакционная коллегия
+                     .edition__board.board
+                        .board__inner
+                           ul.board__list
+                              each board in boardEdition02
+                                 li.board__item
+                                    a.board__box(href="#")
+                                       .board__img
+                                          if board.photo
+                                             img(src=board.photo, alt=board.name width="180" height="200")
+                                       .board__info
+                                          p.board__name=board.name
+                                          p.board__text=board.text
+                     .edition__manage
+                        a.button.button.button--icon(href="#")
+                           span Подробнее
+                           i.icon.icon-arrow-right
