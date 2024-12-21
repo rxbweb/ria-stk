@@ -8,15 +8,10 @@
    &--2
       max-height: 750px
    .bg-image
-      img
+      img,
+      picture
+         object-position: top
          transition: var(--transition)
-   &:hover
-      .bg-image
-         img
-            filter: grayscale(1)
-      .numbers
-         &__item
-            border-color: var(--accent)
    &__inner
       height: 100%
       display: flex
@@ -45,17 +40,38 @@
    &__title
       margin-bottom: 40px
    &__text
-      margin-bottom: 0
       max-width: 510px
-      max-height: 0
-      overflow: hidden
-      opacity: 0
       transition: var(--transition)
-      .organization:hover &
-         max-height: 200px
-         margin-bottom: 30px
-         opacity: 1
       @include fluidFontSize(13px, 15px, 360px, 1920px, 15px)
+   @media (min-width: 768px)
+      &.organization--secondary
+         .organization
+            &__text
+               max-height: 0
+               margin-bottom: 0
+               overflow: hidden
+               opacity: 0
+         .numbers
+            transition: var(--transition)
+         &:hover
+            .bg-image
+               img
+                  filter: grayscale(1)
+            .numbers
+               &__item
+                  border-color: var(--accent)
+            .organization
+               &__text
+                  max-height: 200px
+                  margin-bottom: 30px
+                  opacity: 1
+   @media (min-width: 1201px)
+      &.organization--secondary
+         .numbers
+            transform: translateY(-30px)
+         &:hover
+            .numbers
+               transform: translateY(-60px)
    @include rh($rh)
       &__inner
          min-height: 100vh

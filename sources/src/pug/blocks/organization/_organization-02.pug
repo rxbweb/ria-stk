@@ -1,8 +1,12 @@
 section.section.section--organization
    .section__wrapper
-      .organization
+      .organization.organization--secondary
          .bg-image
-            img(src="images/organization/organization-bg.jpg", alt="фоновая картинка" width="1920" height="800")
+            picture
+               source(srcset="images/organization/organization-bg-mob.webp" type="image/webp" media="(max-width: 575px)")
+               source(srcset="images/organization/organization-bg-mob.jpg" media="(max-width: 575px)")
+               source(srcset="images/organization/organization-bg.webp")
+               img(src="images/organization/organization-bg.jpg" alt="фоновая картинка" width="1920" height="800")
          .organization__inner.container
             .organization__row
                .organization__left

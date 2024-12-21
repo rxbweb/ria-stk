@@ -2,7 +2,11 @@ section.section.section--padding-none.section--organization
    .section__wrapper
       .organization.organization--2
          .bg-image
-            img(src="images/organization/organization-bg.jpg", alt="фоновая картинка" width="1920" height="800")
+            picture
+               source(srcset="images/organization/organization-bg-mob.webp" type="image/webp" media="(max-width: 575px)")
+               source(srcset="images/organization/organization-bg-mob.jpg" media="(max-width: 575px)")
+               source(srcset="images/organization/organization-bg.webp")
+               img(src="images/organization/organization-bg.jpg" alt="фоновая картинка" width="1920" height="800")
          .organization__inner.container
             .breadcrumbs.breadcrumbs--second
                .breadcrumbs__inner
