@@ -6,7 +6,7 @@
    &__box
       display: flex
       align-items: flex-start
-      gap: 37px
+      gap: var(--gap)
    &__img
       width: 240px
       height: 180px
@@ -26,3 +26,27 @@
    &__name
       @extend .title
       @extend .title--second
+   @media (max-width: 1365px)
+      &__list
+         grid-template-columns: 1fr
+         gap: 40px
+      &__box
+         align-items: center
+   @include sm
+      &__box
+         flex-direction: column
+         align-items: flex-start
+         gap: 20px
+      &__info
+         @include margin-bottom(10px)
+      &__img
+         width: 200px
+         height: 150px
+         img
+            width: 80%
+            display: block
+   @include xs
+      &__box
+         gap: 15px
+      &__info
+         @include margin-bottom(5px)
