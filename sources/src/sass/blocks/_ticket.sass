@@ -34,16 +34,44 @@
             justify-content: center
       &-primary
          @extend .title
-         @extend .title--second
+         @include fluidFontSize(20px, 24px, 360px, 1920px, 20px)
       .button
          padding-left: 30px
          padding-right: 30px
-   @media (max-width: 1365px)
+   @include lg
+      &__content
+         flex-basis: 720px
+      &__table
+         &-row
+            @include margin-right(40px)
+   @include md
       &__row
          flex-direction: column
+      &__content
+         flex-basis: auto
       &__table
          &-col
             &:nth-child(3)
                min-width: 100px
             &:last-child
                margin-left: 0
+   @include sm
+      &__table
+         &-row
+            flex-wrap: wrap
+            gap: 10px
+            & > *
+               &:nth-last-child(2)
+                  margin-right: 0
+         &-col
+            width: calc(50% - 5px)
+            margin-right: 0
+   @include xs
+      &__table
+         &-col
+            .button
+               padding-left: 12px
+               padding-right: 12px
+            &:nth-child(4)
+               width: 100%
+               align-items: flex-start
