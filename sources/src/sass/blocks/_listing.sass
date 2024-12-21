@@ -35,6 +35,7 @@
          gap: 40px
    &__box
       @extend .left-border
+      width: 100%
       height: 100%
       display: flex
       flex-direction: column
@@ -87,16 +88,30 @@
       &__title
          br
             display: none
+   @include lg
+      &__list
+         &--4
+            grid-template-columns: repeat(4, 1fr)
    @include md
       &__row
          flex-direction: column
       &__box
-         padding-top: 100px
+         ol.listing__list &
+            padding-top: 100px
    @include ms
       &__list
          @include scroll-x(var(--padding))
          display: flex
          gap: 30px
+         &--4
+            grid-template-columns: repeat(2, 1fr)
+      &__item
+         width: var(--listing-item-width)
+         min-width: var(--listing-item-width)
+   @include sm
+      &__box
+         gap: 20px
+      &__list
          &--default
             width: 100%
             margin: 0
@@ -107,17 +122,14 @@
             .listing
                &__box
                   width: 100%
-      &__box
-         width: var(--listing-item-width)
-         min-width: var(--listing-item-width)
-   @include sm
-      &__box
-         gap: 20px
+               &__item
+                  --listing-item-width: 100%
    @include xs
       --listing-item-width: 85%
       &__box
-         padding-top: 90px
          padding-left: 10px
          gap: 15px
+         ol.listing__list &
+            padding-top: 90px
       &__img
          min-height: 170px

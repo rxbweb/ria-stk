@@ -1,0 +1,32 @@
+-
+   const listings01 = [
+      {
+         name: 'Книги',
+         image: 'images/listing/listing-materials-04.jpg'
+      },
+      {
+         name: 'Электронная библиотека',
+         image: 'images/listing/listing-materials-05.jpg'
+      },
+      {
+         name: 'Тематические подборки',
+         image: 'images/listing/listing-materials-06.jpg'
+      },
+   ]
+
+section.section.section--listing
+   .section__wrapper.container
+      .section__content
+         .listing
+            .listing__inner
+               .listing__row
+                  .listing__aside
+                     h2.listing__title Полезные #[br] материалы
+                  .listing__content
+                     ol.listing__list
+                        each listing in listings01
+                           li.listing__item
+                              a.listing__box(href="#")
+                                 h3.listing__name=listing.name
+                                 .listing__img
+                                    img(src=listing.image, alt="картинка" width="350" height="222")
