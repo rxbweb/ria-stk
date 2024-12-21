@@ -5,7 +5,8 @@
          text: 'Отраслевых <br> комитета'
       },
       {
-         num: '100+',
+         num: '100',
+         plus: '+',
          text: 'Партнерских <br> организаций'
       },
       {
@@ -25,6 +26,9 @@ section.section.section--padding-small.section--numbers-2
             .numbers__inner
                ul.numbers__list.numbers__list--4
                   each number in numbers02
-                     li.numbers__item
-                        .numbers__num=number.num
+                     li.numbers__item(data-nums)
+                        .numbers__num
+                           span(data-value=number.num)
+                           if number.plus
+                              = number.plus
                         .numbers__text!=number.text

@@ -1,11 +1,13 @@
 -
    const numbers03 = [
       {
-         num: '1 500 +',
+         num: '1 500',
+         plus: '+',
          text: 'научных и <br> популярных статей <br> ежегодно'
       },
       {
-         num: '150 000 +',
+         num: '150 000',
+         plus: '+',
          text: 'читателей <br> ежемесячно'
       },
       {
@@ -13,15 +15,18 @@
          text: 'профессиональных <br> наград'
       },
       {
-         num: '30+',
+         num: '30',
+         plus: '+',
          text: 'лет на рынке <br> профессиональной <br> прессы'
       },
       {
-         num: '50+',
+         num: '50',
+         plus: '+',
          text: 'профессиональных <br> сотрудников'
       },
       {
-         num: '2 500 +',
+         num: '2 500',
+         plus: '+',
          text: 'авторов и экспертов со всего <br> мира'
       },
    ]
@@ -34,5 +39,8 @@ section.section.section--padding-small.section--numbers
                ul.numbers__list.numbers__list--3
                   each number in numbers03
                      li.numbers__item
-                        .numbers__num=number.num
+                        .numbers__num(data-nums)
+                           span(data-value=number.num)
+                           if number.plus
+                              = number.plus
                         .numbers__text!=number.text
