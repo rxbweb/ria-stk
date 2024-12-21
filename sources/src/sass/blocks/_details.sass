@@ -91,6 +91,7 @@
             &__list
                &-item
                   &::before
+                     width: 6%
                      @extend .details__list-description
                      @extend .title
                      @include fluidFontSize(32px, 64px, 360px, 1920px, 32px)
@@ -121,7 +122,7 @@
                      width: 28%
                      padding-bottom: 15%
                   &-info
-                     width: 50%
+                     width: 57%
                      max-width: 770px
                      gap: 30px
    @include md
@@ -129,6 +130,7 @@
          &-box
             min-height: 300px
             padding-left: 0
+            
          &-img,
          &-info
             width: calc(50% - var(--gap)/2)
@@ -166,3 +168,10 @@
             padding-bottom: 56%
          &-button
             margin-top: 15px
+         &--nums
+            .details
+               &__list
+                  &-item
+                     &::before
+                        top: 15px
+                        font-size: 32px

@@ -121,9 +121,10 @@
          justify-content: space-between
          gap: 20px
          color: #47535E
-         font-size: 14px
+         font-size: 16px
          line-height: 120%
       &-item
+         padding: 0 10px
          a
             height: 100%
             padding: 17px 0
@@ -144,8 +145,21 @@
       height: 11px
       margin-left: 95px
       flex-shrink: 0
-   &__wrapper
+   &__box
       display: none
+      min-width: 150px
+      padding: 10px 20px
+      position: absolute
+      right: var(--padding)
+      border-radius: 4px
+      border: 1px solid #cdcdcd
+      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .1)
+      background: #fff
+      &.is-active
+         display: block
+      .header__nav-item
+         a
+            padding: 10px 0
    @media (max-width: 1600px)
       &__top
          gap: 30px
@@ -170,6 +184,7 @@
       &__socials
          display: none
    @include ms
+      min-height: 77px
       &__logo
          &::after
             display: none
@@ -201,6 +216,7 @@
          span
             display: none
    @include xs
+      min-height: 70px
       &__logo
          flex-shrink: 1
          &-main

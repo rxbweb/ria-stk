@@ -19,7 +19,7 @@
          color: #67686B
          letter-spacing: -0.72px
          position: relative
-         &--active
+         &.is-active
             color: var(--accent)
             &::after
                content: ''
@@ -29,6 +29,8 @@
                right: 0
                height: 1px
                background: currentColor
+         &:not(.is-active)
+            @include hover-line(var(--accent))
    &__swiper
       position: relative
       overflow: hidden
