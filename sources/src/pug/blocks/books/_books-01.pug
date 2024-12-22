@@ -1,3 +1,67 @@
+-
+   const books01 = [
+      {
+         img: 'images/books/books-01.jpg',
+         title: 'Цифровое качество. Свод знаний о цифровой трансформации',
+         price: '3 500 руб.'
+      },
+      {
+         img: 'images/books/books-02.jpg',
+         title: 'Процессный подход в требованиях ISO 45001:2018',
+         price: '5 600 руб.'
+      },
+      {
+         img: 'images/books/books-03.jpg',
+         title: 'Внедрение системы энергетического менеджмента на соответствие международному стандарту ISO 50001:2011',
+         price: '14 900 руб.'
+      },
+      {
+         img: 'images/books/books-04.jpg',
+         title: 'ISO 9001:2015. Международный стандарт на системы менеджмента качества. Наблюдения, интерпретация....',
+         price: '3 800 руб.'
+      },
+      {
+         img: 'images/books/books-05.jpg',
+         title: 'ПРОТЕЗЫ И ИМПЛАНТАТЫ. Энциклопедия международных стандартов.',
+         price: '7 500 руб.'
+      },
+      {
+         img: 'images/books/books-06.jpg',
+         title: 'Аудит систем менеджмента на соответствие требованиям ISO 9001, ISO 14001, ISO 45001, ISO 50001. Практикум.',
+         price: '2 300 руб.'
+      },
+      {
+         img: 'images/books/books-07.jpg',
+         title: 'Очерки безопасности хирургических пациентов',
+         price: '1 500 руб.'
+      },
+      {
+         img: 'images/books/books-08.jpg',
+         title: 'Условия обеспечения устойчивого успеха. Как создать современную систему менеджмента организации..',
+         price: '3 700 руб.'
+      },
+      {
+         img: 'images/books/books-09.jpg',
+         title: 'Качество и эффективность — условия успеха. Методы совершенствования систем менеджмента организаций.',
+         price: '1 120 руб.'
+      },
+      {
+         img: 'images/books/books-10.jpg',
+         title: 'Энциклопедия международных стандартов ISO',
+         price: '7 500 руб.'
+      },
+      {
+         img: 'images/books/books-11.jpg',
+         title: 'Страна напуганных инженеров. Записки Гипа.',
+         price: '460 руб.'
+      },
+      {
+         img: 'images/books/books-12.jpg',
+         title: 'Пищевые продукты',
+         price: '5 100 руб.'
+      },
+   ]
+
 section.section
    .section__wrapper.container
       .section__header.section__header--margin
@@ -11,250 +75,48 @@ section.section
                      h2.books__title.books__title--red Хиты продаж
                   .books__content
                      ul.books__list
-                        li.books__item
-                           .books__box
-                              button.books__like
-                              .books__img
-                                 img(src="images/books/books-01.png", alt="книга" width="380" height="380")
-                           .books__info
-                              h3.books__name Цифровое качество. Свод знаний о цифровой трансформации
-                              p.books__price 3 500 руб.
-                              .books__manage
-                                 a.button.button--icon(href="#")
-                                    span Купить книгу
-                                    i.icon.icon-cart
-                                 a.button.button--outline(href="#")
-                                    span Купить в 1 клик
-                                    i.icon.icon-arrow-right
-                        li.books__item
-                           .books__box
-                              button.books__like
-                              .books__img
-                                 img(src="images/books/books-02.png", alt="книга" width="380" height="380")
-                           .books__info
-                              h3.books__name Процессный подход в требованиях ISO 45001:2018
-                              p.books__price 5 600 руб.
-                              .books__manage
-                                 a.button.button--icon(href="#")
-                                    span Купить книгу
-                                    i.icon.icon-cart
-                                 a.button.button--outline(href="#")
-                                    span Купить в 1 клик
-                                    i.icon.icon-arrow-right
-                        li.books__item
-                           .books__box
-                              button.books__like
-                              .books__img
-                                 img(src="images/books/books-03.png", alt="книга" width="380" height="380")
-                           .books__info
-                              h3.books__name Внедрение системы энергетического менеджмента на соответствие международному стандарту ISO 50001:2011
-                              p.books__price 14 900 руб.
-                              .books__manage
-                                 a.button.button--icon(href="#")
-                                    span Купить книгу
-                                    i.icon.icon-cart
-                                 a.button.button--outline(href="#")
-                                    span Купить в 1 клик
-                                    i.icon.icon-arrow-right
-                        li.books__item
-                           .books__box
-                              button.books__like
-                              .books__img
-                                 img(src="images/books/books-04.png", alt="книга" width="380" height="380")
-                           .books__info
-                              h3.books__name ISO 9001:2015. Международный стандарт на системы менеджмента качества. Наблюдения, интерпретация....
-                              p.books__price 3 800 руб.
-                              .books__manage
-                                 a.button.button--icon(href="#")
-                                    span Купить книгу
-                                    i.icon.icon-cart
-                                 a.button.button--outline(href="#")
-                                    span Купить в 1 клик
-                                    i.icon.icon-arrow-right
+                        each book in books01.slice(0, 4)
+                           li.books__item
+                              .books__card
+                                 .books__box
+                                    button.books__like
+                                    .books__img
+                                       img(src=book.img, alt=book.title width="380" height="380")
+                                 .books__info
+                                    h3.books__name= book.title
+                                    .books__bottom
+                                       p.books__price= book.price
+                                       .books__manage
+                                          a.button.button--slim.button--icon(href="#")
+                                             span Купить книгу
+                                             i.icon.icon-cart
+                                          a.button.button--outline(href="#")
+                                             span Купить в 1 клик
+                                             i.icon.icon-arrow-right
+                     .books__pagination
+                        include ../_pagination
                .books__section
                   .books__header
                      h2.books__title Все книги
                   .books__content
                      ul.books__list
-                        li.books__item
-                           .books__box
-                              button.books__like
-                              .books__img
-                                 img(src="images/books/books-01.png", alt="книга" width="380" height="380")
-                           .books__info
-                              h3.books__name Цифровое качество. Свод знаний о цифровой трансформации
-                              p.books__price 3 500 руб.
-                              .books__manage
-                                 a.button.button--icon(href="#")
-                                    span Купить книгу
-                                    i.icon.icon-cart
-                                 a.button.button--outline(href="#")
-                                    span Купить в 1 клик
-                                    i.icon.icon-arrow-right
-                        li.books__item
-                           .books__box
-                              button.books__like
-                              .books__img
-                                 img(src="images/books/books-02.png", alt="книга" width="380" height="380")
-                           .books__info
-                              h3.books__name Процессный подход в требованиях ISO 45001:2018
-                              p.books__price 5 600 руб.
-                              .books__manage
-                                 a.button.button--icon(href="#")
-                                    span Купить книгу
-                                    i.icon.icon-cart
-                                 a.button.button--outline(href="#")
-                                    span Купить в 1 клик
-                                    i.icon.icon-arrow-right
-                        li.books__item
-                           .books__box
-                              button.books__like
-                              .books__img
-                                 img(src="images/books/books-03.png", alt="книга" width="380" height="380")
-                           .books__info
-                              h3.books__name Внедрение системы энергетического менеджмента на соответствие международному стандарту ISO 50001:2011
-                              p.books__price 14 900 руб.
-                              .books__manage
-                                 a.button.button--icon(href="#")
-                                    span Купить книгу
-                                    i.icon.icon-cart
-                                 a.button.button--outline(href="#")
-                                    span Купить в 1 клик
-                                    i.icon.icon-arrow-right
-                        li.books__item
-                           .books__box
-                              button.books__like
-                              .books__img
-                                 img(src="images/books/books-04.png", alt="книга" width="380" height="380")
-                           .books__info
-                              h3.books__name ISO 9001:2015. Международный стандарт на системы менеджмента качества. Наблюдения, интерпретация....
-                              p.books__price 3 800 руб.
-                              .books__manage
-                                 a.button.button--icon(href="#")
-                                    span Купить книгу
-                                    i.icon.icon-cart
-                                 a.button.button--outline(href="#")
-                                    span Купить в 1 клик
-                                    i.icon.icon-arrow-right
-                        li.books__item
-                           .books__box
-                              button.books__like
-                              .books__img
-                                 img(src="images/books/books-05.png", alt="книга" width="380" height="380")
-                           .books__info
-                              h3.books__name ПРОТЕЗЫ И ИМПЛАНТАТЫ. Энциклопедия международных стандартов.
-                              p.books__price 7 500 руб.
-                              .books__manage
-                                 a.button.button--icon(href="#")
-                                    span Купить книгу
-                                    i.icon.icon-cart
-                                 a.button.button--outline(href="#")
-                                    span Купить в 1 клик
-                                    i.icon.icon-arrow-right
-                        li.books__item
-                           .books__box
-                              button.books__like
-                              .books__img
-                                 img(src="images/books/books-06.png", alt="книга" width="380" height="380")
-                           .books__info
-                              h3.books__name Аудит систем менеджмента на соответствие требованиям ISO 9001, ISO 14001, ISO 45001, ISO 50001. Практикум.
-                              p.books__price 2 300 руб.
-                              .books__manage
-                                 a.button.button--icon(href="#")
-                                    span Купить книгу
-                                    i.icon.icon-cart
-                                 a.button.button--outline(href="#")
-                                    span Купить в 1 клик
-                                    i.icon.icon-arrow-right
-                        li.books__item
-                           .books__box
-                              button.books__like
-                              .books__img
-                                 img(src="images/books/books-07.png", alt="книга" width="380" height="380")
-                           .books__info
-                              h3.books__name Очерки безопасности хирургических пациентов
-                              p.books__price 1 500 руб.
-                              .books__manage
-                                 a.button.button--icon(href="#")
-                                    span Купить книгу
-                                    i.icon.icon-cart
-                                 a.button.button--outline(href="#")
-                                    span Купить в 1 клик
-                                    i.icon.icon-arrow-right
-                        li.books__item
-                           .books__box
-                              button.books__like
-                              .books__img
-                                 img(src="images/books/books-08.png", alt="книга" width="380" height="380")
-                           .books__info
-                              h3.books__name Условия обеспечения устойчивого успеха. Как создать современную систему менеджмента организации..
-                              p.books__price 3 700 руб.
-                              .books__manage
-                                 a.button.button--icon(href="#")
-                                    span Купить книгу
-                                    i.icon.icon-cart
-                                 a.button.button--outline(href="#")
-                                    span Купить в 1 клик
-                                    i.icon.icon-arrow-right
-                        li.books__item
-                           .books__box
-                              button.books__like
-                              .books__img
-                                 img(src="images/books/books-09.png", alt="книга" width="380" height="380")
-                           .books__info
-                              h3.books__name Качество и эффективность — условия успеха. Методы совершенствования систем менеджмента организаций.
-                              p.books__price 1 120 руб.
-                              .books__manage
-                                 a.button.button--icon(href="#")
-                                    span Купить книгу
-                                    i.icon.icon-cart
-                                 a.button.button--outline(href="#")
-                                    span Купить в 1 клик
-                                    i.icon.icon-arrow-right
-                        li.books__item
-                           .books__box
-                              button.books__like
-                              .books__img
-                                 img(src="images/books/books-10.png", alt="книга" width="380" height="380")
-                           .books__info
-                              h3.books__name Энциклопедия международных стандартов ISO
-                              p.books__price 7 500 руб.
-                              .books__manage
-                                 a.button.button--icon(href="#")
-                                    span Купить книгу
-                                    i.icon.icon-cart
-                                 a.button.button--outline(href="#")
-                                    span Купить в 1 клик
-                                    i.icon.icon-arrow-right
-                        li.books__item
-                           .books__box
-                              button.books__like
-                              .books__img
-                                 img(src="images/books/books-11.png", alt="книга" width="380" height="380")
-                           .books__info
-                              h3.books__name Страна напуганных инженеров. Записки Гипа.
-                              p.books__price 460 руб.
-                              .books__manage
-                                 a.button.button--icon(href="#")
-                                    span Купить книгу
-                                    i.icon.icon-cart
-                                 a.button.button--outline(href="#")
-                                    span Купить в 1 клик
-                                    i.icon.icon-arrow-right
-                        li.books__item
-                           .books__box
-                              button.books__like
-                              .books__img
-                                 img(src="images/books/books-12.png", alt="книга" width="380" height="380")
-                           .books__info
-                              h3.books__name Пищевые продукты
-                              p.books__price 5 100 руб.
-                              .books__manage
-                                 a.button.button--icon(href="#")
-                                    span Купить книгу
-                                    i.icon.icon-cart
-                                 a.button.button--outline(href="#")
-                                    span Купить в 1 клик
-                                    i.icon.icon-arrow-right
+                        each book in books01
+                           li.books__item
+                              .books__card
+                                 .books__box
+                                    button.books__like
+                                    .books__img
+                                       img(src=book.img, alt=book.title width="380" height="380")
+                                 .books__info
+                                    h3.books__name= book.title
+                                    .books__bottom
+                                       p.books__price= book.price
+                                       .books__manage
+                                          a.button.button--slim.button--icon(href="#")
+                                             span Купить книгу
+                                             i.icon.icon-cart
+                                          a.button.button--outline(href="#")
+                                             span Купить в 1 клик
+                                             i.icon.icon-arrow-right
                      .books__pagination
                         include ../_pagination

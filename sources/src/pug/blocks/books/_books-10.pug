@@ -1,0 +1,56 @@
+-
+   const books10 = [
+      {
+         img: 'images/books/books-22.png',
+         title: 'Бизнес-план — стань хозяином своего дела',
+         price: '1 490 руб.'
+      },
+      {
+         img: 'images/books/books-23.png',
+         title: 'Финансовый ликбез',
+         price: '1 490 руб.'
+      },
+      {
+         img: 'images/books/books-24.png',
+         title: 'Процессный подход / проектное управление',
+         price: '1 490 руб.'
+      },
+      {
+         img: 'images/books/books-25.png',
+         title: 'Модель EFQM - путь к совершенству',
+         price: '1 490 руб.'
+      },
+   ]
+
+
+section.section
+   .section__wrapper.container
+      .section__content
+         .books
+            .books__inner
+               .books__section
+                  .books__header
+                     h2.books__title Тематические подборки
+                     a.button.button--icon(href="#")
+                        span Все подборки
+                        i.icon.icon-arrow-right
+                  .books__content
+                     ul.books__list
+                        each book in books10
+                           li.books__item
+                              .books__card
+                                 .books__box
+                                    button.books__like
+                                    .books__img
+                                       img(src=book.img, alt=book.title width="380" height="380")
+                                 .books__info
+                                    h3.books__name= book.title
+                                    .books__bottom
+                                       p.books__price= book.price
+                                       .books__manage
+                                          a.button.button--slim.button--icon(href="#")
+                                             span Купить книгу
+                                             i.icon.icon-cart
+                                          a.button.button--outline(href="#")
+                                             span Купить в 1 клик
+                                             i.icon.icon-arrow-right

@@ -1,3 +1,24 @@
+-
+   const books06 = [
+      {
+         img: 'images/books/books-18.png',
+         title: 'Выбор программного обеспечения для СМК',
+      },
+      {
+         img: 'images/books/books-19.png',
+         title: 'Практическое применение АИСМК для проведения анализа измерительных систем (MSA)',
+      },
+      {
+         img: 'images/books/books-20.png',
+         title: 'Цифровизация аудита и наблюдений систем менеджмента',
+      },
+      {
+         img: 'images/books/books-21.png',
+         title: 'Российские методики и подходы к работе с системами менеджмента имеют свои преимущества',
+      },
+   ]
+
+
 section.section
    .section__wrapper.container
       .section__content
@@ -5,76 +26,23 @@ section.section
             .books__inner
                .books__section
                   .books__header
-                     h2.books__title Реклама на других ресурсах
+                     h2.books__title Статьи
+                     a.button.button--icon(href="#")
+                        span Все статьи
+                        i.icon.icon-arrow-right
                   .books__content
-                     .books__swiper
-                        .books__swiper-slider
-                           .swiper-wrapper
-                              .swiper-slide
-                                 .books__item
-                                    .books__box
-                                       button.books__like
-                                       .books__img
-                                          img(src="images/books/books-13.png", alt="книга" width="380" height="380")
-                                    .books__info
-                                       h3.books__name Диджитал реклама
-                              .swiper-slide
-                                 .books__item
-                                    .books__box
-                                       button.books__like
-                                       .books__img
-                                          img(src="images/books/books-14.png", alt="книга" width="229" height="316")
-                                    .books__info
-                                       h3.books__name Методы менеджмента качества
-                              .swiper-slide
-                                 .books__item
-                                    .books__box
-                                       button.books__like
-                                       .books__img
-                                          img(src="images/books/books-15.png", alt="книга" width="229" height="316")
-                                    .books__info
-                                       h3.books__name Контроль качества продукции
-                              .swiper-slide
-                                 .books__item
-                                    .books__box
-                                       button.books__like
-                                       .books__img
-                                          img(src="images/books/books-16.png", alt="книга" width="229" height="316")
-                                    .books__info
-                                       h3.books__name Мир измерений
-                              .swiper-slide
-                                 .books__item
-                                    .books__box
-                                       button.books__like
-                                       .books__img
-                                          img(src="images/books/books-13.png", alt="книга" width="380" height="380")
-                                    .books__info
-                                       h3.books__name Диджитал реклама
-                              .swiper-slide
-                                 .books__item
-                                    .books__box
-                                       button.books__like
-                                       .books__img
-                                          img(src="images/books/books-14.png", alt="книга" width="229" height="316")
-                                    .books__info
-                                       h3.books__name Методы менеджмента качества
-                              .swiper-slide
-                                 .books__item
-                                    .books__box
-                                       button.books__like
-                                       .books__img
-                                          img(src="images/books/books-15.png", alt="книга" width="229" height="316")
-                                    .books__info
-                                       h3.books__name Контроль качества продукции
-                              .swiper-slide
-                                 .books__item
-                                    .books__box
-                                       button.books__like
-                                       .books__img
-                                          img(src="images/books/books-16.png", alt="книга" width="229" height="316")
-                                    .books__info
-                                       h3.books__name Мир измерений
-                        .swiper-controls
-                           button.js-books-prev.swiper-button-prev
-                           .swiper-pagination.js-books-pagination
-                           button.js-books-next.swiper-button-next
+                     ul.books__list
+                        each book in books06
+                           li.books__item
+                              .books__card
+                                 .books__box
+                                    button.books__like
+                                    .books__img
+                                       img(src=book.img, alt=book.title width="380" height="380")
+                                 .books__info
+                                    h3.books__name= book.title
+                                    .books__bottom
+                                       .books__manage
+                                          a.button.button--outline(href="#")
+                                             span Читать статью
+                                             i.icon.icon-arrow-right

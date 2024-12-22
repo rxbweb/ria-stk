@@ -1,3 +1,39 @@
+-
+   const books05 = [
+      {
+         img: 'images/books/books-13.jpg',
+         title: 'Диджитал реклама',
+      },
+      {
+         img: 'images/books/books-14.jpg',
+         title: 'Методы менеджмента качества',
+      },
+      {
+         img: 'images/books/books-15.jpg',
+         title: 'Контроль качества продукции',
+      },
+      {
+         img: 'images/books/books-16.jpg',
+         title: 'Мир измерений',
+      },
+      {
+         img: 'images/books/books-13.jpg',
+         title: 'Диджитал реклама',
+      },
+      {
+         img: 'images/books/books-14.jpg',
+         title: 'Методы менеджмента качества',
+      },
+      {
+         img: 'images/books/books-15.jpg',
+         title: 'Контроль качества продукции',
+      },
+      {
+         img: 'images/books/books-16.jpg',
+         title: 'Мир измерений',
+      }
+   ]
+
 section.section
    .section__wrapper.container
       .section__content
@@ -10,70 +46,15 @@ section.section
                      .books__swiper
                         .books__swiper-slider
                            .swiper-wrapper
-                              .swiper-slide
-                                 .books__item
-                                    .books__box
-                                       button.books__like
-                                       .books__img
-                                          img(src="images/books/books-13.png", alt="книга" width="380" height="380")
-                                    .books__info
-                                       h3.books__name Диджитал реклама
-                              .swiper-slide
-                                 .books__item
-                                    .books__box
-                                       button.books__like
-                                       .books__img
-                                          img(src="images/books/books-14.png", alt="книга" width="229" height="316")
-                                    .books__info
-                                       h3.books__name Методы менеджмента качества
-                              .swiper-slide
-                                 .books__item
-                                    .books__box
-                                       button.books__like
-                                       .books__img
-                                          img(src="images/books/books-15.png", alt="книга" width="229" height="316")
-                                    .books__info
-                                       h3.books__name Контроль качества продукции
-                              .swiper-slide
-                                 .books__item
-                                    .books__box
-                                       button.books__like
-                                       .books__img
-                                          img(src="images/books/books-16.png", alt="книга" width="229" height="316")
-                                    .books__info
-                                       h3.books__name Мир измерений
-                              .swiper-slide
-                                 .books__item
-                                    .books__box
-                                       button.books__like
-                                       .books__img
-                                          img(src="images/books/books-13.png", alt="книга" width="380" height="380")
-                                    .books__info
-                                       h3.books__name Диджитал реклама
-                              .swiper-slide
-                                 .books__item
-                                    .books__box
-                                       button.books__like
-                                       .books__img
-                                          img(src="images/books/books-14.png", alt="книга" width="229" height="316")
-                                    .books__info
-                                       h3.books__name Методы менеджмента качества
-                              .swiper-slide
-                                 .books__item
-                                    .books__box
-                                       button.books__like
-                                       .books__img
-                                          img(src="images/books/books-15.png", alt="книга" width="229" height="316")
-                                    .books__info
-                                       h3.books__name Контроль качества продукции
-                              .swiper-slide
-                                 .books__item
-                                    .books__box
-                                       button.books__like
-                                       .books__img
-                                          img(src="images/books/books-16.png", alt="книга" width="229" height="316")
-                                    .books__info
-                                       h3.books__name Мир измерений
+                              each book in books05
+                                 .swiper-slide
+                                    .books__item
+                                       .books__box
+                                          button.books__like
+                                          .books__img
+                                             img(src=book.img, alt=book.title width="380" height="380")
+                                       .books__info
+                                          h3.books__name= book.title
                         .swiper-controls
                            button.js-books-prev.swiper-button-prev
                            .swiper-pagination.js-books-pagination
