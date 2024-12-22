@@ -20,6 +20,14 @@
     <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -30,7 +38,7 @@
             <div class="header__manage">
               <div class="header__search search">
                 <button class="search__button"><i class="icon icon-loop"></i></button>
-                <input class="search__input" type="text" placeholder="Искать....">
+                <input class="search__input" type="seacrh" placeholder="Искать....">
                 <div class="search__select">
                   <div class="select">
                     <button class="select__active"><span>Везде</span></button>
@@ -46,7 +54,7 @@
                 </div>
               </div>
               <div class="select select--lang">
-                <div class="select__active"><span class="select__active-text">RU</span></div>
+                <div class="select__active"><span>RU</span></div>
                 <div class="select__list">
                   <button class="select__item is-active">RU</button>
                   <button class="select__item">EN</button>
@@ -79,7 +87,9 @@
             </nav>
             <button class="header__burger"><img src="images/icons/burger.svg" alt="открыть меню" width="24" height="11"></button>
           </div>
-          <div class="header__wrapper"></div>
+          <div class="header__box">
+            <ul class="header__box-nav"></ul>
+          </div>
         </div>
       </div>
     </header>
@@ -89,7 +99,7 @@
           <div class="menu__manage">
             <div class="menu__search search">
               <button class="search__button"><i class="icon icon-loop"></i></button>
-              <input class="search__input" type="text" placeholder="Искать....">
+              <input class="search__input" type="seacrh" placeholder="Искать....">
               <div class="search__select">
                 <div class="select">
                   <button class="select__active">Везде</button>
@@ -105,7 +115,7 @@
               </div>
             </div>
             <div class="select select--lang">
-              <div class="select__active"><span class="select__active-text">RU</span></div>
+              <div class="select__active"><span>RU</span></div>
               <div class="select__list">
                 <button class="select__item is-active">RU</button>
                 <button class="select__item">EN</button>
@@ -140,7 +150,7 @@
             <div class="hero">
               <div class="bg-image"><img src="images/hero/hero-bg.jpg" alt="фоновая картинка" width="1920" height="750"></div>
               <div class="hero__inner container">
-                <div class="hero__slider">
+                <div class="hero__slideshow">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="hero__row">
@@ -151,12 +161,24 @@
                           </div>
                           <div class="hero__bottom"><a class="button button--icon" href="#"><span>О компании и награды</span><i class="icon icon-arrow-small"></i></a></div>
                         </div>
-                        <div class="hero__content"></div>
+                        <div class="hero__content">
+                          <div class="hero__magazines">
+                            <div class="hero__magazines-col">
+                              <div class="hero__magazines-card"><img src="images/hero/hero-slider-01.png" alt="стандарты и качество" width="362"></div>
+                              <div class="hero__magazines-card"><img src="images/hero/hero-slider-02.png" alt="методы менеджмента качества" width="362"></div>
+                              <div class="hero__magazines-card"><img src="images/hero/hero-slider-03.png" alt="контроль качества и продукции" width="362"></div>
+                              <div class="hero__magazines-card"><img src="images/hero/hero-slider-04.png" alt="мир измерений" width="362"></div>
+                              <div class="hero__magazines-card"><img src="images/hero/hero-slider-05.png" alt="business excellence" width="362"></div>
+                              <div class="hero__magazines-card"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="362"></div>
+                              <div class="hero__magazines-card"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="362"></div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <div class="swiper-bullets hero__bullets"></div>
                 </div>
-                <div class="swiper-bullets js-hero-bullets"></div>
               </div>
             </div>
           </div>
@@ -169,27 +191,33 @@
               <div class="numbers__inner">
                 <ul class="numbers__list numbers__list--3">
                   <li class="numbers__item">
-                    <div class="numbers__num">1 500 +</div>
+                    <div class="numbers__num" data-nums><span data-value="1 500"></span>+
+                    </div>
                     <div class="numbers__text">научных и <br> популярных статей <br> ежегодно</div>
                   </li>
                   <li class="numbers__item">
-                    <div class="numbers__num">150 000 +</div>
+                    <div class="numbers__num" data-nums><span data-value="150 000"></span>+
+                    </div>
                     <div class="numbers__text">читателей <br> ежемесячно</div>
                   </li>
                   <li class="numbers__item">
-                    <div class="numbers__num">27</div>
+                    <div class="numbers__num" data-nums><span data-value="27"></span>
+                    </div>
                     <div class="numbers__text">профессиональных <br> наград</div>
                   </li>
                   <li class="numbers__item">
-                    <div class="numbers__num">30+</div>
+                    <div class="numbers__num" data-nums><span data-value="30"></span>+
+                    </div>
                     <div class="numbers__text">лет на рынке <br> профессиональной <br> прессы</div>
                   </li>
                   <li class="numbers__item">
-                    <div class="numbers__num">50+</div>
+                    <div class="numbers__num" data-nums><span data-value="50"></span>+
+                    </div>
                     <div class="numbers__text">профессиональных <br> сотрудников</div>
                   </li>
                   <li class="numbers__item">
-                    <div class="numbers__num">2 500 +</div>
+                    <div class="numbers__num" data-nums><span data-value="2 500"></span>+
+                    </div>
                     <div class="numbers__text">авторов и экспертов со всего <br> мира</div>
                   </li>
                 </ul>
@@ -234,11 +262,11 @@
               <div class="history__inner">
                 <div class="history__row">
                   <h2 class="history__title">история компании</h2>
-                  <div class="history__dates"><a class="history__dates-btn history__dates-btn--active" href="#">1993</a><a class="history__dates-btn" href="#">1994</a><a class="history__dates-btn" href="#">1996</a><a class="history__dates-btn" href="#">1999</a><a class="history__dates-btn" href="#">2001</a><a class="history__dates-btn" href="#">2003</a><a class="history__dates-btn" href="#">2004</a><a class="history__dates-btn" href="#">2007</a><a class="history__dates-btn" href="#">2012</a><a class="history__dates-btn" href="#">2013</a><a class="history__dates-btn" href="#">2015</a><a class="history__dates-btn" href="#">2017</a><a class="history__dates-btn" href="#">2023</a>
+                  <div class="history__dates"><a class="history__dates-btn is-active" href="#">1993</a><a class="history__dates-btn" href="#">1994</a><a class="history__dates-btn" href="#">1996</a><a class="history__dates-btn" href="#">1999</a><a class="history__dates-btn" href="#">2001</a><a class="history__dates-btn" href="#">2003</a><a class="history__dates-btn" href="#">2004</a><a class="history__dates-btn" href="#">2007</a><a class="history__dates-btn" href="#">2012</a><a class="history__dates-btn" href="#">2013</a><a class="history__dates-btn" href="#">2015</a><a class="history__dates-btn" href="#">2017</a><a class="history__dates-btn" href="#">2023</a>
                   </div>
                 </div>
                 <div class="history__main">
-                  <div class="history__swiper js-history-swiper">
+                  <div class="history__swiper">
                     <div class="swiper-wrapper">
                       <div class="history__slide swiper-slide">
                         <div class="history__row">
@@ -360,9 +388,9 @@
                     </div>
                     <div class="history__controls">
                       <div class="swiper-controls">
-                        <button class="js-history-prev swiper-button-prev"></button>
-                        <div class="swiper-pagination js-history-pagination"></div>
-                        <button class="js-history-next swiper-button-next"></button>
+                        <button class="history__prev swiper-button-prev"></button>
+                        <div class="swiper-pagination history__pagination"></div>
+                        <button class="history__next swiper-button-next"></button>
                       </div>
                     </div>
                   </div>
@@ -372,10 +400,23 @@
           </div>
         </div>
       </section>
+      <div class="video">
+        <div class="video__inner container">
+          <div class="video__content">
+            <iframe src="https://vk.com/video_ext.php?oid=-44296658&amp;id=456239019&amp;hd=2&amp;" width="853" height="480"></iframe>
+          </div>
+        </div>
+      </div>
       <section class="section section--organization">
         <div class="section__wrapper">
-          <div class="organization">
-            <div class="bg-image"><img src="images/organization/organization-bg.jpg" alt="фоновая картинка" width="1920" height="800"></div>
+          <div class="organization organization--secondary">
+            <div class="bg-image">
+              <picture>
+                <source srcset="images/organization/organization-bg-mob.webp" type="image/webp" media="(max-width: 575px)">
+                <source srcset="images/organization/organization-bg-mob.jpg" media="(max-width: 575px)">
+                <source srcset="images/organization/organization-bg.webp"><img src="images/organization/organization-bg.jpg" alt="фоновая картинка" width="1920" height="800">
+              </picture>
+            </div>
             <div class="organization__inner container">
               <div class="organization__row">
                 <div class="organization__left">
@@ -560,7 +601,7 @@
                     <div class="contacts__map map"></div>
                   </div>
                   <div class="contacts__right">
-                    <form class="contacts__form form" action="#">
+                    <form class="contacts__form form" action="#" name="form-callback">
                       <div class="form__header">
                         <h2 class="form__title">Остались вопросы?</h2>
                         <p class="form__text">Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.</p>
@@ -569,13 +610,13 @@
                         <div class="form__top">
                           <div class="form__box">
                             <label class="form__label form__label--half">
-                              <input class="form__input" type="text" placeholder="Имя">
+                              <input class="form__input" type="text" placeholder="Имя" name="form-name">
                             </label>
                             <label class="form__label form__label--half">
                               <input class="form__input" type="text" placeholder="Фамилия">
                             </label>
                             <label class="form__label">
-                              <input class="form__input" type="email" placeholder="E-mail">
+                              <input class="form__input" type="email" placeholder="E-mail" name="form-email">
                             </label>
                             <label class="form__label">
                               <textarea class="form__textarea" placeholder="Текст сообщения"></textarea>
@@ -585,7 +626,7 @@
                         <div class="form__middle">
                           <div class="form__agree">
                             <label class="form__agree-label">
-                              <input type="checkbox"><span class="form__agree-checkbox"></span><span class="form__agree-text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
+                              <input type="checkbox" name="form-agree" required><span class="form__agree-checkbox"></span><span class="form__agree-text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
                             </label>
                           </div>
                         </div>

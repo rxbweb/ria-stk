@@ -20,6 +20,14 @@
     <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -30,7 +38,7 @@
             <div class="header__manage">
               <div class="header__search search">
                 <button class="search__button"><i class="icon icon-loop"></i></button>
-                <input class="search__input" type="text" placeholder="Искать....">
+                <input class="search__input" type="seacrh" placeholder="Искать....">
                 <div class="search__select">
                   <div class="select">
                     <button class="select__active"><span>Везде</span></button>
@@ -46,7 +54,7 @@
                 </div>
               </div>
               <div class="select select--lang">
-                <div class="select__active"><span class="select__active-text">RU</span></div>
+                <div class="select__active"><span>RU</span></div>
                 <div class="select__list">
                   <button class="select__item is-active">RU</button>
                   <button class="select__item">EN</button>
@@ -79,7 +87,9 @@
             </nav>
             <button class="header__burger"><img src="images/icons/burger.svg" alt="открыть меню" width="24" height="11"></button>
           </div>
-          <div class="header__wrapper"></div>
+          <div class="header__box">
+            <ul class="header__box-nav"></ul>
+          </div>
         </div>
       </div>
     </header>
@@ -89,7 +99,7 @@
           <div class="menu__manage">
             <div class="menu__search search">
               <button class="search__button"><i class="icon icon-loop"></i></button>
-              <input class="search__input" type="text" placeholder="Искать....">
+              <input class="search__input" type="seacrh" placeholder="Искать....">
               <div class="search__select">
                 <div class="select">
                   <button class="select__active">Везде</button>
@@ -105,7 +115,7 @@
               </div>
             </div>
             <div class="select select--lang">
-              <div class="select__active"><span class="select__active-text">RU</span></div>
+              <div class="select__active"><span>RU</span></div>
               <div class="select__list">
                 <button class="select__item is-active">RU</button>
                 <button class="select__item">EN</button>
@@ -137,7 +147,7 @@
       <section class="section section--hero section--padding-none">
         <div class="section__wrapper">
           <div class="section__content">
-            <div class="hero hero--slider">
+            <div class="hero">
               <div class="bg-image"><img src="images/hero/hero-bg.jpg" alt="фоновая картинка" width="1920" height="750"></div>
               <div class="hero__inner container">
                 <div class="hero__slider">
@@ -168,27 +178,27 @@
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-03.png" alt="контроль качества и продукции" width="396" height="521">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-03.png" alt="контроль качества и продукции" width="396" height="512">
                                         <div class="hero__books-name">контроль качества и продукции</div>
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-04.png" alt="мир измерений" width="396" height="517">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-04.png" alt="мир измерений" width="396" height="512">
                                         <div class="hero__books-name">мир измерений</div>
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-05.png" alt="business excellence" width="396" height="518">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-05.png" alt="business excellence" width="396" height="512">
                                         <div class="hero__books-name">business excellence</div>
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="518">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="512">
                                         <div class="hero__books-name">МКМ</div>
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="518">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="512">
                                         <div class="hero__books-name">МКМ</div>
                                       </div>
                                     </div>
@@ -231,27 +241,27 @@
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-03.png" alt="контроль качества и продукции" width="396" height="521">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-03.png" alt="контроль качества и продукции" width="396" height="512">
                                         <div class="hero__books-name">контроль качества и продукции</div>
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-04.png" alt="мир измерений" width="396" height="517">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-04.png" alt="мир измерений" width="396" height="512">
                                         <div class="hero__books-name">мир измерений</div>
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-05.png" alt="business excellence" width="396" height="518">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-05.png" alt="business excellence" width="396" height="512">
                                         <div class="hero__books-name">business excellence</div>
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="518">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="512">
                                         <div class="hero__books-name">МКМ</div>
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="518">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="512">
                                         <div class="hero__books-name">МКМ</div>
                                       </div>
                                     </div>
@@ -294,27 +304,27 @@
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-03.png" alt="контроль качества и продукции" width="396" height="521">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-03.png" alt="контроль качества и продукции" width="396" height="512">
                                         <div class="hero__books-name">контроль качества и продукции</div>
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-04.png" alt="мир измерений" width="396" height="517">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-04.png" alt="мир измерений" width="396" height="512">
                                         <div class="hero__books-name">мир измерений</div>
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-05.png" alt="business excellence" width="396" height="518">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-05.png" alt="business excellence" width="396" height="512">
                                         <div class="hero__books-name">business excellence</div>
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="518">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="512">
                                         <div class="hero__books-name">МКМ</div>
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="518">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="512">
                                         <div class="hero__books-name">МКМ</div>
                                       </div>
                                     </div>
@@ -357,27 +367,27 @@
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-03.png" alt="контроль качества и продукции" width="396" height="521">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-03.png" alt="контроль качества и продукции" width="396" height="512">
                                         <div class="hero__books-name">контроль качества и продукции</div>
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-04.png" alt="мир измерений" width="396" height="517">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-04.png" alt="мир измерений" width="396" height="512">
                                         <div class="hero__books-name">мир измерений</div>
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-05.png" alt="business excellence" width="396" height="518">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-05.png" alt="business excellence" width="396" height="512">
                                         <div class="hero__books-name">business excellence</div>
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="518">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="512">
                                         <div class="hero__books-name">МКМ</div>
                                       </div>
                                     </div>
                                     <div class="swiper-slide hero__books-slide">
-                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="518">
+                                      <div class="hero__books-figure"><img src="images/hero/hero-slider-06.png" alt="МКМ" width="396" height="512">
                                         <div class="hero__books-name">МКМ</div>
                                       </div>
                                     </div>
@@ -781,7 +791,7 @@
               <div class="bg-image"><img src="images/dispatch/dispatch-bg.jpg" alt="фоновая картинка" width="1920" height="750"></div>
               <div class="dispatch__inner container">
                 <div class="dispatch__row">
-                  <form class="dispatch__form form" action="#">
+                  <form class="dispatch__form form" action="#" name="form-callback">
                     <div class="form__header">
                       <h2 class="form__title">Газета Quality News — качественные новости каждый четверг</h2>
                       <p class="form__text">Электронная рассылка «Газета Quality News» — бесплатный новостной дайджест, результат ежедневного мониторинга деловой жизни профессионального сообщества. Подписывайтесь и будьте в курсе новостей из мира качества!</p>
@@ -790,20 +800,20 @@
                       <div class="form__top">
                         <div class="form__box">
                           <label class="form__label form__label--half">
-                            <input class="form__input" type="text" placeholder="Имя">
+                            <input class="form__input" type="text" placeholder="Имя" name="form-name">
                           </label>
                           <label class="form__label form__label--half">
                             <input class="form__input" type="text" placeholder="Фамилия">
                           </label>
                           <label class="form__label">
-                            <input class="form__input" type="email" placeholder="E-mail">
+                            <input class="form__input" type="email" placeholder="E-mail" name="form-email">
                           </label>
                         </div>
                       </div>
                       <div class="form__middle">
                         <div class="form__agree">
                           <label class="form__agree-label">
-                            <input type="checkbox"><span class="form__agree-checkbox"></span><span class="form__agree-text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
+                            <input type="checkbox" name="form-agree" required><span class="form__agree-checkbox"></span><span class="form__agree-text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
                           </label>
                         </div>
                       </div>
@@ -961,13 +971,13 @@
                     <ol class="listing__list">
                       <li class="listing__item"><a class="listing__box" href="#">
                           <h3 class="listing__name">Электронная библиотека</h3>
-                          <div class="listing__img"><img src="images/materials/materials-01.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                          <div class="listing__img"><img src="images/listing/listing-materials-01.jpg" alt="картинка" width="350" height="222"></div></a></li>
                       <li class="listing__item"><a class="listing__box" href="#">
                           <h3 class="listing__name">Тематические подборки</h3>
-                          <div class="listing__img"><img src="images/materials/materials-02.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                          <div class="listing__img"><img src="images/listing/listing-materials-02.jpg" alt="картинка" width="350" height="222"></div></a></li>
                       <li class="listing__item"><a class="listing__box" href="#">
                           <h3 class="listing__name">Глоссарий</h3>
-                          <div class="listing__img"><img src="images/materials/materials-03.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                          <div class="listing__img"><img src="images/listing/listing-materials-03.jpg" alt="картинка" width="350" height="222"></div></a></li>
                     </ol>
                   </div>
                 </div>
@@ -1126,10 +1136,10 @@
                       <ol class="listing__list listing__list--2">
                         <li class="listing__item"><a class="listing__box" href="#">
                             <h3 class="listing__name">Реклама в журналах</h3>
-                            <div class="listing__img"><img src="images/materials/materials-01.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                            <div class="listing__img"><img src="images/listing/listing-materials-01.jpg" alt="картинка" width="350" height="222"></div></a></li>
                         <li class="listing__item"><a class="listing__box" href="#">
                             <h3 class="listing__name">Реклама на сайте</h3>
-                            <div class="listing__img"><img src="images/materials/materials-02.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                            <div class="listing__img"><img src="images/listing/listing-materials-02.jpg" alt="картинка" width="350" height="222"></div></a></li>
                       </ol>
                     </div>
                   </div>
@@ -1141,8 +1151,14 @@
       </section>
       <section class="section section--padding-none section--organization">
         <div class="section__wrapper">
-          <div class="organization">
-            <div class="bg-image"><img src="images/organization/organization-bg.jpg" alt="фоновая картинка" width="1920" height="800"></div>
+          <div class="organization organization--secondary">
+            <div class="bg-image">
+              <picture>
+                <source srcset="images/organization/organization-bg-mob.webp" type="image/webp" media="(max-width: 575px)">
+                <source srcset="images/organization/organization-bg-mob.jpg" media="(max-width: 575px)">
+                <source srcset="images/organization/organization-bg.webp"><img src="images/organization/organization-bg.jpg" alt="фоновая картинка" width="1920" height="800">
+              </picture>
+            </div>
             <div class="organization__inner container">
               <div class="organization__row">
                 <div class="organization__left">
@@ -1231,7 +1247,7 @@
                     <div class="contacts__map map"></div>
                   </div>
                   <div class="contacts__right">
-                    <form class="contacts__form form" action="#">
+                    <form class="contacts__form form" action="#" name="form-callback">
                       <div class="form__header">
                         <h2 class="form__title">Остались вопросы?</h2>
                         <p class="form__text">Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.</p>
@@ -1240,13 +1256,13 @@
                         <div class="form__top">
                           <div class="form__box">
                             <label class="form__label form__label--half">
-                              <input class="form__input" type="text" placeholder="Имя">
+                              <input class="form__input" type="text" placeholder="Имя" name="form-name">
                             </label>
                             <label class="form__label form__label--half">
                               <input class="form__input" type="text" placeholder="Фамилия">
                             </label>
                             <label class="form__label">
-                              <input class="form__input" type="email" placeholder="E-mail">
+                              <input class="form__input" type="email" placeholder="E-mail" name="form-email">
                             </label>
                             <label class="form__label">
                               <textarea class="form__textarea" placeholder="Текст сообщения"></textarea>
@@ -1256,7 +1272,7 @@
                         <div class="form__middle">
                           <div class="form__agree">
                             <label class="form__agree-label">
-                              <input type="checkbox"><span class="form__agree-checkbox"></span><span class="form__agree-text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
+                              <input type="checkbox" name="form-agree" required><span class="form__agree-checkbox"></span><span class="form__agree-text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
                             </label>
                           </div>
                         </div>

@@ -1,11 +1,5 @@
 "use strict";
 
-$(document).ready(function () {
-  // Your code here
-});
-
-// Your functions here
-
 new Swiper(".js-partners-swiper", {
   slidesPerView: 1,
   spaceBetween: 10,
@@ -67,7 +61,9 @@ new Swiper(".js-projects-swiper", {
     }
   }
 });
-new Swiper(".js-history-swiper", {
+
+// Инициализация Swiper
+var swiper = new Swiper(".history__swiper", {
   slidesPerView: 1,
   spaceBetween: 20,
   effect: "fade",
@@ -76,14 +72,56 @@ new Swiper(".js-history-swiper", {
     crossFade: true
   },
   navigation: {
-    prevEl: ".js-history-prev",
-    nextEl: ".js-history-next"
+    prevEl: ".history__prev",
+    nextEl: ".history__next"
   },
   pagination: {
-    el: ".js-history-pagination",
+    el: ".history__pagination",
     clickable: true
+  },
+  on: {
+    // При изменении активного слайда
+    slideChange: function slideChange() {
+      syncActiveButton(swiper.activeIndex);
+    }
   }
 });
+
+// Синхронизация кнопок и слайдов
+var dateButtons = document.querySelectorAll(".history__dates-btn");
+
+// Клик на кнопку - смена слайда
+dateButtons.forEach(function (button, index) {
+  button.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Устанавливаем активный слайд
+    swiper.slideTo(index);
+
+    // Удаляем класс is-active у всех кнопок и добавляем только нужной
+    setActiveButton(index);
+  });
+});
+
+// Функция обновления активной кнопки при смене слайда
+function syncActiveButton(activeIndex) {
+  dateButtons.forEach(function (button) {
+    return button.classList.remove("is-active");
+  }); // Удаляем класс у всех
+  if (dateButtons[activeIndex]) {
+    dateButtons[activeIndex].classList.add("is-active"); // Добавляем только нужной
+  }
+}
+
+// Установка активной кнопки вручную
+function setActiveButton(index) {
+  dateButtons.forEach(function (button) {
+    return button.classList.remove("is-active");
+  }); // Удаляем класс у всех
+  if (dateButtons[index]) {
+    dateButtons[index].classList.add("is-active"); // Добавляем только нужной
+  }
+}
 new Swiper(".hero__slider", {
   slidesPerView: 1,
   spaceBetween: 20,
@@ -214,124 +252,317 @@ new Swiper(".books__swiper-slider", {
     nextEl: ".js-books-next"
   }
 });
-function init() {
-  var mapElements = document.querySelectorAll('.map');
-  if (mapElements.length === 0) {
-    return;
-  }
-  var markers = [{
-    lat: 55.708495,
-    lon: 37.656412,
-    title: 'Метка 1'
-  }];
-  if (!markers || markers.length === 0) {
-    console.log('Объект "markers" не найден или пуст.');
-    return;
-  }
-  mapElements.forEach(function (mapElement) {
-    var map = new ymaps.Map(mapElement, {
-      center: [55.708495, 37.656412],
-      zoom: 18
-    });
-    markers.forEach(function (marker) {
-      var placemark = new ymaps.Placemark([marker.lat, marker.lon], {
-        balloonContent: marker.title
+var isMobile = window.matchMedia("(max-width: 768px)").matches;
+var nums = lozad('[data-nums]', {
+  rootMargin: isMobile ? '-20px 0px' : '-100px 0px',
+  threshold: 0.3,
+  loaded: function loaded(el) {
+    $(el).find('[data-value]').each(function () {
+      var text = $(this).attr('data-value').replace(/\s/g, ''); // Убираем пробелы из атрибута
+
+      $(this).prop('Counter', 0).animate({
+        Counter: text
+      }, {
+        duration: 1100,
+        easing: 'swing',
+        step: function step(now) {
+          // Форматирование числа с пробелами
+          var formattedNumber = Math.ceil(now).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+          $(this).text(formattedNumber); // Устанавливаем отформатированное значение
+        }
       });
-      map.geoObjects.add(placemark);
     });
-  });
-}
-if (typeof ymaps !== 'undefined') {
-  ymaps.ready(init);
-} else {
-  console.log('Яндекс карты не подключены.');
-}
-document.addEventListener('DOMContentLoaded', function () {
-  var navList = document.querySelector('.header__nav-list');
-  var wrapper = document.querySelector('.header__wrapper');
-  if (!navList || !wrapper) {
-    return;
   }
-  var navItems = Array.from(navList.querySelectorAll('.header__nav-item'));
-  if (navItems.length === 0) {
-    return;
-  }
-  function checkOverflow() {
-    while (wrapper.firstChild) {
-      navList.appendChild(wrapper.firstChild);
-    }
-    var overflow = false;
-    var currentItems = Array.from(navList.querySelectorAll('.header__nav-item'));
-    currentItems.forEach(function (item) {
-      if (navList.scrollWidth > navList.clientWidth) {
-        overflow = true;
-        wrapper.appendChild(item);
-      }
-    });
-    if (overflow) {
-      // wrapper.style.display = 'block';
-    } else {
-      wrapper.style.display = 'none';
-    }
-  }
-  checkOverflow();
-  window.addEventListener('resize', checkOverflow);
 });
-$(document).ready(function () {
-  // $(window).on('scroll', function() {
-  //    const organization = $('.organization');
-  //    const scrollTop = $(window).scrollTop();
-  //    const elementOffset = organization.offset().top;
-  //    const distance = elementOffset - scrollTop;
+nums.observe();
+var phoneMaskModule = {
+  init: function init() {
+    var $phoneElements = $('[data-name="phone"]');
+    if ($phoneElements.length === 0) {
+      console.warn('Нет элементов с data-name="phone" на странице.');
+      return;
+    }
+    this.applyMasks($phoneElements);
+  },
+  applyMasks: function applyMasks($elements) {
+    $elements.each(function () {
+      var $element = $(this);
+      if (!$element.length) {
+        console.warn('Элемент с data-name="phone" не найден.');
+        return;
+      }
 
-  //    if (distance < $(window).height() && distance >= 0) {
-  //        organization.addClass('is-active');
-  //    } else {
-  //        organization.removeClass('is-active');
-  //    }
-  // });
+      // Применение маски для каждого элемента
+      IMask($element[0], {
+        mask: '+{7}(000)000-00-00'
+      });
+    });
+  }
+};
+var mapModule = {
+  init: function init() {
+    if (typeof ymaps === 'undefined') {
+      console.log('Яндекс карты не подключены.');
+      return;
+    }
+    ymaps.ready(this.initializeMaps);
+  },
+  initializeMaps: function initializeMaps() {
+    var mapElements = document.querySelectorAll('.map');
+    if (!mapElements.length) {
+      console.warn('Нет элементов с классом .map на странице.');
+      return;
+    }
+    var markers = [{
+      lat: 55.708495,
+      lon: 37.656412,
+      title: 'Метка 1'
+    }];
+    if (!markers || markers.length === 0) {
+      console.warn('Объект "markers" не найден или пуст.');
+      return;
+    }
+    mapElements.forEach(function (mapElement, index) {
+      if (!mapElement) {
+        console.warn("\u042D\u043B\u0435\u043C\u0435\u043D\u0442 \u043A\u0430\u0440\u0442\u044B \u0441 \u0438\u043D\u0434\u0435\u043A\u0441\u043E\u043C ".concat(index, " \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D."));
+        return;
+      }
+      var map = new ymaps.Map(mapElement, {
+        center: [55.708495, 37.656412],
+        zoom: 18
+      });
+      markers.forEach(function (marker, markerIndex) {
+        if (!marker.lat || !marker.lon) {
+          console.warn("\u041C\u0430\u0440\u043A\u0435\u0440 \u0441 \u0438\u043D\u0434\u0435\u043A\u0441\u043E\u043C ".concat(markerIndex, " \u0438\u043C\u0435\u0435\u0442 \u043D\u0435\u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u044B\u0435 \u043A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B."));
+          return;
+        }
+        var placemark = new ymaps.Placemark([marker.lat, marker.lon], {
+          balloonContent: marker.title
+        });
+        map.geoObjects.add(placemark);
+      });
+    });
+  }
+};
+var navModule = {
+  init: function init() {
+    var $navList = $('.header__nav-list');
+    var $boxNav = $('.header__box-nav');
+    var $headerBox = $boxNav.closest('.header__box'); // Ищем контейнер header__box
+    var $burger = $('.header__burger'); // Находим кнопку бургер
 
-  $('.select__active').on('click', function (e) {
+    if (!$navList.length || !$boxNav.length || !$burger.length) {
+      return;
+    }
+    this.navList = $navList;
+    this.boxNav = $boxNav;
+    this.headerBox = $headerBox;
+    this.burger = $burger;
+    $(window).on('resize', this.checkOverflow.bind(this));
+    $burger.on('click', this.toggleBoxActive.bind(this)); // Добавляем обработчик клика по бургеру
+
+    this.checkOverflow();
+  },
+  checkOverflow: function checkOverflow() {
+    if (!this.navList.length || !this.boxNav.length) {
+      return;
+    }
+
+    // Возвращаем все элементы из boxNav обратно в navList
+    while (this.boxNav[0].firstChild) {
+      this.navList.append(this.boxNav[0].firstChild);
+    }
+
+    // Перемещаем элементы, которые не помещаются
+    var navListItems = Array.from(this.navList.children('.header__nav-item'));
+    for (var i = navListItems.length - 1; i >= 0; i--) {
+      if (this.navList[0].scrollWidth > this.navList[0].clientWidth) {
+        // Убираем последний элемент из navList и добавляем его в начало boxNav
+        var item = navListItems[i];
+        this.boxNav.prepend(item);
+      } else {
+        break;
+      }
+    }
+  },
+  toggleBoxActive: function toggleBoxActive() {
+    // Проверяем, есть ли элементы внутри boxNav
+    if (this.boxNav.children().length > 0) {
+      this.headerBox.toggleClass('is-active'); // Добавляем класс на header__box
+      this.burger.toggleClass('is-active'); // Добавляем класс на header__burger
+    } else {
+      this.headerBox.removeClass('is-active'); // Убираем класс с header__box
+      this.burger.removeClass('is-active'); // Убираем класс с header__burger
+    }
+  }
+};
+var selectModule = {
+  init: function init() {
+    this.initSelectEvents();
+    this.initMenuToggle();
+  },
+  initSelectEvents: function initSelectEvents() {
+    var $selectActive = $('.select__active');
+    if (!$selectActive.length) {
+      return;
+    }
+    $selectActive.on('click', this.toggleSelectList);
+    var $selectItems = $('.select__item');
+    if (!$selectItems.length) {
+      return;
+    }
+    $selectItems.on('click', this.selectItem);
+    $(document).on('click', this.closeSelectList);
+  },
+  toggleSelectList: function toggleSelectList(e) {
     e.preventDefault();
-    $(this).next('.select__list').toggleClass('is-active');
-  });
-  $('.select__item').on('click', function (e) {
+    var $button = $(e.currentTarget);
+    var $selectList = $button.next('.select__list');
+    if (!$selectList.length) {
+      return;
+    }
+    $selectList.toggleClass('is-active');
+  },
+  selectItem: function selectItem(e) {
     e.preventDefault();
-    var selectedText = $(this).text();
-    var $selectList = $(this).closest('.select__list');
+    var $item = $(e.currentTarget);
+    var selectedText = $item.text();
+    var $selectList = $item.closest('.select__list');
     var $selectActive = $selectList.prev('.select__active');
-    // Удаляем класс is-active у всех элементов .select__item в текущем списке
+    if (!$selectActive.length) {
+      return;
+    }
+    if (!$selectList.length) {
+      return;
+    }
     $selectList.find('.select__item').removeClass('is-active');
-    // Добавляем класс is-active кликнутому элементу
-    $(this).addClass('is-active');
-    // Обновляем текст в .select__active
-    $selectActive.text(selectedText);
-    // Скрываем список
+    $item.addClass('is-active');
+    $selectActive.html("<span>".concat(selectedText, "</span>"));
     $selectList.removeClass('is-active');
-  });
-  $(document).on('click', function (e) {
+  },
+  closeSelectList: function closeSelectList(e) {
     if (!$(e.target).closest('.select').length) {
       $('.select__list').removeClass('is-active');
     }
-  });
-  $('.header__toggle').on('click', function (e) {
+  },
+  initMenuToggle: function initMenuToggle() {
+    var $menuToggle = $('.header__toggle');
+    if (!$menuToggle.length) {
+      return;
+    }
+    $menuToggle.on('click', this.toggleMenu);
+  },
+  toggleMenu: function toggleMenu(e) {
     e.preventDefault();
-    $(this).toggleClass('is-active');
-    $('.menu').toggleClass('is-active');
-    $('body').toggleClass('no-scroll');
-  });
-  $('.accordion__button').on('click', function (e) {
+    var $toggleButton = $(e.currentTarget);
+    var $menu = $('.menu');
+    var $body = $('body');
+    if (!$menu.length) {
+      return;
+    }
+    $toggleButton.toggleClass('is-active');
+    $menu.toggleClass('is-active');
+    $body.toggleClass('no-scroll');
+  }
+};
+var accordionModule = {
+  init: function init() {
+    this.initEvents();
+  },
+  initEvents: function initEvents() {
+    var $buttons = $('.accordion__button');
+    if (!$buttons.length) {
+      return;
+    }
+    $buttons.on('click', this.toggleAccordion);
+  },
+  toggleAccordion: function toggleAccordion(e) {
+    if (!e || !e.currentTarget) {
+      return;
+    }
     e.preventDefault();
-    var accordionWrapper = $(this).next('.accordion__wrapper');
-    var accordionButton = $(this).attr('data-accordion');
-    var accordionImg = $('.accordion__pic[data-img="' + accordionButton + '"]');
-    if (accordionImg.length) {
+    var $button = $(e.currentTarget);
+    if (!$button.hasClass('accordion__button')) {
+      return;
+    }
+    var $accordionWrapper = $button.next('.accordion__wrapper');
+    var accordionButton = $button.attr('data-accordion');
+    if (!accordionButton) {
+      return;
+    }
+    var $accordionImg = $('.accordion__pic[data-img="' + accordionButton + '"]');
+    if ($accordionImg.length) {
       $('.accordion__pic').not('[data-img="' + accordionButton + '"]').removeClass('is-active');
-      accordionImg.toggleClass('is-active');
+      $accordionImg.toggleClass('is-active');
     }
-    if (accordionWrapper.length) {
-      accordionWrapper.slideToggle(300);
-      $(this).parent('.accordion__item').toggleClass('is-active');
+    if ($accordionWrapper.length) {
+      if ($accordionWrapper.is(':animated')) {
+        return;
+      }
+      $accordionWrapper.slideToggle(300);
+      $button.parent('.accordion__item').toggleClass('is-active');
+    }
+  }
+};
+
+// const lozadModule = {
+//    init() {
+//       if (typeof lozad === 'undefined') {
+//          console.warn('Библиотека lozad не подключена.');
+//          return;
+//       }
+
+//       const $lozadElements = $('.lozad');
+//       if ($lozadElements.length === 0) {
+//          console.warn('Нет элементов с классом .lozad на странице.');
+//          return;
+//       }
+
+//       this.initObserver($lozadElements);
+//    },
+
+//    initObserver($elements) {
+//       // Убедитесь, что передаем строку селектора для lozad
+//       const observer = lozad($elements.get(0), { // передаем только первый элемент, если их несколько
+//          rootMargin: '10px 0px',
+//          threshold: 0.3,
+//          loaded: function(el) {
+//             // Когда изображение загружено, убираем прелоадер
+//             const $el = $(el);
+//             $el.removeClass('lozad');  // Убираем класс lozad
+//             $el.css('background-image', 'none'); // Убираем фон-прелоадер
+//          }
+//       });
+
+//       observer.observe();
+//    }
+// };
+
+var observer = lozad('.lozad', {
+  rootMargin: '10px 0px',
+  threshold: 0.3
+});
+observer.observe();
+$("form[name='form-callback']").each(function () {
+  $(this).validate({
+    rules: {
+      "form-name": "required",
+      "form-email": "required",
+      "form-agree": "required"
+    },
+    messages: {
+      "form-name": "Обязательное поле",
+      "form-email": "Обязательное поле",
+      "form-agree": "Обязательное поле"
     }
   });
+});
+$(function () {
+  // numsModule.init();
+  // lozadModule.init();
+  phoneMaskModule.init();
+  mapModule.init();
+  selectModule.init();
+  accordionModule.init();
+  navModule.init();
 });

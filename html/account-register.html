@@ -20,6 +20,14 @@
     <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -30,7 +38,7 @@
             <div class="header__manage">
               <div class="header__search search">
                 <button class="search__button"><i class="icon icon-loop"></i></button>
-                <input class="search__input" type="text" placeholder="Искать....">
+                <input class="search__input" type="seacrh" placeholder="Искать....">
                 <div class="search__select">
                   <div class="select">
                     <button class="select__active"><span>Везде</span></button>
@@ -46,7 +54,7 @@
                 </div>
               </div>
               <div class="select select--lang">
-                <div class="select__active"><span class="select__active-text">RU</span></div>
+                <div class="select__active"><span>RU</span></div>
                 <div class="select__list">
                   <button class="select__item is-active">RU</button>
                   <button class="select__item">EN</button>
@@ -79,7 +87,9 @@
             </nav>
             <button class="header__burger"><img src="images/icons/burger.svg" alt="открыть меню" width="24" height="11"></button>
           </div>
-          <div class="header__wrapper"></div>
+          <div class="header__box">
+            <ul class="header__box-nav"></ul>
+          </div>
         </div>
       </div>
     </header>
@@ -89,7 +99,7 @@
           <div class="menu__manage">
             <div class="menu__search search">
               <button class="search__button"><i class="icon icon-loop"></i></button>
-              <input class="search__input" type="text" placeholder="Искать....">
+              <input class="search__input" type="seacrh" placeholder="Искать....">
               <div class="search__select">
                 <div class="select">
                   <button class="select__active">Везде</button>
@@ -105,7 +115,7 @@
               </div>
             </div>
             <div class="select select--lang">
-              <div class="select__active"><span class="select__active-text">RU</span></div>
+              <div class="select__active"><span>RU</span></div>
               <div class="select__list">
                 <button class="select__item is-active">RU</button>
                 <button class="select__item">EN</button>

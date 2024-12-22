@@ -20,6 +20,14 @@
     <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -30,7 +38,7 @@
             <div class="header__manage">
               <div class="header__search search">
                 <button class="search__button"><i class="icon icon-loop"></i></button>
-                <input class="search__input" type="text" placeholder="Искать....">
+                <input class="search__input" type="seacrh" placeholder="Искать....">
                 <div class="search__select">
                   <div class="select">
                     <button class="select__active"><span>Везде</span></button>
@@ -46,7 +54,7 @@
                 </div>
               </div>
               <div class="select select--lang">
-                <div class="select__active"><span class="select__active-text">RU</span></div>
+                <div class="select__active"><span>RU</span></div>
                 <div class="select__list">
                   <button class="select__item is-active">RU</button>
                   <button class="select__item">EN</button>
@@ -79,7 +87,9 @@
             </nav>
             <button class="header__burger"><img src="images/icons/burger.svg" alt="открыть меню" width="24" height="11"></button>
           </div>
-          <div class="header__wrapper"></div>
+          <div class="header__box">
+            <ul class="header__box-nav"></ul>
+          </div>
         </div>
       </div>
     </header>
@@ -89,7 +99,7 @@
           <div class="menu__manage">
             <div class="menu__search search">
               <button class="search__button"><i class="icon icon-loop"></i></button>
-              <input class="search__input" type="text" placeholder="Искать....">
+              <input class="search__input" type="seacrh" placeholder="Искать....">
               <div class="search__select">
                 <div class="select">
                   <button class="select__active">Везде</button>
@@ -105,7 +115,7 @@
               </div>
             </div>
             <div class="select select--lang">
-              <div class="select__active"><span class="select__active-text">RU</span></div>
+              <div class="select__active"><span>RU</span></div>
               <div class="select__list">
                 <button class="select__item is-active">RU</button>
                 <button class="select__item">EN</button>
@@ -235,241 +245,281 @@
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-01.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-01.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <p class="books__text">2022 год</p>
                           <h3 class="books__name">стандарты и качество</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-02.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-02.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <p class="books__text">2022 год</p>
                           <h3 class="books__name">Методы менеджмента качества</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-03.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-03.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <p class="books__text">2022 год</p>
                           <h3 class="books__name">Контроль качества продукции</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-04.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-04.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
-                          <p class="books__text">2022 год</p>
+                          <p class="books__text">2024 год</p>
                           <h3 class="books__name">МИР измерений</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-05.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-05.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <p class="books__text">2022 год</p>
                           <h3 class="books__name">Business Excellence</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-06.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-06.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <p class="books__text">2022 год</p>
                           <h3 class="books__name">Менеджмент качества в медицине</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-07.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-07.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <p class="books__text">2022 год</p>
                           <h3 class="books__name">стандарты и качество</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-08.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-08.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
-                          <p class="books__text">2022 год</p>
+                          <p class="books__text">2024 год</p>
                           <h3 class="books__name">стандарты и качество</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-09.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-09.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
-                          <p class="books__text">2022 год</p>
+                          <p class="books__text">2023 год</p>
                           <h3 class="books__name">стандарты и качество</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-10.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-10.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
-                          <p class="books__text">2022 год</p>
+                          <p class="books__text">2023 год</p>
                           <h3 class="books__name">стандарты и качество</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-11.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-11.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <p class="books__text">2022 год</p>
                           <h3 class="books__name">стандарты и качество</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-12.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-12.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <p class="books__text">2022 год</p>
                           <h3 class="books__name">стандарты и качество</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-13.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-13.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <p class="books__text">2022 год</p>
                           <h3 class="books__name">стандарты и качество</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-14.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-14.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <p class="books__text">2022 год</p>
                           <h3 class="books__name">стандарты и качество</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-15.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-15.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <p class="books__text">2022 год</p>
                           <h3 class="books__name">стандарты и качество</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-16.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-16.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
-                          <p class="books__text">2022 год</p>
+                          <p class="books__text">2024 год</p>
                           <h3 class="books__name">стандарты и качество</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-17.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-17.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <p class="books__text">2022 год</p>
                           <h3 class="books__name">стандарты и качество</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-18.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-18.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <p class="books__text">2022 год</p>
                           <h3 class="books__name">стандарты и качество</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-19.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-19.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <p class="books__text">2022 год</p>
                           <h3 class="books__name">стандарты и качество</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                       <li class="books__item">
                         <div class="books__box">
                           <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-20.jpg" alt="книга" width="230" height="316"></div>
+                          <div class="books__img"><img src="images/archive/archive-20.png" alt="книга" width="380" height="380"></div>
                         </div>
                         <div class="books__info">
                           <p class="books__text">2022 год</p>
                           <h3 class="books__name">стандарты и качество</h3>
-                          <p class="books__price">30 000 руб.</p>
-                          <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="books__bottom">
+                            <p class="books__price">30 000 руб.</p>
+                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
+                          </div>
                         </div>
                       </li>
                     </ul>
@@ -521,13 +571,13 @@
                     <ol class="listing__list">
                       <li class="listing__item"><a class="listing__box" href="#">
                           <h3 class="listing__name">Электронная библиотека</h3>
-                          <div class="listing__img"><img src="images/materials/materials-01.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                          <div class="listing__img"><img src="images/listing/listing-materials-01.jpg" alt="картинка" width="350" height="222"></div></a></li>
                       <li class="listing__item"><a class="listing__box" href="#">
                           <h3 class="listing__name">Тематические подборки</h3>
-                          <div class="listing__img"><img src="images/materials/materials-02.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                          <div class="listing__img"><img src="images/listing/listing-materials-02.jpg" alt="картинка" width="350" height="222"></div></a></li>
                       <li class="listing__item"><a class="listing__box" href="#">
                           <h3 class="listing__name">Глоссарий</h3>
-                          <div class="listing__img"><img src="images/materials/materials-03.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                          <div class="listing__img"><img src="images/listing/listing-materials-03.jpg" alt="картинка" width="350" height="222"></div></a></li>
                     </ol>
                   </div>
                 </div>

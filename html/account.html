@@ -20,6 +20,14 @@
     <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -30,7 +38,7 @@
             <div class="header__manage">
               <div class="header__search search">
                 <button class="search__button"><i class="icon icon-loop"></i></button>
-                <input class="search__input" type="text" placeholder="Искать....">
+                <input class="search__input" type="seacrh" placeholder="Искать....">
                 <div class="search__select">
                   <div class="select">
                     <button class="select__active"><span>Везде</span></button>
@@ -46,7 +54,7 @@
                 </div>
               </div>
               <div class="select select--lang">
-                <div class="select__active"><span class="select__active-text">RU</span></div>
+                <div class="select__active"><span>RU</span></div>
                 <div class="select__list">
                   <button class="select__item is-active">RU</button>
                   <button class="select__item">EN</button>
@@ -79,7 +87,9 @@
             </nav>
             <button class="header__burger"><img src="images/icons/burger.svg" alt="открыть меню" width="24" height="11"></button>
           </div>
-          <div class="header__wrapper"></div>
+          <div class="header__box">
+            <ul class="header__box-nav"></ul>
+          </div>
         </div>
       </div>
     </header>
@@ -89,7 +99,7 @@
           <div class="menu__manage">
             <div class="menu__search search">
               <button class="search__button"><i class="icon icon-loop"></i></button>
-              <input class="search__input" type="text" placeholder="Искать....">
+              <input class="search__input" type="seacrh" placeholder="Искать....">
               <div class="search__select">
                 <div class="select">
                   <button class="select__active">Везде</button>
@@ -105,7 +115,7 @@
               </div>
             </div>
             <div class="select select--lang">
-              <div class="select__active"><span class="select__active-text">RU</span></div>
+              <div class="select__active"><span>RU</span></div>
               <div class="select__list">
                 <button class="select__item is-active">RU</button>
                 <button class="select__item">EN</button>
@@ -210,70 +220,6 @@
                     <p class="status__text">Станьте автором журналов РИА «Стандарты и качество». Ждем как опытных, так и начинающих специалистов. Важна польза и подача материала. Приоритет отдается статьям практической направленности.</p><a class="button button--icon" href="#"><span>Подробнее</span><i class="icon icon-arrow-small"></i></a>
                   </div>
                   <div class="status__img"><img src="images/status/status-img.png" alt="картинка" width="570" height="500"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section section--contacts">
-        <div class="section__wrapper container">
-          <div class="section__content">
-            <div class="contacts">
-              <div class="contacts__inner">
-                <div class="contacts__row">
-                  <div class="contacts__section">
-                    <h2 class="contacts__title">Контакты</h2>
-                    <address class="contacts__address address">
-                      <div class="address__list address__list--second">
-                        <div class="address__item">
-                          <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
-                          <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
-                        </div><a class="address__item" href="mailto:editor_site@mirq.ru">
-                          <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
-                          <div class="address__text">editor_site@mirq.ru</div></a><a class="address__item" href="tel:+74957716652">
-                          <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
-                          <div class="address__text">+7 (495) 771 6652</div></a>
-                      </div>
-                    </address>
-                    <div class="contacts__map map"></div>
-                  </div>
-                  <div class="contacts__right">
-                    <form class="contacts__form form" action="#">
-                      <div class="form__header">
-                        <h2 class="form__title">Остались вопросы?</h2>
-                        <p class="form__text">Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.</p>
-                      </div>
-                      <div class="form__main">
-                        <div class="form__top">
-                          <div class="form__box">
-                            <label class="form__label form__label--half">
-                              <input class="form__input" type="text" placeholder="Имя">
-                            </label>
-                            <label class="form__label form__label--half">
-                              <input class="form__input" type="text" placeholder="Фамилия">
-                            </label>
-                            <label class="form__label">
-                              <input class="form__input" type="email" placeholder="E-mail">
-                            </label>
-                            <label class="form__label">
-                              <textarea class="form__textarea" placeholder="Текст сообщения"></textarea>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="form__middle">
-                          <div class="form__agree">
-                            <label class="form__agree-label">
-                              <input type="checkbox"><span class="form__agree-checkbox"></span><span class="form__agree-text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="form__bottom">
-                          <button class="form__button button">Подписаться</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
                 </div>
               </div>
             </div>

@@ -20,6 +20,14 @@
     <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -30,7 +38,7 @@
             <div class="header__manage">
               <div class="header__search search">
                 <button class="search__button"><i class="icon icon-loop"></i></button>
-                <input class="search__input" type="text" placeholder="Искать....">
+                <input class="search__input" type="seacrh" placeholder="Искать....">
                 <div class="search__select">
                   <div class="select">
                     <button class="select__active"><span>Везде</span></button>
@@ -46,7 +54,7 @@
                 </div>
               </div>
               <div class="select select--lang">
-                <div class="select__active"><span class="select__active-text">RU</span></div>
+                <div class="select__active"><span>RU</span></div>
                 <div class="select__list">
                   <button class="select__item is-active">RU</button>
                   <button class="select__item">EN</button>
@@ -79,7 +87,9 @@
             </nav>
             <button class="header__burger"><img src="images/icons/burger.svg" alt="открыть меню" width="24" height="11"></button>
           </div>
-          <div class="header__wrapper"></div>
+          <div class="header__box">
+            <ul class="header__box-nav"></ul>
+          </div>
         </div>
       </div>
     </header>
@@ -89,7 +99,7 @@
           <div class="menu__manage">
             <div class="menu__search search">
               <button class="search__button"><i class="icon icon-loop"></i></button>
-              <input class="search__input" type="text" placeholder="Искать....">
+              <input class="search__input" type="seacrh" placeholder="Искать....">
               <div class="search__select">
                 <div class="select">
                   <button class="select__active">Везде</button>
@@ -105,7 +115,7 @@
               </div>
             </div>
             <div class="select select--lang">
-              <div class="select__active"><span class="select__active-text">RU</span></div>
+              <div class="select__active"><span>RU</span></div>
               <div class="select__list">
                 <button class="select__item is-active">RU</button>
                 <button class="select__item">EN</button>
@@ -137,7 +147,13 @@
       <section class="section section--padding-none section--organization">
         <div class="section__wrapper">
           <div class="organization organization--2">
-            <div class="bg-image"><img src="images/organization/organization-bg.jpg" alt="фоновая картинка" width="1920" height="800"></div>
+            <div class="bg-image">
+              <picture>
+                <source srcset="images/organization/organization-bg-mob.webp" type="image/webp" media="(max-width: 575px)">
+                <source srcset="images/organization/organization-bg-mob.jpg" media="(max-width: 575px)">
+                <source srcset="images/organization/organization-bg.webp"><img src="images/organization/organization-bg.jpg" alt="фоновая картинка" width="1920" height="800">
+              </picture>
+            </div>
             <div class="organization__inner container">
               <div class="breadcrumbs breadcrumbs--second">
                 <div class="breadcrumbs__inner">
@@ -163,20 +179,24 @@
             <div class="numbers">
               <div class="numbers__inner">
                 <ul class="numbers__list numbers__list--4">
-                  <li class="numbers__item">
-                    <div class="numbers__num">12</div>
+                  <li class="numbers__item" data-nums>
+                    <div class="numbers__num"><span data-value="12"></span>
+                    </div>
                     <div class="numbers__text">Отраслевых <br> комитета</div>
                   </li>
-                  <li class="numbers__item">
-                    <div class="numbers__num">100+</div>
+                  <li class="numbers__item" data-nums>
+                    <div class="numbers__num"><span data-value="100"></span>+
+                    </div>
                     <div class="numbers__text">Партнерских <br> организаций</div>
                   </li>
-                  <li class="numbers__item">
-                    <div class="numbers__num">1000</div>
+                  <li class="numbers__item" data-nums>
+                    <div class="numbers__num"><span data-value="1000"></span>
+                    </div>
                     <div class="numbers__text">Членов <br> организации</div>
                   </li>
-                  <li class="numbers__item">
-                    <div class="numbers__num">73</div>
+                  <li class="numbers__item" data-nums>
+                    <div class="numbers__num"><span data-value="73"></span>
+                    </div>
                     <div class="numbers__text">Отделения <br> по всей России</div>
                   </li>
                 </ul>
@@ -252,7 +272,7 @@
                     <div class="contacts__map map"></div>
                   </div>
                   <div class="contacts__right">
-                    <form class="contacts__form form" action="#">
+                    <form class="contacts__form form" action="#" name="form-callback">
                       <div class="form__header">
                         <h2 class="form__title">Остались вопросы?</h2>
                         <p class="form__text">Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.</p>
@@ -261,13 +281,13 @@
                         <div class="form__top">
                           <div class="form__box">
                             <label class="form__label form__label--half">
-                              <input class="form__input" type="text" placeholder="Имя">
+                              <input class="form__input" type="text" placeholder="Имя" name="form-name">
                             </label>
                             <label class="form__label form__label--half">
                               <input class="form__input" type="text" placeholder="Фамилия">
                             </label>
                             <label class="form__label">
-                              <input class="form__input" type="email" placeholder="E-mail">
+                              <input class="form__input" type="email" placeholder="E-mail" name="form-email">
                             </label>
                             <label class="form__label">
                               <textarea class="form__textarea" placeholder="Текст сообщения"></textarea>
@@ -277,7 +297,7 @@
                         <div class="form__middle">
                           <div class="form__agree">
                             <label class="form__agree-label">
-                              <input type="checkbox"><span class="form__agree-checkbox"></span><span class="form__agree-text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
+                              <input type="checkbox" name="form-agree" required><span class="form__agree-checkbox"></span><span class="form__agree-text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
                             </label>
                           </div>
                         </div>
