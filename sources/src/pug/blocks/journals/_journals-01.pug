@@ -32,7 +32,7 @@ section.section
    .section__wrapper.container
       .section__header
          .section__header-row
-            h2.section__header-title Журналы
+            h2.section__header-heading Журналы
             a.section__header-button.button.button--icon(href="#")
                span Подписаться на журналы
                i.icon.icon-arrow-small
@@ -45,8 +45,8 @@ section.section
                         .journals__top
                            .journals__img
                               img(src=journal.src, alt=journal.title, width="240", height="340")
-                           .journals__info
-                              h3.journals__name #{journal.title}
-                              a.journals__link(href="#") 
-                                 span Подробнее
-                                 i.icon.icon-arrow-small
+                        .journals__info
+                           h3.journals__name #{journal.title}
+                           a.journals__link(href="#") 
+                              span Подробнее
+                              i.icon.icon-arrow-small
