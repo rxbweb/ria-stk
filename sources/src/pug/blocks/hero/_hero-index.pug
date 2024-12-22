@@ -1,7 +1,39 @@
+-
+   const heroMagazines01 = [
+      {
+         src: "images/hero/hero-slider-01.png",
+         title: "стандарты и качество"
+      },
+      {
+         src: "images/hero/hero-slider-02.png",
+         title: "методы менеджмента качества"
+      },
+      {
+         src: "images/hero/hero-slider-03.png",
+         title: "контроль качества и продукции"
+      },
+      {
+         src: "images/hero/hero-slider-04.png",
+         title: "мир измерений"
+      },
+      {
+         src: "images/hero/hero-slider-05.png",
+         title: "business excellence"
+      },
+      {
+         src: "images/hero/hero-slider-06.png",
+         title: "МКМ"
+      },
+      {
+         src: "images/hero/hero-slider-06.png",
+         title: "МКМ"
+      }
+   ]
+
 section.section.section--hero.section--padding-none
    .section__wrapper
       .section__content
-         .hero.hero--slider
+         .hero
             .bg-image
                img(src="images/hero/hero-bg.jpg", alt="фоновая картинка" width="1920" height="750")
             .hero__inner.container
@@ -24,34 +56,11 @@ section.section.section--hero.section--padding-none
                                           .hero__books-content
                                              .hero__books-swiper
                                                 .swiper-wrapper
-                                                   .swiper-slide.hero__books-slide
-                                                      .hero__books-figure
-                                                         img(src="images/hero/hero-slider-01.png", alt="стандарты и качество" width="396" height="512")
-                                                         .hero__books-name стандарты и качество
-                                                   .swiper-slide.hero__books-slide
-                                                      .hero__books-figure
-                                                         img(src="images/hero/hero-slider-02.png", alt="методы менеджмента качества" width="396" height="512")
-                                                         .hero__books-name методы менеджмента качества
-                                                   .swiper-slide.hero__books-slide
-                                                      .hero__books-figure
-                                                         img(src="images/hero/hero-slider-03.png", alt="контроль качества и продукции" width="396" height="521")
-                                                         .hero__books-name контроль качества и продукции
-                                                   .swiper-slide.hero__books-slide
-                                                      .hero__books-figure
-                                                         img(src="images/hero/hero-slider-04.png", alt="мир измерений" width="396" height="517")
-                                                         .hero__books-name мир измерений
-                                                   .swiper-slide.hero__books-slide
-                                                      .hero__books-figure
-                                                         img(src="images/hero/hero-slider-05.png", alt="business excellence" width="396" height="518")
-                                                         .hero__books-name business excellence
-                                                   .swiper-slide.hero__books-slide
-                                                      .hero__books-figure
-                                                         img(src="images/hero/hero-slider-06.png", alt="МКМ" width="396" height="518")
-                                                         .hero__books-name МКМ
-                                                   .swiper-slide.hero__books-slide
-                                                      .hero__books-figure
-                                                         img(src="images/hero/hero-slider-06.png", alt="МКМ" width="396" height="518")
-                                                         .hero__books-name МКМ
+                                                   each magazine in heroMagazines01
+                                                      .swiper-slide.hero__books-slide
+                                                         .hero__books-figure
+                                                            img(src=magazine.src, alt=magazine.title width="396" height="512")
+                                                            .hero__books-name= magazine.title
                                                 .hero__books-controls
                                                    .js-books-pagination-current
                                                    .js-books-pagination.swiper-pagination

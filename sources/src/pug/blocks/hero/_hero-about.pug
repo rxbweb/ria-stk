@@ -1,3 +1,35 @@
+-
+   const heroMagazines02 = [
+      {
+         src: "images/hero/hero-slider-01.png",
+         title: "стандарты и качество"
+      },
+      {
+         src: "images/hero/hero-slider-02.png",
+         title: "методы менеджмента качества"
+      },
+      {
+         src: "images/hero/hero-slider-03.png",
+         title: "контроль качества и продукции"
+      },
+      {
+         src: "images/hero/hero-slider-04.png",
+         title: "мир измерений"
+      },
+      {
+         src: "images/hero/hero-slider-05.png",
+         title: "business excellence"
+      },
+      {
+         src: "images/hero/hero-slider-06.png",
+         title: "МКМ"
+      },
+      {
+         src: "images/hero/hero-slider-06.png",
+         title: "МКМ"
+      }
+   ]
+
 section.section.section--hero.section--padding-none
    .section__wrapper
       .section__content
@@ -5,7 +37,7 @@ section.section.section--hero.section--padding-none
             .bg-image
                img(src="images/hero/hero-bg.jpg", alt="фоновая картинка" width="1920" height="750")
             .hero__inner.container
-               .hero__slider
+               .hero__slideshow
                   .swiper-wrapper
                      .swiper-slide
                         .hero__row
@@ -18,5 +50,9 @@ section.section.section--hero.section--padding-none
                                     span О компании и награды
                                     i.icon.icon-arrow-small
                            .hero__content
-                              
-               .swiper-bullets.js-hero-bullets
+                              .hero__magazines
+                                 .hero__magazines-col
+                                    each magazine in heroMagazines02
+                                       .hero__magazines-card
+                                          img(src=magazine.src, alt=magazine.title width="362")
+                  .swiper-bullets.hero__bullets

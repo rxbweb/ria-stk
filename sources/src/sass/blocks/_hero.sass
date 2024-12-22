@@ -1,10 +1,10 @@
 .hero
    --row-gap: 86px
    --info-width: 640px
-   padding: var(--section-padding) 0
+   padding: 0
    position: relative
-   &--slider
-      padding: 0
+   &__inner
+      position: relative
    &__slider
       padding: var(--section-padding) 0
       position: relative
@@ -13,6 +13,9 @@
          position: absolute
          top: auto !important
          bottom: 30px !important
+   &__slideshow
+      height: 750px
+      overflow: hidden
    &__row
       display: grid
       grid-template-columns: var(--info-width) 1fr
@@ -125,6 +128,36 @@
                   z-index: 5
                   @media (max-width: 1700px)
                      opacity: 0
+   &__magazines
+      &-col
+         width: 362px
+         max-height: 750px
+         display: flex
+         flex-direction: column
+         align-items: flex-start
+         justify-content: center
+         animation-duration: 5s
+         animation-iteration-count: infinite
+         animation-timing-function: linear
+         animation-name: magazines-down-to-up
+   &__default
+      padding-top: 38px
+      padding-right: 12%
+      display: flex
+      justify-content: flex-end
+      &--universities
+         padding-right: 8%
+   &--default
+      .breadcrumbs
+         position: absolute
+         top: 0
+         left: var(--padding)
+      .hero
+         &__info
+            padding: 130px 0
+            display: flex
+            flex-direction: column
+            justify-content: center
    @media (max-width: 1700px)
       &__content
          width: calc(100vw - var(--info-width) - var(--row-gap) - var(--padding)*2)
@@ -132,6 +165,8 @@
       --row-gap: 30px
    @include xl
       --info-width: 580px
+      &__default
+         padding-right: 0
    @include lg
       --info-width: 500px
    @media (max-width: 1260px)
@@ -152,6 +187,21 @@
                   margin-bottom: 0
                &-pagination
                   text-align: center
+      &__default
+         padding-top: 0
+         justify-content: center
+      &--default
+         .hero
+            &__info
+               padding: 100px 0 50px
+   @include ms
+      &--default
+         .hero
+            &__info
+               padding: 0
+               @include margin-bottom(15px)
+         .breadcrumbs
+            position: static
    @include sm
       &__books
          overflow: hidden
@@ -165,3 +215,11 @@
             width: 100%
          &-name
             display: none
+      &__text
+         font-size: 12px
+
+@keyframes magazines-down-to-up
+   0%
+      transform: translateY(0)
+   100%
+      transform: translateY(-1325px)
