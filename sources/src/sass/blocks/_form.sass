@@ -18,10 +18,17 @@
       flex-wrap: wrap
       gap: 20px
    &__label
-      display: block
       width: 100%
+      display: block
+      position: relative
       &--half
          width: calc(50% - 10px)
+      label.error
+         position: absolute
+         left: 2px
+         bottom: -20px
+         color: var(--accent)
+         font-size: 12px
    &__input,
    &__textarea
       width: 100%
@@ -33,6 +40,9 @@
       font-size: 15px
       line-height: 140%
       color: #67686B
+      &.error
+         border-color: var(--accent)
+         color: var(--accent)
    &__textarea
       height: 118px
    &__button
@@ -44,7 +54,7 @@
       color: #47535E
       user-select: none
       input
-         display: none
+         @extend .visually-hidden
       a
          text-decoration: underline
       &-label
@@ -52,6 +62,13 @@
          align-items: flex-start
          gap: 10px
          cursor: pointer
+         position: relative
+         label.error
+            position: absolute
+            left: 0
+            bottom: -20px
+            color: var(--accent)
+            font-size: 12px
       &-checkbox
          width: 20px
          height: 20px
@@ -131,8 +148,6 @@
             width: 3px
             background: var(--accent)
    @include lg
-      &__box
-         gap: 15px
       &__label
          &--half
             width: 100%
@@ -142,6 +157,11 @@
          @include margin-bottom(15px)
       &__main
          @include margin-bottom(10px)
+      &__box
+         gap: 15px
+      &__label
+         label.error
+            bottom: -19px
       &__input,
       &__textarea
          height: 38px
@@ -149,6 +169,8 @@
          font-size: 14px
       &__textarea
          height: 70px
+      &__middle
+         margin-bottom: 18px
    @include xs
       &__input,
       &__textarea
