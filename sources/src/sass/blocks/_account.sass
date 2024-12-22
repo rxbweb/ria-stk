@@ -4,13 +4,13 @@
       grid-template-columns: repeat(5, 1fr)
       gap: var(--gap)
       &-btn
-         padding: 40px
+         padding: var(--gap)
          display: flex
          flex-direction: column
          align-items: center
          gap: 20px
          background: #F0F0F0
-         border-radius: var(--border-radius-15)
+         border-radius: 15px
          border: 1px solid transparent
          text-align: center
          transition: var(--transition)
@@ -19,6 +19,11 @@
          &:hover,
          &:focus
             border-color: var(--accent)
+            background: #fff
+            .account
+               &__links
+                  &-title
+                     color: var(--accent)
       &-value
          --size: 28px
          width: var(--size)
@@ -30,10 +35,10 @@
          right: 10px
          color: #fff
          text-align: center
+         font-size: 18px
          background: var(--accent)
          border-radius: var(--border-radius)
          overflow: hidden
-         @extend .fs-18
       &-icon
          @extend .badge
          @extend .badge--large
@@ -45,5 +50,43 @@
       &-title
          width: 100%
          max-width: 160px
+         transition: var(--transition)
          @extend .title
          @extend .title--second
+   @include lg
+      &__links
+         grid-template-columns: repeat(4, 1fr)
+   @include md
+      &__links
+         grid-template-columns: repeat(3, 1fr)
+   @include sm
+      &__links
+         grid-template-columns: repeat(2, 1fr)
+         &-icon
+            width: 50px
+            height: 50px
+            img
+               transform: scale(0.85)
+         &-btn
+            padding: 25px 40px 25px 15px
+         &-value
+            font-size: 16px
+   @include xs
+      &__links
+         grid-template-columns: 1fr
+         gap: 15px
+         &-btn
+            flex-direction: row
+            gap: 15px
+            & > *:last-child
+               margin-top: 0
+         &-value
+            width: 24px
+            height: 24px
+            top: 50%
+            transform: translateY(-50%)
+            line-height: 24px
+            font-size: 14px
+         &-title
+            max-width: none
+            text-align: left
