@@ -197,6 +197,10 @@
 .fs-18
    font-size: 18px
    line-height: 140%
+   @include sm
+      font-size: 16px
+   @include xs
+      font-size: 13px
 
 .white-box
    padding: 50px
@@ -235,7 +239,7 @@
          transform: scale(0.9)
    @include sm
       --size: 32px
-      border-radius: 3px
+      border-radius: 5px
       img
          transform: scale(0.8)
       &--second
