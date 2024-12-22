@@ -15,7 +15,7 @@
       @extend .title--main
    &__box
       padding: 35px
-      border-radius: var(--border-radius-15)
+      border-radius: 15px
       background: #fff
       overflow: hidden
       display: flex
@@ -48,7 +48,7 @@
       max-width: 650px
       margin-bottom: 25px
       @extend .title
-      @extend .title--fourth
+      @include fluidFontSize(32px, 40px, 360px, 1920px, 32px)
    &__caption
       @extend .title
    &__table
@@ -66,6 +66,57 @@
       @include margin-right(30px)
    &__price
       @extend .title
-      @extend .title--fourth
+      @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)
       margin-right: 20px
       color: #47535E
+   @include xl
+      &__img
+         flex-basis: auto
+      &__box
+         gap: var(--gap)
+         & > *
+            width: calc(50% - var(--gap)/2)
+   @media (max-width: 1365px)
+      &__manage
+         flex-wrap: wrap
+         gap: 20px
+         @include margin-right(0)
+      &__price
+         width: 100%
+   @include ms
+      &__box
+         padding: 0
+         flex-direction: column
+         gap: var(--gap)
+         background: transparent
+         & > *
+            width: 100%
+      &__img,
+      &__info
+         padding: 30px
+         background: #fff
+         border-radius: 15px
+      &__table
+         max-width: none
+   @include sm
+      &--2
+         .breadcrumbs
+            margin-bottom: 10px
+      &__img
+         padding: 8px 15px
+         img
+            width: 64%
+      &__info
+         padding: 15px
+      &__info
+         .specs--2 &
+            @include margin-bottom(20px)
+            & > *:nth-last-child(2)
+               margin-bottom: 20px
+      &__isbn
+         margin-bottom: 5px
+         .specs--2 &
+            margin-bottom: 5px
+   @include xs
+      &__box
+         gap: 15px
