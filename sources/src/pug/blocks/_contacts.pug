@@ -23,7 +23,7 @@ section.section.section--contacts
                      .contacts__map.map
                         
                   .contacts__right
-                     form.contacts__form.form(action="#")
+                     form.contacts__form.form(action="#" name="form-callback")
                         .form__header
                            h2.form__title Остались вопросы?
                            p.form__text Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.
@@ -31,17 +31,17 @@ section.section.section--contacts
                            .form__top
                               .form__box
                                  label.form__label.form__label--half
-                                    input.form__input(type="text" placeholder="Имя")
+                                    input.form__input(type="text" placeholder="Имя" name="form-name")
                                  label.form__label.form__label--half
                                     input.form__input(type="text" placeholder="Фамилия")
                                  label.form__label
-                                    input.form__input(type="email" placeholder="E-mail")
+                                    input.form__input(type="email" placeholder="E-mail" name="form-email")
                                  label.form__label
                                     textarea.form__textarea(placeholder="Текст сообщения")
                            .form__middle
                               .form__agree
                                  label.form__agree-label
-                                    input(type="checkbox")
+                                    input(type="checkbox" name="form-agree" required)
                                     span.form__agree-checkbox
                                     span.form__agree-text
                                        | Я согласен с 
