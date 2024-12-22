@@ -11,9 +11,9 @@ section.section.section--history
                   h2.history__title история компании
                   .history__dates
                      each year, index in years
-                        a.history__dates-btn(href="#", class=(index === 0 ? "history__dates-btn--active" : "")) #{year}
+                        a.history__dates-btn(href="#", class=(index === 0 ? "is-active" : "")) #{year}
                .history__main
-                  .history__swiper.js-history-swiper
+                  .history__swiper
                      .swiper-wrapper
                         each year in years
                            .history__slide.swiper-slide
@@ -25,6 +25,6 @@ section.section.section--history
                                     img(src="images/history/history-01.jpg", alt="1993" width="940" height="530")
                      .history__controls
                         .swiper-controls
-                           button.js-history-prev.swiper-button-prev
-                           .swiper-pagination.js-history-pagination
-                           button.js-history-next.swiper-button-next
+                           button.history__prev.swiper-button-prev
+                           .swiper-pagination.history__pagination
+                           button.history__next.swiper-button-next
