@@ -25,13 +25,14 @@ section.section.section--news
                   ul.news__posts
                      each news in news02
                         li.news__posts-item
-                           .news__posts-img
-                              img(src=news.src, alt="картинка статьи" width="519" height="390")
-                           .news__posts-info
-                              h3.news__posts-title #{news.title}
-                              a.news__posts-button.button.button--outline(href="#")
-                                 span Читать статью
-                                 i.icon.icon-arrow-small
+                           a.news__posts-box(href="#")
+                              .news__posts-img
+                                 img(src=news.src, alt="картинка статьи" width="519" height="390")
+                              .news__posts-info
+                                 h3.news__posts-title #{news.title}
+                                 .news__posts-button.button.button--outline
+                                    span Читать статью
+                                    i.icon.icon-arrow-small
                   aside.news__aside
                      .news__articles
                         ul.news__articles-list
