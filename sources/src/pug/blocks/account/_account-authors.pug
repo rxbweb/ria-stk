@@ -1,0 +1,32 @@
+section.section.section--account
+   .section__wrapper.container
+      .section__content
+         .account
+            .account__inner
+               .account__main
+                  .account__aside
+                     .account__controls
+                        include ../controls/_controls
+                  .account__info
+                     h2.account__title Для авторов
+                     .account__text
+                        p Приглашаем авторов к сотрудничеству. Если вы заинтересованы, отправьте свою рукопись в нашу редакцию, и мы свяжемся с вами, чтобы обсудить перспективы сотрудничества.
+
+                     form.webform(action="#")
+                        .webform__header
+                           h2.webform__title Загрузить новую рукопись
+                        .webform__body
+                           .webform__inputs
+                              label.webform__label
+                                 span.webform__label-title Название рукописи
+                                 input(type="text" placeholder="Введите название рукописи")
+
+                     include ../documents/_documents
+
+                     include ../_manuscript
+                     
+                  .account__panel
+                     include ../spotlight/_spotlight-02
+                     include ../spotlight/_spotlight-01
+                     include ../spotlight/_spotlight-01
+                     include ../spotlight/_spotlight-01
