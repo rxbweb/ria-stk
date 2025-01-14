@@ -23,6 +23,41 @@ textarea
    @include xs
       font-size: 13px
 
+.agree
+   color: #47535E
+   user-select: none
+   input
+      @extend .visually-hidden
+   a
+      text-decoration: underline
+   &__label
+      display: inline-flex
+      align-items: flex-start
+      gap: 8px
+      cursor: pointer
+      position: relative
+      label.error
+         position: absolute
+         left: 0
+         bottom: -20px
+         color: var(--accent)
+         font-size: 12px
+   &__checkbox
+      width: 20px
+      height: 20px
+      margin-top: -1px
+      flex-shrink: 0
+      border: var(--border-red)
+      border-radius: 5px
+      display: flex
+      justify-content: center
+      align-items: center
+      @include icomoon('\e90b', #fff, 8px)
+      input:checked ~ &
+         background: var(--accent)
+         border-color: var(--accent)
+
+
 .simple-list
    margin-left: 25px
    list-style-type: disc
