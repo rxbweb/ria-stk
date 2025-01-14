@@ -149,59 +149,41 @@
           <div class="breadcrumbs__list"><a href="#">Главная</a><a href="#">Авторизация</a></div>
         </div>
       </div>
-      <section class="section section--padding-bottom-none section--account">
+      <section class="section section--account">
         <div class="section__wrapper container">
-          <div class="section__header">
-            <div class="section__header-row">
-              <h1 class="section__header-heading">Личный кабинет</h1>
-            </div>
-          </div>
           <div class="section__content">
             <div class="account">
               <div class="account__inner">
-                <div class="account__links"><a class="account__links-btn" href="#">
-                    <div class="account__links-value">1</div>
-                    <div class="account__links-icon"><img src="images/badges/badge-25.svg" alt="иконка" width="41" height="40"></div>
-                    <div class="account__links-info">
-                      <h2 class="account__links-title">Абонементный доступ</h2>
-                    </div></a><a class="account__links-btn" href="#">
-                    <div class="account__links-icon"><img src="images/badges/badge-26.svg" alt="иконка" width="41" height="40"></div>
-                    <div class="account__links-info">
-                      <h2 class="account__links-title">Электронные журналы</h2>
-                    </div></a><a class="account__links-btn" href="#">
-                    <div class="account__links-value">4</div>
-                    <div class="account__links-icon"><img src="images/badges/badge-27.svg" alt="иконка" width="34" height="40"></div>
-                    <div class="account__links-info">
-                      <h2 class="account__links-title">Статьи / Подборки</h2>
-                    </div></a><a class="account__links-btn" href="#">
-                    <div class="account__links-icon"><img src="images/badges/badge-28.svg" alt="иконка" width="36" height="46"></div>
-                    <div class="account__links-info">
-                      <h2 class="account__links-title">Книги</h2>
-                    </div></a><a class="account__links-btn" href="#">
-                    <div class="account__links-icon"><img src="images/badges/badge-29.svg" alt="иконка" width="34" height="36"></div>
-                    <div class="account__links-info">
-                      <h2 class="account__links-title">Мероприятия</h2>
-                    </div></a><a class="account__links-btn" href="#">
-                    <div class="account__links-icon"><img src="images/badges/badge-30.svg" alt="иконка" width="41" height="40"></div>
-                    <div class="account__links-info">
-                      <h2 class="account__links-title">Для авторов</h2>
-                    </div></a><a class="account__links-btn" href="#">
-                    <div class="account__links-icon"><img src="images/badges/badge-31.svg" alt="иконка" width="36" height="46"></div>
-                    <div class="account__links-info">
-                      <h2 class="account__links-title">Бонусная система</h2>
-                    </div></a><a class="account__links-btn" href="#">
-                    <div class="account__links-icon"><img src="images/badges/badge-32.svg" alt="иконка" width="34" height="31"></div>
-                    <div class="account__links-info">
-                      <h2 class="account__links-title">Избранное</h2>
-                    </div></a><a class="account__links-btn" href="#">
-                    <div class="account__links-icon"><img src="images/badges/badge-33.svg" alt="иконка" width="41" height="40"></div>
-                    <div class="account__links-info">
-                      <h2 class="account__links-title">Настройки профиля</h2>
-                    </div></a><a class="account__links-btn" href="#">
-                    <div class="account__links-icon"><img src="images/badges/badge-34.svg" alt="иконка" width="30" height="30"></div>
-                    <div class="account__links-info">
-                      <h2 class="account__links-title">Корзина</h2>
-                    </div></a>
+                <div class="account__form">
+                  <div class="webform">
+                    <h2 class="webform__title">Регистрация</h2>
+                    <form class="webform__form" action="#">
+                      <div class="webform__body">
+                        <div class="webform__accounts"><a class="webform__accounts-btn" href="#"><img src="images/icons/vk.svg" alt="vk" width="39" height="23"></a><a class="webform__accounts-btn" href="#"><img src="images/icons/yandex.svg" alt="yandex" width="40" height="40"></a><a class="webform__accounts-btn" href="#"><img src="images/icons/gmail.svg" alt="gmail" width="34" height="36"></a></div>
+                        <p class="webform__remark"><span>или через email</span></p>
+                        <div class="webform__inputs">
+                          <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Логин</span><span class="webform__label-comment">Обязательное поле</span></span><span class="webform__label-field">
+                              <input class="webform__label-input" type="text" placeholder="Логин"></span><span class="webform__label-row"><span class="webform__label-note">Минимум 3 символа</span></span></label>
+                          <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Email</span><span class="webform__label-comment">Обязательное поле</span></span><span class="webform__label-field">
+                              <input class="webform__label-input" type="text" placeholder="Электронная почта"></span></label>
+                          <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Пароль</span><span class="webform__label-comment">Обязательное поле</span></span><span class="webform__label-field webform__label-field--icon">
+                              <input class="webform__label-input" type="password" placeholder="Пароль"><i class="btn btn--eye"></i></span><span class="webform__label-row"><span class="webform__label-note">Минимум 6 символов</span></span></label>
+                          <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Подтверждение пароля</span><span class="webform__label-comment">Обязательное поле</span></span><span class="webform__label-field webform__label-field--icon">
+                              <input class="webform__label-input" type="password" placeholder="Пароль"><i class="btn btn--eye"></i></span></label>
+                        </div>
+                        <div class="webform__agree agree">
+                          <label class="agree__label">
+                            <input type="checkbox" name="form-agree" required><span class="agree__checkbox"></span><span class="agree__text">Даю согласие на отправку мне издательством РИА СТК электронных рассылок</span>
+                          </label>
+                        </div>
+                        <button class="button button--large"><span>Зарегистрироваться</span></button>
+                        <p class="webform__description">Нажимая кнопку, вы принимаете условия <a href="#">политики</a> и <a href="#">пользовательского соглашения</a></p>
+                      </div>
+                      <div class="webform__bottom">
+                        <div class="webform__manage"><span>Уже есть аккаунт?</span><a class="button button--outline" href="#"><span>Войти</span><i class="icon icon-arrow-right"></i></a></div>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
@@ -253,7 +235,7 @@
           </div>
         </div>
         <div class="footer__bottom">
-          <div class="footer__legal container"><a href="#">Права использования электронных журналов</a><a href="#">Правила пользования сайтом</a><a href="#">Карта сайта</a><a href="#">Правила обработки и хранения персональных данных</a><a href="#">Соглашение пользователя</a><a href="#"><span>Разработка сайта</span><img src="images/icons/completo.svg" alt="completo" width="63" height="23"></a></div>
+          <div class="footer__legal container"><a href="#">Права использования электронных журналов</a><a href="#">Правила пользования сайтом</a><a href="#">Правила обработки и хранения персональных данных</a><a href="#">Соглашение пользователя</a><a href="#"><span>Разработка сайта</span><img src="images/icons/completo.svg" alt="completo" width="63" height="23"></a></div>
         </div>
       </div>
     </footer><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=5e6f3718-a525-41b0-832c-11d7f6b0f8a4"></script>

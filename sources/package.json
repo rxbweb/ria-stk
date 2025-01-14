@@ -9,6 +9,7 @@
     "license": "MIT",
     "type": "module",
     "dependencies": {
+        "@fancyapps/ui": "^5.0.36",
         "imask": "^7.6.1",
         "jquery": "^3.6.0",
         "jquery-validation": "^1.21.0",
