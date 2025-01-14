@@ -1,0 +1,22 @@
+.activate
+   padding: 40px
+   border-radius: 15px
+   background: #F3F3F3
+   @include margin-bottom(20px)
+   &__title
+      @extend .title
+      @extend .title--seventh
+   &__form
+      &-row
+         display: flex
+         gap: 10px
+         input
+            height: 46px
+            padding: 12px 10px
+            flex-grow: 1
+            font-size: 16px
+            &::placeholder
+               color: #999
+         .button
+            min-width: 170px
+            flex-shrink: 0
