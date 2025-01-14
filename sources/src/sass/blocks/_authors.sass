@@ -34,8 +34,11 @@
          padding-right: 6px
          line-height: 120%
          color: var(--accent)
-      &:hover
+      &.is-active
          width: 112px
+      @media (hover: hover) and (pointer: fine)
+         &:hover
+            width: 112px
    &__img
       border: 1px solid #c7c7c7
       flex-shrink: 0
@@ -59,9 +62,10 @@
          gap: 20px
    @include sm
       &__list
+         gap: 14px
          @include scroll-x()
       &__item
-         min-width: 290px
+         min-width: 220px
       &__info
          padding-top: 15px
          @include margin-bottom(10px)

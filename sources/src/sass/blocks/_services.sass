@@ -10,8 +10,10 @@
       max-width: 780px
       flex-grow: 1
    @include md
-      &__left
-         width: auto
+      &__row
+         display: block
+         @include margin-bottom(var(--gap-large))
+      &__left,
       &__right
          max-width: 100%
 

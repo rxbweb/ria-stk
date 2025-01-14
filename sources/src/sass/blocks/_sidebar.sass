@@ -49,7 +49,12 @@
       flex-shrink: 0
       border-radius: var(--border-radius-10)
       border: 1px solid #ADA7A7
+      svg
+         // fill: #ADA7A7
+         fill: red
    &__text
       opacity: 0
       white-space: nowrap
       transition: all var(--duration) ease
+   @include md
+      display: none

@@ -63,6 +63,9 @@
       color: var(--accent)
       font-size: 12px
       font-weight: 400
+      &:hover,
+      &:focus
+         background: rgba(205, 205, 205, 0.98)
    &--img
       width: 46px
       height: 46px
@@ -87,6 +90,9 @@
          background: #fff
    &--wide
       padding-inline: 30px
+   &--large
+      width: 100%
+      min-height: 52px
    @include sm
       padding: 10px 12px
       .icon
@@ -138,6 +144,8 @@
       border: #fff
       background: #fff
       @include icomoon('\e910', inherit, 20px)
+   &--eye
+      @include icomoon('\e913', #47535E, 20px)
    @include md
       --size: 40px
    @include sm
@@ -176,6 +184,9 @@
       @include fluidFontSize(16px, 24px, 360px, 1920px, 20px)
    &--sixth
       @include fluidFontSize(16px, 20px, 360px, 1920px, 20px)
+   &--seventh
+      @include fluidFontSize(20px, 32px, 360px, 1920px, 20px)
+      line-height: 140%
    &--red
       color: var(--accent)
    &--small

@@ -35,6 +35,18 @@
          &.swiper-pagination-bullet-active
             background: var(--accent)
             border-radius: 2px
+         // &.swiper-pagination-bullet-active
+         //    transition: background .3s ease
+         //    background: var(--accent)
+         //    border-radius: 2px
+         // &-active-main
+         //    left: auto !important
+         //    right: auto !important
+         // &-active-prev,
+         // &-active-prev-prev,
+         // &-active-next,
+         // &-active-next-next
+         //    display: none
    &-bullets
       display: flex
       justify-content: center
@@ -81,3 +93,9 @@
             height: 40px
             &::after
                font-size: 16px
+   @include sm
+      &-bullets
+         gap: 5px
+         .swiper-pagination-bullet
+            width: 10px
+            height: 10px
