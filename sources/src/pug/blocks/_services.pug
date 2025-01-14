@@ -9,18 +9,24 @@ section.section.section--services
                .services__row
                   .services__left
                      .tabs
-                        .tabs__list
-                           a.tabs__btn.tabs__btn--active(href="#")
+                        .tabs__list.tabs-nav(data-tabs="services")
+                           a.tabs__btn.tabs-link.is-active(href="#" data-tabs="tab1")
                               .badge.badge--second
                                  img(src="images/badges/badge-01.svg", alt="иконка" width="20" height="20")
                               span Реклама и продвижение
-                           a.tabs__btn(href="#")
+                           a.tabs__btn.tabs-link(href="#" data-tabs="tab2")
                               .badge.badge--second
                                  img(src="images/badges/badge-02.svg", alt="иконка" width="25" height="20")
                               span Спецвыпуски на заказ
-                           a.tabs__btn(href="#")
+                           a.tabs__btn.tabs-link(href="#" data-tabs="tab3")
                               .badge.badge--second
                                  img(src="images/badges/badge-03.svg", alt="иконка" width="20" height="20")
                               span Другие услуги
                   .services__right
-                     include listing/_listing-10
+                     .tabs-content(data-tabs="services")
+                        .tabs-item.is-active(data-tabs="tab1")
+                           include listing/_listing-10
+                        .tabs-item(data-tabs="tab2")
+                           include listing/_listing-13
+                        .tabs-item(data-tabs="tab3")
+                           include listing/_listing-14

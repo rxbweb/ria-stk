@@ -25,9 +25,13 @@
          title: "МКМ"
       },
       {
-         src: "images/hero/hero-slider-06.png",
-         title: "МКМ"
-      }
+         src: "images/hero/hero-slider-01.png",
+         title: "стандарты и качество"
+      },
+      {
+         src: "images/hero/hero-slider-02.png",
+         title: "методы менеджмента качества"
+      },
    ]
 
 section.section.section--hero.section--padding-none
@@ -37,22 +41,39 @@ section.section.section--hero.section--padding-none
             .bg-image
                img(src="images/hero/hero-bg.jpg", alt="фоновая картинка" width="1920" height="750")
             .hero__inner.container
+               .breadcrumbs
+                  .breadcrumbs__inner
+                     .breadcrumbs__list
+                        a(href="#") Главная
+                        a(href="#") О компании
                .hero__slideshow
                   .swiper-wrapper
-                     .swiper-slide
-                        .hero__row
-                           .hero__info
-                              h1.hero__title О компании
-                              .hero__text
-                                 p РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством.
-                              .hero__bottom
-                                 a.button.button--icon(href="#")
-                                    span О компании и награды
-                                    i.icon.icon-arrow-small
-                           .hero__content
-                              .hero__magazines
-                                 .hero__magazines-col
-                                    each magazine in heroMagazines02
-                                       .hero__magazines-card
-                                          img(src=magazine.src, alt=magazine.title width="362")
+                     - for (var i = 0; i < 4; i++)
+                        .swiper-slide
+                           .hero__row
+                              .hero__info
+                                 h1.hero__title О компании
+                                 .hero__text
+                                    p РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством.
+                                 .hero__bottom
+                                    a.button.button--icon(href="#")
+                                       span О компании и награды
+                                       i.icon.icon-arrow-small
+                              .hero__content
+                                 .hero__magazines
+                                    .hero__magazines-block
+                                       .hero__magazines-col
+                                          each magazine in heroMagazines02
+                                             .hero__magazines-card
+                                                img(src=magazine.src, alt=magazine.title width="362")
+                                    .hero__magazines-block
+                                       .hero__magazines-col.hero__magazines-col--reverse
+                                          each magazine in heroMagazines02
+                                             .hero__magazines-card
+                                                img(src=magazine.src, alt=magazine.title width="362")
+                                 .hero__journals
+                                    .hero__journals-row
+                                       each magazine in heroMagazines02
+                                          .hero__journals-card
+                                             img(src=magazine.src, alt=magazine.title width="362")
                   .swiper-bullets.hero__bullets
