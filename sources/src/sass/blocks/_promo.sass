@@ -3,13 +3,18 @@
       display: flex
       gap: var(--gap)
    &__item
-      max-height: 468px
       flex-grow: 1
       position: relative
       border-radius: 10px
       overflow: hidden
+      &:nth-last-child(2),
+      & + .promo__item
+         .promo
+            &__img
+               @include img-cover(58.5%, 10px)
    &__img
-      @include img-cover(58.5%)
+      @include img-cover(28.5%, 10px)
+      height: 100%
       background: #000
    &__info
       padding: 40px 30px
@@ -37,6 +42,8 @@
          border-radius: 5px
       &__info
          padding: 20px
+      &__img
+         @include img-cover(58.5%, 10px)
    @include xs
       &__info
          padding: 15px
