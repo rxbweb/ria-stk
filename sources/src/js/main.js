@@ -11,6 +11,8 @@ new Swiper(".js-partners-swiper", {
    pagination: {
       el: ".js-partners-pagination",
       clickable: true,
+      dynamicBullets: true,
+      dynamicMainBullets: 8,
    },
    breakpoints: {
       0: {
@@ -50,6 +52,8 @@ new Swiper(".js-projects-swiper", {
    pagination: {
       el: ".js-projects-pagination",
       clickable: true,
+      // dynamicBullets: true,
+      // dynamicMainBullets: 6,
    },
    breakpoints: {
       768: {
@@ -60,6 +64,20 @@ new Swiper(".js-projects-swiper", {
          slidesPerView: 3,
          spaceBetween: 40,
       },
+   },
+});
+
+new Swiper(".hero__slideshow", {
+   slidesPerView: 1,
+   spaceBetween: 20,
+   effect: "fade",
+   speed: 500,
+   fadeEffect: {
+      crossFade: true
+   },
+   pagination: {
+      el: ".hero__bullets",
+      clickable: true,
    },
 });
 
@@ -145,7 +163,7 @@ document.querySelectorAll(".hero__books-swiper").forEach(swiperContainer => {
       loop: true,
       speed: 700,
       centeredSlides: false,
-      allowTouchMove: false,
+      // allowTouchMove: false,
       autoplay: {
          delay: 3000,
          disableOnInteraction: false,
@@ -613,6 +631,116 @@ $("form[name='form-callback']").each(function() {
    });
 });
 
+$(document).ready(function() {
+   // 1. Проверяем, есть ли элементы с классом .tabs-link на странице
+   if ($('.tabs-link').length) {
+       
+       // 2. Добавляем событие на клик по .tabs-link
+       $('.tabs-link').on('click', function(e) {
+           e.preventDefault();  // 3. Останавливаем стандартное поведение ссылки
+           
+           // 4. Убираем класс .is-active у всех .tabs-link в родителе
+           $(this).closest('.tabs__list').find('.tabs-link').removeClass('is-active');
+           
+           // 5. Добавляем класс .is-active только к текущей ссылке
+           $(this).addClass('is-active');
+           
+           // 6. Получаем значение data-tabs у текущей ссылки
+           var tabId = $(this).data('tabs');
+           
+           // 7. Получаем значение data-tabs у родителя
+           var parentTabsData = $(this).closest('.tabs__list').data('tabs');
+           
+           // 8. Ищем блок с классом .tabs-content, у которого data-tabs равен значению из родителя
+           var $tabsContent = $('.tabs-content[data-tabs="' + parentTabsData + '"]');
+           
+           if ($tabsContent.length) {
+               // 9. Ищем элемент с data-tabs, равным значению из 3 шага
+               var $tabItem = $tabsContent.find('.tabs-item[data-tabs="' + tabId + '"]');
+               
+               if ($tabItem.length) {
+                   // 10. Добавляем класс .is-active к найденному элементу
+                   $tabItem.addClass('is-active');
+                   
+                   // 11. Убираем класс .is-active у всех остальных .tabs-item в этом блоке
+                   $tabsContent.find('.tabs-item').not($tabItem).removeClass('is-active');
+               }
+           }
+       });
+   }
+});
+
+const authorsLabelModule = {
+   init() {
+      this.$authorsLabel = $('.authors__label');
+
+      if (this.$authorsLabel.length === 0) {
+         return;
+      }
+
+      this.bindEvents();
+   },
+
+   bindEvents() {
+      if (window.matchMedia('(hover: none)').matches) {
+         this.$authorsLabel.on('click', this.toggleActiveClass.bind(this));
+      }
+
+      $(document).on('click', this.handleDocumentClick.bind(this));
+   },
+
+   toggleActiveClass(event) {
+      const $target = $(event.currentTarget);
+      $target.toggleClass('is-active');
+   },
+
+   handleDocumentClick(event) {
+      if (!$(event.target).closest(this.$authorsLabel).length) {
+         this.$authorsLabel.removeClass('is-active');
+      }
+   }
+};
+
+Fancybox.bind("[data-fancybox]", {
+
+});
+
+$('.books__like').on('click', function(e) {
+   e.preventDefault();
+   $(this).toggleClass('is-active');
+})
+
+const passwordToggleModule = {
+   init() {
+      const $toggleButtons = $('.btn--eye');
+      if ($toggleButtons.length === 0) {
+         return;
+      }
+
+      this.bindToggleEvents($toggleButtons);
+   },
+
+   bindToggleEvents($buttons) {
+      $buttons.each(function() {
+         const $button = $(this);
+
+         $button.on('click', function() {
+            const $input = $button.siblings('input[type="password"], input[type="text"]');
+            if ($input.length === 0) {
+               return;
+            }
+
+            const currentType = $input.attr('type');
+            const newType = currentType === 'password' ? 'text' : 'password';
+            $input.attr('type', newType);
+
+            // Toggle класса is-active на кликнутой кнопке
+            $button.toggleClass('is-active');
+         });
+      });
+   }
+};
+
 $(function () {
    // numsModule.init();
    // lozadModule.init();
@@ -621,4 +749,6 @@ $(function () {
    selectModule.init();
    accordionModule.init();
    navModule.init();
+   passwordToggleModule.init();
+   authorsLabelModule.init();
 });
