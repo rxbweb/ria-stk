@@ -11,9 +11,15 @@
       padding: 19px 20px
       border-radius: 10px
       border: var(--border-red)
-      &--active
+      &.is-active
          background: var(--accent)
          color: #fff
+   &-item
+      display: none
+      &.is-active
+         display: block
+         animation-name: show-tabs-item
+         animation-duration: .3s
    @include md
       &__btn
          padding: 14px 16px
@@ -28,3 +34,9 @@
          padding: 9px 12px
          white-space: nowrap
          letter-spacing: -0.48px
+
+@keyframes show-tabs-item
+   0%
+      opacity: 0
+   100%
+      opacity: 1
