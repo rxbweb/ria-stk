@@ -1,0 +1,17 @@
+.spotlight
+   min-height: 200px
+   padding: 30px
+   background: #d9d9d9 url(../images/spotlight/spotlight-bg.jpg) no-repeat center / cover
+   border-radius: 15px
+   overflow: hidden
+   display: flex
+   flex-direction: column
+   align-items: center
+   justify-content: space-around
+   &--large
+      min-height: 600px
+      background: #d9d9d9 url(../images/spotlight/spotlight-bg-large.jpg) no-repeat center / cover
+   &__title
+      @extend .title
+      @include fluidFontSize(20px, 30px, 360px, 1920px, 20px)
+      text-align: center
