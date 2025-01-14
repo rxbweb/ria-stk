@@ -1,11 +1,23 @@
 .links
-   &__list
-      width: 100% 
-      max-width: 1080px
-      margin-left: auto
-   &__button
+   &__inner
+      @include margin-bottom(20px)
+   &__header
+      display: flex
+      justify-content: space-between
+      align-items: center
+   &__date
+      display: flex
+      align-items: center
+      gap: 8px
+      &-text
+         padding: 4px 8px
+         color: #fff
+         border-radius: 5px
+         background: #9D7D4B
+   &__title
       @extend .title
-      @extend .title--second
+      @extend .title--fourth
+   &__button
       @extend .bottom-border
       min-height: 108px
       padding: 30px 0
@@ -19,7 +31,34 @@
             &__icon
                background: var(--accent)
                color: #fff
+   &__info
+      @include margin-bottom(20px)
+   &__name
+      @extend .title
+      @extend .title--second
+   &__text
+      color: #47535E
    &__icon
+      background: #fff
       @extend .btn
       @extend .btn--small
       @extend .btn--arrow
+   &__list
+      width: 100% 
+      max-width: 1080px
+      margin-left: auto
+      &--2
+         @include margin-bottom(20px)
+         .links
+            &__button
+               padding: 20px 30px
+               gap: 30px
+               background: #F0F0F0
+               border-radius: 15px
+               &::after
+                  display: none
+            &__icon
+               width: 32px
+               height: 32px
+               &::after
+                  font-size: 14px
