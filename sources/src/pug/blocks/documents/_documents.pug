@@ -1,0 +1,17 @@
+section.section.section--documents
+   .section__wrapper
+      .section__header
+         .section__header-row
+            h2.section__header-title Документы
+      .section__content
+         .documents
+            .documents__inner
+               ul.documents__list
+                  each document in ['Редакционная политика', 'Публичная офферта']
+                     li
+                        a.documents__download(href="#")
+                           .documents__icon
+                              img(src="images/icons/doc.svg", alt="иконка" width="24" height="24")
+                           .documents__info
+                              p.documents__title= document
+                              p.documents__size 1.0 MB
