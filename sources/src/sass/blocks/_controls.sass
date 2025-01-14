@@ -1,0 +1,27 @@
+.controls
+   width: 300px
+   padding: 20px
+   border-radius: 15px
+   background: #F0F0F0
+   display: flex
+   flex-direction: column
+   &__btn
+      display: flex
+      align-items: center
+      width: 100%
+      max-width: 100%
+      min-height: 56px
+      padding: 12px 0
+      gap: 15px
+      color: var(--black)
+      border-bottom: 1px solid #D9D9D9
+      span
+         white-space: nowrap
+         text-overflow: ellipsis
+         overflow: hidden
+      &:last-child
+         border-bottom: none
+      svg
+         width: 32px
+         height: 32px
+         flex-shrink: 0
