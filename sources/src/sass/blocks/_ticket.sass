@@ -18,14 +18,10 @@
       @include margin-bottom(22px)
       &-row
          padding-bottom: 15px
-         display: flex
+         display: grid
+         grid-template-columns: 1fr 1fr 1fr 178px
+         gap: 30px
          border-bottom: 1px solid #CDCDCD
-         & > *
-            &:nth-last-child(2)
-               margin-right: 40px
-            &:last-child
-               margin-left: auto
-         @include margin-right(76px)
       &-col
          @include margin-bottom(5px)
          &:last-child
@@ -33,6 +29,7 @@
             flex-direction: column
             justify-content: center
       &-primary
+         white-space: nowrap
          @extend .title
          @include fluidFontSize(20px, 24px, 360px, 1920px, 20px)
       .button
@@ -41,9 +38,6 @@
    @include lg
       &__content
          flex-basis: 720px
-      &__table
-         &-row
-            @include margin-right(40px)
    @include md
       &__row
          flex-direction: column
@@ -58,6 +52,7 @@
    @include sm
       &__table
          &-row
+            display: flex
             flex-wrap: wrap
             gap: 10px
             & > *
@@ -66,9 +61,6 @@
          &-col
             width: calc(50% - 5px)
             margin-right: 0
-   @include xs
-      &__table
-         &-col
             .button
                padding-left: 12px
                padding-right: 12px
