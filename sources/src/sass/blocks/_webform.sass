@@ -1,0 +1,130 @@
+.webform
+   @include margin-bottom(40px)
+   &__title
+      @extend .title
+      text-align: center
+   &__form
+      width: 100%
+      max-width: 600px
+      margin: 0 auto
+      border-radius: 15px
+      background: #fff
+      box-shadow: 0px 4px 15px 0px rgba(62, 62, 62, 0.15)
+      overflow: hidden
+      & > *
+         padding: 40px
+         &:not(:last-child)
+            border-bottom: 1px solid #CDCDCD
+   &__body
+      padding: 40px
+      @include margin-bottom(20px)
+      & > .webform__description:first-child
+         margin-bottom: 40px
+   &__accounts
+      margin-bottom: 40px
+      display: flex
+      justify-content: center
+      gap: 32px
+      &-btn
+         width: 56px
+         height: 56px
+         display: flex
+         justify-content: center
+         align-items: center
+         overflow: hidden
+         border: 1px solid #CDCDCD
+         border-radius: var(--border-radius)
+   &__remark
+      color: #191C23
+      text-align: center
+      display: flex
+      justify-content: center
+      position: relative
+      &::after
+         content: ''
+         position: absolute
+         left: 0
+         right: 0
+         top: 50%
+         transform: translateY(-50%)
+         height: 1px
+         background: #CDCDCD
+      span
+         padding: 0 20px
+         background: #fff
+         position: relative
+         z-index: var(--z-index)
+   &__inputs
+      @include margin-bottom(20px)
+   &__label
+      display: flex
+      flex-direction: column
+      gap: 2px
+      &-row
+         display: flex
+         justify-content: space-between
+         align-items: center
+      &-title
+         color: #191C23
+         font-size: 14px
+         line-height: 140%
+      &-comment
+         color: var(--accent)
+         font-size: 12px
+      &-field
+         display: block
+         position: relative
+         .btn
+            width: auto
+            height: auto
+            position: absolute
+            right: 10px
+            top: 50%
+            transform: translateY(-50%)
+            border: none
+            &:hover,
+            &:focus,
+            &:active
+               background: transparent
+            &--eye
+               &.is-active
+                  @include icomoon('\e90e', #47535E, 13px)
+      &-input
+         width: 100%
+         padding: 13px 10px 11px
+         border-radius: 5px
+         border: 1px solid #CDCDCD
+         background: #fff
+         font-size: 16px
+         line-height: 140%
+         &::placeholder
+            color: #999
+         .webform__label-field--icon &
+            padding-right: 40px
+      &-note
+         color: #67686B
+         font-size: 12px
+   &__description
+      text-align: center
+      a
+         color: #9D7D4B
+         text-decoration: underline
+   &__bottom
+      padding: 30px 40px
+   &__manage
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+      gap: 8px
+   &__agree
+      font-size: 14px
+      &__label
+         gap: 8px
+      &__checkbox
+         border-color: #CDCDCD
+   &__controls
+      display: flex
+      justify-content: space-between
+      align-items: center
+      &-btn
+         color: #9D7D4B
