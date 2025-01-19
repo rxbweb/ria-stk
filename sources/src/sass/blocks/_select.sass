@@ -5,6 +5,7 @@
       width: 80px
    &__active
       @extend input
+      width: 100%
       padding: 13px 18px
       padding-right: 38px
       height: 100%
@@ -24,6 +25,14 @@
             top: 2px
             @include xs
                top: 5px
+      .select--secondary &
+         min-height: 42px
+         padding: 10px
+         text-align: left
+         font-size: 16px
+         background: #fff
+         &::after
+            color: #47535E
    &__list
       display: none
       padding: 10px 20px
@@ -37,8 +46,9 @@
       transform: translateX(-50%)
       z-index: var(--z-index)
       user-select: none
-      cursor: pointer
       @include margin-bottom(5px)
+      .select--secondary &
+         width: 100%
       &.is-active
          display: block
    &__item

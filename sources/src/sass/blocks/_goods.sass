@@ -1,0 +1,134 @@
+.goods
+   &__box
+      padding: 40px
+      border-radius: 15px
+      background: #F3F3F3
+      overflow: hidden
+      @include margin-bottom(40px)
+      .webform
+         &__form
+            border-radius: 0
+            background: transparent
+         &__body
+            padding: 0
+   &__title
+      @extend .title
+      @include fluidFontSize(20px, 40px, 360px, 1920px, 40px)
+   &__table
+      color: #191C23
+      @include margin-bottom(20px)
+      &-header,
+      &-item
+         display: grid
+         grid-template-columns: minmax(44%, 500px) 192px 192px 192px 64px
+         & > *
+            padding-left: 40px
+            &:first-child
+               padding-left: 0
+      &-header
+         padding-bottom: 20px
+         border-bottom: 1px solid #D9D9D9
+      &-heading
+         font-weight: 500
+         color: #47535E
+      &-list
+         @include margin-bottom(20px)
+      &-col
+         display: flex
+         align-items: center
+         gap: 24px
+      &-img
+         width: 80px
+         height: 80px
+         padding: 6px
+         border-radius: var(--border-radius)
+         background: #FFF
+         overflow: hidden
+         display: flex
+         justify-content: center
+         align-items: center
+         flex-shrink: 0
+         position: relative
+         img
+            max-width: 90%
+            height: auto
+            object-fit: cover
+            object-position: center
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+         &:not(:has(img))
+            @include icomoon('\e916', #47535E, 48px)
+      &-price
+         position: relative
+         display: flex
+         flex-direction: column
+         align-items: flex-start
+         gap: 2px
+         &-old
+            padding-right: 8px
+            color: #47535E
+            font-size: 14px
+            line-height: 140%
+            text-decoration-line: line-through
+         &-discount
+            padding: 0 3px
+            color: #fff
+            font-size: 14px
+            border-radius: 5px
+            background: #9D7D4B
+            position: absolute
+            right: 0
+            transform: translateX(85%) translateY(-2px)
+      &-delete
+         width: 24px
+         height: 24px
+         @include icomoon('\e915', #47535E, 24px)
+      &-controls
+         height: 46px
+         padding-right: 21px
+         border: 1px solid #CDCDCD
+         border-radius: var(--border-radius)
+         background: #fff
+         color: #191C23
+         overflow: hidden
+         display: flex
+         position: relative
+         &-count
+            width: 45px
+            padding-top: 2px
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-shrink: 0
+            border-right: 1px solid #CDCDCD
+         &-button
+            width: 21px
+            height: 21px
+            line-height: 21px
+            font-size: 20px
+            position: absolute
+            right: 0
+            bottom: 0
+            &:last-of-type
+               height: 22px
+               bottom: auto
+               top: 0
+               border-bottom: 1px solid #CDCDCD
+      &-bottom
+         display: flex
+         justify-content: flex-end
+         align-items: center
+         @include margin-right(100px)
+      &-total
+         display: flex
+         align-items: center
+         flex-wrap: wrap
+         gap: 20px
+         font-size: 24px
+         line-height: 1.4
+         &-title
+            padding-bottom: 2px
+            @extend .title
+            @extend .title--second

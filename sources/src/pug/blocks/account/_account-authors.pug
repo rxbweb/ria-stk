@@ -12,18 +12,13 @@ section.section.section--account
                      .account__text
                         p Приглашаем авторов к сотрудничеству. Если вы заинтересованы, отправьте свою рукопись в нашу редакцию, и мы свяжемся с вами, чтобы обсудить перспективы сотрудничества.
 
-                     form.webform(action="#")
-                        .webform__header
-                           h2.webform__title Загрузить новую рукопись
-                        .webform__body
-                           .webform__inputs
-                              label.webform__label
-                                 span.webform__label-title Название рукописи
-                                 input(type="text" placeholder="Введите название рукописи")
+                     include ../webform/_webform-manuscript
 
                      include ../documents/_documents
 
                      include ../_manuscript
+
+                     include ../webform/_webform-help
                      
                   .account__panel
                      include ../spotlight/_spotlight-02

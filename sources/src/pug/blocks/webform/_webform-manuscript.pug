@@ -1,0 +1,37 @@
+.webform
+   form.webform__form.webform__form--large(action="#")
+      .webform__body
+         h3.webform__name Загрузить новую рукопись
+         .webform__inputs
+            label.webform__label
+               span.webform__label-row
+                  span.webform__label-title Название рукописи
+               span.webform__label-field
+                  input.webform__label-input(type="text" placeholder="Введите название рукописи")
+         ul.webform__files
+            li.webform__files-item
+               .webform__files-top
+                  .webform__files-name Ваша рукопись
+               .webform__files-box
+                  input(type="file")
+                  .webform__files-download
+                  .webform__files-info
+                     p Нажмите, чтобы загрузить файл, либо перетащите сюда
+                     p.webform__files-description DOC, PDF или TXT до 10 МБ
+            li.webform__files-item
+               .webform__files-top
+                  .webform__files-name Публичная оферта
+               .webform__files-box
+                  input(type="file")
+                  .webform__files-download
+                  .webform__files-info
+                     p Нажмите, чтобы загрузить файл, либо перетащите сюда
+                     p.webform__files-description DOC, PDF или TXT до 10 МБ
+         .webform__controls
+            .agree
+               label.agree__label
+                  input(type="checkbox" name="form-agree" required)
+                  span.agree__checkbox
+                  span.agree__text Ознакомлен с #[a(href="#") редакционной политикой]
+         button.webform__submit.button
+               span Отправить

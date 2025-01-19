@@ -1,0 +1,26 @@
+.webform
+   form.webform__form.webform__form--large(action="#")
+      .webform__body
+         h3.webform__name Нужна помощь? Сообщите нам
+         p Заполните эту форму, если вы не получили обратную связь по рукописи или у вас появился какой-нибудь вопрос.
+         .webform__inputs
+            .webform__label
+               span.webform__label-row
+                  span.webform__label-title Название рукописи
+               .select.select--secondary
+                  button.select__active
+                     span Выберите тему обращения
+                  .select__list
+                     button.select__item.is-active Везде
+                     button.select__item По журналам
+                     button.select__item По книгам
+                     button.select__item По статьям
+                     button.select__item По новостям
+                     button.select__item По мероприятиям
+            label.webform__label
+               span.webform__label-row
+                  span.webform__label-title Текст обращения
+               span.webform__label-field
+                  textarea.webform__label-textarea(type="text" placeholder="Коротко объясните суть проблемы (необязательно)")
+         button.webform__submit.button
+               span Отправить
