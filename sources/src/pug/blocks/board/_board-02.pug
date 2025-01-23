@@ -79,7 +79,11 @@
 
 section.section.section--board.section--padding-top-none
    .section__wrapper.container
-      include ../breadcrumbs/_breadcrumbs-authors
+      include ../breadcrumbs/_breadcrumbs
+      +breadcrumbs([
+         { href: '#', title: 'Главная' },
+         { href: '#', title: 'Авторы' }
+      ])
       .section__header.section__header--margin
          .section__header-row
             h1.section__header-heading Авторы

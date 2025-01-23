@@ -5,12 +5,12 @@ section.section.section--padding-top-none.section--specs
             .bg-image
                img(src="images/specs/specs-bg.jpg", alt="фоновая картинка")
             .specs__inner.container
-               .breadcrumbs
-                  .breadcrumbs__inner
-                     .breadcrumbs__list
-                        a(href="#") Главная
-                        a(href="#") Книги
-                        a(href="#") Цифровое качество. Свод знаний о цифровой трансформации
+               include ../breadcrumbs/_breadcrumbs
+               +breadcrumbs([
+                  { href: '#', title: 'Главная' },
+                  { href: '#', title: 'Книги' },
+                  { href: '#', title: 'Цифровое качество. Свод знаний о цифровой трансформации' }
+               ])
                .specs__box
                   .specs__img
                      img(src="images/specs/specs-01.png", alt="Цифровое качество. Свод знаний о цифровой трансформации" width="310" height="428")

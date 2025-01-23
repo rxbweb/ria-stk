@@ -3,6 +3,10 @@ block head
    title Личный кабинет
 block page
 
-   include blocks/breadcrumbs/_breadcrumbs-account
+   include blocks/breadcrumbs/_breadcrumbs
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Личный кабинет' }
+   ])
    
    include blocks/account/_account-bonus-02

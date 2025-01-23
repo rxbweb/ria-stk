@@ -5,7 +5,11 @@ block page
 
    include blocks/_sidebar
 
-   include blocks/breadcrumbs/_breadcrumbs-archive
+   include blocks/breadcrumbs/_breadcrumbs
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Архив' }
+   ])
 
    include blocks/books/_books-02
 

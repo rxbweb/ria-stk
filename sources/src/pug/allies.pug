@@ -3,7 +3,11 @@ block head
    title Партнеры
 block page
 
-   include blocks/breadcrumbs/_breadcrumbs-allies
+   include blocks/breadcrumbs/_breadcrumbs
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Партнеры' }
+   ])
    
    include blocks/_allies
 

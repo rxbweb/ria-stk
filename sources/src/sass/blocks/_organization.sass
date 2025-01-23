@@ -5,8 +5,13 @@
    min-height: 750px
    color: var(--color)
    position: relative
-   &--2
+   &--third
       max-height: 750px
+      .breadcrumbs
+         position: absolute
+         top: 30px
+         &__inner
+            padding: 0
    .bg-image
       img,
       picture
@@ -82,7 +87,7 @@
       &__inner
          padding: 100px var(--padding) 50px
          min-height: auto
-         .organization--2 &
+         .organization--third &
             padding: 130px var(--padding) 130px
       &__row
          grid-template-columns: 1fr

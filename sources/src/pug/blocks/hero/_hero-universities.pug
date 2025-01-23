@@ -5,11 +5,11 @@ section.section.section--hero.section--padding-none.section--margin-bottom
             .bg-image
                img(src="images/hero/hero-bg.jpg", alt="фоновая картинка" width="1920" height="750")
             .hero__inner.container
-               .breadcrumbs
-                  .breadcrumbs__inner
-                     .breadcrumbs__list
-                        a(href="#") Главная
-                        a(href="#") ВУЗам
+               include ../breadcrumbs/_breadcrumbs
+               +breadcrumbs([
+                  { href: '#', title: 'Главная' },
+                  { href: '#', title: 'ВУЗам' }
+               ])
                .hero__row
                   .hero__info
                      h1.hero__title ВУЗам

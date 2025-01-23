@@ -26,7 +26,11 @@ section.section.section--edition.section--padding-top-none
    .section__bg
       img(src="images/edition/edition-bg.jpg", alt="фоновая картинка" width="1920" height="640")
    .section__wrapper.container
-      include ../breadcrumbs/_breadcrumbs-editorial
+      include ../breadcrumbs/_breadcrumbs
+      +breadcrumbs([
+         { href: '#', title: 'Главная' },
+         { href: '#', title: 'Редакция' }
+      ])
       .section__header
          .section__header-row
             h1.section__header-heading Редакция

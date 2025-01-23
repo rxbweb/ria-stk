@@ -3,7 +3,11 @@ block head
    title Книги
 block page
 
-   include blocks/breadcrumbs/_breadcrumbs-documents
+   include blocks/breadcrumbs/_breadcrumbs
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Авторы' }
+   ])
 
    include blocks/books/_books-01
 

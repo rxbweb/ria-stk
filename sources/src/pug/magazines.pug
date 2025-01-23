@@ -3,7 +3,11 @@ block head
    title Журналы
 block page
 
-   include blocks/breadcrumbs/_breadcrumbs-magazines 
+   include blocks/breadcrumbs/_breadcrumbs
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Журналы' }
+   ])
    
    include blocks/journals/_journals-01
 

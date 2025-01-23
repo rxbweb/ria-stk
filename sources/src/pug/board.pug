@@ -3,7 +3,13 @@ block head
    title Редакционный совет
 block page
 
-   include blocks/breadcrumbs/_breadcrumbs-board
+   include blocks/breadcrumbs/_breadcrumbs
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Журналы' },
+      { href: '#', title: 'Страница журнала' },
+      { href: '#', title: 'Редакционный совет' }
+   ])
    
    include blocks/board/_board-01
 

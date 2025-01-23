@@ -1,6 +1,6 @@
 section.section.section--padding-none.section--organization
    .section__wrapper
-      .organization.organization--2
+      .organization.organization--third
          .bg-image
             picture
                source(srcset="images/organization/organization-bg-mob.webp" type="image/webp" media="(max-width: 575px)")
@@ -8,11 +8,11 @@ section.section.section--padding-none.section--organization
                source(srcset="images/organization/organization-bg.webp")
                img(src="images/organization/organization-bg.jpg" alt="фоновая картинка" width="1920" height="800")
          .organization__inner.container
-            .breadcrumbs.breadcrumbs--second
-               .breadcrumbs__inner
-                  .breadcrumbs__list
-                     a(href="#") Главная
-                     a(href="#") ВОК
+            include ../breadcrumbs/_breadcrumbs
+            +breadcrumbs([
+               { href: '#', title: 'Главная' },
+               { href: '#', title: 'ВОК' }
+            ])
             .organization__row
                .organization__left
                   .organization__logo

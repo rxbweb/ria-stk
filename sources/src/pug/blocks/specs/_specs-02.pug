@@ -5,11 +5,11 @@ section.section.section--padding-top-none.section--specs
             .bg-image
                img(src="images/specs/specs-bg.jpg", alt="фоновая картинка")
             .specs__inner.container
-               .breadcrumbs
-                  .breadcrumbs__inner
-                     .breadcrumbs__list
-                        a(href="#") Главная
-                        a(href="#") Рекламодателям
+               include ../breadcrumbs/_breadcrumbs
+               +breadcrumbs([
+                  { href: '#', title: 'Главная' },
+                  { href: '#', title: 'Рекламодателям' }
+               ])
                .specs__header
                   h1.specs__title Рекламодателям
                .specs__box
