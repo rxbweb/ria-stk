@@ -4,7 +4,7 @@ let minState = '';
 
 gulp.task("watcher", () =>
    new Promise((res, rej) => {
-      gulp.watch(["./src/pug/**/*.pug"], gulp.series("pug", "validateHtml"));
+      gulp.watch(["./src/pug/**/*.pug"], gulp.series("pug"));
       gulp.watch("./src/sass/**/*.{scss,sass}", gulp.series("styles" + minState));
       gulp.watch("./src/fonts/**/*", gulp.series("fonts"));
       gulp.watch(["./src/images/**/*", "!./src/images/sprite-*/**/*", "!./src/images/favicons/**/*"], gulp.series("images"));

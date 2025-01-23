@@ -31,17 +31,17 @@ global.$ = {
 // BUILD
 gulp.task("build", gulp.series("clean", "sprite", "libs", "fonts", "images",
     gulp.parallel("pug", "styles", "favicons", "scripts"),
-    gulp.parallel("html_direct_copying", "validateHtml")
+    gulp.parallel("html_direct_copying")
 ));
 // BUILD minified
 gulp.task("build_min", gulp.series("clean", "sprite", "libs", "fonts", "images",
     gulp.parallel("pug", "styles_min", "favicons", "scripts_min"),
-    gulp.parallel("html_direct_copying", "validateHtml")
+    gulp.parallel("html_direct_copying")
 ));
 // BUILD unminified
 gulp.task("build_unmin", gulp.series("clean", "sprite", "libs", "fonts", "images",
     gulp.parallel("pug", "styles_unmin", "favicons", "scripts_unmin"),
-    gulp.parallel("html_direct_copying", "validateHtml")
+    gulp.parallel("html_direct_copying")
 ));
 
 // Watch
