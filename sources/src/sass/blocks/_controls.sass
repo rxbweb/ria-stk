@@ -15,6 +15,7 @@
       gap: 15px
       color: var(--black)
       border-bottom: 1px solid #D9D9D9
+      transition: var(--transition)
       span
          white-space: nowrap
          text-overflow: ellipsis
@@ -25,3 +26,13 @@
          width: 32px
          height: 32px
          flex-shrink: 0
+         fill: #47535E
+         transition: var(--transition)
+      &.is-active,
+      &:hover,
+      &:focus
+         color: var(--accent)
+         svg
+            fill: var(--accent)
+      &.is-active
+         font-weight: 700

@@ -1,40 +1,50 @@
--
-   const controls = [
-      {
-         title: 'Абонементный доступ',
-      },
-      {
-         title: 'Электронные журналы',
-      },
-      {
-         title: 'Статьи / Подборки',
-      },
-      {
-         title: 'Книги',
-      },
-      {
-         title: 'Мероприятия',
-      },
-      {
-         title: 'Для авторов',
-      },
-      {
-         title: 'Бонусная система',
-      },
-      {
-         title: 'Избранное',
-      },
-      {
-         title: 'Настройки профиля',
-      },
-      {
-         title: 'Корзина',
-      },
-   ]
+mixin controls(activeIndex)
+   -
+      const controls = [
+         { 
+            title: 'Абонементный доступ',
+            href: 'account-ticket-01.html'
+         },
+         { 
+            title: 'Электронные журналы',
+            href: 'account-ticket-01.html'
+         },
+         { 
+            title: 'Статьи / Подборки'
+         },
+         { 
+            title: 'Книги'
+         },
+         { 
+            title: 'Мероприятия'
+         },
+         { 
+            title: 'Для авторов',
+            href: 'account-authors.html'
+         },
+         { 
+            title: 'Бонусная система',
+            href: 'account-bonus-01.html'
+         },
+         { 
+            title: 'Избранное'
+         },
+         { 
+            title: 'Настройки профиля',
+            href: 'account-profile.html'
+         },
+         { 
+            title: 'Корзина',
+            href: 'account-basket-01.html'
+         },
+      ];
 
-.controls
-   each control, index in controls
-      a.controls__btn(href="#")
-         svg
-            use(href=`images/sprites/main.stack.svg#svg-controls-${(index + 1).toString().padStart(2, '0')}`)
-         span= control.title
+   .controls
+      each control, index in controls
+         a.controls__btn(
+            href= control.href
+            class=(activeIndex === index ? 'is-active' : '')
+         )
+            svg
+               use(href=`images/sprites/main.stack.svg#svg-controls-${(index + 1).toString().padStart(2, '0')}`)
+            span= control.title

@@ -7,6 +7,7 @@ section.section.section--account
                   .account__aside
                      .account__controls
                         include ../controls/_controls
+                        +controls(9)
                   .account__info
                      h2.account__title Корзина
                      .goods
@@ -179,14 +180,14 @@ section.section.section--account
                                                 input(type="checkbox" name="form-agree" required)
                                                 span.agree__checkbox
                                                 span.agree__text Я согласен на #[a(href="#") обработку персональных данных]
-                                          .webform__payment
-                                             .webform__payment-main
-                                                h3.webform__payment-title Способы оплаты
-                                                ul.webform__payment-list
-                                                   li.webform__payment-item
-                                                      a.webform__payment-method(href="#")
+                                          .webform__options
+                                             .webform__options-main
+                                                h3.webform__options-title Способы оплаты
+                                                ul.webform__options-list
+                                                   li.webform__options-item
+                                                      a.webform__options-method(href="#")
                                                          img(src="images/webform/robokassa.svg", alt="robokassa" width="182" height="69")
-                                             button.webform__payment-button.button.button--icon
+                                             button.webform__options-button.button.button--icon
                                                 span Перейти к оплате
                                                 i.icon.icon-arrow-right
 
@@ -250,16 +251,16 @@ section.section.section--account
                                                 input(type="checkbox" name="form-agree" required)
                                                 span.agree__checkbox
                                                 span.agree__text Я согласен на #[a(href="#") обработку персональных данных]
-                                          .webform__payment
-                                             .webform__payment-main
-                                                h3.webform__payment-title Способы оплаты
-                                                ul.webform__payment-list
-                                                   li.webform__payment-item
-                                                      a.webform__payment-method.webform__payment-method--large(href="#")
-                                                         .webform__payment-icon
-                                                         .webform__payment-info
+                                          .webform__options
+                                             .webform__options-main
+                                                h3.webform__options-title Способы оплаты
+                                                ul.webform__options-list
+                                                   li.webform__options-item
+                                                      a.webform__options-method.webform__options-method--payment(href="#")
+                                                         .webform__options-icon
+                                                         .webform__options-info
                                                             p Оплата по счету
-                                             button.webform__payment-button.button.button--icon
+                                             button.webform__options-button.button.button--icon
                                                 span Перейти к оплате
                                                 i.icon.icon-arrow-right
 
