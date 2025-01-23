@@ -1,25 +1,29 @@
 .webform
    @include margin-bottom(40px)
+   &__header
+      display: flex
+      justify-content: space-between
+      align-items: center
+   &__close
+      @extend .btn-close
    &__title
       @extend .title
       text-align: center
    &__form
       width: 100%
-      max-width: 600px
       margin: 0 auto
       border-radius: 15px
-      background: #fff
-      box-shadow: 0px 4px 15px 0px rgba(62, 62, 62, 0.15)
+      background: #F3F3F3
+      box-shadow: none
       overflow: hidden
       & > *
          padding: 40px
          &:not(:last-child)
             border-bottom: 1px solid #CDCDCD
-      &--large
-         width: 100%
-         max-width: 100%
-         background: #F3F3F3
-         box-shadow: none
+      &--narrow
+         max-width: 600px
+         background: #fff
+         box-shadow: 0px 4px 15px 0px rgba(62, 62, 62, 0.15)
    &__body
       padding: 40px
       @include margin-bottom(20px)
@@ -68,6 +72,8 @@
       display: flex
       flex-direction: column
       gap: 2px
+      &--large
+         grid-column: span 2
       &-row
          display: flex
          justify-content: space-between
@@ -101,6 +107,7 @@
       &-textarea
          width: 100%
          padding: 13px 10px 11px
+         display: block
          border-radius: 5px
          border: 1px solid #CDCDCD
          background: #fff
@@ -110,6 +117,8 @@
             color: #999
          .webform__label-field--icon &
             padding-right: 40px
+         &[type="file"]
+            padding: 8px 10px
       &-textarea
          height: 98px
          resize: none
@@ -194,3 +203,70 @@
       display: grid
       grid-template-columns: repeat(3, 1fr)
       gap: 20px 40px
+   &__textarea
+      display: grid
+      grid-template-columns: 2fr 1fr
+      gap: 20px
+   &__payment
+      margin-top: 40px
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+      gap: 40px
+      &-main
+         flex-grow: 1
+         @include margin-bottom(20px)
+      &-title
+         @extend .title
+         @include fluidFontSize(20px, 24px, 360px, 1920px, 24px)
+         letter-spacing: -0.72px
+      &-button
+         flex-shrink: 0
+      &-method
+         width: 186px
+         height: 80px
+         display: flex
+         justify-content: center
+         align-items: center
+         border-radius: 15px
+         border: 1px solid var(--accent)
+         background: #fff
+         &--large
+            width: 380px
+            height: 72px
+            padding: 8px
+            color: #191C23
+            font-weight: 500
+            justify-content: flex-start
+            gap: 10px
+      &-icon
+         width: 56px
+         height: 56px
+         flex-shrink: 0
+         display: flex
+         justify-content: center
+         align-items: center
+         border-radius: var(--border-radius)
+         background: #F0F0F0
+         overflow: hidden
+         @include icomoon('\e91c', #000, 24px)
+   &__tabs
+      display: flex
+      &-button
+         padding: 13px 12px
+         min-width: 176px
+         display: block
+         text-align: center
+         color: #999
+         border: 1px solid #CDCDCD
+         border-right-width: 0
+         background: rgba(0, 0, 0, 0.05)
+         &.is-active
+            background: #47535E
+            border-color: #47535E
+            color: #fff
+         &:first-child
+            border-radius: 4px 0 0 4px
+         &:last-child
+            border-radius: 0px 4px 4px 0px
+            border-right-width: 1px
