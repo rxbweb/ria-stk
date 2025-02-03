@@ -4,12 +4,15 @@
       grid-template-columns: repeat(2, 1fr)
       gap: 20px
    &__download
+      height: 100%
       padding: 8px
       display: flex
       align-items: center
       gap: 10px
       border-radius: 10px
       border: 1px solid #CDCDCD
+   &__info
+      @include margin-bottom(2px)
    &__icon
       --size: 56px
       width: var(--size)
@@ -28,3 +31,14 @@
    &__size
       color: #67686B
       font-size: 14px
+   @include sm
+      &__list
+         grid-template-columns: 1fr
+         gap: 15px
+   @include xs
+      &__info
+         @include margin-bottom(5px)
+      &__list
+         gap: 10px
+      &__title
+         font-size: 14px
