@@ -12,6 +12,8 @@
       align-items: center
       gap: 20px
       user-select: none
+      &:has(.swiper-button-lock, .swiper-pagination-lock)
+         display: none
    .swiper-controls
       margin-bottom: 0
    &-pagination
@@ -79,6 +81,8 @@
                color: #fff
          &::after
             font-size: 24px
+   &-notification
+      margin: 0
    @include ms
       @include margin-bottom(20px)
       &-controls
