@@ -1,0 +1,19 @@
+mixin button(text = 'Кнопка', extraClass = '', iconClass = '', isLink = true, href = '#', isDiv = false)
+   if isLink
+      a.button(class=extraClass href=href)
+         if text
+            span= text
+         if iconClass
+            i(class=`icon ${iconClass}`)
+   else if isDiv
+      div.button(class=extraClass)
+         if text
+            span= text
+         if iconClass
+            i(class=`icon ${iconClass}`)
+   else
+      button.button(class=extraClass)
+         if text
+            span= text
+         if iconClass
+            i(class=`icon ${iconClass}`)
