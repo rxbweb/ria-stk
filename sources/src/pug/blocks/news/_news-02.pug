@@ -15,9 +15,8 @@ section.section.section--news
       .section__header
          .section__header-row
             h2.section__header-title Статьи
-            a.section__header-button.button.button--icon(href="#")
-               span Посмотреть все статьи
-               i.icon.icon-arrow-small
+            include ../button/_button.pug
+            +button('Посмотреть все статьи', 'button--icon section__header-button', 'icon-arrow-small')
       .section__content
          .news
             .news__inner
@@ -30,19 +29,13 @@ section.section.section--news
                                  img(src=news.src, alt="картинка статьи" width="519" height="390")
                               .news__posts-info
                                  h3.news__posts-title #{news.title}
-                                 .news__posts-button.button.button--outline
-                                    span Читать статью
-                                    i.icon.icon-arrow-small
+                                 +button('Читать статью', 'button--outline news__posts-button', 'icon-arrow-small', false, '', true)
                   aside.news__aside
                      .news__articles
                         ul.news__articles-list
                            each article in ['Обязательную маркировку медицинских перчаток введут в России с 2025 года', 'В России предложили выдавать предостережения бизнесу через систему маркировки', 'РИА «Стандарты и качество» отмечено благодарственным письмом от руководителя Росстандарта']
                               li.news__articles-item
                                  h3.news__articles-title #{article}
-                                 a.news__articles-button.button.button--outline(href="#")
-                                    span Читать новость
-                                    i.icon.icon-arrow-small
+                                 +button('Читать новость', 'button--outline news__articles-button', 'icon-arrow-small')
       .section__footer
-         a.section__footer-button.button.button--icon(href="#")
-            span Посмотреть все статьи
-            i.icon.icon-arrow-small
+         +button('Посмотреть все статьи', 'button--icon section__footer-button', 'icon-arrow-small')

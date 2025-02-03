@@ -107,6 +107,29 @@ const swiper = new Swiper(".history__swiper", {
    },
 });
 
+$('.card__table-swiper').each(function () {
+   const $this = $(this);
+
+   new Swiper($this[0], {
+      slidesPerView: 2,
+      spaceBetween: 15,
+      keyboard: true,
+      navigation: {
+         prevEl: $this.find('.card__table-prev')[0],
+         nextEl: $this.find('.card__table-next')[0],
+      },
+      pagination: {
+         el: $this.find('.card__table-pagination')[0],
+         clickable: true,
+      },
+      breakpoints: {
+         768: {
+            spaceBetween: 20,
+         },
+      },
+   });
+});
+
 // Синхронизация кнопок и слайдов
 const dateButtons = document.querySelectorAll(".history__dates-btn");
 
@@ -120,6 +143,27 @@ dateButtons.forEach((button, index) => {
 
       // Удаляем класс is-active у всех кнопок и добавляем только нужной
       setActiveButton(index);
+   });
+});
+
+$('.account__products-swiper').each(function (index, element) {
+   new Swiper(element, {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      navigation: {
+         nextEl: $(element).find('.swiper-button-next')[0],
+         prevEl: $(element).find('.swiper-button-prev')[0],
+      },
+      pagination: {
+         el: $(element).find('.swiper-pagination')[0],
+         clickable: true,
+      },
+      breakpoints: {
+         1280: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+         },
+      },
    });
 });
 

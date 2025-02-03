@@ -1,7 +1,7 @@
 .webform
    form.webform__form(action="#")
       .webform__body
-         .webform__jheader
+         .webform__header
             h3.webform__name Загрузить новую рукопись
          .webform__inputs
             label.webform__label
@@ -17,7 +17,7 @@
                   input(type="file")
                   .webform__files-download
                   .webform__files-info
-                     p Нажмите, чтобы загрузить файл, либо перетащите сюда
+                     p.webform__files-manual Нажмите, чтобы загрузить файл#[span , либо перетащите сюда]
                      p.webform__files-description DOC, PDF или TXT до 10 МБ
             li.webform__files-item
                .webform__files-top
@@ -26,7 +26,7 @@
                   input(type="file")
                   .webform__files-download
                   .webform__files-info
-                     p Нажмите, чтобы загрузить файл, либо перетащите сюда
+                     p.webform__files-manual Нажмите, чтобы загрузить файл#[span , либо перетащите сюда]
                      p.webform__files-description DOC, PDF или TXT до 10 МБ
          .webform__controls
             .agree

@@ -1,4 +1,6 @@
 .webform
+   --webform-margin: 20px
+   --webform-padding: var(--box-padding)
    @include margin-bottom(40px)
    &__header
       display: flex
@@ -8,6 +10,7 @@
       @extend .btn-close
    &__title
       @extend .title
+      @include fluidFontSize(38px, 64px, 360px, 1920px, 48px)
       text-align: center
    &__form
       width: 100%
@@ -25,10 +28,13 @@
          background: #fff
          box-shadow: 0px 4px 15px 0px rgba(62, 62, 62, 0.15)
    &__body
-      padding: 40px
-      @include margin-bottom(20px)
+      padding: var(--webform-padding)
+      @include margin-bottom(var(--webform-margin))
       & > .webform__description:first-child
          margin-bottom: 40px
+   &__top
+      margin-bottom: 40px
+      @include margin-bottom(40px)
    &__accounts
       margin-bottom: 40px
       display: flex
@@ -46,6 +52,7 @@
    &__name
       @extend .title
       @extend .title--seventh
+      letter-spacing: -0.96px
    &__remark
       color: #191C23
       text-align: center
@@ -67,7 +74,7 @@
          position: relative
          z-index: var(--z-index)
    &__inputs
-      @include margin-bottom(20px)
+      @include margin-bottom(var(--webform-margin))
    &__label
       display: flex
       flex-direction: column
@@ -125,6 +132,10 @@
       &-note
          color: #67686B
          font-size: 12px
+   &__caption
+      @extend .title
+      @include fluidFontSize(20px, 24px, 360px, 1920px, 24px)
+      letter-spacing: -0.72px
    &__description
       text-align: center
       a
@@ -143,13 +154,8 @@
       align-items: center
       &-btn
          color: #9D7D4B
-   &__agree
-      font-size: 14px
-      &__label
-         gap: 8px
-      &__checkbox
-         border-color: #CDCDCD
    .agree
+      color: #191C23
       a
          text-decoration: underline
          color: #9D7D4B
@@ -160,6 +166,9 @@
       display: grid
       gap: 20px
       grid-template-columns: repeat(2, 1fr)
+      &-item
+         display: flex
+         flex-direction: column
       &-top
          margin-bottom: 2px
          display: flex
@@ -167,14 +176,17 @@
          flex-wrap: wrap
          gap: 6px
       &-name
+         font-size: 14px
          color: #191C23
       &-box
          padding: 20px 22px
+         flex-grow: 1
          display: flex
          flex-direction: column
          align-items: center
          gap: 20px
          background: #fff url('../images/icons/lines.svg') no-repeat center / 100% 100%
+         cursor: pointer
          position: relative
          input
             width: 100%
@@ -182,6 +194,7 @@
             position: absolute
             inset: 0
             opacity: 0
+            cursor: pointer
       &-download
          width: 32px
          height: 32px
@@ -199,6 +212,7 @@
       &-description
          color: #999
          font-size: 14px
+         font-weight: 400
    &__box
       display: grid
       grid-template-columns: repeat(3, 1fr)
@@ -207,7 +221,7 @@
       display: grid
       grid-template-columns: 2fr 1fr
       gap: 20px
-   &__payment
+   &__options
       margin-top: 40px
       display: flex
       justify-content: space-between
@@ -217,21 +231,23 @@
          flex-grow: 1
          @include margin-bottom(20px)
       &-title
-         @extend .title
-         @include fluidFontSize(20px, 24px, 360px, 1920px, 24px)
-         letter-spacing: -0.72px
+         @extend .webform__caption
       &-button
          flex-shrink: 0
+      &-list
+         display: flex
+         flex-wrap: wrap
+         gap: 20px
       &-method
          width: 186px
          height: 80px
          display: flex
          justify-content: center
          align-items: center
-         border-radius: 15px
+         border-radius: 10px
          border: 1px solid var(--accent)
          background: #fff
-         &--large
+         &--payment
             width: 380px
             height: 72px
             padding: 8px
@@ -270,3 +286,173 @@
          &:last-child
             border-radius: 0px 4px 4px 0px
             border-right-width: 1px
+   &__block
+      @include margin-bottom(40px)
+   &__part,
+   &__selection
+      @include margin-bottom(20px)
+   &__access
+      @include margin-bottom(20px)
+      & > *
+         &:nth-last-child(2)
+            margin-bottom: 40px
+      &-header,
+      &-item
+         display: grid
+         grid-template-columns: 30.3% 24.5% 22.8% 22.4%
+         align-items: center
+      &-header
+         padding-bottom: 20px
+         border-bottom: 1px solid #D9D9D9
+         & > *
+            &:last-child
+               text-align: right
+      &-heading
+         color: #47535E
+         font-weight: 500
+      &-col
+         padding-left: 40px
+         overflow: hidden
+         &:first-child
+            padding-left: 0
+      &-list
+         @include margin-bottom(20px)
+      &-controls
+         display: flex
+         justify-content: flex-end
+         align-items: center
+         flex-wrap: wrap
+         gap: 16px
+      &-btn
+         width: 24px
+         height: 24px
+         flex-shrink: 0
+         display: flex
+         justify-content: center
+         align-items: center
+         background: #fff
+         color: #47535E
+         border: 1px solid currentColor
+         border-radius: 4px
+         overflow: hidden
+         &-change
+            @include icomoon('\e917', inherit, 15px)
+         &-lock
+            @include icomoon('\e91b', inherit, 16px)
+         &-delete
+            @include icomoon('\e915', inherit, 22px)
+      &-manage
+         display: flex
+         justify-content: space-between
+         align-items: center
+         .badge
+            width: 52px
+            height: 52px
+         &-info
+            display: flex
+            align-items: center
+            gap: 20px
+         &-box
+            @include margin-bottom(4px)
+         &-users
+            @extend .title
+            @include fluidFontSize(16px, 20px, 360px, 1920px, 16px)
+            letter-spacing: -0.6px
+      &-settings
+         display: flex
+         justify-content: flex-end
+         gap: 16px
+         &-btn
+            padding: 11px 14px
+            display: inline-block
+            border-radius: 5px
+            background: #47535E
+            border: 1px solid #47535E
+            color: #fff
+            font-size: 13px
+            font-weight: 500
+            white-space: nowrap
+            text-overflow: ellipsis
+            overflow: hidden
+            &--secondary
+               background: #fff
+               color: #47535E
+   @include md
+      --webform-padding: 30px
+      &__top,
+      &__accounts
+         margin-bottom: 30px
+   @include sm
+      --webform-padding: 20px
+      @include margin-bottom(30px)
+      &__top,
+      &__accounts
+         margin-bottom: 20px
+      &__form
+         &--narrow
+            --webform-padding: 30px 20px
+            max-width: 100%
+      &__title
+         text-align: left
+      &__files
+         &-box
+            padding: 20px
+         &-info
+            font-size: 14px
+         &-description
+            font-size: 13px
+         &-manual
+            span
+               display: none
+      &__body
+         & > .webform__description:first-child
+            margin-bottom: 30px
+         &--secondary
+            display: flex
+            flex-direction: column
+            .webform
+               &__accounts
+                  margin-bottom: 20px
+                  order: -1
+               &__remark
+                  display: none
+               &__submit
+                  margin-bottom: 0
+      &__description
+         text-align: left
+   @include xs
+      --webform-margin: 15px
+      --webform-padding: 20px 15px
+      &__body
+         & > .webform__description:first-child
+            margin-bottom: 20px
+      &__form
+         &--narrow
+            --webform-padding: 30px 15px
+      &__label
+         &-input,
+         &-textarea
+            font-size: 14px
+         &-title
+            font-size: 13px
+         &-comment
+            font-size: 11px
+      &__files
+         grid-template-columns: 1fr
+         gap: 15px
+         &-name
+            font-size: 13px
+      &__submit
+         width: 100%
+         min-height: 40px
+      &__name
+         letter-spacing: 0
+      &__controls
+         &-btn
+            padding-top: 2px
+            font-size: 14px
+      &__bottom
+         padding: 30px 20px
+      &__manage
+         flex-direction: column
+         align-items: center

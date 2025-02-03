@@ -39,7 +39,7 @@ section.section.section--hero.section--padding-none
             .hero__inner.container
                   .hero__slider
                      .swiper-wrapper
-                        - for (var i = 0; i < 4; i++)
+                        - for (let i = 0; i < 4; i++)
                            .swiper-slide
                               .hero__row
                                  .hero__info
@@ -47,9 +47,8 @@ section.section.section--hero.section--padding-none
                                     .hero__text
                                        p РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством, организатор деловых мероприятий, информационно-просветительский центр Всероссийской организации качества.
                                     .hero__bottom
-                                       a.button.button--icon(href="#")
-                                          span Узнать больше
-                                          i.icon.icon-arrow-small
+                                       include ../button/_button.pug
+                                       +button('Узнать больше', 'button--icon', 'icon-arrow-small')
                                  .hero__content
                                     .hero__books
                                        .hero__books-inner
