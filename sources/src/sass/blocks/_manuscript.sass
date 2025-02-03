@@ -1,15 +1,14 @@
 .manuscript
+   --manuscript-padding: 20px
    &__table
+      @extend .gray-box
       width: 100%
-      padding: 40px
-      border-radius: 15px
-      background: #F3F3F3
       border-collapse: separate
+      &-header,
       &-row
          display: flex
          & > *
-            width: 33.3%
-            padding: 20px 0
+            width: 36%
             color: var(--black)
             &:first-child
                flex-grow: 1
@@ -18,9 +17,27 @@
          &:last-child
             & > *
                padding-bottom: 0
+      &-list
+         & > *
+            padding-bottom: var(--manuscript-padding)
+            &:first-child
+               padding-top: var(--manuscript-padding)
+            &:last-child
+               padding-bottom: 0
       &-name
-         padding-bottom: 20px
+         padding-bottom: var(--manuscript-padding)
          text-align: left
          font-weight: 500
          color: #47535E
          border-bottom: 1px solid #D9D9D9
+   @include xs
+      --manuscript-padding: 15px
+      &__table
+         font-size: 14px
+         &-header,
+         &-row
+            & > *
+               &:not(:last-child)
+                  padding-right: 20px
+         &-name
+            padding-bottom: 15px
