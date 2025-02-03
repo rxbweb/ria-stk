@@ -6,6 +6,7 @@
    &__title
       @extend .title
       @extend .title--seventh
+      letter-spacing: -0.96px
    &__form
       &-row
          display: flex
@@ -14,9 +15,18 @@
             height: 46px
             padding: 12px 10px
             flex-grow: 1
-            font-size: 16px
             &::placeholder
                color: #999
          .button
             min-width: 170px
             flex-shrink: 0
+   @include sm
+      padding: 30px 15px
+   @include xs
+      &__form
+         &-row
+            flex-direction: column
+            .button
+               min-height: 40px
+            input
+               height: 40px
