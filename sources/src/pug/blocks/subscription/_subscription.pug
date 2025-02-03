@@ -3,9 +3,13 @@
       img(src="images/subscription/subscription-bg.jpg", alt="фоновая картинка")
    .subscription__inner
       .subscription__info
-         h2.subscription__title оформите подписку и получите доступ к системе привелегий
+         h2.subscription__title оформите подписку #[br] и получите доступ #[br] к системе привелегий
          a.button.button--icon(href="#")
             span Подробнее
             i.icon.icon-arrow-right
       .subscription__img
-         img(src="images/subscription/subscription-img.png", alt="картинка")
+         picture
+            source(srcset="images/subscription/subscription-img-mob.webp" media="(max-width: 575px)" type="image/webp")
+            source(srcset="images/subscription/subscription-img-mob.png" media="(max-width: 575px)" type="image/png")
+            source(srcset="images/subscription/subscription-img.webp" type="image/webp")
+            img(src="images/subscription/subscription-img.png" alt="картинка" width="440" height="307")
