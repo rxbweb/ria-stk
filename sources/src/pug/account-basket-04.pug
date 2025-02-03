@@ -1,0 +1,14 @@
+extends base/_layout
+block head
+   title Корзина
+block page
+
+   include blocks/breadcrumbs/_breadcrumbs
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Личный кабинет' },
+      { href: '#', title: 'Корзина' }
+   ],
+   'breadcrumbs--secondary')
+   
+   include blocks/account/_account-basket-04

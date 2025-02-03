@@ -1,12 +1,14 @@
 extends base/_layout
 block head
-   title Личный кабинет
+   title Бонусная система
 block page
 
    include blocks/breadcrumbs/_breadcrumbs
    +breadcrumbs([
       { href: '#', title: 'Главная' },
-      { href: '#', title: 'Личный кабинет' }
-   ])
-   
+      { href: '#', title: 'Личный кабинет' },
+      { href: '#', title: 'Бонусная система' }
+   ],
+   'breadcrumbs--secondary')
+
    include blocks/account/_account-bonus-01

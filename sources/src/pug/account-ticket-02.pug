@@ -1,0 +1,13 @@
+extends base/_layout
+block head
+   title Абонементный доступ
+block page
+
+   include blocks/breadcrumbs/_breadcrumbs
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Личный кабинет' },
+      { href: '#', title: 'Абонементный доступ' }
+   ])
+   
+   include blocks/account/_account-ticket-02

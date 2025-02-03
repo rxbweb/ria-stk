@@ -1,0 +1,13 @@
+extends base/_layout
+block head
+   title Личный кабинет
+block page
+
+   include blocks/breadcrumbs/_breadcrumbs
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Личный кабинет' },
+      { href: '#', title: 'Избранное' }
+   ])
+   
+   include blocks/account/_account-favorites
