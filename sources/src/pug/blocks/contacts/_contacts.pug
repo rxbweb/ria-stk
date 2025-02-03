@@ -47,4 +47,5 @@ section.section.section--contacts
                                        | Я согласен с 
                                        a(href="#") Правилами обработки и хранения персональных данных
                            .form__bottom
-                              button.form__button.button Подписаться
+                              include ../button/_button.pug
+                              +button('Подписаться', 'form__button', '', false)
