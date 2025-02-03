@@ -1,0 +1,14 @@
+extends base/_layout
+block head
+   title Вакансии
+block page
+
+   include blocks/breadcrumbs/_breadcrumbs
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Вакансии' },
+   ])
+   
+   include blocks/vacancy/_vacancy-01
+   
+   include blocks/contacts/_contacts
