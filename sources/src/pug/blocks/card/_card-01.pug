@@ -1,0 +1,86 @@
+-
+   const accountCard01 = [
+      {
+         img: 'images/card/card-03.jpg',
+         text: 'Юрий Бутырев, Алексей Иванов',
+         title: 'Основные принципы и подходы к управлению качеством в современных организациях',
+         price: '240 руб.'
+      },
+      {
+         img: 'images/card/card-07.jpg',
+         text: 'Роман Котельников, Владимир Иванов, Александр Брюханов',
+         title: 'Международный стандарт ISO/TS 19677:2019. Совершенствование лесного законодательства',
+         price: '240 руб.'
+      },
+      {
+         img: 'images/card/card-08.jpg',
+         text: 'Анатолий Григорьев',
+         title: 'Странный государственный стандарт',
+         price: '240 руб.'
+      },
+      {
+         img: 'images/card/card-02.jpg',
+         text: 'Иосиф Аронов, Анна Рыбакова',
+         title: 'Циркулярная экономика начинается с упаковки. Обзор стратегий',
+         price: '240 руб.'
+      },
+      {
+         img: 'images/card/card-09.jpg',
+         text: 'Галина Иванова',
+         title: 'Внимание к проблемам устойчивого развития — не прихоть, а необходимость',
+         price: '240 руб.'
+      },
+      {
+         img: 'images/card/card-01.jpg',
+         text: 'Вера Казакова, Валерий Герасимов, Игорь Тишанинов',
+         title: 'Роль стандартизации при проведении утилизации дизелей',
+         price: '240 руб.'
+      },
+      {
+         img: 'images/card/card-10.jpg',
+         text: 'Станислав Антонов',
+         title: 'Научные основы обеспечения экономики замкнутого цикла',
+         price: '240 руб.'
+      },
+      {
+         img: 'images/card/card-11.jpg',
+         text: 'Дмитрий Маслов, Татьяна Лаврова',
+         title: 'Человек. Государство. Качество',
+         price: '240 руб.'
+      },
+      {
+         img: 'images/card/card-12.jpg',
+         text: 'Лариса Скрипко, Константин Иванов',
+         title: 'Дистанционное управление командами: требования стандартов серии ISO 21500',
+         price: '240 руб.'
+      },
+   ]
+
+section.section.section--card
+   .section__wrapper.container
+      .section__content
+         .card
+            .card__inner
+               .card__row
+                  .card__filter
+                     include ../filter/_filter-02
+                  .card__main
+                     .card__section
+                        ul.card__list.card__list--3
+                           each card in accountCard01
+                              .card__item
+                                 .card__block
+                                    .card__box
+                                       button.card__like
+                                       .card__img
+                                          img(src=card.img, alt=card.title width="350" height="210")
+                                    .card__info
+                                       p.card__text= card.text
+                                       h3.card__name= card.title
+                                       .card__bottom
+                                          p.card__price= card.price
+                                          .card__manage
+                                             a.button.button--slim.button--icon(href="#")
+                                                span В корзину
+                                                i.icon.icon-cart
+                                             a.card__favorite(href="#")

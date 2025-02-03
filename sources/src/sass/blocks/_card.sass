@@ -1,0 +1,202 @@
+.card
+   --cardTableMargin: 20px
+   &__inner
+      @include margin-bottom(120px)
+   &__header
+      @extend .section__header-row
+      @extend .section__header--border
+   &__title
+      @extend .title
+      &--red
+         @extend .title--red
+   &__row
+      display: flex
+      gap: var(--gap)
+   &__filter
+      width: 380px
+      flex-shrink: 0
+   &__content
+      @include margin-bottom(60px)
+   &__list
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      gap: var(--gap)
+      &--2
+         grid-template-columns: repeat(2, 1fr)
+         gap: 20px
+      &--3
+         grid-template-columns: repeat(3, 1fr)
+   &__item
+      height: 100%
+      display: flex
+      flex-direction: column
+      overflow: hidden
+   &__block
+      padding: 15px
+      height: 100%
+      border-radius: 15px
+      background: #F5F5F5
+      display: flex
+      flex-direction: column
+      .swiper-slide &
+         background: #fff
+   &__box
+      background: #F5F5F5
+      position: relative
+      @include img-cover(60%, var(--border-radius-15))
+      .swiper-slide &
+         min-height: 100px
+         @include img-cover(61.8%, var(--border-radius-15))
+   &__icon
+      @extend .btn
+      position: absolute
+      right: 5px
+      top: 5px
+      z-index: var(--z-index)
+      width: 40px
+      height: 40px
+      background:#fff
+      font-size: 16px
+      .icon
+         &-lock
+            font-size: 24px
+   &__like
+      @extend .btn
+      @extend .btn--like
+      position: absolute
+      top: 15px
+      right: 15px
+      z-index: var(--z-index)
+      &::after
+         font-size: 24px
+      &.is-active
+         @include icomoon('\e912', inherit, 24px)
+   &__img
+      position: absolute
+      inset: 0
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+         width: auto
+         height: 100%
+         object-fit: cover
+         object-position: center
+         position: static
+   &__info
+      padding-top: 15px
+      flex-grow: 1
+      display: flex
+      flex-direction: column
+      @include margin-bottom(30px)
+      & > *:last-child
+         margin-top: auto
+   &__bottom
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+      gap: 15px
+   &__text
+      margin-bottom: 5px
+      color: #67686B
+      font-size: 13px
+   &__name
+      @extend .title
+      @extend .title--sixth
+      @include line-clamp(3)
+      letter-spacing: -0.6px
+      line-height: 140%
+   &__price
+      @extend .title
+      @extend .title--fifth
+      color: #47535E
+   &__manage
+      min-height: 52px
+      display: flex
+      gap: 5px
+      .button
+         justify-content: center
+   &__favorite
+      @extend .btn
+      @extend .btn--like
+      width: 52px
+      height: 52px
+      border: 1px solid var(--accent)
+   &__table
+      padding: 20px
+      border-radius: 15px
+      background: #F3F3F3
+      overflow: hidden
+      &-header
+         padding-bottom: var(--cardTableMargin)
+         display: flex
+         flex-wrap: wrap
+         gap: 20px
+         border-bottom: 1px solid #CDCDCD
+      &-section
+         padding-top: 20px
+         overflow: hidden
+         @include margin-bottom(var(--cardTableMargin))
+      &-title
+         @extend .title
+         @include fluidFontSize(20px, 24px, 360px, 1920px, 20px)
+      &-col
+         min-width: 180px
+         display: flex
+         flex-direction: column
+         justify-content: center
+         @include margin-bottom(5px)
+         &:last-child
+            margin-left: auto
+         .button
+            min-height: 46px
+      &-primary
+         @extend .ticket__table-primary
+      &-swiper
+         @include margin-bottom(var(--cardTableMargin))
+      &-controls
+         margin-bottom: 0
+   .swiper
+      &-slide
+         height: auto
+   @include xl
+      &__table
+         &-col
+            &:last-child
+               margin-left: 0
+            &:nth-child(3)
+               width: 100%
+            .button
+               align-self: flex-start
+   @include md
+      &__table
+         &-col
+            &:last-child
+               margin-left: auto
+            &:nth-child(3)
+               width: auto
+   @include sm
+      --cardTableMargin: 15px
+      &__icon
+         width: 30px
+         height: 30px
+         font-size: 11px
+      &__table
+         &-col
+            .button
+               min-height: 40px
+      &__block
+         padding: 10px
+   @include xs
+      --cardTableMargin: 10px
+      &__icon
+         width: 20px
+         height: 20px
+         font-size: 7px
+      &__table
+         padding: 20px 15px
+         &-section
+            padding-top: 15px
+      &__block
+         padding: 5px
