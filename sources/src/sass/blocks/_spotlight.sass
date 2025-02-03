@@ -1,6 +1,6 @@
 .spotlight
    min-height: 200px
-   padding: 30px
+   padding: 40px 30px
    background: #d9d9d9 url(../images/spotlight/spotlight-bg.jpg) no-repeat center / cover
    border-radius: 15px
    overflow: hidden
@@ -15,3 +15,7 @@
       @extend .title
       @include fluidFontSize(20px, 30px, 360px, 1920px, 20px)
       text-align: center
+   @include xl
+      padding: 30px
+      &--large
+         min-height: 460px
