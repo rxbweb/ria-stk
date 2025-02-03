@@ -16,9 +16,13 @@
       display: grid
       grid-template-columns: repeat(4, 1fr)
       gap: var(--gap)
+      &--3
+         grid-template-columns: repeat(3, 1fr)
    &__item
+      height: 100%
       display: flex
       flex-direction: column
+      overflow: hidden
    &__card
       height: 100%
       display: flex
@@ -62,6 +66,8 @@
          .books
             &__date
                color: var(--accent)
+            &__name
+               @include fluidFontSize(16px, 24px, 360px, 1920px, 20px)
    &__info,
    &__bottom
       display: flex
