@@ -1,0 +1,185 @@
+section.section.section--account
+   .section__wrapper.container
+      .section__content
+         .account
+            .account__inner
+               .account__main
+                  .account__aside
+                     .account__controls
+                        include ../controls/_controls
+                        +controls(8)
+                  .account__info
+                     h2.account__title Настройки профиля
+                     .accordion
+                        .accordion__inner
+                           .info__accordion
+                              ul.accordion__list
+                                 li.accordion__item
+                                    a.accordion__button(href="#" data-accordion="accordion-01")
+                                       .accordion__button-name
+                                          h3.accordion__button-title Управление доступами
+                                       .accordion__button-plus
+                                          img(src="images/icons/plus.svg", alt="раскрыть информацию" width="36" height="36")
+                                    .accordion__wrapper
+                                       .accordion__content
+                                          .webform
+                                             form.webform__form(action="#")
+                                                .webform__body
+                                                   .webform__access
+                                                      .webform__access-header
+                                                         .webform__access-col
+                                                            p.webform__access-heading ФИО
+                                                         .webform__access-col
+                                                            p.webform__access-heading Email
+                                                         .webform__access-col
+                                                            p.webform__access-heading Пароль
+                                                         .webform__access-col
+                                                            p.webform__access-heading Действия
+                                                      ul.webform__access-list
+                                                         li.webform__access-item
+                                                            .webform__access-col
+                                                               label.webform__label
+                                                                  span.webform__label-field
+                                                                     input.webform__label-input(type="text" placeholder="Иванов Иван Иванович")
+                                                            .webform__access-col
+                                                               label.webform__label
+                                                                  span.webform__label-field
+                                                                     input.webform__label-input(type="email" placeholder="Email")
+                                                            .webform__access-col
+                                                               label.webform__label
+                                                                  span.webform__label-field.webform__label-field--icon
+                                                                     input.webform__label-input(type="password" placeholder="Пароль")
+                                                                     i.btn.btn--eye
+                                                            .webform__access-col
+                                                               .webform__access-settings
+                                                                  button.webform__access-settings-btn.webform__access-settings-btn--secondary Отменить
+                                                                  button.webform__access-settings-btn Сохранить
+                                                         li.webform__access-item
+                                                            .webform__access-col
+                                                               p Семенов Семен Семенович
+                                                            .webform__access-col
+                                                               p semen@mail.ru
+                                                            .webform__access-col
+                                                               p ********
+                                                            .webform__access-col
+                                                               .webform__access-controls
+                                                                  button.webform__access-btn.webform__access-btn-change
+                                                                  button.webform__access-btn.webform__access-btn-lock
+                                                                  button.webform__access-btn.webform__access-btn-delete
+                                                         li.webform__access-item
+                                                            .webform__access-col
+                                                               p Борисов Борис Борисович
+                                                            .webform__access-col
+                                                               p boris@mail.ru
+                                                            .webform__access-col
+                                                               p ********
+                                                            .webform__access-col
+                                                               .webform__access-controls
+                                                                  button.webform__access-btn.webform__access-btn-change
+                                                                  button.webform__access-btn.webform__access-btn-lock
+                                                                  button.webform__access-btn.webform__access-btn-delete
+                                                         li.webform__access-item
+                                                            .webform__access-col
+                                                               p Александрова Александра Александровна
+                                                            .webform__access-col
+                                                               p alex@mail.ru
+                                                            .webform__access-col
+                                                               p ********
+                                                            .webform__access-col
+                                                               .webform__access-controls
+                                                                  button.webform__access-btn.webform__access-btn-change
+                                                                  button.webform__access-btn.webform__access-btn-lock
+                                                                  button.webform__access-btn.webform__access-btn-delete
+                                                         li.webform__access-item
+                                                            .webform__access-col
+                                                               p Евгеньева Евгения Евгеньевна
+                                                            .webform__access-col
+                                                               p eugenia@mail.ru
+                                                            .webform__access-col
+                                                               p ********
+                                                            .webform__access-col
+                                                               .webform__access-controls
+                                                                  button.webform__access-btn.webform__access-btn-change
+                                                                  button.webform__access-btn.webform__access-btn-lock
+                                                                  button.webform__access-btn.webform__access-btn-delete
+                                                         li.webform__access-item
+                                                            .webform__access-col
+                                                               p Дмитриев Дмитрий Дмитриевич
+                                                            .webform__access-col
+                                                               p dmitry@mail.ru
+                                                            .webform__access-col
+                                                               p ********
+                                                            .webform__access-col
+                                                               .webform__access-controls
+                                                                  button.webform__access-btn.webform__access-btn-change
+                                                                  button.webform__access-btn.webform__access-btn-lock
+                                                                  button.webform__access-btn.webform__access-btn-delete
+                                                      .webform__access-manage
+                                                         .webform__access-manage-info
+                                                            .badge
+                                                               img(src="images/badges/badge-24.svg", alt="иконка" width="31" height="26")
+                                                            .webform__access-manage-box
+                                                               p.webform__access-manage-users 6 из 10 пользователей
+                                                               a.button.button--outline(href="#")
+                                                                  span Докупить доступы
+                                                                  i.icon.icon-arrow-right
+                                                         button.button.button--icon
+                                                            span Новый пользователь
+                                                            i.icon.icon-plus
+
+
+
+                                 li.accordion__item
+                                    a.accordion__button(href="#" data-accordion="accordion-01")
+                                       .accordion__button-name
+                                          h3.accordion__button-title Техническое регулирование
+                                       .accordion__button-plus
+                                          img(src="images/icons/plus.svg", alt="раскрыть информацию" width="36" height="36")
+                                    .accordion__wrapper
+                                       .accordion__content
+                                          .webform
+                                             form.webform__form(action="#")
+                                                .webform__body
+                                                   .webform__block
+                                                      .webform__part
+                                                         .webform__selection
+                                                            .agree
+                                                               label.agree__label
+                                                                  input(type="checkbox" name="form-agree" required)
+                                                                  span.agree__checkbox
+                                                                  span.agree__text Отправлять уведомления на почту
+                                                            .agree
+                                                               label.agree__label
+                                                                  input(type="checkbox" name="form-agree" required)
+                                                                  span.agree__checkbox
+                                                                  span.agree__text Отправлять уведомления на телефон
+                                                            .agree
+                                                               label.agree__label
+                                                                  input(type="checkbox" name="form-agree" required)
+                                                                  span.agree__checkbox
+                                                                  span.agree__text Отправлять уведомления в браузер (Push-уведомления)
+                                                      .webform__part
+                                                         h3.webform__caption Ваши подписки
+                                                         .webform__selection
+                                                            .agree
+                                                               label.agree__label
+                                                                  input(type="checkbox" name="form-agree" required)
+                                                                  span.agree__checkbox
+                                                                  span.agree__text Подписка на акции
+                                                            .agree
+                                                               label.agree__label
+                                                                  input(type="checkbox" name="form-agree" required)
+                                                                  span.agree__checkbox
+                                                                  span.agree__text Новые материалы
+                                                            .agree
+                                                               label.agree__label
+                                                                  input(type="checkbox" name="form-agree" required)
+                                                                  span.agree__checkbox
+                                                                  span.agree__text Quality News
+                                                            .agree
+                                                               label.agree__label
+                                                                  input(type="checkbox" name="form-agree" required)
+                                                                  span.agree__checkbox
+                                                                  span.agree__text Информирование об окончании подписки / абонементного доступа
+                                                      button.button
+                                                         span Сохранить изменения

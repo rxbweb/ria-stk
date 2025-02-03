@@ -1,0 +1,425 @@
+section.section.section--account
+   .section__wrapper.container
+      .section__content
+         .account
+            .account__inner
+               .account__main
+                  .account__aside
+                     .account__controls
+                        include ../controls/_controls
+                        +controls(9)
+                  .account__info
+                     h2.account__title Корзина
+                     .goods
+                        .goods__section.goods__section--disabled
+                           .goods__box
+                              h3.goods__title Электронные продукты
+                              .goods__table
+                                 .goods__table-header
+                                    div.goods__table-header-col 
+                                       p.goods__table-heading Наименование
+                                    div.goods__table-header-col 
+                                       p.goods__table-heading Цена
+                                    div.goods__table-header-col 
+                                       p.goods__table-heading Количество
+                                    div.goods__table-header-col 
+                                       p.goods__table-heading Сумма
+                                    div.goods__table-header-col
+                                       button.goods__table-delete
+                                 ul.goods__table-list
+                                    li.goods__table-item
+                                       .goods__table-col
+                                          .goods__table-img
+                                             img(src="images/goods/goods-01.jpg", alt="Стандарты и качество" width="50" height="68")
+                                          p.goods__table-name Подписка на журнал «Стандарты и качество» 6 месяцев
+                                       .goods__table-col
+                                          .goods__table-price
+                                             p.goods__table-price-old 1250 руб.
+                                             p.goods__table-price-new 1000 руб.
+                                             p.goods__table-price-discount -20%
+                                       .goods__table-col
+                                          p.goods__table-count 1
+                                       .goods__table-col
+                                          p 1000 руб.
+                                       .goods__table-col
+                                          button.goods__table-delete
+                                    li.goods__table-item
+                                       .goods__table-col
+                                          .goods__table-img
+                                             img(src="images/goods/goods-01.jpg", alt="Стандарты и качество" width="50" height="68")
+                                          p.goods__table-name Подписка на журнал «Стандарты и качество» 6 месяцев
+                                       .goods__table-col
+                                          .goods__table-price
+                                             p.goods__table-price-old 1250 руб.
+                                             p.goods__table-price-new 1000 руб.
+                                             p.goods__table-price-discount -20%
+                                       .goods__table-col
+                                          p.goods__table-count 1
+                                       .goods__table-col
+                                          p 1000 руб.
+                                       .goods__table-col
+                                          button.goods__table-delete
+                                    li.goods__table-item
+                                       .goods__table-col
+                                          .goods__table-img
+                                             img(src="images/goods/goods-02.jpg", alt="Статья «О нормативном регулировании в области использования атомной энергии»" width="50" height="68")
+                                          p.goods__table-name Статья «О нормативном регулировании в области использования атомной энергии»
+                                       .goods__table-col
+                                          .goods__table-price
+                                             p.goods__table-price-old 1250 руб.
+                                             p.goods__table-price-new 1000 руб.
+                                             p.goods__table-price-discount -20%
+                                       .goods__table-col
+                                          p.goods__table-count 1
+                                       .goods__table-col
+                                          p 1000 руб.
+                                       .goods__table-col
+                                          button.goods__table-delete
+                                    li.goods__table-item
+                                       .goods__table-col
+                                          .goods__table-img
+                                             img(src="images/goods/goods-03.jpg", alt="журнал «Методы менеджмента качества»" width="50" height="68")
+                                          p.goods__table-name Абонементный доступ к журналу «Методы менеджмента качества» на 10 статей
+                                       .goods__table-col
+                                          .goods__table-price
+                                             p.goods__table-price-old 1250 руб.
+                                             p.goods__table-price-new 1000 руб.
+                                             p.goods__table-price-discount -20%
+                                       .goods__table-col
+                                          p.goods__table-count 1
+                                       .goods__table-col
+                                          p 1000 руб.
+                                       .goods__table-col
+                                          button.goods__table-delete
+                                    li.goods__table-item
+                                       .goods__table-col
+                                          .goods__table-img
+                                             img(src="images/goods/goods-04.jpg", alt="Книга электронная «Протезы и импланты»" width="50" height="68")
+                                          p.goods__table-name Книга электронная «Протезы и импланты»
+                                       .goods__table-col
+                                          .goods__table-price
+                                             p.goods__table-price-old 1250 руб.
+                                             p.goods__table-price-new 1000 руб.
+                                             p.goods__table-price-discount -20%
+                                       .goods__table-col
+                                          p.goods__table-count 1
+                                       .goods__table-col
+                                          p 1000 руб.
+                                       .goods__table-col
+                                          button.goods__table-delete
+                                    li.goods__table-item
+                                       .goods__table-col
+                                          .goods__table-img
+                                          p.goods__table-name Дополнительные пользователи компании
+                                       .goods__table-col
+                                          .goods__table-price
+                                             p.goods__table-price-new 1000 руб.
+                                       .goods__table-col
+                                          .goods__table-controls
+                                             button.goods__table-controls-button -
+                                             .goods__table-controls-count 4
+                                             button.goods__table-controls-button +
+                                       .goods__table-col
+                                          p 4000 руб.
+                                       .goods__table-col
+                                          button.goods__table-delete
+                                 .goods__table-bottom
+                                    .goods__table-total
+                                       span.goods__table-total-title Итоговая цена
+                                       span 4000 руб.
+                                    button.button.button--icon(href="#")
+                                       span Оформить заказ
+                                       i.icon.icon-arrow-right
+
+                        .goods__section
+                           .goods__box
+                              h3.goods__title Журналы, книги
+                              .goods__table
+                                 .goods__table-header
+                                    div.goods__table-header-col 
+                                       p.goods__table-heading Наименование
+                                    div.goods__table-header-col 
+                                       p.goods__table-heading Цена
+                                    div.goods__table-header-col 
+                                       p.goods__table-heading Количество
+                                    div.goods__table-header-col 
+                                       p.goods__table-heading Сумма
+                                    div.goods__table-header-col
+                                       button.goods__table-delete
+                                 ul.goods__table-list
+                                    li.goods__table-item
+                                       .goods__table-col
+                                          .goods__table-img
+                                             img(src="images/goods/goods-04.jpg", alt="Книга «Протезы и импланты»" width="50" height="68")
+                                          p.goods__table-name Книга #[br] «Протезы и импланты»
+                                       .goods__table-col
+                                          .goods__table-price
+                                             p.goods__table-price-old 1250 руб.
+                                             p.goods__table-price-new 1000 руб.
+                                             p.goods__table-price-discount -20%
+                                       .goods__table-col
+                                          .goods__table-controls
+                                             button.goods__table-controls-button -
+                                             .goods__table-controls-count 4
+                                             button.goods__table-controls-button +
+                                       .goods__table-col
+                                          p 1000 руб.
+                                       .goods__table-col
+                                          button.goods__table-delete
+                                    li.goods__table-item
+                                       .goods__table-col
+                                          .goods__table-img
+                                             img(src="images/goods/goods-05.png", alt="Диск «Менеджмент и качество»" width="60" height="60")
+                                          p.goods__table-name Диск #[br] «Менеджмент и качество»
+                                       .goods__table-col
+                                          .goods__table-price
+                                             p.goods__table-price-new 1000 руб.
+                                       .goods__table-col
+                                          .goods__table-controls
+                                             button.goods__table-controls-button -
+                                             .goods__table-controls-count 4
+                                             button.goods__table-controls-button +
+                                       .goods__table-col
+                                          p 1000 руб.
+                                       .goods__table-col
+                                          button.goods__table-delete
+                                    li.goods__table-item
+                                       .goods__table-col
+                                          .goods__table-img
+                                             img(src="images/goods/goods-03.jpg", alt="урнал «Методы менеджмента качества» Номер 124" width="50" height="68")
+                                          p.goods__table-name Журнал #[br] «Методы менеджмента качества» #[br] Номер 124
+                                       .goods__table-col
+                                          .goods__table-price
+                                             p.goods__table-price-old 1250 руб.
+                                             p.goods__table-price-new 1000 руб.
+                                             p.goods__table-price-discount -20%
+                                       .goods__table-col
+                                          .goods__table-controls
+                                             button.goods__table-controls-button -
+                                             .goods__table-controls-count 4
+                                             button.goods__table-controls-button +
+                                       .goods__table-col
+                                          p 1000 руб.
+                                       .goods__table-col
+                                          button.goods__table-delete
+                                 .goods__table-bottom
+                                    .goods__table-total
+                                       span.goods__table-total-title Итоговая цена
+                                       span 3000 руб.
+                                    button.button.button--icon(href="#")
+                                       span Оформить заказ
+                                       i.icon.icon-arrow-right
+
+                           .goods__box
+                              .webform
+                                 .webform__header
+                                    h2.webform__name Оформление заказа
+                                    button.webform__close
+                                 .webform__tabs
+                                    button.webform__tabs-button.is-active Физическое лицо
+                                    button.webform__tabs-button Юридическое лицо
+                                 .webform__section
+                                    form.webform__form(action="#")
+                                       .webform__body
+                                          .webform__box
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title Email
+                                                   span.webform__label-comment Обязательное поле
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="email" placeholder="Email")
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title Телефон
+                                                   span.webform__label-comment Обязательное поле
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="tel" placeholder="Телефон")
+                                             label
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title Фамилия
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="text" placeholder="Фамилия")
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title Имя
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="text" placeholder="Имя")
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title Отчество
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="text" placeholder="Отчество")
+                                          h3.webform__caption Адрес доставки
+                                          .webform__box
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title Страна
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="text" placeholder="Страна")
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title Область/Край
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="text" placeholder="Область/Край")
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title Город
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="text" placeholder="Город")
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title Почтовый индекс
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="text" placeholder="Введите индекс")
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title Улица, дом
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="text" placeholder="Название улицы и номер дома")
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title Почтовый ящик
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="text" placeholder="Введите почтовый ящик")
+                                          .webform__textarea
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title Комментарий
+                                                textarea.webform__label-textarea(placeholder="Комментарий к заказу")
+                                          .agree
+                                             label.agree__label
+                                                input(type="checkbox" name="form-agree" required)
+                                                span.agree__checkbox
+                                                span.agree__text Я согласен на #[a(href="#") обработку персональных данных]
+                                          .webform__options
+                                             .webform__options-main
+                                                h3.webform__options-title Способ доставки
+                                                ul.webform__options-list
+                                                   li.webform__options-item
+                                                      a.webform__options-method(href="#")
+                                                         img(src="images/webform/robokassa.svg", alt="robokassa" width="182" height="69")
+                                          .webform__options
+                                             .webform__options-main
+                                                h3.webform__options-title Способы оплаты
+                                                ul.webform__options-list
+                                                   li.webform__options-item
+                                                      a.webform__options-method(href="#")
+                                                         img(src="images/webform/robokassa.svg", alt="robokassa" width="182" height="69")
+                                             button.webform__options-button.button.button--icon
+                                                span Перейти к оплате
+                                                i.icon.icon-arrow-right
+
+                                    form.webform__form(action="#" style="display: none")
+                                       .webform__body
+                                          .webform__box
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title ИНН
+                                                   span.webform__label-comment Обязательное поле
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="text" placeholder="ИНН")
+                                             span
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title Карточка предприятия
+                                                   a.webform__label-question(href="#")
+                                                      i.icon.icon-question
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="file")
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title Название компании
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="text" placeholder="Название компании")
+                                             label.webform__label.webform__label--large
+                                                span.webform__label-row
+                                                   span.webform__label-title Юридический адрес
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="text" placeholder="Юридический адрес")
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title КПП
+                                                   span.webform__label-comment Обязательное поле
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="text" placeholder="КПП")
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title Телефон
+                                                   span.webform__label-comment Обязательное поле
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="tel" placeholder="Телефон")
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title Email
+                                                   span.webform__label-comment Обязательное поле
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="email" placeholder="Email")
+                                             label.webform__label
+                                                span.webform__label-row
+                                                   span.webform__label-title Контактное лицо
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="text" placeholder="Контактное лицо")
+                                             label.webform__label.webform__label--large
+                                                span.webform__label-row
+                                                   span.webform__label-title Комментарий
+                                                span.webform__label-field
+                                                   input.webform__label-input(type="text" placeholder="Комментарий к заказу")
+                                          .agree
+                                             label.agree__label
+                                                input(type="checkbox" name="form-agree" required)
+                                                span.agree__checkbox
+                                                span.agree__text Я согласен на #[a(href="#") обработку персональных данных]
+                                          .webform__options
+                                             .webform__options-main
+                                                h3.webform__options-title Способы оплаты
+                                                ul.webform__options-list
+                                                   li.webform__options-item
+                                                      a.webform__options-method.webform__options-method--payment(href="#")
+                                                         .webform__options-icon
+                                                         .webform__options-info
+                                                            p Оплата по счету
+                                             button.webform__options-button.button.button--icon
+                                                span Перейти к оплате
+                                                i.icon.icon-arrow-right
+
+                        .goods__section.goods__section--disabled
+                           .goods__box
+                              h3.goods__title Мероприятия
+                              .goods__table
+                                 .goods__table-header
+                                    div.goods__table-header-col 
+                                       p.goods__table-heading Наименование
+                                    div.goods__table-header-col 
+                                       p.goods__table-heading Цена
+                                    div.goods__table-header-col 
+                                       p.goods__table-heading Количество
+                                    div.goods__table-header-col 
+                                       p.goods__table-heading Сумма
+                                    div.goods__table-header-col
+                                       button.goods__table-delete
+                                 ul.goods__table-list
+                                    li.goods__table-item
+                                       .goods__table-col
+                                          .goods__table-img
+                                             img(src="images/goods/goods-06.jpg", alt="Мероприятие «Конференция по менеджменту» 12 декабря 2024" width="80" height="80")
+                                          p.goods__table-name Мероприятие #[br] «Конференция по менеджменту» #[br] 12 декабря 2024
+                                       .goods__table-col
+                                          .goods__table-price
+                                             p.goods__table-price-new 1000 руб.
+                                       .goods__table-col
+                                          .goods__table-controls
+                                             button.goods__table-controls-button -
+                                             .goods__table-controls-count 4
+                                             button.goods__table-controls-button +
+                                       .goods__table-col
+                                          p 1000 руб.
+                                       .goods__table-col
+                                          button.goods__table-delete
+                                 .goods__table-bottom
+                                    .goods__table-total
+                                       span.goods__table-total-title Итоговая цена
+                                       span 5000 руб.
+                                    button.button.button--icon(href="#")
+                                       span Оформить заказ
+                                       i.icon.icon-arrow-right
