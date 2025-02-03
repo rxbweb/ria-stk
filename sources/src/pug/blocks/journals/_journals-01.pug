@@ -33,9 +33,8 @@ section.section
       .section__header
          .section__header-row
             h2.section__header-heading Журналы
-            a.section__header-button.button.button--icon(href="#")
-               span Подписаться на журналы
-               i.icon.icon-arrow-small
+            include ../button/_button.pug
+            +button('Подписаться на журналы', 'button--icon section__header-button', 'icon-arrow-small')
       .section__content
          .journals
             .journals__inner

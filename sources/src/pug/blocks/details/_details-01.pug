@@ -3,9 +3,8 @@ section.section.section--details
          .section__header
             .section__header-row
                h2.section__header-title Мероприятия
-               a.section__header-button.button.button--icon(href="#")
-                  span Посмотреть все мероприятия
-                  i.icon.icon-arrow-small
+               include ../button/_button.pug
+               +button('Посмотреть все мероприятия', 'button--icon section__header-button', 'icon-arrow-small')
          .section__content
             .details
                .details__inner
@@ -54,6 +53,4 @@ section.section.section--details
                                  i.icon.icon-arrow-small
 
          .section__footer
-            a.section__footer-button.button.button--icon(href="#")
-               span Посмотреть все мероприятия
-               i.icon.icon-arrow-small
+            +button('Посмотреть все мероприятия', 'button--icon section__footer-button', 'icon-arrow-small')
