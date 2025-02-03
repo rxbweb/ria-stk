@@ -26,6 +26,7 @@ textarea
 .agree
    color: #47535E
    user-select: none
+   line-height: 110%
    input
       @extend .visually-hidden
    a
@@ -33,7 +34,7 @@ textarea
    &__label
       display: inline-flex
       align-items: flex-start
-      gap: 8px
+      gap: 10px
       cursor: pointer
       position: relative
       label.error
@@ -45,7 +46,7 @@ textarea
    &__checkbox
       width: 20px
       height: 20px
-      margin-top: -1px
+      margin-top: -3px
       flex-shrink: 0
       border: var(--border-red)
       border-radius: 5px
@@ -53,10 +54,26 @@ textarea
       justify-content: center
       align-items: center
       @include icomoon('\e90b', #fff, 8px)
+      &::after
+         opacity: 0
       input:checked ~ &
          background: var(--accent)
          border-color: var(--accent)
-
+         &::after
+            opacity: 1
+   &--secondary
+      font-size: 14px
+      line-height: 122%
+      gap: 8px
+      .agree
+         &__checkbox
+            border-color: #CDCDCD
+   @include sm
+      font-size: 14px
+   @include xs
+      &--secondary
+         font-size: 13px
+         line-height: 140%
 
 .simple-list
    margin-left: 25px
