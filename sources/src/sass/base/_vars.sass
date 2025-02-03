@@ -50,6 +50,7 @@ $rh: 768px
    --gap-3: 20px
    --gap-large: 60px
    --block-width: 520px
+   --box-padding: 40px
 
    --z-index: 5
    --z-index-100: 100
@@ -65,6 +66,7 @@ $rh: 768px
       --gap: 30px
       --gap-large: 40px
       --block-width: auto
+      --box-padding: 30px
 
       --border-radius-30: 20px
 
@@ -75,8 +77,11 @@ $rh: 768px
       --gap-3: 10px
       --gap-large: 30px
       --gap-2: var(--gap)
+      --box-padding: 20px
 
    @media (max-width: $xs)
+      --box-padding: 20px 15px
+      
       --border-radius-15: 10px
       --border-radius-30: 15px
       --font-size: 13px
