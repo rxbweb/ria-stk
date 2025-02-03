@@ -1,0 +1,140 @@
+.vacancy
+   &__main
+      display: flex
+      flex-grow: 1
+      gap: var(--gap)
+   &__filter
+      width: 380px
+      flex-shrink: 0
+   &__content
+      flex-grow: 1
+      color: #67686B
+   &__header
+      padding-bottom: 25px
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      gap: var(--gap)
+      border-bottom: 1px solid #CDCDCD
+      &-left
+         display: flex
+         flex-wrap: wrap
+         align-items: center
+         gap: var(--gap)
+      &-logo
+         width: 238px
+         height: 160px
+         padding: 20px
+         display: flex
+         justify-content: center
+         align-items: center
+         border-radius: 15px
+         border: 1px solid #CDCDCD
+         background: #fff
+         overflow: hidden
+      &-details
+         @include margin-bottom(6px)
+      &-name
+         @extend .title
+         @extend .title--second
+         letter-spacing: -0.72px
+      &-right
+         display: flex
+         flex-direction: column
+         align-items: flex-end
+         justify-content: space-between
+   &__meta
+      color: #67686B
+      @include margin-right(17px)
+      & > *
+         &:not(:last-child)
+            &::after
+               content: '/'
+               margin-left: 17px
+      &-location 
+         color: var(--accent)
+   &__price
+      @extend .title
+      @extend .title--sixth
+      @extend .title--red
+      line-height: 140%
+      letter-spacing: -0.6px
+      display: inline-block
+      padding: 10px 15px
+      background: rgba(194, 37, 33, 0.30)
+      white-space: nowrap
+   &__section
+      flex-grow: 1
+   &__content
+      padding: 40px
+      background: #F2F2F2
+      @include margin-bottom(30px)
+   &__info
+      @include margin-bottom(var(--gap))
+      &-section
+         @include margin-bottom(15px)
+         &--white
+            padding: 20px
+            border-radius: 15px
+            background: rgba(255, 255, 255, 0.70)
+            overflow: hidden
+      &-title
+         @extend .title
+         @extend .title--sixth
+         letter-spacing: -0.6px
+      &-text
+         ul
+            padding-left: 10px
+            li
+               &::before
+                  content: "•"
+                  display: inline-block
+                  width: 1em 
+   &__aside
+      width: 380px
+      flex-shrink: 0
+      @include margin-bottom(20px)
+   &__list
+      @include margin-bottom(20px)
+   &__item
+      padding: 25px
+      border-radius: 15px
+      background: #F0F0F0
+      color: var(--black)
+      overflow: hidden
+      display: flex
+      justify-content: space-between
+      gap: 30px
+      &-info
+         @include margin-bottom(15px)
+         & > *
+            &:nth-last-child(2)
+               margin-bottom: 30px
+      &-text
+         width: 100%
+         max-width: 466px
+         color: #67686B
+      &-aside
+         min-width: 130px
+         flex-shrink: 0
+   &__heading
+      @include margin-bottom(5px)
+      &-title
+         @extend .title
+         @extend .title--second
+         letter-spacing: -0.72px
+   &__post
+      padding: 25px
+      border-radius: 15px
+      background: rgba(194, 37, 33, 0.20)
+      overflow: hidden
+      @include margin-bottom(15px)
+   &__manage
+      display: flex
+      justify-content: space-between
+      align-items: center
+      gap: 10px
+      overflow: hidden
+      .vacancy
+         &__price
+            background: rgba(255, 255, 255, 0.30)

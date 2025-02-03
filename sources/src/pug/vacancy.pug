@@ -1,0 +1,15 @@
+extends base/_layout
+block head
+   title Интернет-маркетолог
+block page
+
+   include blocks/breadcrumbs/_breadcrumbs
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Вакансии' },
+      { href: '#', title: 'Название вакансии' }
+   ])
+   
+   include blocks/vacancy/_vacancy-02
+   
+   include blocks/contacts/_contacts

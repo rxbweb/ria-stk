@@ -1,0 +1,71 @@
+section.section.section--vacancy
+   .section__wrapper.container
+      .section__header.section__header--margin
+         h1.section__header-heading Вакансии
+      .section__content
+         .vacancy
+            .vacancy__inner
+               .vacancy__main
+                  .vacancy__filter
+                     include ../filter/_filter-01
+
+                  .vacancy__main
+                     .vacancy__section
+                        ul.vacancy__list
+                           - for (let i = 0; i < 5; i++)
+                              li.vacancy__item
+                                 .vacancy__item-info
+                                    .vacancy__meta
+                                       time.vacancy__meta-time 01.01.2024
+                                       span.vacancy__meta-location Москва
+                                    .vacancy__heading
+                                       p Название компании
+                                       h3.vacancy__heading-title Название вакансии, возможно длинное написание
+                                    .vacancy__item-text
+                                       p Специализация: Перечисление специализаций, возможно длинное написание в несколько строк
+                                    .vacancy__item-bottom
+                                       a.button.button--outline(href="#")
+                                          span Подробнее
+                                          i.icon.icon-arrow-right
+                                 .vacancy__item-aside
+                                    p.vacancy__price 100 000 руб.
+
+                     .vacancy__aside
+                        .vacancy__post
+                           .vacancy__meta
+                              time.vacancy__meta-time 01.01.2024
+                              span.vacancy__meta-location Москва
+                           .vacancy__heading
+                              p Название компании
+                              h3.vacancy__heading-title Название вакансии, возможно длинное написание
+                           .vacancy__manage
+                              p.vacancy__price 100 000 руб.
+                              a.button.button--outline(href="#")
+                                 span Подробнее
+                                 i.icon.icon-arrow-right
+
+                        .vacancy__post
+                           .vacancy__meta
+                              time.vacancy__meta-time 01.01.2024
+                              span.vacancy__meta-location Москва
+                           .vacancy__heading
+                              p Название компании
+                              h3.vacancy__heading-title Название вакансии, возможно длинное написание
+                           .vacancy__manage
+                              p.vacancy__price 100 000 руб.
+                              a.button.button--outline(href="#")
+                                 span Подробнее
+                                 i.icon.icon-arrow-right
+
+                        .vacancy__post
+                           .vacancy__meta
+                              time.vacancy__meta-time 01.01.2024
+                              span.vacancy__meta-location Москва
+                           .vacancy__heading
+                              p Название компании
+                              h3.vacancy__heading-title Название вакансии, возможно длинное написание
+                           .vacancy__manage
+                              p.vacancy__price 100 000 руб.
+                              a.button.button--outline(href="#")
+                                 span Подробнее
+                                 i.icon.icon-arrow-right
