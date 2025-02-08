@@ -43,11 +43,12 @@ mixin controls(activeIndex)
       a.controls__toggle(href="#")
          span Навигация по личному кабинету
       .controls__main
-         each control, index in controls
-            a.controls__btn(
-               href= control.href
-               class=(activeIndex === index ? 'is-active' : '')
-            )
-               svg
-                  use(href=`images/sprites/main.stack.svg#svg-controls-${(index + 1).toString().padStart(2, '0')}`)
-               span= control.title
+         .controls__list
+            each control, index in controls
+               a.controls__btn(
+                  href= control.href
+                  class=(activeIndex === index ? 'is-active' : '')
+               )
+                  svg
+                     use(href=`images/sprites/main.stack.svg#svg-controls-${(index + 1).toString().padStart(2, '0')}`)
+                  span= control.title

@@ -1,10 +1,13 @@
 .controls
    width: 100%
+   padding: 6px 18px
+   position: relative
+   z-index: var(--z-index-2000)
    color: var(--black)
-   &__main
-      padding: 8px 20px
-      border-radius: 15px
-      background: #F0F0F0
+   background: #F0F0F0
+   border-radius: 15px
+   border: 1px solid transparent
+   &__list
       display: flex
       flex-direction: column
    &__toggle
@@ -18,10 +21,11 @@
       gap: 5px
       display: none
       @include icomoon-before('\e91f', var(--accent), 24px)
-      @include icomoon('\e906', var(--accent), 9px)
+      @include icomoon('\e906', var(--accent), 7px)
       &::before,
       &::after
          flex-shrink: 0
+         transition: var(--transition)
       &::after
          margin-left: auto
    &__btn
@@ -48,17 +52,50 @@
          transition: var(--transition)
       &.is-active,
       &:hover,
-      &:focus
+      &:focus,
+      &:active
          color: var(--accent)
          svg
             fill: var(--accent)
       &.is-active
          font-weight: 700
+   @media (max-width: 1360px) and (min-width: 992px)
+      width: 72px
+      overflow: hidden
+      transition: var(--transition)
+      &:hover,
+      &:focus
+         width: 300px
+         border: 1px solid var(--accent)
    @include ms
+      padding: 0
+      background: none
       &__toggle
          display: flex
+         &.is-active
+            &::after
+               transform: rotate(180deg)
       &__main
          display: none
+         background: #fff
+         overflow: hidden
+         position: absolute
+         z-index: var(--z-index)
+         left: 0
+         right: 0
+      &__list
+         padding: 20px 0 15px
+         border-radius: var(--border-radius)
+         border: 1px solid var(--accent)
+         border-top: none
+      &__btn
+         min-height: 41px
+         padding: 0 20px 5px
+         gap: 10px
+         border-bottom: none
+         svg
+            width: 36px
+            height: 36px
    @include xs
       &__toggle
          height: 40px
