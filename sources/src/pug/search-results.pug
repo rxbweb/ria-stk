@@ -3,4 +3,10 @@ block head
    title Результаты поиска
 block page
    
+   include blocks/breadcrumbs/_breadcrumbs
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Мероприятия' },
+   ])
+
    include blocks/_find

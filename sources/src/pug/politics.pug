@@ -1,0 +1,16 @@
+extends base/_layout
+block head
+   title Редакционная политика
+block page
+
+   include blocks/_sidebar
+
+   include blocks/breadcrumbs/_breadcrumbs
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Редакционная политика' },
+   ])
+   
+   include blocks/article/_article-02
+
+   include blocks/contacts/_contacts

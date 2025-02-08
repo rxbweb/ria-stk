@@ -1,0 +1,19 @@
+extends base/_layout
+block head
+   title Детальная страница статьи
+block page
+
+   include blocks/_sidebar
+
+   include blocks/breadcrumbs/_breadcrumbs
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Журналы' },
+      { href: '#', title: 'Стандарты и качество' },
+      { href: '#', title: '№10/2024' },
+      { href: '#', title: 'Система стандартизации ПАО «Газпром»: развитие в условиях перемен' }
+   ])
+
+   include blocks/article/_article-01
+
+   include blocks/contacts/_contacts
