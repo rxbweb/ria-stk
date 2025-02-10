@@ -1,0 +1,17 @@
+mixin boardList(boards)   
+   ul.board__list
+      each board in boards
+         li.board__item
+            a.board__box(href="#")
+               .board__img
+                  if board.photo
+                     img(src=board.photo, alt=board.name width="180" height="200")
+               if board.name || board.text
+               .board__info
+                  if board.name
+                     p.board__name=board.name
+                  if board.text
+                     p.board__text=board.text
+                  .button.button--outline
+                     span Подробнее
+                     i.icon.icon-arrow-right
