@@ -1,0 +1,33 @@
+
+include mixins/_goodsHeader
+include mixins/_goodsTotal
+include mixins/_goodsList
+include data/_goodsData
+include ../webform/_webform-goods-01
+
+.goods
+   .goods__section
+      .goods__box
+         h3.goods__title Электронные продукты
+         .goods__table
+            +goodsHeader()
+            +goodsList(goods01)
+            +goodsTotal(4000, true)
+      .goods__box
+         +webformGoods01()
+
+   .goods__section.goods__section--disabled
+      .goods__box
+         h3.goods__title Журналы, книги
+         .goods__table
+            +goodsHeader()
+            +goodsList(goods02)
+            +goodsTotal(3000)
+
+   .goods__section.goods__section--disabled
+      .goods__box
+         h3.goods__title Мероприятия
+         .goods__table
+            +goodsHeader()
+            +goodsList(goods03)
+            +goodsTotal(5000)
