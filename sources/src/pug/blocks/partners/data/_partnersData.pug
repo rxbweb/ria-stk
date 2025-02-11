@@ -1,5 +1,5 @@
 -
-   const partners02 = [
+   const partners01 = [
       { 
          src: 'images/partners/partners-01.png', 
          alt: 'russian register' 
@@ -41,22 +41,3 @@
          alt: 'рст' 
       }
    ]
-
-section.section.section--partners
-   .section__wrapper
-      .section__content
-         .partners
-            .bg-image
-               img(src="images/partners/partners-bg.jpg", alt="фоновая картинка" width="1920" height="612")
-            .partners__inner.container
-               .partners__header
-                  .partners__title Наши партнеры
-               .partners__swiper.swiper.js-partners-swiper
-                  .swiper-wrapper
-                     each partner in partners02
-                        .partners__slide.swiper-slide
-                           img(src=partner.src, alt=partner.alt, width="169", height="120")
-                  .swiper-controls
-                     button.js-partners-prev.swiper-button-prev
-                     .swiper-pagination.js-partners-pagination
-                     button.js-partners-next.swiper-button-next

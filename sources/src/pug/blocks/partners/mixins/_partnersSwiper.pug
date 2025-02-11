@@ -1,0 +1,10 @@
+mixin partnersSwiper(partners)   
+   .partners__swiper.swiper.js-partners-swiper
+      .swiper-wrapper
+         each partner in partners
+            .partners__slide.swiper-slide
+               img(src=partner.src, alt=partner.alt, width="169", height="120")
+      .swiper-controls
+         button.js-partners-prev.swiper-button-prev
+         .swiper-pagination.js-partners-pagination
+         button.js-partners-next.swiper-button-next
