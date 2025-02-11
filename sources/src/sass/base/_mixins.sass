@@ -33,6 +33,7 @@
    @font-face
       font-family: '#{$font-name}'
       font-display: swap
+      font-style: normal
       src: url('../fonts/#{$font-file}.woff') format('woff'), url('../fonts/#{$font-file}.woff2') format('woff2')
 
 // Fluid fonts
@@ -74,7 +75,7 @@
 @mixin margin-top($margin)
    & > *
       margin-top: $margin
-      &:last-child
+      &:first-child
          margin-top: 0
 
 @mixin margin-right($margin)
@@ -252,3 +253,4 @@
    overflow: hidden
    text-overflow: ellipsis
    height: auto
+   word-wrap: break-word

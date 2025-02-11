@@ -29,15 +29,19 @@
          display: inline-flex
          justify-content: center
          align-items: center
+         flex-shrink: 0
          font-size: 14px
          border-radius: 5px
          border: 1px solid transparent
    &--icon
+      display: inline-flex
+      justify-content: center
       gap: 10px
       .icon
          color: var(--accent)
    &--slim
-      padding: 10px 20px
+      padding: 9px 20px
+      gap: 16px
    &--outline
       padding: 0
       background: transparent
@@ -93,6 +97,15 @@
    &--large
       width: 100%
       min-height: 52px
+   &--disabled,
+   &[disabled]
+      background: #CDCDCD
+      cursor: default
+      .icon
+         color: #CDCDCD
+   &__text
+      &-mob
+         display: none
    @include sm
       padding: 10px 12px
       .icon
@@ -106,6 +119,11 @@
             font-size: 20px
       &--large
          min-height: 40px
+      &__text
+         &-desktop
+            display: none
+         &-mob
+            display: inline
    @include xs
       &--outline
          .icon
@@ -165,7 +183,6 @@
       &--arrow
          &::after
             font-size: 12px
-
 
 .title
    @include fluidFontSize(32px, 64px, 360px, 1920px, 48px)
@@ -352,11 +369,25 @@
          left: 0
          right: auto
 
-.btn-close
-   width: 36px
-   height: 36px
-   display: block
-   @include icomoon('\e91d', var(--accent), 36px)
+.favorite-button
+   @extend .btn
+   @extend .btn--like
+   position: absolute
+   top: 15px
+   right: 15px
+   z-index: var(--z-index)
+   &::after
+      font-size: 24px
+   &.is-active
+      @include icomoon('\e912', inherit, 24px)
+   @include xs
+      width: 32px
+      height: 32px
+      top: 5px
+      right: 5px
+      &::after,
+      &.is-active::after
+         font-size: 16px
 
 .gray-box
    padding: var(--box-padding)
