@@ -32,15 +32,15 @@
          align-items: center
          gap: 30px
       &-plus
-         width: 36px
-         height: 36px
+         width: var(--accordion-plus-size)
+         height: var(--accordion-plus-size)
          flex-shrink: 0
          transition: var(--transition)
          .is-active &
             transform: rotate(45deg)
       &-title
          @extend .title
-         @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)
+         @include fluidFontSize(24px, 40px, 360px, 1920px, 32px)
    &__wrapper
       display: none
    &__content
@@ -104,6 +104,8 @@
       .accordion
          &__button
             border-bottom: 1px solid #d9d9d9
+            &-title
+               @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)
          &__item
             padding: 0 30px
             border-radius: var(--border-radius-15)
@@ -129,9 +131,6 @@
          padding: 20px 0
          &-name
             gap: 15px
-         &-plus
-            width: 30px
-            height: 30px
       &--secondary
          .accordion
             &__item
@@ -148,10 +147,6 @@
                padding: 0 10px
    @include xs
       --magazines-padding: 10px
-      &__button
-         &-plus
-            width: 20px
-            height: 20px
 
 .section
    &--accordion
