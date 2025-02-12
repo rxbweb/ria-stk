@@ -1,0 +1,12 @@
+include data/_alliesData
+include mixins/_alliesList
+
+section.section.section--allies
+   .section__wrapper.container
+      .section__header.section__header--margin
+         .section__header-row
+            h1.section__header-heading Партнеры
+      .section__content
+         .allies
+            .allies__inner
+               +alliesList(allies)

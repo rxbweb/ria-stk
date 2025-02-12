@@ -1,0 +1,19 @@
+mixin alliesList(allies)   
+   ul.allies__list
+      each item in allies
+         li.allies__item
+            a.allies__box(href="#")
+               if item.img.src
+                  .allies__img
+                     img(
+                        src=item.img.src, 
+                        alt=item.img.alt, 
+                        width=item.img.width, 
+                        height=item.img.height
+                     )
+               if item.name || item.text
+                  .allies__info
+                     if item.name
+                        p.allies__name #{item.name}
+                     if item.text
+                        p.allies__text #{item.text}
