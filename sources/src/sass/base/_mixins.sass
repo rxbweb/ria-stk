@@ -226,6 +226,15 @@
       &:last-child
          margin-top: auto
 
+@mixin hover()
+   @media (hover: hover)
+      &:hover,
+      &:focus
+         @content
+   @media (hover: none)
+      &:active
+         @content
+      
 @mixin hover-line($color: currentColor, $height: 1px)
    position: relative
    &::after
