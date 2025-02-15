@@ -1,0 +1,23 @@
+mixin authorsList(authors)   
+   ul.authors__list
+      each author in authors01
+         li.authors__item
+            if author.label || author.photo
+               .authors__top
+                  if author.label
+                     .authors__label
+                        .authors__label-img
+                           img(src=author.label.src, alt="иконка" width="24" height="28")
+                        span.authors__label-text= author.label.text
+                  if author.photo
+                     .authors__img
+                        img(src=author.photo, alt=author.name, width="256" height="310")
+            if author.description || author.name
+               .authors__info
+                  if author.description
+                     p.authors__description= author.description
+                  if author.name
+                     p.authors__name= author.name
+                  a.button.button--outline(href="#")
+                     span Подробнее
+                     i.icon.icon-arrow-small

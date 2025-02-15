@@ -1,48 +1,5 @@
--
-   const authors01 = [
-      {
-         label: {
-            src: 'images/badges/badge-14.svg',
-            text: 'Эксперт журнала'
-         },
-         photo: 'images/authors/authors-01.jpg',
-         description: 'профессор МГИМО',
-         name: 'Аронов Иосиф Зиновьевич'
-      },
-      {
-         photo: 'images/authors/authors-02.jpg',
-         description: 'Доктор техн. наук',
-         name: 'Лапидус Вадим Аркадьевич'
-      },
-      {
-         label: {
-            src: 'images/badges/badge-14.svg',
-            text: 'Эксперт журнала'
-         },
-         photo: 'images/authors/authors-03.jpg',
-         description: 'Профессор МИСИС',
-         name: 'Адлер Юрий Павлович'
-      },
-      {
-         photo: 'images/authors/authors-04.jpg',
-         description: 'профессор МГИМО',
-         name: 'Фалкин Дмитрий Владимирович'
-      },
-      {
-         label: {
-            src: 'images/badges/badge-14.svg',
-            text: 'Эксперт журнала'
-         },
-         photo: 'images/authors/authors-01.jpg',
-         description: 'профессор МГИМО',
-         name: 'Аронов Иосиф Зиновьевич'
-      },
-      {
-         photo: 'images/authors/authors-01.jpg',
-         description: 'профессор МГИМО',
-         name: 'Аронов Иосиф Зиновьевич'
-      }
-   ]
+include data/_authorsData
+include mixins/_authorsList
 
 section.section.section--authors
    .section__wrapper.container
@@ -52,20 +9,4 @@ section.section.section--authors
       .section__content
          .authors
             .authors__inner
-               ul.authors__list
-                  each author in authors01
-                     li.authors__item
-                        .authors__top
-                           if author.label
-                              .authors__label
-                                 .authors__label-img
-                                    img(src=author.label.src, alt="иконка" width="24" height="28")
-                                 span.authors__label-text= author.label.text
-                           .authors__img
-                              img(src=author.photo, alt=author.name, width="256" height="310")
-                        .authors__info
-                           p.authors__description= author.description
-                           p.authors__name= author.name
-                           a.button.button--outline(href="#")
-                              span Подробнее
-                              i.icon.icon-arrow-small
+               +authorsList(authors01)
