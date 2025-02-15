@@ -1,36 +1,5 @@
--
-   const people01 = [
-      { 
-         src: 'images/people/page-about/people-01.jpg',
-         name: 'Наталия Григорьевна Томсон',
-         text: 'Основатель и председатель совета директоров РИА «Стандарты и качество», член Правления Всероссийской организации качества, член Комитета ТПП РФ по качеству продукции, член Международной Гильдии профессионалов качества.'
-      },
-      { 
-         src: 'images/people/page-about/people-02.jpg',
-         name: 'Геннадий Петрович Воронин',
-         text: 'Член совета директоров РИА «Стандарты и качество», главный редактор журнала «Стандарты и качество», президент Всероссийской организации качества, действительный государственный советник Российской Федерации I класса, доктор технических наук, доктор экономических наук, профессор.'
-      },
-      { 
-         src: 'images/people/page-about/people-03.jpg',
-         name: 'Светлана Сергеевна Антонова',
-         text: 'Генеральный директор и член совета директоров РИА «Стандарты и качество», главный редактор журнала «Менеджмент качества в медицине», вице-президент по информационной политике Всероссийской организации качества, эксперт премий Правительства Российской Федерации в области качества.'
-      },
-      { 
-         src: 'images/people/page-about/people-04.jpg',
-         name: 'Алексей Игоревич Анискин',
-         text: 'Исполнительный директор, директор по развитию бизнеса и член совета директоров РИА «Стандарты и качество»'
-      },
-      { 
-         src: 'images/people/page-about/people-05.jpg',
-         name: 'Татьяна Владимировна Киселева',
-         text: 'Главный редактор издательства РИА «Стандарты и качество»'
-      },
-      { 
-         src: 'images/people/page-about/people-06.jpg',
-         name: 'Андрей Игоревич Колесников',
-         text: 'Руководитель отдела маркетинга РИА «Стандарты и качество»'
-      }
-   ]
+include data/_peopleData
+include mixins/_peopleList
 
 section.section.section--people
    .section__wrapper.container
@@ -41,14 +10,4 @@ section.section.section--people
                   .people__aside
                      h2.people__title Руководство компании
                   .people__content
-                     ul.people__list.people__list--3
-                        each person in people01
-                           li.people__item
-                              .people__photo
-                                 img(src=person.src, alt=person.name, width="380", height="460")
-                              .people__info
-                                 p.people__name #{person.name}
-                                 p.people__text #{person.text}
-                                 a.people__link.button.button--outline(href="#")
-                                    | Подробнее
-                                    i.icon.icon-arrow-small
+                     +peopleList(people01, 'people__list--3')

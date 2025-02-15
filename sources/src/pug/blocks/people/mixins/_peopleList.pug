@@ -1,0 +1,16 @@
+mixin peopleList(people, extraClass)
+   ul.people__list(class=extraClass)
+      each person in people
+         li.people__item
+            .people__photo
+               if person.src
+                  img(src=person.src, alt=person.name, width="380", height="460")
+            if person.name || person.text
+               .people__info
+                  if person.name
+                     p.people__name #{person.name}
+                  if person.text
+                     p.people__text #{person.text}
+                  a.people__link.button.button--outline(href="#")
+                     | Подробнее
+                     i.icon.icon-arrow-small
