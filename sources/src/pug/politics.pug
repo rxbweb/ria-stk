@@ -3,9 +3,9 @@ block head
    title Редакционная политика
 block page
 
-   include blocks/_sidebar
+   include blocks/sidebar/_sidebar
+   +sidebar()
 
-   include blocks/breadcrumbs/_breadcrumbs
    +breadcrumbs([
       { href: '#', title: 'Главная' },
       { href: '#', title: 'Редакционная политика' },
