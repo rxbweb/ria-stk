@@ -1,27 +1,4 @@
--
-   const links01 = [
-      {
-         name: "Свидетельство о внесении записи в Единый государственный реестр юридических лиц"
-      },
-      {
-         name: "Свидетельство о постановке на учет российской организации в налоговом органе по месту нахождения на территории Российской Федерации"
-      },
-      {
-         name: "Свидетельство о регистрации юридического лица"
-      },
-      {
-         name: "Карточка юридического лица"
-      },
-      {
-         name: "Устав ООО «РИА «Стандарты и качество»"
-      },
-      {
-         name: "Приказ о вступлении в должность генерального директора РИА «Стандарты и качество» "
-      },
-      {
-         name: "Информационное письмо об УСН из ИФНС (подтверждение)"
-      },
-   ]
+include mixins/_linksList
 
 section.section.section--links
    .section__wrapper.container
@@ -31,10 +8,4 @@ section.section.section--links
       .section__content
          .links
             .links__inner
-               ul.links__list
-                  each link in links01
-                     li
-                        a.links__button(href="#")
-                           .links__info
-                              p.links__name=link.name
-                           .links__icon
+               +linksList(links01)

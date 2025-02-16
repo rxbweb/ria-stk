@@ -1,0 +1,12 @@
+include ../data/_linksData
+
+mixin linksList(items, className)
+   ul(class=["links__list"] + (className ? " " + [className] : []))
+      each link in items
+         li
+            a.links__button(href="#")
+               .links__info
+                  p.links__name!=link.name
+                  if link.text
+                     p.links__text!=link.text
+               .links__icon
