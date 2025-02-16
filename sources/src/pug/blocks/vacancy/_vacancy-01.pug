@@ -8,7 +8,6 @@ section.section.section--vacancy
                .vacancy__main
                   .vacancy__filter
                      include ../filter/_filter-01
-
                   .vacancy__main
                      .vacancy__section
                         ul.vacancy__list
@@ -31,41 +30,16 @@ section.section.section--vacancy
                                     p.vacancy__price 100 000 руб.
 
                      .vacancy__aside
-                        .vacancy__post
-                           .vacancy__meta
-                              time.vacancy__meta-time 01.01.2024
-                              span.vacancy__meta-location Москва
-                           .vacancy__heading
-                              p Название компании
-                              h3.vacancy__heading-title Название вакансии, возможно длинное написание
-                           .vacancy__manage
-                              p.vacancy__price 100 000 руб.
-                              a.button.button--outline(href="#")
-                                 span Подробнее
-                                 i.icon.icon-arrow-right
-
-                        .vacancy__post
-                           .vacancy__meta
-                              time.vacancy__meta-time 01.01.2024
-                              span.vacancy__meta-location Москва
-                           .vacancy__heading
-                              p Название компании
-                              h3.vacancy__heading-title Название вакансии, возможно длинное написание
-                           .vacancy__manage
-                              p.vacancy__price 100 000 руб.
-                              a.button.button--outline(href="#")
-                                 span Подробнее
-                                 i.icon.icon-arrow-right
-
-                        .vacancy__post
-                           .vacancy__meta
-                              time.vacancy__meta-time 01.01.2024
-                              span.vacancy__meta-location Москва
-                           .vacancy__heading
-                              p Название компании
-                              h3.vacancy__heading-title Название вакансии, возможно длинное написание
-                           .vacancy__manage
-                              p.vacancy__price 100 000 руб.
-                              a.button.button--outline(href="#")
-                                 span Подробнее
-                                 i.icon.icon-arrow-right
+                        - for (let i = 0; i < 3; i++)
+                           .vacancy__post
+                              .vacancy__meta
+                                 time.vacancy__meta-time 01.01.2024
+                                 span.vacancy__meta-location Москва
+                              .vacancy__heading
+                                 p Название компании
+                                 h3.vacancy__heading-title Название вакансии, возможно длинное написание
+                              .vacancy__manage
+                                 p.vacancy__price 100 000 руб.
+                                 a.button.button--outline(href="#")
+                                    span Подробнее
+                                    i.icon.icon-arrow-right

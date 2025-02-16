@@ -16,8 +16,9 @@ section.section.section--vacancy
                                  .vacancy__meta
                                     time.vacancy__meta-time 01.01.2024
                                     span.vacancy__meta-location Москва
-                                 h3.vacancy__header-name РИА «Стандарты и качество»
-                                 h3.vacancy__header-name СМИ, издательство
+                                 h3.vacancy__header-name #{'РИА «Стандарты и качество» '}
+                                    |
+                                    | СМИ, издательство
                            .vacancy__header-right
                               p.vacancy__price 100 000 руб.
                               a.button.button--icon(href="#")
@@ -68,9 +69,13 @@ section.section.section--vacancy
                                     li график работы с 9.00 до 18.00 или с 10.00 до 19.00;
                                     li комфортный офис в 2 минутах от метро Автозаводская.
 
-                  .vacancy__aside
+                  .vacancy__aside.vacancy__aside--wide
                      .vacancy__spotlight
                         a.vacancy__spotlight-box(href="#")
+                           img.vacancy__spotlight-bg(src="images/vacancy/vacancy-01.jpg", alt="фоновая картинка" width="520" height="50")
                            .vacancy__spotlight-info
-                              h3.vacancy__spotlight-title Текст для баннера в 2 строки
-                              .vacancy__spotlight-btn
+                              h3.vacancy__spotlight-title #{'Текст для баннера '}
+                                 |
+                                 |в 2 строки
+                              .button.button--icon.vacancy__spotlight-icon
+                                 i.icon.icon-arrow-right
