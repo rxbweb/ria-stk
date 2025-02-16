@@ -1,0 +1,23 @@
+mixin overviewList(list)   
+   ul.overview__list
+      each overview in list
+         li.overview__item
+            .overview__top
+               if overview.tag
+                  .tags
+                     a.tags__button(href="#")= overview.tag
+               .overview__label
+                  i.icon.icon-lock
+            if overview.name
+               h3.overview__name= overview.name
+            if overview.authors
+               .overview__box
+                  p Авторы
+                  .overview__names= overview.authors
+            if overview.text
+               .overview__text
+                  p= overview.text
+            .overview__bottom
+               a.button.button--icon(href="#")
+                  span Читать статью
+                  i.icon.icon-arrow-right

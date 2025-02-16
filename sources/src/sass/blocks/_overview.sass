@@ -1,0 +1,67 @@
+.overview
+   &__inner
+      @include margin-bottom(var(--gap))
+   &__header
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-wrap: wrap
+      gap: 15px
+      @extend .section__header--border
+   &__title
+      @extend .title
+   &__manage
+      display: flex
+      align-items: center
+      gap: 30px
+   &__btn
+      min-height: 60px
+      padding: 10px 15px
+      display: inline-flex
+      align-items: center
+      gap: 15px
+      border-radius: var(--border-radius)
+      border: 1px solid var(--accent)
+      @extend .title
+      @extend .title--second
+      .icon
+         width: 40px
+         font-size: 33px
+         color: var(--accent)
+         display: flex
+         justify-content: center
+         align-items: center
+         &-eye
+            font-size: 25px
+   &__item
+      padding: 30px
+      border-bottom: 1px solid #cdcdcd
+      background: #fff
+      @include margin-bottom(30px)
+   &__top
+      margin-bottom: 15px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+   &__name
+      @extend .title
+      @extend .title--second
+   &__label
+      @extend .badge
+   &__btn
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 15px
+   &__box
+      @include margin-bottom(5px)
+   &__names
+      @extend .title
+      @extend .title--sixth
+      letter-spacing: -0.6px
+      color: rgba(#191C23, 0.6)
+
+   @include md
+      &__item
+         padding: var(--box-padding)

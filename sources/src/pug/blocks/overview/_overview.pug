@@ -1,0 +1,19 @@
+include data/_overviewData
+include mixins/_overviewList
+
+section.section.section--overview
+   .section__wrapper.container
+      .section__content
+         .overview
+            .overview__inner
+               .overview__header
+                  h2.overview__title Содержание выпуска
+                  .overview__manage
+                     a.overview__btn(href="#")
+                        i.icon.icon-eye
+                        span Статья в открытом доступе
+                     a.overview__btn(href="#")
+                        i.icon.icon-lock
+                        span Статья доступна по подписке
+               .overview__main
+                  +overviewList(overview01)
