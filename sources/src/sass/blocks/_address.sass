@@ -20,15 +20,18 @@
       .address__list--second &
          align-items: center
    &__icon
-      width: 30px
-      height: 30px
+      --size: 30px
+      width: var(--size)
+      height: var(--size)
       flex-shrink: 0
       position: relative
+      img
+         width: 100%
+         height: auto
    &__text
       padding-top: 2px
    @include sm
       &__list
          gap: 15px
       &__icon
-         width: 26px
-         height: 26px
+         --size: 26px

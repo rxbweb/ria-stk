@@ -36,6 +36,10 @@
             bottom: 40px
             left: var(--padding)
             justify-content: flex-start
+   &__library
+      --row-gap: 20px
+      max-height: 750px
+      overflow: hidden
    &__row
       display: grid
       grid-template-columns: var(--info-width) 1fr
@@ -51,6 +55,9 @@
    &__content
       max-width: 100%
       width: calc(1640px - var(--info-width) - var(--row-gap))
+   &__img
+      padding-top: 80px
+      padding-bottom: 70px
    &__books
       &-figure
          width: 396px

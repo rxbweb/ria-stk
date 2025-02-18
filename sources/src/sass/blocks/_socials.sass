@@ -9,6 +9,7 @@
       &--second
          gap: 40px
    &__link
+      --size: 26px
       display: flex
       align-items: center
       gap: 5px
@@ -18,8 +19,8 @@
       font-weight: 500
       line-height: 120%
       img
-         width: 26px
-         height: 26px
+         width: var(--size)
+         height: var(--size)
    @media (max-width: 1600px)
       &__list
          &--second

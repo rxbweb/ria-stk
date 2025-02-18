@@ -9,16 +9,8 @@
       position: relative
       display: flex
       flex-direction: column
-      img
-         position: absolute
-         left: 50%
-         top: 50%
-         transform: translate(-50%, -50%)
-         transition: var(--transition)
-         opacity: 1
-      img[src$="-hover.svg"]
-         opacity: 0
-   &__box
+      fill: currentColor
+   &__link
       height: 100%
       padding: 45px 28px 10px
       border-radius: var(--border-radius-15)
@@ -33,9 +25,8 @@
       transition: var(--transition)
       &:hover,
       &:focus
+         color: var(--accent)
          background: #fff
          border-color: var(--accent)
-         img
-            opacity: 0
-            &[src$="-hover.svg"]
-               opacity: 1
+   &__info
+      color: var(--black)

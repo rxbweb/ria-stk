@@ -2,15 +2,16 @@
    display: flex
    flex-wrap: wrap
    gap: 10px
+   color: #78848f
+   white-space: nowrap
+   font-size: 14px
    &__button
       padding: 8px 15px
       display: inline-block
       border-radius: var(--border-radius)
       background: #f3f3f3
       font-weight: 400
-      font-size: 14px
-      color: #78848f
-      white-space: nowrap
+      white-space: inherit
       transition: all var(--duration) ease
       &--2
          background: #fff
@@ -27,3 +28,5 @@
       &::-webkit-scrollbar
          width: 0
          height: 0
+   @include xs
+      font-size: 11px

@@ -31,17 +31,11 @@
       @include img-cover(100%, var(--border-radius-15))
       background: #F5F5F5
       position: relative
-   &__like
-      @extend .btn
-      @extend .btn--like
+   &__icon
       position: absolute
       top: 15px
       right: 15px
       z-index: var(--z-index)
-      &::after
-         font-size: 24px
-      &.is-active
-         @include icomoon('\e912', inherit, 24px)
    &__img
       position: absolute
       inset: 0
@@ -104,6 +98,9 @@
                width: 100%
             & + .button
                width: 100%
+   @include md
+      &__list
+         grid-template-columns: repeat(3, 1fr)
    @include ms
       &__inner
          @include margin-bottom(80px)
@@ -116,13 +113,11 @@
       &__info
          .books--2 &
             @include margin-bottom(5px)
-      &__like
+      &__icon
          width: 32px
          height: 32px
          top: 5px
          right: 5px
-         &::after
-            font-size: 16px
       &__name,
       &__price
          font-size: 14px

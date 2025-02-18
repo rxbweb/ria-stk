@@ -1,5 +1,5 @@
 .select
-   color: #191C23
+   color: var(--black)
    position: relative
    &--lang
       width: 80px
@@ -13,7 +13,10 @@
       border: 1px solid #CDCDCD
       cursor: pointer
       position: relative
+      color: #999
       @include icomoon('\e906', var(--accent), 8px)
+      &.is-selected
+         color: var(--black)
       &::after
          position: absolute
          right: 18px
