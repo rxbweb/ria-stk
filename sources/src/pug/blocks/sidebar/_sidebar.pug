@@ -1,0 +1,19 @@
+mixin sidebar(extraClass)
+   .sidebar(class=extraClass)
+      a.sidebar__toggle(href="#")
+         span Навигация по журналу
+      .sidebar__main
+         .sidebar__list
+            each button, index in ['О журнале', 'Подписка', 'Реклама', 'Архив', 'Отзывы']
+               a.sidebar__btn(href="#")
+                  .sidebar__icon
+                     svg
+                        use(href=`images/sprites/main.stack.svg#svg-sidebar-${(index + 1).toString().padStart(2, '0')}`)
+                  .sidebar__text=button
+         .sidebar__list
+            each button, index in ['Отправить статью', 'Редакционная политика', 'Правила для авторов', 'Рецензирование', 'Редакция', 'Редсоветы', 'Авторы']
+               a.sidebar__btn(href="#")
+                  .sidebar__icon
+                     svg
+                        use(href=`images/sprites/main.stack.svg#svg-sidebar-${(index + 6).toString().padStart(2, '0')}`)
+                  .sidebar__text=button

@@ -1,4 +1,5 @@
 .sidebar
+   @extend .scroll-hidden
    width: 78px
    position: fixed
    z-index: var(--z-index-main)
@@ -18,7 +19,8 @@
       .sidebar
          &__text
             opacity: 1
-   @extend .scroll-hidden
+   &__toggle
+      @extend .controls__toggle
    &__main
       @include margin-bottom(10px)
       & > *:not(:last-child)
@@ -28,7 +30,7 @@
       display: flex
       flex-direction: column
       gap: 5px
-   &__button
+   &__btn
       display: flex
       align-items: center
       gap: 10px
@@ -39,6 +41,9 @@
       &:hover,
       &:focus
          color: var(--accent)
+         .sidebar
+            &__icon
+               color: var(--accent)
    &__icon
       width: 36px
       height: 36px
@@ -47,14 +52,51 @@
       justify-content: center
       align-items: center
       flex-shrink: 0
+      color: #ADA7A7
       border-radius: var(--border-radius-10)
-      border: 1px solid #ADA7A7
+      border: 1px solid currentColor
+      transition: var(--transition-2)
       svg
-         // fill: #ADA7A7
-         fill: red
+         fill: currentColor
    &__text
       opacity: 0
       white-space: nowrap
       transition: all var(--duration) ease
-   @include md
-      display: none
+   @media (max-height: 900px)
+      top: 200px
+      transform: translateY(0)
+   @include ms
+      width: 100%
+      margin: 0 auto
+      padding: 0
+      position: relative
+      inset: auto
+      border: none
+      border-radius: 0
+      overflow: visible
+      &--thin
+         max-width: calc(100% - var(--padding) * 2)
+         margin-bottom: var(--gap)
+      &:hover,
+      &:focus
+         width: auto
+      &__main
+         @extend .controls__main
+         padding: 0 20px
+         border: 1px solid var(--accent)
+         border-top: none
+         border-radius: var(--border-radius)
+         & > *
+            &:first-child
+               padding-top: 20px
+            &:last-child
+               padding-bottom: 20px
+      &__text
+         opacity: 1
+      &__icon
+         padding: 4px
+         color: var(--accent)
+
+.section--sidebar
+   position: relative
+   z-index: var(--z-index-main)
