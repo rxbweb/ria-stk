@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 -
    const listings03 = [
       {
@@ -23,7 +25,6 @@ section.section.section--listing
       .section__header
          .section__header-row
             h2.section__header-title Преимущества подписки
-            include ../button/_button.pug
             +button('Подписка', 'button--icon section__header-button', 'icon-arrow-small')
       .section__content
          .listing
@@ -35,3 +36,5 @@ section.section.section--listing
                            .badge.badge--large
                               img(src=listing.badge, alt="иконка" width="36" height="36")
                            h3.listing__name=listing.title
+      .section__footer
+         +button('Подписка', 'button--icon', 'icon-arrow-small')

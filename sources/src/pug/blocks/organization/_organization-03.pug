@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 section.section.section--padding-none.section--organization
    .section__wrapper
       .organization.organization--third
@@ -8,7 +10,6 @@ section.section.section--padding-none.section--organization
                source(srcset="images/organization/organization-bg.webp")
                img(src="images/organization/organization-bg.jpg" alt="фоновая картинка" width="1920" height="800")
          .organization__inner.container
-            include ../breadcrumbs/_breadcrumbs
             +breadcrumbs([
                { href: '#', title: 'Главная' },
                { href: '#', title: 'ВОК' }

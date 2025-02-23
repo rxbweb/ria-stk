@@ -3,7 +3,7 @@ section.section.section--status
       .section__content
          .status
             .bg-image
-               img(src="images/status/status-bg.jpg", alt="фоновая картинка")
+               +picture("images/status/status-bg.jpg", "images/status/status-bg-mob.jpg", "фоновая картинка", 1640, 500)
             .status__inner
                .status__row
                   .status__info
@@ -11,6 +11,8 @@ section.section.section--status
                      p.status__text Станьте автором журналов РИА «Стандарты и качество». Ждем как опытных, так и начинающих специалистов. Важна польза и подача материала. Приоритет отдается статьям практической направленности.
                      a.button.button--icon(href="#")
                         span Подробнее
-                        i.icon.icon-arrow-small
+                        span.button__icon
+                           svg(width="5" height="9")
+                              use(href='images/sprites/main.stack.svg#svg-arrow-small-right')
                   .status__img
-                     img(src="images/status/status-img.png", alt="картинка" width="570" height="500")
+                     +picture("images/status/status-img.png", false, "картинка", 570, 500)

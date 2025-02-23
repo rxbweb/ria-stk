@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 section.section.section--padding-top-none.section--specs
    .section__wrapper
       .section__content
@@ -5,7 +7,6 @@ section.section.section--padding-top-none.section--specs
             .bg-image
                img(src="images/specs/specs-bg.jpg", alt="фоновая картинка")
             .specs__inner.container
-               include ../breadcrumbs/_breadcrumbs
                +breadcrumbs([
                   { href: '#', title: 'Главная' },
                   { href: '#', title: 'Книги' },
@@ -15,7 +16,7 @@ section.section.section--padding-top-none.section--specs
                   .specs__img
                      img(src="images/specs/specs-01.png", alt="Цифровое качество. Свод знаний о цифровой трансформации" width="310" height="428")
                   .specs__info
-                     p.specs__isbn ISBN 978-5-04-101730-9
+                     p.specs__lead ISBN 978-5-04-101730-9
                      h1.specs__name Цифровое качество. Свод знаний о цифровой трансформации
                      ul.specs__table
                         li #[span Автор(ы)] Чекмарев А.В., Азаров В.Н., Куприянов Ю.В.

@@ -1,11 +1,12 @@
-section.section.section--hero.section--padding-none.section--margin-bottom
+include ../../mixins/_mixins
+
+section.section.section--hero.section--padding-none
    .section__wrapper
       .section__content
          .hero.hero--default
             .bg-image
                img(src="images/hero/hero-bg.jpg", alt="фоновая картинка" width="1920" height="750")
             .hero__inner.container
-               include ../breadcrumbs/_breadcrumbs
                +breadcrumbs([
                   { href: '#', title: 'Главная' },
                   { href: '#', title: 'Журналы' },

@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 section.section.section--hero.section--padding-none.section--margin-bottom
    .section__wrapper
       .section__content
@@ -5,7 +7,6 @@ section.section.section--hero.section--padding-none.section--margin-bottom
             .bg-image
                img(src="images/hero/hero-bg.jpg", alt="фоновая картинка" width="1920" height="750")
             .hero__inner.container
-               include ../breadcrumbs/_breadcrumbs
                +breadcrumbs([
                   { href: '#', title: 'Главная' },
                   { href: '#', title: 'ВУЗам' }

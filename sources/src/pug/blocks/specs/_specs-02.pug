@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 section.section.section--padding-top-none.section--specs
    .section__wrapper
       .section__content
@@ -5,7 +7,6 @@ section.section.section--padding-top-none.section--specs
             .bg-image
                img(src="images/specs/specs-bg.jpg", alt="фоновая картинка")
             .specs__inner.container
-               include ../breadcrumbs/_breadcrumbs
                +breadcrumbs([
                   { href: '#', title: 'Главная' },
                   { href: '#', title: 'Рекламодателям' }

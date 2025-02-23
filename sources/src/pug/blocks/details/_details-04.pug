@@ -84,7 +84,7 @@ section.section.section--details
                            a.details__list-box(href="#")
                               if detail.img
                                  .details__list-img
-                                    img(src=detail.img, alt=detail.title width="520" height="292")
+                                    +picture(detail.img, false, detail.title, 520, 292)
                               .details__list-info
                                  if detail.description
                                     p.details__list-description= detail.description
