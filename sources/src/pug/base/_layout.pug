@@ -1,5 +1,6 @@
 include _vars
-include _mixins
+include ../mixins/_mixins
+
 doctype html
 html(lang="ru")
    head
@@ -27,18 +28,19 @@ html(lang="ru")
       meta(name="msapplication-config" content="images/favicons/browserconfig.xml")
       meta(name="theme-color" content="#ffffff")
       
-      link(rel="preload" href="fonts/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous")
-      link(rel="preload" href="fonts/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous")
-      link(rel="preload" href="fonts/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous")
-      link(rel="preload" href="fonts/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous")
-      link(rel="preload" href="fonts/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous")
-      link(rel="preload" href="fonts/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous")
-      link(rel="preload" href="fonts/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous")
-      link(rel="preload" href="fonts/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous")
+      link(rel="preload" href="fonts/pragmatica/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+      link(rel="preload" href="fonts/pragmatica/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous")
+      link(rel="preload" href="fonts/pragmatica/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+      link(rel="preload" href="fonts/pragmatica/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous")
+      link(rel="preload" href="fonts/pragmatica/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+      link(rel="preload" href="fonts/pragmatica/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous")
+      link(rel="preload" href="fonts/oswald/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+      link(rel="preload" href="fonts/oswald/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous")
 
       link(rel="stylesheet" href="css/main.min.css")
 
    body
+
       block header
          include ../blocks/_header
 
@@ -47,6 +49,7 @@ html(lang="ru")
 
       block footer
          include ../blocks/_footer
+         
       block js
          <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=5e6f3718-a525-41b0-832c-11d7f6b0f8a4"></script>
          script(src="js/main.min.js")
