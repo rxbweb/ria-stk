@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 section.section.section--contacts
    .section__wrapper.container
       .section__content
@@ -23,7 +25,7 @@ section.section.section--contacts
                      .contacts__map.map
                         
                   .contacts__right
-                     form.contacts__form.form(action="#" name="form-callback")
+                     form.contacts__form.form(action="#" data-validate-form)
                         .form__header
                            h2.form__title Остались вопросы?
                            p.form__text Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.
@@ -31,11 +33,13 @@ section.section.section--contacts
                            .form__top
                               .form__box
                                  label.form__label.form__label--half
-                                    input.form__input(type="text" placeholder="Имя" name="form-name")
+                                    input.form__input(type="text" placeholder="Имя" name="form-name" required)
+                                    span.form__error Обязательное поле
                                  label.form__label.form__label--half
                                     input.form__input(type="text" placeholder="Фамилия")
                                  label.form__label
-                                    input.form__input(type="email" placeholder="E-mail" name="form-email")
+                                    input.form__input(type="email" placeholder="E-mail" name="form-email" required)
+                                    span.form__error Обязательное поле
                                  label.form__label
                                     textarea.form__textarea(placeholder="Текст сообщения")
                            .form__middle
@@ -46,6 +50,6 @@ section.section.section--contacts
                                     span.agree__text
                                        | Я согласен с 
                                        a(href="#") Правилами обработки и хранения персональных данных
+                                 span.agree__error Обязательное поле
                            .form__bottom
-                              include ../button/_button.pug
                               +button('Подписаться', 'form__button', '', false)
