@@ -1,0 +1,26 @@
+mixin downloadList(...names)
+   .download
+      ul.download__list
+         each name in names
+            li.download__item
+               label.download__label
+                  span.download__top
+                     span.download__name= name 
+                  span.download__box
+                     input(type="file")
+                     span.download__icon
+                        svg(width="35" height="35")
+                           use(href='images/sprites/main.stack.svg#svg-download')
+                     span.download__default
+                        span.download__manual Нажмите, чтобы загрузить файл#[span , либо перетащите сюда]
+                        span.download__description DOC, PDF или TXT до 10 МБ
+                     span.download__loading
+                        span.download__process
+                           span.download__file 123newfile.pdf
+                           span.download__size 9 МБ
+                        span.download__description Файл загружается...
+                     span.download__loaded
+                        span.download__process
+                           span.download__file 123newfile.pdf
+                           span.download__size Файл успешно загружен
+                        span.download__delete Удалить файл

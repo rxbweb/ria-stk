@@ -1,0 +1,114 @@
+.download
+   &__list
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      gap: 20px
+   &__item
+      flex-basis: calc(50% - 10px)
+      flex-grow: 1
+   &__label
+      width: 100%
+      height: 100%
+      display: flex
+      flex-direction: column
+   &__top
+      margin-bottom: 2px
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      gap: 6px
+   &__name
+      display: block
+      font-size: 14px
+      color: #191C23
+   &__box
+      padding: 20px 22px
+      flex-grow: 1
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 20px
+      background: #fff url('../images/icons/lines.svg') no-repeat center / 100% 100%
+      cursor: pointer
+      position: relative
+      input
+         width: 100%
+         height: 100%
+         position: absolute
+         inset: 0
+         opacity: 0
+         cursor: pointer
+   &__icon
+      --size: 35px
+      width: var(--size)
+      height: var(--size)
+      display: flex
+      justify-content: center
+      align-items: center
+      color: #47535E
+   &__default,
+   &__loading,
+   &__loaded
+      color: #191C23
+      text-align: center
+      font-size: 16px
+      font-weight: 500
+      line-height: 140%
+      display: none
+      flex-direction: column
+      @include margin-bottom(8px)
+   &__default
+      display: flex
+   &__loaded
+      position: relative
+      z-index: var(--z-index)
+   &__process
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      align-items: center
+      gap: 8px
+   &__size
+      color: #999
+      font-size: 16px
+      font-weight: 400
+   &__manual
+      display: block
+   &__description
+      display: block
+      color: #999
+      font-size: 14px
+      font-weight: 400
+   &__delete
+      color: #9D7D4B
+      text-align: center
+      font-size: 14px
+      font-weight: 400
+      text-decoration-line: underline
+      position: relative
+      z-index: 5
+      &:hover,
+      &:focus
+         text-decoration: none
+   @include sm
+      &__box
+         padding: 20px
+      &__default,
+      &__loading,
+      &__loaded
+         font-size: 14px
+      &__description
+         font-size: 13px
+      &__manual
+         span
+            display: none
+   @include xs
+      &__list
+         flex-direction: column
+         gap: 15px
+      &__item
+         width: 100%
+         flex-basis: 100%
+      &__name
+         font-size: 13px
