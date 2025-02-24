@@ -2,7 +2,7 @@
    const accountLinks = [
       {
          icon: {
-            src: 'images/badges/badge-25.svg',
+            number: 25,
             width: '41',
             height: '40'
          },
@@ -11,7 +11,7 @@
       },
       {
          icon: {
-            src: 'images/badges/badge-26.svg',
+            number: 26,
             width: '41',
             height: '40'
          },
@@ -19,7 +19,7 @@
       },
       {
          icon: {
-            src: 'images/badges/badge-27.svg',
+            number: 27,
             width: '34',
             height: '40'
          },
@@ -28,7 +28,7 @@
       },
       {
          icon: {
-            src: 'images/badges/badge-28.svg',
+            number: 28,
             width: '36',
             height: '46'
          },
@@ -36,7 +36,7 @@
       },
       {
          icon: {
-            src: 'images/badges/badge-29.svg',
+            number: 29,
             width: '34',
             height: '36'
          },
@@ -44,7 +44,7 @@
       },
       {
          icon: {
-            src: 'images/badges/badge-30.svg',
+            number: 30,
             width: '41',
             height: '40'
          },
@@ -52,7 +52,7 @@
       },
       {
          icon: {
-            src: 'images/badges/badge-31.svg',
+            number: 31,
             width: '36',
             height: '46'
          },
@@ -60,7 +60,7 @@
       },
       {
          icon: {
-            src: 'images/badges/badge-32.svg',
+            number: 32,
             width: '34',
             height: '31'
          },
@@ -68,7 +68,7 @@
       },
       {
          icon: {
-            src: 'images/badges/badge-33.svg',
+            number: 33,
             width: '41',
             height: '40'
          },
@@ -76,7 +76,7 @@
       },
       {
          icon: {
-            src: 'images/badges/badge-34.svg',
+            number: 34,
             width: '30',
             height: '30'
          },
@@ -98,6 +98,7 @@ section.section.section--account
                         if link.value
                            .account__links-value= link.value
                         .account__links-icon
-                           img(src=link.icon.src, alt="иконка" width=link.icon.width height=link.icon.height)
+                           svg(width=link.icon.width, height=link.icon.height)
+                              use(href=`images/sprites/main.stack.svg#svg-badge-${link.icon.number}`)
                         .account__links-info
                            h2.account__links-title= link.title
