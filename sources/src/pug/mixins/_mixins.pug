@@ -1,0 +1,47 @@
+mixin breadcrumbs(items, extraClass)
+   .breadcrumbs(class=extraClass)
+      .breadcrumbs__inner.container
+         .breadcrumbs__list
+            each item, index in items
+               if index === items.length - 1
+                  span= item.title
+               else
+                  a(href=item.href)= item.title
+
+mixin button(text = 'Кнопка', extraClass = '', iconClass = '', isLink = true, href = '#', isDiv = false)
+   if isLink
+      a.button(class=extraClass href=href)
+         if text
+            span= text
+         if iconClass
+            i(class=`icon ${iconClass}`)
+   else if isDiv
+      div.button(class=extraClass)
+         if text
+            span= text
+         if iconClass
+            i(class=`icon ${iconClass}`)
+   else
+      button.button(class=extraClass)
+         if text
+            span= text
+         if iconClass
+            i(class=`icon ${iconClass}`)
+
+mixin picture(img, mob = false, title = 'картинка', width = 'auto', height = 'auto')
+   - const imgBase = img.replace(/\.(png|jpg|jpeg|webp)$/i, '')
+
+   picture
+      if mob
+         - const mobBase = mob.replace(/\.(png|jpg|jpeg|webp)$/i, '')
+         source(srcset=mobBase + ".webp" media="(max-width: 575px)" type="image/webp")
+         source(srcset=mob media="(max-width: 575px)")
+
+      source(srcset=imgBase + ".webp")
+      img(src=img alt=title width=width height=height)
+
+mixin swiperControls(className = '', prevClass = '', nextClass = '', paginationClass = '')
+   .swiper-controls(class=className)
+      button.swiper-button-prev(class=prevClass)
+      .swiper-pagination(class=paginationClass)
+      button.swiper-button-next(class=nextClass)

@@ -1,6 +1,0 @@
-mixin breadcrumbs(items, extraClass)
-   .breadcrumbs(class=extraClass)
-      .breadcrumbs__inner.container
-         .breadcrumbs__list
-            each item, index in items
-               a(href=item.href)= item.title
