@@ -1,0 +1,48 @@
+.ventures
+   &__item
+      padding: var(--gap) 0
+      display: flex
+      align-items: center
+      border-bottom: 1px solid #CDCDCD
+   &__info
+      padding-right: 80px
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      @include margin-bottom(var(--gap))
+   &__title
+      @extend .title
+      @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)
+      white-space: pre-line
+   &__info
+      flex-grow: 1
+   &__content
+      width: 57.3%
+      flex-shrink: 0
+   &__img
+      @include img-cover(42.6%, var(--border-radius-20))
+   @include md
+      &__info
+         padding-right: 40px
+   @include ms
+      &__item
+         flex-direction: column
+         align-items: stretch
+      &__info
+         padding-top: var(--gap)
+         padding-right: 0
+      &__content
+         width: 100%
+         order: -1
+   @include sm
+      &__info
+         padding-top: 15px
+         @include margin-bottom(15px)
+      &__img
+         border-radius: 10px
+
+.section
+   &--ventures
+      .section
+         &__header
+            margin-bottom: 0

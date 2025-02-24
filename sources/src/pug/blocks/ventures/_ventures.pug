@@ -1,0 +1,54 @@
+include ../../mixins/_mixins
+
+-
+   const ventures01 = [
+      {
+         img: 'images/ventures/ventures-01.jpg',
+         imgMob: 'images/ventures/ventures-01-mob.jpg',
+         title: 'Инновационные решения \n для промышленности'
+      },
+      {
+         img: 'images/ventures/ventures-02.jpg',
+         imgMob: 'images/ventures/ventures-02-mob.jpg',
+         title: 'Зеленые проекты. Возможности для развития, повышения конкурентоспособности, устойчивости бизнеса'
+      },
+      {
+         img: 'images/ventures/ventures-03.jpg',
+         imgMob: 'images/ventures/ventures-03-mob.jpg',
+         title: 'Стандарты для устойчивого развития'
+      },
+      {
+         img: 'images/ventures/ventures-04.jpg',
+         imgMob: 'images/ventures/ventures-04-mob.jpg',
+         title: 'Лучшие практики: проекты улучшений в эпоху цифровизации'
+      },
+      {
+         img: 'images/ventures/ventures-05.jpg',
+         imgMob: 'images/ventures/ventures-05-mob.jpg',
+         title: 'Наследие: Ю.П. Адлер'
+      },
+      {
+         img: 'images/ventures/ventures-06.jpg',
+         imgMob: 'images/ventures/ventures-06-mob.jpg',
+         title: 'Спецвыпуски журналов'
+      },
+   ]
+
+section.section.section--ventures
+   .section__wrapper.container
+      .section__header.section__header--border
+         .section__header-row
+            h1.section__header-heading Специальные проекты
+      .section__content
+         .ventures
+            .ventures__inner
+               ul.ventures__list
+                  each venture in ventures01
+                     li.ventures__item
+                        .ventures__info
+                           h2.ventures__title= venture.title
+                           +button('Подробнее', 'button--icon', 'icon-arrow-right')
+                        .ventures__content
+                           .ventures__img
+                              +picture(venture.img, venture.imgMob, venture.title, 940, 400)
+
