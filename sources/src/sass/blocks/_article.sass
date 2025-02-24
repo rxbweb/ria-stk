@@ -1,17 +1,35 @@
 .article
    --elements-padding: 30px
    --elements-margin: 15px
-   width: 100%
-   max-width: 1355px
+   width: 90%
+   max-width: 1160px
    margin: 0 auto
    padding: 40px
    background: #F4F4F4
    border-radius: var(--border-radius-15)
    overflow: hidden
+   &--wide
+      max-width: 1355px
+   &--large
+      width: 100%
+      max-width: 100%
    &__inner
       @include margin-bottom(var(--elements-padding))
    &__header
+      padding-bottom: var(--elements-padding)
+      border-bottom: 1px solid #191C23
       @include margin-bottom(var(--elements-margin))
+   &__top
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      flex-wrap: wrap
+      gap: 15px
+      color: var(--black)
+      font-size: 14px
+      p
+         max-width: 600px
+         white-space: pre-line
    &__body
       @include border-bottom(#191C23)
       @include margin-bottom(var(--elements-padding))
@@ -20,14 +38,9 @@
       @extend .title
       @extend .title--second
       @extend .title--red
-   &__title
-      @extend .title
-   &__heading
-      @extend .title
-      @extend .title--second
    &__img
       padding-bottom: 0
-      border-radius: var(--border-radius-10)
+      border-radius: var(--border-radius-15)
       border-bottom: 0
       overflow: hidden
       img
@@ -35,21 +48,49 @@
          height: auto
    &__box
       @include margin-bottom(var(--elements-margin))
-   &__authors
+   &__title
+      white-space: pre-line
+      @extend .title
+   &__heading
+      @extend .title
+      @extend .title--second
+   &__caption
+      margin-bottom: var(--gap-2)
+      white-space: pre-line
+      @extend .title
+      @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)
+   &__lead
+      margin-bottom: var(--gap-2)
+      white-space: pre-line
+      letter-spacing: -0.72px
+      @extend .title
+      @extend .title--second
+   &__people
       @include margin-bottom(var(--elements-margin))
       &-list
          padding-right: 7%
          display: grid
          grid-template-columns: repeat(2, 1fr)
          gap: 15px 25px
+         &--3
+            padding-right: 0
+            grid-template-columns: repeat(3, 1fr)
+            gap: 25px
       &-item
          display: flex
          align-items: center
          gap: 15px
       &-img
-         @include img-backdrop(140px, 47%, 55%, url('../images/icons/user.svg'))
+         --size: 140px
+         display: flex
+         justify-content: center
+         align-items: center
+         @include img-backdrop(var(--size), 47%, 55%, url('../images/icons/user.svg'))
       &-info
          @include margin-bottom(10px)
+      &-title
+         @extend .title
+         font-size: 24px
    &__info
       &-inner
          padding: 30px
@@ -60,9 +101,13 @@
          @include margin-bottom(var(--elements-margin))
       &-title
          @extend .title
-         @extend .title--fourth
-   figure
+         @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)
+         white-space: pre-line
+   &__figure
       @include margin-bottom(5px)
+   &__figcaption
+      font-weight: 500
+      font-style: italic
    &__listing
       li
          position: relative
@@ -71,6 +116,44 @@
             content: '•'
             position: absolute
             left: 4px
+   &__numeric
+      list-style: none
+      counter-reset: counter
+      @include margin-bottom(var(--elements-margin))
+      &--continue
+         counter-reset: none
+      & > li
+         position: relative
+         padding-left: 27px
+         counter-increment: counter
+         @include margin-bottom(10px)
+         &::before
+            content: counter(counter) '.'
+            position: absolute
+            top: 0
+            left: 0
+            width: 20px
+            text-align: right
+         & > ol
+            list-style: none
+            @include margin-bottom(10px)
+      &--subnumeric
+         counter-reset: sub-counter
+         & > li
+            padding-left: 34px
+            counter-increment: sub-counter
+            &::before
+               content: counter(counter) "." counter(sub-counter) "."
+               width: 24px
+      &--numbers
+         & > li
+            padding-left: 0
+            counter-increment: numbers
+            &::before
+               content: counter(numbers) ')'
+               margin-right: 5px
+               width: auto
+               position: static
    &__materials
       @include margin-bottom(15px)
       &-item
@@ -78,7 +161,8 @@
          align-items: center
          gap: 15px
       &-img
-         @include img-backdrop(100px, 55%, 58%, url('../images/icons/document.svg'))
+         --size: 100px
+         @include img-backdrop(var(--size), 55%, 58%, url('../images/icons/document.svg'))
       &-info
          max-width: 774px
          flex-grow: 1
@@ -100,7 +184,6 @@
       &-title
          @extend .title
          @extend .title--sixth
-         @extend .title--red
       &-text
          @extend .fs-15
    &__subscribe
@@ -117,6 +200,7 @@
          height: 100%
          @include img-cover(47%, var(--border-radius-15))
       &-info
+         flex-grow: 1
          display: flex
          flex-direction: column
          align-items: flex-start
@@ -127,14 +211,142 @@
          @extend .article__listing
          @include margin-bottom(1px)
    &__shop
-      padding: 30px 0
-      border-top: 1px solid #191C23
-      border-bottom: 1px solid #191C23
       display: flex
-      gap: 80px
+      flex-wrap: wrap
+      gap: 40px 80px
       &-item
          display: flex
          align-items: center
          gap: 20px
       &-price
          @extend .article__heading
+   &__row
+      --article-row-gap: 30px
+      display: flex
+      flex-wrap: wrap
+      gap: var(--article-row-gap)
+      & > *
+         flex-basis: calc(50% - var(--article-row-gap) / 2)
+         flex-grow: 1
+   &__col
+      @include margin-bottom(var(--elements-padding))
+   &__details
+      display: flex
+      flex-wrap: wrap
+      gap: 20px 60px
+      &-name
+         @extend .title
+         @extend .title--second
+         @extend .title--red
+      &--secondary
+         padding: 30px
+         border-radius: var(--border-radius-15)
+         background: rgba(194, 37, 33, 0.20)
+   &__name
+      @extend .title
+      @include fluidFontSize(24px, 40px, 360px, 1920px, 32px)
+   &__note
+      padding: 30px
+      border-radius: 20px
+      border: 1px solid var(--accent)
+      background: #fff
+      display: flex
+      align-items: center
+      gap: 15px
+      &-icon
+         --size: 50px
+         width: var(--size)
+         height: var(--size)
+         flex-shrink: 0
+         img
+            width: 100%
+            height: 100%
+      &-title
+         @extend .title
+         @extend .title--second
+   .tags
+      display: flex
+      flex-wrap: wrap
+      overflow: hidden
+      color: var(--black)
+      white-space: normal
+   @include md
+      padding: 30px
+      &__subscribe
+         &-content,
+         &-info
+            width: calc(50% - 10px)
+   @include ms
+      width: 100%
+      &__shop
+         flex-direction: column
+         gap: 25px
+      &__people
+         &-list
+            padding-right: 0
+            grid-template-columns: 1fr
+            gap: 15px
+         &-img
+            --size: 120px
+      &__subscribe
+         &-inner
+            flex-direction: column
+         &-content,
+         &-info
+            width: 100%
+         &-list
+            font-weight: 400
+      &__info
+         &-inner
+            padding: 20px
+   @include sm
+      --elements-padding: 20px
+      padding: 20px
+      &__info
+         &-inner
+            padding: 10px
+         &-title
+            white-space: normal
+      &__materials
+         &-item
+            align-items: flex-start
+         &-img
+            --size: 80px
+      &__subscribe
+         &-inner
+            padding: 10px
+         &-img
+            padding-bottom: 85%
+      &__shop
+         &-item
+            justify-content: space-between
+            gap: 5px
+      &__themes
+         gap: 20px
+         @include scroll-x(var(--padding))
+         &-label
+            --size: 40px
+         &-item
+            min-width: 290px
+      .tags
+         font-size: 13px
+   @include xs
+      padding: 10px
+      &__top
+         flex-direction: column
+      &__title
+         white-space: normal
+      &__people
+         &-item
+            align-items: flex-start
+         &-img
+            --size: 80px
+         &-info
+            @include margin-bottom(5px)
+      &__materials
+         &-img
+            --size: 40px
+      &__themes
+         gap: 15px
+      &__numeric
+         @include margin-bottom(10px)
