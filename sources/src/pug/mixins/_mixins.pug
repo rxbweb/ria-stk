@@ -14,19 +14,25 @@ mixin button(text = 'Кнопка', extraClass = '', iconClass = '', isLink = tr
          if text
             span= text
          if iconClass
-            i(class=`icon ${iconClass}`)
+            span.button__icon
+               svg(width="22" height="22")
+                  use(xlink:href=`images/sprites/main.stack.svg#svg-${iconClass}`)
    else if isDiv
       div.button(class=extraClass)
          if text
             span= text
          if iconClass
-            i(class=`icon ${iconClass}`)
+            span.button__icon
+               svg(width="22" height="22")
+                  use(xlink:href=`images/sprites/main.stack.svg#svg-${iconClass}`)
    else
       button.button(class=extraClass)
          if text
             span= text
          if iconClass
-            i(class=`icon ${iconClass}`)
+            span.button__icon
+               svg(width="22" height="22")
+                  use(xlink:href=`images/sprites/main.stack.svg#svg-${iconClass}`)
 
 mixin picture(img, mob = false, title = 'картинка', width = 'auto', height = 'auto')
    - const imgBase = img.replace(/\.(png|jpg|jpeg|webp)$/i, '')
@@ -45,3 +51,14 @@ mixin swiperControls(className = '', prevClass = '', nextClass = '', paginationC
       button.swiper-button-prev(class=prevClass)
       .swiper-pagination(class=paginationClass)
       button.swiper-button-next(class=nextClass)
+
+mixin agree(title = 'Кнопка', className = '', name = '', required = false)
+   .agree(class=className)
+      label.agree__label
+         input(
+            type="checkbox"
+            name=name != '' ? name : false
+            required=required ? true : false
+         )
+         span.agree__checkbox
+         span.agree__text= title
