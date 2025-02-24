@@ -8,11 +8,12 @@ header.header
             .header__manage
                .header__search.search
                   button.search__button
-                     i.icon.icon-loop
-                  input.search__input(type="seacrh" placeholder="Искать....")
+                     svg(width="26" height="26")
+                        use(href='images/sprites/main.stack.svg#svg-icon-loop')
+                  input.search__input(type="text" placeholder="Искать....")
                   .search__select
                      .select
-                        button.select__active
+                        button.select__active.is-selected
                            span Везде
                         .select__list
                            button.select__item.is-active Везде
@@ -22,7 +23,7 @@ header.header
                            button.select__item По новостям
                            button.select__item По мероприятиям
                .select.select--lang
-                  .select__active
+                  .select__active.is-selected
                      span RU
                   .select__list
                      button.select__item.is-active RU
@@ -47,12 +48,14 @@ header.header
             .header__controls
                .header__basket
                   a.button.button--img(href="#")
-                     i.icon.icon-cart
+                     svg(width="22" height="22")
+                        use(href="images/sprites/main.stack.svg#svg-icon-cart")
                   .header__basket-amount 99
                a.header__favorite.button.button--img(href="#")
                   i.icon.icon-heart
                a.header__login.button.button--white(href="#")
-                  i.icon.icon-user
+                  svg(width="20" height="20")
+                     use(href="images/sprites/main.stack.svg#svg-icon-user")
                   span Войти
                a.header__toggle.button.button--icon(href="#")
                   i.icon
@@ -62,7 +65,8 @@ header.header
                ul.header__nav-list
                   li.header__nav-item
                      a.is-icon(href="#")
-                        i.icon.icon-text
+                        svg(width="26" height="26")
+                           use(href='images/sprites/main.stack.svg#svg-text')
                         span Подписка
                   li.header__nav-item
                      a(href="#") Журналы
@@ -84,14 +88,16 @@ header.header
                img(src="images/icons/burger.svg", alt="открыть меню" width="24" height="11")
          .header__box
             ul.header__box-nav
+
 .menu
    .menu__inner
       .menu__container.container
          .menu__manage
             .menu__search.search
                button.search__button
-                  i.icon.icon-loop
-               input.search__input(type="seacrh" placeholder="Искать....")
+                  svg(width="26" height="26")
+                     use(href='images/sprites/main.stack.svg#svg-icon-loop')
+               input.search__input(type="text" placeholder="Искать....")
                .search__select
                   .select
                      button.select__active Везде
@@ -112,7 +118,8 @@ header.header
             ul.menu__nav-list
                li
                   a.is-icon(href="#")
-                     i.icon.icon-text
+                     svg(width="22" height="22")
+                        use(href='images/sprites/main.stack.svg#svg-text')
                      span Подписка
                li
                   a(href="#") Журналы
