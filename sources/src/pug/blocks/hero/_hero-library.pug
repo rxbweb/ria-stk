@@ -1,0 +1,24 @@
+include ../../mixins/_mixins
+
+section.section.section--hero.section--padding-none.section--margin-bottom
+   .section__wrapper
+      .section__content
+         .hero.hero--default
+            .bg-image
+               img(src="images/hero/hero-bg.jpg", alt="фоновая картинка" width="1920" height="750")
+            .hero__inner.container
+               +breadcrumbs([
+                  { href: '#', title: 'Главная' },
+                  { href: '#', title: 'Электронная библиотека' }
+               ])
+               .hero__library
+                  .hero__row
+                     .hero__info
+                        h1.hero__title Электронная библиотека
+                        .hero__text
+                           p Включает полный архив выпускаемых РИА «Стандарты и качество» изданий. Удобный поиск и детальная сортировка сэкономят ваше время и сделают процесс доступа к информации быстрым и удобным.
+                        .hero__bottom
+                           +button('Подробнее', 'button--icon', 'icon-arrow-small')
+                     .hero__content
+                        .hero__img
+                           img(src="images/hero/hero-library.png", alt="Электронная библиотека" width="982" height="606")
