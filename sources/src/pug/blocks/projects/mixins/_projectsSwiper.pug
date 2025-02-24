@@ -11,22 +11,17 @@ mixin projectsSwiper(title, list, bottom)
          .section__content
             .projects
                .projects__inner
-                  .projects__swiper.swiper.js-projects-swiper
+                  .projects__swiper.swiper
                      .swiper-wrapper
                         each project in list
                            .projects__item.swiper-slide
                               .projects__img
                                  img(src=project.src, alt=project.title)
                                  .projects__panel
-                                    a.button.button--icon(href="#")
-                                       span Узнать больше
-                                       i.icon.icon-arrow-right
+                                    +button('Узнать больше', 'button--icon', 'icon-arrow-right')
                               .projects__info
                                  h3.projects__title #{project.title}
-                     .swiper-controls
-                        button.js-projects-prev.swiper-button-prev
-                        .swiper-pagination.js-projects-pagination
-                        button.js-projects-next.swiper-button-next
+                     +swiperControls()
                   if bottom === true
                      .projects__bottom
                         +button('Посмотреть все спецпроекты')

@@ -1,9 +1,10 @@
+include ../../mixins/_mixins
+
 section.section.section--details
       .section__wrapper.container
          .section__header
             .section__header-row
                h2.section__header-title Мероприятия
-               include ../button/_button.pug
                +button('Посмотреть все мероприятия', 'button--icon section__header-button', 'icon-arrow-small')
          .section__content
             .details
@@ -19,7 +20,9 @@ section.section.section--details
                                  p Место проведения: Город, Адрес, улица номер дома зала или офиса.
                               .details__list-tags.tags
                                  .tags__button Тег мероприятия: например выставка
-                              p.details__list-description 29 октября – #[br] 6 ноября 2024
+                              p.details__list-description #{'29 октября – '}
+                                 |
+                                 | 6 ноября 2024
                               .details__list-button.button.button--outline
                                  span Подробнее
                                  i.icon.icon-arrow-small
@@ -33,7 +36,9 @@ section.section.section--details
                                  p Место проведения: Город, Адрес, улица номер дома зала или офиса.
                               .details__list-tags.tags
                                  .tags__button Тег мероприятия: например выставка
-                              p.details__list-description 14 октября – #[br] 21 октября 2024
+                              p.details__list-description #{'14 октября – '}
+                                 |
+                                 | 21 октября 2024
                               .details__list-button.button.button--outline
                                  span Подробнее
                                  i.icon.icon-arrow-small

@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 -
    const accountCard01 = [
       {
@@ -71,16 +73,13 @@ section.section.section--card
                               .card__item
                                  .card__block
                                     .card__box
-                                       button.card__like
+                                       button.favorite-button
                                        .card__img
                                           img(src=card.img, alt=card.title width="350" height="210")
                                     .card__info
                                        p.card__text= card.text
                                        h3.card__name= card.title
-                                       .card__bottom
+                                       .card__manage
                                           p.card__price= card.price
-                                          .card__manage
-                                             a.button.button--slim.button--icon(href="#")
-                                                span В корзину
-                                                i.icon.icon-cart
-                                             a.card__favorite(href="#")
+                                          +button('В корзину', 'button--icon button--slim', 'icon-cart')
+                                          a.card__favorite.favorite-button(href="#")

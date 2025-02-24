@@ -1,3 +1,5 @@
+include ../../../mixins/_mixins
+
 mixin goodsList(items)
    ul.goods__table-list
       each item in items
@@ -6,19 +8,20 @@ mixin goodsList(items)
                p.goods__table-heading Наименование
                if item.imgLarge
                   .goods__table-img.goods__table-img--large
-                     if item.src
-                        img(src=item.src, alt=item.name width="80" height="80")
+                     if item.img
+                        +picture(item.img, false, item.name, 80, 80)
                else if item.imgDisk
                   .goods__table-img
-                     if item.src
-                        img(src=item.src, alt=item.name width="80" height="80")
+                     if item.img
+                        +picture(item.img, false, item.name, 80, 80)
                else
-                  if item.src
+                  if item.img
                      .goods__table-img
-                        img(src=item.src, alt=item.name width="50" height="68")
+                        img(src=item.img, alt=item.name width="50" height="68")
                   else
                      .goods__table-img.goods__table-img--empty
-                        img(src='images/icons/people.svg', alt=item.name width="48" height="48")
+                        svg(width="52" height="52")
+                           use(href="images/sprites/main.stack.svg#svg-people")
                p.goods__table-name!= item.name
             .goods__table-col
                p.goods__table-heading Цена
@@ -49,3 +52,5 @@ mixin goodsList(items)
                   p -
             .goods__table-col
                button.goods__table-delete
+                  svg(width="26" height="26")
+                     use(href="images/sprites/main.stack.svg#svg-delete")

@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 section.section.section--details
       .section__wrapper.container
          .section__header
@@ -15,9 +17,7 @@ section.section.section--details
                                  p Привлекает внимание читателей за счет графики. Может быть выполнена с использованием дополнительных полиграфических возможностей (более плотная бумага, выборочное лакирование, конверт, раскладные страницы и пр.).
                               .details__list-manage
                                  p.details__list-price От 79 500 руб.
-                                 a.button.button--icon(href="#")
-                                    span Связаться
-                                    i.icon.icon-arrow-right
+                                 +button('Связаться', 'button--icon', 'icon-arrow-right')
                            ul.details__list-images
                               li
                                  img(src="images/details/details-images-01.png", alt="Модульная реклама" width="219" height="309")
@@ -33,9 +33,7 @@ section.section.section--details
                                  p Позволяет представить вас/вашу компанию в качестве эксперта. Форматы: интервью, рекламная статья, обзор, экспертный материал.
                               .details__list-manage
                                  p.details__list-price От 135 100 руб.
-                                 a.button.button--icon(href="#")
-                                    span Связаться
-                                    i.icon.icon-arrow-right
+                                 +button('Связаться', 'button--icon', 'icon-arrow-right')
                            ul.details__list-images
                               li
                                  img(src="images/details/details-images-04.png", alt="Текстовая реклама" width="219" height="309")
@@ -51,9 +49,7 @@ section.section.section--details
                                  p Интервью с представителем топ-менеджмента компании. Об опыте первых лиц бизнеса. О том, как правильно и эффективно определить генеральные направления развития компаний. На обложке номера — фото спикера.
                               .details__list-manage
                                  p.details__list-price 520 000 руб.
-                                 a.button.button--icon(href="#")
-                                    span Связаться
-                                    i.icon.icon-arrow-right
+                                 +button('Связаться', 'button--icon', 'icon-arrow-right')
                            ul.details__list-images
                               li
                                  img(src="images/details/details-images-07.png", alt="Интервью с фото спикера на обложке" width="219" height="309")
@@ -69,9 +65,7 @@ section.section.section--details
                                  p Брендирование — оформление в фирменных цветах компании-рекламодателя, нанесение логотипа. Брендирование статьи, раздела или выпуска.
                               .details__list-manage
                                  p.details__list-price От 100 000 руб. #[br] Рассчитывается индивидуально
-                                 a.button.button--icon(href="#")
-                                    span Связаться
-                                    i.icon.icon-arrow-right
+                                 +button('Связаться', 'button--icon', 'icon-arrow-right')
                            ul.details__list-images
                               li
                                  img(src="images/details/details-images-10.png", alt="Брендирование" width="219" height="309")
@@ -87,9 +81,7 @@ section.section.section--details
                                  p Рекламные вложения в журнал (листовки, закладки, календари и пр.).
                               .details__list-manage
                                  p.details__list-price 1 000 шт. — от 70 тыс. руб.
-                                 a.button.button--icon(href="#")
-                                    span Связаться
-                                    i.icon.icon-arrow-right
+                                 +button('Связаться', 'button--icon', 'icon-arrow-right')
                            ul.details__list-images
                               li
                                  img(src="images/details/details-images-13.png", alt="Вложения" width="266" height="266")
@@ -108,9 +100,7 @@ section.section.section--details
 
                               .details__list-manage
                                  p.details__list-price Стоимость рассчитывается индивидуально
-                                 a.button.button--icon(href="#")
-                                    span Связаться
-                                    i.icon.icon-arrow-right
+                                 +button('Связаться', 'button--icon', 'icon-arrow-right')
                            ul.details__list-images.details__list-images--large
                               li
                                  img(src="images/details/details-images-16.jpg", alt="Спецвыпуск на заказ" width="700" height="360")
@@ -122,9 +112,7 @@ section.section.section--details
                                  p Рекламные публикации с использованием дополнительных полиграфических возможностей — более плотная бумага, выборочное лакирование, конверт, раскладные страницы и пр.
                               .details__list-manage
                                  p.details__list-price Стоимость рассчитывается индивидуально
-                                 a.button.button--icon(href="#")
-                                    span Связаться
-                                    i.icon.icon-arrow-right
+                                 +button('Связаться', 'button--icon', 'icon-arrow-right')
                            ul.details__list-images
                               li
                                  img(src="images/details/details-images-17.png", alt="Дополнительные возможности" width="173" height="244")

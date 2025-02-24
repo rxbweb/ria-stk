@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 section.section.section--account
    .section__wrapper.container
       .section__content
@@ -22,7 +24,7 @@ section.section.section--account
                               label.webform__label
                                  span.webform__label-row
                                     span.webform__label-title Логин
-                                    span.webform__label-comment Обязательное поле
+                                    span.webform__label-error Обязательное поле
                                  span.webform__label-field
                                     input.webform__label-input(type="text" placeholder="Логин")
                                  span.webform__label-row
@@ -30,13 +32,13 @@ section.section.section--account
                               label.webform__label
                                  span.webform__label-row
                                     span.webform__label-title Email
-                                    span.webform__label-comment Обязательное поле
+                                    span.webform__label-error Обязательное поле
                                  span.webform__label-field
                                     input.webform__label-input(type="text" placeholder="Электронная почта")
                               label.webform__label
                                  span.webform__label-row
                                     span.webform__label-title Пароль
-                                    span.webform__label-comment Обязательное поле
+                                    span.webform__label-error Обязательное поле
                                  span.webform__label-field.webform__label-field--icon
                                     input.webform__label-input(type="password" placeholder="Пароль")
                                     i.btn.btn--eye
@@ -45,7 +47,7 @@ section.section.section--account
                               label.webform__label
                                  span.webform__label-row
                                     span.webform__label-title Подтверждение пароля
-                                    span.webform__label-comment Обязательное поле
+                                    span.webform__label-error Обязательное поле
                                  span.webform__label-field.webform__label-field--icon
                                     input.webform__label-input(type="password" placeholder="Пароль")
                                     i.btn.btn--eye
@@ -54,12 +56,9 @@ section.section.section--account
                                  input(type="checkbox" name="form-agree" required)
                                  span.agree__checkbox
                                  span.agree__text Даю согласие на отправку мне издательством РИА СТК электронных рассылок
-                           button.button.button--large
-                                 span Зарегистрироваться
+                           +button('Зарегистрироваться', 'button--large', '', false)
                            p.webform__description Нажимая кнопку, вы принимаете условия #[a(href="#") политики] и #[a(href="#") пользовательского соглашения]
                         .webform__bottom
                            .webform__manage
                               span Уже есть аккаунт?
-                              a.button.button--outline(href="#")
-                                 span Войти
-                                 i.icon.icon-arrow-right
+                              +button('Войти', 'button--outline', 'icon-arrow-right')

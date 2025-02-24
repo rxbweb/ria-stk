@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 section.section.section--vacancy
    .section__wrapper.container
       .section__header.section__header--margin
@@ -23,9 +25,7 @@ section.section.section--vacancy
                                     .vacancy__item-text
                                        p Специализация: Перечисление специализаций, возможно длинное написание в несколько строк
                                     .vacancy__item-bottom
-                                       a.button.button--outline(href="#")
-                                          span Подробнее
-                                          i.icon.icon-arrow-right
+                                       +button('Подробнее', 'button--outline', 'icon-arrow-right')
                                  .vacancy__item-aside
                                     p.vacancy__price 100 000 руб.
 
@@ -40,6 +40,4 @@ section.section.section--vacancy
                                  h3.vacancy__heading-title Название вакансии, возможно длинное написание
                               .vacancy__manage
                                  p.vacancy__price 100 000 руб.
-                                 a.button.button--outline(href="#")
-                                    span Подробнее
-                                    i.icon.icon-arrow-right
+                                 +button('Подробнее', 'button--outline', 'icon-arrow-right')

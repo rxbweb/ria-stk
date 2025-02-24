@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 section.section.section--account
    .section__wrapper.container
       .section__content
@@ -12,7 +14,7 @@ section.section.section--account
                               label.webform__label
                                  span.webform__label-row
                                     span.webform__label-title Логин
-                                    span.webform__label-comment Обязательное поле
+                                    span.webform__label-error Обязательное поле
                                  span.webform__label-field
                                     input.webform__label-input(type="text" placeholder="Логин")
                                  span.webform__label-row
@@ -20,7 +22,7 @@ section.section.section--account
                               label.webform__label
                                  span.webform__label-row
                                     span.webform__label-title Пароль
-                                    span.webform__label-comment Обязательное поле
+                                    span.webform__label-error Обязательное поле
                                  span.webform__label-field.webform__label-field--icon
                                     input.webform__label-input(type="password" placeholder="Пароль")
                                     i.btn.btn--eye
@@ -33,8 +35,7 @@ section.section.section--account
                                     span.agree__checkbox
                                     span.agree__text Запомнить
                               a.webform__controls-btn(href="#") Восстановить пароль
-                           button.webform__submit.button.button--large
-                                 span Войти
+                           +button('Войти', 'button--large webform__button', '', false)
                            p.webform__remark
                               span или через соцсети
                            .webform__accounts
@@ -47,6 +48,4 @@ section.section.section--account
                         .webform__bottom
                            .webform__manage
                               span Еще нет аккаунта?
-                              a.button.button--outline(href="#")
-                                 span Зарегистрироваться
-                                 i.icon.icon-arrow-right
+                              +button('Зарегистрироваться', 'button--outline', 'icon-arrow-right')

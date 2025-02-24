@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 -
    const boardEdition01 = [
       {
@@ -24,9 +26,8 @@
 
 section.section.section--edition.section--padding-top-none
    .section__bg
-      img(src="images/edition/edition-bg.jpg", alt="фоновая картинка" width="1920" height="640")
+      img(src="images/section/section-bg.jpg", alt="фоновая картинка" width="1920" height="640")
    .section__wrapper.container
-      include ../breadcrumbs/_breadcrumbs
       +breadcrumbs([
          { href: '#', title: 'Главная' },
          { href: '#', title: 'Редакция' }

@@ -25,9 +25,5 @@ section.section.section--padding-top-none.section--specs
                         li #[span Периодичность] : 12 выпусков в год
                         li #[span География присутствия] : Россия и страны ЕАЭС
                      .specs__manage
-                        a.button.button--icon.button--wide(href="#")
-                           span Скачать медиа-кит
-                           i.icon.icon-arrow-right
-                        a.button.button--outline(href="#")
-                           span Скачать прайс-лист
-                           i.icon.icon-arrow-right
+                        +button('Скачать медиа-кит', 'button--icon button--wide', 'icon-arrow-right')
+                        +button('Скачать прайс-лист', 'button--outline', 'icon-arrow-right')

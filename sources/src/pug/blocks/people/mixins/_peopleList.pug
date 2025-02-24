@@ -1,10 +1,12 @@
+include ../../../mixins/_mixins
+
 mixin peopleList(people, extraClass)
    ul.people__list(class=extraClass)
       each person in people
          li.people__item
             .people__photo
-               if person.src
-                  img(src=person.src, alt=person.name, width="380", height="460")
+               if person.img
+                  +picture(person.img, false, person.name, 380, 460)
             if person.name || person.text
                .people__info
                   if person.name

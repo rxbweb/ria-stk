@@ -9,8 +9,6 @@ include ../../mixins/_mixins
             |
             | и получите доступ
             | к системе привилегий
-         a.button.button--icon(href="#")
-            span Подробнее
-            i.icon.icon-arrow-right
+         +button('Подробнее', 'button--icon', 'icon-arrow-right')
       .subscription__img
          +picture("images/subscription/subscription-img.png", "images/subscription/subscription-img-mob.png", "картинка", 440, 307)

@@ -26,9 +26,5 @@ section.section.section--padding-top-none.section--specs
                         li #[span Версия:] Печатная
                      .specs__manage
                         p.specs__price 5 600 руб.
-                        a.button.button--icon.button--wide(href="#")
-                           span В корзину
-                           i.icon.icon-cart
-                        a.button.button--outline(href="#")
-                           span Купить в 1 клик
-                           i.icon.icon-arrow-right
+                        +button('В корзину', 'button--icon button--wide', 'icon-cart')
+                        +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')

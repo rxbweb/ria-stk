@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 -
    const accountCard01 = [
       {
@@ -38,7 +40,7 @@ section.section.section--account
                                     p.card__table-detail Скачано статей
                                     p.card__table-primary 5 / 10
                                  .card__table-col
-                                    a.button(href="#") Продлить абонемент
+                                    +button('Продлить абонемент', '', '')
                               .card__table-section
                                  h3.card__table-title Статьи
                                  .card__table-swiper
@@ -52,19 +54,16 @@ section.section.section--account
                                                          .card__icon
                                                             i.icon.icon-eye
                                                          .card__img
-                                                            img(src=card.img, alt=card.title width="380" height="380")
+                                                            +picture(card.img, false, card.title, 380, 380)
                                                       .card__info
                                                          p.card__text= card.text
                                                          h3.card__name= card.title
-                                                         .card__bottom
-                                                            .card__manage
-                                                               a.button.button--slim.button--icon(href="#")
-                                                                  span Читать статью
-                                                                  i.icon.icon-arrow-right
-                                    .card__table-controls.swiper-controls
-                                       button.card__table-prev.swiper-button-prev
-                                       .card__table-pagination.swiper-pagination
-                                       button.card__table-next.swiper-button-next
+                                                         .card__manage
+                                                            a.button.button--slim.button--icon(href="#")
+                                                               span.button__text-desktop Читать статью
+                                                               span.button__text-mob В корзину
+                                                               i.icon.icon-arrow-right
+                                    +swiperControls()
 
                         .card
                            .card__table
@@ -76,7 +75,7 @@ section.section.section--account
                                     p.card__table-detail Скачано статей
                                     p.card__table-primary 5 / 10
                                  .card__table-col
-                                    a.button(href="#") Продлить абонемент
+                                    +button('Продлить абонемент', '', '')
                               .card__table-section
                                  h3.card__table-title Статьи
                                  .card__table-swiper
@@ -90,19 +89,16 @@ section.section.section--account
                                                          .card__icon
                                                             i.icon.icon-eye
                                                          .card__img
-                                                            img(src=card.img, alt=card.title width="380" height="380")
+                                                            +picture(card.img, false, card.title, 380, 380)
                                                       .card__info
                                                          p.card__text= card.text
                                                          h3.card__name= card.title
-                                                         .card__bottom
-                                                            .card__manage
-                                                               a.button.button--slim.button--icon(href="#")
-                                                                  span Читать статью
-                                                                  i.icon.icon-arrow-right
-                                    .card__table-controls.swiper-controls
-                                       button.card__table-prev.swiper-button-prev
-                                       .card__table-pagination.swiper-pagination
-                                       button.card__table-next.swiper-button-next
+                                                         .card__manage
+                                                            a.button.button--slim.button--icon(href="#")
+                                                               span.button__text-desktop Читать статью
+                                                               span.button__text-mob В корзину
+                                                               i.icon.icon-arrow-right
+                                    +swiperControls()
 
                   .account__panel
                      include ../spotlight/_spotlight-02
