@@ -5,7 +5,15 @@
    margin-left: -12px
    margin-right: -12px
    overflow: hidden
+   &-slide
+      opacity: 0
+      transition: opacity .2s ease
+      .swiper-initialized &
+         opacity: 1
    &-controls
+      width: 100%
+      max-width: 310px
+      margin: 0 auto
       position: relative
       display: flex
       justify-content: center
@@ -14,6 +22,14 @@
       user-select: none
       &:has(.swiper-button-lock, .swiper-pagination-lock)
          display: none
+      .swiper
+         &-pagination
+            flex-grow: 1
+            display: flex
+            align-items: center
+            justify-content: center
+            & > *
+               flex-grow: 1
    .swiper-controls
       margin-bottom: 0
    &-pagination
@@ -23,7 +39,6 @@
       transform: translateX(0) !important
       &-bullet
          margin: 0 !important
-         width: 22px
          height: 2px
          border-radius: 0
          background: #c7c7c7
@@ -37,18 +52,6 @@
          &.swiper-pagination-bullet-active
             background: var(--accent)
             border-radius: 2px
-         // &.swiper-pagination-bullet-active
-         //    transition: background .3s ease
-         //    background: var(--accent)
-         //    border-radius: 2px
-         // &-active-main
-         //    left: auto !important
-         //    right: auto !important
-         // &-active-prev,
-         // &-active-prev-prev,
-         // &-active-next,
-         // &-active-next-next
-         //    display: none
    &-bullets
       display: flex
       justify-content: center
@@ -86,10 +89,8 @@
    @include ms
       @include margin-bottom(20px)
       &-controls
+         max-width: 240px
          gap: 10px
-      &-pagination
-         &-bullet
-            width: 31px
       &-button
          &-prev,
          &-next
