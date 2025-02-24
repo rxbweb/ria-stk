@@ -60,6 +60,8 @@
             text-decoration: none
          &:last-child
             margin-left: auto
+         &.footer__legal-mob
+            display: none
    &__copy
       font-size: 14px
       color: #4d4d4d
@@ -121,9 +123,13 @@
             display: none
          &--mob
             display: block
-   @include sm
       &__links
          display: none
+      &__legal
+         a
+            &.footer__legal-mob
+               display: inline-flex
+   @include sm
       &__top
          padding: 25px 0 50px
       &__copy

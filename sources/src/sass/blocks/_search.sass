@@ -2,8 +2,9 @@
    position: relative
    z-index: var(--z-index)
    &__button
-      width: 22px
-      height: 22px
+      --size: 26px
+      width: var(--size)
+      height: var(--size)
       position: absolute
       left: 15px
       top: 50%
@@ -12,7 +13,8 @@
       display: inline-flex
       justify-content: center
       align-items: center
-      font-size: 18px
+      svg
+         fill: currentColor
    &__input
       width: 100%
       height: 100%
@@ -36,6 +38,7 @@
       &__input
          padding-left: 36px
       &__button
+         --size: 20px
          left: 10px
       &__select
          .select

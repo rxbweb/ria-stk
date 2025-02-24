@@ -27,6 +27,7 @@ textarea
    color: #47535E
    user-select: none
    line-height: 110%
+   position: relative
    input
       @extend .visually-hidden
    a
@@ -37,12 +38,15 @@ textarea
       gap: 10px
       cursor: pointer
       position: relative
-      label.error
-         position: absolute
-         left: 0
-         bottom: -20px
-         color: var(--accent)
-         font-size: 12px
+   &__error
+      display: none
+      position: absolute
+      left: 0
+      bottom: -20px
+      color: var(--accent)
+      font-size: 12px
+      .is-error &
+         display: block
    &__checkbox
       width: 20px
       height: 20px

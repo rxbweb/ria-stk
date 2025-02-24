@@ -17,17 +17,16 @@
       height: 200px
       flex-shrink: 0
       background: #fff
+      display: flex
+      justify-content: center
+      align-items: center
       @include img-cover(0, var(--border-radius-15))
-      @include icomoon('\e911', inherit, 50px)
-      &::after
-         position: absolute
-         left: 50%
-         top: 50%
-         transform: translate(-50%, -50%)
-         color: #CDCDCD
       img
-         z-index: 5
          object-position: top
+      svg
+         width: 60px
+         height: 60px
+         fill: #CDCDCD
    &__info
       align-self: stretch
       @include align-block(10px)

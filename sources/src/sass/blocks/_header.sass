@@ -1,7 +1,7 @@
 .header
    background: #fff
    position: sticky
-   z-index: var(--z-index-2000)
+   z-index: var(--z-index-main)
    top: 0
    left: 0
    right: 0
@@ -81,8 +81,10 @@
       &:focus
          background: var(--accent)
          color: #fff
-      .icon
-         font-size: 20px
+      svg
+         --size: 20px
+         width: var(--size)
+         height: var(--size)
    &__toggle
       display: none
       .icon
@@ -114,7 +116,6 @@
       align-items: center
       border: none
    &__nav
-      max-width: calc(100% - 120px)
       flex-grow: 1
       &-list
          display: flex
@@ -137,14 +138,16 @@
             @include hover-line(var(--accent), 2px)
             &.is-icon
                color: var(--accent)
-            .icon
-               font-size: 22px
+         svg
+            fill: currentColor
    &__burger
-      display: block
+      display: none
       width: 24px
       height: 11px
       margin-left: 95px
       flex-shrink: 0
+      &.is-visible
+         display: block
    &__box
       display: none
       min-width: 150px
@@ -231,8 +234,7 @@
       &__basket .button
          width: 36px
       &__login
-         padding-left: 8px
-         padding-right: 8px
+         padding: 9px
          .icon
             font-size: 14px
       &__basket
