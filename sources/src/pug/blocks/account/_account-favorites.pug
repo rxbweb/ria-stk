@@ -1,64 +1,132 @@
+include ../../mixins/_mixins
+
 -
-   const books11 = [
-      {
+   const accountFavorite01 = [
+      { 
+         img: 'images/books/books-19.jpg',
+         title: '2022 год Практическое применение АИСМК для проведения анализа измерительных систем (MSA)',
+      },
+      { 
+         img: 'images/books/books-19.jpg',
+         title: '2022 год Практическое применение АИСМК для проведения анализа измерительных систем (MSA)',
+      },
+      { 
+         img: 'images/books/books-19.jpg',
+         title: '2022 год Практическое применение АИСМК для проведения анализа измерительных систем (MSA)',
+      },
+      { 
+         img: 'images/books/books-19.jpg',
+         title: '2022 год Практическое применение АИСМК для проведения анализа измерительных систем (MSA)',
+      },
+      { 
+         img: 'images/books/books-19.jpg',
+         title: '2022 год Практическое применение АИСМК для проведения анализа измерительных систем (MSA)',
+      },
+      { 
+         img: 'images/books/books-19.jpg',
+         title: '2022 год Практическое применение АИСМК для проведения анализа измерительных систем (MSA)',
+      },
+   ]
+
+   const accountFavorite02 = [
+      { 
+         img: 'images/books/books-27.jpg',
+         date: '2022 год',
+         title: 'Методы менеджмента качества',
+         price: '30 000 руб.'
+      },
+      { 
+         img: 'images/books/books-27.jpg',
+         date: '2022 год',
+         title: 'Методы менеджмента качества',
+         price: '30 000 руб.'
+      },
+   ]
+
+   const accountFavorite03 = [
+      { 
          img: 'images/books/books-01.jpg',
+         date: '2022 год',
          title: 'Цифровое качество. Свод знаний о цифровой трансформации',
          price: '3 500 руб.'
       },
-      {
-         img: 'images/books/books-02.jpg',
-         title: 'Процессный подход в требованиях ISO 45001:2018',
-         price: '5 600 руб.'
+      { 
+         img: 'images/books/books-01.jpg',
+         date: '2022 год',
+         title: 'Цифровое качество. Свод знаний о цифровой трансформации',
+         price: '3 500 руб.'
       },
-      {
-         img: 'images/books/books-03.jpg',
-         title: 'Внедрение системы энергетического менеджмента на соответствие международному стандарту ISO 50001:2011',
-         price: '14 900 руб.'
+   ]
+
+   const accountFavorite04 = [
+      { 
+         img: 'images/books/books-14.jpg',
+         date: '2022 год',
+         title: 'Контроль качества продукции',
+         price: '30 000 руб.'
       },
-      {
-         img: 'images/books/books-04.jpg',
-         title: 'ISO 9001:2015. Международный стандарт на системы менеджмента качества. Наблюдения, интерпретация....',
-         price: '3 800 руб.'
+      { 
+         img: 'images/books/books-14.jpg',
+         date: '2022 год',
+         title: 'Контроль качества продукции',
+         price: '30 000 руб.'
       },
-      {
-         img: 'images/books/books-05.jpg',
-         title: 'ПРОТЕЗЫ И ИМПЛАНТАТЫ. Энциклопедия международных стандартов.',
-         price: '7 500 руб.'
+      { 
+         img: 'images/books/books-14.jpg',
+         date: '2022 год',
+         title: 'Контроль качества продукции',
+         price: '30 000 руб.'
       },
-      {
-         img: 'images/books/books-06.jpg',
-         title: 'Аудит систем менеджмента на соответствие требованиям ISO 9001, ISO 14001, ISO 45001, ISO 50001. Практикум.',
-         price: '2 300 руб.'
+      { 
+         img: 'images/books/books-14.jpg',
+         date: '2022 год',
+         title: 'Контроль качества продукции',
+         price: '30 000 руб.'
       },
-      {
-         img: 'images/books/books-07.jpg',
-         title: 'Очерки безопасности хирургических пациентов',
-         price: '1 500 руб.'
+      { 
+         img: 'images/books/books-14.jpg',
+         date: '2022 год',
+         title: 'Контроль качества продукции',
+         price: '30 000 руб.'
       },
-      {
-         img: 'images/books/books-08.jpg',
-         title: 'Условия обеспечения устойчивого успеха. Как создать современную систему менеджмента организации..',
-         price: '3 700 руб.'
+      { 
+         img: 'images/books/books-14.jpg',
+         date: '2022 год',
+         title: 'Контроль качества продукции',
+         price: '30 000 руб.'
       },
-      {
-         img: 'images/books/books-09.jpg',
-         title: 'Качество и эффективность — условия успеха. Методы совершенствования систем менеджмента организаций.',
-         price: '1 120 руб.'
+   ]
+
+   const accountFavorite05 = [
+      { 
+         img: 'images/books/books-22.jpg',
+         title: 'Бизнес-план — стань хозяином своего дела',
+         price: '1 490 руб.'
       },
-      {
-         img: 'images/books/books-10.jpg',
-         title: 'Энциклопедия международных стандартов ISO',
-         price: '7 500 руб.'
+      { 
+         img: 'images/books/books-28.jpg',
+         title: 'Модель устойчивого прибыльного роста. Выпуск 1',
+         price: '1 990,00 руб.'
       },
-      {
-         img: 'images/books/books-11.jpg',
-         title: 'Страна напуганных инженеров. Записки Гипа.',
-         price: '460 руб.'
+      { 
+         img: 'images/books/books-28.jpg',
+         title: 'Модель устойчивого прибыльного роста. Выпуск 2',
+         price: '1 490 руб.'
       },
-      {
-         img: 'images/books/books-12.jpg',
-         title: 'Пищевые продукты',
-         price: '5 100 руб.'
+      { 
+         img: 'images/books/books-22.jpg',
+         title: 'Бизнес-план — стань хозяином своего дела',
+         price: '1 490 руб.'
+      },
+      { 
+         img: 'images/books/books-28.jpg',
+         title: 'Модель устойчивого прибыльного роста. Выпуск 1',
+         price: '1 990,00 руб.'
+      },
+      { 
+         img: 'images/books/books-28.jpg',
+         title: 'Модель устойчивого прибыльного роста. Выпуск 2',
+         price: '1 490 руб.'
       },
    ]
 
@@ -71,37 +139,245 @@ section.section.section--account
                   .account__aside
                      .account__controls
                         include ../controls/_controls
-                        +controls(0)
+                        +controls(9)
                   .account__info
                      h2.account__title Избранное
+                     .account__manage
+                        .account__tabs(data-tabs="products")
+                           a.account__tabs-btn.is-active(href="#" data-tab="tab1") Все
+                           a.account__tabs-btn(href="#" data-tab="tab2") Статьи
+                           a.account__tabs-btn(href="#" data-tab="tab3") Журналы
+                           a.account__tabs-btn(href="#" data-tab="tab4") Книги
+                           a.account__tabs-btn(href="#" data-tab="tab5") Архивы
+                           a.account__tabs-btn(href="#" data-tab="tab6") Подборки
+                        .account__search.search
+                           button.search__button
+                              i.icon.icon-loop
+                           input.search__input(type="text" placeholder="Искать в избранном")
+                           .search__select
+                              .select
+                                 button.select__active
+                                    span По названию
+                                 .select__list
+                                    button.select__item Везде
+                                    button.select__item По журналам
+                                    button.select__item По книгам
+                                    button.select__item По статьям
+                                    button.select__item По новостям
+                                    button.select__item По мероприятиям
+                     .account__products(data-content="products")
+                        .account__section.is-active(data-tab="tab1")
+                           .account__col
+                              h3.account__heading Статьи
+                              .account__products-swiper.swiper-container
+                                 .swiper-wrapper
+                                    each book in accountFavorite01
+                                       .account__products-slide.swiper-slide
+                                          .books
+                                             .books__item
+                                                .books__card
+                                                   .books__box
+                                                      button.favorite-button
+                                                      .books__img
+                                                         +picture(book.img, false, book.title, 380, 380)
+                                                   .books__info
+                                                      h3.books__name= book.title
+                                                      .books__bottom
+                                                         .books__manage
+                                                            +button('Читать статью', 'button--outline', 'icon-arrow-right')
+                                 +swiperControls()
 
-                     .books
-                        .books__inner
-                           .books__section
-                              .books__content
-                                 .books__swiper
-                                    .books__swiper-slider
-                                       .swiper-wrapper
-                                          each book in books11
-                                             .swiper-slide
-                                                .books__item
-                                                   .books__card
-                                                      .books__box
-                                                         button.books__like
-                                                         .books__img
-                                                            img(src=book.img, alt=book.title width="380" height="380")
-                                                      .books__info
-                                                         h3.books__name= book.title
-                                                         .books__bottom
-                                                            p.books__price= book.price
-                                                            .books__manage
-                                                               a.button.button--slim.button--icon(href="#")
-                                                                  span В корзину
-                                                                  i.icon.icon-cart
-                                                               a.button.button--outline(href="#")
-                                                                  span Купить в 1 клик
-                                                                  i.icon.icon-arrow-right
-                                    .swiper-controls
-                                       button.js-books-prev.swiper-button-prev
-                                       .swiper-pagination.js-books-pagination
-                                       button.js-books-next.swiper-button-next
+                           .account__col
+                              h3.account__heading Журналы
+                              .account__products-swiper.swiper-container
+                                 .swiper-wrapper
+                                    each book in accountFavorite02
+                                       .account__products-slide.swiper-slide
+                                          .books
+                                             .books__item
+                                                .books__card
+                                                   .books__box
+                                                      button.favorite-button
+                                                      .books__img
+                                                         +picture(book.img, false, book.title, 380, 380)
+                                                   .books__info
+                                                      p.books__text= book.date
+                                                      h3.books__name= book.title
+                                                      .books__bottom
+                                                         p.books__price= book.price
+                                                         .books__manage
+                                                            +button('В корзину', 'button--icon', 'icon-cart')
+                                                            +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')
+                                 +swiperControls()
+
+                           .account__col
+                              h3.account__heading Книги
+                              .account__products-swiper.swiper-container
+                                 .swiper-wrapper
+                                    each book in accountFavorite03
+                                       .account__products-slide.swiper-slide
+                                          .books
+                                             .books__item
+                                                .books__card
+                                                   .books__box
+                                                      button.favorite-button
+                                                      .books__img
+                                                         +picture(book.img, false, book.title, 380, 380)
+                                                   .books__info
+                                                      h3.books__name= book.title
+                                                      .books__bottom
+                                                         p.books__price= book.price
+                                                         .books__manage
+                                                            +button('В корзину', 'button--icon', 'icon-cart')
+                                                            +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')
+                                 +swiperControls()
+
+                           .account__col
+                              h3.account__heading Архивы
+                              .account__products-swiper.swiper-container
+                                 .swiper-wrapper
+                                    each book in accountFavorite04
+                                       .account__products-slide.swiper-slide
+                                          .books
+                                             .books__item
+                                                .books__card
+                                                   .books__box
+                                                      button.favorite-button
+                                                      .books__img
+                                                         +picture(book.img, false, book.title, 380, 380)
+                                                   .books__info
+                                                      p.books__text= book.date
+                                                      h3.books__name= book.title
+                                                      .books__bottom
+                                                         p.books__price= book.price
+                                                         .books__manage
+                                                            +button('В корзину', 'button--icon', 'icon-cart')
+                                                            +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')
+                                 +swiperControls()
+
+                           .account__col
+                              h3.account__heading Тематические подборки
+                              .account__products-swiper.swiper-container
+                                 .swiper-wrapper
+                                    each book in accountFavorite05
+                                       .account__products-slide.swiper-slide
+                                          .books
+                                             .books__item
+                                                .books__card
+                                                   .books__box
+                                                      button.favorite-button
+                                                      .books__img
+                                                         +picture(book.img, false, book.title, 380, 380)
+                                                   .books__info
+                                                      h3.books__name= book.title
+                                                      .books__bottom
+                                                         p.books__price= book.price
+                                                         .books__manage
+                                                            +button('В корзину', 'button--icon', 'icon-cart')
+                                                            +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')
+                                 +swiperControls()
+
+                        .account__section(data-tab="tab2")
+                           .account__col
+                              h3.account__heading Статьи
+                              ul.account__list
+                                 each book in accountFavorite01
+                                    li.account__list-item
+                                       .books
+                                          .books__item
+                                             .books__card
+                                                .books__box
+                                                   button.favorite-button
+                                                   .books__img
+                                                      +picture(book.img, false, book.title, 380, 380)
+                                                .books__info
+                                                   h3.books__name= book.title
+                                                   .books__bottom
+                                                      .books__manage
+                                                         +button('Читать статью', 'button--outline', 'icon-arrow-right')
+
+                        .account__section(data-tab="tab3")
+                           .account__col
+                              h3.account__heading Журналы
+                              ul.account__list
+                                 each book in accountFavorite02
+                                    li.account__list-item
+                                       .books
+                                          .books__item
+                                             .books__card
+                                                .books__box
+                                                   button.favorite-button
+                                                   .books__img
+                                                      +picture(book.img, false, book.title, 380, 380)
+                                                .books__info
+                                                   p.books__text= book.date
+                                                   h3.books__name= book.title
+                                                   .books__bottom
+                                                      p.books__price= book.price
+                                                      .books__manage
+                                                         +button('В корзину', 'button--icon', 'icon-cart')
+                                                         +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')
+
+                        .account__section(data-tab="tab4")
+                           .account__col
+                              h3.account__heading Книги
+                              ul.account__list
+                                 each book in accountFavorite03
+                                    li.account__list-item
+                                       .books
+                                          .books__item
+                                             .books__card
+                                                .books__box
+                                                   button.favorite-button
+                                                   .books__img
+                                                      +picture(book.img, false, book.title, 380, 380)
+                                                .books__info
+                                                   h3.books__name= book.title
+                                                   .books__bottom
+                                                      p.books__price= book.price
+                                                      .books__manage
+                                                         +button('В корзину', 'button--icon', 'icon-cart')
+                                                         +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')
+
+                        .account__section(data-tab="tab5")
+                           .account__col
+                              h3.account__heading Архивы
+                              ul.account__list
+                                 each book in accountFavorite04
+                                    li.account__list-item
+                                       .books
+                                          .books__item
+                                             .books__card
+                                                .books__box
+                                                   button.favorite-button
+                                                   .books__img
+                                                      +picture(book.img, false, book.title, 380, 380)
+                                                .books__info
+                                                   p.books__text= book.date
+                                                   h3.books__name= book.title
+                                                   .books__bottom
+                                                      p.books__price= book.price
+                                                      .books__manage
+                                                         +button('В корзину', 'button--icon', 'icon-cart')
+                                                         +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')
+
+                        .account__section(data-tab="tab6")
+                           .account__col
+                              h3.account__heading тематические подборки
+                              ul.account__list
+                                 each book in accountFavorite05
+                                    li.account__list-item
+                                       .books
+                                          .books__item
+                                             .books__card
+                                                .books__box
+                                                   button.favorite-button
+                                                   .books__img
+                                                      +picture(book.img, false, book.title, 380, 380)
+                                                .books__info
+                                                   h3.books__name= book.title
+                                                   .books__bottom
+                                                      p.books__price= book.price
+                                                      .books__manage
+                                                         +button('В корзину', 'button--icon', 'icon-cart')
+                                                         +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')

@@ -63,7 +63,6 @@
          text-align: center
          transition: var(--transition)
          position: relative
-         @include mt-auto()
          &:hover,
          &:focus
             border-color: var(--accent)
@@ -90,7 +89,12 @@
       &-icon
          @extend .badge
          @extend .badge--large
+         margin-bottom: auto
+         svg
+            max-width: 90%
+            fill: var(--accent)
       &-info
+         margin-top: auto
          flex-grow: 1
          display: flex
          flex-direction: column
@@ -104,38 +108,61 @@
    &__products
       @include margin-bottom(50px)
       &-swiper
-         @include margin-top(20px)
+         @include margin-top(30px)
       &-slide
          height: auto
          & > *
             height: 100%
+   &__section
+      display: none
+      @include margin-bottom(50px)
+      &.is-active
+         display: block
+         animation: fadeIn 0.4s ease forwards
    &__col
       @include margin-bottom(20px)
    &__heading
       @extend .title
       @include fluidFontSize(20px, 40px, 360px, 1920px, 28px)
    &__card
-      max-width: 800px
       @include margin-bottom(30px)
    &__caption
       @extend .title
       @include fluidFontSize(24px, 40px, 360px, 1920px, 32px)
+   &__manage
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+      gap: 20px
+   &__search
+      max-width: 440px
+      min-width: 400px
+      .select
+         &__list
+            left: auto
+            right: 0
+            transform: none
+   &__tabs
+      display: flex
+      flex-wrap: wrap
+      gap: 20px 40px
+      &-btn
+         @extend .title
+         @extend .title--second
+         color: #67686B
+         letter-spacing: -0.72px
+         border-bottom: 1px solid transparent
+         &.is-active
+            color: var(--accent)
+            border-color: currentColor
+   &__list
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: var(--gap)
    .ticket
       &__content
          flex-basis: 100%
-   @media (min-width: 1201px) and (max-width: 1500px)
-      .ticket
-         &__table
-            &-row
-               grid-template-columns: 1fr 1fr
-            &-col
-               .button
-                  align-self: flex-start
-   @media (min-width: 992px) and (max-width: 1100px)
-      .ticket
-         &__table
-            &-row
-               grid-template-columns: 1fr 1fr 1fr
    @media (max-width: 1600px)
       &__aside
          margin-right: 80px
@@ -145,16 +172,23 @@
          margin-right: var(--account-margin)
       &__panel
          margin-left: var(--account-margin)
+   @media (min-width: 1361px) and (max-width: 1500px)
+      .ticket
+         &__table
+            &-row
+               grid-template-columns: 1fr 1fr
+            &-col
+               .button
+                  align-self: flex-start
    @include xl
       &__panel
          width: 300px
-   @media (min-width: 1201px) and (max-width: 1365px)
-      .webform
-         &__files
-            grid-template-columns: 1fr
-      .documents
-         &__list
-            grid-template-columns: 1fr
+      &__products,
+      &__section
+         @include margin-bottom(40px)
+   @media (max-width: 1360px) and (min-width: 992px)
+      &__aside
+         width: 72px
    @include lg
       --account-margin: 40px
       &__links
@@ -178,18 +212,35 @@
          margin-bottom: 20px
       &__card
          max-width: 100%
+      &__list
+         grid-template-columns: repeat(2, 1fr)
    @include sm
       &__links
          grid-template-columns: repeat(2, 1fr)
          &-icon
             width: 50px
             height: 50px
-            img
+            img,
+            svg
                transform: scale(0.85)
          &-btn
             padding: 25px 40px 25px 15px
          &-value
             font-size: 16px
+      &__col
+         @include margin-bottom(15px)
+      &__products
+         &-swiper
+            @include margin-top(15px)
+      &__card
+         @include margin-bottom(20px)
+      &__tabs
+         gap: 30px
+         @include scroll-x()
+      &__search
+         min-width: 100%
+         max-width: 100%
+         order: -1
    @include xs
       &__links
          grid-template-columns: 1fr
@@ -201,6 +252,8 @@
             gap: 15px
             & > *:last-child
                margin-top: 0
+         &-icon
+            margin: 0
          &-value
             width: 24px
             height: 24px
@@ -221,3 +274,11 @@
                padding-left: 20px
                &::before
                   width: 15px
+
+@keyframes fadeIn
+   from
+      opacity: 0
+      transform: translateY(10px)
+   to
+      opacity: 1
+      transform: translateY(0)
