@@ -6,8 +6,9 @@
         <div class="bg-image"><img src="images/specs/specs-bg.jpg" alt="фоновая картинка"/></div>
         <div class="specs__inner container">
           <div class="breadcrumbs">
-            <div class="breadcrumbs__inner">
-              <div class="breadcrumbs__list"><a href="#">Главная</a><a href="#">Рекламодателям</a></div>
+            <div class="breadcrumbs__inner container">
+              <div class="breadcrumbs__list"><a href="#">Главная</a><span>Рекламодателям</span>
+              </div>
             </div>
           </div>
           <div class="specs__header">
@@ -24,7 +25,14 @@
                 <li><span>Периодичность</span> : 12 выпусков в год</li>
                 <li><span>География присутствия</span> : Россия и страны ЕАЭС</li>
               </ul>
-              <div class="specs__manage"><a class="button button--icon button--wide" href="#"><span>Скачать медиа-кит</span><i class="icon icon-arrow-right"></i></a><a class="button button--outline" href="#"><span>Скачать прайс-лист</span><i class="icon icon-arrow-right"></i></a></div>
+              <div class="specs__manage"><a class="button button--icon button--wide" href="#"><span>Скачать медиа-кит</span><span class="button__icon">
+                    <svg width="22" height="22">
+                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                    </svg></span></a><a class="button button--outline" href="#"><span>Скачать прайс-лист</span><span class="button__icon">
+                    <svg width="22" height="22">
+                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                    </svg></span></a>
+              </div>
             </div>
           </div>
         </div>

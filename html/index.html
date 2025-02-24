@@ -20,14 +20,14 @@
     <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link rel="preload" href="fonts/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="fonts/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -37,11 +37,15 @@
           <div class="header__top"><a class="header__logo" href="/"><img class="header__logo-main" src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img class="header__logo-vok" src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
             <div class="header__manage">
               <div class="header__search search">
-                <button class="search__button"><i class="icon icon-loop"></i></button>
-                <input class="search__input" type="seacrh" placeholder="Искать....">
+                <button class="search__button">
+                  <svg width="26" height="26">
+                    <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                  </svg>
+                </button>
+                <input class="search__input" type="text" placeholder="Искать....">
                 <div class="search__select">
                   <div class="select">
-                    <button class="select__active"><span>Везде</span></button>
+                    <button class="select__active is-selected"><span>Везде</span></button>
                     <div class="select__list">
                       <button class="select__item is-active">Везде</button>
                       <button class="select__item">По журналам</button>
@@ -54,7 +58,7 @@
                 </div>
               </div>
               <div class="select select--lang">
-                <div class="select__active"><span>RU</span></div>
+                <div class="select__active is-selected"><span>RU</span></div>
                 <div class="select__list">
                   <button class="select__item is-active">RU</button>
                   <button class="select__item">EN</button>
@@ -66,15 +70,24 @@
               <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
             </div>
             <div class="header__controls">
-              <div class="header__basket"><a class="button button--img" href="#"><i class="icon icon-cart"></i></a>
+              <div class="header__basket"><a class="button button--img" href="#">
+                  <svg width="22" height="22">
+                    <use href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                  </svg></a>
                 <div class="header__basket-amount">99</div>
-              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
+              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#">
+                <svg width="20" height="20">
+                  <use href="images/sprites/main.stack.svg#svg-icon-user"></use>
+                </svg><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
             </div>
           </div>
           <div class="header__bottom">
             <nav class="header__nav">
               <ul class="header__nav-list">
-                <li class="header__nav-item"><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
+                <li class="header__nav-item"><a class="is-icon" href="#">
+                    <svg width="26" height="26">
+                      <use href="images/sprites/main.stack.svg#svg-text"></use>
+                    </svg><span>Подписка</span></a></li>
                 <li class="header__nav-item"><a href="#">Журналы</a></li>
                 <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
                 <li class="header__nav-item"><a href="#">Электронная библиотека</a></li>
@@ -98,8 +111,12 @@
         <div class="menu__container container">
           <div class="menu__manage">
             <div class="menu__search search">
-              <button class="search__button"><i class="icon icon-loop"></i></button>
-              <input class="search__input" type="seacrh" placeholder="Искать....">
+              <button class="search__button">
+                <svg width="26" height="26">
+                  <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                </svg>
+              </button>
+              <input class="search__input" type="text" placeholder="Искать....">
               <div class="search__select">
                 <div class="select">
                   <button class="select__active">Везде</button>
@@ -124,7 +141,10 @@
           </div>
           <nav class="menu__nav">
             <ul class="menu__nav-list">
-              <li><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
+              <li><a class="is-icon" href="#">
+                  <svg width="22" height="22">
+                    <use href="images/sprites/main.stack.svg#svg-text"></use>
+                  </svg><span>Подписка</span></a></li>
               <li><a href="#">Журналы</a></li>
               <li><a href="#">Спецвыпуски</a></li>
               <li><a href="#">Электронная библиотека</a></li>
@@ -159,7 +179,11 @@
                           <div class="hero__text">
                             <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством, организатор деловых мероприятий, информационно-просветительский центр Всероссийской организации качества.</p>
                           </div>
-                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>Узнать больше</span><span class="button__icon">
+                                      <svg width="22" height="22">
+                                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                      </svg></span></a>
+                          </div>
                         </div>
                         <div class="hero__content">
                           <div class="hero__books">
@@ -222,7 +246,11 @@
                           <div class="hero__text">
                             <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством, организатор деловых мероприятий, информационно-просветительский центр Всероссийской организации качества.</p>
                           </div>
-                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>Узнать больше</span><span class="button__icon">
+                                      <svg width="22" height="22">
+                                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                      </svg></span></a>
+                          </div>
                         </div>
                         <div class="hero__content">
                           <div class="hero__books">
@@ -285,7 +313,11 @@
                           <div class="hero__text">
                             <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством, организатор деловых мероприятий, информационно-просветительский центр Всероссийской организации качества.</p>
                           </div>
-                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>Узнать больше</span><span class="button__icon">
+                                      <svg width="22" height="22">
+                                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                      </svg></span></a>
+                          </div>
                         </div>
                         <div class="hero__content">
                           <div class="hero__books">
@@ -348,7 +380,11 @@
                           <div class="hero__text">
                             <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством, организатор деловых мероприятий, информационно-просветительский центр Всероссийской организации качества.</p>
                           </div>
-                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>Узнать больше</span><span class="button__icon">
+                                      <svg width="22" height="22">
+                                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                      </svg></span></a>
+                          </div>
                         </div>
                         <div class="hero__content">
                           <div class="hero__books">
@@ -435,14 +471,14 @@
             </div>
           </div>
           <div class="section__content">
-            <div class="accordion">
+            <div class="accordion accordion--secondary">
               <div class="accordion__inner">
                 <div class="accordion__row">
                   <div class="accordion__left">
                     <div class="accordion__img"><img class="accordion__pic" src="images/details/details-08.jpg" alt="картинка" width="518" height="487" data-img="accordion-01"><img class="accordion__pic" src="images/details/details-02.jpg" alt="картинка" width="518" height="487" data-img="accordion-02"><img class="accordion__pic" src="images/details/details-03.jpg" alt="картинка" width="518" height="487" data-img="accordion-03"><img class="accordion__pic" src="images/news/news-articles-01.jpg" alt="картинка" width="518" height="487" data-img="accordion-04"></div>
                   </div>
                   <div class="accordion__right">
-                    <div class="info__accordion accordion">
+                    <div class="info__accordion">
                       <ul class="accordion__list">
                         <li class="accordion__item"><a class="accordion__button" href="#" data-accordion="accordion-01">
                             <div class="accordion__button-name">
@@ -477,7 +513,7 @@
                               <div class="accordion__info">
                                 <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Полезное</a>
                                   <ul class="accordion__info-list">
-                                    <li><a class="accordion__info-button" href="#"><span>Новости</span><i class="icon icon-arrow-small"> </i></a></li>
+                                    <li><a class="accordion__info-button" href="#"><span>Новости</span><i class="icon icon-arrow-small"></i></a></li>
                                     <li><a class="accordion__info-button" href="#"> <span>Статьи</span><i class="icon icon-arrow-small"></i></a></li>
                                     <li><a class="accordion__info-button" href="#"><span>Тематические подборки</span><i class="icon icon-arrow-small"> </i></a></li>
                                   </ul>
@@ -689,7 +725,10 @@
         <div class="section__wrapper container">
           <div class="section__header">
             <div class="section__header-row">
-              <h2 class="section__header-title">Новости</h2><a class="section__header-button button button--icon" href="#"><span>Посмотреть все новости</span><i class="icon icon-arrow-small"></i></a>
+              <h2 class="section__header-title">Новости</h2><a class="button button--icon section__header-button" href="#"><span>Посмотреть все новости</span><span class="button__icon">
+                        <svg width="22" height="22">
+                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                        </svg></span></a>
             </div>
             <div class="section__header-bottom">
               <div class="tags"><a class="tags__button" href="#">Название тегов длинного тега</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов длинного тега</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов длинного тега</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов длинного тега</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов длинного тега</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов</a><a class="tags__button" href="#">Название тегов длинного тега</a></div>
@@ -709,7 +748,10 @@
                           <div class="news__top">
                             <p class="news__mark">Международное сотрудничество</p>
                           </div>
-                          <h3 class="news__title">РИА «Стандарты и качество» отмечено благодарственным письмом от руководителя Росстандарта</h3><a class="news__button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                          <h3 class="news__title">РИА «Стандарты и качество» отмечено благодарственным письмом от руководителя Росстандарта</h3><a class="button button--outline news__button" href="#"><span>Читать новость</span><span class="button__icon">
+                                    <svg width="22" height="22">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                    </svg></span></a>
                         </div>
                       </div>
                     </li>
@@ -722,7 +764,10 @@
                           <div class="news__top">
                             <p class="news__mark">Международное сотрудничество</p>
                           </div>
-                          <h3 class="news__title">В России появятся цифровые паспорта промышленной продукции</h3><a class="news__button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                          <h3 class="news__title">В России появятся цифровые паспорта промышленной продукции</h3><a class="button button--outline news__button" href="#"><span>Читать новость</span><span class="button__icon">
+                                    <svg width="22" height="22">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                    </svg></span></a>
                         </div>
                       </div>
                     </li>
@@ -735,7 +780,10 @@
                           <div class="news__top">
                             <p class="news__mark">Международное сотрудничество</p>
                           </div>
-                          <h3 class="news__title">Опубликован новый рейтинг эффективности технических комитетов</h3><a class="news__button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                          <h3 class="news__title">Опубликован новый рейтинг эффективности технических комитетов</h3><a class="button button--outline news__button" href="#"><span>Читать новость</span><span class="button__icon">
+                                    <svg width="22" height="22">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                    </svg></span></a>
                         </div>
                       </div>
                     </li>
@@ -744,13 +792,22 @@
                     <div class="news__articles">
                       <ul class="news__articles-list">
                         <li class="news__articles-item">
-                          <h3 class="news__articles-title">Обязательную маркировку медицинских перчаток введут в России с 2025 года</h3><a class="news__articles-button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                          <h3 class="news__articles-title">Обязательную маркировку медицинских перчаток введут в России с 2025 года</h3><a class="button button--outline news__articles-button" href="#"><span>Читать новость</span><span class="button__icon">
+                                    <svg width="22" height="22">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                    </svg></span></a>
                         </li>
                         <li class="news__articles-item">
-                          <h3 class="news__articles-title">В России предложили выдавать предостережения бизнесу через систему маркировки</h3><a class="news__articles-button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                          <h3 class="news__articles-title">В России предложили выдавать предостережения бизнесу через систему маркировки</h3><a class="button button--outline news__articles-button" href="#"><span>Читать новость</span><span class="button__icon">
+                                    <svg width="22" height="22">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                    </svg></span></a>
                         </li>
                         <li class="news__articles-item">
-                          <h3 class="news__articles-title">РИА «Стандарты и качество» отмечено благодарственным письмом от руководителя Росстандарта</h3><a class="news__articles-button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                          <h3 class="news__articles-title">РИА «Стандарты и качество» отмечено благодарственным письмом от руководителя Росстандарта</h3><a class="button button--outline news__articles-button" href="#"><span>Читать новость</span><span class="button__icon">
+                                    <svg width="22" height="22">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                    </svg></span></a>
                         </li>
                       </ul>
                     </div>
@@ -759,7 +816,11 @@
               </div>
             </div>
           </div>
-          <div class="section__footer"><a class="section__footer-button button button--icon" href="#"><span>Посмотреть все новости</span><i class="icon icon-arrow-small"></i></a></div>
+          <div class="section__footer"><a class="button button--icon section__footer-button" href="#"><span>Посмотреть все новости</span><span class="button__icon">
+                      <svg width="22" height="22">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                      </svg></span></a>
+          </div>
         </div>
       </section>
       <section class="section section--dispatch">
@@ -769,7 +830,7 @@
               <div class="bg-image"><img src="images/dispatch/dispatch-bg.jpg" alt="фоновая картинка" width="1920" height="750"></div>
               <div class="dispatch__inner container">
                 <div class="dispatch__row">
-                  <form class="dispatch__form form" action="#" name="form-callback">
+                  <form class="dispatch__form form" action="#" data-validate-form>
                     <div class="form__header">
                       <h2 class="form__title">Газета Quality News — качественные новости каждый четверг</h2>
                       <p class="form__text">Электронная рассылка «Газета Quality News» — бесплатный новостной дайджест, результат ежедневного мониторинга деловой жизни профессионального сообщества. Подписывайтесь и будьте в курсе новостей из мира качества!</p>
@@ -778,13 +839,13 @@
                       <div class="form__top">
                         <div class="form__box">
                           <label class="form__label form__label--half">
-                            <input class="form__input" type="text" placeholder="Имя" name="form-name">
+                            <input class="form__input" type="text" placeholder="Имя" name="form-name" required><span class="form__error">Обязательное поле</span>
                           </label>
                           <label class="form__label form__label--half">
-                            <input class="form__input" type="text" placeholder="Фамилия">
+                            <input class="form__input" type="text" placeholder="Фамилия" required>
                           </label>
                           <label class="form__label">
-                            <input class="form__input" type="email" placeholder="E-mail" name="form-email">
+                            <input class="form__input" type="email" placeholder="E-mail" name="form-email" required><span class="form__error">Обязательное поле</span>
                           </label>
                         </div>
                       </div>
@@ -792,11 +853,12 @@
                         <div class="agree">
                           <label class="agree__label">
                             <input type="checkbox" name="form-agree" required><span class="agree__checkbox"></span><span class="agree__text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
-                          </label>
+                          </label><span class="agree__error">Обязательное поле</span>
                         </div>
                       </div>
                       <div class="form__bottom">
-                        <button class="form__button button">Подписаться</button>
+                              <button class="button form__button"><span>Подписаться</span>
+                              </button>
                       </div>
                     </div>
                   </form>
@@ -811,7 +873,10 @@
         <div class="section__wrapper container">
           <div class="section__header">
             <div class="section__header-row">
-              <h2 class="section__header-title">Мероприятия</h2><a class="section__header-button button button--icon" href="#"><span>Посмотреть все мероприятия</span><i class="icon icon-arrow-small"></i></a>
+              <h2 class="section__header-title">Мероприятия</h2><a class="button button--icon section__header-button" href="#"><span>Посмотреть все мероприятия</span><span class="button__icon">
+                        <svg width="22" height="22">
+                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                        </svg></span></a>
             </div>
           </div>
           <div class="section__content">
@@ -828,8 +893,14 @@
                         <div class="details__list-tags tags">
                           <div class="tags__button">Тег мероприятия: например выставка</div>
                         </div>
-                        <p class="details__list-description">29 октября – <br> 6 ноября 2024</p>
-                        <div class="details__list-button button button--outline"><span>Подробнее</span><i class="icon icon-arrow-small"></i></div>
+                        <p class="details__list-description">29 октября – 
+                          6 ноября 2024
+                        </p>
+                              <div class="button button--outline details__list-button"><span>Подробнее</span><span class="button__icon">
+                                  <svg width="22" height="22">
+                                    <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                  </svg></span>
+                              </div>
                       </div></a></li>
                   <li class="details__list-item"><a class="details__list-box" href="#">
                       <div class="details__list-img"><img src="images/details/details-02.jpg" alt="Форум «Российская неделя стандартизации»" width="520" height="292"></div>
@@ -841,8 +912,14 @@
                         <div class="details__list-tags tags">
                           <div class="tags__button">Тег мероприятия: например выставка</div>
                         </div>
-                        <p class="details__list-description">14 октября – <br> 21 октября 2024</p>
-                        <div class="details__list-button button button--outline"><span>Подробнее</span><i class="icon icon-arrow-small"></i></div>
+                        <p class="details__list-description">14 октября – 
+                          21 октября 2024
+                        </p>
+                              <div class="button button--outline details__list-button"><span>Подробнее</span><span class="button__icon">
+                                  <svg width="22" height="22">
+                                    <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                  </svg></span>
+                              </div>
                       </div></a></li>
                   <li class="details__list-item"><a class="details__list-box" href="#">
                       <div class="details__list-img"><img src="images/details/details-03.jpg" alt="Форум «Лучший опыт для лучшей жизни»" width="520" height="292"></div>
@@ -855,13 +932,21 @@
                           <div class="tags__button">Тег мероприятия: например выставка</div>
                         </div>
                         <p class="details__list-description">10 августа 2024</p>
-                        <div class="details__list-button button button--outline"><span>Подробнее</span><i class="icon icon-arrow-small"></i></div>
+                              <div class="button button--outline details__list-button"><span>Подробнее</span><span class="button__icon">
+                                  <svg width="22" height="22">
+                                    <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                  </svg></span>
+                              </div>
                       </div></a></li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="section__footer"><a class="section__footer-button button button--icon" href="#"><span>Посмотреть все мероприятия</span><i class="icon icon-arrow-small"></i></a></div>
+          <div class="section__footer"><a class="button button--icon section__footer-button" href="#"><span>Посмотреть все мероприятия</span><span class="button__icon">
+                      <svg width="22" height="22">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                      </svg></span></a>
+          </div>
         </div>
       </section>
       <section class="section section--promo">
@@ -893,7 +978,10 @@
         <div class="section__wrapper container">
           <div class="section__header">
             <div class="section__header-row">
-              <h2 class="section__header-title">Статьи</h2><a class="section__header-button button button--icon" href="#"><span>Посмотреть все статьи</span><i class="icon icon-arrow-small"></i></a>
+              <h2 class="section__header-title">Статьи</h2><a class="button button--icon section__header-button" href="#"><span>Посмотреть все статьи</span><span class="button__icon">
+                        <svg width="22" height="22">
+                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                        </svg></span></a>
             </div>
           </div>
           <div class="section__content">
@@ -905,26 +993,43 @@
                         <div class="news__posts-img"><img src="images/news/news-articles-01.jpg" alt="картинка статьи" width="519" height="390"></div>
                         <div class="news__posts-info">
                           <h3 class="news__posts-title">Надежная доказательная база для оценки инвестпроектов</h3>
-                          <div class="news__posts-button button button--outline"><span>Читать статью</span><i class="icon icon-arrow-small"></i></div>
+                                <div class="button button--outline news__posts-button"><span>Читать статью</span><span class="button__icon">
+                                    <svg width="22" height="22">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                    </svg></span>
+                                </div>
                         </div></a></li>
                     <li class="news__posts-item"><a class="news__posts-box" href="#">
                         <div class="news__posts-img"><img src="images/news/news-articles-02.jpg" alt="картинка статьи" width="519" height="390"></div>
                         <div class="news__posts-info">
                           <h3 class="news__posts-title">О нормативном регулировании в области использования атомной энергии</h3>
-                          <div class="news__posts-button button button--outline"><span>Читать статью</span><i class="icon icon-arrow-small"></i></div>
+                                <div class="button button--outline news__posts-button"><span>Читать статью</span><span class="button__icon">
+                                    <svg width="22" height="22">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                    </svg></span>
+                                </div>
                         </div></a></li>
                   </ul>
                   <aside class="news__aside">
                     <div class="news__articles">
                       <ul class="news__articles-list">
                         <li class="news__articles-item">
-                          <h3 class="news__articles-title">Обязательную маркировку медицинских перчаток введут в России с 2025 года</h3><a class="news__articles-button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                          <h3 class="news__articles-title">Обязательную маркировку медицинских перчаток введут в России с 2025 года</h3><a class="button button--outline news__articles-button" href="#"><span>Читать новость</span><span class="button__icon">
+                                    <svg width="22" height="22">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                    </svg></span></a>
                         </li>
                         <li class="news__articles-item">
-                          <h3 class="news__articles-title">В России предложили выдавать предостережения бизнесу через систему маркировки</h3><a class="news__articles-button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                          <h3 class="news__articles-title">В России предложили выдавать предостережения бизнесу через систему маркировки</h3><a class="button button--outline news__articles-button" href="#"><span>Читать новость</span><span class="button__icon">
+                                    <svg width="22" height="22">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                    </svg></span></a>
                         </li>
                         <li class="news__articles-item">
-                          <h3 class="news__articles-title">РИА «Стандарты и качество» отмечено благодарственным письмом от руководителя Росстандарта</h3><a class="news__articles-button button button--outline" href="#"><span>Читать новость</span><i class="icon icon-arrow-small"></i></a>
+                          <h3 class="news__articles-title">РИА «Стандарты и качество» отмечено благодарственным письмом от руководителя Росстандарта</h3><a class="button button--outline news__articles-button" href="#"><span>Читать новость</span><span class="button__icon">
+                                    <svg width="22" height="22">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                    </svg></span></a>
                         </li>
                       </ul>
                     </div>
@@ -933,7 +1038,11 @@
               </div>
             </div>
           </div>
-          <div class="section__footer"><a class="section__footer-button button button--icon" href="#"><span>Посмотреть все статьи</span><i class="icon icon-arrow-small"></i></a></div>
+          <div class="section__footer"><a class="button button--icon section__footer-button" href="#"><span>Посмотреть все статьи</span><span class="button__icon">
+                      <svg width="22" height="22">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                      </svg></span></a>
+          </div>
         </div>
       </section>
       <section class="section section--listing">
@@ -949,13 +1058,25 @@
                     <ol class="listing__list">
                       <li class="listing__item"><a class="listing__box" href="#">
                           <h3 class="listing__name">Электронная библиотека</h3>
-                          <div class="listing__img"><img src="images/listing/listing-materials-01.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                          <div class="listing__img">
+                                  <picture>
+                                    <source srcset="images/listing/listing-01.webp"><img src="images/listing/listing-01.jpg" alt="картинка" width="350" height="222">
+                                  </picture>
+                          </div></a></li>
                       <li class="listing__item"><a class="listing__box" href="#">
                           <h3 class="listing__name">Тематические подборки</h3>
-                          <div class="listing__img"><img src="images/listing/listing-materials-02.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                          <div class="listing__img">
+                                  <picture>
+                                    <source srcset="images/listing/listing-07.webp"><img src="images/listing/listing-07.jpg" alt="картинка" width="350" height="222">
+                                  </picture>
+                          </div></a></li>
                       <li class="listing__item"><a class="listing__box" href="#">
                           <h3 class="listing__name">Глоссарий</h3>
-                          <div class="listing__img"><img src="images/listing/listing-materials-03.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                          <div class="listing__img">
+                                  <picture>
+                                    <source srcset="images/listing/listing-03.webp"><img src="images/listing/listing-03.jpg" alt="картинка" width="350" height="222">
+                                  </picture>
+                          </div></a></li>
                     </ol>
                   </div>
                 </div>
@@ -964,96 +1085,129 @@
           </div>
         </div>
       </section>
-      <section class="section section--projects">
-        <div class="section__bg"><img src="images/projects/projects-bg.jpg" alt="фоновая картинка" width="1920" height="858"></div>
-        <div class="section__wrapper container">
-          <div class="section__header">
-            <div class="section__header-column">
-              <h2 class="section__header-title">Спецпроекты</h2>
-            </div>
-          </div>
-          <div class="section__content">
-            <div class="projects">
-              <div class="projects__inner">
-                <div class="projects__swiper swiper js-projects-swiper">
-                  <div class="swiper-wrapper">
-                    <div class="projects__item swiper-slide">
-                      <div class="projects__img"><img src="images/projects/projects-01.jpg" alt="Спецвыпуски">
-                        <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-right"></i></a></div>
-                      </div>
-                      <div class="projects__info">
-                        <h3 class="projects__title">Спецвыпуски</h3>
-                      </div>
-                    </div>
-                    <div class="projects__item swiper-slide">
-                      <div class="projects__img"><img src="images/projects/projects-02.jpg" alt="Зеленые проекты">
-                        <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-right"></i></a></div>
-                      </div>
-                      <div class="projects__info">
-                        <h3 class="projects__title">Зеленые проекты</h3>
-                      </div>
-                    </div>
-                    <div class="projects__item swiper-slide">
-                      <div class="projects__img"><img src="images/projects/projects-03.jpg" alt="Стандарты для устойчивого развития">
-                        <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-right"></i></a></div>
-                      </div>
-                      <div class="projects__info">
-                        <h3 class="projects__title">Стандарты для устойчивого развития</h3>
-                      </div>
-                    </div>
-                    <div class="projects__item swiper-slide">
-                      <div class="projects__img"><img src="images/projects/projects-04.jpg" alt="Модель EFQM - путь к совершенству">
-                        <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-right"></i></a></div>
-                      </div>
-                      <div class="projects__info">
-                        <h3 class="projects__title">Модель EFQM - путь к совершенству</h3>
-                      </div>
-                    </div>
-                    <div class="projects__item swiper-slide">
-                      <div class="projects__img"><img src="images/projects/projects-01.jpg" alt="Спецвыпуски">
-                        <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-right"></i></a></div>
-                      </div>
-                      <div class="projects__info">
-                        <h3 class="projects__title">Спецвыпуски</h3>
-                      </div>
-                    </div>
-                    <div class="projects__item swiper-slide">
-                      <div class="projects__img"><img src="images/projects/projects-02.jpg" alt="Зеленые проекты">
-                        <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-right"></i></a></div>
-                      </div>
-                      <div class="projects__info">
-                        <h3 class="projects__title">Зеленые проекты</h3>
-                      </div>
-                    </div>
-                    <div class="projects__item swiper-slide">
-                      <div class="projects__img"><img src="images/projects/projects-03.jpg" alt="Стандарты для устойчивого развития">
-                        <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-right"></i></a></div>
-                      </div>
-                      <div class="projects__info">
-                        <h3 class="projects__title">Стандарты для устойчивого развития</h3>
-                      </div>
-                    </div>
-                    <div class="projects__item swiper-slide">
-                      <div class="projects__img"><img src="images/projects/projects-04.jpg" alt="Модель EFQM - путь к совершенству">
-                        <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><i class="icon icon-arrow-right"></i></a></div>
-                      </div>
-                      <div class="projects__info">
-                        <h3 class="projects__title">Модель EFQM - путь к совершенству</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-controls">
-                    <button class="js-projects-prev swiper-button-prev"></button>
-                    <div class="swiper-pagination js-projects-pagination"></div>
-                    <button class="js-projects-next swiper-button-next"></button>
+            <section class="section section--projects">
+              <div class="section__bg"><img src="images/projects/projects-bg.jpg" alt="фоновая картинка" width="1920" height="858"></div>
+              <div class="section__wrapper container">
+                <div class="section__header">
+                  <div class="section__header-column">
+                    <h2 class="section__header-title">Спецпроекты</h2>
                   </div>
                 </div>
-                <div class="projects__bottom"><a class="button" href="#">Посмотреть все спецпроекты</a></div>
+                <div class="section__content">
+                  <div class="projects">
+                    <div class="projects__inner">
+                      <div class="projects__swiper swiper">
+                        <div class="swiper-wrapper">
+                          <div class="projects__item swiper-slide">
+                            <div class="projects__img"><img src="images/projects/projects-01.jpg" alt="Спецвыпуски">
+                              <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><span class="button__icon">
+                                          <svg width="22" height="22">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                          </svg></span></a>
+                              </div>
+                            </div>
+                            <div class="projects__info">
+                              <h3 class="projects__title">Спецвыпуски</h3>
+                            </div>
+                          </div>
+                          <div class="projects__item swiper-slide">
+                            <div class="projects__img"><img src="images/projects/projects-02.jpg" alt="Зеленые проекты">
+                              <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><span class="button__icon">
+                                          <svg width="22" height="22">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                          </svg></span></a>
+                              </div>
+                            </div>
+                            <div class="projects__info">
+                              <h3 class="projects__title">Зеленые проекты</h3>
+                            </div>
+                          </div>
+                          <div class="projects__item swiper-slide">
+                            <div class="projects__img"><img src="images/projects/projects-03.jpg" alt="Стандарты для устойчивого развития">
+                              <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><span class="button__icon">
+                                          <svg width="22" height="22">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                          </svg></span></a>
+                              </div>
+                            </div>
+                            <div class="projects__info">
+                              <h3 class="projects__title">Стандарты для устойчивого развития</h3>
+                            </div>
+                          </div>
+                          <div class="projects__item swiper-slide">
+                            <div class="projects__img"><img src="images/projects/projects-04.jpg" alt="Модель EFQM - путь к совершенству">
+                              <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><span class="button__icon">
+                                          <svg width="22" height="22">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                          </svg></span></a>
+                              </div>
+                            </div>
+                            <div class="projects__info">
+                              <h3 class="projects__title">Модель EFQM - путь к совершенству</h3>
+                            </div>
+                          </div>
+                          <div class="projects__item swiper-slide">
+                            <div class="projects__img"><img src="images/projects/projects-01.jpg" alt="Спецвыпуски">
+                              <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><span class="button__icon">
+                                          <svg width="22" height="22">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                          </svg></span></a>
+                              </div>
+                            </div>
+                            <div class="projects__info">
+                              <h3 class="projects__title">Спецвыпуски</h3>
+                            </div>
+                          </div>
+                          <div class="projects__item swiper-slide">
+                            <div class="projects__img"><img src="images/projects/projects-02.jpg" alt="Зеленые проекты">
+                              <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><span class="button__icon">
+                                          <svg width="22" height="22">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                          </svg></span></a>
+                              </div>
+                            </div>
+                            <div class="projects__info">
+                              <h3 class="projects__title">Зеленые проекты</h3>
+                            </div>
+                          </div>
+                          <div class="projects__item swiper-slide">
+                            <div class="projects__img"><img src="images/projects/projects-03.jpg" alt="Стандарты для устойчивого развития">
+                              <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><span class="button__icon">
+                                          <svg width="22" height="22">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                          </svg></span></a>
+                              </div>
+                            </div>
+                            <div class="projects__info">
+                              <h3 class="projects__title">Стандарты для устойчивого развития</h3>
+                            </div>
+                          </div>
+                          <div class="projects__item swiper-slide">
+                            <div class="projects__img"><img src="images/projects/projects-04.jpg" alt="Модель EFQM - путь к совершенству">
+                              <div class="projects__panel"><a class="button button--icon" href="#"><span>Узнать больше</span><span class="button__icon">
+                                          <svg width="22" height="22">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                          </svg></span></a>
+                              </div>
+                            </div>
+                            <div class="projects__info">
+                              <h3 class="projects__title">Модель EFQM - путь к совершенству</h3>
+                            </div>
+                          </div>
+                        </div>
+                              <div class="swiper-controls">
+                                <button class="swiper-button-prev"></button>
+                                <div class="swiper-pagination"></div>
+                                <button class="swiper-button-next"></button>
+                              </div>
+                      </div>
+                      <div class="projects__bottom"><a class="button" href="#"><span>Посмотреть все спецпроекты</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            </section>
       <section class="section section--numbers">
         <div class="section__wrapper container">
           <div class="section__content">
@@ -1102,10 +1256,10 @@
               <div class="services__inner">
                 <div class="services__row">
                   <div class="services__left">
-                    <div class="tabs">
-                      <div class="tabs__list tabs-nav" data-tabs="services"><a class="tabs__btn tabs-link is-active" href="#" data-tabs="tab1">
-                          <div class="badge badge--second"><img src="images/badges/badge-01.svg" alt="иконка" width="20" height="20"></div><span>Реклама и продвижение</span></a><a class="tabs__btn tabs-link" href="#" data-tabs="tab2">
-                          <div class="badge badge--second"><img src="images/badges/badge-02.svg" alt="иконка" width="25" height="20"></div><span>Спецвыпуски на заказ</span></a><a class="tabs__btn tabs-link" href="#" data-tabs="tab3">
+                    <div class="switcher">
+                      <div class="switcher__list tabs-nav" data-tabs="services"><a class="switcher__btn tabs-link is-active" href="#" data-tabs="tab1">
+                          <div class="badge badge--second"><img src="images/badges/badge-01.svg" alt="иконка" width="20" height="20"></div><span>Реклама и продвижение</span></a><a class="switcher__btn tabs-link" href="#" data-tabs="tab2">
+                          <div class="badge badge--second"><img src="images/badges/badge-02.svg" alt="иконка" width="25" height="20"></div><span>Спецвыпуски на заказ</span></a><a class="switcher__btn tabs-link" href="#" data-tabs="tab3">
                           <div class="badge badge--second"><img src="images/badges/badge-03.svg" alt="иконка" width="20" height="20"></div><span>Другие услуги</span></a></div>
                     </div>
                   </div>
@@ -1116,10 +1270,18 @@
                           <ol class="listing__list listing__list--2">
                             <li class="listing__item"><a class="listing__box" href="#">
                                 <h3 class="listing__name">Реклама в журналах</h3>
-                                <div class="listing__img"><img src="images/listing/listing-materials-01.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                                <div class="listing__img">
+                                                          <picture>
+                                                            <source srcset="images/listing/listing-01.webp"><img src="images/listing/listing-01.jpg" alt="картинка" width="350" height="222">
+                                                          </picture>
+                                </div></a></li>
                             <li class="listing__item"><a class="listing__box" href="#">
                                 <h3 class="listing__name">Реклама на сайте</h3>
-                                <div class="listing__img"><img src="images/listing/listing-materials-02.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                                <div class="listing__img">
+                                                          <picture>
+                                                            <source srcset="images/listing/listing-07.webp"><img src="images/listing/listing-07.jpg" alt="картинка" width="350" height="222">
+                                                          </picture>
+                                </div></a></li>
                           </ol>
                         </div>
                       </div>
@@ -1128,10 +1290,18 @@
                           <ol class="listing__list listing__list--2">
                             <li class="listing__item"><a class="listing__box" href="#">
                                 <h3 class="listing__name">Реклама в журналах</h3>
-                                <div class="listing__img"><img src="images/listing/listing-materials-03.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                                <div class="listing__img">
+                                                          <picture>
+                                                            <source srcset="images/listing/listing-03.webp"><img src="images/listing/listing-03.jpg" alt="картинка" width="350" height="222">
+                                                          </picture>
+                                </div></a></li>
                             <li class="listing__item"><a class="listing__box" href="#">
                                 <h3 class="listing__name">Реклама на сайте</h3>
-                                <div class="listing__img"><img src="images/listing/listing-materials-04.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                                <div class="listing__img">
+                                                          <picture>
+                                                            <source srcset="images/listing/listing-10.webp"><img src="images/listing/listing-10.jpg" alt="картинка" width="350" height="222">
+                                                          </picture>
+                                </div></a></li>
                           </ol>
                         </div>
                       </div>
@@ -1140,10 +1310,18 @@
                           <ol class="listing__list listing__list--2">
                             <li class="listing__item"><a class="listing__box" href="#">
                                 <h3 class="listing__name">Реклама в журналах</h3>
-                                <div class="listing__img"><img src="images/listing/listing-materials-05.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                                <div class="listing__img">
+                                                          <picture>
+                                                            <source srcset="images/listing/listing-11.webp"><img src="images/listing/listing-11.jpg" alt="картинка" width="350" height="222">
+                                                          </picture>
+                                </div></a></li>
                             <li class="listing__item"><a class="listing__box" href="#">
                                 <h3 class="listing__name">Реклама на сайте</h3>
-                                <div class="listing__img"><img src="images/listing/listing-materials-06.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                                <div class="listing__img">
+                                                          <picture>
+                                                            <source srcset="images/listing/listing-12.webp"><img src="images/listing/listing-12.jpg" alt="картинка" width="350" height="222">
+                                                          </picture>
+                                </div></a></li>
                           </ol>
                         </div>
                       </div>
@@ -1159,11 +1337,11 @@
         <div class="section__wrapper">
           <div class="organization organization--secondary">
             <div class="bg-image">
-              <picture>
-                <source srcset="images/organization/organization-bg-mob.webp" type="image/webp" media="(max-width: 575px)">
-                <source srcset="images/organization/organization-bg-mob.jpg" media="(max-width: 575px)">
-                <source srcset="images/organization/organization-bg.webp"><img src="images/organization/organization-bg.jpg" alt="фоновая картинка" width="1920" height="800">
-              </picture>
+                    <picture>
+                      <source srcset="images/organization/organization-bg-mob.webp" media="(max-width: 575px)" type="image/webp">
+                      <source srcset="images/organization/organization-bg-mob.jpg" media="(max-width: 575px)">
+                      <source srcset="images/organization/organization-bg.webp"><img src="images/organization/organization-bg.jpg" alt="фоновая картинка" width="1920" height="800">
+                    </picture>
             </div>
             <div class="organization__inner container">
               <div class="organization__row">
@@ -1171,8 +1349,11 @@
                   <div class="organization__logo"><img src="images/icons/vok.png" alt="вок" width="121" height="121"></div>
                   <h2 class="organization__title">Всероссийская организация качества</h2>
                   <p class="organization__text">Миссия Всероссийской организации качества (ВОК) — объединение усилий граждан и общественных организаций, предприятий и органов власти для содействия решению задач в области качества и конкурентоспособности отечественных продукции и услуг, формирование общероссийского движения за качество.</p>
-                  <div class="organization__bottom"><a class="button button--icon" href="#"> <span>Узнать больше</span>
-                      <div class="icon icon-arrow-small"></div></a></div>
+                  <div class="organization__bottom"><a class="button button--icon" href="#"><span>Узнать больше</span><span class="button__icon">
+                              <svg width="22" height="22">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                              </svg></span></a>
+                  </div>
                 </div>
                 <div class="organization__right">
                   <div class="numbers">
@@ -1201,7 +1382,7 @@
           </div>
         </div>
       </section>
-      <section class="section section--partners section--padding-top-none">
+      <section class="section section--partners">
         <div class="section__wrapper">
           <div class="section__content">
             <div class="partners">
@@ -1210,24 +1391,25 @@
                 <div class="partners__header">
                   <div class="partners__title">Наши партнеры</div>
                 </div>
-                <div class="partners__swiper swiper js-partners-swiper">
-                  <div class="swiper-wrapper">
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-01.png" alt="russian register" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-02.png" alt="минпромторг России" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-03.png" alt="bureau veritas" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-04.png" alt="рст" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-05.png" alt="академия" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-06.png" alt="ростехсерт" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-02.png" alt="минпромторг России" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-03.png" alt="bureau veritas" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-04.png" alt="рст" width="169" height="120"></div>
-                  </div>
-                  <div class="swiper-controls">
-                    <button class="js-partners-prev swiper-button-prev"></button>
-                    <div class="swiper-pagination js-partners-pagination"></div>
-                    <button class="js-partners-next swiper-button-next"></button>
-                  </div>
-                </div>
+                      <div class="partners__swiper swiper">
+                        <div class="swiper-wrapper">
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-01.png" alt="russian register" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-02.png" alt="минпромторг России" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-03.png" alt="bureau veritas" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-04.png" alt="рст" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-05.png" alt="академия" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-06.png" alt="ростехсерт" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-01.png" alt="russian register" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-02.png" alt="минпромторг России" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-03.png" alt="bureau veritas" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-04.png" alt="рст" width="169" height="120"></div>
+                        </div>
+                              <div class="swiper-controls">
+                                <button class="swiper-button-prev"></button>
+                                <div class="swiper-pagination"></div>
+                                <button class="swiper-button-next"></button>
+                              </div>
+                      </div>
               </div>
             </div>
           </div>
@@ -1256,7 +1438,7 @@
                     <div class="contacts__map map"></div>
                   </div>
                   <div class="contacts__right">
-                    <form class="contacts__form form" action="#" name="form-callback">
+                    <form class="contacts__form form" action="#" data-validate-form>
                       <div class="form__header">
                         <h2 class="form__title">Остались вопросы?</h2>
                         <p class="form__text">Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.</p>
@@ -1265,13 +1447,13 @@
                         <div class="form__top">
                           <div class="form__box">
                             <label class="form__label form__label--half">
-                              <input class="form__input" type="text" placeholder="Имя" name="form-name">
+                              <input class="form__input" type="text" placeholder="Имя" name="form-name" required><span class="form__error">Обязательное поле</span>
                             </label>
                             <label class="form__label form__label--half">
                               <input class="form__input" type="text" placeholder="Фамилия">
                             </label>
                             <label class="form__label">
-                              <input class="form__input" type="email" placeholder="E-mail" name="form-email">
+                              <input class="form__input" type="email" placeholder="E-mail" name="form-email" required><span class="form__error">Обязательное поле</span>
                             </label>
                             <label class="form__label">
                               <textarea class="form__textarea" placeholder="Текст сообщения"></textarea>
@@ -1282,11 +1464,12 @@
                           <div class="agree">
                             <label class="agree__label">
                               <input type="checkbox" name="form-agree" required><span class="agree__checkbox"></span><span class="agree__text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
-                            </label>
+                            </label><span class="agree__error">Обязательное поле</span>
                           </div>
                         </div>
                         <div class="form__bottom">
-                          <button class="form__button button">Подписаться</button>
+                                <button class="button form__button"><span>Подписаться</span>
+                                </button>
                         </div>
                       </div>
                     </form>
@@ -1342,7 +1525,7 @@
           </div>
         </div>
         <div class="footer__bottom">
-          <div class="footer__legal container"><a href="#">Права использования электронных журналов</a><a href="#">Правила пользования сайтом</a><a href="#">Правила обработки и хранения персональных данных</a><a href="#">Соглашение пользователя</a><a href="#"><span>Разработка сайта</span><img src="images/icons/completo.svg" alt="completo" width="63" height="23"></a></div>
+          <div class="footer__legal container"><a href="#">Права использования электронных журналов</a><a href="#">Правила пользования сайтом</a><a class="footer__legal-mob" href="#">Карта сайта</a><a href="#">Правила обработки и хранения персональных данных</a><a href="#">Соглашение пользователя</a><a href="#"><span>Разработка сайта</span><img src="images/icons/completo.svg" alt="completo" width="63" height="23"></a></div>
         </div>
       </div>
     </footer><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=5e6f3718-a525-41b0-832c-11d7f6b0f8a4"></script>

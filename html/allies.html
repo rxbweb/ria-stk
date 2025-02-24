@@ -20,14 +20,14 @@
     <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link rel="preload" href="fonts/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="fonts/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -37,11 +37,15 @@
           <div class="header__top"><a class="header__logo" href="/"><img class="header__logo-main" src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img class="header__logo-vok" src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
             <div class="header__manage">
               <div class="header__search search">
-                <button class="search__button"><i class="icon icon-loop"></i></button>
-                <input class="search__input" type="seacrh" placeholder="Искать....">
+                <button class="search__button">
+                  <svg width="26" height="26">
+                    <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                  </svg>
+                </button>
+                <input class="search__input" type="text" placeholder="Искать....">
                 <div class="search__select">
                   <div class="select">
-                    <button class="select__active"><span>Везде</span></button>
+                    <button class="select__active is-selected"><span>Везде</span></button>
                     <div class="select__list">
                       <button class="select__item is-active">Везде</button>
                       <button class="select__item">По журналам</button>
@@ -54,7 +58,7 @@
                 </div>
               </div>
               <div class="select select--lang">
-                <div class="select__active"><span>RU</span></div>
+                <div class="select__active is-selected"><span>RU</span></div>
                 <div class="select__list">
                   <button class="select__item is-active">RU</button>
                   <button class="select__item">EN</button>
@@ -66,15 +70,24 @@
               <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
             </div>
             <div class="header__controls">
-              <div class="header__basket"><a class="button button--img" href="#"><i class="icon icon-cart"></i></a>
+              <div class="header__basket"><a class="button button--img" href="#">
+                  <svg width="22" height="22">
+                    <use href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                  </svg></a>
                 <div class="header__basket-amount">99</div>
-              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
+              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#">
+                <svg width="20" height="20">
+                  <use href="images/sprites/main.stack.svg#svg-icon-user"></use>
+                </svg><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
             </div>
           </div>
           <div class="header__bottom">
             <nav class="header__nav">
               <ul class="header__nav-list">
-                <li class="header__nav-item"><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
+                <li class="header__nav-item"><a class="is-icon" href="#">
+                    <svg width="26" height="26">
+                      <use href="images/sprites/main.stack.svg#svg-text"></use>
+                    </svg><span>Подписка</span></a></li>
                 <li class="header__nav-item"><a href="#">Журналы</a></li>
                 <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
                 <li class="header__nav-item"><a href="#">Электронная библиотека</a></li>
@@ -98,8 +111,12 @@
         <div class="menu__container container">
           <div class="menu__manage">
             <div class="menu__search search">
-              <button class="search__button"><i class="icon icon-loop"></i></button>
-              <input class="search__input" type="seacrh" placeholder="Искать....">
+              <button class="search__button">
+                <svg width="26" height="26">
+                  <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                </svg>
+              </button>
+              <input class="search__input" type="text" placeholder="Искать....">
               <div class="search__select">
                 <div class="select">
                   <button class="select__active">Везде</button>
@@ -124,7 +141,10 @@
           </div>
           <nav class="menu__nav">
             <ul class="menu__nav-list">
-              <li><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
+              <li><a class="is-icon" href="#">
+                  <svg width="22" height="22">
+                    <use href="images/sprites/main.stack.svg#svg-text"></use>
+                  </svg><span>Подписка</span></a></li>
               <li><a href="#">Журналы</a></li>
               <li><a href="#">Спецвыпуски</a></li>
               <li><a href="#">Электронная библиотека</a></li>
@@ -146,7 +166,8 @@
     <main class="main">
       <div class="breadcrumbs">
         <div class="breadcrumbs__inner container">
-          <div class="breadcrumbs__list"><a href="#">Главная</a><a href="#">Партнеры</a></div>
+          <div class="breadcrumbs__list"><a href="#">Главная</a><span>Партнеры</span>
+          </div>
         </div>
       </div>
       <section class="section section--allies">
@@ -159,134 +180,134 @@
           <div class="section__content">
             <div class="allies">
               <div class="allies__inner">
-                <ul class="allies__list">
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-01.png" alt="Русский Регистр" width="158" height="115"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">Русский Регистр</p>
-                        <p class="allies__text">Ассоциация по сертификации «Русский Регистр» оказывает услуги по сертификации и экспертной оценке, и по праву считается самой крупной и международно признанной российской сертификационной и экспертной организацией. Работая на международной арене, организация проводит сертификацию и верификацию, включая экологическую и сертификацию качества, внедряет системы менеджмента, соблюдая международные стандарты и требования. </p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-02.png" alt="Министерство промышленности и торговли Российской Федерации" width="204" height="65"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">Министерство промышленности и торговли Российской Федерации</p>
-                        <p class="allies__text">Минпромторг России — федеральный орган исполнительной власти, осуществляющий функции по выработке государственной политики и нормативно-правовому регулированию в сфере промышленного и оборонно-промышленного комплекса, а также в области гражданской промышленности, обороны, автомобильной промышленности и высоких технологий. Министерство проводит сертификацию товаров и услуг, а также регулирует сферу промышленности и торговли в стране.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-03.png" alt="Росстандарт" width="182" height="132"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">Росстандарт</p>
-                        <p class="allies__text">Федеральное агентство по техническому регулированию и метрологии (Росстандарт) — федеральный орган исполнительной власти, осуществляющий функции по оказанию государственных услуг в области стандартизации, технического регулирования и метрологии. Оно формирует государственную политику в области сертификации и технических норм и стандартов, чтобы обеспечить соответствие продукции, услуг и процессов требованиям безопасности.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-04.png" alt="ФГАОУ ДПО «Академия стандартизации, метрологии и сертификации (учебная)»" width="210" height="67"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">ФГАОУ ДПО «Академия стандартизации, метрологии и сертификации (учебная)»</p>
-                        <p class="allies__text">Академия осуществляет образовательную деятельность по программам дополнительного образования в области технического регулирования, менеджмента качества, стандартизации и метрологии. Организация предлагает подготовку специалистов по сертификации продукции и других аспектов профессиональной сертификации, в том числе через курсы повышения квалификации и мастер-классы.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-05.png" alt="Всероссийский научно-исследовательский институт метрологии им. Д. И. Менделеева" width="140" height="100"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">Всероссийский научно-исследовательский институт метрологии им. Д. И. Менделеева</p>
-                        <p class="allies__text">ВНИИМ — один из крупнейших центров научной и практической метрологии, головная организация России по фундаментальным исследованиям в метрологии, а также разработке и внедрению современных методов измерений в промышленности и научных исследованиях. Институт занимается разработкой новых стандартов, метрологических приборов и технологий, а также проводит аккредитацию лабораторий.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-06.png" alt="Федеральная служба по аккредитации (Росаккредитация)" width="210" height="67"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">Федеральная служба по аккредитации (Росаккредитация)</p>
-                        <p class="allies__text">Федеральный орган исполнительной власти, осуществляющий функции национального органа Российской Федерации по аккредитации. Росаккредитация аккредитует органы по сертификации, испытательные лаборатории и другие организации, которые соответствуют международным и российским стандартам для обеспечения гарантии качества товаров и услуг.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-07.png" alt="Ростехсерт" width="190" height="138"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">Ростехсерт</p>
-                        <p class="allies__text">Орган по сертификации интегрированных систем менеджмента. Ростехсерт предоставляет услуги сертификации для организаций и предприятий в различных отраслях, в том числе в области ISO и других международных стандартов. Работа с Ростехсерт помогает организациям повышать доверие со стороны партнеров и клиентов за счет обеспечения качества и соответствия продукционной документации.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-08.png" alt="Тульский государственный университет" width="204" height="65"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">Тульский государственный университет</p>
-                        <p class="allies__text">Федеральный орган исполнительной власти, осуществляющий функции национального органа Российской Федерации по аккредитации. Университет предлагает научно-исследовательскую работу и обучение в области сертификации, стандартизации и метрологии, а также активно сотрудничает с ведущими российскими и международными экспертами в области технических и управленческих систем.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-09.png" alt="Информационное агентство «ТЕХНОСУВЕРЕН»" width="240" height="175"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">Информационное агентство «ТЕХНОСУВЕРЕН»</p>
-                        <p class="allies__text">Информационное агентство «ТЕХНОСУВЕРЕН» предоставляет своим клиентам и партнерам актуальную информацию по вопросам сертификации, стандартизации и технического регулирования в России и за рубежом. Оно также организует образовательные мероприятия, семинары и конференции по актуальным вопросам развития качества и безопасности.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-10.png" alt="Главгосэкспертиза" width="240" height="125"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">Главгосэкспертиза</p>
-                        <p class="allies__text">Главгосэкспертиза России занимается проведением государственной экспертизы проектной документации и проверкой достоверности сметной стоимости объектов капитального строительства. Она также проводит аккредитацию проектных и строительных организаций, а также разработку технических регламентов и стандартов для строительства.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-11.png" alt="Центр международной торговли Москвы (ЦМТ)" width="220" height="161"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">Центр международной торговли Москвы (ЦМТ)</p>
-                        <p class="allies__text">Один из крупнейших многопрофильных бизнес-комплексов России, расположенный в центре Москвы и предлагающий широкий спектр услуг для бизнеса. ЦМТ участвует в организации международных выставок, конференций и деловых мероприятий в области инноваций, технологий и бизнеса, предоставляя высокий уровень инфраструктуры для деловых людей.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-12.png" alt="Евразийская экономическая комиссия (ЕЭК)" width="240" height="79"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">Евразийская экономическая комиссия (ЕЭК)</p>
-                        <p class="allies__text">Постоянно действующий наднациональный регулирующий орган Евразийского экономического союза (ЕАЭС), отвечающий за разработку и реализацию общего рынка товаров, услуг, капиталов и рабочей силы. ЕЭК активно работает в сфере технического регулирования, стандартизации, сертификации и оценке соответствия товаров в странах ЕАЭС.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-13.png" alt="Торгово-промышленная палата Российской Федерации" width="180" height="131"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">Торгово-промышленная палата Российской Федерации</p>
-                        <p class="allies__text">Негосударственная некоммерческая организация, объединяющая представителей деловых кругов для реализации целей и задач, определенных Законом Российской Федерации о торгово-промышленных палатах. Палата активно поддерживает стандартизацию и сертификацию товаров и услуг, а также сотрудничает с государственными органами власти.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-14.png" alt="Российский союз промышленников и предпринимателей (РСПП)" width="204" height="123"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">Российский союз промышленников и предпринимателей (РСПП)</p>
-                        <p class="allies__text">РСПП — общероссийская общественная организация, представляющая интересы деловых кругов в России. Союз занимается вопросами качества и сертификации, лоббированием интересов бизнеса и промышленности на всех уровнях власти, а также внедрением стандартов, отвечающих мировым требованиям.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-15.png" alt="ФГБУ «Национальный институт качества» Росздравнадзора" width="232" height="53"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">ФГБУ «Национальный институт качества» Росздравнадзора</p>
-                        <p class="allies__text">Лидер экспертного сообщества в здравоохранении по вопросам обеспечения качества и безопасности медицинской деятельности. Институт занимается сертификацией медицинских изделий и проведения лабораторных испытаний в области здравоохранения.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-16.png" alt="ОАО «Российские железные дороги» (РЖД)" width="204" height="94"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">ОАО «Российские железные дороги» (РЖД)</p>
-                        <p class="allies__text">РЖД — это современный транспортно-логистический комплекс, имеющий стратегическое значение для России и обеспечивает надежность транспортировки товаров и людей. Также компания активно работает над повышением качества железнодорожных услуг.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-17.png" alt="Всероссийская организация качества (ВОК)" width="158" height="115"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">Всероссийская организация качества (ВОК)</p>
-                        <p class="allies__text">ВОК — общественная организация, имеющая своей целью консолидацию потенциала научного сообщества страны в направлении решения актуальных проблем качества жизни, создания и внедрения новых стандартов в области качества жизни, инновационных технологий и улучшения всех аспектов общества.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-18.png" alt="Техэксперт" width="204" height="65"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">Техэксперт</p>
-                        <p class="allies__text">«Техэксперт» — справочно-информационные системы, предоставляющие нормативно-техническую, нормативно-правовую информацию в сегменте B2B. Они ориентированы на поддержку стандартизации и сертификации продукции и сервисов.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-19.png" alt="Академия проблем качества" width="158" height="115"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">Академия проблем качества</p>
-                        <p class="allies__text">Общественная организация, имеющая своей целью консолидацию потенциала научного сообщества страны в направлении решения актуальных проблем качества жизни, создания и внедрения новых стандартов в области качества жизни, инновационных технологий и улучшения всех аспектов общества.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-20.png" alt="Экспоцентр" width="204" height="65"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">Экспоцентр</p>
-                        <p class="allies__text">Российская выставочно-конгрессная компания, ведущий организатор крупнейших международных отраслевых выставок в России, СНГ и Восточной Европе. Экспоцентр активно развивает международное сотрудничество и поддерживает бизнес-мероприятия.</p>
-                      </div></a></li>
-                  <li class="allies__item"><a class="allies__box" href="#">
-                      <div class="allies__img"><img src="images/allies/allies-21.png" alt="ФГБУ «Институт стандартизации»" width="234" height="170"></div>
-                      <div class="allies__info">
-                        <p class="allies__name">ФГБУ «Институт стандартизации»</p>
-                        <p class="allies__text">Государственный центр компетенций в области стандартизации и технического регулирования. Подведомственная организация Росстандарта, обеспечивающая разработку и внедрение новых стандартов для различных отраслей промышленности.</p>
-                      </div></a></li>
-                </ul>
+                      <ul class="allies__list">
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-01.png" alt="Русский Регистр" width="158" height="115"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">Русский Регистр</p>
+                              <p class="allies__text">Ассоциация по сертификации «Русский Регистр» оказывает услуги по сертификации и экспертной оценке, и по праву считается самой крупной и международно признанной российской сертификационной и экспертной организацией. Работая на международной арене, организация проводит сертификацию и верификацию, включая экологическую и сертификацию качества, внедряет системы менеджмента, соблюдая международные стандарты и требования. </p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-02.png" alt="Министерство промышленности и торговли Российской Федерации" width="204" height="65"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">Министерство промышленности и торговли Российской Федерации</p>
+                              <p class="allies__text">Минпромторг России — федеральный орган исполнительной власти, осуществляющий функции по выработке государственной политики и нормативно-правовому регулированию в сфере промышленного и оборонно-промышленного комплекса, а также в области гражданской промышленности, обороны, автомобильной промышленности и высоких технологий. Министерство проводит сертификацию товаров и услуг, а также регулирует сферу промышленности и торговли в стране.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-03.png" alt="Росстандарт" width="182" height="132"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">Росстандарт</p>
+                              <p class="allies__text">Федеральное агентство по техническому регулированию и метрологии (Росстандарт) — федеральный орган исполнительной власти, осуществляющий функции по оказанию государственных услуг в области стандартизации, технического регулирования и метрологии. Оно формирует государственную политику в области сертификации и технических норм и стандартов, чтобы обеспечить соответствие продукции, услуг и процессов требованиям безопасности.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-04.png" alt="ФГАОУ ДПО «Академия стандартизации, метрологии и сертификации (учебная)»" width="210" height="67"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">ФГАОУ ДПО «Академия стандартизации, метрологии и сертификации (учебная)»</p>
+                              <p class="allies__text">Академия осуществляет образовательную деятельность по программам дополнительного образования в области технического регулирования, менеджмента качества, стандартизации и метрологии. Организация предлагает подготовку специалистов по сертификации продукции и других аспектов профессиональной сертификации, в том числе через курсы повышения квалификации и мастер-классы.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-05.png" alt="Всероссийский научно-исследовательский институт метрологии им. Д. И. Менделеева" width="140" height="100"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">Всероссийский научно-исследовательский институт метрологии им. Д. И. Менделеева</p>
+                              <p class="allies__text">ВНИИМ — один из крупнейших центров научной и практической метрологии, головная организация России по фундаментальным исследованиям в метрологии, а также разработке и внедрению современных методов измерений в промышленности и научных исследованиях. Институт занимается разработкой новых стандартов, метрологических приборов и технологий, а также проводит аккредитацию лабораторий.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-06.png" alt="Федеральная служба по аккредитации (Росаккредитация)" width="210" height="67"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">Федеральная служба по аккредитации (Росаккредитация)</p>
+                              <p class="allies__text">Федеральный орган исполнительной власти, осуществляющий функции национального органа Российской Федерации по аккредитации. Росаккредитация аккредитует органы по сертификации, испытательные лаборатории и другие организации, которые соответствуют международным и российским стандартам для обеспечения гарантии качества товаров и услуг.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-07.png" alt="Ростехсерт" width="190" height="138"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">Ростехсерт</p>
+                              <p class="allies__text">Орган по сертификации интегрированных систем менеджмента. Ростехсерт предоставляет услуги сертификации для организаций и предприятий в различных отраслях, в том числе в области ISO и других международных стандартов. Работа с Ростехсерт помогает организациям повышать доверие со стороны партнеров и клиентов за счет обеспечения качества и соответствия продукционной документации.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-08.png" alt="Тульский государственный университет" width="204" height="65"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">Тульский государственный университет</p>
+                              <p class="allies__text">Федеральный орган исполнительной власти, осуществляющий функции национального органа Российской Федерации по аккредитации. Университет предлагает научно-исследовательскую работу и обучение в области сертификации, стандартизации и метрологии, а также активно сотрудничает с ведущими российскими и международными экспертами в области технических и управленческих систем.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-09.png" alt="Информационное агентство «ТЕХНОСУВЕРЕН»" width="240" height="175"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">Информационное агентство «ТЕХНОСУВЕРЕН»</p>
+                              <p class="allies__text">Информационное агентство «ТЕХНОСУВЕРЕН» предоставляет своим клиентам и партнерам актуальную информацию по вопросам сертификации, стандартизации и технического регулирования в России и за рубежом. Оно также организует образовательные мероприятия, семинары и конференции по актуальным вопросам развития качества и безопасности.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-10.png" alt="Главгосэкспертиза" width="240" height="125"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">Главгосэкспертиза</p>
+                              <p class="allies__text">Главгосэкспертиза России занимается проведением государственной экспертизы проектной документации и проверкой достоверности сметной стоимости объектов капитального строительства. Она также проводит аккредитацию проектных и строительных организаций, а также разработку технических регламентов и стандартов для строительства.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-11.png" alt="Центр международной торговли Москвы (ЦМТ)" width="220" height="161"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">Центр международной торговли Москвы (ЦМТ)</p>
+                              <p class="allies__text">Один из крупнейших многопрофильных бизнес-комплексов России, расположенный в центре Москвы и предлагающий широкий спектр услуг для бизнеса. ЦМТ участвует в организации международных выставок, конференций и деловых мероприятий в области инноваций, технологий и бизнеса, предоставляя высокий уровень инфраструктуры для деловых людей.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-12.png" alt="Евразийская экономическая комиссия (ЕЭК)" width="240" height="79"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">Евразийская экономическая комиссия (ЕЭК)</p>
+                              <p class="allies__text">Постоянно действующий наднациональный регулирующий орган Евразийского экономического союза (ЕАЭС), отвечающий за разработку и реализацию общего рынка товаров, услуг, капиталов и рабочей силы. ЕЭК активно работает в сфере технического регулирования, стандартизации, сертификации и оценке соответствия товаров в странах ЕАЭС.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-13.png" alt="Торгово-промышленная палата Российской Федерации" width="180" height="131"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">Торгово-промышленная палата Российской Федерации</p>
+                              <p class="allies__text">Негосударственная некоммерческая организация, объединяющая представителей деловых кругов для реализации целей и задач, определенных Законом Российской Федерации о торгово-промышленных палатах. Палата активно поддерживает стандартизацию и сертификацию товаров и услуг, а также сотрудничает с государственными органами власти.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-14.png" alt="Российский союз промышленников и предпринимателей (РСПП)" width="204" height="123"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">Российский союз промышленников и предпринимателей (РСПП)</p>
+                              <p class="allies__text">РСПП — общероссийская общественная организация, представляющая интересы деловых кругов в России. Союз занимается вопросами качества и сертификации, лоббированием интересов бизнеса и промышленности на всех уровнях власти, а также внедрением стандартов, отвечающих мировым требованиям.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-15.png" alt="ФГБУ «Национальный институт качества» Росздравнадзора" width="232" height="53"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">ФГБУ «Национальный институт качества» Росздравнадзора</p>
+                              <p class="allies__text">Лидер экспертного сообщества в здравоохранении по вопросам обеспечения качества и безопасности медицинской деятельности. Институт занимается сертификацией медицинских изделий и проведения лабораторных испытаний в области здравоохранения.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-16.png" alt="ОАО «Российские железные дороги» (РЖД)" width="204" height="94"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">ОАО «Российские железные дороги» (РЖД)</p>
+                              <p class="allies__text">РЖД — это современный транспортно-логистический комплекс, имеющий стратегическое значение для России и обеспечивает надежность транспортировки товаров и людей. Также компания активно работает над повышением качества железнодорожных услуг.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-17.png" alt="Всероссийская организация качества (ВОК)" width="158" height="115"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">Всероссийская организация качества (ВОК)</p>
+                              <p class="allies__text">ВОК — общественная организация, имеющая своей целью консолидацию потенциала научного сообщества страны в направлении решения актуальных проблем качества жизни, создания и внедрения новых стандартов в области качества жизни, инновационных технологий и улучшения всех аспектов общества.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-18.png" alt="Техэксперт" width="204" height="65"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">Техэксперт</p>
+                              <p class="allies__text">«Техэксперт» — справочно-информационные системы, предоставляющие нормативно-техническую, нормативно-правовую информацию в сегменте B2B. Они ориентированы на поддержку стандартизации и сертификации продукции и сервисов.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-19.png" alt="Академия проблем качества" width="158" height="115"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">Академия проблем качества</p>
+                              <p class="allies__text">Общественная организация, имеющая своей целью консолидацию потенциала научного сообщества страны в направлении решения актуальных проблем качества жизни, создания и внедрения новых стандартов в области качества жизни, инновационных технологий и улучшения всех аспектов общества.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-20.png" alt="Экспоцентр" width="204" height="65"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">Экспоцентр</p>
+                              <p class="allies__text">Российская выставочно-конгрессная компания, ведущий организатор крупнейших международных отраслевых выставок в России, СНГ и Восточной Европе. Экспоцентр активно развивает международное сотрудничество и поддерживает бизнес-мероприятия.</p>
+                            </div></a></li>
+                        <li class="allies__item"><a class="allies__box" href="#">
+                            <div class="allies__img"><img src="images/allies/allies-21.png" alt="ФГБУ «Институт стандартизации»" width="234" height="170"></div>
+                            <div class="allies__info">
+                              <p class="allies__name">ФГБУ «Институт стандартизации»</p>
+                              <p class="allies__text">Государственный центр компетенций в области стандартизации и технического регулирования. Подведомственная организация Росстандарта, обеспечивающая разработку и внедрение новых стандартов для различных отраслей промышленности.</p>
+                            </div></a></li>
+                      </ul>
               </div>
             </div>
           </div>
@@ -315,7 +336,7 @@
                     <div class="contacts__map map"></div>
                   </div>
                   <div class="contacts__right">
-                    <form class="contacts__form form" action="#" name="form-callback">
+                    <form class="contacts__form form" action="#" data-validate-form>
                       <div class="form__header">
                         <h2 class="form__title">Остались вопросы?</h2>
                         <p class="form__text">Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.</p>
@@ -324,13 +345,13 @@
                         <div class="form__top">
                           <div class="form__box">
                             <label class="form__label form__label--half">
-                              <input class="form__input" type="text" placeholder="Имя" name="form-name">
+                              <input class="form__input" type="text" placeholder="Имя" name="form-name" required><span class="form__error">Обязательное поле</span>
                             </label>
                             <label class="form__label form__label--half">
                               <input class="form__input" type="text" placeholder="Фамилия">
                             </label>
                             <label class="form__label">
-                              <input class="form__input" type="email" placeholder="E-mail" name="form-email">
+                              <input class="form__input" type="email" placeholder="E-mail" name="form-email" required><span class="form__error">Обязательное поле</span>
                             </label>
                             <label class="form__label">
                               <textarea class="form__textarea" placeholder="Текст сообщения"></textarea>
@@ -341,11 +362,12 @@
                           <div class="agree">
                             <label class="agree__label">
                               <input type="checkbox" name="form-agree" required><span class="agree__checkbox"></span><span class="agree__text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
-                            </label>
+                            </label><span class="agree__error">Обязательное поле</span>
                           </div>
                         </div>
                         <div class="form__bottom">
-                          <button class="form__button button">Подписаться</button>
+                                <button class="button form__button"><span>Подписаться</span>
+                                </button>
                         </div>
                       </div>
                     </form>
@@ -401,7 +423,7 @@
           </div>
         </div>
         <div class="footer__bottom">
-          <div class="footer__legal container"><a href="#">Права использования электронных журналов</a><a href="#">Правила пользования сайтом</a><a href="#">Правила обработки и хранения персональных данных</a><a href="#">Соглашение пользователя</a><a href="#"><span>Разработка сайта</span><img src="images/icons/completo.svg" alt="completo" width="63" height="23"></a></div>
+          <div class="footer__legal container"><a href="#">Права использования электронных журналов</a><a href="#">Правила пользования сайтом</a><a class="footer__legal-mob" href="#">Карта сайта</a><a href="#">Правила обработки и хранения персональных данных</a><a href="#">Соглашение пользователя</a><a href="#"><span>Разработка сайта</span><img src="images/icons/completo.svg" alt="completo" width="63" height="23"></a></div>
         </div>
       </div>
     </footer><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=5e6f3718-a525-41b0-832c-11d7f6b0f8a4"></script>

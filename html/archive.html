@@ -20,14 +20,14 @@
     <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link rel="preload" href="fonts/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="fonts/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -37,11 +37,15 @@
           <div class="header__top"><a class="header__logo" href="/"><img class="header__logo-main" src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img class="header__logo-vok" src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
             <div class="header__manage">
               <div class="header__search search">
-                <button class="search__button"><i class="icon icon-loop"></i></button>
-                <input class="search__input" type="seacrh" placeholder="Искать....">
+                <button class="search__button">
+                  <svg width="26" height="26">
+                    <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                  </svg>
+                </button>
+                <input class="search__input" type="text" placeholder="Искать....">
                 <div class="search__select">
                   <div class="select">
-                    <button class="select__active"><span>Везде</span></button>
+                    <button class="select__active is-selected"><span>Везде</span></button>
                     <div class="select__list">
                       <button class="select__item is-active">Везде</button>
                       <button class="select__item">По журналам</button>
@@ -54,7 +58,7 @@
                 </div>
               </div>
               <div class="select select--lang">
-                <div class="select__active"><span>RU</span></div>
+                <div class="select__active is-selected"><span>RU</span></div>
                 <div class="select__list">
                   <button class="select__item is-active">RU</button>
                   <button class="select__item">EN</button>
@@ -66,15 +70,24 @@
               <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
             </div>
             <div class="header__controls">
-              <div class="header__basket"><a class="button button--img" href="#"><i class="icon icon-cart"></i></a>
+              <div class="header__basket"><a class="button button--img" href="#">
+                  <svg width="22" height="22">
+                    <use href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                  </svg></a>
                 <div class="header__basket-amount">99</div>
-              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
+              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#">
+                <svg width="20" height="20">
+                  <use href="images/sprites/main.stack.svg#svg-icon-user"></use>
+                </svg><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
             </div>
           </div>
           <div class="header__bottom">
             <nav class="header__nav">
               <ul class="header__nav-list">
-                <li class="header__nav-item"><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
+                <li class="header__nav-item"><a class="is-icon" href="#">
+                    <svg width="26" height="26">
+                      <use href="images/sprites/main.stack.svg#svg-text"></use>
+                    </svg><span>Подписка</span></a></li>
                 <li class="header__nav-item"><a href="#">Журналы</a></li>
                 <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
                 <li class="header__nav-item"><a href="#">Электронная библиотека</a></li>
@@ -98,8 +111,12 @@
         <div class="menu__container container">
           <div class="menu__manage">
             <div class="menu__search search">
-              <button class="search__button"><i class="icon icon-loop"></i></button>
-              <input class="search__input" type="seacrh" placeholder="Искать....">
+              <button class="search__button">
+                <svg width="26" height="26">
+                  <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                </svg>
+              </button>
+              <input class="search__input" type="text" placeholder="Искать....">
               <div class="search__select">
                 <div class="select">
                   <button class="select__active">Везде</button>
@@ -124,7 +141,10 @@
           </div>
           <nav class="menu__nav">
             <ul class="menu__nav-list">
-              <li><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
+              <li><a class="is-icon" href="#">
+                  <svg width="22" height="22">
+                    <use href="images/sprites/main.stack.svg#svg-text"></use>
+                  </svg><span>Подписка</span></a></li>
               <li><a href="#">Журналы</a></li>
               <li><a href="#">Спецвыпуски</a></li>
               <li><a href="#">Электронная библиотека</a></li>
@@ -144,92 +164,13 @@
       </div>
     </div>
     <main class="main">
-      <div class="sidebar">
-        <div class="sidebar__inner">
-          <div class="sidebar__main">
-            <div class="sidebar__list"><a class="sidebar__button" href="#">
-                <div class="sidebar__icon">
-                  <svg>
-                    <use href="images/sprites/main.stack.svg#svg-sidebar-01"></use>
-                  </svg>
-                </div>
-                <div class="sidebar__text">О журнале</div></a><a class="sidebar__button" href="#">
-                <div class="sidebar__icon">
-                  <svg>
-                    <use href="images/sprites/main.stack.svg#svg-sidebar-02"></use>
-                  </svg>
-                </div>
-                <div class="sidebar__text">Подписка</div></a><a class="sidebar__button" href="#">
-                <div class="sidebar__icon">
-                  <svg>
-                    <use href="images/sprites/main.stack.svg#svg-sidebar-03"></use>
-                  </svg>
-                </div>
-                <div class="sidebar__text">Реклама</div></a><a class="sidebar__button" href="#">
-                <div class="sidebar__icon">
-                  <svg>
-                    <use href="images/sprites/main.stack.svg#svg-sidebar-04"></use>
-                  </svg>
-                </div>
-                <div class="sidebar__text">Архив</div></a><a class="sidebar__button" href="#">
-                <div class="sidebar__icon">
-                  <svg>
-                    <use href="images/sprites/main.stack.svg#svg-sidebar-05"></use>
-                  </svg>
-                </div>
-                <div class="sidebar__text">Отзывы</div></a><a class="sidebar__button" href="#">
-                <div class="sidebar__icon">
-                  <svg>
-                    <use href="images/sprites/main.stack.svg#svg-sidebar-06"></use>
-                  </svg>
-                </div>
-                <div class="sidebar__text">Отправить статью</div></a><a class="sidebar__button" href="#">
-                <div class="sidebar__icon">
-                  <svg>
-                    <use href="images/sprites/main.stack.svg#svg-sidebar-07"></use>
-                  </svg>
-                </div>
-                <div class="sidebar__text">Редакционная политика</div></a><a class="sidebar__button" href="#">
-                <div class="sidebar__icon">
-                  <svg>
-                    <use href="images/sprites/main.stack.svg#svg-sidebar-08"></use>
-                  </svg>
-                </div>
-                <div class="sidebar__text">Правила для авторов</div></a><a class="sidebar__button" href="#">
-                <div class="sidebar__icon">
-                  <svg>
-                    <use href="images/sprites/main.stack.svg#svg-sidebar-09"></use>
-                  </svg>
-                </div>
-                <div class="sidebar__text">Рецензирование</div></a><a class="sidebar__button" href="#">
-                <div class="sidebar__icon">
-                  <svg>
-                    <use href="images/sprites/main.stack.svg#svg-sidebar-10"></use>
-                  </svg>
-                </div>
-                <div class="sidebar__text">Редакция</div></a><a class="sidebar__button" href="#">
-                <div class="sidebar__icon">
-                  <svg>
-                    <use href="images/sprites/main.stack.svg#svg-sidebar-11"></use>
-                  </svg>
-                </div>
-                <div class="sidebar__text">Редсоветы</div></a><a class="sidebar__button" href="#">
-                <div class="sidebar__icon">
-                  <svg>
-                    <use href="images/sprites/main.stack.svg#svg-sidebar-12"></use>
-                  </svg>
-                </div>
-                <div class="sidebar__text">Авторы</div></a>
-            </div>
+      <div class="breadcrumbs">
+        <div class="breadcrumbs__inner container">
+          <div class="breadcrumbs__list"><a href="#">Главная</a><span>Архив</span>
           </div>
         </div>
       </div>
-      <div class="breadcrumbs">
-        <div class="breadcrumbs__inner container">
-          <div class="breadcrumbs__list"><a href="#">Главная</a><a href="#">Архив</a></div>
-        </div>
-      </div>
-      <section class="section">
+      <section class="section section--books section--sidebar">
         <div class="section__wrapper container">
           <div class="section__header">
             <div class="section__header-row">
@@ -241,288 +182,548 @@
               <div class="books__inner">
                 <div class="books__section">
                   <div class="books__content">
-                    <ul class="books__list">
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-01.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2022 год</p>
-                          <h3 class="books__name">стандарты и качество</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-02.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2022 год</p>
-                          <h3 class="books__name">Методы менеджмента качества</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-03.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2022 год</p>
-                          <h3 class="books__name">Контроль качества продукции</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-04.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2024 год</p>
-                          <h3 class="books__name">МИР измерений</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-05.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2022 год</p>
-                          <h3 class="books__name">Business Excellence</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-06.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2022 год</p>
-                          <h3 class="books__name">Менеджмент качества в медицине</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-07.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2022 год</p>
-                          <h3 class="books__name">стандарты и качество</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-08.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2024 год</p>
-                          <h3 class="books__name">стандарты и качество</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-09.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2023 год</p>
-                          <h3 class="books__name">стандарты и качество</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-10.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2023 год</p>
-                          <h3 class="books__name">стандарты и качество</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-11.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2022 год</p>
-                          <h3 class="books__name">стандарты и качество</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-12.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2022 год</p>
-                          <h3 class="books__name">стандарты и качество</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-13.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2022 год</p>
-                          <h3 class="books__name">стандарты и качество</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-14.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2022 год</p>
-                          <h3 class="books__name">стандарты и качество</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-15.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2022 год</p>
-                          <h3 class="books__name">стандарты и качество</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-16.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2024 год</p>
-                          <h3 class="books__name">стандарты и качество</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-17.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2022 год</p>
-                          <h3 class="books__name">стандарты и качество</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-18.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2022 год</p>
-                          <h3 class="books__name">стандарты и качество</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-19.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2022 год</p>
-                          <h3 class="books__name">стандарты и качество</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="books__item">
-                        <div class="books__box">
-                          <button class="books__like"></button>
-                          <div class="books__img"><img src="images/archive/archive-20.png" alt="книга" width="380" height="380"></div>
-                        </div>
-                        <div class="books__info">
-                          <p class="books__text">2022 год</p>
-                          <h3 class="books__name">стандарты и качество</h3>
-                          <div class="books__bottom">
-                            <p class="books__price">30 000 руб.</p>
-                            <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><i class="icon icon-arrow-small"></i></a></div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
+                          <ul class="books__list">
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-01.webp"><img src="images/archive/archive-01.png" alt="стандарты и качество" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2022 год</p>
+                                  <h3 class="books__name">стандарты и качество</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-02.webp"><img src="images/archive/archive-02.png" alt="Методы менеджмента качества" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2022 год</p>
+                                  <h3 class="books__name">Методы менеджмента качества</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-03.webp"><img src="images/archive/archive-03.png" alt="Контроль качества продукции" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2022 год</p>
+                                  <h3 class="books__name">Контроль качества продукции</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-04.webp"><img src="images/archive/archive-04.png" alt="МИР измерений" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2024 год</p>
+                                  <h3 class="books__name">МИР измерений</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-05.webp"><img src="images/archive/archive-05.png" alt="Business Excellence" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2022 год</p>
+                                  <h3 class="books__name">Business Excellence</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-06.webp"><img src="images/archive/archive-06.png" alt="Менеджмент качества в медицине" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2022 год</p>
+                                  <h3 class="books__name">Менеджмент качества в медицине</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-07.webp"><img src="images/archive/archive-07.png" alt="стандарты и качество" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2022 год</p>
+                                  <h3 class="books__name">стандарты и качество</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-08.webp"><img src="images/archive/archive-08.png" alt="стандарты и качество" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2024 год</p>
+                                  <h3 class="books__name">стандарты и качество</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-09.webp"><img src="images/archive/archive-09.png" alt="стандарты и качество" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2023 год</p>
+                                  <h3 class="books__name">стандарты и качество</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-10.webp"><img src="images/archive/archive-10.png" alt="стандарты и качество" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2023 год</p>
+                                  <h3 class="books__name">стандарты и качество</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-11.webp"><img src="images/archive/archive-11.png" alt="стандарты и качество" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2022 год</p>
+                                  <h3 class="books__name">стандарты и качество</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-12.webp"><img src="images/archive/archive-12.png" alt="стандарты и качество" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2022 год</p>
+                                  <h3 class="books__name">стандарты и качество</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-13.webp"><img src="images/archive/archive-13.png" alt="стандарты и качество" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2022 год</p>
+                                  <h3 class="books__name">стандарты и качество</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-14.webp"><img src="images/archive/archive-14.png" alt="стандарты и качество" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2022 год</p>
+                                  <h3 class="books__name">стандарты и качество</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-15.webp"><img src="images/archive/archive-15.png" alt="стандарты и качество" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2022 год</p>
+                                  <h3 class="books__name">стандарты и качество</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-16.webp"><img src="images/archive/archive-16.png" alt="стандарты и качество" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2024 год</p>
+                                  <h3 class="books__name">стандарты и качество</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-17.webp"><img src="images/archive/archive-17.png" alt="стандарты и качество" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2022 год</p>
+                                  <h3 class="books__name">стандарты и качество</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-18.webp"><img src="images/archive/archive-18.png" alt="стандарты и качество" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2022 год</p>
+                                  <h3 class="books__name">стандарты и качество</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-19.webp"><img src="images/archive/archive-19.png" alt="стандарты и качество" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2022 год</p>
+                                  <h3 class="books__name">стандарты и качество</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                  <button class="favorite-button"></button>
+                                  <div class="books__img">
+                                          <picture>
+                                            <source srcset="images/archive/archive-20.webp"><img src="images/archive/archive-20.png" alt="стандарты и качество" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <p class="books__text">2022 год</p>
+                                  <h3 class="books__name">стандарты и качество</h3>
+                                  <div class="books__bottom">
+                                    <p class="books__price">30 000 руб.</p>
+                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                                </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                                <svg width="22" height="22">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
                     <div class="books__pagination">
                       <div class="pagination">
                         <div class="pagination__row">
@@ -544,14 +745,27 @@
         <div class="section__wrapper container">
           <div class="section__content">
             <div class="status">
-              <div class="bg-image"><img src="images/status/status-bg.jpg" alt="фоновая картинка"></div>
+              <div class="bg-image">
+                      <picture>
+                        <source srcset="images/status/status-bg-mob.webp" media="(max-width: 575px)" type="image/webp">
+                        <source srcset="images/status/status-bg-mob.jpg" media="(max-width: 575px)">
+                        <source srcset="images/status/status-bg.webp"><img src="images/status/status-bg.jpg" alt="фоновая картинка" width="1640" height="500">
+                      </picture>
+              </div>
               <div class="status__inner">
                 <div class="status__row">
                   <div class="status__info">
                     <h2 class="status__title">Хотите подтвердить свой экспертный статус?</h2>
-                    <p class="status__text">Станьте автором журналов РИА «Стандарты и качество». Ждем как опытных, так и начинающих специалистов. Важна польза и подача материала. Приоритет отдается статьям практической направленности.</p><a class="button button--icon" href="#"><span>Подробнее</span><i class="icon icon-arrow-small"></i></a>
+                    <p class="status__text">Станьте автором журналов РИА «Стандарты и качество». Ждем как опытных, так и начинающих специалистов. Важна польза и подача материала. Приоритет отдается статьям практической направленности.</p><a class="button button--icon" href="#"><span>Подробнее</span><span class="button__icon">
+                        <svg width="5" height="9">
+                          <use href="images/sprites/main.stack.svg#svg-arrow-small-right"></use>
+                        </svg></span></a>
                   </div>
-                  <div class="status__img"><img src="images/status/status-img.png" alt="картинка" width="570" height="500"></div>
+                  <div class="status__img">
+                          <picture>
+                            <source srcset="images/status/status-img.webp"><img src="images/status/status-img.png" alt="картинка" width="570" height="500">
+                          </picture>
+                  </div>
                 </div>
               </div>
             </div>
@@ -571,13 +785,25 @@
                     <ol class="listing__list">
                       <li class="listing__item"><a class="listing__box" href="#">
                           <h3 class="listing__name">Электронная библиотека</h3>
-                          <div class="listing__img"><img src="images/listing/listing-materials-01.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                          <div class="listing__img">
+                                  <picture>
+                                    <source srcset="images/listing/listing-01.webp"><img src="images/listing/listing-01.jpg" alt="картинка" width="350" height="222">
+                                  </picture>
+                          </div></a></li>
                       <li class="listing__item"><a class="listing__box" href="#">
                           <h3 class="listing__name">Тематические подборки</h3>
-                          <div class="listing__img"><img src="images/listing/listing-materials-02.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                          <div class="listing__img">
+                                  <picture>
+                                    <source srcset="images/listing/listing-07.webp"><img src="images/listing/listing-07.jpg" alt="картинка" width="350" height="222">
+                                  </picture>
+                          </div></a></li>
                       <li class="listing__item"><a class="listing__box" href="#">
                           <h3 class="listing__name">Глоссарий</h3>
-                          <div class="listing__img"><img src="images/listing/listing-materials-03.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                          <div class="listing__img">
+                                  <picture>
+                                    <source srcset="images/listing/listing-03.webp"><img src="images/listing/listing-03.jpg" alt="картинка" width="350" height="222">
+                                  </picture>
+                          </div></a></li>
                     </ol>
                   </div>
                 </div>
@@ -631,7 +857,7 @@
           </div>
         </div>
         <div class="footer__bottom">
-          <div class="footer__legal container"><a href="#">Права использования электронных журналов</a><a href="#">Правила пользования сайтом</a><a href="#">Правила обработки и хранения персональных данных</a><a href="#">Соглашение пользователя</a><a href="#"><span>Разработка сайта</span><img src="images/icons/completo.svg" alt="completo" width="63" height="23"></a></div>
+          <div class="footer__legal container"><a href="#">Права использования электронных журналов</a><a href="#">Правила пользования сайтом</a><a class="footer__legal-mob" href="#">Карта сайта</a><a href="#">Правила обработки и хранения персональных данных</a><a href="#">Соглашение пользователя</a><a href="#"><span>Разработка сайта</span><img src="images/icons/completo.svg" alt="completo" width="63" height="23"></a></div>
         </div>
       </div>
     </footer><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=5e6f3718-a525-41b0-832c-11d7f6b0f8a4"></script>

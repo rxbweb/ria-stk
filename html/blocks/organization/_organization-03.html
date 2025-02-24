@@ -1,18 +1,19 @@
 
 <section class="section section--padding-none section--organization">
   <div class="section__wrapper">
-    <div class="organization organization--2">
+    <div class="organization organization--third">
       <div class="bg-image">
         <picture>
-          <source srcset="images/organization/organization-bg-mob.webp" type="image/webp" media="(max-width: 575px)"/>
+          <source srcset="images/organization/organization-bg-mob.webp" media="(max-width: 575px)" type="image/webp"/>
           <source srcset="images/organization/organization-bg-mob.jpg" media="(max-width: 575px)"/>
-          <source srcset="images/organization/organization-bg.webp"/><img src="images/organization/organization-bg.jpg" alt="фоновая картинка" width="1920" height="800"/>
+          <source srcset="images/organization/organization-bg.webp"/><img src="images/organization/organization-bg.jpg" alt="картинка" width="1920" height="800"/>
         </picture>
       </div>
       <div class="organization__inner container">
-        <div class="breadcrumbs breadcrumbs--second">
-          <div class="breadcrumbs__inner">
-            <div class="breadcrumbs__list"><a href="#">Главная</a><a href="#">ВОК</a></div>
+        <div class="breadcrumbs">
+          <div class="breadcrumbs__inner container">
+            <div class="breadcrumbs__list"><a href="#">Главная</a><span>ВОК</span>
+            </div>
           </div>
         </div>
         <div class="organization__row">
@@ -20,8 +21,11 @@
             <div class="organization__logo"><img src="images/icons/vok.png" alt="вок" width="121" height="121"/></div>
             <h2 class="organization__title">Всероссийская организация качества</h2>
             <p class="organization__text">Миссия Всероссийской организации качества (ВОК) — объединение усилий граждан и общественных организаций, предприятий и органов власти для содействия решению задач в области качества и конкурентоспособности отечественных продукции и услуг, формирование общероссийского движения за качество.</p>
-            <div class="organization__bottom"><a class="button button--icon" href="#"> <span>Узнать больше</span>
-                <div class="icon icon-arrow-small"></div></a></div>
+            <div class="organization__bottom"><a class="button button--icon" href="#"><span>Узнать больше</span><span class="button__icon">
+                  <svg width="22" height="22">
+                    <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                  </svg></span></a>
+            </div>
           </div>
         </div>
       </div>

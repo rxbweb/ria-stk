@@ -20,14 +20,14 @@
     <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link rel="preload" href="fonts/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="fonts/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -37,11 +37,15 @@
           <div class="header__top"><a class="header__logo" href="/"><img class="header__logo-main" src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img class="header__logo-vok" src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
             <div class="header__manage">
               <div class="header__search search">
-                <button class="search__button"><i class="icon icon-loop"></i></button>
-                <input class="search__input" type="seacrh" placeholder="Искать....">
+                <button class="search__button">
+                  <svg width="26" height="26">
+                    <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                  </svg>
+                </button>
+                <input class="search__input" type="text" placeholder="Искать....">
                 <div class="search__select">
                   <div class="select">
-                    <button class="select__active"><span>Везде</span></button>
+                    <button class="select__active is-selected"><span>Везде</span></button>
                     <div class="select__list">
                       <button class="select__item is-active">Везде</button>
                       <button class="select__item">По журналам</button>
@@ -54,7 +58,7 @@
                 </div>
               </div>
               <div class="select select--lang">
-                <div class="select__active"><span>RU</span></div>
+                <div class="select__active is-selected"><span>RU</span></div>
                 <div class="select__list">
                   <button class="select__item is-active">RU</button>
                   <button class="select__item">EN</button>
@@ -66,15 +70,24 @@
               <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
             </div>
             <div class="header__controls">
-              <div class="header__basket"><a class="button button--img" href="#"><i class="icon icon-cart"></i></a>
+              <div class="header__basket"><a class="button button--img" href="#">
+                  <svg width="22" height="22">
+                    <use href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                  </svg></a>
                 <div class="header__basket-amount">99</div>
-              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#"><i class="icon icon-user"></i><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
+              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#">
+                <svg width="20" height="20">
+                  <use href="images/sprites/main.stack.svg#svg-icon-user"></use>
+                </svg><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
             </div>
           </div>
           <div class="header__bottom">
             <nav class="header__nav">
               <ul class="header__nav-list">
-                <li class="header__nav-item"><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
+                <li class="header__nav-item"><a class="is-icon" href="#">
+                    <svg width="26" height="26">
+                      <use href="images/sprites/main.stack.svg#svg-text"></use>
+                    </svg><span>Подписка</span></a></li>
                 <li class="header__nav-item"><a href="#">Журналы</a></li>
                 <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
                 <li class="header__nav-item"><a href="#">Электронная библиотека</a></li>
@@ -98,8 +111,12 @@
         <div class="menu__container container">
           <div class="menu__manage">
             <div class="menu__search search">
-              <button class="search__button"><i class="icon icon-loop"></i></button>
-              <input class="search__input" type="seacrh" placeholder="Искать....">
+              <button class="search__button">
+                <svg width="26" height="26">
+                  <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                </svg>
+              </button>
+              <input class="search__input" type="text" placeholder="Искать....">
               <div class="search__select">
                 <div class="select">
                   <button class="select__active">Везде</button>
@@ -124,7 +141,10 @@
           </div>
           <nav class="menu__nav">
             <ul class="menu__nav-list">
-              <li><a class="is-icon" href="#"><i class="icon icon-text"></i><span>Подписка</span></a></li>
+              <li><a class="is-icon" href="#">
+                  <svg width="22" height="22">
+                    <use href="images/sprites/main.stack.svg#svg-text"></use>
+                  </svg><span>Подписка</span></a></li>
               <li><a href="#">Журналы</a></li>
               <li><a href="#">Спецвыпуски</a></li>
               <li><a href="#">Электронная библиотека</a></li>
@@ -150,11 +170,12 @@
             <div class="hero">
               <div class="bg-image"><img src="images/hero/hero-bg.jpg" alt="фоновая картинка" width="1920" height="750"></div>
               <div class="hero__inner container">
-                <div class="breadcrumbs">
-                  <div class="breadcrumbs__inner">
-                    <div class="breadcrumbs__list"><a href="#">Главная</a><a href="#">О компании</a></div>
-                  </div>
-                </div>
+                      <div class="breadcrumbs">
+                        <div class="breadcrumbs__inner container">
+                          <div class="breadcrumbs__list"><a href="#">Главная</a><span>О компании</span>
+                          </div>
+                        </div>
+                      </div>
                 <div class="hero__slideshow">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -164,7 +185,11 @@
                           <div class="hero__text">
                             <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством.</p>
                           </div>
-                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>О компании и награды</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>О компании и награды</span><span class="button__icon">
+                                      <svg width="22" height="22">
+                                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                      </svg></span></a>
+                          </div>
                         </div>
                         <div class="hero__content">
                           <div class="hero__magazines">
@@ -215,7 +240,11 @@
                           <div class="hero__text">
                             <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством.</p>
                           </div>
-                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>О компании и награды</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>О компании и награды</span><span class="button__icon">
+                                      <svg width="22" height="22">
+                                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                      </svg></span></a>
+                          </div>
                         </div>
                         <div class="hero__content">
                           <div class="hero__magazines">
@@ -266,7 +295,11 @@
                           <div class="hero__text">
                             <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством.</p>
                           </div>
-                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>О компании и награды</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>О компании и награды</span><span class="button__icon">
+                                      <svg width="22" height="22">
+                                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                      </svg></span></a>
+                          </div>
                         </div>
                         <div class="hero__content">
                           <div class="hero__magazines">
@@ -317,7 +350,11 @@
                           <div class="hero__text">
                             <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством.</p>
                           </div>
-                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>О компании и награды</span><i class="icon icon-arrow-small"></i></a></div>
+                          <div class="hero__bottom"><a class="button button--icon" href="#"><span>О компании и награды</span><span class="button__icon">
+                                      <svg width="22" height="22">
+                                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                      </svg></span></a>
+                          </div>
                         </div>
                         <div class="hero__content">
                           <div class="hero__magazines">
@@ -426,12 +463,20 @@
                           <div class="badge badge--large"><img src="images/badges/badge-08.svg" alt="иконка" width="32" height="32"></div>
                           <h3 class="listing__name">Электронная библиотека</h3>
                           <p class="listing__text">Миссия РИА «Стандарты и качество» — нести людям идеи качества во всем их многообразии.</p>
-                          <div class="listing__img"><img src="images/listing/listing-mission-01.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                          <div class="listing__img">
+                                  <picture>
+                                    <source srcset="images/listing/listing-04.webp"><img src="images/listing/listing-04.jpg" alt="картинка" width="350" height="222">
+                                  </picture>
+                          </div></a></li>
                       <li class="listing__item"><a class="listing__box" href="#">
                           <div class="badge badge--large"><img src="images/badges/badge-09.svg" alt="иконка" width="43" height="43"></div>
                           <h3 class="listing__name">Тематические подборки</h3>
                           <p class="listing__text">Глобальный информационный центр, база знаний о качестве — доступный, удобный, информативный.</p>
-                          <div class="listing__img"><img src="images/listing/listing-mission-02.jpg" alt="картинка" width="350" height="222"></div></a></li>
+                          <div class="listing__img">
+                                  <picture>
+                                    <source srcset="images/listing/listing-05.webp"><img src="images/listing/listing-05.jpg" alt="картинка" width="350" height="222">
+                                  </picture>
+                          </div></a></li>
                     </ul>
                   </div>
                 </div>
@@ -572,11 +617,11 @@
                       </div>
                     </div>
                     <div class="history__controls">
-                      <div class="swiper-controls">
-                        <button class="history__prev swiper-button-prev"></button>
-                        <div class="swiper-pagination history__pagination"></div>
-                        <button class="history__next swiper-button-next"></button>
-                      </div>
+                            <div class="swiper-controls">
+                              <button class="swiper-button-prev"></button>
+                              <div class="swiper-pagination"></div>
+                              <button class="swiper-button-next"></button>
+                            </div>
                     </div>
                   </div>
                 </div>
@@ -596,11 +641,11 @@
         <div class="section__wrapper">
           <div class="organization organization--secondary">
             <div class="bg-image">
-              <picture>
-                <source srcset="images/organization/organization-bg-mob.webp" type="image/webp" media="(max-width: 575px)">
-                <source srcset="images/organization/organization-bg-mob.jpg" media="(max-width: 575px)">
-                <source srcset="images/organization/organization-bg.webp"><img src="images/organization/organization-bg.jpg" alt="фоновая картинка" width="1920" height="800">
-              </picture>
+                    <picture>
+                      <source srcset="images/organization/organization-bg-mob.webp" media="(max-width: 575px)" type="image/webp">
+                      <source srcset="images/organization/organization-bg-mob.jpg" media="(max-width: 575px)">
+                      <source srcset="images/organization/organization-bg.webp"><img src="images/organization/organization-bg.jpg" alt="картинка" width="1920" height="800">
+                    </picture>
             </div>
             <div class="organization__inner container">
               <div class="organization__row">
@@ -608,8 +653,11 @@
                   <div class="organization__logo"><img src="images/icons/vok.png" alt="вок" width="121" height="121"></div>
                   <h2 class="organization__title">Всероссийская организация качества</h2>
                   <p class="organization__text">Миссия Всероссийской организации качества (ВОК) — объединение усилий граждан и общественных организаций, предприятий и органов власти для содействия решению задач в области качества и конкурентоспособности отечественных продукции и услуг, формирование общероссийского движения за качество.</p>
-                  <div class="organization__bottom"><a class="button button--icon" href="#"> <span>Узнать больше</span>
-                      <div class="icon icon-arrow-small"></div></a></div>
+                  <div class="organization__bottom"><a class="button button--icon" href="#"><span>Узнать больше</span><span class="button__icon">
+                              <svg width="22" height="22">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                              </svg></span></a>
+                  </div>
                 </div>
                 <div class="organization__right">
                   <div class="numbers">
@@ -648,50 +696,92 @@
                     <h2 class="people__title">Руководство компании</h2>
                   </div>
                   <div class="people__content">
-                    <ul class="people__list people__list--3">
-                      <li class="people__item">
-                        <div class="people__photo"><img src="images/people/page-about/people-01.jpg" alt="Наталия Григорьевна Томсон" width="380" height="460"></div>
-                        <div class="people__info">
-                          <p class="people__name">Наталия Григорьевна Томсон</p>
-                          <p class="people__text">Основатель и председатель совета директоров РИА «Стандарты и качество», член Правления Всероссийской организации качества, член Комитета ТПП РФ по качеству продукции, член Международной Гильдии профессионалов качества.</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
-                        </div>
-                      </li>
-                      <li class="people__item">
-                        <div class="people__photo"><img src="images/people/page-about/people-02.jpg" alt="Геннадий Петрович Воронин" width="380" height="460"></div>
-                        <div class="people__info">
-                          <p class="people__name">Геннадий Петрович Воронин</p>
-                          <p class="people__text">Член совета директоров РИА «Стандарты и качество», главный редактор журнала «Стандарты и качество», президент Всероссийской организации качества, действительный государственный советник Российской Федерации I класса, доктор технических наук, доктор экономических наук, профессор.</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
-                        </div>
-                      </li>
-                      <li class="people__item">
-                        <div class="people__photo"><img src="images/people/page-about/people-03.jpg" alt="Светлана Сергеевна Антонова" width="380" height="460"></div>
-                        <div class="people__info">
-                          <p class="people__name">Светлана Сергеевна Антонова</p>
-                          <p class="people__text">Генеральный директор и член совета директоров РИА «Стандарты и качество», главный редактор журнала «Менеджмент качества в медицине», вице-президент по информационной политике Всероссийской организации качества, эксперт премий Правительства Российской Федерации в области качества.</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
-                        </div>
-                      </li>
-                      <li class="people__item">
-                        <div class="people__photo"><img src="images/people/page-about/people-04.jpg" alt="Алексей Игоревич Анискин" width="380" height="460"></div>
-                        <div class="people__info">
-                          <p class="people__name">Алексей Игоревич Анискин</p>
-                          <p class="people__text">Исполнительный директор, директор по развитию бизнеса и член совета директоров РИА «Стандарты и качество»</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
-                        </div>
-                      </li>
-                      <li class="people__item">
-                        <div class="people__photo"><img src="images/people/page-about/people-05.jpg" alt="Татьяна Владимировна Киселева" width="380" height="460"></div>
-                        <div class="people__info">
-                          <p class="people__name">Татьяна Владимировна Киселева</p>
-                          <p class="people__text">Главный редактор издательства РИА «Стандарты и качество»</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
-                        </div>
-                      </li>
-                      <li class="people__item">
-                        <div class="people__photo"><img src="images/people/page-about/people-06.jpg" alt="Андрей Игоревич Колесников" width="380" height="460"></div>
-                        <div class="people__info">
-                          <p class="people__name">Андрей Игоревич Колесников</p>
-                          <p class="people__text">Руководитель отдела маркетинга РИА «Стандарты и качество»</p><a class="people__link button button--outline" href="#">Подробнее<i class="icon icon-arrow-small"></i></a>
-                        </div>
-                      </li>
-                    </ul>
+                          <ul class="people__list people__list--3">
+                            <li class="people__item">
+                              <div class="people__photo">
+                                      <picture>
+                                        <source srcset="images/people/people-01.webp"><img src="images/people/people-01.jpg" alt="Наталия Григорьевна Томсон" width="380" height="460">
+                                      </picture>
+                              </div>
+                              <div class="people__info">
+                                <p class="people__name">Наталия Григорьевна Томсон</p>
+                                <p class="people__text">Основатель и председатель совета директоров РИА «Стандарты и качество», член Правления Всероссийской организации качества, член Комитета ТПП РФ по качеству продукции, член Международной Гильдии профессионалов качества.</p><a class="button button--outline people__link" href="#"><span>Подробнее</span><span class="button__icon">
+                                          <svg width="22" height="22">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                          </svg></span></a>
+                              </div>
+                            </li>
+                            <li class="people__item">
+                              <div class="people__photo">
+                                      <picture>
+                                        <source srcset="images/people/people-02.webp"><img src="images/people/people-02.jpg" alt="Геннадий Петрович Воронин" width="380" height="460">
+                                      </picture>
+                              </div>
+                              <div class="people__info">
+                                <p class="people__name">Геннадий Петрович Воронин</p>
+                                <p class="people__text">Член совета директоров РИА «Стандарты и качество», главный редактор журнала «Стандарты и качество», президент Всероссийской организации качества, действительный государственный советник Российской Федерации I класса, доктор технических наук, доктор экономических наук, профессор.</p><a class="button button--outline people__link" href="#"><span>Подробнее</span><span class="button__icon">
+                                          <svg width="22" height="22">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                          </svg></span></a>
+                              </div>
+                            </li>
+                            <li class="people__item">
+                              <div class="people__photo">
+                                      <picture>
+                                        <source srcset="images/people/people-03.webp"><img src="images/people/people-03.jpg" alt="Светлана Сергеевна Антонова" width="380" height="460">
+                                      </picture>
+                              </div>
+                              <div class="people__info">
+                                <p class="people__name">Светлана Сергеевна Антонова</p>
+                                <p class="people__text">Генеральный директор и член совета директоров РИА «Стандарты и качество», главный редактор журнала «Менеджмент качества в медицине», вице-президент по информационной политике Всероссийской организации качества, эксперт премий Правительства Российской Федерации в области качества.</p><a class="button button--outline people__link" href="#"><span>Подробнее</span><span class="button__icon">
+                                          <svg width="22" height="22">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                          </svg></span></a>
+                              </div>
+                            </li>
+                            <li class="people__item">
+                              <div class="people__photo">
+                                      <picture>
+                                        <source srcset="images/people/people-04.webp"><img src="images/people/people-04.jpg" alt="Алексей Игоревич Анискин" width="380" height="460">
+                                      </picture>
+                              </div>
+                              <div class="people__info">
+                                <p class="people__name">Алексей Игоревич Анискин</p>
+                                <p class="people__text">Исполнительный директор, директор по развитию бизнеса и член совета директоров РИА «Стандарты и качество»</p><a class="button button--outline people__link" href="#"><span>Подробнее</span><span class="button__icon">
+                                          <svg width="22" height="22">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                          </svg></span></a>
+                              </div>
+                            </li>
+                            <li class="people__item">
+                              <div class="people__photo">
+                                      <picture>
+                                        <source srcset="images/people/people-05.webp"><img src="images/people/people-05.jpg" alt="Татьяна Владимировна Киселева" width="380" height="460">
+                                      </picture>
+                              </div>
+                              <div class="people__info">
+                                <p class="people__name">Татьяна Владимировна Киселева</p>
+                                <p class="people__text">Главный редактор издательства РИА «Стандарты и качество»</p><a class="button button--outline people__link" href="#"><span>Подробнее</span><span class="button__icon">
+                                          <svg width="22" height="22">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                          </svg></span></a>
+                              </div>
+                            </li>
+                            <li class="people__item">
+                              <div class="people__photo">
+                                      <picture>
+                                        <source srcset="images/people/people-06.webp"><img src="images/people/people-06.jpg" alt="Андрей Игоревич Колесников" width="380" height="460">
+                                      </picture>
+                              </div>
+                              <div class="people__info">
+                                <p class="people__name">Андрей Игоревич Колесников</p>
+                                <p class="people__text">Руководитель отдела маркетинга РИА «Стандарты и качество»</p><a class="button button--outline people__link" href="#"><span>Подробнее</span><span class="button__icon">
+                                          <svg width="22" height="22">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-small"></use>
+                                          </svg></span></a>
+                              </div>
+                            </li>
+                          </ul>
                   </div>
                 </div>
               </div>
@@ -709,43 +799,43 @@
           <div class="section__content">
             <div class="links">
               <div class="links__inner">
-                <ul class="links__list">
-                  <li><a class="links__button" href="#">
-                      <div class="links__info">
-                        <p class="links__name">Свидетельство о внесении записи в Единый государственный реестр юридических лиц</p>
-                      </div>
-                      <div class="links__icon"></div></a></li>
-                  <li><a class="links__button" href="#">
-                      <div class="links__info">
-                        <p class="links__name">Свидетельство о постановке на учет российской организации в налоговом органе по месту нахождения на территории Российской Федерации</p>
-                      </div>
-                      <div class="links__icon"></div></a></li>
-                  <li><a class="links__button" href="#">
-                      <div class="links__info">
-                        <p class="links__name">Свидетельство о регистрации юридического лица</p>
-                      </div>
-                      <div class="links__icon"></div></a></li>
-                  <li><a class="links__button" href="#">
-                      <div class="links__info">
-                        <p class="links__name">Карточка юридического лица</p>
-                      </div>
-                      <div class="links__icon"></div></a></li>
-                  <li><a class="links__button" href="#">
-                      <div class="links__info">
-                        <p class="links__name">Устав ООО «РИА «Стандарты и качество»</p>
-                      </div>
-                      <div class="links__icon"></div></a></li>
-                  <li><a class="links__button" href="#">
-                      <div class="links__info">
-                        <p class="links__name">Приказ о вступлении в должность генерального директора РИА «Стандарты и качество» </p>
-                      </div>
-                      <div class="links__icon"></div></a></li>
-                  <li><a class="links__button" href="#">
-                      <div class="links__info">
-                        <p class="links__name">Информационное письмо об УСН из ИФНС (подтверждение)</p>
-                      </div>
-                      <div class="links__icon"></div></a></li>
-                </ul>
+                      <ul class="links__list">
+                        <li><a class="links__button" href="#">
+                            <div class="links__info">
+                              <p class="links__name">Свидетельство о внесении записи в Единый государственный реестр юридических лиц</p>
+                            </div>
+                            <div class="links__icon"></div></a></li>
+                        <li><a class="links__button" href="#">
+                            <div class="links__info">
+                              <p class="links__name">Свидетельство о постановке на учет российской организации в налоговом органе по месту нахождения на территории Российской Федерации</p>
+                            </div>
+                            <div class="links__icon"></div></a></li>
+                        <li><a class="links__button" href="#">
+                            <div class="links__info">
+                              <p class="links__name">Свидетельство о регистрации юридического лица</p>
+                            </div>
+                            <div class="links__icon"></div></a></li>
+                        <li><a class="links__button" href="#">
+                            <div class="links__info">
+                              <p class="links__name">Карточка юридического лица</p>
+                            </div>
+                            <div class="links__icon"></div></a></li>
+                        <li><a class="links__button" href="#">
+                            <div class="links__info">
+                              <p class="links__name">Устав ООО «РИА «Стандарты и качество»</p>
+                            </div>
+                            <div class="links__icon"></div></a></li>
+                        <li><a class="links__button" href="#">
+                            <div class="links__info">
+                              <p class="links__name">Приказ о вступлении в должность генерального директора РИА «Стандарты и качество» </p>
+                            </div>
+                            <div class="links__icon"></div></a></li>
+                        <li><a class="links__button" href="#">
+                            <div class="links__info">
+                              <p class="links__name">Информационное письмо об УСН из ИФНС (подтверждение)</p>
+                            </div>
+                            <div class="links__icon"></div></a></li>
+                      </ul>
               </div>
             </div>
           </div>
@@ -760,25 +850,25 @@
                 <div class="partners__header">
                   <div class="partners__title">Наши партнеры</div>
                 </div>
-                <div class="partners__swiper swiper js-partners-swiper">
-                  <div class="swiper-wrapper">
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-01.png" alt="russian register" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-02.png" alt="минпромторг России" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-03.png" alt="bureau veritas" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-04.png" alt="рст" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-05.png" alt="академия" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-06.png" alt="ростехсерт" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-01.png" alt="russian register" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-02.png" alt="минпромторг России" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-03.png" alt="bureau veritas" width="169" height="120"></div>
-                    <div class="partners__slide swiper-slide"><img src="images/partners/partners-04.png" alt="рст" width="169" height="120"></div>
-                  </div>
-                  <div class="swiper-controls">
-                    <button class="js-partners-prev swiper-button-prev"></button>
-                    <div class="swiper-pagination js-partners-pagination"></div>
-                    <button class="js-partners-next swiper-button-next"></button>
-                  </div>
-                </div>
+                      <div class="partners__swiper swiper">
+                        <div class="swiper-wrapper">
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-01.png" alt="russian register" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-02.png" alt="минпромторг России" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-03.png" alt="bureau veritas" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-04.png" alt="рст" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-05.png" alt="академия" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-06.png" alt="ростехсерт" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-01.png" alt="russian register" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-02.png" alt="минпромторг России" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-03.png" alt="bureau veritas" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-04.png" alt="рст" width="169" height="120"></div>
+                        </div>
+                              <div class="swiper-controls">
+                                <button class="swiper-button-prev"></button>
+                                <div class="swiper-pagination"></div>
+                                <button class="swiper-button-next"></button>
+                              </div>
+                      </div>
               </div>
             </div>
           </div>
@@ -807,7 +897,7 @@
                     <div class="contacts__map map"></div>
                   </div>
                   <div class="contacts__right">
-                    <form class="contacts__form form" action="#" name="form-callback">
+                    <form class="contacts__form form" action="#" data-validate-form>
                       <div class="form__header">
                         <h2 class="form__title">Остались вопросы?</h2>
                         <p class="form__text">Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.</p>
@@ -816,13 +906,13 @@
                         <div class="form__top">
                           <div class="form__box">
                             <label class="form__label form__label--half">
-                              <input class="form__input" type="text" placeholder="Имя" name="form-name">
+                              <input class="form__input" type="text" placeholder="Имя" name="form-name" required><span class="form__error">Обязательное поле</span>
                             </label>
                             <label class="form__label form__label--half">
                               <input class="form__input" type="text" placeholder="Фамилия">
                             </label>
                             <label class="form__label">
-                              <input class="form__input" type="email" placeholder="E-mail" name="form-email">
+                              <input class="form__input" type="email" placeholder="E-mail" name="form-email" required><span class="form__error">Обязательное поле</span>
                             </label>
                             <label class="form__label">
                               <textarea class="form__textarea" placeholder="Текст сообщения"></textarea>
@@ -833,11 +923,12 @@
                           <div class="agree">
                             <label class="agree__label">
                               <input type="checkbox" name="form-agree" required><span class="agree__checkbox"></span><span class="agree__text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
-                            </label>
+                            </label><span class="agree__error">Обязательное поле</span>
                           </div>
                         </div>
                         <div class="form__bottom">
-                          <button class="form__button button">Подписаться</button>
+                                <button class="button form__button"><span>Подписаться</span>
+                                </button>
                         </div>
                       </div>
                     </form>
@@ -893,7 +984,7 @@
           </div>
         </div>
         <div class="footer__bottom">
-          <div class="footer__legal container"><a href="#">Права использования электронных журналов</a><a href="#">Правила пользования сайтом</a><a href="#">Правила обработки и хранения персональных данных</a><a href="#">Соглашение пользователя</a><a href="#"><span>Разработка сайта</span><img src="images/icons/completo.svg" alt="completo" width="63" height="23"></a></div>
+          <div class="footer__legal container"><a href="#">Права использования электронных журналов</a><a href="#">Правила пользования сайтом</a><a class="footer__legal-mob" href="#">Карта сайта</a><a href="#">Правила обработки и хранения персональных данных</a><a href="#">Соглашение пользователя</a><a href="#"><span>Разработка сайта</span><img src="images/icons/completo.svg" alt="completo" width="63" height="23"></a></div>
         </div>
       </div>
     </footer><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=5e6f3718-a525-41b0-832c-11d7f6b0f8a4"></script>
