@@ -1,0 +1,573 @@
+-
+   const books01 = [
+      {
+         img: 'images/books/books-01.jpg',
+         title: 'Цифровое качество. Свод знаний о цифровой трансформации',
+         price: '3 500 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-02.jpg',
+         title: 'Процессный подход в требованиях ISO 45001:2018',
+         price: '5 600 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-03.jpg',
+         title: 'Внедрение системы энергетического менеджмента на соответствие международному стандарту ISO 50001:2011',
+         price: '14 900 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-04.jpg',
+         title: 'ISO 9001:2015. Международный стандарт на системы менеджмента качества. Наблюдения, интерпретация....',
+         price: '3 800 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-05.jpg',
+         title: 'ПРОТЕЗЫ И ИМПЛАНТАТЫ. Энциклопедия международных стандартов.',
+         price: '7 500 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-06.jpg',
+         title: 'Аудит систем менеджмента на соответствие требованиям ISO 9001, ISO 14001, ISO 45001, ISO 50001. Практикум.',
+         price: '2 300 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-07.jpg',
+         title: 'Очерки безопасности хирургических пациентов',
+         price: '1 500 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-08.jpg',
+         title: 'Условия обеспечения устойчивого успеха. Как создать современную систему менеджмента организации..',
+         price: '3 700 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-09.jpg',
+         title: 'Качество и эффективность — условия успеха. Методы совершенствования систем менеджмента организаций.',
+         price: '1 120 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-10.jpg',
+         title: 'Энциклопедия международных стандартов ISO',
+         price: '7 500 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-11.jpg',
+         title: 'Страна напуганных инженеров. Записки Гипа.',
+         price: '460 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-12.jpg',
+         title: 'Пищевые продукты',
+         price: '5 100 руб.'
+      },
+   ]
+
+   const books02 = [
+      {
+         img: 'images/archive/archive-01.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-02.png',
+         date: '2022 год',
+         title: 'Методы менеджмента качества',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-03.png',
+         date: '2022 год',
+         title: 'Контроль качества продукции',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-04.png',
+         date: '2024 год',
+         title: 'МИР измерений',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-05.png',
+         date: '2022 год',
+         title: 'Business Excellence',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-06.png',
+         date: '2022 год',
+         title: 'Менеджмент качества в медицине',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-07.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-08.png',
+         date: '2024 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-09.png',
+         date: '2023 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-10.png',
+         date: '2023 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-11.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-12.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-13.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-14.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-15.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-16.png',
+         date: '2024 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-17.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-18.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-19.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-20.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      }
+   ];
+
+      const books03 = [
+      {
+         img: 'images/books/books-01.jpg',
+         title: 'Цифровое качество. Свод знаний о цифровой трансформации',
+         price: '3 500 руб.'
+      },
+      {
+         img: 'images/books/books-02.jpg',
+         title: 'Процессный подход в требованиях ISO 45001:2018',
+         price: '5 600 руб.'
+      },
+      {
+         img: 'images/books/books-03.jpg',
+         title: 'Внедрение системы энергетического менеджмента на соответствие международному стандарту ISO 50001:2011',
+         price: '14 900 руб.'
+      },
+      {
+         img: 'images/books/books-04.jpg',
+         title: 'ISO 9001:2015. Международный стандарт на системы менеджмента качества. Наблюдения, интерпретация....',
+         price: '3 800 руб.'
+      },
+      {
+         img: 'images/books/books-05.jpg',
+         title: 'ПРОТЕЗЫ И ИМПЛАНТАТЫ. Энциклопедия международных стандартов.',
+         price: '7 500 руб.'
+      },
+      {
+         img: 'images/books/books-06.jpg',
+         title: 'Аудит систем менеджмента на соответствие требованиям ISO 9001, ISO 14001, ISO 45001, ISO 50001. Практикум.',
+         price: '2 300 руб.'
+      },
+      {
+         img: 'images/books/books-07.jpg',
+         title: 'Очерки безопасности хирургических пациентов',
+         price: '1 500 руб.'
+      },
+      {
+         img: 'images/books/books-08.jpg',
+         title: 'Условия обеспечения устойчивого успеха. Как создать современную систему менеджмента организации..',
+         price: '3 700 руб.'
+      },
+      {
+         img: 'images/books/books-09.jpg',
+         title: 'Качество и эффективность — условия успеха. Методы совершенствования систем менеджмента организаций.',
+         price: '1 120 руб.'
+      },
+      {
+         img: 'images/books/books-10.jpg',
+         title: 'Энциклопедия международных стандартов ISO',
+         price: '7 500 руб.'
+      },
+      {
+         img: 'images/books/books-11.jpg',
+         title: 'Страна напуганных инженеров. Записки Гипа.',
+         price: '460 руб.'
+      },
+      {
+         img: 'images/books/books-12.jpg',
+         title: 'Пищевые продукты',
+         price: '5 100 руб.'
+      },
+   ]
+
+   const books05 = [
+      {
+         img: 'images/books/books-13.jpg',
+         title: 'Диджитал реклама',
+      },
+      {
+         img: 'images/books/books-14.jpg',
+         title: 'Методы менеджмента качества',
+      },
+      {
+         img: 'images/books/books-15.jpg',
+         title: 'Контроль качества продукции',
+      },
+      {
+         img: 'images/books/books-16.jpg',
+         title: 'Мир измерений',
+      },
+      {
+         img: 'images/books/books-13.jpg',
+         title: 'Диджитал реклама',
+      },
+      {
+         img: 'images/books/books-14.jpg',
+         title: 'Методы менеджмента качества',
+      },
+      {
+         img: 'images/books/books-15.jpg',
+         title: 'Контроль качества продукции',
+      },
+      {
+         img: 'images/books/books-16.jpg',
+         title: 'Мир измерений',
+      }
+   ]
+
+   const books06 = [
+      {
+         img: 'images/books/books-18.jpg',
+         title: 'Выбор программного обеспечения для СМК',
+         buttons: {
+            read: true
+         }
+      },
+      {
+         img: 'images/books/books-19.jpg',
+         title: 'Практическое применение АИСМК для проведения анализа измерительных систем (MSA)',
+         buttons: {
+            read: true
+         }
+      },
+      {
+         img: 'images/books/books-20.jpg',
+         title: 'Цифровизация аудита и наблюдений систем менеджмента',
+         buttons: {
+            read: true
+         }
+      },
+      {
+         img: 'images/books/books-21.jpg',
+         title: 'Российские методики и подходы к работе с системами менеджмента имеют свои преимущества',
+         buttons: {
+            read: true
+         }
+      },
+   ]
+
+   const books07 = [
+      {
+         img: 'images/books/books-01.jpg',
+         title: 'Цифровое качество. Свод знаний о цифровой трансформации',
+         price: '3 500 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-02.jpg',
+         title: 'Процессный подход в требованиях ISO 45001:2018',
+         price: '5 600 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-03.jpg',
+         title: 'Внедрение системы энергетического менеджмента на соответствие международному стандарту ISO 50001:2011',
+         price: '14 900 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-04.jpg',
+         title: 'ISO 9001:2015. Международный стандарт на системы менеджмента качества. Наблюдения, интерпретация....',
+         price: '3 800 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-05.jpg',
+         title: 'ПРОТЕЗЫ И ИМПЛАНТАТЫ. Энциклопедия международных стандартов.',
+         price: '7 500 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-06.jpg',
+         title: 'Аудит систем менеджмента на соответствие требованиям ISO 9001, ISO 14001, ISO 45001, ISO 50001. Практикум.',
+         price: '2 300 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-07.jpg',
+         title: 'Очерки безопасности хирургических пациентов',
+         price: '1 500 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-08.jpg',
+         title: 'Условия обеспечения устойчивого успеха. Как создать современную систему менеджмента организации..',
+         price: '3 700 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-09.jpg',
+         title: 'Качество и эффективность — условия успеха. Методы совершенствования систем менеджмента организаций.',
+         price: '1 120 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-10.jpg',
+         title: 'Энциклопедия международных стандартов ISO',
+         price: '7 500 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-11.jpg',
+         title: 'Страна напуганных инженеров. Записки Гипа.',
+         price: '460 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-12.jpg',
+         title: 'Пищевые продукты',
+         price: '5 100 руб.',
+         buttons: {
+            buy: true,
+            click: true
+         }
+      },
+   ]
+
+   const books08 = [
+      { 
+         src: 'images/books/books-13.jpg',
+         title: 'Стандарты и качество',
+         date: '№10 октябрь 2024'
+      },
+      { 
+         src: 'images/books/books-14.jpg',
+         title: 'Контроль качества продукции',
+         date: '№ 8 август 2024'
+      },
+      { 
+         src: 'images/books/books-15.jpg',
+         title: 'Мир измерений',
+         date: '№2 май 2024'
+      },
+      { 
+         src: 'images/books/books-16.jpg',
+         title: 'Business Excellence',
+         date: '№10 декабрь 2024'
+      }
+   ]

@@ -1,155 +1,17 @@
--
-   const books02 = [
-      {
-         img: 'images/archive/archive-01.png',
-         date: '2022 год',
-         title: 'стандарты и качество',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-02.png',
-         date: '2022 год',
-         title: 'Методы менеджмента качества',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-03.png',
-         date: '2022 год',
-         title: 'Контроль качества продукции',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-04.png',
-         date: '2024 год',
-         title: 'МИР измерений',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-05.png',
-         date: '2022 год',
-         title: 'Business Excellence',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-06.png',
-         date: '2022 год',
-         title: 'Менеджмент качества в медицине',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-07.png',
-         date: '2022 год',
-         title: 'стандарты и качество',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-08.png',
-         date: '2024 год',
-         title: 'стандарты и качество',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-09.png',
-         date: '2023 год',
-         title: 'стандарты и качество',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-10.png',
-         date: '2023 год',
-         title: 'стандарты и качество',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-11.png',
-         date: '2022 год',
-         title: 'стандарты и качество',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-12.png',
-         date: '2022 год',
-         title: 'стандарты и качество',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-13.png',
-         date: '2022 год',
-         title: 'стандарты и качество',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-14.png',
-         date: '2022 год',
-         title: 'стандарты и качество',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-15.png',
-         date: '2022 год',
-         title: 'стандарты и качество',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-16.png',
-         date: '2024 год',
-         title: 'стандарты и качество',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-17.png',
-         date: '2022 год',
-         title: 'стандарты и качество',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-18.png',
-         date: '2022 год',
-         title: 'стандарты и качество',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-19.png',
-         date: '2022 год',
-         title: 'стандарты и качество',
-         price: '30 000 руб.'
-      },
-      {
-         img: 'images/archive/archive-20.png',
-         date: '2022 год',
-         title: 'стандарты и качество',
-         price: '30 000 руб.'
-      }
-   ];
+include data/_booksData
+include mixins/_booksList
 
-section.section
+section.section.section--books.section--sidebar
    .section__wrapper.container
       .section__header
          .section__header-row
             h1.section__header-title Архив
+         include ../sidebar/_sidebar
       .section__content
          .books
             .books__inner
                .books__section
                   .books__content
-                     ul.books__list
-                        each book in books02
-                           li.books__item
-                              .books__box
-                                 button.books__like
-                                 .books__img
-                                    img(src=book.img, alt="книга" width="380" height="380")
-                              .books__info
-                                 p.books__text= book.date
-                                 h3.books__name= book.title
-                                 .books__bottom
-                                    p.books__price= book.price
-                                    .books__manage
-                                       a.button.button--icon(href="#")
-                                          span В корзину
-                                          i.icon.icon-cart
-                                       a.button.button--outline(href="#")
-                                          span Купить в 1 клик
-                                          i.icon.icon-arrow-small
+                     +booksList(books02)
                      .books__pagination
-                        include ../_pagination
+                        include ../pagination/_pagination

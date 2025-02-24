@@ -1,26 +1,5 @@
--
-   const books04 = [
-      {
-         img: 'images/books/books-01.jpg',
-         title: 'Цифровое качество. Свод знаний о цифровой трансформации',
-         price: '3 500 руб.'
-      },
-      {
-         img: 'images/books/books-02.jpg',
-         title: 'Процессный подход в требованиях ISO 45001:2018',
-         price: '5 600 руб.'
-      },
-      {
-         img: 'images/books/books-03.jpg',
-         title: 'Внедрение системы энергетического менеджмента на соответствие международному стандарту ISO 50001:2011',
-         price: '14 900 руб.'
-      },
-      {
-         img: 'images/books/books-04.jpg',
-         title: 'ISO 9001:2015. Международный стандарт на системы менеджмента качества. Наблюдения, интерпретация',
-         price: '3 800 руб.'
-      }
-   ] 
+include data/_booksData
+include mixins/_booksList
 
 section.section
    .section__wrapper.container
@@ -31,21 +10,4 @@ section.section
                   .books__header
                      h2.books__title.books__title--red Хиты продаж
                   .books__content
-                     ul.books__list
-                        each book in books04
-                           li.books__item
-                              .books__box
-                                 button.books__like
-                                 .books__img
-                                    img(src=book.img, alt=book.title width="380" height="380")
-                              .books__info
-                                 h3.books__name= book.title
-                                 .books__bottom
-                                    p.books__price= book.price
-                                    .books__manage
-                                       a.button.button--icon(href="#")
-                                          span Купить книгу
-                                          i.icon.icon-cart
-                                       a.button.button--outline(href="#")
-                                          span Купить в 1 клик
-                                          i.icon.icon-arrow-right
+                     +booksList(books01, 4)

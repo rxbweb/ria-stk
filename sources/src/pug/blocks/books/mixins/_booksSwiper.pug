@@ -1,0 +1,16 @@
+include ../../../mixins/_mixins
+
+mixin booksSwiper(list, sliceNum = list.length)
+   .books__swiper
+      .books__swiper-slider
+         .swiper-wrapper
+            each book in list.slice(0, sliceNum)
+               .swiper-slide
+                  .books__item
+                     .books__box
+                        button.favorite-button
+                        .books__img
+                           img(src=book.img, alt=book.title width="380" height="380")
+                     .books__info
+                        h3.books__name= book.title
+         +swiperControls()

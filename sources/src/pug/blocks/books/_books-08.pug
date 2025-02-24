@@ -1,22 +1,25 @@
+include ../../mixins/_mixins
+include mixins/_booksList
+
 -
    const books08 = [
       { 
-         src: 'images/books/books-13.jpg',
+         img: 'images/books/books-13.jpg',
          title: 'Стандарты и качество',
          date: '№10 октябрь 2024'
       },
       { 
-         src: 'images/books/books-14.jpg',
+         img: 'images/books/books-14.jpg',
          title: 'Контроль качества продукции',
          date: '№ 8 август 2024'
       },
       { 
-         src: 'images/books/books-15.jpg',
+         img: 'images/books/books-15.jpg',
          title: 'Мир измерений',
          date: '№2 май 2024'
       },
       { 
-         src: 'images/books/books-16.jpg',
+         img: 'images/books/books-16.jpg',
          title: 'Business Excellence',
          date: '№10 декабрь 2024'
       }
@@ -38,7 +41,7 @@ section.section.section--books
                               a.books__card(href="#")
                                  .books__box
                                     .books__img
-                                       img(src=book.src, alt=book.title width="380" height="380")
+                                       +picture(book.img, false, book.title, 380, 380)
                                  .books__info
                                     h3.books__name= book.title
                                     p.books__date= book.date
