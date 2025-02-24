@@ -2,7 +2,7 @@ mixin figuresList(figures)
    ul.figures__list
       each figure, index in figures
          li.figures__item
-            a.figures__box(href="#")
+            a.figures__link(href="#")
                .figures__svg
                   svg
                      use(href=`images/sprites/main.stack.svg#svg-collection-${(index + 1).toString().padStart(2, '0')}`)

@@ -1,27 +1,21 @@
+include ../../mixins/_mixins
+
 .webform
-   form.webform__form(action="#")
+   form.webform__form(action="#" data-validate-form)
       .webform__body
          .webform__header
             h3.webform__name Нужна помощь? Сообщите нам
          p Заполните эту форму, если вы не получили обратную связь по рукописи или у вас появился какой-нибудь вопрос.
          .webform__inputs
-            .webform__label
+            label.webform__label
                span.webform__label-row
                   span.webform__label-title Тема обращения
-               .select.select--secondary
-                  button.select__active
-                     span Тема обращения
-                  .select__list
-                     button.select__item.is-active Везде
-                     button.select__item По журналам
-                     button.select__item По книгам
-                     button.select__item По статьям
-                     button.select__item По новостям
-                     button.select__item По мероприятиям
+                  span.webform__label-error Обязательное поле
+               span.webform__label-field
+                  input.webform__label-input(type="text" placeholder="Тема обращения" name="webform-theme" required)
             label.webform__label
                span.webform__label-row
                   span.webform__label-title Текст обращения
                span.webform__label-field
-                  textarea.webform__label-textarea(type="text" placeholder="Коротко объясните суть проблемы (необязательно)")
-         button.webform__submit.button
-               span Отправить
+                  textarea.webform__label-textarea(placeholder="Коротко объясните суть проблемы (необязательно)")
+         +button('Отправить', 'webform__button', '', false)
