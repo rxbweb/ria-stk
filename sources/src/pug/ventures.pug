@@ -1,0 +1,13 @@
+extends base/_layout
+block head
+   title Специальные проекты
+block page
+
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Специальные проекты' },
+   ])
+
+   include blocks/ventures/_ventures
+
+   include blocks/contacts/_contacts
