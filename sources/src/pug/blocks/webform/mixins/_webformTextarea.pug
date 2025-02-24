@@ -1,0 +1,10 @@
+mixin webformTextarea(title, comment, placeholder)
+   .webform__textarea
+      label.webform__label
+         if title || comment
+            span.webform__label-row
+               if title
+                  span.webform__label-title= title
+               if comment
+                  span.webform__label-error= comment
+         textarea.webform__label-textarea(placeholder=placeholder)
