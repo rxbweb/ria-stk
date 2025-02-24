@@ -1,70 +1,72 @@
 "use strict";
 
-new Swiper(".js-partners-swiper", {
-   slidesPerView: 1,
-   spaceBetween: 10,
-   keyboard: true,
-   navigation: {
-      prevEl: ".js-partners-prev",
-      nextEl: ".js-partners-next",
-   },
-   pagination: {
-      el: ".js-partners-pagination",
-      clickable: true,
-      dynamicBullets: true,
-      dynamicMainBullets: 8,
-   },
-   breakpoints: {
-      0: {
-         slidesPerView: 'auto',
-         spaceBetween: 10,
-         initialSlide: 3,
-         centeredSlides: 'true',
-         loop: true
+$('.partners__swiper').each(function (index, element) {
+   new Swiper(element, {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      keyboard: true,
+      navigation: {
+         prevEl: $(element).find('.swiper-button-prev')[0],
+         nextEl: $(element).find('.swiper-button-next')[0],
       },
-      768: {
-         slidesPerView: 3,
-         spaceBetween: 30,
+      pagination: {
+         el: $(element).find('.swiper-pagination')[0],
+         clickable: true,
+         dynamicBullets: true,
+         dynamicMainBullets: 8,
       },
-      1100: {
-         slidesPerView: 4,
-         spaceBetween: 30,
+      breakpoints: {
+         0: {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            initialSlide: 3,
+            centeredSlides: true,
+            loop: true
+         },
+         768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+         },
+         1100: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+         },
+         1366: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+         },
+         1600: {
+            slidesPerView: 6,
+            spaceBetween: 30,
+         },
       },
-      1366: {
-         slidesPerView: 5,
-         spaceBetween: 30,
-      },
-      1600: {
-         slidesPerView: 6,
-         spaceBetween: 30,
-      },
-   },
+   });
 });
 
-new Swiper(".js-projects-swiper", {
-   slidesPerView: 1,
-   spaceBetween: 20,
-   keyboard: true,
-   navigation: {
-      prevEl: ".js-projects-prev",
-      nextEl: ".js-projects-next",
-   },
-   pagination: {
-      el: ".js-projects-pagination",
-      clickable: true,
-      // dynamicBullets: true,
-      // dynamicMainBullets: 6,
-   },
-   breakpoints: {
-      768: {
-         slidesPerView: 2,
-         spaceBetween: 30,
+$('.projects__swiper').each(function (index, element) {
+   new Swiper(element, {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      keyboard: true,
+      navigation: {
+         prevEl: $(element).find('.swiper-button-prev')[0],
+         nextEl: $(element).find('.swiper-button-next')[0],
       },
-      1200: {
-         slidesPerView: 3,
-         spaceBetween: 40,
+      pagination: {
+         el: $(element).find('.swiper-pagination')[0],
+         clickable: true,
       },
-   },
+      breakpoints: {
+         768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+         },
+         1200: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+         },
+      },
+   });
 });
 
 new Swiper(".hero__slideshow", {
@@ -81,45 +83,44 @@ new Swiper(".hero__slideshow", {
    },
 });
 
-// Инициализация Swiper
-const swiper = new Swiper(".history__swiper", {
-   slidesPerView: 1,
-   spaceBetween: 20,
-   effect: "fade",
-   speed: 500,
-
-   fadeEffect: {
-      crossFade: true
-   },
-   navigation: {
-      prevEl: ".history__prev",
-      nextEl: ".history__next",
-   },
-   pagination: {
-      el: ".history__pagination",
-      clickable: true,
-   },
-   on: {
-      // При изменении активного слайда
-      slideChange: function () {
-         syncActiveButton(swiper.activeIndex);
+$('.history__swiper').each(function (index, element) {
+   const swiper = new Swiper(element, {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      effect: "fade",
+      speed: 500,
+      fadeEffect: {
+         crossFade: true
       },
-   },
+      navigation: {
+         prevEl: $(element).find('.swiper-button-prev')[0],
+         nextEl: $(element).find('.swiper-button-next')[0],
+      },
+      pagination: {
+         el: $(element).find('.swiper-pagination')[0],
+         clickable: true,
+      },
+      on: {
+         // При изменении активного слайда
+         slideChange: function () {
+            syncActiveButton(swiper.activeIndex);
+         },
+      },
+   });
 });
 
-$('.card__table-swiper').each(function () {
-   const $this = $(this);
 
-   new Swiper($this[0], {
+$('.card__table-swiper').each(function (index, element) {
+   new Swiper(element, {
       slidesPerView: 2,
       spaceBetween: 15,
       keyboard: true,
       navigation: {
-         prevEl: $this.find('.card__table-prev')[0],
-         nextEl: $this.find('.card__table-next')[0],
+         prevEl: $(element).find('.swiper-button-prev')[0],
+         nextEl: $(element).find('.swiper-button-next')[0],
       },
       pagination: {
-         el: $this.find('.card__table-pagination')[0],
+         el: $(element).find('.swiper-pagination')[0],
          clickable: true,
       },
       breakpoints: {
@@ -159,12 +160,39 @@ $('.account__products-swiper').each(function (index, element) {
          clickable: true,
       },
       breakpoints: {
-         1280: {
+         768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+         },
+         992: {
+            slidesPerView: 3,
+         },
+         1200: {
             slidesPerView: 3,
             spaceBetween: 40,
-         },
+         }
       },
    });
+});
+
+$('.account__tabs-btn').on('click', function (e) {
+   e.preventDefault();
+
+   let tabId = $(this).data('tab');
+   if (!tabId) return;
+
+   let parentTabsData = $(this).closest('[data-tabs]').data('tabs');
+   if (!parentTabsData) return;
+
+   let $tabsContent = $('[data-content="' + parentTabsData + '"]');
+   if (!$tabsContent.length) return;
+
+   let $tabItem = $tabsContent.find('[data-tab="' + tabId + '"]');
+   if (!$tabItem.length) return;
+
+   $(this).addClass('is-active').siblings('.account__tabs-btn').removeClass('is-active');
+   $tabsContent.addClass('is-changed');
+   $tabItem.addClass('is-active').siblings('[data-tab]').removeClass('is-active');
 });
 
 // Функция обновления активной кнопки при смене слайда
@@ -286,33 +314,37 @@ function swiperClassHandler(i, sliders) {
    }
 }
 
-new Swiper(".content__swiper-slider", {
-   slidesPerView: 1,
-   spaceBetween: 20,
-   keyboard: true,
-   effect: "fade",
-   speed: 300,
-   fadeEffect: {
-      crossFade: true
-   },
-   navigation: {
-      prevEl: ".content__swiper-prev",
-      nextEl: ".content__swiper-next",
-   },
+$(".content__swiper-slider").each(function (index, element) {
+   new Swiper(element, {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      keyboard: true,
+      effect: "fade",
+      speed: 300,
+      fadeEffect: {
+         crossFade: true
+      },
+      navigation: {
+         prevEl: $(element).closest('.content__swiper').find('.swiper-button-prev')[0],
+         nextEl: $(element).closest('.content__swiper').find('.swiper-button-next')[0],
+      },
+   });
 });
 
-new Swiper(".books__swiper-slider", {
-   slidesPerView: 4,
-   spaceBetween: 40,
-   keyboard: true,
-   pagination: {
-      el: ".js-books-pagination",
-      clickable: true,
-   },
-   navigation: {
-      prevEl: ".js-books-prev",
-      nextEl: ".js-books-next",
-   },
+$('.books__swiper-slider').each(function (index, element) {
+   new Swiper(element, {
+      slidesPerView: 4,
+      spaceBetween: 40,
+      keyboard: true,
+      pagination: {
+         el: $(element).find('.swiper-pagination')[0],
+         clickable: true,
+      },
+      navigation: {
+         prevEl: $(element).find('.swiper-button-prev')[0],
+         nextEl: $(element).find('.swiper-button-next')[0],
+      },
+   });
 });
 
 const isMobile = window.matchMedia("(max-width: 768px)").matches;
@@ -345,7 +377,6 @@ const phoneMaskModule = {
    init() {
       const $phoneElements = $('[data-name="phone"]');
       if ($phoneElements.length === 0) {
-         console.warn('Нет элементов с data-name="phone" на странице.');
          return;
       }
 
@@ -357,11 +388,9 @@ const phoneMaskModule = {
          const $element = $(this);
 
          if (!$element.length) {
-            console.warn('Элемент с data-name="phone" не найден.');
             return;
          }
 
-         // Применение маски для каждого элемента
          IMask($element[0], {
             mask: '+{7}(000)000-00-00'
          });
@@ -372,7 +401,6 @@ const phoneMaskModule = {
 const mapModule = {
    init() {
       if (typeof ymaps === 'undefined') {
-         console.log('Яндекс карты не подключены.');
          return;
       }
 
@@ -382,7 +410,6 @@ const mapModule = {
    initializeMaps() {
       const mapElements = document.querySelectorAll('.map');
       if (!mapElements.length) {
-         console.warn('Нет элементов с классом .map на странице.');
          return;
       }
 
@@ -461,6 +488,7 @@ const navModule = {
             // Убираем последний элемент из navList и добавляем его в начало boxNav
             const item = navListItems[i];
             this.boxNav.prepend(item);
+            this.burger.addClass('is-visible');
          } else {
             break;
          }
@@ -535,6 +563,7 @@ const selectModule = {
       $selectList.find('.select__item').removeClass('is-active');
       $item.addClass('is-active');
       $selectActive.html(`<span>${selectedText}</span>`);
+      $selectActive.addClass('is-selected');
       $selectList.removeClass('is-active');
    },
 
@@ -597,10 +626,6 @@ const accordionModule = {
       const $accordionWrapper = $button.next('.accordion__wrapper');
       const accordionButton = $button.attr('data-accordion');
 
-      if (!accordionButton) {
-         return;
-      }
-
       const $accordionImg = $('.accordion__pic[data-img="' + accordionButton + '"]');
 
       if ($accordionImg.length) {
@@ -618,6 +643,73 @@ const accordionModule = {
          $button.parent('.accordion__item').toggleClass('is-active');
       }
    },
+};
+
+$(document).ready(function () {
+   function toggleControls() {
+      if ($(window).width() <= 991) {
+         $(".controls__toggle").on('click', function (e) {
+            e.stopPropagation();
+            $(this).toggleClass("is-active").next().stop().slideToggle(300);
+         });
+
+         $(document).on('click', function (e) {
+            if (!$(e.target).closest(".controls").length) {
+                  $(".controls__toggle").removeClass("is-active").next().stop().slideUp(300);
+            }
+         });
+      } else {
+         $(".controls__toggle").off('click'); // Отключаем обработчики, если ширина больше 1360px
+         $(document).off('click');
+      }
+   }
+
+   toggleControls(); // Запускаем при загрузке
+   $(window).on('resize', toggleControls); // Перезапускаем при изменении размера окна
+});
+
+$(document).ready(function () {
+   function toggleSidebar() {
+       if ($(window).width() <= 991) {
+           $(".sidebar__toggle").on('click', function (e) {
+               e.stopPropagation();
+               $(this).toggleClass("is-active").next().stop().slideToggle(300);
+           });
+
+           $(document).on('click', function (e) {
+               if (!$(e.target).closest(".sidebar").length) {
+                   $(".sidebar__toggle").removeClass("is-active").next().stop().slideUp(300);
+               }
+           });
+       } else {
+           $(".sidebar__toggle").off('click'); // Отключаем обработчики, если ширина больше 1360px
+           $(document).off('click');
+       }
+   }
+
+   toggleSidebar(); // Запускаем при загрузке
+   $(window).on('resize', toggleSidebar); // Перезапускаем при изменении размера окна
+});
+
+const fileUploadModule = {
+   init() {
+      const $fileInputs = $('.webform__label-file input');
+
+      if (!$fileInputs.length) return;
+
+      this.bindEvents($fileInputs);
+   },
+
+   bindEvents($fileInputs) {
+      $fileInputs.on('change', function () {
+         fileUploadModule.updateFileName($(this));
+      });
+   },
+
+   updateFileName($input) {
+      const fileName = $input[0].files.length ? $input[0].files[0].name : "Выберите файл";
+      $input.closest('.webform__label-file').find('.webform__label-file-name').text(fileName);
+   }
 };
 
 // const lozadModule = {
@@ -660,59 +752,100 @@ const observer = lozad('.lozad', {
 
 observer.observe();
 
-$("form[name='form-callback']").each(function() {
-   $(this).validate({
-      rules: {
-         "form-name": "required",
-         "form-email": "required",
-         "form-agree": "required",
+$("[data-validate-form]").each(function () {
+   let $form = $(this);
+
+   $form.validate({
+      errorPlacement: function (error, element) {
+         if (element.closest(".agree").length) {
+            // Если чекбокс внутри .agree — показываем .agree__error
+            element.closest(".agree").find(".agree__error").show();
+         } else if (element.closest(".webform__label").length) {
+            // Если инпут внутри .webform__label — показываем .webform__label-error
+            element.closest(".webform__label").find(".webform__label-error").show();
+         } else {
+            // Для остальных инпутов: добавляем класс и показываем .form__error
+            let $label = element.closest(".form__label");
+            $label.addClass("is-error");
+            $label.find(".form__error").show();
+         }
       },
-      messages: {
-         "form-name": "Обязательное поле",
-         "form-email": "Обязательное поле",
-         "form-agree": "Обязательное поле",
+      success: function (label, element) {
+         if ($(element).closest(".agree").length) {
+            // Если чекбокс внутри .agree — скрываем .agree__error
+            $(element).closest(".agree").find(".agree__error").hide();
+         } else if ($(element).closest(".webform__label").length) {
+            // Если инпут внутри .webform__label — скрываем .webform__label-error
+            $(element).closest(".webform__label").find(".webform__label-error").hide();
+         } else {
+            // Для остальных инпутов: убираем класс и скрываем .form__error
+            let $label = $(element).closest(".form__label");
+            $label.removeClass("is-error");
+            $label.find(".form__error").hide();
+         }
       }
    });
 });
 
-$(document).ready(function() {
-   // 1. Проверяем, есть ли элементы с классом .tabs-link на странице
-   if ($('.tabs-link').length) {
-       
-       // 2. Добавляем событие на клик по .tabs-link
-       $('.tabs-link').on('click', function(e) {
-           e.preventDefault();  // 3. Останавливаем стандартное поведение ссылки
-           
-           // 4. Убираем класс .is-active у всех .tabs-link в родителе
-           $(this).closest('.tabs__list').find('.tabs-link').removeClass('is-active');
-           
-           // 5. Добавляем класс .is-active только к текущей ссылке
-           $(this).addClass('is-active');
-           
-           // 6. Получаем значение data-tabs у текущей ссылки
-           var tabId = $(this).data('tabs');
-           
-           // 7. Получаем значение data-tabs у родителя
-           var parentTabsData = $(this).closest('.tabs__list').data('tabs');
-           
-           // 8. Ищем блок с классом .tabs-content, у которого data-tabs равен значению из родителя
-           var $tabsContent = $('.tabs-content[data-tabs="' + parentTabsData + '"]');
-           
-           if ($tabsContent.length) {
-               // 9. Ищем элемент с data-tabs, равным значению из 3 шага
-               var $tabItem = $tabsContent.find('.tabs-item[data-tabs="' + tabId + '"]');
-               
-               if ($tabItem.length) {
-                   // 10. Добавляем класс .is-active к найденному элементу
-                   $tabItem.addClass('is-active');
-                   
-                   // 11. Убираем класс .is-active у всех остальных .tabs-item в этом блоке
-                   $tabsContent.find('.tabs-item').not($tabItem).removeClass('is-active');
-               }
-           }
-       });
+const tabsModule = {
+   init() {
+      const $tabsLinks = $('.tabs-link');
+
+      if (!$tabsLinks.length) return;
+
+      this.bindEvents($tabsLinks);
+   },
+
+   bindEvents($tabsLinks) {
+      $tabsLinks.on('click', function (e) {
+         e.preventDefault();
+         tabsModule.activateTab($(this));
+      });
+   },
+
+   activateTab($clickedTab) {
+      const $nav = $clickedTab.closest('.tabs-nav');
+      $nav.find('.tabs-link').removeClass('is-active');
+      $clickedTab.addClass('is-active');
+
+      const tabId = $clickedTab.data('tabs');
+      const parentTabsData = $nav.data('tabs');
+      const $tabsContent = $('.tabs-content[data-tabs="' + parentTabsData + '"]');
+
+      if ($tabsContent.length) {
+         const $tabItem = $tabsContent.find('.tabs-item[data-tabs="' + tabId + '"]');
+
+         if ($tabItem.length) {
+            $tabItem.addClass('is-active').siblings().removeClass('is-active');
+         }
+      }
    }
-});
+};
+
+const webformOptionsModule = {
+   init() {
+      this.$options = $('.webform__options-method');
+
+      if (this.$options.length === 0) {
+         return;
+      }
+
+      this.bindEvents();
+   },
+
+   bindEvents() {
+      this.$options.on('click', (e) => {
+         e.preventDefault();
+         this.toggleActiveClass($(e.currentTarget));
+      });
+   },
+
+   toggleActiveClass($clickedOption) {
+      const $parent = $clickedOption.closest('.webform__options');
+      $parent.find('.webform__options-method').removeClass('is-active');
+      $clickedOption.addClass('is-active');
+   }
+};
 
 const authorsLabelModule = {
    init() {
@@ -745,14 +878,29 @@ const authorsLabelModule = {
    }
 };
 
-Fancybox.bind("[data-fancybox]", {
+const fancyboxModule = {
+   init() {
+      Fancybox.bind("[data-fancybox]", {});
+   }
+};
 
-});
+const favoriteButtonModule = {
+   init() {
+      const $favoriteButtons = $('.favorite-button');
+      if ($favoriteButtons.length === 0) {
+         return;
+      }
 
-$('.books__like').on('click', function(e) {
-   e.preventDefault();
-   $(this).toggleClass('is-active');
-})
+      this.bindFavoriteEvents($favoriteButtons);
+   },
+
+   bindFavoriteEvents($buttons) {
+      $buttons.on('click', function (e) {
+         e.preventDefault();
+         $(this).toggleClass('is-active');
+      });
+   }
+};
 
 const passwordToggleModule = {
    init() {
@@ -778,12 +926,48 @@ const passwordToggleModule = {
             const newType = currentType === 'password' ? 'text' : 'password';
             $input.attr('type', newType);
 
-            // Toggle класса is-active на кликнутой кнопке
             $button.toggleClass('is-active');
          });
       });
    }
 };
+
+const webformModule = {
+   init() {
+      this.initEvents();
+   },
+   initEvents() {
+      const $buttons = $('.webform__toggle');
+      if (!$buttons.length) {
+         return;
+      }
+      $buttons.on('click', this.toggleWebform);
+   },
+   toggleWebform(e) {
+      if (!e || !e.currentTarget) {
+         return;
+      }
+
+      e.preventDefault();
+
+      const $button = $(e.currentTarget);
+
+      if (!$button.hasClass('webform__toggle')) {
+         return;
+      }
+
+      const $webformWrapper = $button.next('.webform__wrapper');
+
+      if ($webformWrapper.length) {
+         if ($webformWrapper.is(':animated')) {
+            return;
+         }
+         $webformWrapper.slideToggle(300);
+         $button.toggleClass('is-active');
+      }
+   },
+};
+
 
 $(function () {
    // numsModule.init();
@@ -795,4 +979,10 @@ $(function () {
    navModule.init();
    passwordToggleModule.init();
    authorsLabelModule.init();
+   webformModule.init();
+   favoriteButtonModule.init();
+   fancyboxModule.init();
+   webformOptionsModule.init();
+   tabsModule.init();
+   fileUploadModule.init();
 });
