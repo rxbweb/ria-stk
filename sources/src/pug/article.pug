@@ -3,9 +3,6 @@ block head
    title Детальная страница статьи
 block page
 
-   include blocks/_sidebar
-
-   include blocks/breadcrumbs/_breadcrumbs
    +breadcrumbs([
       { href: '#', title: 'Главная' },
       { href: '#', title: 'Журналы' },
@@ -13,6 +10,9 @@ block page
       { href: '#', title: '№10/2024' },
       { href: '#', title: 'Система стандартизации ПАО «Газпром»: развитие в условиях перемен' }
    ])
+
+   include blocks/sidebar/_sidebar
+   +sidebar('sidebar--thin')
 
    include blocks/article/_article-01
 
