@@ -1,4 +1,6 @@
 .details
+   &__inner
+      @include margin-bottom(30px)
    &__list
       border-top: var(--border)
       &-box
@@ -43,6 +45,7 @@
       &-title
          @extend .title
          @extend .title--second
+         white-space: pre-line
       &-text
          color: #67686B
       &-description
@@ -54,6 +57,7 @@
          top: 25px
          color: #cdcdcd
          transition: var(--transition)
+         white-space: pre-line
       &-price
          @extend .title
          @extend .title--second
@@ -144,6 +148,10 @@
                display: none
          &-tags
             order: -2
+         &-description
+            width: 100%
+            position: static
+            white-space: normal
          &--2
             .details
                &__list
@@ -154,6 +162,8 @@
                   &-box
                      padding-top: 65px
    @include sm
+      &__inner
+         @include margin-bottom(25px)
       &__list
          &-box
             padding: 25px 0 15px
@@ -166,6 +176,8 @@
             max-width: 100%
          &-img
             padding-bottom: 56%
+         &-title
+            white-space: normal
          &-button
             margin-top: 15px
          &--nums
