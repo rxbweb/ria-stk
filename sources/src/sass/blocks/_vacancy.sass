@@ -1,4 +1,5 @@
 .vacancy
+   --vacancy-gap: var(--gap)
    &__main
       display: flex
       flex-grow: 1
@@ -14,13 +15,13 @@
       display: flex
       flex-wrap: wrap
       justify-content: space-between
-      gap: var(--gap)
+      gap: var(--vacancy-gap)
       border-bottom: 1px solid #CDCDCD
       &-left
          display: flex
          flex-wrap: wrap
          align-items: center
-         gap: var(--gap)
+         gap: var(--vacancy-gap)
       &-logo
          width: 238px
          height: 160px
@@ -33,16 +34,19 @@
          background: #fff
          overflow: hidden
       &-details
+         max-width: 400px
          @include margin-bottom(6px)
       &-name
          @extend .title
          @extend .title--second
          letter-spacing: -0.72px
+         white-space: pre-line
       &-right
          display: flex
          flex-direction: column
          align-items: flex-end
          justify-content: space-between
+         gap: 20px
    &__meta
       color: #67686B
       @include margin-right(17px)
@@ -59,14 +63,15 @@
       @extend .title--red
       line-height: 140%
       letter-spacing: -0.6px
-      display: inline-block
+      display: inline-flex
+      align-items: center
       padding: 10px 15px
       background: rgba(194, 37, 33, 0.30)
       white-space: nowrap
    &__section
       flex-grow: 1
    &__content
-      padding: 40px
+      padding: var(--gap)
       background: #F2F2F2
       @include margin-bottom(30px)
    &__info
@@ -80,7 +85,7 @@
             overflow: hidden
       &-title
          @extend .title
-         @extend .title--sixth
+         @include fluidFontSize(14px, 20px, 360px, 1920px, 16px)
          letter-spacing: -0.6px
       &-text
          ul
@@ -94,6 +99,8 @@
       width: 380px
       flex-shrink: 0
       @include margin-bottom(20px)
+      &--wide
+         width: 520px
    &__list
       @include margin-bottom(20px)
    &__item
@@ -138,3 +145,87 @@
       .vacancy
          &__price
             background: rgba(255, 255, 255, 0.30)
+   &__spotlight
+      border-radius: 15px
+      color: #fff
+      overflow: hidden
+      &-box
+         width: 100%
+         padding-bottom: 100%
+         position: relative
+         display: block
+         @include img-cover(100%)
+         &::after
+            content: ''
+            position: absolute
+            inset: 0
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.80) 100%)
+      &-info
+         padding: 20px
+         position: absolute
+         z-index: var(--z-index)
+         inset: 0
+         top: auto
+         display: flex
+         align-items: flex-start
+         justify-content: space-between
+         gap: 10px
+      &-title
+         @extend .title
+         @extend .title--fourth
+         color: inherit
+         white-space: pre-line
+      &-icon
+         padding: 12px
+         flex-shrink: 0
+
+   @media (max-width: 1600px)
+      --vacancy-gap: 30px
+      &__header
+         &-logo
+            width: 170px
+            height: 130px
+      &__aside
+         &--wide
+            width: 420px
+      &__spotlight
+         &-title
+            @include fluidFontSize(16px, 30px, 360px, 1600px, 24px)
+   @include xl
+      &__header
+         &-right
+            width: 100%
+            flex-direction: row
+            flex-wrap: wrap
+            align-items: stretch
+            .vacancy
+               &__price
+                  order: 1
+      &__price
+         padding: 8px 15px
+   @include md
+      &__aside
+         &--wide
+            width: 360px
+   @include ms
+      &__aside
+         display: none
+   @include sm
+      --vacancy-gap: 20px
+      &__header
+         &-left
+            flex-direction: column
+            align-items: flex-start
+            gap: 10px
+         &-logo
+            width: 180px
+            height: 120px
+            border-radius: 10px
+         &-right
+            justify-content: flex-start
+            gap: 15px
+   @include xs
+      &__content
+         padding: 15px
+      &__info
+         @include margin-bottom(25px)
