@@ -1,3 +1,5 @@
+include ../mixins/_mixins
+
 section.section.section--dispatch
    .section__wrapper
       .section__content
@@ -6,7 +8,7 @@ section.section.section--dispatch
                img(src="images/dispatch/dispatch-bg.jpg", alt="фоновая картинка" width="1920" height="750")
             .dispatch__inner.container
                .dispatch__row
-                  form.dispatch__form.form(action="#" name="form-callback")
+                  form.dispatch__form.form(action="#" data-validate-form)
                      .form__header
                         h2.form__title Газета Quality News — качественные новости каждый четверг
                         p.form__text Электронная рассылка «Газета Quality News» — бесплатный новостной дайджест, результат ежедневного мониторинга деловой жизни профессионального сообщества. Подписывайтесь и будьте в курсе новостей из мира качества!
@@ -14,11 +16,13 @@ section.section.section--dispatch
                         .form__top
                            .form__box
                               label.form__label.form__label--half
-                                 input.form__input(type="text" placeholder="Имя" name="form-name")
+                                 input.form__input(type="text" placeholder="Имя" name="form-name" required)
+                                 span.form__error Обязательное поле
                               label.form__label.form__label--half
-                                 input.form__input(type="text" placeholder="Фамилия")
+                                 input.form__input(type="text" placeholder="Фамилия" required)
                               label.form__label
-                                 input.form__input(type="email" placeholder="E-mail" name="form-email")
+                                 input.form__input(type="email" placeholder="E-mail" name="form-email" required)
+                                 span.form__error Обязательное поле
                         .form__middle
                            .agree
                               label.agree__label
@@ -27,8 +31,8 @@ section.section.section--dispatch
                                  span.agree__text
                                     | Я согласен с 
                                     a(href="#") Правилами обработки и хранения персональных данных
+                              span.agree__error Обязательное поле
                         .form__bottom
-                           button.form__button.button Подписаться
-                  
+                           +button('Подписаться', 'form__button', '', false)
                   .dispatch__journal
                      img(src="images/dispatch/dispatch-journal.png", alt="журнал" width="787" height="750")
