@@ -77,12 +77,16 @@
       display: flex
       justify-content: center
       align-items: center
+      picture,
       img
          width: auto
          height: 100%
          object-fit: cover
          object-position: center
          position: static
+      picture
+         width: 100%
+         height: 100%
    &__info
       padding-top: 15px
       flex-grow: 1
@@ -91,12 +95,6 @@
       @include margin-bottom(30px)
       & > *:last-child
          margin-top: auto
-   &__bottom
-      display: flex
-      align-items: center
-      justify-content: space-between
-      flex-wrap: wrap
-      gap: 15px
    &__text
       margin-bottom: 5px
       color: #67686B
@@ -112,10 +110,15 @@
       @extend .title--fifth
       color: #47535E
    &__manage
-      min-height: 52px
       display: flex
+      align-items: center
+      flex-wrap: wrap
       gap: 5px
+      & > *
+         &:first-child
+            margin-right: auto
       .button
+         align-self: stretch
          justify-content: center
    &__favorite
       @extend .btn
@@ -123,6 +126,7 @@
       width: 52px
       height: 52px
       border: 1px solid var(--accent)
+      position: static
    &__table
       padding: 20px
       border-radius: 15px
@@ -155,11 +159,21 @@
          @extend .ticket__table-primary
       &-swiper
          @include margin-bottom(var(--cardTableMargin))
-      &-controls
+      .swiper-controls
          margin-bottom: 0
    .swiper
       &-slide
          height: auto
+   @media (max-width: 1600px)
+      &__manage
+         gap: 10px
+         .button
+            &:nth-child(2)
+               width: 100%
+               order: 2
+      &__favorite
+         width: 46px
+         height: 46px
    @include xl
       &__table
          &-col
@@ -182,21 +196,54 @@
          width: 30px
          height: 30px
          font-size: 11px
+         .icon
+            &-lock
+               font-size: 11px
       &__table
+         &-header
+            gap: 15px
+            .card__table
+               &-col
+                  &:nth-child(3)
+                     width: 100%
          &-col
+            min-width: 130px
             .button
                min-height: 40px
       &__block
          padding: 10px
+      &__info
+         padding-top: 10px
+         @include margin-bottom(20px)
+      &__text
+         margin-bottom: 5px
+      &__manage
+         .button
+            &--icon
+               width: 100%
    @include xs
       --cardTableMargin: 10px
       &__icon
          width: 20px
          height: 20px
          font-size: 7px
+         .icon
+            &-lock
+               font-size: 9px
       &__table
          padding: 20px 15px
          &-section
             padding-top: 15px
+         &-header
+            .button
+               width: 100%
+      &__info
+         padding-top: 5px
+         @include margin-bottom(15px)
+      &__text
+         margin-bottom: 5px
       &__block
          padding: 5px
+      &__favorite
+         width: 40px
+         height: 40px
