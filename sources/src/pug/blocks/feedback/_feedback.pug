@@ -1,0 +1,90 @@
+include ../../mixins/_mixins
+
+section.section.section--feedback
+   .section__wrapper.container
+      .section__header.section__header--border
+         h1.section__header-title Контакты
+      .section__content
+         .feedback
+            .feedback__inner
+               .feedback__main
+                  .feedback__info
+                     h2.feedback__name РИА «Стандарты и качество»
+                     ul.feedback__list
+                        li.feedback__item
+                           p.feedback__type Адрес
+                           .feedback__text 115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»
+                        li.feedback__item
+                           p.feedback__type Почта для связи
+                           .feedback__text
+                              a(href="mailto:editor_site@mirq.ru") editor_site@mirq.ru
+                        li.feedback__item
+                           p.feedback__type Телефон
+                           .feedback__text
+                              a(href="tel:+74957716652") +7 (495) 771 6652
+                        li.feedback__item
+                           p.feedback__type ФАКС
+                           .feedback__text
+                              a(href="tel:+74952588437") +7 (495) 258 8437
+                        li.feedback__item
+                           p.feedback__type Часы работы
+                           .feedback__text
+                              p Пн-Чт 9:00-18:00 
+                              p Пт 9:00-16:45 
+                              p Сб-Вс выходные
+                        li.feedback__item
+                           p.feedback__type Социальные сети
+                           .feedback__socials.socials
+                              .socials__list
+                                 a.socials__link(href="#")
+                                    img(src="images/icons/socials-vk.svg", alt="vkontakte" width="40" height="40")
+                                 a.socials__link(href="#")
+                                    img(src="images/icons/socials-tg.svg", alt="telegram" width="40" height="40")
+                                 a.socials__link(href="#")
+                                    img(src="images/icons/socials-yt.svg", alt="youtube" width="40" height="40")
+                                 a.socials__link(href="#")
+                                    img(src="images/icons/socials-dzen.svg", alt="dzen" width="40" height="40")
+                  .feedback__content
+                     form.feedback__form.form.form--2(action="#")
+                        .form__header
+                           h2.form__title Форма для связи
+                        .form__main
+                           .form__top
+                              .form__box
+                                 .form__label
+                                    span.form__type Кому
+                                    .select.select--secondary
+                                       button.select__active
+                                          span Выберетите из списка
+                                       .select__list
+                                          button.select__item Везде
+                                          button.select__item По журналам
+                                          button.select__item По книгам
+                                          button.select__item По статьям
+                                          button.select__item По новостям
+                                          button.select__item По мероприятиям
+                                 label.form__label
+                                    span.form__type E-mail
+                                    input.form__input(type="email" placeholder="E-mail" name="form-email")
+                                 label.form__label.form__label--half
+                                    span.form__type Имя
+                                    input.form__input(type="text" placeholder="Ваше имя")
+                                 label.form__label.form__label--half
+                                    span.form__type Фамилия
+                                    input.form__input(type="text" placeholder="Ваша фамилия")
+                                 label.form__label
+                                    span.form__type Сообщение
+                                    textarea.form__textarea(placeholder="Текст сообщения")
+                           .form__middle
+                              .agree
+                                 label.agree__label
+                                    input(type="checkbox")
+                                    span.agree__checkbox
+                                    span.agree__text
+                                       | Я согласен с 
+                                       a(href="#") Правилами обработки и хранения персональных данных
+                           .form__bottom
+                              +button('Отправить', 'button--large form__button', '', false)
+               .feedback__box
+                  .feedback__heading Схема проезда
+                  .feedback__map.map

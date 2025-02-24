@@ -1,0 +1,69 @@
+.feedback
+   &__inner
+      @include margin-bottom(90px)
+   &__main
+      display: flex
+      justify-content: space-between
+      gap: 150px
+   &__name
+      @extend .title
+      @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)
+   &__list
+      @include margin-bottom(30px)
+      font-size: 20px
+      color: var(--black)
+   &__item
+      @include margin-bottom(15px)
+   &__info
+      flex-grow: 1
+      @include margin-bottom(50px)
+   &__type
+      @extend .title
+      @include fluidFontSize(14px, 20px, 360px, 1920px, 20px)
+   &__form
+      max-width: 660px
+      flex-grow: 1
+   &__box
+      @include margin-bottom(30px)
+   &__socials
+      .socials
+         &__list
+            gap: 20px
+         &__link
+            --size: 40px
+   &__heading
+      @extend .title
+   &__map
+      min-height: 490px
+
+   @include xl
+      &__main
+         gap: var(--gap)
+      &__info,
+      &__box
+         @include margin-bottom(var(--gap))
+
+   @include ms
+      &__main
+         flex-direction: column
+         gap: 80px
+      &__form
+         max-width: 100%
+      &__list
+         font-size: 18px
+         @include margin-bottom(20px)
+      &__item
+         @include margin-bottom(10px)
+
+   @include xs
+      &__list
+         font-size: 15px
+         @include margin-bottom(15px)
+      &__item
+         @include margin-bottom(5px)
+      &__socials
+         .socials
+            &__link
+               --size: 32px
+      &__box
+         @include margin-bottom(15px)
