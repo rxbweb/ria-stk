@@ -1,5 +1,7 @@
 .button
-   display: inline-block
+   display: inline-flex
+   justify-content: center
+   align-items: center
    gap: 10px
    background: var(--accent)
    border-radius: 5px
@@ -14,34 +16,25 @@
    &:hover,
    &:focus
       background: var(--hover-color)
-   .icon
-      display: flex
+   @include sm
+      padding: 10px 12px
+   &__icon
+      --size: 28px
+      width: var(--size)
+      height: var(--size)
+      display: inline-flex
       justify-content: center
       align-items: center
-   &--icon,
-   &--outline
-      display: inline-flex
-      align-items: center
-      .icon
-         width: 28px
-         height: 28px
-         background: #fff
-         display: inline-flex
-         justify-content: center
-         align-items: center
-         flex-shrink: 0
-         font-size: 14px
-         border-radius: 5px
-         border: 1px solid transparent
+      flex-shrink: 0
+      background: #fff
+      border-radius: 5px
+      border: 1px solid transparent
+      svg
+         fill: none
+      @include sm
+         --size: 20px
    &--icon
-      display: inline-flex
-      justify-content: center
       gap: 10px
-      .icon
-         color: var(--accent)
-   &--slim
-      padding: 9px 20px
-      gap: 16px
    &--outline
       padding: 0
       background: transparent
@@ -49,92 +42,55 @@
       gap: 8px
       &:hover,
       &:focus
-         background: transparent
-         .icon
-            background: var(--accent)
-            color: #fff
-      .icon
-         width: 22px
-         height: 22px
-         color: currentColor
-         border-color: currentColor
-         background: #fff
-         font-size: 10px
-         transition: all var(--duration) ease
+         background: inherit
+      .button
+         &__icon
+            width: 22px
+            height: 22px
+            border: 1px solid var(--accent)
+   &--slim
+      padding: 9px 20px
+      gap: 16px
    &--simple
       padding: 8px 15px
       background: rgba(205, 205, 205, 0.28)
       color: var(--accent)
-      font-size: 12px
       font-weight: 400
-      &:hover,
-      &:focus
-         background: rgba(205, 205, 205, 0.98)
    &--img
-      width: 46px
-      height: 46px
+      --size: 46px
+      width: var(--size)
+      height: var(--size)
       padding: 6px
-      font-size: 22px
-      display: flex
-      align-items: center
-      justify-content: center
+      color: #fff
+      @include sm
+         padding: 8px
+      @include xs
+         --size: 36px
    &--white
-      display: inline-flex
-      align-items: center
       gap: 10px
-      background: #fff
       color: var(--accent)
-      font-size: 15px
+      background: #fff
       border-radius: 4px
       border: var(--border-red)
-      .icon
-         font-size: 20px
-      &:hover,
-      &:focus
-         background: #fff
    &--wide
       padding-inline: 30px
    &--large
       width: 100%
       min-height: 52px
+      @include sm
+         min-height: 40px
    &--disabled,
    &[disabled]
       background: #CDCDCD
       cursor: default
-      .icon
-         color: #CDCDCD
    &__text
       &-mob
          display: none
-   @include sm
-      padding: 10px 12px
-      .icon
-         width: 20px
-         height: 20px
-         font-size: 10px
-      &--outline
-         padding: 0
-      &--img
-         .icon
-            font-size: 20px
-      &--large
-         min-height: 40px
-      &__text
-         &-desktop
-            display: none
-         &-mob
+         @include sm
             display: inline
-   @include xs
-      &--outline
-         .icon
-            width: 20px
-            height: 20px
-            font-size: 10px
-      &--img
-         width: 36px
-         height: 36px
-         .icon
-            font-size: 16px
+      &-desktop
+         @include sm
+            display: none
 
 .btn
    --size: 48px
@@ -196,7 +152,6 @@
    &--second
       @include fluidFontSize(16px, 24px, 360px, 1920px, 20px)
       line-height: 140%
-      letter-spacing: -0.03em
    &--third
       @include fluidFontSize(16px, 48px, 360px, 1920px, 32px)
    &--fourth
@@ -258,7 +213,8 @@
    justify-content: center
    align-items: center
    flex-shrink: 0
-   img
+   img,
+   svg
       max-width: 100%
       max-height: 100%
       height: auto
