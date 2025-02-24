@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 .filter
    .filter__main
       ul.filter__list
@@ -7,61 +9,25 @@
             .filter__content
                .search
                   button.search__button
-                     i.icon.icon-loop
+                     svg(width="26" height="26")
+                        use(href='images/sprites/main.stack.svg#svg-icon-loop')
                   input.search__input(type="text" placeholder="Искать....")
          li.filter__item
             a.filter__btn(href="#")
                p.filter__name Тип занятости
             .filter__content
                .filter__selection
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Полная занятость
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Частичная занятость
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Проектная работа
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Стажировка
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Волонтерство
-
+                  +agree('Полная занятость', '', 'form-agree')
+                  +agree('Частичная занятость', '', 'form-agree')
+                  +agree('Проектная работа', '', 'form-agree')
+                  +agree('Стажировка', '', 'form-agree')
+                  +agree('Волонтерство', '', 'form-agree')
          li.filter__item
             a.filter__btn(href="#")
                p.filter__name Опыт
             .filter__content
                .filter__selection
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Нет опыта
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text от 1 до 3 лет
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text от 3 до 6 лет
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text более 6 лет
+                  +agree('Нет опыта', '', 'form-agree')
+                  +agree('от 1 до 3 лет', '', 'form-agree')
+                  +agree('от 3 до 6 лет', '', 'form-agree')
+                  +agree('более 6 лет', '', 'form-agree')

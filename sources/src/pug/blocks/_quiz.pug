@@ -1,3 +1,5 @@
+include ../mixins/_mixins
+
 section.section
    .section__wrapper
       .section__content
@@ -78,9 +80,7 @@ section.section
                                        span.form__radio-field
                                        span Нет
                         .form__footer
-                           button.button.button--icon 
-                              span Посмотреть результат
-                              i.icon.icon-arrow-small
+                           +button('Посмотреть результат', 'button--icon', 'icon-arrow-small', false)
 
                   .quiz__result
                      h2.quiz__result-title Вам подходит:
@@ -89,6 +89,4 @@ section.section
                            img(src="images/journals/journals-01.png", alt="Стандарты и качество" width="200")
                      .quiz__result-info
                         h3.quiz__result-name стандарты и качество
-                        a.quiz__result-button.button.button--outline(href="#") 
-                           span Подробнее
-                           i.icon.icon-arrow-right
+                        +button('Подробнее', 'button--outline quiz__result-button', 'icon-arrow-right')

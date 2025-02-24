@@ -1,3 +1,5 @@
+include ../../../mixins/_mixins
+
 mixin boardList(boards)   
    ul.board__list
       each board in boards
@@ -5,13 +7,14 @@ mixin boardList(boards)
             a.board__box(href="#")
                .board__img
                   if board.photo
-                     img(src=board.photo, alt=board.name width="180" height="200")
+                     +picture(board.photo, false, board.name, 180, 200)
+                  else
+                     svg(width="60" height="60")
+                        use(href='images/sprites/main.stack.svg#svg-camera')
                if board.name || board.text
                .board__info
                   if board.name
                      p.board__name=board.name
                   if board.text
                      p.board__text=board.text
-                  .button.button--outline
-                     span Подробнее
-                     i.icon.icon-arrow-right
+                  +button('Подробнее', 'button--outline', 'icon-arrow-right', false, '', true)

@@ -1,20 +1,22 @@
+include ../../mixins/_mixins
+
 -
    const listings04 = [
       {
          title: 'Спецвыпуск журнала',
-         image: 'images/listing/listing-adv-01.jpg'
+         img: 'images/listing/listing-06.jpg'
       },
       {
          title: 'Реклама в журналах',
-         image: 'images/listing/listing-adv-02.jpg'
+         img: 'images/listing/listing-07.jpg'
       },
       {
          title: 'Реклама на сайте',
-         image: 'images/listing/listing-adv-03.jpg'
+         img: 'images/listing/listing-08.jpg'
       },
       {
          title: 'Спецпроект',
-         image: 'images/listing/listing-adv-04.jpg'
+         img: 'images/listing/listing-09.jpg'
       }
    ]
 
@@ -32,4 +34,4 @@ section.section.section--listing
                         a.listing__box(href="#")
                            h3.listing__name=listing.title
                            .listing__img
-                              img(src=listing.image, alt="картинка" width="350" height="222")
+                              +picture(listing.img, false, "картинка", 350, 222)

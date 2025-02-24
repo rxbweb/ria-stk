@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 -
    const details02 = [
       {
@@ -40,10 +42,6 @@ section.section.section--details
                                  h3.details__list-title #{detail.title}
                                  .details__list-text
                                     p #{detail.text}
-                                 .details__list-button.button.button--outline
-                                    span Подробнее
-                                    i.icon.icon-arrow-small
+                                 +button('Подробнее', 'button--outline details__list-button', 'icon-arrow-small', false, '', true)
          .section__footer
-            a.section__footer-button.button.button--icon(href="#")
-               span Посмотреть все мероприятия
-               i.icon.icon-arrow-small
+            +button('Посмотреть все мероприятия', 'button--icon section__footer-button', 'icon-arrow-small')

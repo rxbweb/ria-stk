@@ -13,6 +13,4 @@ mixin peopleList(people, extraClass)
                      p.people__name #{person.name}
                   if person.text
                      p.people__text #{person.text}
-                  a.people__link.button.button--outline(href="#")
-                     | Подробнее
-                     i.icon.icon-arrow-small
+                  +button('Подробнее', 'button--outline people__link', 'icon-arrow-small')

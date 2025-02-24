@@ -33,6 +33,4 @@ section.section
                               img(src=journal.src, width="240", height="340")
                         .journals__info
                            h3.journals__name= journal.title
-                           a.journals__link(href="#") 
-                              span Подробнее
-                              i.icon.icon-arrow-small
+                           +button('Подробнее', 'button--outline', 'icon-arrow-small')

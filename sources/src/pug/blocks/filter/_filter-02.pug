@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 .filter
    .filter__main
       ul.filter__list
@@ -6,103 +8,38 @@
                p.filter__name Тематика
             .filter__content
                .filter__selection
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Интегрированные системы менеджмента
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Оценка соответствия
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Бережливое производство
-
+                  +agree('Интегрированные системы менеджмента', '', 'form-agree')
+                  +agree('Оценка соответствия', '', 'form-agree')
+                  +agree('Бережливое производство', '', 'form-agree')
          li.filter__item
             a.filter__btn(href="#")
                p.filter__name Рубрика
             .filter__content
                .filter__selection
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Безопасность. Практика
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Школа уполномоченного по качеству
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Введены в действие
-
+                  +agree('Безопасность. Практика', '', 'form-agree')
+                  +agree('Школа уполномоченного по качеству', '', 'form-agree')
+                  +agree('Введены в действие', '', 'form-agree')
          li.filter__item
             a.filter__btn(href="#")
                p.filter__name Рефоративные базы и индекс
             .filter__content
                .filter__selection
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Название фильтра
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Название фильтра
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Название фильтра
-
+                  +agree('Название фильтра', '', 'form-agree')
+                  +agree('Название фильтра', '', 'form-agree')
+                  +agree('Название фильтра', '', 'form-agree')
          li.filter__item
             a.filter__btn(href="#")
                p.filter__name Авторы
             .filter__content
                .filter__selection
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Адлер Ю.П.
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Качалов В.А.
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text Куликов О.В.
-
+                  +agree('Адлер Ю.П.', '', 'form-agree')
+                  +agree('Качалов В.А.', '', 'form-agree')
+                  +agree('Куликов О.В.', '', 'form-agree')
          li.filter__item
             a.filter__btn(href="#")
                p.filter__name Год публикации
             .filter__content
                .filter__selection
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text 2024
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text 2023
-                  .agree
-                     label.agree__label
-                        input(type="checkbox" name="form-agree" required)
-                        span.agree__checkbox
-                        span.agree__text 2022     
-         
+                  +agree('2024', '', 'form-agree')
+                  +agree('2023', '', 'form-agree')
+                  +agree('2022', '', 'form-agree')

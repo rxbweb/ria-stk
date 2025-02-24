@@ -23,9 +23,7 @@ section.section.section--details
                               p.details__list-description #{'29 октября – '}
                                  |
                                  | 6 ноября 2024
-                              .details__list-button.button.button--outline
-                                 span Подробнее
-                                 i.icon.icon-arrow-small
+                              +button('Подробнее', 'button--outline details__list-button', 'icon-arrow-small', false, '', true)
                      li.details__list-item
                         a.details__list-box(href="#")
                            .details__list-img
@@ -39,9 +37,7 @@ section.section.section--details
                               p.details__list-description #{'14 октября – '}
                                  |
                                  | 21 октября 2024
-                              .details__list-button.button.button--outline
-                                 span Подробнее
-                                 i.icon.icon-arrow-small
+                              +button('Подробнее', 'button--outline details__list-button', 'icon-arrow-small', false, '', true)
                      li.details__list-item
                         a.details__list-box(href="#")
                            .details__list-img
@@ -53,9 +49,7 @@ section.section.section--details
                               .details__list-tags.tags
                                  .tags__button Тег мероприятия: например выставка
                               p.details__list-description 10 августа 2024
-                              .details__list-button.button.button--outline
-                                 span Подробнее
-                                 i.icon.icon-arrow-small
+                              +button('Подробнее', 'button--outline details__list-button', 'icon-arrow-small', false, '', true)
 
          .section__footer
             +button('Посмотреть все мероприятия', 'button--icon section__footer-button', 'icon-arrow-small')

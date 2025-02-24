@@ -1,5 +1,8 @@
+include ../../mixins/_mixins
+include ../download/mixins/_downloadList
+
 .webform
-   form.webform__form(action="#")
+   form.webform__form(action="#" data-validate-form)
       .webform__body
          .webform__header
             h3.webform__name Загрузить новую рукопись
@@ -7,32 +10,15 @@
             label.webform__label
                span.webform__label-row
                   span.webform__label-title Название рукописи
+                  span.webform__label-error Обязательное поле
                span.webform__label-field
-                  input.webform__label-input(type="text" placeholder="Введите название рукописи")
-         ul.webform__files
-            li.webform__files-item
-               .webform__files-top
-                  .webform__files-name Ваша рукопись
-               .webform__files-box
-                  input(type="file")
-                  .webform__files-download
-                  .webform__files-info
-                     p.webform__files-manual Нажмите, чтобы загрузить файл#[span , либо перетащите сюда]
-                     p.webform__files-description DOC, PDF или TXT до 10 МБ
-            li.webform__files-item
-               .webform__files-top
-                  .webform__files-name Публичная оферта
-               .webform__files-box
-                  input(type="file")
-                  .webform__files-download
-                  .webform__files-info
-                     p.webform__files-manual Нажмите, чтобы загрузить файл#[span , либо перетащите сюда]
-                     p.webform__files-description DOC, PDF или TXT до 10 МБ
+                  input.webform__label-input(type="text" placeholder="Введите название рукописи" name="webform-manuscript" required)
+         +downloadList('Ваша рукопись', 'Публичная оферта')
          .webform__controls
             .agree
                label.agree__label
-                  input(type="checkbox" name="form-agree" required)
+                  input(type="checkbox" name="webform-agree" required)
                   span.agree__checkbox
                   span.agree__text Ознакомлен с #[a(href="#") редакционной политикой]
-         button.webform__submit.button
-               span Отправить
+               span.agree__error Обязательное поле
+         +button('Отправить', 'webform__button', '', false)

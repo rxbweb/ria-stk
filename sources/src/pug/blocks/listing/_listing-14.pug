@@ -1,12 +1,14 @@
+include ../../mixins/_mixins
+
 -
    const listings14 = [
       {
          title: 'Реклама в журналах',
-         src: 'images/listing/listing-materials-05.jpg'
+         img: 'images/listing/listing-11.jpg'
       },
       {
          title: 'Реклама на сайте',
-         src: 'images/listing/listing-materials-06.jpg'
+         img: 'images/listing/listing-12.jpg'
       }
    ]
 
@@ -17,4 +19,4 @@
             a.listing__box(href="#")
                h3.listing__name=listing.title
                .listing__img
-                  img(src=listing.src, alt="картинка" width="350" height="222")
+                  +picture(listing.img, false, "картинка", 350, 222)

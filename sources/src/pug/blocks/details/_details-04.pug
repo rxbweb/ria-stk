@@ -98,7 +98,5 @@ section.section.section--details
                                     each tag in detail.tags
                                        .details__list-tags.tags
                                           .tags__button= tag
-                                 .details__list-button.button.button--outline
-                                    span Подробнее
-                                    i.icon.icon-arrow-small
+                                 +button('Подробнее', 'button--outline details__list-button', 'icon-arrow-small', false, '', true)
                   include ../pagination/_pagination

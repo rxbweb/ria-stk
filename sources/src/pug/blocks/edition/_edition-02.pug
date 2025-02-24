@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 -
    const boardEdition02 = [
       {
@@ -54,6 +56,6 @@ section.section
                                           p.board__name=board.name
                                           p.board__text=board.text
                      .edition__manage
-                        a.button.button.button--icon(href="#")
-                           span Подробнее
-                           i.icon.icon-arrow-right
+                        +button('Подробнее', 'button--icon', 'icon-arrow-right')
+               .edition__controls
+                  +button('Подробнее', 'button--icon', 'icon-arrow-right')
