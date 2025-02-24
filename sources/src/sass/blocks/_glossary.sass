@@ -1,0 +1,21 @@
+.glossary
+   &__list
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      gap: 100px var(--gap)
+   &__item
+      @include margin-bottom(30px)
+   &__letter
+      @extend .title
+      @extend .title--fourth
+      @extend .title--red
+   &__listing
+      color: var(--black)
+      @include margin-bottom(15px)
+      &-item
+         padding-bottom: 5px
+         border-bottom: 1px solid #CDCDCD
+      &-theme
+         font-size: 18px
+      &-info
+         display: none

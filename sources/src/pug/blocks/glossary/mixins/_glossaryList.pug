@@ -1,0 +1,15 @@
+include ../../../mixins/_mixins
+
+mixin glossaryList(list)
+   ul.glossary__list
+      each item in list
+         li.glossary__item
+            if item.letter
+               p.glossary__letter= item.letter
+            ul.glossary__listing
+               each listing in item.listing
+                  li.glossary__listing-item
+                     p.glossary__listing-theme= listing.theme.title
+                     .glossary__listing-info
+                        p.glossary__listing-text Сохранность продукции в условиях воздействия климатических или других неблагоприятных факторов при ее использовании, транспортировке или хранении.
+                        +button('Статьи с этим термином', 'button--outline', 'icon-arrow-right')

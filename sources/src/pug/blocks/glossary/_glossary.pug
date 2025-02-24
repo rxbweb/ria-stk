@@ -1,0 +1,17 @@
+include data/_glossaryData
+include mixins/_glossaryList
+
+section.section.section--glossary
+   .section__wrapper.container
+      .section__header.section__header--margin
+         .section__header-row
+            h1.section__header-heading Глоссарий
+            .section__header-search.search
+               button.search__button
+                  svg(width="26" height="26")
+                     use(href='images/sprites/main.stack.svg#svg-icon-loop')
+               input.search__input(type="text" placeholder="Поиск по терминам")
+      .section__content
+         .glossary
+            .glossary__inner
+               +glossaryList(glossaryList)
