@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 mixin controls(activeIndex)
    -
       const controls = [
@@ -7,15 +9,15 @@ mixin controls(activeIndex)
          },
          { 
             title: 'Электронные журналы',
-            href: 'account-ticket-01.html'
+            href: 'account-ticket-02.html'
          },
          { 
             title: 'Статьи / Подборки',
-            href: 'account-favorite.html'
+            href: 'account-favorites.html'
          },
          { 
             title: 'Книги',
-            href: 'account-favorite.html'
+            href: 'account-favorites.html'
          },
          { 
             title: 'Мероприятия'
@@ -30,7 +32,7 @@ mixin controls(activeIndex)
          },
          { 
             title: 'Избранное',
-            href: 'account-favorite.html'
+            href: 'account-favorites.html'
          },
          { 
             title: 'Настройки профиля',
@@ -48,10 +50,13 @@ mixin controls(activeIndex)
       .controls__main
          .controls__list
             each control, index in controls
-               a.controls__btn(
-                  href= control.href
-                  class=(activeIndex === index ? 'is-active' : '')
-               )
-                  svg
-                     use(href=`images/sprites/main.stack.svg#svg-controls-${(index + 1).toString().padStart(2, '0')}`)
-                  span= control.title
+               if activeIndex === index
+                  span.controls__btn.is-active
+                     svg(width="32" height="32")
+                        use(href=`images/sprites/main.stack.svg#svg-controls-${(index + 1).toString().padStart(2, '0')}`)
+                     span= control.title
+               else
+                  a.controls__btn(href= control.href)
+                     svg(width="32" height="32")
+                        use(href=`images/sprites/main.stack.svg#svg-controls-${(index + 1).toString().padStart(2, '0')}`)
+                     span= control.title
