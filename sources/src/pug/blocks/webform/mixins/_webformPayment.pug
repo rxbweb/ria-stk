@@ -1,0 +1,14 @@
+include ../../../mixins/_mixins
+
+mixin webformPayment()
+   .webform__options
+      .webform__options-main
+         h3.webform__options-title Способы оплаты
+         ul.webform__options-list
+            li.webform__options-item
+               a.webform__options-method.webform__options-method--payment.is-active(href="#")
+                  .webform__options-icon
+                     +svg('icon-doc', '', 28, 28)
+                  .webform__options-info
+                     p Оплата по счету
+      +button-icon('link', 'Перейти к оплате', 'webform__options-button')
