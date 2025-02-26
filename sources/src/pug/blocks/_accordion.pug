@@ -1,3 +1,56 @@
+include ../mixins/_mixins
+
+mixin accordionInfoList(list)
+   ul.accordion__info-list
+      each item in list
+         li
+            a.accordion__info-button(href="#")
+               span= item
+               span.accordion__info-button-icon
+                  +svg('icon-arrow-right', 'svg-icon-arrow-right', '14', '14')
+
+mixin accordionMagazines()
+   .accordion__box
+      ul.accordion__magazines
+         li.accordion__magazines-item
+            .accordion__magazines-img
+               +picture("images/accordion/accordion-magazine-01.jpg", false, "Cтандарты и качество", 220, 220)
+            .accordion__magazines-info
+               h4.accordion__magazines-title Cтандарты и качество
+         li.accordion__magazines-item
+            .accordion__magazines-img
+               +picture("images/accordion/accordion-magazine-02.jpg", false, "Контроль и качество продукции", 220, 220)
+            .accordion__magazines-info
+               h4.accordion__magazines-title Контроль и качество продукции
+         li.accordion__magazines-item
+            .accordion__magazines-img
+               +picture("images/accordion/accordion-magazine-03.jpg", false, "Business Excellence", 220, 220)
+            .accordion__magazines-info
+               h4.accordion__magazines-title Business Excellence
+
+mixin accordionItem(data= 'accordion-01', title = 'Название', badge = 'images/badges/badge-04.svg', badgeWidth = '24', badgeHeight = '24')
+   li.accordion__item
+      a.accordion__button(href="#" data-accordion=data)
+         .accordion__button-name
+            .badge
+               img(src=badge, alt="иконка" width=badgeWidth height=badgeHeight)
+            h3.accordion__button-title= title
+         .accordion__button-plus
+            img(src="images/icons/plus.svg", alt="раскрыть информацию" width="36" height="36")
+      .accordion__wrapper
+         .accordion__content
+            +accordionMagazines()
+            .accordion__info
+               .accordion__info-col
+                  a.accordion__info-tag(href="#") Полезное
+                  +accordionInfoList(['Новости', 'Статьи', 'Тематические подборки'])
+               .accordion__info-col
+                  a.accordion__info-tag(href="#") Мероприятия
+                  +accordionInfoList(['Стандартизатор года — 2024', 'Аккредитация. Компетентность', 'ИННОПРОМ'])
+               .accordion__info-col
+                  a.accordion__info-tag(href="#") Услуги
+                  +accordionInfoList(['Реклама и продвижение', 'Спецвыпуски на заказ', 'Редакционно-издательские услуги', 'Организация мероприятий', 'Ярмарка вакансий'])
+
 section.section.section--border.section--accordion
    .section__wrapper.container
       .section__header
@@ -16,334 +69,7 @@ section.section.section--border.section--accordion
                   .accordion__right
                      .info__accordion
                         ul.accordion__list
-                           li.accordion__item
-                              a.accordion__button(href="#" data-accordion="accordion-01")
-                                 .accordion__button-name
-                                    .badge
-                                       img(src="images/badges/badge-04.svg", alt="иконка" width="24" height="24")
-                                    h3.accordion__button-title Техническое регулирование
-                                 .accordion__button-plus
-                                    img(src="images/icons/plus.svg", alt="раскрыть информацию" width="36" height="36")
-                              .accordion__wrapper
-                                 .accordion__content
-                                    .accordion__box
-                                       ul.accordion__magazines
-                                          li.accordion__magazines-item
-                                             .accordion__magazines-img
-                                                img(src="images/accordion/accordion-magazine-01.jpg", alt="Cтандарты и качество")
-                                             .accordion__magazines-info
-                                                h4.accordion__magazines-title Cтандарты и качество
-                                          li.accordion__magazines-item
-                                             .accordion__magazines-img
-                                                img(src="images/accordion/accordion-magazine-02.jpg", alt="Контроль и качество продукции")
-                                             .accordion__magazines-info
-                                                h4.accordion__magazines-title Контроль и качество продукции
-                                          li.accordion__magazines-item
-                                             .accordion__magazines-img
-                                                img(src="images/accordion/accordion-magazine-03.jpg", alt="Business Excellence")
-                                             .accordion__magazines-info
-                                                h4.accordion__magazines-title Business Excellence
-                                    
-                                    .accordion__info
-                                       .accordion__info-col
-                                          a.accordion__info-tag(href="#") Полезное
-                                          ul.accordion__info-list
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Новости
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#") 
-                                                   span Статьи
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Тематические подборки
-                                                   i.icon.icon-arrow-small 
-                                       .accordion__info-col
-                                          a.accordion__info-tag(href="#") Мероприятия
-                                          ul.accordion__info-list
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Стандартизатор года — 2024
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Аккредитация. Компетентность
-                                                   i.icon.icon-arrow-small 
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span ИННОПРОМ
-                                                   i.icon.icon-arrow-small 
-                                       .accordion__info-col
-                                          a.accordion__info-tag(href="#") Услуги
-                                          ul.accordion__info-list
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Реклама и продвижение
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Спецвыпуски на заказ
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Редакционно-издательские услуги
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Организация мероприятий
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Ярмарка вакансий
-                                                   i.icon.icon-arrow-small
-                           
-                           li.accordion__item
-                              a.accordion__button(href="#" data-accordion="accordion-02")
-                                 .accordion__button-name
-                                    .badge
-                                       img(src="images/badges/badge-05.svg", alt="иконка" width="24" height="24")
-                                    h3.accordion__button-title Стандартизация
-                                 .accordion__button-plus
-                                    img(src="images/icons/plus.svg", alt="раскрыть информацию" width="36" height="36")
-                              .accordion__wrapper
-                                 .accordion__content
-                                    .accordion__box
-                                       ul.accordion__magazines
-                                          li.accordion__magazines-item
-                                             .accordion__magazines-img
-                                                img(src="images/accordion/accordion-magazine-01.jpg", alt="Cтандарты и качество")
-                                             .accordion__magazines-info
-                                                h4.accordion__magazines-title Cтандарты и качество
-                                          li.accordion__magazines-item
-                                             .accordion__magazines-img
-                                                img(src="images/accordion/accordion-magazine-02.jpg", alt="Контроль и качество продукции")
-                                             .accordion__magazines-info
-                                                h4.accordion__magazines-title Контроль и качество продукции
-                                          li.accordion__magazines-item
-                                             .accordion__magazines-img
-                                                img(src="images/accordion/accordion-magazine-03.jpg", alt="Business Excellence")
-                                             .accordion__magazines-info
-                                                h4.accordion__magazines-title Business Excellence
-                                    
-                                    .accordion__info
-                                       .accordion__info-col
-                                          a.accordion__info-tag(href="#") Полезное
-                                          ul.accordion__info-list
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Новости
-                                                   i.icon.icon-arrow-small 
-                                             li
-                                                a.accordion__info-button(href="#") 
-                                                   span Статьи
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Тематические подборки
-                                                   i.icon.icon-arrow-small 
-                                       .accordion__info-col
-                                          a.accordion__info-tag(href="#") Мероприятия
-                                          ul.accordion__info-list
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Стандартизатор года — 2024
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Аккредитация. Компетентность
-                                                   i.icon.icon-arrow-small 
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span ИННОПРОМ
-                                                   i.icon.icon-arrow-small 
-                                       .accordion__info-col
-                                          a.accordion__info-tag(href="#") Услуги
-                                          ul.accordion__info-list
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Реклама и продвижение
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Спецвыпуски на заказ
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Редакционно-издательские услуги
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Организация мероприятий
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Ярмарка вакансий
-                                                   i.icon.icon-arrow-small
-
-                           li.accordion__item
-                              a.accordion__button(href="#" data-accordion="accordion-03")
-                                 .accordion__button-name
-                                    .badge
-                                       img(src="images/badges/badge-06.svg", alt="иконка" width="21" height="21")
-                                    h3.accordion__button-title Управление качеством
-                                 .accordion__button-plus
-                                    img(src="images/icons/plus.svg", alt="раскрыть информацию" width="36" height="36")
-                              .accordion__wrapper
-                                 .accordion__content
-                                    .accordion__box
-                                       ul.accordion__magazines
-                                          li.accordion__magazines-item
-                                             .accordion__magazines-img
-                                                img(src="images/accordion/accordion-magazine-01.jpg", alt="Cтандарты и качество")
-                                             .accordion__magazines-info
-                                                h4.accordion__magazines-title Cтандарты и качество
-                                          li.accordion__magazines-item
-                                             .accordion__magazines-img
-                                                img(src="images/accordion/accordion-magazine-02.jpg", alt="Контроль и качество продукции")
-                                             .accordion__magazines-info
-                                                h4.accordion__magazines-title Контроль и качество продукции
-                                          li.accordion__magazines-item
-                                             .accordion__magazines-img
-                                                img(src="images/accordion/accordion-magazine-03.jpg", alt="Business Excellence")
-                                             .accordion__magazines-info
-                                                h4.accordion__magazines-title Business Excellence
-                                    
-                                    .accordion__info
-                                       .accordion__info-col
-                                          a.accordion__info-tag(href="#") Полезное
-                                          ul.accordion__info-list
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Новости
-                                                   i.icon.icon-arrow-small 
-                                             li
-                                                a.accordion__info-button(href="#") 
-                                                   span Статьи
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Тематические подборки
-                                                   i.icon.icon-arrow-small 
-                                       .accordion__info-col
-                                          a.accordion__info-tag(href="#") Мероприятия
-                                          ul.accordion__info-list
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Стандартизатор года — 2024
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Аккредитация. Компетентность
-                                                   i.icon.icon-arrow-small 
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span ИННОПРОМ
-                                                   i.icon.icon-arrow-small 
-                                       .accordion__info-col
-                                          a.accordion__info-tag(href="#") Услуги
-                                          ul.accordion__info-list
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Реклама и продвижение
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Спецвыпуски на заказ
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Редакционно-издательские услуги
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Организация мероприятий
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Ярмарка вакансий
-                                                   i.icon.icon-arrow-small
-
-                           li.accordion__item
-                              a.accordion__button(href="#" data-accordion="accordion-04")
-                                 .accordion__button-name
-                                    .badge
-                                       img(src="images/badges/badge-07.svg", alt="иконка" width="26" height="26")
-                                    h3.accordion__button-title Метрология
-                                 .accordion__button-plus
-                                    img(src="images/icons/plus.svg", alt="раскрыть информацию" width="36" height="36")
-                              .accordion__wrapper
-                                 .accordion__content
-                                    .accordion__box
-                                       ul.accordion__magazines
-                                          li.accordion__magazines-item
-                                             .accordion__magazines-img
-                                                img(src="images/accordion/accordion-magazine-01.jpg", alt="Cтандарты и качество")
-                                             .accordion__magazines-info
-                                                h4.accordion__magazines-title Cтандарты и качество
-                                          li.accordion__magazines-item
-                                             .accordion__magazines-img
-                                                img(src="images/accordion/accordion-magazine-02.jpg", alt="Контроль и качество продукции")
-                                             .accordion__magazines-info
-                                                h4.accordion__magazines-title Контроль и качество продукции
-                                          li.accordion__magazines-item
-                                             .accordion__magazines-img
-                                                img(src="images/accordion/accordion-magazine-03.jpg", alt="Business Excellence")
-                                             .accordion__magazines-info
-                                                h4.accordion__magazines-title Business Excellence
-                                    
-                                    .accordion__info
-                                       .accordion__info-col
-                                          a.accordion__info-tag(href="#") Полезное
-                                          ul.accordion__info-list
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Новости
-                                                   i.icon.icon-arrow-small 
-                                             li
-                                                a.accordion__info-button(href="#") 
-                                                   span Статьи
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Тематические подборки
-                                                   i.icon.icon-arrow-small 
-                                       .accordion__info-col
-                                          a.accordion__info-tag(href="#") Мероприятия
-                                          ul.accordion__info-list
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Стандартизатор года — 2024
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Аккредитация. Компетентность
-                                                   i.icon.icon-arrow-small 
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span ИННОПРОМ
-                                                   i.icon.icon-arrow-small 
-                                       .accordion__info-col
-                                          a.accordion__info-tag(href="#") Услуги
-                                          ul.accordion__info-list
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Реклама и продвижение
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Спецвыпуски на заказ
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Редакционно-издательские услуги
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Организация мероприятий
-                                                   i.icon.icon-arrow-small
-                                             li
-                                                a.accordion__info-button(href="#")
-                                                   span Ярмарка вакансий
-                                                   i.icon.icon-arrow-small
+                           +accordionItem('accordion-01', 'Техническое регулирование', 'images/badges/badge-04.svg', '24', '24')
+                           +accordionItem('accordion-02', 'Стандартизация', 'images/badges/badge-05.svg', '24', '24')
+                           +accordionItem('accordion-03', 'Управление качеством', 'images/badges/badge-06.svg', '21', '21')
+                           +accordionItem('accordion-04', 'Метрология', 'images/badges/badge-07.svg', '26', '26')
