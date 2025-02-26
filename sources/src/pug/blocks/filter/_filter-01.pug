@@ -8,7 +8,7 @@ include ../../mixins/_mixins
                p.filter__name Город
             .filter__content
                .search
-                  button.search__button
+                  button.search__button(aria-label="кнопка поиска")
                      svg(width="26" height="26")
                         use(href='images/sprites/main.stack.svg#svg-icon-loop')
                   input.search__input(type="text" placeholder="Искать....")

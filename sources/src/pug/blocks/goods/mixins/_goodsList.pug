@@ -19,9 +19,9 @@ mixin goodsList(items)
                      .goods__table-img
                         img(src=item.img, alt=item.name width="50" height="68")
                   else
-                     .goods__table-img.goods__table-img--empty
+                     .goods__table-img
                         svg(width="52" height="52")
-                           use(href="images/sprites/main.stack.svg#svg-people")
+                           use(href="images/sprites/main.stack.svg#svg-icon-users")
                p.goods__table-name!= item.name
             .goods__table-col
                p.goods__table-heading Цена
@@ -39,9 +39,9 @@ mixin goodsList(items)
                   p.goods__table-count #{item.quantity}
                else if item.controls
                   .goods__table-controls
-                     button.goods__table-controls-button -
-                     .goods__table-controls-count #{item.controls}
-                     button.goods__table-controls-button +
+                     button.goods__table-controls-button(aria-label="уменьшить количество этого продукта") -
+                     .goods__table-controls-count(aria-label="количество этого продукта") #{item.controls}
+                     button.goods__table-controls-button(aria-label="увеличить количество этого продукта") +
                else
                   p.goods__table-count -
             .goods__table-col

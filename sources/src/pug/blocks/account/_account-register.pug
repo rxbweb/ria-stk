@@ -12,11 +12,11 @@ section.section.section--account
                         .webform__body
                            .webform__top
                               .webform__accounts
-                                 a.webform__accounts-btn(href="#")
+                                 a.webform__accounts-btn(href="#" aria-label="vkontakte")
                                     img(src="images/icons/vk.svg", alt="vk" width="39" height="23")
-                                 a.webform__accounts-btn(href="#")
+                                 a.webform__accounts-btn(href="#" aria-label="yandex")
                                     img(src="images/icons/yandex.svg", alt="yandex" width="40" height="40")
-                                 a.webform__accounts-btn(href="#")
+                                 a.webform__accounts-btn(href="#" aria-label="gmail")
                                     img(src="images/icons/gmail.svg", alt="gmail" width="34" height="36")
                               p.webform__remark
                                  span или через email
@@ -61,4 +61,4 @@ section.section.section--account
                         .webform__bottom
                            .webform__manage
                               span Уже есть аккаунт?
-                              +button('Войти', 'button--outline', 'icon-arrow-right')
+                              +button-outline('link', 'Войти')

@@ -1,3 +1,15 @@
+-
+   const documents = [
+      {
+         title: 'Редакционная политика',
+         label: 'Скачать редакционную политику, размер 1.0 MB',
+      },
+      {
+         title: 'Публичная офферта',
+         label: 'Скачать публичную оферту, размер 1.0 MB',
+      },
+   ]
+
 section.section.section--documents
    .section__wrapper
       .section__header
@@ -7,12 +19,12 @@ section.section.section--documents
          .documents
             .documents__inner
                ul.documents__list
-                  each document in ['Редакционная политика', 'Публичная офферта']
+                  each document in documents
                      li
-                        a.documents__download(href="#" download)
+                        a.documents__download(href="#" download aria-label=document.label)
                            .documents__icon
                               svg(width="26" height="26")
-                                 use(href='images/sprites/main.stack.svg#svg-doc')
+                                 use(href='images/sprites/main.stack.svg#svg-icon-doc')
                            .documents__info
-                              p.documents__title= document
+                              p.documents__title= document.title
                               p.documents__size 1.0 MB
