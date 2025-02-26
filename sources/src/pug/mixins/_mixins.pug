@@ -8,9 +8,43 @@ mixin breadcrumbs(items, extraClass)
                else
                   a(href=item.href)= item.title
 
-mixin button(text = 'Кнопка', extraClass = '', iconClass = '', isLink = true, href = '#', isDiv = false)
+mixin button-icon(type = 'link', text = 'Кнопка', className = '', iconClass = 'icon-arrow-right', iconWidth = '17', iconHeight = '17')
+   if type === 'button'
+      button.button(class=className)
+         if text
+            span= text
+         if iconClass
+            span.button__icon
+               svg(width=iconWidth height=iconHeight)
+                  use(xlink:href=`images/sprites/main.stack.svg#svg-${iconClass}`)
+   else if type === 'button-disabled'
+      button.button(class=className disabled)
+         if text
+            span= text
+         if iconClass
+            span.button__icon
+               svg(width=iconWidth height=iconHeight)
+                  use(xlink:href=`images/sprites/main.stack.svg#svg-${iconClass}`)
+   else if type === 'div'
+      .button(class=className)
+         if text
+            span= text
+         if iconClass
+            span.button__icon
+               svg(width=iconWidth height=iconHeight)
+                  use(xlink:href=`images/sprites/main.stack.svg#svg-${iconClass}`)
+   else
+      a.button(class=className href="#")
+         if text
+            span= text
+         if iconClass
+            span.button__icon
+               svg(width=iconWidth height=iconHeight)
+                  use(xlink:href=`images/sprites/main.stack.svg#svg-${iconClass}`)
+
+mixin button(text = 'Кнопка', className = '', iconClass = '', isLink = true, href = '#', isDiv = false)
    if isLink
-      a.button(class=extraClass href=href)
+      a.button(class=className href=href)
          if text
             span= text
          if iconClass
@@ -18,7 +52,7 @@ mixin button(text = 'Кнопка', extraClass = '', iconClass = '', isLink = tr
                svg(width="22" height="22")
                   use(xlink:href=`images/sprites/main.stack.svg#svg-${iconClass}`)
    else if isDiv
-      div.button(class=extraClass)
+      div.button(class=className)
          if text
             span= text
          if iconClass
@@ -26,12 +60,49 @@ mixin button(text = 'Кнопка', extraClass = '', iconClass = '', isLink = tr
                svg(width="22" height="22")
                   use(xlink:href=`images/sprites/main.stack.svg#svg-${iconClass}`)
    else
-      button.button(class=extraClass)
+      button.button(class=className)
          if text
             span= text
          if iconClass
             span.button__icon
                svg(width="22" height="22")
+                  use(xlink:href=`images/sprites/main.stack.svg#svg-${iconClass}`)
+
+mixin button-outline(type = 'link', text = 'Кнопка', className = '', iconClass = 'icon-arrow-right', iconWidth = '17', iconHeight = '17')
+   if type === 'button'
+      button.button.button--outline(class=className)
+         if text
+            span= text
+         if iconClass
+            span.button__icon
+               svg(width=iconWidth height=iconHeight)
+                  use(xlink:href=`images/sprites/main.stack.svg#svg-${iconClass}`)
+
+   else if type === 'div'
+      .button.button--outline(class=className)
+         if text
+            span= text
+         if iconClass
+            span.button__icon
+               svg(width=iconWidth height=iconHeight)
+                  use(xlink:href=`images/sprites/main.stack.svg#svg-${iconClass}`)
+
+   else if type === 'span'
+      span.button.button--outline(class=className)
+         if text
+            span= text
+         if iconClass
+            span.button__icon
+               svg(width=iconWidth height=iconHeight)
+                  use(xlink:href=`images/sprites/main.stack.svg#svg-${iconClass}`)
+
+   else
+      a.button.button--outline(class=className href='#')
+         if text
+            span= text
+         if iconClass
+            span.button__icon
+               svg(width=iconWidth height=iconHeight)
                   use(xlink:href=`images/sprites/main.stack.svg#svg-${iconClass}`)
 
 mixin picture(img, mob = false, title = 'картинка', width = 'auto', height = 'auto')
@@ -48,9 +119,9 @@ mixin picture(img, mob = false, title = 'картинка', width = 'auto', heig
 
 mixin swiperControls(className = '', prevClass = '', nextClass = '', paginationClass = '')
    .swiper-controls(class=className)
-      button.swiper-button-prev(class=prevClass)
-      .swiper-pagination(class=paginationClass)
-      button.swiper-button-next(class=nextClass)
+      button.swiper-button-prev(class=prevClass aria-label="Переключиться на предыдущий слайд")
+      .swiper-pagination(class=paginationClass aria-label="Пагинация слайдера")
+      button.swiper-button-next(class=nextClass aria-label="Переключиться на следующий слайд")
 
 mixin agree(title = 'Кнопка', className = '', name = '', required = false)
    .agree(class=className)
@@ -62,3 +133,14 @@ mixin agree(title = 'Кнопка', className = '', name = '', required = false)
          )
          span.agree__checkbox
          span.agree__text= title
+
+mixin svg(name, className = '', width = 26, height = 26)
+   svg(width=width height=height, class=className)
+      use(xlink:href=`images/sprites/main.stack.svg#svg-${name}`)
+
+mixin favorite-button(className = '', type = 'button', ariaLabel = 'добавить этот продукт в избранное')
+   if type === 'button'
+      button.favorite-button(class=className, aria-label=ariaLabel)
+         +svg('icon-heart', '', 32, 30)
+   else
+      a.favorite-button(class=className, href='#')
