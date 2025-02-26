@@ -180,10 +180,20 @@
       &-note
          color: #67686B
          font-size: 12px
+      &-question
+         width: 20px
+         height: 20px
+         display: inline-flex
+         justify-content: center
+         align-items: center
+         color: #999999
+         position: relative
+         &-text
+            display: none
    &__caption
       @extend .title
       @include fluidFontSize(20px, 24px, 360px, 1920px, 24px)
-      letter-spacing: -0.72px
+      letter-spacing: var(--letter-spacing)
    &__description
       text-align: center
       a
@@ -272,7 +282,10 @@
          border-radius: var(--border-radius)
          background: #F0F0F0
          overflow: hidden
-         font-size: 24px
+         svg
+            max-width: 70%
+            height: auto
+            fill: #000
       &-terms
          color: #727171
          font-size: 14px
@@ -407,7 +420,7 @@
          &-users
             @extend .title
             @include fluidFontSize(16px, 20px, 360px, 1920px, 16px)
-            letter-spacing: -0.6px
+            letter-spacing: var(--letter-spacing)
       &-settings
          display: flex
          justify-content: flex-end

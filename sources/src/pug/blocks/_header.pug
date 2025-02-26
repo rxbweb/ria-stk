@@ -7,7 +7,7 @@ header.header
                img.header__logo-vok(src="images/icons/vok.png", alt="вок" width="48" height="48")
             .header__manage
                .header__search.search
-                  button.search__button
+                  button.search__button(aria-label="кнопка поиска")
                      svg(width="26" height="26")
                         use(href='images/sprites/main.stack.svg#svg-icon-loop')
                   input.search__input(type="text" placeholder="Искать....")
@@ -57,7 +57,7 @@ header.header
                   svg(width="20" height="20")
                      use(href="images/sprites/main.stack.svg#svg-icon-user")
                   span Войти
-               a.header__toggle.button.button--icon(href="#")
+               a.header__toggle.button(href="#")
                   i.icon
                      span
          .header__bottom
@@ -66,7 +66,7 @@ header.header
                   li.header__nav-item
                      a.is-icon(href="#")
                         svg(width="26" height="26")
-                           use(href='images/sprites/main.stack.svg#svg-text')
+                           use(href='images/sprites/main.stack.svg#svg-icon-text')
                         span Подписка
                   li.header__nav-item
                      a(href="#") Журналы
@@ -84,8 +84,10 @@ header.header
                      a(href="#") О нас
                   li.header__nav-item
                      a(href="#") Контакты
-            button.header__burger
-               img(src="images/icons/burger.svg", alt="открыть меню" width="24" height="11")
+            button.header__burger(aria-label="открыть дополнительное меню")
+               span
+               span
+               span
          .header__box
             ul.header__box-nav
 
@@ -94,7 +96,7 @@ header.header
       .menu__container.container
          .menu__manage
             .menu__search.search
-               button.search__button
+               button.search__button(aria-label="кнопка поиска")
                   svg(width="26" height="26")
                      use(href='images/sprites/main.stack.svg#svg-icon-loop')
                input.search__input(type="text" placeholder="Искать....")
@@ -119,7 +121,7 @@ header.header
                li
                   a.is-icon(href="#")
                      svg(width="22" height="22")
-                        use(href='images/sprites/main.stack.svg#svg-text')
+                        use(href='images/sprites/main.stack.svg#svg-icon-text')
                      span Подписка
                li
                   a(href="#") Журналы

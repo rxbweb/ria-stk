@@ -56,21 +56,12 @@
       width: 40px
       height: 40px
       background:#fff
-      font-size: 16px
-      .icon
-         &-lock
-            font-size: 24px
-   &__like
-      @extend .btn
-      @extend .btn--like
-      position: absolute
-      top: 15px
-      right: 15px
-      z-index: var(--z-index)
-      &::after
-         font-size: 24px
-      &.is-active
-         @include icomoon('\e912', inherit, 24px)
+      cursor: default
+      &:hover,
+      &:focus,
+      &:active
+         background: #fff
+         color: var(--accent)
    &__img
       position: absolute
       inset: 0
@@ -103,7 +94,7 @@
       @extend .title
       @extend .title--sixth
       @include line-clamp(3)
-      letter-spacing: -0.6px
+      letter-spacing: var(--letter-spacing)
       line-height: 140%
    &__price
       @extend .title
@@ -122,7 +113,6 @@
          justify-content: center
    &__favorite
       @extend .btn
-      @extend .btn--like
       width: 52px
       height: 52px
       border: 1px solid var(--accent)
@@ -196,9 +186,6 @@
          width: 30px
          height: 30px
          font-size: 11px
-         .icon
-            &-lock
-               font-size: 11px
       &__table
          &-header
             gap: 15px
@@ -227,9 +214,6 @@
          width: 20px
          height: 20px
          font-size: 7px
-         .icon
-            &-lock
-               font-size: 9px
       &__table
          padding: 20px 15px
          &-section

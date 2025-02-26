@@ -39,7 +39,7 @@
       &-name
          @extend .title
          @extend .title--second
-         letter-spacing: -0.72px
+         letter-spacing: var(--letter-spacing)
          white-space: pre-line
       &-right
          display: flex
@@ -62,7 +62,7 @@
       @extend .title--sixth
       @extend .title--red
       line-height: 140%
-      letter-spacing: -0.6px
+      letter-spacing: var(--letter-spacing)
       display: inline-flex
       align-items: center
       padding: 10px 15px
@@ -86,7 +86,7 @@
       &-title
          @extend .title
          @include fluidFontSize(14px, 20px, 360px, 1920px, 16px)
-         letter-spacing: -0.6px
+         letter-spacing: var(--letter-spacing)
       &-text
          ul
             padding-left: 10px
@@ -129,7 +129,7 @@
       &-title
          @extend .title
          @extend .title--second
-         letter-spacing: -0.72px
+         letter-spacing: var(--letter-spacing)
    &__post
       padding: 25px
       border-radius: 15px

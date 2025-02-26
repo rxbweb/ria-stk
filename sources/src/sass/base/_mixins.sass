@@ -29,6 +29,10 @@
    @media (max-width: 575px)
       @content
 
+@mixin micro
+   @media (max-width: 400px)
+      @content
+
 @mixin font-face($font-name,$font-file)
    @font-face
       font-family: '#{$font-name}'
