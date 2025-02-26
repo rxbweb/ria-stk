@@ -79,7 +79,7 @@ section.section
                            li.books__item
                               .books__card
                                  .books__box
-                                    button.favorite-button
+                                    +favorite-button()
                                     .books__img
                                        +picture(book.img, false, book.title, 380, 380)
                                  .books__info
@@ -87,8 +87,8 @@ section.section
                                     .books__bottom
                                        p.books__price= book.price
                                        .books__manage
-                                          a.button.button--slim.button--icon(href="#")
+                                          a.button.button--slim(href="#")
                                              span.button__text-desktop Купить книгу
                                              span.button__text-mob В корзину
                                              i.icon.icon-cart
-                                          +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')
+                                          +button-outline('link', 'Купить в 1 клик')

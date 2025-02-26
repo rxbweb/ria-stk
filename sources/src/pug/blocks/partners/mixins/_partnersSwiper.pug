@@ -5,5 +5,5 @@ mixin partnersSwiper(partners)
       .swiper-wrapper
          each partner in partners
             .partners__slide.swiper-slide
-               img(src=partner.src, alt=partner.alt, width="169", height="120")
+               +picture(partner.img, false, partner.title, 169, 120)
       +swiperControls()

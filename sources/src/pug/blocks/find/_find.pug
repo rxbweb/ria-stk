@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 - 
    const findResults = [
       {
@@ -51,7 +53,7 @@
          ]
       },
       {
-         src: 'images/find/find-01.png',
+         img: 'images/find/find-01.png',
          type: 'Мероприятие',
          title: 'VII Всероссийская научно-практическая конференция «Построение системы менеджмента качества медицинской организации. Лучшие практики»',
          listing: [
@@ -60,7 +62,7 @@
          ]
       },
       {
-         src: 'images/find/find-02.png',
+         img: 'images/find/find-02.png',
          type: 'Книга',
          title: 'ISO 9001:2015. Международный стандарт на системы менеджмента качества. Наблюдения, интерпретация, анализ, критика, советы: в 2 т.',
          listing: [
@@ -83,8 +85,8 @@ section.section.section--find
                      li.find__item
                         a.find__link(href="#")
                            .find__img
-                              if item.src
-                                 img(src=item.src, alt=item.title)
+                              if item.img
+                                 +picture(item.img, false, item.title)
                               else
                                  img.find__img-icon(src="images/icons/photo.svg" alt="нет картинки" width="96" height="96")
                            .find__info

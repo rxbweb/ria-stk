@@ -140,12 +140,12 @@ section.section.section--account
                                                                   span.webform__label-field
                                                                      input.webform__label-input(type="text" placeholder="Почтовый адрес")
                                                             .webform__footer
-                                                               +button('Активация аккаунта', 'button--icon', 'icon-arrow-right', false)
+                                                               +button-icon('button', 'Активация аккаунта')
 
                                           .webform__area
                                              button.webform__toggle.is-active
                                                 h2.webform__name Личные данные
-                                                .webform__close
+                                                .webform__close(aria-label="свернуть эту форму")
                                              .webform__wrapper
                                                 .webform__content
                                                    .webform__section
@@ -208,7 +208,7 @@ section.section.section--account
                                           .webform__area
                                              button.webform__toggle.is-active
                                                 h2.webform__name Информация о работе
-                                                .webform__close
+                                                .webform__close(aria-label="свернуть эту форму")
                                              .webform__wrapper
                                                 .webform__content
                                                    .webform__section
@@ -282,7 +282,7 @@ section.section.section--account
                                           .webform__area
                                              button.webform__toggle.is-active
                                                 h2.webform__name Сменить пароль
-                                                .webform__close
+                                                .webform__close(aria-label="свернуть эту форму")
                                              .webform__wrapper
                                                 .webform__content
                                                    .webform__section
@@ -448,8 +448,8 @@ section.section.section--account
                                                          img(src="images/badges/badge-24.svg", alt="иконка" width="31" height="26")
                                                       .webform__access-manage-box
                                                          p.webform__access-manage-users 6 из 10 пользователей
-                                                         +button('Докупить доступы', 'button--outline', 'icon-arrow-right')
-                                                   +button('Новый пользователь', 'button--icon', 'icon-plus')
+                                                         +button-outline('link', 'Докупить доступы')
+                                                   +button-icon('button', 'Новый пользователь', '', 'icon-plus')
 
                            li.accordion__item
                               a.accordion__button(href="#")

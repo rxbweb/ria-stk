@@ -1,8 +1,11 @@
+include ../../../mixins/_mixins
+
 mixin goodsTotal(total, isDisabled)
    .goods__table-bottom
       .goods__table-total
          span.goods__table-total-title Итоговая цена
          span #{total} руб.
-      button.button.button--icon(disabled=isDisabled)
-         span Оформить заказ
-         i.icon.icon-arrow-right
+      if isDisabled === true
+         +button-icon('button-disabled', 'Оформить заказ')
+      else
+         +button-icon('button', 'Оформить заказ')

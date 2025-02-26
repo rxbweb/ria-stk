@@ -1,3 +1,5 @@
+include ../mixins/_mixins
+
 section.section.section--status
    .section__wrapper.container
       .section__content
@@ -9,10 +11,6 @@ section.section.section--status
                   .status__info
                      h2.status__title Хотите подтвердить свой экспертный статус?
                      p.status__text Станьте автором журналов РИА «Стандарты и качество». Ждем как опытных, так и начинающих специалистов. Важна польза и подача материала. Приоритет отдается статьям практической направленности.
-                     a.button.button--icon(href="#")
-                        span Подробнее
-                        span.button__icon
-                           svg(width="5" height="9")
-                              use(href='images/sprites/main.stack.svg#svg-arrow-small-right')
+                     +button-icon('link', 'Подробнее')
                   .status__img
                      +picture("images/status/status-img.png", false, "картинка", 570, 500)

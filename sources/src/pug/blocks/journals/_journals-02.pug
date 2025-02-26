@@ -3,15 +3,15 @@ include ../../mixins/_mixins
 -
    const journals02 = [
       { 
-         src: 'images/journals/journals-01.png', 
+         img: 'images/journals/journals-01.png', 
          title: 'стандарты и качество' 
       },
       { 
-         src: 'images/journals/journals-06.png', 
+         img: 'images/journals/journals-06.png', 
          title: 'Методы менеджмента качества' 
       },
       { 
-         src: 'images/journals/journals-05.png', 
+         img: 'images/journals/journals-05.png', 
          title: 'Business Excellence' 
       }
    ]
@@ -21,7 +21,7 @@ section.section
       .section__header.visually-hidden
          .section__header-row
             h2.section__header-title Журналы
-            +button('Подписаться на журналы', 'button--icon section__header-button', 'icon-arrow-small')
+            +button-icon('link', 'Подписаться на журналы', 'section__header-button')
       .section__content
          .journals
             .journals__inner
@@ -30,7 +30,7 @@ section.section
                      li.journals__item
                         .journals__top
                            .journals__img
-                              img(src=journal.src, width="240", height="340")
+                              +picture(journal.img, false, journal.title, 240, 340)
                         .journals__info
                            h3.journals__name= journal.title
-                           +button('Подробнее', 'button--outline', 'icon-arrow-small')
+                           +button-outline('link', 'Подробнее')

@@ -25,6 +25,6 @@ section.section.section--history
                                     p.history__date #{year}
                                     p.history__text #{text}
                                  .history__img
-                                    img(src="images/history/history-01.jpg", alt="1993" width="940" height="530")
+                                    +picture("images/history/history-01.jpg", false, "1993", 940, 530)
                      .history__controls
                         +swiperControls()

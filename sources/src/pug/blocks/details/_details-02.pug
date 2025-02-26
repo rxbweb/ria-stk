@@ -42,6 +42,6 @@ section.section.section--details
                                  h3.details__list-title #{detail.title}
                                  .details__list-text
                                     p #{detail.text}
-                                 +button('Подробнее', 'button--outline details__list-button', 'icon-arrow-small', false, '', true)
+                                 +button-outline('link', 'Подробнее', 'details__list-button')
          .section__footer
-            +button('Посмотреть все мероприятия', 'button--icon section__footer-button', 'icon-arrow-small')
+            +button-icon('link', 'Посмотреть все мероприятия', 'section__footer-button')

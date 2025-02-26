@@ -5,7 +5,7 @@ section.section.section--details
          .section__header
             .section__header-row
                h2.section__header-title Мероприятия
-               +button('Посмотреть все мероприятия', 'button--icon section__header-button', 'icon-arrow-small')
+               +button-icon('link', 'Посмотреть все мероприятия', 'section__header-button')
          .section__content
             .details
                .details__inner
@@ -23,7 +23,7 @@ section.section.section--details
                               p.details__list-description #{'29 октября – '}
                                  |
                                  | 6 ноября 2024
-                              +button('Подробнее', 'button--outline details__list-button', 'icon-arrow-small', false, '', true)
+                              +button-outline('link', 'Подробнее', 'details__list-button')
                      li.details__list-item
                         a.details__list-box(href="#")
                            .details__list-img
@@ -37,7 +37,7 @@ section.section.section--details
                               p.details__list-description #{'14 октября – '}
                                  |
                                  | 21 октября 2024
-                              +button('Подробнее', 'button--outline details__list-button', 'icon-arrow-small', false, '', true)
+                              +button-outline('link', 'Подробнее', 'details__list-button')
                      li.details__list-item
                         a.details__list-box(href="#")
                            .details__list-img
@@ -49,7 +49,7 @@ section.section.section--details
                               .details__list-tags.tags
                                  .tags__button Тег мероприятия: например выставка
                               p.details__list-description 10 августа 2024
-                              +button('Подробнее', 'button--outline details__list-button', 'icon-arrow-small', false, '', true)
+                              +button-outline('link', 'Подробнее', 'details__list-button')
 
          .section__footer
-            +button('Посмотреть все мероприятия', 'button--icon section__footer-button', 'icon-arrow-small')
+            +button-icon('link', 'Посмотреть все мероприятия', 'section__footer-button')

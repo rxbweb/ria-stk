@@ -28,19 +28,19 @@ section.section
                .books__section
                   .books__header
                      h2.books__title Тематические подборки
-                     +button('Все подборки', 'button--icon', 'icon-arrow-right')
+                     +button-icon('link', 'Все подборки')
                   .books__content
                      ul.books__list
                         each book in books10
                            li.books__item
                               .books__card
                                  .books__box
-                                    button.favorite-button
+                                    +favorite-button()
                                     .books__img
                                        +picture(book.img, false, book.title, 380, 380)
                                  .books__info
                                     h3.books__name= book.title
                                     .books__bottom
                                        .books__manage
-                                          +button('Купить книгу', 'button--icon button--slim', 'icon-cart')
-                                          +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')
+                                          +button-icon('link', 'Купить книгу', 'button--slim', 'icon-cart')
+                                          +button-outline('link', 'Купить в 1 клик')

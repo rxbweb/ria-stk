@@ -3,27 +3,27 @@ include ../../mixins/_mixins
 -
    const journals01 = [
       { 
-         src: 'images/journals/journals-01.png', 
+         img: 'images/journals/journals-01.jpg', 
          title: 'стандарты и качество' 
       },
       { 
-         src: 'images/journals/journals-02.png', 
+         img: 'images/journals/journals-02.jpg', 
          title: 'Менеджмент качества' 
       },
       { 
-         src: 'images/journals/journals-03.png', 
+         img: 'images/journals/journals-03.jpg', 
          title: 'Контроль качества продукции' 
       },
       { 
-         src: 'images/journals/journals-04.png', 
+         img: 'images/journals/journals-04.jpg', 
          title: 'Мир измерений' 
       },
       { 
-         src: 'images/journals/journals-05.png', 
+         img: 'images/journals/journals-05.jpg', 
          title: 'Business Excellence' 
       },
       { 
-         src: 'images/journals/journals-06.png', 
+         img: 'images/journals/journals-06.jpg', 
          title: 'Методы менеджмента качества' 
       },
    ]
@@ -33,7 +33,7 @@ section.section
       .section__header
          .section__header-row
             h2.section__header-heading Журналы
-            +button('Подписаться на журналы', 'button--icon section__header-button', 'icon-arrow-small')
+            +button-icon('link', 'Подписаться на журналы', 'section__header-button')
       .section__content
          .journals
             .journals__inner
@@ -42,7 +42,7 @@ section.section
                      li.journals__item
                         .journals__top
                            .journals__img
-                              img(src=journal.src, alt=journal.title, width="240", height="340")
+                              +picture(journal.img, false, journal.title, 240, 340)
                         .journals__info
                            h3.journals__name #{journal.title}
-                           +button('Подробнее', 'button--outline', 'icon-arrow-small')
+                           +button-outline('link', 'Подробнее')

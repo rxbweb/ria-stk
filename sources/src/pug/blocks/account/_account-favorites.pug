@@ -151,7 +151,7 @@ section.section.section--account
                            a.account__tabs-btn(href="#" data-tab="tab5") Архивы
                            a.account__tabs-btn(href="#" data-tab="tab6") Подборки
                         .account__search.search
-                           button.search__button
+                           button.search__button(aria-label="кнопка поиска")
                               svg(width="26" height="26")
                                  use(href='images/sprites/main.stack.svg#svg-icon-loop')
                            input.search__input(type="text" placeholder="Искать в избранном")
@@ -178,14 +178,14 @@ section.section.section--account
                                              .books__item
                                                 .books__card
                                                    .books__box
-                                                      button.favorite-button
+                                                      +favorite-button()
                                                       .books__img
                                                          +picture(book.img, false, book.title, 380, 380)
                                                    .books__info
                                                       h3.books__name= book.title
                                                       .books__bottom
                                                          .books__manage
-                                                            +button('Читать статью', 'button--outline', 'icon-arrow-right')
+                                                            +button-outline('link', 'Читать статью')
                                  +swiperControls()
 
                            .account__col
@@ -198,7 +198,7 @@ section.section.section--account
                                              .books__item
                                                 .books__card
                                                    .books__box
-                                                      button.favorite-button
+                                                      +favorite-button()
                                                       .books__img
                                                          +picture(book.img, false, book.title, 380, 380)
                                                    .books__info
@@ -207,8 +207,8 @@ section.section.section--account
                                                       .books__bottom
                                                          p.books__price= book.price
                                                          .books__manage
-                                                            +button('В корзину', 'button--icon', 'icon-cart')
-                                                            +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')
+                                                            +button-icon('link', 'В корзину', '', 'icon-cart')
+                                                            +button-outline('link', 'Купить в 1 клик')
                                  +swiperControls()
 
                            .account__col
@@ -221,7 +221,7 @@ section.section.section--account
                                              .books__item
                                                 .books__card
                                                    .books__box
-                                                      button.favorite-button
+                                                      +favorite-button()
                                                       .books__img
                                                          +picture(book.img, false, book.title, 380, 380)
                                                    .books__info
@@ -229,8 +229,8 @@ section.section.section--account
                                                       .books__bottom
                                                          p.books__price= book.price
                                                          .books__manage
-                                                            +button('В корзину', 'button--icon', 'icon-cart')
-                                                            +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')
+                                                            +button-icon('link', 'В корзину', '', 'icon-cart')
+                                                            +button-outline('link', 'Купить в 1 клик')
                                  +swiperControls()
 
                            .account__col
@@ -243,7 +243,7 @@ section.section.section--account
                                              .books__item
                                                 .books__card
                                                    .books__box
-                                                      button.favorite-button
+                                                      +favorite-button()
                                                       .books__img
                                                          +picture(book.img, false, book.title, 380, 380)
                                                    .books__info
@@ -252,8 +252,8 @@ section.section.section--account
                                                       .books__bottom
                                                          p.books__price= book.price
                                                          .books__manage
-                                                            +button('В корзину', 'button--icon', 'icon-cart')
-                                                            +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')
+                                                            +button-icon('link', 'В корзину', '', 'icon-cart')
+                                                            +button-outline('link', 'Купить в 1 клик')
                                  +swiperControls()
 
                            .account__col
@@ -266,7 +266,7 @@ section.section.section--account
                                              .books__item
                                                 .books__card
                                                    .books__box
-                                                      button.favorite-button
+                                                      +favorite-button()
                                                       .books__img
                                                          +picture(book.img, false, book.title, 380, 380)
                                                    .books__info
@@ -274,8 +274,8 @@ section.section.section--account
                                                       .books__bottom
                                                          p.books__price= book.price
                                                          .books__manage
-                                                            +button('В корзину', 'button--icon', 'icon-cart')
-                                                            +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')
+                                                            +button-icon('link', 'В корзину', '', 'icon-cart')
+                                                            +button-outline('link', 'Купить в 1 клик')
                                  +swiperControls()
 
                         .account__section(data-tab="tab2")
@@ -288,14 +288,14 @@ section.section.section--account
                                           .books__item
                                              .books__card
                                                 .books__box
-                                                   button.favorite-button
+                                                   +favorite-button()
                                                    .books__img
                                                       +picture(book.img, false, book.title, 380, 380)
                                                 .books__info
                                                    h3.books__name= book.title
                                                    .books__bottom
                                                       .books__manage
-                                                         +button('Читать статью', 'button--outline', 'icon-arrow-right')
+                                                         +button-outline('link', 'Читать статью')
 
                         .account__section(data-tab="tab3")
                            .account__col
@@ -307,7 +307,7 @@ section.section.section--account
                                           .books__item
                                              .books__card
                                                 .books__box
-                                                   button.favorite-button
+                                                   +favorite-button()
                                                    .books__img
                                                       +picture(book.img, false, book.title, 380, 380)
                                                 .books__info
@@ -316,8 +316,8 @@ section.section.section--account
                                                    .books__bottom
                                                       p.books__price= book.price
                                                       .books__manage
-                                                         +button('В корзину', 'button--icon', 'icon-cart')
-                                                         +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')
+                                                         +button-icon('link', 'В корзину', '', 'icon-cart')
+                                                         +button-outline('link', 'Купить в 1 клик')
 
                         .account__section(data-tab="tab4")
                            .account__col
@@ -329,7 +329,7 @@ section.section.section--account
                                           .books__item
                                              .books__card
                                                 .books__box
-                                                   button.favorite-button
+                                                   +favorite-button()
                                                    .books__img
                                                       +picture(book.img, false, book.title, 380, 380)
                                                 .books__info
@@ -337,8 +337,8 @@ section.section.section--account
                                                    .books__bottom
                                                       p.books__price= book.price
                                                       .books__manage
-                                                         +button('В корзину', 'button--icon', 'icon-cart')
-                                                         +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')
+                                                         +button-icon('link', 'В корзину', '', 'icon-cart')
+                                                         +button-outline('link', 'Купить в 1 клик')
 
                         .account__section(data-tab="tab5")
                            .account__col
@@ -350,7 +350,7 @@ section.section.section--account
                                           .books__item
                                              .books__card
                                                 .books__box
-                                                   button.favorite-button
+                                                   +favorite-button()
                                                    .books__img
                                                       +picture(book.img, false, book.title, 380, 380)
                                                 .books__info
@@ -359,8 +359,8 @@ section.section.section--account
                                                    .books__bottom
                                                       p.books__price= book.price
                                                       .books__manage
-                                                         +button('В корзину', 'button--icon', 'icon-cart')
-                                                         +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')
+                                                         +button-icon('link', 'В корзину', '', 'icon-cart')
+                                                         +button-outline('link', 'Купить в 1 клик')
 
                         .account__section(data-tab="tab6")
                            .account__col
@@ -372,7 +372,7 @@ section.section.section--account
                                           .books__item
                                              .books__card
                                                 .books__box
-                                                   button.favorite-button
+                                                   +favorite-button()
                                                    .books__img
                                                       +picture(book.img, false, book.title, 380, 380)
                                                 .books__info
@@ -380,5 +380,5 @@ section.section.section--account
                                                    .books__bottom
                                                       p.books__price= book.price
                                                       .books__manage
-                                                         +button('В корзину', 'button--icon', 'icon-cart')
-                                                         +button('Купить в 1 клик', 'button--outline', 'icon-arrow-right')
+                                                         +button-icon('link', 'В корзину', '', 'icon-cart')
+                                                         +button-outline('link', 'Купить в 1 клик')

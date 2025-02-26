@@ -1,12 +1,13 @@
 include ../../mixins/_mixins
 include mixins/_webformLabel
 include mixins/_webformTextarea
+include mixins/_webformPayment
 
 mixin webformGoods01()
    .webform
       button.webform__toggle.is-active
          h2.webform__name Оформление заказа
-         .webform__close
+         .webform__close(aria-label="свернуть эту форму")
       .webform__wrapper
          .webform__content
             .webform__tabs.tabs-nav(data-tabs="webform-01")
@@ -35,7 +36,7 @@ mixin webformGoods01()
                               li.webform__options-item
                                  a.webform__options-method.is-active(href="#")
                                     img(src="images/webform/robokassa.svg", alt="robokassa" width="182" height="69")
-                        +button('Перейти к оплате', 'button--icon button--slim webform__options-button', 'icon-arrow-right', false)
+                        +button-icon('link', 'Перейти к оплате', 'button--slim webform__options-button')
 
                form.webform__form.tabs-item(action="#" data-tabs="tab2")
                   .webform__body
@@ -46,7 +47,7 @@ mixin webformGoods01()
                            span.webform__label-row
                               span.webform__label-title Карточка предприятия
                               a.webform__label-question(href="#")
-                                 i.icon.icon-question
+                                 +svg('icon-question', '', 20, 20)
                            span.webform__label-input.webform__label-file
                               input(type="file")
                               span.webform__label-file-choose Выбрать файл
@@ -71,14 +72,4 @@ mixin webformGoods01()
                            input(type="checkbox" name="form-agree" required)
                            span.agree__checkbox
                            span.agree__text Я согласен на #[a(href="#") обработку персональных данных]
-                     .webform__options
-                        .webform__options-main
-                           h3.webform__options-title Способы оплаты
-                           ul.webform__options-list
-                              li.webform__options-item
-                                 a.webform__options-method.webform__options-method--payment.is-active(href="#")
-                                    .webform__options-icon
-                                       i.icon.icon-doc
-                                    .webform__options-info
-                                       p Оплата по счету
-                        +button('Перейти к оплате', 'button--icon webform__options-button', 'icon-arrow-right', false)
+                     +webformPayment()

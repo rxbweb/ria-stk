@@ -43,14 +43,14 @@ article.section.section--article.section--padding-top-none
                         .article__shop-info
                            p Купить статью
                            p.article__shop-price 300 рублей
-                        +button('В корзину', 'button--icon article__shop-button', 'icon-cart')
+                        +button-icon('button', 'Новый пользователь', 'article__shop-button', 'icon-cart')
                      .article__shop-item
                         .article__shop-info
                            p Годовая подписка на журнал
                            p.article__shop-price 39 840 рублей
-                        +button('В корзину', 'button--icon article__shop-button', 'icon-cart')
+                        +button-icon('link', 'В корзину', 'article__shop-button', 'icon-cart')
                      .article__shop-item
-                        +button('Купить в 1 клик', 'button--outline', 'icon-arrow-small')
+                        +button-outline('link', 'Купить в 1 клик')
                   .article__img
                      +picture("images/article/article-01.jpg", "images/article/article-01-mob.jpg", "картинка", 1275, 400)
                   .article__box
@@ -211,4 +211,4 @@ article.section.section--article.section--padding-top-none
                               li полная картина происходящего в зоне вашего профессионального интереса;
                               li формирование корпоративной базы знаний;
                               li доступ к системе привилегий.
-                           +button('Подписаться', 'button--icon', 'icon-arrow-small')
+                           +button-outline('link', 'Подписаться')

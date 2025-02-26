@@ -18,7 +18,7 @@ mixin projectsSwiper(title, list, bottom)
                               .projects__img
                                  img(src=project.src, alt=project.title)
                                  .projects__panel
-                                    +button('Узнать больше', 'button--icon', 'icon-arrow-right')
+                                    +button-icon('link', 'Узнать больше')
                               .projects__info
                                  h3.projects__title #{project.title}
                      +swiperControls()
