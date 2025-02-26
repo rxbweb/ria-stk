@@ -37,7 +37,7 @@
           <div class="header__top"><a class="header__logo" href="/"><img class="header__logo-main" src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img class="header__logo-vok" src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
             <div class="header__manage">
               <div class="header__search search">
-                <button class="search__button">
+                <button class="search__button" aria-label="кнопка поиска">
                   <svg width="26" height="26">
                     <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
                   </svg>
@@ -78,7 +78,7 @@
               </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#">
                 <svg width="20" height="20">
                   <use href="images/sprites/main.stack.svg#svg-icon-user"></use>
-                </svg><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
+                </svg><span>Войти</span></a><a class="header__toggle button" href="#"><i class="icon"><span></span></i></a>
             </div>
           </div>
           <div class="header__bottom">
@@ -86,7 +86,7 @@
               <ul class="header__nav-list">
                 <li class="header__nav-item"><a class="is-icon" href="#">
                     <svg width="26" height="26">
-                      <use href="images/sprites/main.stack.svg#svg-text"></use>
+                      <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
                     </svg><span>Подписка</span></a></li>
                 <li class="header__nav-item"><a href="#">Журналы</a></li>
                 <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
@@ -98,7 +98,7 @@
                 <li class="header__nav-item"><a href="#">Контакты</a></li>
               </ul>
             </nav>
-            <button class="header__burger"><img src="images/icons/burger.svg" alt="открыть меню" width="24" height="11"></button>
+            <button class="header__burger" aria-label="открыть дополнительное меню"><span></span><span></span><span></span></button>
           </div>
           <div class="header__box">
             <ul class="header__box-nav"></ul>
@@ -111,7 +111,7 @@
         <div class="menu__container container">
           <div class="menu__manage">
             <div class="menu__search search">
-              <button class="search__button">
+              <button class="search__button" aria-label="кнопка поиска">
                 <svg width="26" height="26">
                   <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
                 </svg>
@@ -143,7 +143,7 @@
             <ul class="menu__nav-list">
               <li><a class="is-icon" href="#">
                   <svg width="22" height="22">
-                    <use href="images/sprites/main.stack.svg#svg-text"></use>
+                    <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
                   </svg><span>Подписка</span></a></li>
               <li><a href="#">Журналы</a></li>
               <li><a href="#">Спецвыпуски</a></li>
@@ -190,11 +190,11 @@
                       <li><span>Периодичность</span> : 12 выпусков в год</li>
                       <li><span>География присутствия</span> : Россия и страны ЕАЭС</li>
                     </ul>
-                    <div class="specs__manage"><a class="button button--icon button--wide" href="#"><span>Скачать медиа-кит</span><span class="button__icon">
-                                <svg width="22" height="22">
+                    <div class="specs__manage"><a class="button button--wide" href="#"><span>Скачать медиа-кит</span><span class="button__icon">
+                                <svg width="17" height="17">
                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                 </svg></span></a><a class="button button--outline" href="#"><span>Скачать прайс-лист</span><span class="button__icon">
-                                <svg width="22" height="22">
+                                <svg width="17" height="17">
                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                 </svg></span></a>
                     </div>
@@ -279,8 +279,8 @@
                           <p>Привлекает внимание читателей за счет графики. Может быть выполнена с использованием дополнительных полиграфических возможностей (более плотная бумага, выборочное лакирование, конверт, раскладные страницы и пр.).</p>
                         </div>
                         <div class="details__list-manage">
-                          <p class="details__list-price">От 79 500 руб.</p><a class="button button--icon" href="#"><span>Связаться</span><span class="button__icon">
-                                    <svg width="22" height="22">
+                          <p class="details__list-price">От 79 500 руб.</p><a class="button" href="#"><span>Связаться</span><span class="button__icon">
+                                    <svg width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </div>
@@ -300,8 +300,8 @@
                           <p>Позволяет представить вас/вашу компанию в качестве эксперта. Форматы: интервью, рекламная статья, обзор, экспертный материал.</p>
                         </div>
                         <div class="details__list-manage">
-                          <p class="details__list-price">От 135 100 руб.</p><a class="button button--icon" href="#"><span>Связаться</span><span class="button__icon">
-                                    <svg width="22" height="22">
+                          <p class="details__list-price">От 135 100 руб.</p><a class="button" href="#"><span>Связаться</span><span class="button__icon">
+                                    <svg width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </div>
@@ -321,8 +321,8 @@
                           <p>Интервью с представителем топ-менеджмента компании. Об опыте первых лиц бизнеса. О том, как правильно и эффективно определить генеральные направления развития компаний. На обложке номера — фото спикера.</p>
                         </div>
                         <div class="details__list-manage">
-                          <p class="details__list-price">520 000 руб.</p><a class="button button--icon" href="#"><span>Связаться</span><span class="button__icon">
-                                    <svg width="22" height="22">
+                          <p class="details__list-price">520 000 руб.</p><a class="button" href="#"><span>Связаться</span><span class="button__icon">
+                                    <svg width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </div>
@@ -342,8 +342,8 @@
                           <p>Брендирование — оформление в фирменных цветах компании-рекламодателя, нанесение логотипа. Брендирование статьи, раздела или выпуска.</p>
                         </div>
                         <div class="details__list-manage">
-                          <p class="details__list-price">От 100 000 руб. <br> Рассчитывается индивидуально</p><a class="button button--icon" href="#"><span>Связаться</span><span class="button__icon">
-                                    <svg width="22" height="22">
+                          <p class="details__list-price">От 100 000 руб. <br> Рассчитывается индивидуально</p><a class="button" href="#"><span>Связаться</span><span class="button__icon">
+                                    <svg width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </div>
@@ -363,8 +363,8 @@
                           <p>Рекламные вложения в журнал (листовки, закладки, календари и пр.).</p>
                         </div>
                         <div class="details__list-manage">
-                          <p class="details__list-price">1 000 шт. — от 70 тыс. руб.</p><a class="button button--icon" href="#"><span>Связаться</span><span class="button__icon">
-                                    <svg width="22" height="22">
+                          <p class="details__list-price">1 000 шт. — от 70 тыс. руб.</p><a class="button" href="#"><span>Связаться</span><span class="button__icon">
+                                    <svg width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </div>
@@ -386,8 +386,8 @@
                           <p>Срок подготовки спецвыпуска от 25-30 дней.</p>
                         </div>
                         <div class="details__list-manage">
-                          <p class="details__list-price">Стоимость рассчитывается индивидуально</p><a class="button button--icon" href="#"><span>Связаться</span><span class="button__icon">
-                                    <svg width="22" height="22">
+                          <p class="details__list-price">Стоимость рассчитывается индивидуально</p><a class="button" href="#"><span>Связаться</span><span class="button__icon">
+                                    <svg width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </div>
@@ -405,8 +405,8 @@
                           <p>Рекламные публикации с использованием дополнительных полиграфических возможностей — более плотная бумага, выборочное лакирование, конверт, раскладные страницы и пр.</p>
                         </div>
                         <div class="details__list-manage">
-                          <p class="details__list-price">Стоимость рассчитывается индивидуально</p><a class="button button--icon" href="#"><span>Связаться</span><span class="button__icon">
-                                    <svg width="22" height="22">
+                          <p class="details__list-price">Стоимость рассчитывается индивидуально</p><a class="button" href="#"><span>Связаться</span><span class="button__icon">
+                                    <svg width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </div>
@@ -440,7 +440,11 @@
                                 <div class="swiper-slide">
                                   <div class="books__item">
                                     <div class="books__box">
-                                      <button class="favorite-button"></button>
+                                            <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                    <svg width="32" height="30">
+                                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                    </svg>
+                                            </button>
                                       <div class="books__img"><img src="images/books/books-13.jpg" alt="Диджитал реклама" width="380" height="380"></div>
                                     </div>
                                     <div class="books__info">
@@ -451,7 +455,11 @@
                                 <div class="swiper-slide">
                                   <div class="books__item">
                                     <div class="books__box">
-                                      <button class="favorite-button"></button>
+                                            <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                    <svg width="32" height="30">
+                                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                    </svg>
+                                            </button>
                                       <div class="books__img"><img src="images/books/books-14.jpg" alt="Методы менеджмента качества" width="380" height="380"></div>
                                     </div>
                                     <div class="books__info">
@@ -462,7 +470,11 @@
                                 <div class="swiper-slide">
                                   <div class="books__item">
                                     <div class="books__box">
-                                      <button class="favorite-button"></button>
+                                            <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                    <svg width="32" height="30">
+                                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                    </svg>
+                                            </button>
                                       <div class="books__img"><img src="images/books/books-15.jpg" alt="Контроль качества продукции" width="380" height="380"></div>
                                     </div>
                                     <div class="books__info">
@@ -473,7 +485,11 @@
                                 <div class="swiper-slide">
                                   <div class="books__item">
                                     <div class="books__box">
-                                      <button class="favorite-button"></button>
+                                            <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                    <svg width="32" height="30">
+                                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                    </svg>
+                                            </button>
                                       <div class="books__img"><img src="images/books/books-16.jpg" alt="Мир измерений" width="380" height="380"></div>
                                     </div>
                                     <div class="books__info">
@@ -484,7 +500,11 @@
                                 <div class="swiper-slide">
                                   <div class="books__item">
                                     <div class="books__box">
-                                      <button class="favorite-button"></button>
+                                            <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                    <svg width="32" height="30">
+                                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                    </svg>
+                                            </button>
                                       <div class="books__img"><img src="images/books/books-13.jpg" alt="Диджитал реклама" width="380" height="380"></div>
                                     </div>
                                     <div class="books__info">
@@ -495,7 +515,11 @@
                                 <div class="swiper-slide">
                                   <div class="books__item">
                                     <div class="books__box">
-                                      <button class="favorite-button"></button>
+                                            <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                    <svg width="32" height="30">
+                                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                    </svg>
+                                            </button>
                                       <div class="books__img"><img src="images/books/books-14.jpg" alt="Методы менеджмента качества" width="380" height="380"></div>
                                     </div>
                                     <div class="books__info">
@@ -506,7 +530,11 @@
                                 <div class="swiper-slide">
                                   <div class="books__item">
                                     <div class="books__box">
-                                      <button class="favorite-button"></button>
+                                            <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                    <svg width="32" height="30">
+                                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                    </svg>
+                                            </button>
                                       <div class="books__img"><img src="images/books/books-15.jpg" alt="Контроль качества продукции" width="380" height="380"></div>
                                     </div>
                                     <div class="books__info">
@@ -517,7 +545,11 @@
                                 <div class="swiper-slide">
                                   <div class="books__item">
                                     <div class="books__box">
-                                      <button class="favorite-button"></button>
+                                            <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                    <svg width="32" height="30">
+                                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                    </svg>
+                                            </button>
                                       <div class="books__img"><img src="images/books/books-16.jpg" alt="Мир измерений" width="380" height="380"></div>
                                     </div>
                                     <div class="books__info">
@@ -527,9 +559,9 @@
                                 </div>
                               </div>
                                     <div class="swiper-controls">
-                                      <button class="swiper-button-prev"></button>
-                                      <div class="swiper-pagination"></div>
-                                      <button class="swiper-button-next"></button>
+                                      <button class="swiper-button-prev" aria-label="Переключиться на предыдущий слайд"></button>
+                                      <div class="swiper-pagination" aria-label="Пагинация слайдера"></div>
+                                      <button class="swiper-button-next" aria-label="Переключиться на следующий слайд"></button>
                                     </div>
                             </div>
                           </div>
@@ -551,21 +583,61 @@
                 </div>
                       <div class="partners__swiper swiper">
                         <div class="swiper-wrapper">
-                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-01.png" alt="russian register" width="169" height="120"></div>
-                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-02.png" alt="минпромторг России" width="169" height="120"></div>
-                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-03.png" alt="bureau veritas" width="169" height="120"></div>
-                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-04.png" alt="рст" width="169" height="120"></div>
-                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-05.png" alt="академия" width="169" height="120"></div>
-                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-06.png" alt="ростехсерт" width="169" height="120"></div>
-                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-01.png" alt="russian register" width="169" height="120"></div>
-                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-02.png" alt="минпромторг России" width="169" height="120"></div>
-                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-03.png" alt="bureau veritas" width="169" height="120"></div>
-                          <div class="partners__slide swiper-slide"><img src="images/partners/partners-04.png" alt="рст" width="169" height="120"></div>
+                          <div class="partners__slide swiper-slide">
+                                  <picture>
+                                    <source srcset="images/partners/partners-01.webp"><img src="images/partners/partners-01.png" alt="картинка" width="169" height="120">
+                                  </picture>
+                          </div>
+                          <div class="partners__slide swiper-slide">
+                                  <picture>
+                                    <source srcset="images/partners/partners-02.webp"><img src="images/partners/partners-02.png" alt="картинка" width="169" height="120">
+                                  </picture>
+                          </div>
+                          <div class="partners__slide swiper-slide">
+                                  <picture>
+                                    <source srcset="images/partners/partners-03.webp"><img src="images/partners/partners-03.png" alt="картинка" width="169" height="120">
+                                  </picture>
+                          </div>
+                          <div class="partners__slide swiper-slide">
+                                  <picture>
+                                    <source srcset="images/partners/partners-04.webp"><img src="images/partners/partners-04.png" alt="картинка" width="169" height="120">
+                                  </picture>
+                          </div>
+                          <div class="partners__slide swiper-slide">
+                                  <picture>
+                                    <source srcset="images/partners/partners-05.webp"><img src="images/partners/partners-05.png" alt="картинка" width="169" height="120">
+                                  </picture>
+                          </div>
+                          <div class="partners__slide swiper-slide">
+                                  <picture>
+                                    <source srcset="images/partners/partners-06.webp"><img src="images/partners/partners-06.png" alt="картинка" width="169" height="120">
+                                  </picture>
+                          </div>
+                          <div class="partners__slide swiper-slide">
+                                  <picture>
+                                    <source srcset="images/partners/partners-01.webp"><img src="images/partners/partners-01.png" alt="картинка" width="169" height="120">
+                                  </picture>
+                          </div>
+                          <div class="partners__slide swiper-slide">
+                                  <picture>
+                                    <source srcset="images/partners/partners-02.webp"><img src="images/partners/partners-02.png" alt="картинка" width="169" height="120">
+                                  </picture>
+                          </div>
+                          <div class="partners__slide swiper-slide">
+                                  <picture>
+                                    <source srcset="images/partners/partners-03.webp"><img src="images/partners/partners-03.png" alt="картинка" width="169" height="120">
+                                  </picture>
+                          </div>
+                          <div class="partners__slide swiper-slide">
+                                  <picture>
+                                    <source srcset="images/partners/partners-04.webp"><img src="images/partners/partners-04.png" alt="картинка" width="169" height="120">
+                                  </picture>
+                          </div>
                         </div>
                               <div class="swiper-controls">
-                                <button class="swiper-button-prev"></button>
-                                <div class="swiper-pagination"></div>
-                                <button class="swiper-button-next"></button>
+                                <button class="swiper-button-prev" aria-label="Переключиться на предыдущий слайд"></button>
+                                <div class="swiper-pagination" aria-label="Пагинация слайдера"></div>
+                                <button class="swiper-button-next" aria-label="Переключиться на следующий слайд"></button>
                               </div>
                       </div>
               </div>

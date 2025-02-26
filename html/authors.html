@@ -37,7 +37,7 @@
           <div class="header__top"><a class="header__logo" href="/"><img class="header__logo-main" src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img class="header__logo-vok" src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
             <div class="header__manage">
               <div class="header__search search">
-                <button class="search__button">
+                <button class="search__button" aria-label="кнопка поиска">
                   <svg width="26" height="26">
                     <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
                   </svg>
@@ -78,7 +78,7 @@
               </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#">
                 <svg width="20" height="20">
                   <use href="images/sprites/main.stack.svg#svg-icon-user"></use>
-                </svg><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
+                </svg><span>Войти</span></a><a class="header__toggle button" href="#"><i class="icon"><span></span></i></a>
             </div>
           </div>
           <div class="header__bottom">
@@ -86,7 +86,7 @@
               <ul class="header__nav-list">
                 <li class="header__nav-item"><a class="is-icon" href="#">
                     <svg width="26" height="26">
-                      <use href="images/sprites/main.stack.svg#svg-text"></use>
+                      <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
                     </svg><span>Подписка</span></a></li>
                 <li class="header__nav-item"><a href="#">Журналы</a></li>
                 <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
@@ -98,7 +98,7 @@
                 <li class="header__nav-item"><a href="#">Контакты</a></li>
               </ul>
             </nav>
-            <button class="header__burger"><img src="images/icons/burger.svg" alt="открыть меню" width="24" height="11"></button>
+            <button class="header__burger" aria-label="открыть дополнительное меню"><span></span><span></span><span></span></button>
           </div>
           <div class="header__box">
             <ul class="header__box-nav"></ul>
@@ -111,7 +111,7 @@
         <div class="menu__container container">
           <div class="menu__manage">
             <div class="menu__search search">
-              <button class="search__button">
+              <button class="search__button" aria-label="кнопка поиска">
                 <svg width="26" height="26">
                   <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
                 </svg>
@@ -143,7 +143,7 @@
             <ul class="menu__nav-list">
               <li><a class="is-icon" href="#">
                   <svg width="22" height="22">
-                    <use href="images/sprites/main.stack.svg#svg-text"></use>
+                    <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
                   </svg><span>Подписка</span></a></li>
               <li><a href="#">Журналы</a></li>
               <li><a href="#">Спецвыпуски</a></li>
@@ -189,12 +189,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Адлер Юрий Павлович</p>
-                              <p class="board__text">Канд. техн. наук, профессор НИТУ «МИСиС», действительный член (академик) МОО «Академия проблем качества», член ASQ и ENBIS, член Международной гильдии профессионалов качества</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">Канд. техн. наук, профессор НИТУ «МИСиС», действительный член (академик) МОО «Академия проблем качества», член ASQ и ENBIS, член Международной гильдии профессионалов качества</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -204,12 +202,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Аронов Иосиф Зиновьевич</p>
-                              <p class="board__text">проф. МГИМО (У), советник генерального директора ФГБУ «Российский институт стандартизации», академик Академии проблем качества, член Международной гильдии профессионалов качества, д-р техн. Наук</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">проф. МГИМО (У), советник генерального директора ФГБУ «Российский институт стандартизации», академик Академии проблем качества, член Международной гильдии профессионалов качества, д-р техн. Наук</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -219,12 +215,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Бас Виталий Николаевич</p>
-                              <p class="board__text">Доктор экономических наук, генеральный директор ФБУ «Ростест-Москва», вице-президент Метрологической академии, председатель Совета директоров ФБУ ЦСМ Росстандарта ЦФО РФ</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">Доктор экономических наук, генеральный директор ФБУ «Ростест-Москва», вице-президент Метрологической академии, председатель Совета директоров ФБУ ЦСМ Росстандарта ЦФО РФ</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -234,12 +228,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Радомир Бошкович</p>
-                              <p class="board__text">Международный консультант по вопросам построения СМК в медицинских организациях (Республика Сербия)</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">Международный консультант по вопросам построения СМК в медицинских организациях (Республика Сербия)</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -249,12 +241,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Головин Сергей Анатольевич</p>
-                              <p class="board__text">Д-р тех. наук, профессор, председатель Межотраслевого совета</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">Д-р тех. наук, профессор, председатель Межотраслевого совета</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -264,12 +254,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Горбашко Елена Анатольевна</p>
-                              <p class="board__text">Д-р экон. наук, профессор, проректор по научной работе, заведующая кафедрой «Экономика и управление качеством»</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">Д-р экон. наук, профессор, проректор по научной работе, заведующая кафедрой «Экономика и управление качеством»</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -279,12 +267,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Иванов Игорь Владимирович</p>
-                              <p class="board__text">Генеральный директор ФГБУ «Центр мониторинга и клинико-экономической экспертизы» Федеральной службы по надзору в сфере здравоохранения, канд. мед.</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">Генеральный директор ФГБУ «Центр мониторинга и клинико-экономической экспертизы» Федеральной службы по надзору в сфере здравоохранения, канд. мед.</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -294,12 +280,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Игнаткович Алексей Сергеевич</p>
-                              <p class="board__text">координатор Метрологического образовательного кластера Росстандарта, начальник PR-службы ФГУП «ВНИИМ им. Д.И. Менделеева»</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">координатор Метрологического образовательного кластера Росстандарта, начальник PR-службы ФГУП «ВНИИМ им. Д.И. Менделеева»</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -309,12 +293,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Куликов Олег Вильевич</p>
-                              <p class="board__text">Специалист ФГБУ «Центр мониторинга и клинико-экономической экспертизы» Федеральной службы по надзору в сфере здравоохранения</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">Специалист ФГБУ «Центр мониторинга и клинико-экономической экспертизы» Федеральной службы по надзору в сфере здравоохранения</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -324,12 +306,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Кучаков Руслан Камилович</p>
-                              <p class="board__text">Директор Института проблем правоприменения при Европейском университете в Санкт-Петербурге</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">Директор Института проблем правоприменения при Европейском университете в Санкт-Петербурге</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -339,12 +319,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Лапидус Вадим Аркадьевич</p>
-                              <p class="board__text">Генеральный директор ООО «Центр «Приоритет», действительный член (академик) Международной академии качества, доктор техн. наук</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">Генеральный директор ООО «Центр «Приоритет», действительный член (академик) Международной академии качества, доктор техн. наук</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -354,12 +332,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Минулин Ильдар Булатович</p>
-                              <p class="board__text">главный специалист учебно-методического отдела ФГБУ «Центр мониторинга и клинико-экономической экспертизы» Росздравнадзора</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">главный специалист учебно-методического отдела ФГБУ «Центр мониторинга и клинико-экономической экспертизы» Росздравнадзора</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -369,12 +345,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Элькин Григорий Иосифович</p>
-                              <p class="board__text">д-р экон. наук, профессор, ВС РФ АО «Объединенная приборостроительная корпорация», заместитель генерального директора — генеральный конструктор по АСУ и связи</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">д-р экон. наук, профессор, ВС РФ АО «Объединенная приборостроительная корпорация», заместитель генерального директора — генеральный конструктор по АСУ и связи</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -384,12 +358,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Ройтберг Григорий Ефимович</p>
-                              <p class="board__text">основатель и президент АО «Медицина» (клиника академика Ройтберга), заведующий кафедрой терапии и семейной медицины ФДПО ФГБОУ ВО РНИМУ им. Н.И. Пирогова Минздрава России, д-р мед. наук, академик РАН, профессор, Заслуженный врач РФ, лауреат Премии Правительства РФ в области образования, лауреат Премии Мэрии Москвы в области здравоохранения и медицины</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">основатель и президент АО «Медицина» (клиника академика Ройтберга), заведующий кафедрой терапии и семейной медицины ФДПО ФГБОУ ВО РНИМУ им. Н.И. Пирогова Минздрава России, д-р мед. наук, академик РАН, профессор, Заслуженный врач РФ, лауреат Премии Правительства РФ в области образования, лауреат Премии Мэрии Москвы в области здравоохранения и медицины</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -399,12 +371,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Фалкин Дмитрий Владимирович</p>
-                              <p class="board__text">председатель Ассоциации «Компетентность и качество», член Всероссийской организации качества, председатель экспертного совета журнала «Контроль качества продукции»</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">председатель Ассоциации «Компетентность и качество», член Всероссийской организации качества, председатель экспертного совета журнала «Контроль качества продукции»</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                       </ul>
                 <div class="pagination">
@@ -435,10 +405,10 @@
                 <div class="status__row">
                   <div class="status__info">
                     <h2 class="status__title">Хотите подтвердить свой экспертный статус?</h2>
-                    <p class="status__text">Станьте автором журналов РИА «Стандарты и качество». Ждем как опытных, так и начинающих специалистов. Важна польза и подача материала. Приоритет отдается статьям практической направленности.</p><a class="button button--icon" href="#"><span>Подробнее</span><span class="button__icon">
-                        <svg width="5" height="9">
-                          <use href="images/sprites/main.stack.svg#svg-arrow-small-right"></use>
-                        </svg></span></a>
+                    <p class="status__text">Станьте автором журналов РИА «Стандарты и качество». Ждем как опытных, так и начинающих специалистов. Важна польза и подача материала. Приоритет отдается статьям практической направленности.</p><a class="button" href="#"><span>Подробнее</span><span class="button__icon">
+                              <svg width="17" height="17">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                              </svg></span></a>
                   </div>
                   <div class="status__img">
                           <picture>
@@ -469,7 +439,11 @@
                           <div class="swiper-slide">
                             <div class="books__item">
                               <div class="books__box">
-                                <button class="favorite-button"></button>
+                                      <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                              <svg width="32" height="30">
+                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                              </svg>
+                                      </button>
                                 <div class="books__img">
                                         <picture>
                                           <source srcset="images/books/books-13.webp"><img src="images/books/books-13.jpg" alt="Стандарты и качество" width="380" height="380">
@@ -485,7 +459,11 @@
                           <div class="swiper-slide">
                             <div class="books__item">
                               <div class="books__box">
-                                <button class="favorite-button"></button>
+                                      <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                              <svg width="32" height="30">
+                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                              </svg>
+                                      </button>
                                 <div class="books__img">
                                         <picture>
                                           <source srcset="images/books/books-14.webp"><img src="images/books/books-14.jpg" alt="Контроль качества продукции" width="380" height="380">
@@ -501,7 +479,11 @@
                           <div class="swiper-slide">
                             <div class="books__item">
                               <div class="books__box">
-                                <button class="favorite-button"></button>
+                                      <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                              <svg width="32" height="30">
+                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                              </svg>
+                                      </button>
                                 <div class="books__img">
                                         <picture>
                                           <source srcset="images/books/books-15.webp"><img src="images/books/books-15.jpg" alt="Мир измерений" width="380" height="380">
@@ -517,7 +499,11 @@
                           <div class="swiper-slide">
                             <div class="books__item">
                               <div class="books__box">
-                                <button class="favorite-button"></button>
+                                      <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                              <svg width="32" height="30">
+                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                              </svg>
+                                      </button>
                                 <div class="books__img">
                                         <picture>
                                           <source srcset="images/books/books-16.webp"><img src="images/books/books-16.jpg" alt="Business Excellence" width="380" height="380">
@@ -533,7 +519,11 @@
                           <div class="swiper-slide">
                             <div class="books__item">
                               <div class="books__box">
-                                <button class="favorite-button"></button>
+                                      <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                              <svg width="32" height="30">
+                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                              </svg>
+                                      </button>
                                 <div class="books__img">
                                         <picture>
                                           <source srcset="images/books/books-13.webp"><img src="images/books/books-13.jpg" alt="Стандарты и качество" width="380" height="380">
@@ -549,7 +539,11 @@
                           <div class="swiper-slide">
                             <div class="books__item">
                               <div class="books__box">
-                                <button class="favorite-button"></button>
+                                      <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                              <svg width="32" height="30">
+                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                              </svg>
+                                      </button>
                                 <div class="books__img">
                                         <picture>
                                           <source srcset="images/books/books-14.webp"><img src="images/books/books-14.jpg" alt="Контроль качества продукции" width="380" height="380">
@@ -565,7 +559,11 @@
                           <div class="swiper-slide">
                             <div class="books__item">
                               <div class="books__box">
-                                <button class="favorite-button"></button>
+                                      <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                              <svg width="32" height="30">
+                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                              </svg>
+                                      </button>
                                 <div class="books__img">
                                         <picture>
                                           <source srcset="images/books/books-15.webp"><img src="images/books/books-15.jpg" alt="Мир измерений" width="380" height="380">
@@ -581,7 +579,11 @@
                           <div class="swiper-slide">
                             <div class="books__item">
                               <div class="books__box">
-                                <button class="favorite-button"></button>
+                                      <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                              <svg width="32" height="30">
+                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                              </svg>
+                                      </button>
                                 <div class="books__img">
                                         <picture>
                                           <source srcset="images/books/books-16.webp"><img src="images/books/books-16.jpg" alt="Business Excellence" width="380" height="380">
@@ -596,9 +598,9 @@
                           </div>
                         </div>
                               <div class="swiper-controls">
-                                <button class="swiper-button-prev"></button>
-                                <div class="swiper-pagination"></div>
-                                <button class="swiper-button-next"></button>
+                                <button class="swiper-button-prev" aria-label="Переключиться на предыдущий слайд"></button>
+                                <div class="swiper-pagination" aria-label="Пагинация слайдера"></div>
+                                <button class="swiper-button-next" aria-label="Переключиться на следующий слайд"></button>
                               </div>
                       </div>
                     </div>
@@ -625,7 +627,7 @@
                           <p class="listing__company">ФГУ «Ярославский ЦСМ»</p>
                           <p class="listing__name">Чирков Александр Алексеевич</p>
                           <p class="listing__description">Спасибо вам большое. Мне было очень приятно работать с вами! Можно быть уверенным, что с таким коллективом ваш уважаемый журнал ждет большое будущее. Всего вам доброго и творческих успехов.</p><a class="button button--outline" href="#"><span>Показать полностью</span><span class="button__icon">
-                                    <svg width="22" height="22">
+                                    <svg width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </div>
@@ -635,7 +637,7 @@
                           <p class="listing__company">УК концерна «Русэлпром»</p>
                           <p class="listing__name">Константин Разумов-Раздолов</p>
                           <p class="listing__description">Добрый день, уважаемые коллеги! Получил очередной номер журнала. Очень познавательно и интересно, что после моей статьи опубликован комментарий эксперта. Это позволяет понять и принять к сведению мнение компетентного стороннего специалиста. Очень понравилось, большое спасибо!</p><a class="button button--outline" href="#"><span>Показать полностью</span><span class="button__icon">
-                                    <svg width="22" height="22">
+                                    <svg width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </div>
@@ -645,7 +647,7 @@
                           <p class="listing__company">УК концерна «Русэлпром»</p>
                           <p class="listing__name">Константин Разумов-Раздолов</p>
                           <p class="listing__description">Добрый день, уважаемые коллеги! Получил очередной номер журнала. Очень познавательно и интересно, что после моей статьи опубликован комментарий эксперта. Это позволяет понять и принять к сведению мнение компетентного стороннего специалиста. Очень понравилось, большое спасибо!</p><a class="button button--outline" href="#"><span>Показать полностью</span><span class="button__icon">
-                                    <svg width="22" height="22">
+                                    <svg width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </div>

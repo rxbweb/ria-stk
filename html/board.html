@@ -37,7 +37,7 @@
           <div class="header__top"><a class="header__logo" href="/"><img class="header__logo-main" src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img class="header__logo-vok" src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
             <div class="header__manage">
               <div class="header__search search">
-                <button class="search__button">
+                <button class="search__button" aria-label="кнопка поиска">
                   <svg width="26" height="26">
                     <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
                   </svg>
@@ -78,7 +78,7 @@
               </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#">
                 <svg width="20" height="20">
                   <use href="images/sprites/main.stack.svg#svg-icon-user"></use>
-                </svg><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
+                </svg><span>Войти</span></a><a class="header__toggle button" href="#"><i class="icon"><span></span></i></a>
             </div>
           </div>
           <div class="header__bottom">
@@ -86,7 +86,7 @@
               <ul class="header__nav-list">
                 <li class="header__nav-item"><a class="is-icon" href="#">
                     <svg width="26" height="26">
-                      <use href="images/sprites/main.stack.svg#svg-text"></use>
+                      <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
                     </svg><span>Подписка</span></a></li>
                 <li class="header__nav-item"><a href="#">Журналы</a></li>
                 <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
@@ -98,7 +98,7 @@
                 <li class="header__nav-item"><a href="#">Контакты</a></li>
               </ul>
             </nav>
-            <button class="header__burger"><img src="images/icons/burger.svg" alt="открыть меню" width="24" height="11"></button>
+            <button class="header__burger" aria-label="открыть дополнительное меню"><span></span><span></span><span></span></button>
           </div>
           <div class="header__box">
             <ul class="header__box-nav"></ul>
@@ -111,7 +111,7 @@
         <div class="menu__container container">
           <div class="menu__manage">
             <div class="menu__search search">
-              <button class="search__button">
+              <button class="search__button" aria-label="кнопка поиска">
                 <svg width="26" height="26">
                   <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
                 </svg>
@@ -143,7 +143,7 @@
             <ul class="menu__nav-list">
               <li><a class="is-icon" href="#">
                   <svg width="22" height="22">
-                    <use href="images/sprites/main.stack.svg#svg-text"></use>
+                    <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
                   </svg><span>Подписка</span></a></li>
               <li><a href="#">Журналы</a></li>
               <li><a href="#">Спецвыпуски</a></li>
@@ -189,12 +189,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Белобрагин Виктор Яковлевич</p>
-                              <p class="board__text">д-р экон. наук, профессор, ООО «РИА «Стандарты и качество», заместитель главного редактора журнала «Стандарты и качество»</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">д-р экон. наук, профессор, ООО «РИА «Стандарты и качество», заместитель главного редактора журнала «Стандарты и качество»</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -204,12 +202,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Бокерия Лео Антонович</p>
-                              <p class="board__text">академик Российской академии наук, д-р мед. наук, профессор, Научный центр сердечно‐сосудистой хирургии им. А.Н. Бакулева, директор</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">академик Российской академии наук, д-р мед. наук, профессор, Научный центр сердечно‐сосудистой хирургии им. А.Н. Бакулева, директор</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -219,12 +215,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Воронин Геннадий Петрович</p>
-                              <p class="board__text">д-р техн. наук, д-р экон. наук, профессор, Общероссийская общественная организация «Всероссийская организация качества», президент</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">д-р техн. наук, д-р экон. наук, профессор, Общероссийская общественная организация «Всероссийская организация качества», президент</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -234,12 +228,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Глазьев Сергей Юрьевич</p>
-                              <p class="board__text">академик Российской академии наук, д-р экон. наук, профессор, советник Президента РФ</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">академик Российской академии наук, д-р экон. наук, профессор, советник Президента РФ</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -249,12 +241,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Зырянов Игорь Владимирович</p>
-                              <p class="board__text">д-р техн. наук, профессор, СП «Институт «Якутнипроалмаз» АК «АЛРОСА» (ПАО), заместитель директора по научной работе</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">д-р техн. наук, профессор, СП «Институт «Якутнипроалмаз» АК «АЛРОСА» (ПАО), заместитель директора по научной работе</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -264,12 +254,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Зырянов Игорь Владимирович</p>
-                              <p class="board__text">ТПП РФ, президент</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">ТПП РФ, президент</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -279,12 +267,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Ломакин Михаил Иванович</p>
-                              <p class="board__text">д-р техн. наук, д-р экон. наук, профессор, ФГУП «Стандартинформ», заместитель генерального директора</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">д-р техн. наук, д-р экон. наук, профессор, ФГУП «Стандартинформ», заместитель генерального директора</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -294,12 +280,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Назаренко Виктор Владимирович</p>
-                              <p class="board__text">канд. экон. наук, Евразийская экономическая комиссия, министр по вопросам технического регулирования.</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">канд. экон. наук, Евразийская экономическая комиссия, министр по вопросам технического регулирования.</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -309,12 +293,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Окрепилов Владимир Валентинович</p>
-                              <p class="board__text">академик Российской академии наук, д-р экон. наук, профессор, ООО «Тест‑С.‑Петербург», директор</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">академик Российской академии наук, д-р экон. наук, профессор, ООО «Тест‑С.‑Петербург», директор</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -324,12 +306,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Ружевичюс Юозас</p>
-                              <p class="board__text">д-р техн. наук, Вильнюсский университет (Литва), профессор кафедры менеджмента и школы международного бизнеса.</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">д-р техн. наук, Вильнюсский университет (Литва), профессор кафедры менеджмента и школы международного бизнеса.</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -339,12 +319,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Саламатов Владимир Юрьевич</p>
-                              <p class="board__text">д-р экон. наук, канд. техн. наук, профессор, НИУ ВШЭ, МГИМО, профессор кафедры теории и практики взаимодействия бизнеса и власти, заведующий кафедрой «Торговое дело и торговое регулирование»</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">д-р экон. наук, канд. техн. наук, профессор, НИУ ВШЭ, МГИМО, профессор кафедры теории и практики взаимодействия бизнеса и власти, заведующий кафедрой «Торговое дело и торговое регулирование»</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -354,12 +332,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Соловьев Владимир Иванович</p>
-                              <p class="board__text">д-р техн. наук, профессор, Общественное объединение «Казахстанская академия менеджмента качества» КарГТУ, президент, академик Национальной инженерной академии Республики Казахстан, эксперт-аудитор Государственной системы технического регулирования Республики Казахстан, QMS 2000 Lead Auditor (IRСA), ведущий аудитор Quality Austria и EVROCERT, опыт работы более 20 лет</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">д-р техн. наук, профессор, Общественное объединение «Казахстанская академия менеджмента качества» КарГТУ, президент, академик Национальной инженерной академии Республики Казахстан, эксперт-аудитор Государственной системы технического регулирования Республики Казахстан, QMS 2000 Lead Auditor (IRСA), ведущий аудитор Quality Austria и EVROCERT, опыт работы более 20 лет</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -369,12 +345,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Томсон Наталия Григорьевна</p>
-                              <p class="board__text">канд. техн. наук, ООО «РИА «Стандарты и качество», председатель Совета директоров.</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">канд. техн. наук, ООО «РИА «Стандарты и качество», председатель Совета директоров.</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -384,12 +358,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Шалаев Антон Павлович</p>
-                              <p class="board__text">руководитель Федерального агентства по техническому регулированию и метрологии (Росстандарт)</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">руководитель Федерального агентства по техническому регулированию и метрологии (Росстандарт)</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                         <li class="board__item"><a class="board__box" href="#">
                             <div class="board__img">
@@ -399,12 +371,10 @@
                             </div>
                             <div class="board__info">
                               <p class="board__name">Элькин Григорий Иосифович</p>
-                              <p class="board__text">д-р экон. наук, профессор, ВС РФ АО «Объединенная приборостроительная корпорация», заместитель генерального директора — генеральный конструктор по АСУ и связи</p>
-                                    <div class="button button--outline"><span>Подробнее</span><span class="button__icon">
-                                        <svg width="22" height="22">
+                              <p class="board__text">д-р экон. наук, профессор, ВС РФ АО «Объединенная приборостроительная корпорация», заместитель генерального директора — генеральный конструктор по АСУ и связи</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
+                                        <svg width="17" height="17">
                                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                        </svg></span>
-                                    </div>
+                                        </svg></span></a>
                             </div></a></li>
                       </ul>
               </div>
@@ -425,8 +395,8 @@
                     <h2 class="policy__title">Редакционная политика</h2>
                     <div class="policy__text">
                       <p>Издатель, редакционная коллегия и редакция журнала придерживаются политики открытого доступа, предполагающей размещение опубликованных текстов статей на сайте журнала, а также в электронных библиотеках и наукометрических базах, с которыми сотрудничает журнал.</p>
-                    </div><a class="button button--icon" href="#"><span>Подробнее</span><span class="button__icon">
-                              <svg width="22" height="22">
+                    </div><a class="button" href="#"><span>Подробнее</span><span class="button__icon">
+                              <svg width="17" height="17">
                                 <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                               </svg></span></a>
                   </div>

@@ -37,7 +37,7 @@
           <div class="header__top"><a class="header__logo" href="/"><img class="header__logo-main" src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img class="header__logo-vok" src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
             <div class="header__manage">
               <div class="header__search search">
-                <button class="search__button">
+                <button class="search__button" aria-label="кнопка поиска">
                   <svg width="26" height="26">
                     <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
                   </svg>
@@ -78,7 +78,7 @@
               </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#">
                 <svg width="20" height="20">
                   <use href="images/sprites/main.stack.svg#svg-icon-user"></use>
-                </svg><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
+                </svg><span>Войти</span></a><a class="header__toggle button" href="#"><i class="icon"><span></span></i></a>
             </div>
           </div>
           <div class="header__bottom">
@@ -86,7 +86,7 @@
               <ul class="header__nav-list">
                 <li class="header__nav-item"><a class="is-icon" href="#">
                     <svg width="26" height="26">
-                      <use href="images/sprites/main.stack.svg#svg-text"></use>
+                      <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
                     </svg><span>Подписка</span></a></li>
                 <li class="header__nav-item"><a href="#">Журналы</a></li>
                 <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
@@ -98,7 +98,7 @@
                 <li class="header__nav-item"><a href="#">Контакты</a></li>
               </ul>
             </nav>
-            <button class="header__burger"><img src="images/icons/burger.svg" alt="открыть меню" width="24" height="11"></button>
+            <button class="header__burger" aria-label="открыть дополнительное меню"><span></span><span></span><span></span></button>
           </div>
           <div class="header__box">
             <ul class="header__box-nav"></ul>
@@ -111,7 +111,7 @@
         <div class="menu__container container">
           <div class="menu__manage">
             <div class="menu__search search">
-              <button class="search__button">
+              <button class="search__button" aria-label="кнопка поиска">
                 <svg width="26" height="26">
                   <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
                 </svg>
@@ -143,7 +143,7 @@
             <ul class="menu__nav-list">
               <li><a class="is-icon" href="#">
                   <svg width="22" height="22">
-                    <use href="images/sprites/main.stack.svg#svg-text"></use>
+                    <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
                   </svg><span>Подписка</span></a></li>
               <li><a href="#">Журналы</a></li>
               <li><a href="#">Спецвыпуски</a></li>
@@ -186,7 +186,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-01.webp"><img src="images/archive/archive-01.png" alt="стандарты и качество" width="380" height="380">
@@ -198,11 +202,11 @@
                                   <h3 class="books__name">стандарты и качество</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -213,7 +217,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-02.webp"><img src="images/archive/archive-02.png" alt="Методы менеджмента качества" width="380" height="380">
@@ -225,11 +233,11 @@
                                   <h3 class="books__name">Методы менеджмента качества</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -240,7 +248,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-03.webp"><img src="images/archive/archive-03.png" alt="Контроль качества продукции" width="380" height="380">
@@ -252,11 +264,11 @@
                                   <h3 class="books__name">Контроль качества продукции</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -267,7 +279,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-04.webp"><img src="images/archive/archive-04.png" alt="МИР измерений" width="380" height="380">
@@ -279,11 +295,11 @@
                                   <h3 class="books__name">МИР измерений</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -294,7 +310,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-05.webp"><img src="images/archive/archive-05.png" alt="Business Excellence" width="380" height="380">
@@ -306,11 +326,11 @@
                                   <h3 class="books__name">Business Excellence</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -321,7 +341,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-06.webp"><img src="images/archive/archive-06.png" alt="Менеджмент качества в медицине" width="380" height="380">
@@ -333,11 +357,11 @@
                                   <h3 class="books__name">Менеджмент качества в медицине</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -348,7 +372,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-07.webp"><img src="images/archive/archive-07.png" alt="стандарты и качество" width="380" height="380">
@@ -360,11 +388,11 @@
                                   <h3 class="books__name">стандарты и качество</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -375,7 +403,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-08.webp"><img src="images/archive/archive-08.png" alt="стандарты и качество" width="380" height="380">
@@ -387,11 +419,11 @@
                                   <h3 class="books__name">стандарты и качество</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -402,7 +434,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-09.webp"><img src="images/archive/archive-09.png" alt="стандарты и качество" width="380" height="380">
@@ -414,11 +450,11 @@
                                   <h3 class="books__name">стандарты и качество</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -429,7 +465,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-10.webp"><img src="images/archive/archive-10.png" alt="стандарты и качество" width="380" height="380">
@@ -441,11 +481,11 @@
                                   <h3 class="books__name">стандарты и качество</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -456,7 +496,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-11.webp"><img src="images/archive/archive-11.png" alt="стандарты и качество" width="380" height="380">
@@ -468,11 +512,11 @@
                                   <h3 class="books__name">стандарты и качество</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -483,7 +527,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-12.webp"><img src="images/archive/archive-12.png" alt="стандарты и качество" width="380" height="380">
@@ -495,11 +543,11 @@
                                   <h3 class="books__name">стандарты и качество</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -510,7 +558,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-13.webp"><img src="images/archive/archive-13.png" alt="стандарты и качество" width="380" height="380">
@@ -522,11 +574,11 @@
                                   <h3 class="books__name">стандарты и качество</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -537,7 +589,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-14.webp"><img src="images/archive/archive-14.png" alt="стандарты и качество" width="380" height="380">
@@ -549,11 +605,11 @@
                                   <h3 class="books__name">стандарты и качество</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -564,7 +620,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-15.webp"><img src="images/archive/archive-15.png" alt="стандарты и качество" width="380" height="380">
@@ -576,11 +636,11 @@
                                   <h3 class="books__name">стандарты и качество</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -591,7 +651,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-16.webp"><img src="images/archive/archive-16.png" alt="стандарты и качество" width="380" height="380">
@@ -603,11 +667,11 @@
                                   <h3 class="books__name">стандарты и качество</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -618,7 +682,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-17.webp"><img src="images/archive/archive-17.png" alt="стандарты и качество" width="380" height="380">
@@ -630,11 +698,11 @@
                                   <h3 class="books__name">стандарты и качество</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -645,7 +713,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-18.webp"><img src="images/archive/archive-18.png" alt="стандарты и качество" width="380" height="380">
@@ -657,11 +729,11 @@
                                   <h3 class="books__name">стандарты и качество</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -672,7 +744,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-19.webp"><img src="images/archive/archive-19.png" alt="стандарты и качество" width="380" height="380">
@@ -684,11 +760,11 @@
                                   <h3 class="books__name">стандарты и качество</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -699,7 +775,11 @@
                             <li class="books__item">
                               <div class="books__card">
                                 <div class="books__box">
-                                  <button class="favorite-button"></button>
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
                                   <div class="books__img">
                                           <picture>
                                             <source srcset="images/archive/archive-20.webp"><img src="images/archive/archive-20.png" alt="стандарты и качество" width="380" height="380">
@@ -711,11 +791,11 @@
                                   <h3 class="books__name">стандарты и качество</h3>
                                   <div class="books__bottom">
                                     <p class="books__price">30 000 руб.</p>
-                                    <div class="books__manage"><a class="button button--icon" href="#"><span>В корзину</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                    <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                                 </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                                <svg width="22" height="22">
+                                                <svg width="17" height="17">
                                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                                 </svg></span></a>
                                     </div>
@@ -756,10 +836,10 @@
                 <div class="status__row">
                   <div class="status__info">
                     <h2 class="status__title">Хотите подтвердить свой экспертный статус?</h2>
-                    <p class="status__text">Станьте автором журналов РИА «Стандарты и качество». Ждем как опытных, так и начинающих специалистов. Важна польза и подача материала. Приоритет отдается статьям практической направленности.</p><a class="button button--icon" href="#"><span>Подробнее</span><span class="button__icon">
-                        <svg width="5" height="9">
-                          <use href="images/sprites/main.stack.svg#svg-arrow-small-right"></use>
-                        </svg></span></a>
+                    <p class="status__text">Станьте автором журналов РИА «Стандарты и качество». Ждем как опытных, так и начинающих специалистов. Важна польза и подача материала. Приоритет отдается статьям практической направленности.</p><a class="button" href="#"><span>Подробнее</span><span class="button__icon">
+                              <svg width="17" height="17">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                              </svg></span></a>
                   </div>
                   <div class="status__img">
                           <picture>

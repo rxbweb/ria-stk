@@ -2139,6 +2139,7 @@ template {
   --second-font-family: "Oswald",sans-serif;
   --font-color: #585858;
   --font-size: 16px;
+  --letter-spacing: -.72px;
   --border: 1px solid var(--border-color);
   --border-red: 1px solid var(--accent);
   --border-radius: 5px;
@@ -2200,7 +2201,8 @@ template {
     --accordion-plus-size: 24px;
     --border-radius-15: 10px;
     --border-radius-30: 15px;
-    --font-size: 13px
+    --font-size: 13px;
+    --letter-spacing: 0
   }
 }
 @font-face {
@@ -2311,7 +2313,6 @@ template {
 .svg-svg-icon-eye-not,
 .svg-svg-icon-filter,
 .svg-svg-icon-heart,
-.svg-svg-icon-heart-full,
 .svg-svg-icon-lock-01,
 .svg-svg-icon-lock-02,
 .svg-svg-icon-lock-03,
@@ -2337,7 +2338,7 @@ template {
   background: url(../images/sprites/main.svg) no-repeat
 }
 .svg-svg-badge-01 {
-  background-position: 90.0596421471% 89.6414342629%;
+  background-position: 83.6978131213% 92.9752066116%;
   background-size: 2386.3636363636% auto;
   width: 22px
 }
@@ -2353,7 +2354,7 @@ template {
   height: 22px
 }
 .svg-svg-badge-02 {
-  background-position: 99.7991967871% 5.577689243%;
+  background-position: 99.7991967871% 5.7851239669%;
   background-size: 1944.4444444444% auto;
   width: 27px
 }
@@ -2369,7 +2370,7 @@ template {
   height: 22px
 }
 .svg-svg-badge-03 {
-  background-position: 94.4333996024% 89.6414342629%;
+  background-position: 88.0715705765% 92.9752066116%;
   background-size: 2386.3636363636% auto;
   width: 22px
 }
@@ -2385,7 +2386,7 @@ template {
   height: 22px
 }
 .svg-svg-badge-04 {
-  background-position: 99.5991983968% 26.1044176707%;
+  background-position: 99.5991983968% 27.0833333333%;
   background-size: 2019.2307692308% auto;
   width: 26px
 }
@@ -2401,7 +2402,7 @@ template {
   height: 26px
 }
 .svg-svg-badge-05 {
-  background-position: 99.5991983968% 31.3253012048%;
+  background-position: 99.5991983968% 32.5%;
   background-size: 2019.2307692308% auto;
   width: 26px
 }
@@ -2417,7 +2418,7 @@ template {
   height: 26px
 }
 .svg-svg-badge-06 {
-  background-position: 85.6573705179% 89.8203592814%;
+  background-position: 79.2828685259% 93.1677018634%;
   background-size: 2282.6086956522% auto;
   width: 23px
 }
@@ -2433,7 +2434,7 @@ template {
   height: 23px
 }
 .svg-svg-badge-07 {
-  background-position: 60.7645875252% 90.7258064516%;
+  background-position: 54.3259557344% 94.1422594142%;
   background-size: 1875% auto;
   width: 28px
 }
@@ -2449,7 +2450,7 @@ template {
   height: 28px
 }
 .svg-svg-badge-08 {
-  background-position: 93.482688391% 49.7959183673%;
+  background-position: 93.482688391% 51.6949152542%;
   background-size: 1544.1176470588% auto;
   width: 34px
 }
@@ -2465,7 +2466,7 @@ template {
   height: 34px
 }
 .svg-svg-badge-09 {
-  background-position: 85% 67.2233820459%;
+  background-position: 85% 69.8481561822%;
   background-size: 1166.6666666667% auto;
   width: 45px
 }
@@ -2481,7 +2482,7 @@ template {
   height: 45px
 }
 .svg-svg-badge-10 {
-  background-position: 83.7782340862% 75.5144032922%;
+  background-position: 83.7782340862% 78.4188034188%;
   background-size: 1381.5789473684% auto;
   width: 38px
 }
@@ -2497,7 +2498,7 @@ template {
   height: 38px
 }
 .svg-svg-badge-11 {
-  background-position: 62.8336755647% 75.7201646091%;
+  background-position: 62.8336755647% 78.6324786325%;
   background-size: 1381.5789473684% auto;
   width: 38px
 }
@@ -2513,7 +2514,7 @@ template {
   height: 38px
 }
 .svg-svg-badge-12 {
-  background-position: 70.636550308% 75.7201646091%;
+  background-position: 70.636550308% 78.6324786325%;
   background-size: 1381.5789473684% auto;
   width: 38px
 }
@@ -2529,7 +2530,7 @@ template {
   height: 38px
 }
 .svg-svg-badge-13 {
-  background-position: 61.6016427105% 83.950617284%;
+  background-position: 61.6016427105% 87.1794871795%;
   background-size: 1381.5789473684% auto;
   width: 38px
 }
@@ -2545,7 +2546,7 @@ template {
   height: 38px
 }
 .svg-svg-badge-14 {
-  background-position: 76.5531062124% 74.4939271255%;
+  background-position: 76.5531062124% 77.3109243697%;
   background-size: 2019.2307692308% auto;
   width: 26px
 }
@@ -2561,7 +2562,7 @@ template {
   height: 30px
 }
 .svg-svg-badge-15 {
-  background-position: 93.482688391% 56.7346938776%;
+  background-position: 93.482688391% 58.8983050847%;
   background-size: 1544.1176470588% auto;
   width: 34px
 }
@@ -2577,7 +2578,7 @@ template {
   height: 34px
 }
 .svg-svg-badge-16 {
-  background-position: 93.8650306748% 14.2857142857%;
+  background-position: 93.8650306748% 14.8305084746%;
   background-size: 1458.3333333333% auto;
   width: 36px
 }
@@ -2593,7 +2594,7 @@ template {
   height: 34px
 }
 .svg-svg-badge-17 {
-  background-position: 93.8650306748% 21.3114754098%;
+  background-position: 93.8650306748% 22.1276595745%;
   background-size: 1458.3333333333% auto;
   width: 36px
 }
@@ -2609,7 +2610,7 @@ template {
   height: 36px
 }
 .svg-svg-badge-18 {
-  background-position: 69.4045174538% 83.950617284%;
+  background-position: 69.4045174538% 87.1794871795%;
   background-size: 1381.5789473684% auto;
   width: 38px
 }
@@ -2625,7 +2626,7 @@ template {
   height: 38px
 }
 .svg-svg-badge-19 {
-  background-position: 77.0491803279% 83.950617284%;
+  background-position: 77.0491803279% 87.1794871795%;
   background-size: 1418.9189189189% auto;
   width: 37px
 }
@@ -2641,7 +2642,7 @@ template {
   height: 38px
 }
 .svg-svg-badge-20 {
-  background-position: 84.4720496894% 10.5042016807%;
+  background-position: 84.4720496894% 10.9170305677%;
   background-size: 1250% auto;
   width: 42px
 }
@@ -2657,7 +2658,7 @@ template {
   height: 48px
 }
 .svg-svg-badge-21 {
-  background-position: 85.1774530271% 57.9166666667%;
+  background-position: 85.1774530271% 60.1731601732%;
   background-size: 1141.3043478261% auto;
   width: 46px
 }
@@ -2673,7 +2674,7 @@ template {
   height: 44px
 }
 .svg-svg-badge-22 {
-  background-position: 0 84.6473029046%;
+  background-position: 0 87.9310344828%;
   background-size: 1220.9302325581% auto;
   width: 43px
 }
@@ -2689,7 +2690,7 @@ template {
   height: 42px
 }
 .svg-svg-badge-23 {
-  background-position: 84.8049281314% 83.950617284%;
+  background-position: 84.8049281314% 87.1794871795%;
   background-size: 1381.5789473684% auto;
   width: 38px
 }
@@ -2721,7 +2722,7 @@ template {
   height: 32px
 }
 .svg-svg-badge-25 {
-  background-position: 8.9211618257% 84.6473029046%;
+  background-position: 8.9211618257% 87.9310344828%;
   background-size: 1220.9302325581% auto;
   width: 43px
 }
@@ -2737,7 +2738,7 @@ template {
   height: 42px
 }
 .svg-svg-badge-26 {
-  background-position: 17.8423236515% 84.6473029046%;
+  background-position: 17.8423236515% 87.9310344828%;
   background-size: 1220.9302325581% auto;
   width: 43px
 }
@@ -2753,7 +2754,7 @@ template {
   height: 42px
 }
 .svg-svg-badge-27 {
-  background-position: 75.4601226994% 63.4854771784%;
+  background-position: 75.4601226994% 65.9482758621%;
   background-size: 1458.3333333333% auto;
   width: 36px
 }
@@ -2769,7 +2770,7 @@ template {
   height: 42px
 }
 .svg-svg-badge-28 {
-  background-position: 83.7782340862% 20.5882352941%;
+  background-position: 83.7782340862% 21.3973799127%;
   background-size: 1381.5789473684% auto;
   width: 38px
 }
@@ -2785,7 +2786,7 @@ template {
   height: 48px
 }
 .svg-svg-badge-29 {
-  background-position: 93.8650306748% 6.5843621399%;
+  background-position: 93.8650306748% 6.8376068376%;
   background-size: 1458.3333333333% auto;
   width: 36px
 }
@@ -2801,7 +2802,7 @@ template {
   height: 38px
 }
 .svg-svg-badge-30 {
-  background-position: 26.7634854772% 84.6473029046%;
+  background-position: 26.7634854772% 87.9310344828%;
   background-size: 1220.9302325581% auto;
   width: 43px
 }
@@ -2817,7 +2818,7 @@ template {
   height: 42px
 }
 .svg-svg-badge-31 {
-  background-position: 83.7782340862% 30.6722689076%;
+  background-position: 83.7782340862% 31.8777292576%;
   background-size: 1381.5789473684% auto;
   width: 38px
 }
@@ -2833,7 +2834,7 @@ template {
   height: 48px
 }
 .svg-svg-badge-32 {
-  background-position: 93.8650306748% 28.5132382892%;
+  background-position: 93.8650306748% 29.5983086681%;
   background-size: 1458.3333333333% auto;
   width: 36px
 }
@@ -2849,7 +2850,7 @@ template {
   height: 33px
 }
 .svg-svg-badge-33 {
-  background-position: 35.6846473029% 84.6473029046%;
+  background-position: 35.6846473029% 87.9310344828%;
   background-size: 1220.9302325581% auto;
   width: 43px
 }
@@ -2865,7 +2866,7 @@ template {
   height: 42px
 }
 .svg-svg-badge-34 {
-  background-position: 48.275862069% 91.4634146341%;
+  background-position: 48.275862069% 94.9367088608%;
   background-size: 1640.625% auto;
   width: 32px
 }
@@ -2881,7 +2882,7 @@ template {
   height: 32px
 }
 .svg-svg-badge-35 {
-  background-position: 93.482688391% 63.6734693878%;
+  background-position: 93.482688391% 66.1016949153%;
   background-size: 1544.1176470588% auto;
   width: 34px
 }
@@ -2897,7 +2898,7 @@ template {
   height: 34px
 }
 .svg-svg-badge-36 {
-  background-position: 53.4161490683% 84.6473029046%;
+  background-position: 53.4161490683% 87.9310344828%;
   background-size: 1250% auto;
   width: 42px
 }
@@ -2913,7 +2914,7 @@ template {
   height: 42px
 }
 .svg-svg-badge-37 {
-  background-position: 93.8650306748% 35.4508196721%;
+  background-position: 93.8650306748% 36.8085106383%;
   background-size: 1458.3333333333% auto;
   width: 36px
 }
@@ -2929,7 +2930,7 @@ template {
   height: 36px
 }
 .svg-svg-badge-38 {
-  background-position: 44.6058091286% 84.6473029046%;
+  background-position: 44.6058091286% 87.9310344828%;
   background-size: 1220.9302325581% auto;
   width: 43px
 }
@@ -2945,7 +2946,7 @@ template {
   height: 42px
 }
 .svg-svg-badge-39 {
-  background-position: 83.7782340862% 40.756302521%;
+  background-position: 83.7782340862% 42.3580786026%;
   background-size: 1381.5789473684% auto;
   width: 38px
 }
@@ -2961,7 +2962,7 @@ template {
   height: 48px
 }
 .svg-svg-badge-40 {
-  background-position: 85.534591195% 49.5901639344%;
+  background-position: 85.534591195% 51.4893617021%;
   background-size: 1093.75% auto;
   width: 48px
 }
@@ -3009,7 +3010,7 @@ template {
   height: 102px
 }
 .svg-svg-collection-03 {
-  background-position: 0 24.1706161137%;
+  background-position: 0 25.2475247525%;
   background-size: 514.7058823529% auto;
   width: 102px
 }
@@ -3025,7 +3026,7 @@ template {
   height: 102px
 }
 .svg-svg-collection-04 {
-  background-position: 24.1134751773% 24.1706161137%;
+  background-position: 24.1134751773% 25.2475247525%;
   background-size: 514.7058823529% auto;
   width: 102px
 }
@@ -3057,7 +3058,7 @@ template {
   height: 102px
 }
 .svg-svg-collection-06 {
-  background-position: 48.2269503546% 24.1706161137%;
+  background-position: 48.2269503546% 25.2475247525%;
   background-size: 514.7058823529% auto;
   width: 102px
 }
@@ -3073,7 +3074,7 @@ template {
   height: 102px
 }
 .svg-svg-collection-07 {
-  background-position: 0 48.3412322275%;
+  background-position: 0 50.495049505%;
   background-size: 514.7058823529% auto;
   width: 102px
 }
@@ -3089,7 +3090,7 @@ template {
   height: 102px
 }
 .svg-svg-collection-08 {
-  background-position: 24.1134751773% 48.3412322275%;
+  background-position: 24.1134751773% 50.495049505%;
   background-size: 514.7058823529% auto;
   width: 102px
 }
@@ -3105,7 +3106,7 @@ template {
   height: 102px
 }
 .svg-svg-collection-09 {
-  background-position: 48.2269503546% 48.3412322275%;
+  background-position: 48.2269503546% 50.495049505%;
   background-size: 514.7058823529% auto;
   width: 102px
 }
@@ -3137,7 +3138,7 @@ template {
   height: 102px
 }
 .svg-svg-collection-11 {
-  background-position: 72.3404255319% 24.1706161137%;
+  background-position: 72.3404255319% 25.2475247525%;
   background-size: 514.7058823529% auto;
   width: 102px
 }
@@ -3153,7 +3154,7 @@ template {
   height: 102px
 }
 .svg-svg-collection-12 {
-  background-position: 72.3404255319% 48.3412322275%;
+  background-position: 72.3404255319% 50.495049505%;
   background-size: 514.7058823529% auto;
   width: 102px
 }
@@ -3169,7 +3170,7 @@ template {
   height: 102px
 }
 .svg-svg-collection-13 {
-  background-position: 0 72.5118483412%;
+  background-position: 0 75.7425742574%;
   background-size: 514.7058823529% auto;
   width: 102px
 }
@@ -3185,7 +3186,7 @@ template {
   height: 102px
 }
 .svg-svg-collection-14 {
-  background-position: 24.1134751773% 72.5118483412%;
+  background-position: 24.1134751773% 75.7425742574%;
   background-size: 514.7058823529% auto;
   width: 102px
 }
@@ -3201,7 +3202,7 @@ template {
   height: 102px
 }
 .svg-svg-collection-15 {
-  background-position: 48.2269503546% 72.5118483412%;
+  background-position: 48.2269503546% 75.7425742574%;
   background-size: 514.7058823529% auto;
   width: 102px
 }
@@ -3217,7 +3218,7 @@ template {
   height: 102px
 }
 .svg-svg-controls-01 {
-  background-position: 93.482688391% 70.612244898%;
+  background-position: 93.482688391% 73.3050847458%;
   background-size: 1544.1176470588% auto;
   width: 34px
 }
@@ -3233,7 +3234,7 @@ template {
   height: 34px
 }
 .svg-svg-controls-02 {
-  background-position: 93.482688391% 77.5510204082%;
+  background-position: 93.482688391% 80.5084745763%;
   background-size: 1544.1176470588% auto;
   width: 34px
 }
@@ -3249,7 +3250,7 @@ template {
   height: 34px
 }
 .svg-svg-controls-03 {
-  background-position: 93.482688391% 84.4897959184%;
+  background-position: 93.482688391% 87.7118644068%;
   background-size: 1544.1176470588% auto;
   width: 34px
 }
@@ -3265,7 +3266,7 @@ template {
   height: 34px
 }
 .svg-svg-controls-04 {
-  background-position: 0 91.8367346939%;
+  background-position: 0 95.3389830508%;
   background-size: 1544.1176470588% auto;
   width: 34px
 }
@@ -3281,7 +3282,7 @@ template {
   height: 34px
 }
 .svg-svg-controls-05 {
-  background-position: 6.9246435845% 91.8367346939%;
+  background-position: 6.9246435845% 95.3389830508%;
   background-size: 1544.1176470588% auto;
   width: 34px
 }
@@ -3297,7 +3298,7 @@ template {
   height: 34px
 }
 .svg-svg-controls-06 {
-  background-position: 13.849287169% 91.8367346939%;
+  background-position: 13.849287169% 95.3389830508%;
   background-size: 1544.1176470588% auto;
   width: 34px
 }
@@ -3313,7 +3314,7 @@ template {
   height: 34px
 }
 .svg-svg-controls-07 {
-  background-position: 20.7739307536% 91.8367346939%;
+  background-position: 20.7739307536% 95.3389830508%;
   background-size: 1544.1176470588% auto;
   width: 34px
 }
@@ -3329,7 +3330,7 @@ template {
   height: 34px
 }
 .svg-svg-controls-08 {
-  background-position: 27.6985743381% 91.8367346939%;
+  background-position: 27.6985743381% 95.3389830508%;
   background-size: 1544.1176470588% auto;
   width: 34px
 }
@@ -3345,7 +3346,7 @@ template {
   height: 34px
 }
 .svg-svg-controls-09 {
-  background-position: 34.6232179226% 91.8367346939%;
+  background-position: 34.6232179226% 95.3389830508%;
   background-size: 1544.1176470588% auto;
   width: 34px
 }
@@ -3361,7 +3362,7 @@ template {
   height: 34px
 }
 .svg-svg-controls-10 {
-  background-position: 41.5478615071% 91.8367346939%;
+  background-position: 41.5478615071% 95.3389830508%;
   background-size: 1544.1176470588% auto;
   width: 34px
 }
@@ -3377,7 +3378,7 @@ template {
   height: 34px
 }
 .svg-svg-icon-arrow-right {
-  background-position: 96.3178294574% 91.9921875%;
+  background-position: 96.3178294574% 95.3441295547%;
   background-size: 5833.3333333333% auto;
   width: 9px
 }
@@ -3393,7 +3394,7 @@ template {
   height: 12px
 }
 .svg-svg-icon-arrow-small-down {
-  background-position: 98.6354775828% 91.2790697674%;
+  background-position: 98.6354775828% 94.578313253%;
   background-size: 4375% auto;
   width: 12px
 }
@@ -3409,7 +3410,7 @@ template {
   height: 8px
 }
 .svg-svg-icon-arrow-small-right {
-  background-position: 86.6019417476% 19.2156862745%;
+  background-position: 86.6019417476% 19.918699187%;
   background-size: 5250% auto;
   width: 10px
 }
@@ -3425,7 +3426,7 @@ template {
   height: 14px
 }
 .svg-svg-icon-camera {
-  background-position: 66.2337662338% 66.2337662338%;
+  background-position: 66.2337662338% 68.9189189189%;
   background-size: 833.3333333333% auto;
   width: 63px
 }
@@ -3441,7 +3442,7 @@ template {
   height: 62px
 }
 .svg-svg-icon-cart {
-  background-position: 99.2015968064% 65.4%;
+  background-position: 99.2015968064% 67.8423236515%;
   background-size: 2187.5% auto;
   width: 24px
 }
@@ -3457,7 +3458,7 @@ template {
   height: 24px
 }
 .svg-svg-icon-check {
-  background-position: 11.394891945% 95.4635108481%;
+  background-position: 30.0589390963% 98.9775051125%;
   background-size: 3281.25% auto;
   width: 16px
 }
@@ -3473,7 +3474,7 @@ template {
   height: 17px
 }
 .svg-svg-icon-checkmark {
-  background-position: 99.2015968064% 70.2%;
+  background-position: 99.2015968064% 72.8215767635%;
   background-size: 2187.5% auto;
   width: 24px
 }
@@ -3489,7 +3490,7 @@ template {
   height: 24px
 }
 .svg-svg-icon-close {
-  background-position: 99.2015968064% 75%;
+  background-position: 99.2015968064% 77.8008298755%;
   background-size: 2187.5% auto;
   width: 24px
 }
@@ -3505,7 +3506,7 @@ template {
   height: 24px
 }
 .svg-svg-icon-delete {
-  background-position: 99.7991967871% 10.0401606426%;
+  background-position: 99.7991967871% 10.4166666667%;
   background-size: 1944.4444444444% auto;
   width: 27px
 }
@@ -3521,7 +3522,7 @@ template {
   height: 26px
 }
 .svg-svg-icon-doc {
-  background-position: 99.5991983968% 15.291750503%;
+  background-position: 99.5991983968% 15.866388309%;
   background-size: 2019.2307692308% auto;
   width: 26px
 }
@@ -3537,7 +3538,7 @@ template {
   height: 27px
 }
 .svg-svg-icon-download {
-  background-position: 93.482688391% 42.7402862986%;
+  background-position: 93.482688391% 44.3736730361%;
   background-size: 1544.1176470588% auto;
   width: 34px
 }
@@ -3553,7 +3554,7 @@ template {
   height: 35px
 }
 .svg-svg-icon-eye {
-  background-position: 99.5991983968% 35.8974358974%;
+  background-position: 99.5991983968% 37.2188139059%;
   background-size: 2019.2307692308% auto;
   width: 26px
 }
@@ -3569,7 +3570,7 @@ template {
   height: 17px
 }
 .svg-svg-icon-eye-not {
-  background-position: 0 95.652173913%;
+  background-position: 92.4453280318% 92.2131147541%;
   background-size: 2386.3636363636% auto;
   width: 22px
 }
@@ -3601,7 +3602,7 @@ template {
   height: 22px
 }
 .svg-svg-icon-heart {
-  background-position: 66.3983903421% 90.3614457831%;
+  background-position: 59.9597585513% 93.75%;
   background-size: 1875% auto;
   width: 28px
 }
@@ -3616,24 +3617,8 @@ template {
   width: 28px;
   height: 26px
 }
-.svg-svg-icon-heart-full {
-  background-position: 54.7667342799% 90.9090909091%;
-  background-size: 1640.625% auto;
-  width: 32px
-}
-.svg-svg-icon-heart-full:before {
-  content: "";
-  display: block;
-  font-size: 0;
-  line-height: 0;
-  padding-top: 90.625%
-}
-.svg-svg-icon-heart-full-dims {
-  width: 32px;
-  height: 29px
-}
 .svg-svg-icon-lock-01 {
-  background-position: 12.7701375246% 99.6031746032%;
+  background-position: 12.7701375246% 99.5884773663%;
   background-size: 3281.25% auto;
   width: 16px
 }
@@ -3649,7 +3634,7 @@ template {
   height: 20px
 }
 .svg-svg-icon-lock-02 {
-  background-position: 15.9135559921% 99.6031746032%;
+  background-position: 15.9135559921% 99.5884773663%;
   background-size: 3281.25% auto;
   width: 16px
 }
@@ -3665,7 +3650,7 @@ template {
   height: 20px
 }
 .svg-svg-icon-lock-03 {
-  background-position: 98.4158415842% 39.9598393574%;
+  background-position: 98.4158415842% 41.4583333333%;
   background-size: 2625% auto;
   width: 20px
 }
@@ -3681,7 +3666,7 @@ template {
   height: 26px
 }
 .svg-svg-icon-loop {
-  background-position: 99.4% 60.6%;
+  background-position: 99.4% 62.8630705394%;
   background-size: 2100% auto;
   width: 25px
 }
@@ -3697,7 +3682,7 @@ template {
   height: 24px
 }
 .svg-svg-icon-pencil {
-  background-position: 4.3392504931% 95.652173913%;
+  background-position: 23.0769230769% 99.1803278689%;
   background-size: 2916.6666666667% auto;
   width: 18px
 }
@@ -3713,7 +3698,7 @@ template {
   height: 18px
 }
 .svg-svg-icon-plus {
-  background-position: 7.8895463511% 95.652173913%;
+  background-position: 26.6272189349% 99.1803278689%;
   background-size: 2916.6666666667% auto;
   width: 18px
 }
@@ -3729,7 +3714,7 @@ template {
   height: 18px
 }
 .svg-svg-icon-question {
-  background-position: 8.7301587302% 99.8011928429%;
+  background-position: 8.7301587302% 99.793814433%;
   background-size: 2500% auto;
   width: 21px
 }
@@ -3745,7 +3730,7 @@ template {
   height: 21px
 }
 .svg-svg-icon-text {
-  background-position: 99.7991967871% 20.7243460765%;
+  background-position: 99.7991967871% 21.503131524%;
   background-size: 1944.4444444444% auto;
   width: 27px
 }
@@ -3793,7 +3778,7 @@ template {
   height: 50px
 }
 .svg-svg-sidebar-01 {
-  background-position: 99.5991983968% 45.1807228916%;
+  background-position: 99.5991983968% 46.875%;
   background-size: 2019.2307692308% auto;
   width: 26px
 }
@@ -3809,7 +3794,7 @@ template {
   height: 26px
 }
 .svg-svg-sidebar-02 {
-  background-position: 99.5991983968% 50.4016064257%;
+  background-position: 99.5991983968% 52.2916666667%;
   background-size: 2019.2307692308% auto;
   width: 26px
 }
@@ -3825,7 +3810,7 @@ template {
   height: 26px
 }
 .svg-svg-sidebar-03 {
-  background-position: 99.2015968064% 79.8%;
+  background-position: 99.2015968064% 82.7800829876%;
   background-size: 2187.5% auto;
   width: 24px
 }
@@ -3841,7 +3826,7 @@ template {
   height: 24px
 }
 .svg-svg-sidebar-04 {
-  background-position: 99.5991983968% 55.6224899598%;
+  background-position: 99.5991983968% 57.7083333333%;
   background-size: 2019.2307692308% auto;
   width: 26px
 }
@@ -3857,7 +3842,7 @@ template {
   height: 26px
 }
 .svg-svg-sidebar-05 {
-  background-position: 19.2079207921% 99.6031746032%;
+  background-position: 19.2079207921% 99.5884773663%;
   background-size: 2625% auto;
   width: 20px
 }
@@ -3873,7 +3858,7 @@ template {
   height: 20px
 }
 .svg-svg-sidebar-06 {
-  background-position: 99.2015968064% 84.6%;
+  background-position: 99.2015968064% 87.7593360996%;
   background-size: 2187.5% auto;
   width: 24px
 }
@@ -3889,7 +3874,7 @@ template {
   height: 24px
 }
 .svg-svg-sidebar-07 {
-  background-position: 99.2015968064% 89.4%;
+  background-position: 99.2015968064% 92.7385892116%;
   background-size: 2187.5% auto;
   width: 24px
 }
@@ -3905,7 +3890,7 @@ template {
   height: 24px
 }
 .svg-svg-sidebar-08 {
-  background-position: 71.4570858283% 90%;
+  background-position: 65.0698602794% 93.3609958506%;
   background-size: 2187.5% auto;
   width: 24px
 }
@@ -3921,7 +3906,7 @@ template {
   height: 24px
 }
 .svg-svg-sidebar-09 {
-  background-position: 76.24750499% 90%;
+  background-position: 69.8602794411% 93.3609958506%;
   background-size: 2187.5% auto;
   width: 24px
 }
@@ -3937,7 +3922,7 @@ template {
   height: 24px
 }
 .svg-svg-sidebar-10 {
-  background-position: 73.6526946108% 69.0476190476%;
+  background-position: 73.6526946108% 71.6049382716%;
   background-size: 2187.5% auto;
   width: 24px
 }
@@ -3969,7 +3954,7 @@ template {
   height: 28px
 }
 .svg-svg-sidebar-12 {
-  background-position: 81.0379241517% 90%;
+  background-position: 74.6506986028% 93.3609958506%;
   background-size: 2187.5% auto;
   width: 24px
 }
@@ -4070,8 +4055,7 @@ img {
 svg {
   max-width: 100%;
   max-height: 100%;
-  fill: currentColor;
-  stroke: currentColor
+  fill: currentColor
 }
 picture {
   display: block
@@ -4259,22 +4243,13 @@ textarea::placeholder {
   align-items: center
 }
 .agree__checkbox::after {
-  content: "\e90b";
-  color: #fff;
-  font-size: 8px;
-  font-family: icomoon;
-  speak: none;
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block
-}
-.agree__checkbox::after {
-  opacity: 0
+  --size: 17px;
+  content: "";
+  opacity: 0;
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background: url(../images/icons/icon-check.svg) no-repeat center/contain
 }
 .select__active:checked ~ .agree__checkbox,
 .webform__label-file:checked ~ .agree__checkbox,
@@ -4549,19 +4524,18 @@ figure {
   flex-shrink: 0;
   background: #fff;
   border-radius: 5px;
-  border: 1px solid transparent
+  border: 1px solid transparent;
+  transition: all var(--duration) ease
 }
 .button__icon svg {
-  fill: none
+  fill: none;
+  stroke: var(--accent);
+  transition: all var(--duration) ease
 }
 @media (max-width:767px) {
   .button__icon {
     --size: 20px
   }
-}
-.accordion__info-button,
-.button--icon {
-  gap: 10px
 }
 .button--outline {
   padding: 0;
@@ -4574,9 +4548,27 @@ figure {
   background: inherit
 }
 .button--outline .button__icon {
-  width: 22px;
-  height: 22px;
+  --size: 22px;
   border: 1px solid var(--accent)
+}
+@media (max-width:767px) {
+  .button--outline .button__icon {
+    --size: 20px
+  }
+  .button--outline .button__icon svg {
+    width: 14px;
+    height: 14px
+  }
+}
+.button--outline:active .button__icon,
+.button--outline:focus .button__icon,
+.button--outline:hover .button__icon {
+  background: var(--accent)
+}
+.button--outline:active svg,
+.button--outline:focus svg,
+.button--outline:hover svg {
+  stroke: #fff
 }
 .button--slim {
   padding: 9px 20px;
@@ -4631,6 +4623,11 @@ figure {
   background: #cdcdcd;
   cursor: default
 }
+.button--disabled svg,
+.button[disabled] svg,
+[disabled].accordion__info-tag svg {
+  stroke: #cdcdcd
+}
 .button__text-mob {
   display: none
 }
@@ -4647,7 +4644,6 @@ figure {
 .btn,
 .card__favorite,
 .card__icon,
-.card__like,
 .favorite-button,
 .links__icon,
 .pagination__button {
@@ -4679,8 +4675,6 @@ figure {
 .card__favorite:hover,
 .card__icon:focus,
 .card__icon:hover,
-.card__like:focus,
-.card__like:hover,
 .favorite-button:focus,
 .favorite-button:hover,
 .links__icon:focus,
@@ -4689,6 +4683,21 @@ figure {
 .pagination__button:hover {
   background: var(--accent);
   color: #fff
+}
+.btn img,
+.btn svg,
+.card__favorite img,
+.card__favorite svg,
+.card__icon img,
+.card__icon svg,
+.favorite-button img,
+.favorite-button svg,
+.links__icon img,
+.links__icon svg,
+.pagination__button img,
+.pagination__button svg {
+  max-width: 65%;
+  height: auto
 }
 .btn--arrow::after,
 .links__icon::after,
@@ -4726,18 +4735,12 @@ figure {
   -moz-osx-font-smoothing: grayscale;
   display: inline-block
 }
-.btn--like,
-.card__favorite,
-.card__like,
-.favorite-button {
+.btn--like {
   border-radius: 10px;
   border: #fff;
   background: #fff
 }
-.btn--like::after,
-.card__favorite::after,
-.card__like::after,
-.favorite-button::after {
+.btn--like::after {
   content: "\e910";
   color: inherit;
   font-size: 20px;
@@ -4786,7 +4789,6 @@ figure {
   .btn,
   .card__favorite,
   .card__icon,
-  .card__like,
   .favorite-button,
   .links__icon,
   .pagination__button {
@@ -5791,30 +5793,25 @@ ol.listing__list .listing__box::before {
   position: absolute;
   top: 15px;
   right: 15px;
-  z-index: var(--z-index)
+  z-index: var(--z-index);
+  border-radius: 10px;
+  border: #fff;
+  background: #fff
+}
+.favorite-button svg {
+  width: 32px;
+  max-width: 70%;
+  height: auto;
+  stroke: var(--accent);
+  fill: transparent
+}
+.favorite-button.is-active svg {
+  fill: var(--accent)
 }
 .favorite-button:focus,
 .favorite-button:hover {
   background: #fff;
   color: var(--accent)
-}
-.favorite-button::after {
-  font-size: 24px
-}
-.favorite-button.is-active::after {
-  content: "\e912";
-  color: inherit;
-  font-size: 24px;
-  font-family: icomoon;
-  speak: none;
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block
 }
 @media (max-width:575px) {
   .favorite-button {
@@ -5822,10 +5819,6 @@ ol.listing__list .listing__box::before {
     height: 32px;
     top: 5px;
     right: 5px
-  }
-  .favorite-button.is-active::after,
-  .favorite-button::after {
-    font-size: 16px
   }
 }
 .gray-box,
@@ -6106,6 +6099,9 @@ ol.listing__list .listing__box::before {
   right: 0;
   box-shadow: 0 2px 10px -3px rgba(34,60,80,.21)
 }
+.header__container {
+  position: relative
+}
 .header__container > * {
   border-bottom: 1px solid #d5d3cb
 }
@@ -6284,9 +6280,11 @@ ol.listing__list .listing__box::before {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  border: none
+  border: none;
+  overflow: hidden
 }
 .header__nav {
+  max-width: 100%;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1
@@ -6304,7 +6302,10 @@ ol.listing__list .listing__box::before {
   line-height: 120%
 }
 .header__nav-item {
-  padding: 0 10px
+  padding: 0 10px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0
 }
 .header__nav-item a {
   height: 100%;
@@ -6353,14 +6354,50 @@ ol.listing__list .listing__box::before {
 .header__burger {
   display: none;
   width: 24px;
-  height: 11px;
+  height: 12px;
   margin-left: 95px;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
-  flex-shrink: 0
+  flex-shrink: 0;
+  position: relative
 }
 .header__burger.is-visible {
   display: block
+}
+.header__burger span {
+  width: 100%;
+  height: 2px;
+  display: block;
+  background: var(--accent);
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  transition: var(--transition)
+}
+.header__burger span:nth-child(2) {
+  width: 18px;
+  top: 50%;
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+  right: 0
+}
+.header__burger span:nth-child(3) {
+  width: 10px;
+  top: auto;
+  bottom: 0;
+  right: 0
+}
+.header__burger.is-active span:nth-child(1) {
+  -webkit-transform: rotate(-45deg) translateY(6px);
+  transform: rotate(-45deg) translateY(6px)
+}
+.header__burger.is-active span:nth-child(2) {
+  opacity: 0
+}
+.header__burger.is-active span:nth-child(3) {
+  width: 100%;
+  -webkit-transform: rotate(45deg) translateY(-8px);
+  transform: rotate(45deg) translateY(-8px)
 }
 .header__box {
   display: none;
@@ -9005,6 +9042,9 @@ ol.listing__list .listing__box:hover::before {
 .links__info > :last-child {
   margin-bottom: 0
 }
+.links__name {
+  white-space: pre-line
+}
 .links__text {
   color: #47535e
 }
@@ -9057,6 +9097,9 @@ ol.listing__list .listing__box:hover::before {
   .links__list--2 .links__button {
     padding: 20px;
     gap: 20px
+  }
+  .links__name {
+    white-space: normal
   }
 }
 @media (max-width:575px) {
@@ -9435,6 +9478,12 @@ input:checked ~ .form__radio-field::after {
   padding: 10px;
   box-shadow: 0 4px 15px 0 rgba(0,0,0,.25);
   background: #fff;
+  border-radius: 10px;
+  overflow: hidden
+}
+.partners__slide picture {
+  width: 100%;
+  height: 100%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -9443,9 +9492,7 @@ input:checked ~ .form__radio-field::after {
   justify-content: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center;
-  border-radius: 10px;
-  overflow: hidden
+  align-items: center
 }
 @media (max-width:767px) {
   .partners__slide {
@@ -10648,7 +10695,7 @@ input:checked ~ .form__radio-field::after {
 .history__dates-btn {
   padding-bottom: 5px;
   color: #67686b;
-  letter-spacing: -.72px;
+  letter-spacing: var(--letter-spacing);
   position: relative
 }
 .history__dates-btn.is-active {
@@ -11269,7 +11316,7 @@ input:checked ~ .form__radio-field::after {
   text-overflow: ellipsis;
   height: auto;
   word-wrap: break-word;
-  letter-spacing: -.6px;
+  letter-spacing: var(--letter-spacing);
   line-height: 140%
 }
 .books__price {
@@ -11484,7 +11531,7 @@ input:checked ~ .form__radio-field::after {
 .article__lead {
   margin-bottom: var(--gap-2);
   white-space: pre-line;
-  letter-spacing: -.72px
+  letter-spacing: var(--letter-spacing)
 }
 .article__people > * {
   margin-bottom: var(--elements-margin)
@@ -12964,7 +13011,8 @@ input:checked ~ .form__radio-field::after {
   }
 }
 .account__info .books {
-  max-width: 1220px
+  max-width: 1220px;
+  height: 100%
 }
 .account__panel {
   width: 340px;
@@ -13063,7 +13111,8 @@ input:checked ~ .form__radio-field::after {
 }
 .account__links-icon svg {
   max-width: 90%;
-  fill: var(--accent)
+  fill: var(--accent);
+  stroke: #fff
 }
 .account__links-info {
   margin-top: auto;
@@ -13193,7 +13242,7 @@ input:checked ~ .form__radio-field::after {
 }
 .account__tabs-btn {
   color: #67686b;
-  letter-spacing: -.72px;
+  letter-spacing: var(--letter-spacing);
   border-bottom: 1px solid transparent
 }
 .account__tabs-btn.is-active {
@@ -13412,6 +13461,9 @@ input:checked ~ .form__radio-field::after {
   }
   .account__text ol li::before {
     width: 15px
+  }
+  .account__tabs-btn {
+    letter-spacing: -.48px
   }
 }
 @-webkit-keyframes fadeIn {
@@ -13863,6 +13915,7 @@ input:checked ~ .form__radio-field::after {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   fill: #47535e;
+  stroke: auto;
   transition: var(--transition)
 }
 .controls__btn.is-active,
@@ -13878,7 +13931,8 @@ input:checked ~ .form__radio-field::after {
   fill: var(--accent)
 }
 .controls__btn.is-active {
-  font-weight: 700
+  font-weight: 700;
+  cursor: default
 }
 @media (max-width:1360px) and (min-width:992px) {
   .controls {
@@ -13961,7 +14015,7 @@ input:checked ~ .form__radio-field::after {
   margin-bottom: 0
 }
 .activate__title {
-  letter-spacing: -.96px
+  letter-spacing: var(--letter-spacing)
 }
 .activate__form-row {
   display: -webkit-flex;
@@ -14051,7 +14105,7 @@ input:checked ~ .form__radio-field::after {
   margin-bottom: 0
 }
 .subscription__title {
-  letter-spacing: -.96px;
+  letter-spacing: var(--letter-spacing);
   white-space: pre-line
 }
 .subscription__img {
@@ -14505,7 +14559,6 @@ input:checked ~ .form__radio-field::after {
 .webform__label-field .btn,
 .webform__label-field .card__favorite,
 .webform__label-field .card__icon,
-.webform__label-field .card__like,
 .webform__label-field .favorite-button,
 .webform__label-field .links__icon,
 .webform__label-field .pagination__button {
@@ -14527,9 +14580,6 @@ input:checked ~ .form__radio-field::after {
 .webform__label-field .card__icon:active,
 .webform__label-field .card__icon:focus,
 .webform__label-field .card__icon:hover,
-.webform__label-field .card__like:active,
-.webform__label-field .card__like:focus,
-.webform__label-field .card__like:hover,
 .webform__label-field .favorite-button:active,
 .webform__label-field .favorite-button:focus,
 .webform__label-field .favorite-button:hover,
@@ -14638,10 +14688,28 @@ input:checked ~ .form__radio-field::after {
   color: #67686b;
   font-size: 12px
 }
+.webform__label-question {
+  width: 20px;
+  height: 20px;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #999;
+  position: relative
+}
+.webform__label-question-text {
+  display: none
+}
 .webform__caption,
 .webform__options-title {
   font-size: 20px;
-  letter-spacing: -.72px
+  letter-spacing: var(--letter-spacing)
 }
 @media (min-width:360px) {
   .webform__caption,
@@ -14809,8 +14877,12 @@ input:checked ~ .form__radio-field::after {
   align-items: center;
   border-radius: var(--border-radius);
   background: #f0f0f0;
-  overflow: hidden;
-  font-size: 24px
+  overflow: hidden
+}
+.webform__options-icon svg {
+  max-width: 70%;
+  height: auto;
+  fill: #000
 }
 .webform__options-terms {
   color: #727171;
@@ -15096,7 +15168,7 @@ input:checked ~ .form__radio-field::after {
 }
 .webform__access-manage-users {
   font-size: 16px;
-  letter-spacing: -.6px
+  letter-spacing: var(--letter-spacing)
 }
 @media (min-width:360px) {
   .webform__access-manage-users {
@@ -15634,6 +15706,8 @@ input:checked ~ .form__radio-field::after {
   max-height: 100%
 }
 .goods__table-img svg {
+  width: 77%;
+  height: auto;
   fill: #47535e
 }
 .goods__table-img--large {
@@ -16073,34 +16147,13 @@ input:checked ~ .form__radio-field::after {
   width: 40px;
   height: 40px;
   background: #fff;
-  font-size: 16px
+  cursor: default
 }
-.card__icon .icon-lock {
-  font-size: 24px
-}
-.card__like {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  z-index: var(--z-index)
-}
-.card__like::after {
-  font-size: 24px
-}
-.card__like.is-active::after {
-  content: "\e912";
-  color: inherit;
-  font-size: 24px;
-  font-family: icomoon;
-  speak: none;
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: inline-block
+.card__icon:active,
+.card__icon:focus,
+.card__icon:hover {
+  background: #fff;
+  color: var(--accent)
 }
 .card__img {
   position: absolute;
@@ -16163,7 +16216,7 @@ input:checked ~ .form__radio-field::after {
   text-overflow: ellipsis;
   height: auto;
   word-wrap: break-word;
-  letter-spacing: -.6px;
+  letter-spacing: var(--letter-spacing);
   line-height: 140%
 }
 .card__price {
@@ -16324,9 +16377,6 @@ input:checked ~ .form__radio-field::after {
     height: 30px;
     font-size: 11px
   }
-  .card__icon .icon-lock {
-    font-size: 11px
-  }
   .card__table-header {
     gap: 15px
   }
@@ -16355,7 +16405,6 @@ input:checked ~ .form__radio-field::after {
   .card__text {
     margin-bottom: 5px
   }
-  .card__manage .accordion__info-button,
   .card__manage .button--icon {
     width: 100%
   }
@@ -16368,9 +16417,6 @@ input:checked ~ .form__radio-field::after {
     width: 20px;
     height: 20px;
     font-size: 7px
-  }
-  .card__icon .icon-lock {
-    font-size: 9px
   }
   .card__table {
     padding: 20px 15px
@@ -16480,7 +16526,7 @@ input:checked ~ .form__radio-field::after {
   margin-bottom: 0
 }
 .vacancy__header-name {
-  letter-spacing: -.72px;
+  letter-spacing: var(--letter-spacing);
   white-space: pre-line
 }
 .vacancy__header-right {
@@ -16516,7 +16562,7 @@ input:checked ~ .form__radio-field::after {
 }
 .vacancy__price {
   line-height: 140%;
-  letter-spacing: -.6px;
+  letter-spacing: var(--letter-spacing);
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -16562,7 +16608,7 @@ input:checked ~ .form__radio-field::after {
 }
 .vacancy__info-title {
   font-size: 14px;
-  letter-spacing: -.6px
+  letter-spacing: var(--letter-spacing)
 }
 @media (min-width:360px) {
   .vacancy__info-title {
@@ -16645,7 +16691,7 @@ input:checked ~ .form__radio-field::after {
   margin-bottom: 0
 }
 .vacancy__heading-title {
-  letter-spacing: -.72px
+  letter-spacing: var(--letter-spacing)
 }
 .vacancy__post {
   padding: 25px;
@@ -16855,7 +16901,7 @@ input:checked ~ .form__radio-field::after {
   display: flex
 }
 .filter__name {
-  letter-spacing: -.72px
+  letter-spacing: var(--letter-spacing)
 }
 .filter__selection > * {
   margin-bottom: 10px
@@ -16948,7 +16994,7 @@ input:checked ~ .form__radio-field::after {
   color: var(--accent)
 }
 .find__name {
-  letter-spacing: -.72px
+  letter-spacing: var(--letter-spacing)
 }
 .find__table > * {
   margin-bottom: 7px
@@ -17264,7 +17310,7 @@ input:checked ~ .form__radio-field::after {
   margin-bottom: 0
 }
 .overview__names {
-  letter-spacing: -.6px;
+  letter-spacing: var(--letter-spacing);
   color: rgba(25,28,35,.6)
 }
 @media (max-width:1200px) {

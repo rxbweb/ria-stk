@@ -37,7 +37,7 @@
           <div class="header__top"><a class="header__logo" href="/"><img class="header__logo-main" src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img class="header__logo-vok" src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
             <div class="header__manage">
               <div class="header__search search">
-                <button class="search__button">
+                <button class="search__button" aria-label="кнопка поиска">
                   <svg width="26" height="26">
                     <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
                   </svg>
@@ -78,7 +78,7 @@
               </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#">
                 <svg width="20" height="20">
                   <use href="images/sprites/main.stack.svg#svg-icon-user"></use>
-                </svg><span>Войти</span></a><a class="header__toggle button button--icon" href="#"><i class="icon"><span></span></i></a>
+                </svg><span>Войти</span></a><a class="header__toggle button" href="#"><i class="icon"><span></span></i></a>
             </div>
           </div>
           <div class="header__bottom">
@@ -86,7 +86,7 @@
               <ul class="header__nav-list">
                 <li class="header__nav-item"><a class="is-icon" href="#">
                     <svg width="26" height="26">
-                      <use href="images/sprites/main.stack.svg#svg-text"></use>
+                      <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
                     </svg><span>Подписка</span></a></li>
                 <li class="header__nav-item"><a href="#">Журналы</a></li>
                 <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
@@ -98,7 +98,7 @@
                 <li class="header__nav-item"><a href="#">Контакты</a></li>
               </ul>
             </nav>
-            <button class="header__burger"><img src="images/icons/burger.svg" alt="открыть меню" width="24" height="11"></button>
+            <button class="header__burger" aria-label="открыть дополнительное меню"><span></span><span></span><span></span></button>
           </div>
           <div class="header__box">
             <ul class="header__box-nav"></ul>
@@ -111,7 +111,7 @@
         <div class="menu__container container">
           <div class="menu__manage">
             <div class="menu__search search">
-              <button class="search__button">
+              <button class="search__button" aria-label="кнопка поиска">
                 <svg width="26" height="26">
                   <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
                 </svg>
@@ -143,7 +143,7 @@
             <ul class="menu__nav-list">
               <li><a class="is-icon" href="#">
                   <svg width="22" height="22">
-                    <use href="images/sprites/main.stack.svg#svg-text"></use>
+                    <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
                   </svg><span>Подписка</span></a></li>
               <li><a href="#">Журналы</a></li>
               <li><a href="#">Спецвыпуски</a></li>
@@ -258,8 +258,8 @@
                     <h2 class="policy__title">Редакционная политика</h2>
                     <div class="policy__text">
                       <p>Издатель, редакционная коллегия и редакция журнала придерживаются политики открытого доступа, предполагающей размещение опубликованных текстов статей на сайте журнала, а также в электронных библиотеках и наукометрических базах, с которыми сотрудничает журнал.</p>
-                    </div><a class="button button--icon" href="#"><span>Подробнее</span><span class="button__icon">
-                              <svg width="22" height="22">
+                    </div><a class="button" href="#"><span>Подробнее</span><span class="button__icon">
+                              <svg width="17" height="17">
                                 <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                               </svg></span></a>
                   </div>
@@ -326,15 +326,15 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="edition__manage"><a class="button button--icon" href="#"><span>Подробнее</span><span class="button__icon">
-                                <svg width="22" height="22">
+                    <div class="edition__manage"><a class="button" href="#"><span>Подробнее</span><span class="button__icon">
+                                <svg width="17" height="17">
                                   <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                 </svg></span></a>
                     </div>
                   </div>
                 </div>
-                <div class="edition__controls"><a class="button button--icon" href="#"><span>Подробнее</span><span class="button__icon">
-                            <svg width="22" height="22">
+                <div class="edition__controls"><a class="button" href="#"><span>Подробнее</span><span class="button__icon">
+                            <svg width="17" height="17">
                               <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                             </svg></span></a>
                 </div>
@@ -358,10 +358,10 @@
                 <div class="status__row">
                   <div class="status__info">
                     <h2 class="status__title">Хотите подтвердить свой экспертный статус?</h2>
-                    <p class="status__text">Станьте автором журналов РИА «Стандарты и качество». Ждем как опытных, так и начинающих специалистов. Важна польза и подача материала. Приоритет отдается статьям практической направленности.</p><a class="button button--icon" href="#"><span>Подробнее</span><span class="button__icon">
-                        <svg width="5" height="9">
-                          <use href="images/sprites/main.stack.svg#svg-arrow-small-right"></use>
-                        </svg></span></a>
+                    <p class="status__text">Станьте автором журналов РИА «Стандарты и качество». Ждем как опытных, так и начинающих специалистов. Важна польза и подача материала. Приоритет отдается статьям практической направленности.</p><a class="button" href="#"><span>Подробнее</span><span class="button__icon">
+                              <svg width="17" height="17">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                              </svg></span></a>
                   </div>
                   <div class="status__img">
                           <picture>
