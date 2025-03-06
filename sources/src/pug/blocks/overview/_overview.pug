@@ -10,10 +10,10 @@ section.section.section--overview
                   h2.overview__title Содержание выпуска
                   .overview__manage
                      a.overview__btn(href="#")
-                        i.icon.icon-eye
+                        +svg('icon-eye', '', 38, 26)
                         span Статья в открытом доступе
                      a.overview__btn(href="#")
-                        i.icon.icon-lock
+                        +svg('icon-lock-03', '', 28, 32)
                         span Статья доступна по подписке
                .overview__main
                   +overviewList(overview01)

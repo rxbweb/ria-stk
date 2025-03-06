@@ -87,8 +87,5 @@ section.section
                                     .books__bottom
                                        p.books__price= book.price
                                        .books__manage
-                                          a.button.button--slim(href="#")
-                                             span.button__text-desktop Купить книгу
-                                             span.button__text-mob В корзину
-                                             i.icon.icon-cart
+                                          +button-icon('link', 'В корзину', 'button--slim', 'icon-cart')
                                           +button-outline('link', 'Купить в 1 клик')

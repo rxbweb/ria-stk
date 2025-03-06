@@ -9,15 +9,15 @@ mixin goodsList(items)
                if item.imgLarge
                   .goods__table-img.goods__table-img--large
                      if item.img
-                        +picture(item.img, false, item.name, 80, 80)
+                        +picture-simple(item.img, false, item.name, 80, 80)
                else if item.imgDisk
-                  .goods__table-img
+                  .goods__table-img.goods__table-img--disk
                      if item.img
-                        +picture(item.img, false, item.name, 80, 80)
+                        +picture-simple(item.img, false, item.name, 60, 60)
                else
                   if item.img
                      .goods__table-img
-                        img(src=item.img, alt=item.name width="50" height="68")
+                        +picture-simple(item.img, false, item.name, 50, 68)
                   else
                      .goods__table-img
                         svg(width="52" height="52")
@@ -40,7 +40,7 @@ mixin goodsList(items)
                else if item.controls
                   .goods__table-controls
                      button.goods__table-controls-button(aria-label="уменьшить количество этого продукта") -
-                     .goods__table-controls-count(aria-label="количество этого продукта") #{item.controls}
+                     .goods__table-controls-count #{item.controls}
                      button.goods__table-controls-button(aria-label="увеличить количество этого продукта") +
                else
                   p.goods__table-count -

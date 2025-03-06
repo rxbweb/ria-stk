@@ -1,3 +1,4 @@
+include ../../../mixins/_mixins
 include ../data/_linksData
 
 mixin linksList(items, className)
@@ -10,3 +11,4 @@ mixin linksList(items, className)
                   if link.text
                      p.links__text!=link.text
                .links__icon
+                  +svg('icon-arrow-right-large', '', 24, 24)

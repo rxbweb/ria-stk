@@ -7,9 +7,9 @@ mixin overviewList(list)
             .overview__top
                if overview.tag
                   .tags
-                     a.tags__button(href="#")= overview.tag
+                     .tags__button= overview.tag
                .overview__label
-                  i.icon.icon-lock
+                  +svg('icon-lock-03', '', 22, 26)
             if overview.name
                h3.overview__name= overview.name
             if overview.authors
