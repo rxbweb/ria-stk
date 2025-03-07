@@ -1,0 +1,7 @@
+mixin webformAgree()
+   .agree
+      label.agree__label
+         input(type="checkbox" name="form-agree" required)
+         span.agree__checkbox
+         span.agree__text Я согласен на #[a(href="#") обработку персональных данных]
+      span.agree__error Обязательное поле
