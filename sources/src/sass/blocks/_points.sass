@@ -1,0 +1,59 @@
+.points
+   &__main
+      display: flex
+      gap: var(--gap-large)
+   &__info
+      @include margin-bottom(var(--gap))
+      flex-basis: 39%
+      flex-shrink: 0
+      flex-grow: 1
+   &__title
+      @extend .title
+   &__box
+      @extend .gray-box
+      padding: 25px
+      flex-grow: 1
+   &__list
+      @include margin-bottom(18px)
+   &__item
+      @extend .title
+      @include fluidFontSize(14px, 20, 360px, 1920px, 16px)
+      padding-left: 32px
+      padding-bottom: 15px
+      letter-spacing: -0.6px
+      border-bottom: 1px solid #CDCDCD
+      position: relative
+      line-height: 140%
+      &:last-child
+         padding-bottom: 0
+         border-bottom: none
+      &::before
+         --size: 16px
+         content: ''
+         position: absolute
+         top: 4px
+         left: 0
+         display: block
+         width: var(--size)
+         height: var(--size)
+         border-radius: 2px
+         background: var(--accent)
+   @include xl
+      &__main
+         display: block
+         @include margin-bottom(var(--gap))
+   @include ms
+      &__box
+         padding: 20px
+   @include sm
+      &__list
+         @include margin-bottom(12px)
+      &__box
+         padding: 15px
+   @include xs
+      &__list
+         @include margin-bottom(10px)
+      &__box
+         padding: 10px
+      &__item
+         letter-spacing: -0.42px
