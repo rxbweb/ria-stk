@@ -1,0 +1,12 @@
+include data/_figuresData
+include mixins/_figuresList
+
+section.section.section--figures
+   .section__wrapper.container
+      .section__header
+         .section__header-row
+            h2.section__header-title Постоянные рубрики
+      .section__content
+         .figures
+            .figures__inner
+               +figuresList(figures02, 15)
