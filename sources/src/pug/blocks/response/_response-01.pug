@@ -1,0 +1,39 @@
+include ../../mixins/_mixins
+
+section.section.section--response
+   .section__wrapper.container
+      .section__header
+         .section__header-row
+            h2.section__header-title #{'Напишите нам, и мы составим'}
+               |
+               | индивидуальную подборку для вас
+      .section__content
+         .response
+            .response__main
+               form.response__form.form(action="#" data-validate-form)
+                  .form__main
+                     .form__top
+                        .form__box
+                           label.form__label.form__label--half
+                              input.form__input(type="text" placeholder="Имя" name="form-name" required)
+                              span.form__error Обязательное поле
+                           label.form__label.form__label--half
+                              input.form__input(type="text" placeholder="Фамилия")
+                           label.form__label
+                              input.form__input(type="email" placeholder="E-mail" name="form-email" required)
+                              span.form__error Обязательное поле
+                           label.form__label
+                              textarea.form__textarea(placeholder="Текст сообщения")
+                     .form__middle
+                        .agree
+                           label.agree__label
+                              input(type="checkbox" name="form-agree" required)
+                              span.agree__checkbox
+                              span.agree__text
+                                 | Я согласен с 
+                                 a(href="#") Правилами обработки и хранения персональных данных
+                           span.agree__error Обязательное поле
+                     .form__bottom
+                        +button('Подписаться', 'form__button', '', false)
+               .response__img
+                  +picture("images/response/response.jpg", false, "Картинка инвидидуальной подборки", 700, 448)
