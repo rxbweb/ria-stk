@@ -1,12 +1,17 @@
 .accordion
+   &__inner
+      @include margin-bottom(--gap-2)
    &__row
-      display: grid
-      grid-template-columns: minmax(20%, var(--block-width)) 1fr
+      display: flex
       gap: var(--gap)
-   &__left,
-   &__right
-      flex-grow: 1
+   &__picture,
+   &__section
       overflow: hidden
+   &__picture
+      flex-basis: var(--block-width)
+      flex-shrink: 0
+   &__section
+      flex-grow: 1
    &__img
       background: url(../images/interest/interest.jpg) no-repeat center / cover
       @include img-cover(94%, var(--border-radius-15))
@@ -41,6 +46,15 @@
       &-title
          @extend .title
          @include fluidFontSize(24px, 40px, 360px, 1920px, 32px)
+      .badge
+         transition: var(--transition)
+         svg
+            fill: var(--accent)
+            transition: var(--transition)
+         .is-active &
+            background: var(--accent)
+            svg
+               fill: white
    &__wrapper
       display: none
    &__content
@@ -77,7 +91,15 @@
          @include margin-bottom(20px)
       &-tag
          @extend .button
-         @extend .button--simple
+         padding: 8px 15px
+         background: rgba(205, 205, 205, 0.28)
+         color: var(--accent)
+         font-weight: 400
+         &:hover,
+         &:focus,
+         &:active
+            background: var(--accent)
+            color: #fff
       &-list
          @include margin-bottom(15px)
       &-button
@@ -88,17 +110,26 @@
          padding-bottom: 4px
          border-bottom: 1px solid #cdcdcd
          transition: var(--transition)
-         .icon
+         &-icon
             width: 20px
             height: 20px
-            font-size: 10px
             transition: var(--transition)
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 3px
+            background: #fff
+            color: var(--accent)
          &:hover,
          &:focus
             border-color: var(--accent)
-            .icon
-               background: var(--accent)
-               color: #fff
+            .accordion__info-button
+               &-icon
+                  background: var(--accent)
+                  color: #fff
+   &__text
+      @extend .fs-18
+      color: var(--black)
    &--secondary
       .accordion
          &__button
@@ -113,14 +144,31 @@
                background: #F3F3F3
          &__content
             padding: 20px 0 40px
+   &--third
+      --accordion-padding: var(--gap-2)
+      width: 100%
+      max-width: 1080px
+      margin: 0 auto
+      .accordion
+         &__list
+            @include margin-bottom(0)
+         &__item
+            &:first-child
+               border-top: 1px solid #d9d9d9
+         &__button
+            padding: var(--accordion-padding) 0
+            &-title
+               @include fluidFontSize(16px, 24px, 360px, 1920px, 16px)
+         &__content
+            padding-bottom: var(--accordion-padding)
    @include xl
       &__info
          grid-template-columns: 1fr
          gap: var(--gap)
    @include md
       &__row
-         grid-template-columns: 1fr
-      &__left
+         flex-direction: column
+      &__picture
          display: none
       &__list
          @include margin-bottom(0)
@@ -146,6 +194,8 @@
                padding: 0 10px
    @include xs
       --magazines-padding: 10px
+      &--third
+         --accordion-padding: 15px
 
 .section
    &--accordion
