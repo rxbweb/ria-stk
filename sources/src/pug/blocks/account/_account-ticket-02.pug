@@ -8,7 +8,7 @@ include ../../mixins/_mixins
          title: 'О повышении качества сертификационных испытаний',
       },
       {
-         img: 'images/card/card-03.jpg',
+         img: 'images/card/card-09.jpg',
          text: '«Контроль качества продукции», сентябрь 2001',
          title: 'Колбасные изделия: проблемы идентификации и подтверждения соответствия',
       },
@@ -30,77 +30,39 @@ section.section.section--account
                         p Приобретая абонемент, вы получаете полный доступ к фонду электронной библиотеки на ограниченный период времени. Абонемент будет выгоден при подготовке дипломных и научных работ, лекций и презентаций.
                      .account__card
                         h3.account__caption Мои абонементы
-                        .card
-                           .card__table
-                              .card__table-header
-                                 .card__table-col
-                                    p.card__table-detail Доступен до
-                                    p.card__table-primary  
-                                       time(datetime="2024-12-01") 1 декабря 2024
-                                 .card__table-col
-                                    p.card__table-detail Скачано статей
-                                    p.card__table-primary 5 / 10
-                                 .card__table-col
-                                    +button('Продлить абонемент', '', '')
-                              .card__table-section
-                                 h3.card__table-title Статьи
-                                 .card__table-swiper
-                                    .swiper-wrapper
-                                       - for (let i = 0; i < 4; i++)
-                                          each card in accountCard01
-                                             .swiper-slide
-                                                .card__item
-                                                   .card__block
-                                                      .card__box
-                                                         .card__icon
-                                                            i.icon.icon-eye
-                                                         .card__img
-                                                            +picture(card.img, false, card.title, 380, 380)
-                                                      .card__info
-                                                         p.card__text= card.text
-                                                         h3.card__name= card.title
-                                                         .card__manage
-                                                            a.button.button--slim(href="#")
-                                                               span.button__text-desktop Читать статью
-                                                               span.button__text-mob В корзину
-                                                               i.icon.icon-arrow-right
-                                    +swiperControls()
-
-                        .card
-                           .card__table
-                              .card__table-header
-                                 .card__table-col
-                                    p.card__table-detail Доступен до
-                                    p.card__table-primary  
-                                       time(datetime="2024-12-01") 1 декабря 2024
-                                 .card__table-col
-                                    p.card__table-detail Скачано статей
-                                    p.card__table-primary 5 / 10
-                                 .card__table-col
-                                    +button('Продлить абонемент', '', '')
-                              .card__table-section
-                                 h3.card__table-title Статьи
-                                 .card__table-swiper
-                                    .swiper-wrapper
-                                       - for (let i = 0; i < 4; i++)
-                                          each card in accountCard01
-                                             .swiper-slide
-                                                .card__item
-                                                   .card__block
-                                                      .card__box
-                                                         .card__icon
-                                                            i.icon.icon-eye
-                                                         .card__img
-                                                            +picture(card.img, false, card.title, 380, 380)
-                                                      .card__info
-                                                         p.card__text= card.text
-                                                         h3.card__name= card.title
-                                                         .card__manage
-                                                            a.button.button--slim(href="#")
-                                                               span.button__text-desktop Читать статью
-                                                               span.button__text-mob В корзину
-                                                               i.icon.icon-arrow-right
-                                    +swiperControls()
+                        - for (let i = 0; i < 2; i++)
+                           .card
+                              .card__table
+                                 .card__table-header
+                                    .card__table-col
+                                       p.card__table-detail Доступен до
+                                       p.card__table-primary  
+                                          time(datetime="2024-12-01") 1 декабря 2024
+                                    .card__table-col
+                                       p.card__table-detail Скачано статей
+                                       p.card__table-primary 5 / 10
+                                    .card__table-col
+                                       +button('Продлить абонемент', '', '')
+                                 .card__table-section
+                                    h3.card__table-title Статьи
+                                    .card__table-swiper
+                                       .swiper-wrapper
+                                          - for (let i = 0; i < 4; i++)
+                                             each card in accountCard01
+                                                .swiper-slide
+                                                   .card__item
+                                                      .card__block
+                                                         .card__box
+                                                            .card__icon
+                                                               +svg('icon-eye', '', 28, 18)
+                                                            .card__img
+                                                               +picture(card.img, false, card.title, 380, 380)
+                                                         .card__info
+                                                            p.card__text= card.text
+                                                            h3.card__name= card.title
+                                                            .card__manage
+                                                               +button-icon('link', 'Читать статью', 'button--slim')
+                                       +swiperControls()
 
                   .account__panel
                      include ../spotlight/_spotlight-02
