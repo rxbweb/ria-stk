@@ -1,0 +1,17 @@
+extends base/_layout
+block head
+   title Часто задаваемые вопросы
+block page
+
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Часто задаваемые вопросы' }
+   ])
+
+   include blocks/accordion/_accordion-02
+
+   include blocks/books/_books-15
+
+   include blocks/readers/_readers
+
+   include blocks/contacts/_contacts
