@@ -1,0 +1,17 @@
+extends base/_layout
+block head
+   title Архив мероприятий
+block page
+
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Мероприятия' },
+   ])
+
+   include blocks/details/_details-04
+   
+   include blocks/details/_details-05
+
+   include blocks/books/_books-13
+
+   include blocks/contacts/_contacts
