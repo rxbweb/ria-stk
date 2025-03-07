@@ -1,0 +1,15 @@
+mixin webformControls(type = 'default')
+      .webform__access-col
+         .webform__access-row
+            p.webform__access-title Действия
+            .webform__access-controls
+               button.webform__access-btn(aria-label="изменить данные")
+                  +svg('icon-pencil', '', 16, 16)
+               if type === 'default'
+                  button.webform__access-btn(aria-label="заблокировать данные")
+                     +svg('icon-lock-02', '', 16, 16)
+               else
+                  button.webform__access-btn(aria-label="разблокировать данные")
+                     +svg('icon-lock-01', '', 16, 16)
+               button.webform__access-btn(aria-label="удалить данные")
+                  +svg('icon-delete', '', 22, 22)
