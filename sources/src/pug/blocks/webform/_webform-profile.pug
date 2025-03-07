@@ -1,0 +1,273 @@
+include ../../mixins/_mixins
+include mixins/_webformLabel
+include mixins/_webformTextarea
+include mixins/_webformPayment
+include mixins/_webformDelivery
+include mixins/_webformAgree
+include mixins/_webformFile
+include mixins/_webformEmpty
+include mixins/_webformTabs
+include mixins/_webformToggle
+include mixins/_webformControls
+
+-
+   const webformAccessUsers = [
+      {
+         name: 'Семенов Семен Семенович',
+         email: 'semen@mail.ru',
+         isBlocked: false,
+      },
+      {
+         name: 'Борисов Борис Борисович',
+         email: 'boris@mail.ru',
+         isBlocked: true,
+      },
+      {
+         name: 'Александрова Александра Александровна',
+         email: 'alex@mail.ru',
+         isBlocked: false,
+      },
+      {
+         name: 'Евгеньева Евгения Евгеньевна',
+         email: 'eugenia@mail.ru',
+         isBlocked: false,
+      },
+      {
+         name: 'Дмитриев Дмитрий Дмитриевич',
+         email: 'dmitry@mail.ru',
+         isBlocked: false,
+      },
+   ]
+
+mixin webformAccessItem(users)
+   each user in users
+      li.webform__access-item
+         .webform__access-col
+            p.webform__access-title ФИО
+            p.webform__access-info(class=(user.isBlocked ? 'is-blocked' : ''))= user.name
+         .webform__access-col
+            p.webform__access-title Email
+            p.webform__access-info= user.email
+         .webform__access-col
+            p.webform__access-title Пароль
+            p.webform__access-info ********
+         if user.isBlocked
+            +webformControls('secondary')
+         else
+            +webformControls()
+
+.accordion
+   ul.accordion__list
+      li.accordion__item
+         a.accordion__button(href="#")
+            .accordion__button-name
+               h3.accordion__button-title Персональные данные
+            .accordion__button-plus
+               img(src="images/icons/plus.svg", alt="раскрыть информацию" width="36" height="36")
+         .accordion__wrapper
+            .accordion__content
+               .webform
+                  .webform__layout
+                     .webform__area
+                        .webform__wrapper
+                           .webform__content
+                              +webformTabs()
+                              .webform__section.tabs-content(data-tabs="webform-01")
+                                 form.webform__form.tabs-item.is-active(action="#" data-tabs="tab1" data-validate-form)
+                                    .webform__body
+                                       .webform__box
+                                          +webformLabel('Фамилия', '', 'text', 'Фамилия')
+                                          +webformLabel('Имя', '', 'text', 'Имя')
+                                          +webformLabel('Отчество', '', 'text', 'Отчество')
+                                          +webformLabel('Email', 'Обязательное поле', 'email', 'Email')
+                                          +webformLabel('Логин', 'Обязательное поле', 'text', 'Логин', '', 'webform-login')
+                                 form.webform__form.tabs-item(action="#" data-tabs="tab2" data-validate-form)
+                                    .webform__body
+                                       .webform__box
+                                          +webformLabel('Фамилия', '', 'text', 'Фамилия')
+                                          +webformLabel('Имя', '', 'text', 'Имя')
+                                          +webformLabel('Отчество', '', 'text', 'Отчество')
+                                          +webformLabel('Email', 'Обязательное поле', 'email', 'Email')
+                                          label.webform__label
+                                             span.webform__label-row
+                                                span.webform__label-title Логин
+                                                span.webform__label-error Обязательное поле
+                                             span.webform__label-field
+                                                input.webform__label-input(type="text" placeholder="Логин" name="login" minlength="3" required) 
+                                             span.webform__label-row
+                                                span.webform__label-note Минимум 3 символа
+                                       h3.webform__caption Реквизиты Юридического лица
+                                       .webform__box
+                                          +webformLabel('ИНН', 'Обязательное поле', 'text', 'XXXXXXXXXX')
+                                          +webformEmpty()
+                                          +webformEmpty()
+                                          +webformLabel('Название компании', '', 'text', 'Название компании')
+                                          +webformLabel('Юридический адрес', '', 'text', 'Юридический адрес', 'webform__label--large')
+                                          +webformLabel('КПП', '', 'text', 'КПП')
+                                          +webformLabel('Телефон', '', 'tel', 'Телефон')
+                                          +webformLabel('Email', '', 'email', 'Email')
+                                          +webformLabel('Контактное лицо', '', 'text', 'ФИО контактного лица')
+                                          +webformLabel('Почтовый адрес', '', 'text', 'Почтовый адрес', 'webform__label--large')
+                                       .webform__footer
+                                          +button-icon('button', 'Активация аккаунта')
+
+                     .webform__area
+                        .webform__toggle.is-active
+                           h2.webform__name Личные данные
+                           .webform__close
+                        .webform__wrapper
+                           .webform__content
+                              .webform__section
+                                 form.webform__form.tabs-item.is-active(action="#" data-tabs="tab1" data-validate-form)
+                                    .webform__body
+                                       .webform__box
+                                          +webformLabel('Телефон', '', 'tel', 'Телефон')
+                                          +webformLabel('Пол', '', 'text', 'Не выбран')
+                                          +webformLabel('Дата рождения', '', 'text', 'DD.MM.YYYY', '', 'date')
+                                       h3.webform__caption Почтовый адрес
+                                       .webform__box
+                                          +webformLabel('Страна', '', 'text', 'Страна')
+                                          +webformLabel('Область/Край', '', 'text', 'Область/Край')
+                                          +webformLabel('Город', '', 'text', 'Город')
+                                          +webformLabel('Почтовый индекс', '', 'text', 'Введите индекс')
+                                          +webformLabel('Улица, дом', '', 'text', 'Название улицы и номер дома')
+                                          +webformLabel('Почтовый ящик', '', 'text', 'Введите почтовый ящик')
+                                       +webformTextarea('Дополнительные заметки', '', 'Комментарий к заказу')
+
+                     .webform__area
+                        .webform__toggle.is-active
+                           h2.webform__name Информация о работе
+                           .webform__close
+                        .webform__wrapper
+                           .webform__content
+                              .webform__section
+                                 form.webform__form.tabs-item.is-active(action="#" data-tabs="tab1" data-validate-form)
+                                    .webform__body
+                                       .webform__box.webform__box--2
+                                          +webformLabel('Наименование компании', '', 'text', 'Введите наименование', 'webform__label--middle')
+                                          +webformLabel('Департамент/Отдел', '', 'text', 'Введите департамент или отдел', 'webform__label--middle')
+                                       .webform__box
+                                          +webformLabel('Должность', '', 'text', 'Введите должность')
+                                          +webformLabel('Направления деятельности', '', 'text', 'Направления деятельности')
+                                          +webformLabel('Телефон', '', 'tel', '+7 XXX XXX XXXX')
+                                       h3.webform__caption Рабочий адрес
+                                       .webform__box
+                                          +webformLabel('Страна', '', 'text', 'Страна')
+                                          +webformLabel('Область/Край', '', 'text', 'Область/Край')
+                                          +webformLabel('Город', '', 'text', 'Город')
+                                          +webformLabel('Почтовый индекс', '', 'text', 'Введите индекс')
+                                          +webformLabel('Улица, дом', '', 'text', 'Название улицы и номер дома')
+                                          +webformLabel('Почтовый ящик', '', 'text', 'Введите почтовый ящик')
+                                       +webformTextarea('Дополнительные заметки', '', 'Дополнительная информация о рабочем адресе')
+
+                     .webform__area
+                        .webform__toggle.is-active
+                           h2.webform__name Сменить пароль
+                           .webform__close
+                        .webform__wrapper
+                           .webform__content
+                              .webform__section
+                                 form.webform__form.tabs-item.is-active(action="#" data-tabs="tab1" data-validate-form)
+                                    .webform__body
+                                       .webform__box
+                                          label.webform__label
+                                             span.webform__label-row
+                                                span.webform__label-title Новый пароль
+                                             span.webform__label-field.webform__label-field--icon
+                                                input.webform__label-input(type="password" placeholder="Пароль")
+                                                span.webform__label-icon.webform__label-icon--eye.button-eye
+                                                   +svg('icon-eye', 'svg-icon-eye', 22, 16)
+                                                   +svg('icon-eye-not', 'svg-icon-eye-not', 24, 18)
+                                          label.webform__label
+                                             span.webform__label-row
+                                                span.webform__label-title Подтвердите новый пароль
+                                             span.webform__label-field.webform__label-field--icon
+                                                input.webform__label-input(type="password" placeholder="Пароль")
+                                                span.webform__label-icon.webform__label-icon--eye.button-eye
+                                                   +svg('icon-eye', 'svg-icon-eye', 22, 16)
+                                                   +svg('icon-eye-not', 'svg-icon-eye-not', 24, 18)
+                                             span.webform__label-row
+                                                span.webform__label-error Пароли не совпадают
+
+                     .webform__footer
+                        +button('Сохранить изменения', 'webform__button', '', false)
+
+      li.accordion__item
+         a.accordion__button(href="#")
+            .accordion__button-name
+               h3.accordion__button-title Управление доступами
+            .accordion__button-plus
+               img(src="images/icons/plus.svg", alt="раскрыть информацию" width="36" height="36")
+         .accordion__wrapper
+            .accordion__content
+               .webform
+                  form.webform__form(action="#" data-validate-form)
+                     .webform__body
+                        .webform__access
+                           .webform__access-header
+                              .webform__access-col
+                                 p.webform__access-heading ФИО
+                              .webform__access-col
+                                 p.webform__access-heading Email
+                              .webform__access-col
+                                 p.webform__access-heading Пароль
+                              .webform__access-col
+                                 p.webform__access-heading Действия
+                           ul.webform__access-list
+                              li.webform__access-item
+                                 .webform__access-col
+                                    +webformLabel('ФИО', '', 'text', 'Иванов Иван Иванович')
+                                 .webform__access-col
+                                    +webformLabel('Email', '', 'email', 'Email')
+                                 .webform__access-col
+                                    label.webform__label
+                                       span.webform__label-row
+                                          span.webform__label-title Пароль
+                                       span.webform__label-field.webform__label-field--icon
+                                          input.webform__label-input(type="password" placeholder="Пароль")
+                                          span.webform__label-icon.webform__label-icon--eye.button-eye
+                                             +svg('icon-eye', 'svg-icon-eye', 22, 16)
+                                             +svg('icon-eye-not', 'svg-icon-eye-not', 24, 18)
+                                 .webform__access-col
+                                    .webform__access-settings
+                                       button.webform__access-settings-btn.webform__access-settings-btn--secondary(title="Отменить")
+                                          +svg('icon-close', '', 22, 22)
+                                          span Отменить
+                                       button.webform__access-settings-btn(title="Сохранить")
+                                          +svg('icon-checkmark', 'svg-icon-checkmark', 22, 22)
+                                          span Сохранить
+                              +webformAccessItem(webformAccessUsers)
+                           .webform__access-manage
+                              .webform__access-manage-info
+                                 .badge
+                                    +svg('badge-24', '', 33, 28)
+                                 .webform__access-manage-box
+                                    p.webform__access-manage-users 6 из 10 пользователей
+                                    +button-outline('link', 'Докупить доступы')
+                              +button-icon('button', 'Новый пользователь', 'svg-icon-plus', 'icon-plus')
+
+      li.accordion__item
+         a.accordion__button(href="#")
+            .accordion__button-name
+               h3.accordion__button-title Уведомления и подписки
+            .accordion__button-plus
+               img(src="images/icons/plus.svg", alt="раскрыть информацию" width="36" height="36")
+         .accordion__wrapper
+            .accordion__content
+               .webform
+                  form.webform__form(action="#" data-validate-form)
+                     .webform__body
+                        .webform__block
+                           .webform__part
+                              .webform__selection
+                                 +agree('Отправлять уведомления на почту', '', 'form-agree')
+                                 +agree('Отправлять уведомления на телефон', '', 'form-agree')
+                                 +agree('Отправлять уведомления в браузер (Push-уведомления)', '', 'form-agree')
+                           .webform__part
+                              h3.webform__caption Ваши подписки
+                              .webform__selection
+                                 +agree('Подписка на акции', '', 'form-agree')
+                                 +agree('Новые материалы', '', 'form-agree')
+                                 +agree('Quality News', '', 'form-agree')
+                                 +agree('Информирование об окончании подписки / абонементного доступа', '', 'form-agree')
+                           +button('Сохранить изменения', '', '', false)
