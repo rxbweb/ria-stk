@@ -1,0 +1,81 @@
+include ../../mixins/_mixins
+
+-
+   const details04 = [
+      {
+         img: 'images/details/details-events-01.jpg',
+         title: 'Институт технического регулирования, стандартизации и сертификации',
+         text: [
+            'Институт технического регулирования, стандартизации и сертификации',
+         ],
+         tags: [
+            'Мероприятие',
+         ],
+         description: '13.01.2025 — \n 14.01.2025',
+      },
+      {
+         img: 'images/details/details-events-02.jpg',
+         title: 'VIII Всероссийская научно-практическая конференция «Практика разработки и внедрения системы менеджмента качества в медицинской организации»',
+         text: [
+            'Место проведения: город Красноярск',
+         ],
+         tags: [
+            'Мероприятие',
+         ],
+         description: '18-19 \n сентября 2024',
+      },
+      {
+         img: 'images/details/details-events-03.jpg',
+         title: 'III Научно-практическая конференция \n «Территория энергетического обмена»',
+         text: [
+            'Место проведения: город Москва',
+         ],
+         tags: [
+            'Мероприятие',
+         ],
+         description: '25 сентября 2024',
+      },
+      {
+         img: 'images/details/details-events-04.jpg',
+         title: 'Российский диагностический саммит',
+         text: [
+            'Место проведения: город Москва',
+         ],
+         tags: [
+            'Мероприятие',
+         ],
+         description: '02-04 \n октября 2024',
+      },
+   ]
+
+section.section.section--details
+      .section__wrapper.container
+         .section__header
+            .section__header-row
+               h2.section__header-title Ближайшие мероприятия
+               +button-icon('link', 'Все мероприятия', 'section__header-button')
+         .section__content
+            .details
+               .details__inner
+                  ul.details__list
+                     each detail in details04
+                        li.details__list-item
+                           a.details__list-box(href="#")
+                              if detail.img
+                                 .details__list-img
+                                    +picture(detail.img, false, detail.title, 520, 292)
+                              .details__list-info
+                                 if detail.description
+                                    p.details__list-description= detail.description
+                                 if detail.title
+                                    h3.details__list-title= detail.title
+                                 if detail.text
+                                    .details__list-text
+                                       each text in detail.text
+                                          p= text
+                                 if detail.tags
+                                    each tag in detail.tags
+                                       .details__list-tags.tags
+                                          .tags__button= tag
+                                 +button-outline('div', 'Подробнее', 'details__list-button')
+                  include ../pagination/_pagination

@@ -1,0 +1,39 @@
+include ../../mixins/_mixins
+
+-
+   const details07 = [
+      {
+         src: "images/details/details-05.jpg",
+         title: "Для руководителей",
+         text: "Деловое совершенство и управление персоналом, бизнес-образование и конкурентоспособность, бережливое производство и лидерство, корпоративная социальная ответственность и модернизация, Таможенный союз и ВТО.",
+      },
+      {
+         src: "images/details/details-06.jpg",
+         title: "Для специалистов в области качества",
+         text: "Системы менеджмента качества и сертификация, технические регламенты и стандартизация, бенчмаркинг и управление качеством, оценка соответствия и безопасность.",
+      },
+      {
+         src: "images/details/details-09.jpg",
+         title: "Для каждого, кого волнуют вопросы качества",
+         text: "Качество товаров и услуг, качество бензина и электронные госуслуги, «зеленые технологии» и качество продуктов питания, борьба с контрафактом и качество автодорог; качество жизни, включающее вопросы экологии, осознанного потребления, социальной сферы, традиций, здорового образа жизни.",
+      },
+   ]
+
+section.section.section--details
+      .section__wrapper.container
+         .section__header
+            .section__header-row
+               h2.section__header-title Для кого
+         .section__content
+            .details
+               .details__inner
+                  ol.details__list.details__list--nums.details__list--2
+                     each detail in details07
+                        li.details__list-item
+                           a.details__list-box(href="#")
+                              .details__list-img
+                                 img(src=detail.src, alt=detail.title, width="380", height="210")
+                              .details__list-info
+                                 h3.details__list-title #{detail.title}
+                                 .details__list-text
+                                    p #{detail.text}
