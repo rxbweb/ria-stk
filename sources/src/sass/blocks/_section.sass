@@ -2,6 +2,9 @@
    padding: var(--section-padding) 0
    position: relative
    overflow: hidden
+   &:has(.sidebar)
+      position: relative
+      z-index: var(--z-index-900)
    .breadcrumbs
       &__inner
          padding-left: 0
@@ -40,6 +43,8 @@
    &__header
       @include margin-bottom(var(--gap))
       margin-bottom: var(--gap)
+      .breadcrumbs
+         margin-bottom: 0
       &--border
          padding-bottom: 30px
          border-bottom: 1px solid #cdcdcd
@@ -51,20 +56,25 @@
          align-items: center
          flex-wrap: wrap
          gap: var(--gap)
+         &--center
+            flex-direction: column
       &-column
          display: flex
          flex-direction: column
          align-items: center
       &-title
          @extend .title
+         white-space: pre-line
       &-heading
          @extend .title
          @extend .title--main
+         white-space: pre-line
       &-search
          flex-basis: 420px
-         .search
-            &__input
-               padding-right: 46px
+      &-manage
+         display: flex
+         flex-wrap: wrap
+         gap: 10px var(--gap)
    &__footer
       padding-top: 25px
       display: none
@@ -77,6 +87,16 @@
       &__header
          margin-bottom: 30px
          &-button
+            display: none
+         &-manage
+            display: flex
+            flex-direction: column
+            & > * 
+               width: 100%
+         &-search
+            width: 100%
+            flex-basis: auto
+         .select
             display: none
       &__footer
          display: flex
