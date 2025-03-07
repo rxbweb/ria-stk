@@ -217,6 +217,23 @@
             display: flex
             flex-direction: column
             justify-content: center
+   &__box
+      padding: 90px 0 50px
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      gap: var(--gap-large)
+   &__form
+      max-width: 100%
+      flex-basis: 772px
+   &__picture
+      flex-basis: 710px
+      border-radius: var(--border-radius-30)
+      overflow: hidden
+      img,
+      picture
+         width: 100%
+         max-width: 100%
    @media (max-width: 1700px)
       &__content
          width: calc(100vw - var(--info-width) - var(--row-gap) - var(--padding)*2)
@@ -281,6 +298,16 @@
                @include margin-bottom(15px)
          .breadcrumbs
             position: static
+      &__box
+         flex-direction: column
+         gap: var(--gap)
+         & > *
+            width: 100%
+            max-width: 100%
+      &__form
+         flex-basis: 100%
+      &__picture
+         flex-basis: 100%
    @include sm
       &__books
          overflow: hidden
@@ -299,6 +326,9 @@
       &__journals
          &-card
             min-width: 202px
+   @include xs
+      &__box
+         padding: 70px 0 34px
 
 @keyframes magazines-down-to-up
    0%
