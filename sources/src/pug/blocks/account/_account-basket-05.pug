@@ -115,7 +115,7 @@ section.section.section--account
                                           .books__item
                                              a.books__card(href="#")
                                                 .books__box
-                                                   +favorite-button()
+                                                   +favorite-button('', 'div')
                                                    .books__img
                                                       +picture(book.img, false, book.title, 380, 380)
                                                 .books__info
@@ -164,7 +164,7 @@ section.section.section--account
                                                    .books__bottom
                                                       p.books__price= book.price
                                                       .books__manage
-                                                         +button-icon('link', 'Купить книгу', 'button--slim', 'icon-cart')
+                                                         +button-icon('link', 'В корзину', 'button--slim', 'icon-cart')
                                                          +button-outline('link', 'Купить в 1 клик')
                               +swiperControls()
 

@@ -1,7 +1,11 @@
 mixin sidebar(extraClass)
    .sidebar(class=extraClass)
       a.sidebar__toggle(href="#")
+         span.sidebar__toggle-icon
+            +svg('icon-filter', '', 22, 22)
          span Навигация по журналу
+         span.sidebar__toggle-arrow
+            +svg('icon-arrow-down', '', 16, 16)
       .sidebar__main
          .sidebar__list
             each button, index in ['О журнале', 'Подписка', 'Реклама', 'Архив', 'Отзывы']

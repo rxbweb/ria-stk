@@ -1,3 +1,5 @@
+include ../mixins/_mixins
+
 header.header
    .header__inner
       .header__container.container
@@ -12,22 +14,8 @@ header.header
                         use(href='images/sprites/main.stack.svg#svg-icon-loop')
                   input.search__input(type="text" placeholder="Искать....")
                   .search__select
-                     .select
-                        button.select__active.is-selected
-                           span Везде
-                        .select__list
-                           button.select__item.is-active Везде
-                           button.select__item По журналам
-                           button.select__item По книгам
-                           button.select__item По статьям
-                           button.select__item По новостям
-                           button.select__item По мероприятиям
-               .select.select--lang
-                  .select__active.is-selected
-                     span RU
-                  .select__list
-                     button.select__item.is-active RU
-                     button.select__item EN
+                     +select(true, ['Везде', 'По журналам', 'По книгам', 'По статьям', 'По новостям', 'По мероприятиям'])
+               +select(true, ['RU', 'EN'], 'select--lang')
             .header__socials.socials
                .socials__list.socials__list--first
                   a.socials__link(href="#")
@@ -39,7 +27,7 @@ header.header
                   a.socials__link(href="#")
                      img(src="images/icons/socials-dzen.svg", alt="dzen" width="26" height="26")
                .socials__list.socials__list--second
-                  a.socials__link(href="mailto:editor_site@mirq.ru")
+                  a.socials__link(href="mailto:editor_site@mirq.ru?&subject=Заголовок%20письма&body=Содержимое%20письма")
                      img(src="images/icons/socials-mail.svg", alt="mail" width="26" height="26")
                      span editor_site@mirq.ru
                   a.socials__link(href="tel:+74957716652")
@@ -47,16 +35,15 @@ header.header
                      span +7 (495) 771 6652
             .header__controls
                .header__basket
-                  a.button.button--img(href="#")
-                     svg(width="22" height="22")
-                        use(href="images/sprites/main.stack.svg#svg-icon-cart")
+                  a.header__button(href="#")
+                     +svg('icon-cart', '', 22, 22)
                   .header__basket-amount 99
-               a.header__favorite.button.button--img(href="#")
-                  i.icon.icon-heart
-               a.header__login.button.button--white(href="#")
-                  svg(width="20" height="20")
-                     use(href="images/sprites/main.stack.svg#svg-icon-user")
-                  span Войти
+               a.header__favorite(href="#")
+                  +svg('icon-heart', '')
+               .header__login
+                  .header__login-btn
+                     +svg('icon-user', '', 20, 20)
+                     span.header__login-text Войти
                a.header__toggle(href="#" aria-label="открыть меню")
                   .header__toggle-icon
                      span
@@ -101,21 +88,8 @@ header.header
                      use(href='images/sprites/main.stack.svg#svg-icon-loop')
                input.search__input(type="text" placeholder="Искать....")
                .search__select
-                  .select
-                     button.select__active Везде
-                     .select__list
-                        button.select__item.is-active Везде
-                        button.select__item По журналам
-                        button.select__item По книгам
-                        button.select__item По статьям
-                        button.select__item По новостям
-                        button.select__item По мероприятиям
-            .select.select--lang
-               .select__active
-                  span RU
-               .select__list
-                  button.select__item.is-active RU
-                  button.select__item EN
+                  +select(true, ['Везде', 'По журналам', 'По книгам', 'По статьям', 'По новостям', 'По мероприятиям'])
+            +select(true, ['RU', 'EN'], 'select--lang')
          nav.menu__nav
             ul.menu__nav-list
                li

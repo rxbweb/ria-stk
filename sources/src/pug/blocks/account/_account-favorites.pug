@@ -156,16 +156,7 @@ section.section.section--account
                                  use(href='images/sprites/main.stack.svg#svg-icon-loop')
                            input.search__input(type="text" placeholder="Искать в избранном")
                            .search__select
-                              .select
-                                 button.select__active
-                                    span По названию
-                                 .select__list
-                                    button.select__item Везде
-                                    button.select__item По журналам
-                                    button.select__item По книгам
-                                    button.select__item По статьям
-                                    button.select__item По новостям
-                                    button.select__item По мероприятиям
+                              +select(true, ['По названию', 'Везде', 'По журналам'])
                      .account__products(data-content="products")
                         .account__section.is-active(data-tab="tab1")
                            .account__col
