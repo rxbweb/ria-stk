@@ -1,0 +1,36 @@
+include ../../mixins/_mixins
+
+-
+   const listings01 = [
+      {
+         name: 'Консалтинг',
+         img: 'images/listing/listing-13.jpg'
+      },
+      {
+         name: 'Обучение',
+         img: 'images/listing/listing-14.jpg'
+      },
+      {
+         name: 'Оценка соответствия',
+         img: 'images/listing/listing-15.jpg'
+      }
+   ]
+
+section.section.section--listing
+   .section__wrapper.container
+      .section__content
+         .listing
+            .listing__inner
+               .listing__row
+                  .listing__aside
+                     h2.listing__title #{'Сервисы'} 
+                        |
+                        | партнеров
+                  .listing__content
+                     ol.listing__list
+                        each listing in listings01
+                           li.listing__item
+                              a.listing__box(href="#")
+                                 h3.listing__name=listing.name
+                                 .listing__img
+                                    +picture(listing.img, false, "картинка", 350, 222)
