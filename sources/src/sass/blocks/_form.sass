@@ -3,12 +3,12 @@
    @extend .white-box
    width: 100%
    max-width: 772px
-   &--large
-      max-width: 100%
    &__header
+      color: var(--black)
+      @include margin-bottom(30px)
       &--border
          @extend .section__header--border
-      @include margin-bottom(30px)
+         padding-bottom: var(--gap)
    &__title
       @extend .title
    &__main
@@ -127,7 +127,11 @@
             bottom: 5px
             width: 3px
             background: var(--accent)
-   &--2
+   &__text
+      a
+         color: var(--accent)
+   &--2,
+   &--review
       --form-input-height: 46px
       padding: var(--gap)
       @include margin-bottom(var(--gap))
@@ -144,14 +148,58 @@
       .select
          &__active
             min-height: var(--form-input-height)
+   &--review
+      max-width: 100%
+      padding: 0
+      border: none
+      box-shadow: none
+      border-radius: 0
+      .download
+         &__box
+            padding: 13px 12px
+            gap: 10px
+      .form
+         &__title
+            @include fluidFontSize(32px, 64px, 360px, 1920px, 48px)
+         &__textarea
+            height: 76px
    &__group
       display: grid
       grid-template-columns: minmax(auto, 440px) minmax(auto, 440px) 1fr
-      gap: 60px
+      gap: var(--gap-large)
+   @media (max-width: 1660px)
+      &__group
+         grid-template-columns: minmax(auto, 370px) minmax(auto, 370px) 1fr
+         gap: var(--gap)
+   @include xl
+      &--review
+         padding: var(--gap)
+      &__group
+         grid-template-columns: repeat(2, 1fr)
+      &__group
+         .download
+            &__box
+               border: 1px solid #ddd
+               background: none
+         .form
+            &__box
+               &--download
+                  grid-column: span 2
    @include lg
       &__label
          &--half
             width: 100%
+   @include ms
+      &__group
+         grid-template-columns: 1fr
+         .form
+            &__box
+               &--download
+                  grid-column: auto
+         .download
+            &__box
+               min-height: 138px
+               padding: 20px
    @include sm
       @include margin-bottom(15px)
       &--2
@@ -174,6 +222,11 @@
          height: 70px
       &__middle
          margin-bottom: 18px
+      &__group
+         .download
+            &__box
+               background: #fff url('../images/icons/lines.svg') no-repeat center / 100% 100%
+               border: none
    @include xs
       &--2
          --form-input-height: 44px
