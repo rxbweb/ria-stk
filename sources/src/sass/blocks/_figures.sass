@@ -4,15 +4,17 @@
       grid-template-columns: repeat(5, 1fr)
       gap: var(--gap)
    &__svg
-      width: 100px
-      height: 100px
+      --size: 100px
+      width: var(--size)
+      height: var(--size)
       position: relative
       display: flex
       flex-direction: column
-      fill: currentColor
+      svg
+         fill: #47535E
    &__link
       height: 100%
-      padding: 45px 28px 10px
+      padding: 40px 25px
       border-radius: var(--border-radius-15)
       border: 1px solid transparent
       background: rgba(205, 205, 205, 0.30)
@@ -21,12 +23,36 @@
       display: flex
       flex-direction: column
       align-items: center
-      gap: 40px
+      gap: 35px
       transition: var(--transition)
       &:hover,
       &:focus
          color: var(--accent)
          background: #fff
          border-color: var(--accent)
+         svg
+            fill: var(--accent)
    &__info
       color: var(--black)
+   @include xl
+      &__link
+         padding: 32px 10px
+         gap: 25px
+   @include lg
+      &__list
+         grid-template-columns: repeat(4, 1fr)
+   @include ms
+      &__list
+         grid-template-columns: repeat(3, 1fr)
+      &__svg
+         --size: 80px
+   @include sm
+      &__list
+         grid-template-columns: repeat(2, 1fr)
+      &__link
+         gap: 10px
+   @include xs
+      &__link
+         font-size: 14px
+      &__svg
+         --size: 60px
