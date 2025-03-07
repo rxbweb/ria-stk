@@ -1,0 +1,125 @@
+include mixins/_booksList
+
+-
+   const books19 = [
+      {
+         img: 'images/books/books-40.jpg',
+         title: 'Январь 2023',
+         price: '100 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-41.jpg',
+         title: 'Февраль 2023',
+         price: '100 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-42.jpg',
+         title: 'Март 2023',
+         price: '100 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-43.jpg',
+         title: 'Апрель 23',
+         price: '100 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-44.jpg',
+         title: 'Май 2023',
+         price: '100 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-45.jpg',
+         title: 'ИЮНЬ 2023',
+         price: '100 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-46.jpg',
+         title: 'ИЮЛЬ 2023',
+         price: '100 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-47.jpg',
+         title: 'Август 23',
+         price: '100 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-48.jpg',
+         title: 'Сентябрь 2023',
+         price: '100 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-49.jpg',
+         title: 'Октябрь 2023',
+         price: '100 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-50.jpg',
+         title: 'Ноябрь 2023',
+         price: '100 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-51.jpg',
+         title: 'Декабрь 23',
+         price: '100 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+   ];
+
+section.section.section--books
+   .section__wrapper.container
+      .section__header.vusially-hidden
+         .section__header-row
+            h2.section__header-title Архив книг
+      .section__content
+         .books
+            .books__inner
+               .books__section
+                  .books__content
+                     +booksList(books19)

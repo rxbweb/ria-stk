@@ -1,0 +1,45 @@
+include ../../mixins/_mixins
+include mixins/_booksList
+
+-
+   const books06 = [
+      {
+         img: 'images/books/books-18.jpg',
+         title: 'Выбор программного обеспечения для СМК',
+         buttons: {
+            read: true
+         }
+      },
+      {
+         img: 'images/books/books-19.jpg',
+         title: 'Практическое применение АИСМК для проведения анализа измерительных систем (MSA)',
+         buttons: {
+            read: true
+         }
+      },
+      {
+         img: 'images/books/books-20.jpg',
+         title: 'Цифровизация аудита и наблюдений систем менеджмента',
+         buttons: {
+            read: true
+         }
+      },
+      {
+         img: 'images/books/books-21.jpg',
+         title: 'Российские методики и подходы к работе с системами менеджмента имеют свои преимущества',
+         buttons: {
+            read: true
+         }
+      },
+   ]
+
+section.section
+   .section__wrapper.container
+      .section__content
+         .books
+            .books__inner
+               .books__section
+                  .books__header
+                     h2.books__title Статьи
+                  .books__content
+                     +booksList(books06)

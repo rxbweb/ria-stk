@@ -1,0 +1,68 @@
+include ../../mixins/_mixins
+
+-
+   const books13 = [
+      {
+         img: 'images/books/books-29.jpg',
+         tags: [
+            'Лучшая цена',
+            'Распродажа',
+            'Хит',
+         ],
+         link: 'Подписывайтесь на 12 номеров — платите за 9!'
+      },
+      {
+         img: 'images/books/books-01.jpg',
+         tags: [
+            'Книга месяца',
+            'Только у нас'
+         ],
+         link: 'Хорошая цена. Книга «Цифровое качество. Свод знаний о цифровой трансформации»'
+      },
+      {
+         img: 'images/books/books-30.jpg',
+         tags: [
+            'Лучшая цена',
+            'Распродажа',
+            'Хит'
+         ],
+         link: 'Бесплатный билет на выставку «Электроника — 2024»'
+      },
+      {
+         img: 'images/books/books-31.jpg',
+         tags: [
+            'Книга месяца',
+            'Только у нас'
+         ],
+         link: 'Книга в подарок для новых подписчиков МКМ'
+      },
+   ]
+
+
+section.section
+   .section__wrapper.container
+      .section__content
+         .books
+            .books__inner
+               .books__section
+                  .books__header
+                     h2.books__title Акции и специальные предложения
+                  .books__content
+                     ul.books__list
+                        each book in books13
+                           li.books__item
+                              .books__card
+                                 .books__box
+                                    .books__img
+                                       +picture(book.img, false, book.title, 380, 380)
+                                 .books__details
+                                    if book.tags
+                                       .books__tags
+                                          each tag in book.tags
+                                             .books__tags-item= tag
+                                    if book.link
+                                       a.books__link(href="#")
+                                          span= book.link
+                                          span.books__link-icon
+                                             svg(class=`svg-icon-arrow-right` width=17 height=17)
+                                                use(xlink:href=`images/sprites/main.stack.svg#svg-icon-arrow-right`)

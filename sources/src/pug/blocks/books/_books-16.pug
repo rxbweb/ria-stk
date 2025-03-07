@@ -1,0 +1,49 @@
+include ../../mixins/_mixins
+include mixins/_booksList
+
+-
+   const books08 = [
+      { 
+         img: 'images/books/books-32.jpg',
+         title: 'Методы менеджмента качества',
+         date: 'Сентябрь 2024'
+      },
+      { 
+         img: 'images/books/books-33.jpg',
+         title: 'Методы менеджмента качества',
+         date: 'Август 2024'
+      },
+      { 
+         img: 'images/books/books-34.jpg',
+         title: 'Методы менеджмента качества',
+         date: 'Июль 2024'
+      },
+      { 
+         img: 'images/books/books-35.jpg',
+         title: 'Методы менеджмента качества',
+         date: 'Июнь 2024'
+      }
+   ]
+
+section.section.section--books
+   .section__wrapper.container
+      .section__header.section__header--border
+         .section__header-row
+            h2.section__header-title Все выпуски года
+      .section__content
+         .books.books--2
+            .books__inner
+               .books__section
+                  .books__content
+                     ul.books__list
+                        each book in books08
+                           li.books__item
+                              a.books__card(href="#")
+                                 .books__box
+                                    .books__img
+                                       +picture(book.img, false, book.title, 380, 380)
+                                 .books__info
+                                    h3.books__name= book.title
+                                    p.books__date= book.date
+                     .books__footer
+                        +button-icon('link', 'Архив журналов')
