@@ -1,0 +1,15 @@
+include ../../mixins/_mixins
+
+section.section.section--newspaper
+   .section__wrapper.container
+      .section__content
+         .newspaper
+            .bg-image
+               +picture("images/newspaper/newspaper-bg.jpg", "images/newspaper/newspaper-bg-mob.jpg", "фоновая картинка", 1640, 550)
+            .newspaper__inner
+               .newspaper__row
+                  .newspaper__info
+                     h2.newspaper__title Газета Quality News — качественные новости каждый четверг
+                     +button-icon('link', 'Подробнее')
+                  .newspaper__img
+                     +picture("images/newspaper/newspaper.png", "images/newspaper/newspaper-mob.png", "Газета Quality News", 700, 550)

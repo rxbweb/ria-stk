@@ -1,0 +1,42 @@
+.newspaper
+   border-radius: var(--border-radius-30)
+   position: relative
+   overflow: hidden
+   &__inner
+      padding: 0 90px
+   &__row
+      --row-gap: 60px
+      display: flex
+      align-items: center
+      gap: var(--row-gap)
+      & > *
+         flex-basis: calc(50% - var(--row-gap) / 2)
+   &__info
+      padding: var(--gap) 0
+      @include margin-bottom(50px)
+   &__title
+      @extend .title
+   @include xl
+      &__inner
+         padding: 0 60px
+   @include md
+      &__row
+         --row-gap: 30px
+   @include ms
+      &__inner
+         padding: 0 var(--padding)
+      &__row
+         flex-direction: column
+         & > *
+            flex-basis: 100%
+      &__info
+         padding-bottom: 0
+         @include margin-bottom(30px)
+   @include xs
+      &__row
+         gap: 10px
+      &__info
+         @include margin-bottom(20px)
+      &__img
+         width: calc(100% + var(--padding) * 2)
+         margin: 0 calc(-1 * var(--padding))
