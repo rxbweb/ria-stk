@@ -1,0 +1,4 @@
+mixin webformTabs(tabs = 'webform-01', tab1 = 'Физическое лицо', tab2 = 'Юридическое лицо')
+   .webform__tabs.tabs-nav(data-tabs=tabs)
+      button.webform__tabs-button.tabs-link.is-active(data-tabs="tab1")= tab1
+      button.webform__tabs-button.tabs-link(data-tabs="tab2")= tab2
