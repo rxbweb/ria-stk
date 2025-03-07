@@ -1,0 +1,14 @@
+include ../../mixins/_mixins
+
+section.section.section--join
+   .section__wrapper.container
+      .section__content
+         .join
+            .join__main
+               .join__info
+                  h2.join__title Как оформить подписку?
+                  p Очень просто! Внесите свой электронный адрес в поле «Ваш E-mail» и нажмите кнопку.
+               form.join__form(action="#")
+                  .join__form-row
+                     input(type="email" placeholder="Ваш E-mail")
+                     +button-icon('link', 'Подписаться')
