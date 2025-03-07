@@ -2,24 +2,26 @@ include ../../mixins/_mixins
 include mixins/_webformLabel
 include mixins/_webformTextarea
 include mixins/_webformPayment
+include mixins/_webformDelivery
+include mixins/_webformAgree
+include mixins/_webformFile
+include mixins/_webformEmpty
+include mixins/_webformTabs
+include mixins/_webformToggle
 
 mixin webformGoods02()
    .webform
-      button.webform__toggle.is-active
-         h2.webform__name Оформление заказа
-         .webform__close(aria-label="свернуть эту форму")
+      +webformToggle()
       .webform__wrapper
          .webform__content
-            .webform__tabs.tabs-nav(data-tabs="webform-02")
-               button.webform__tabs-button.tabs-link.is-active(data-tabs="tab1") Физическое лицо
-               button.webform__tabs-button.tabs-link(data-tabs="tab2") Юридическое лицо
+            +webformTabs('webform-02')
             .webform__section.tabs-content(data-tabs="webform-02")
-               form.webform__form.tabs-item.is-active(action="#" data-tabs="tab1")
+               form.webform__form.tabs-item.is-active(action="#" data-tabs="tab1" data-validate-form)
                   .webform__body
                      .webform__box
                         +webformLabel('Email', 'Обязательное поле', 'email', 'Email')
                         +webformLabel('Телефон', 'Обязательное поле', 'tel', 'Телефон')
-                        span.webform__empty
+                        +webformEmpty()
                         +webformLabel('Фамилия', '', 'text', 'Фамилия')
                         +webformLabel('Имя', '', 'text', 'Имя')
                         +webformLabel('Отчество', '', 'text', 'Отчество')
@@ -32,96 +34,23 @@ mixin webformGoods02()
                         +webformLabel('Улица, дом', '', 'text', 'Название улицы и номер дома')
                         +webformLabel('Почтовый ящик', '', 'text', 'Почтовый ящик')
                      +webformTextarea('Комментарий', '', 'Комментарий к заказу')
-                     .agree
-                        label.agree__label
-                           input(type="checkbox" name="form-agree" required)
-                           span.agree__checkbox
-                           span.agree__text Я согласен на #[a(href="#") обработку персональных данных]
-                     .webform__options
-                        .webform__options-main
-                           h3.webform__options-title Способ доставки
-                           ul.webform__options-list.webform__options-list--2
-                              li.webform__options-item
-                                 a.webform__options-method.webform__options-method--payment.is-active(href="#")
-                                    .webform__options-icon
-                                       img(src="images/webform/delivery.svg", alt="способ доставки" width="24" height="24")
-                                    .webform__options-info
-                                       p Самовывоз (м.Автозаводская)
-                                       p.webform__options-terms
-                                          span В день оформления заказа
-                                          span Бесплатно
-                              li.webform__options-item
-                                 a.webform__options-method.webform__options-method--payment(href="#")
-                                    .webform__options-icon
-                                       img(src="images/webform/courier.png", alt="почта России" width="46" height="32")
-                                    .webform__options-info
-                                       p Самовывоз (м.Автозаводская)
-                                       p.webform__options-terms
-                                          span 3-4 дня
-                                          span Бесплатно при заказе от 3000 руб
-                     .webform__options
-                        .webform__options-main
-                           h3.webform__options-title Способы оплаты
-                           ul.webform__options-list
-                              li.webform__options-item
-                                 a.webform__options-method.is-active(href="#")
-                                    img(src="images/webform/robokassa.svg", alt="robokassa" width="182" height="69")
-                        +button-icon('link', 'Перейти к оплате', 'webform__options-button')
+                     +webformAgree()
+                     +webformDelivery()
+                     +webformPayment('secondary')
 
-               form.webform__form.tabs-item(action="#" data-tabs="tab2")
+               form.webform__form.tabs-item(action="#" data-tabs="tab2" data-validate-form)
                   .webform__body
                      .webform__box
                         +webformLabel('ИНН', 'Обязательное поле', 'text', 'ИНН')
-                        span.webform__empty
-                        label.webform__label
-                           span.webform__label-row
-                              span.webform__label-title Карточка предприятия
-                              a.webform__label-question(href="#")
-                                 +svg('icon-question', '', 20, 20)
-                           span.webform__label-input.webform__label-file
-                              input(type="file")
-                              span.webform__label-file-choose Выбрать файл
-                              span.webform__label-file-name Файл не выбран
+                        +webformEmpty()
+                        +webformFile()
                         +webformLabel('Название компании', '', 'text', 'Название компании')
-                        label.webform__label.webform__label--large
-                           span.webform__label-row
-                              span.webform__label-title Юридический адрес
-                           span.webform__label-field
-                              input.webform__label-input(type="text" placeholder="Юридический адрес")
+                        +webformLabel('Юридический адрес', '', 'text', 'Юридический адрес', 'webform__label--large')
                         +webformLabel('КПП', '', 'text', 'КПП')
                         +webformLabel('Телефон', 'Обязательное поле', 'tel', 'Телефон')
                         +webformLabel('Email', 'Обязательное поле', 'email', 'Email')
                         +webformLabel('Контактное лицо', '', 'text', 'Контактное лицо')
-                        label.webform__label.webform__label--large
-                           span.webform__label-row
-                              span.webform__label-title Комментарий
-                           span.webform__label-field
-                              input.webform__label-input(type="text" placeholder="Комментарий к заказу")
-                     .agree
-                        label.agree__label
-                           input(type="checkbox" name="form-agree" required)
-                           span.agree__checkbox
-                           span.agree__text Я согласен на #[a(href="#") обработку персональных данных]
-                     .webform__options
-                        .webform__options-main
-                           h3.webform__options-title Способ доставки
-                           ul.webform__options-list.webform__options-list--2
-                              li.webform__options-item
-                                 a.webform__options-method.webform__options-method--payment.is-active(href="#")
-                                    .webform__options-icon
-                                       img(src="images/webform/delivery.svg", alt="способ доставки" width="24" height="24")
-                                    .webform__options-info
-                                       p Самовывоз (м.Автозаводская)
-                                       p.webform__options-terms
-                                          span В день оформления заказа
-                                          span Бесплатно
-                              li.webform__options-item
-                                 a.webform__options-method.webform__options-method--payment(href="#")
-                                    .webform__options-icon
-                                       img(src="images/webform/courier.png", alt="почта России" width="46" height="32")
-                                    .webform__options-info
-                                       p Самовывоз (м.Автозаводская)
-                                       p.webform__options-terms
-                                          span 3-4 дня
-                                          span Бесплатно при заказе от 3000 руб
+                        +webformLabel('Комментарий', '', 'text', 'Комментарий к заказу', 'webform__label--large')
+                     +webformAgree()
+                     +webformDelivery()
                      +webformPayment()

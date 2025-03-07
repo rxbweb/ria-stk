@@ -3,19 +3,19 @@ include ../../mixins/_mixins
 -
    const listings03 = [
       {
-         badge: 'images/badges/badge-10.svg',
+         badge: 'badge-10',
          title: 'Регулярное поступление актуальной информации'
       },
       {
-         badge: 'images/badges/badge-11.svg',
+         badge: 'badge-11',
          title: 'Постоянный и непрерывный процесс совершенствования компетенций'
       },
       {
-         badge: 'images/badges/badge-12.svg',
+         badge: 'badge-12',
          title: 'Формирование корпоративной базы знаний'
       },
       {
-         badge: 'images/badges/badge-13.svg',
+         badge: 'badge-13',
          title: 'Доступ к системе привилегий'
       },
    ]
@@ -34,7 +34,7 @@ section.section.section--listing
                      li.listing__item
                         .listing__box
                            .badge.badge--large
-                              img(src=listing.badge, alt="иконка" width="36" height="36")
+                              +svg(listing.badge, '', 40, 40)
                            h3.listing__name=listing.title
       .section__footer
          +button-icon('link', 'Подписка')

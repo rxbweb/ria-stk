@@ -8,7 +8,7 @@ section.section.section--account
                .account__form
                   .webform
                      h2.webform__title Вход
-                     form.webform__form.webform__form--narrow(action="#")
+                     form.webform__form.webform__form--narrow(action="#" data-validate-form)
                         .webform__body.webform__body--secondary
                            .webform__inputs
                               label.webform__label
@@ -16,7 +16,7 @@ section.section.section--account
                                     span.webform__label-title Логин
                                     span.webform__label-error Обязательное поле
                                  span.webform__label-field
-                                    input.webform__label-input(type="text" placeholder="Логин")
+                                    input.webform__label-input(type="text" placeholder="Логин" name="login" minlength="3" required)
                                  span.webform__label-row
                                     span.webform__label-note Минимум 3 символа
                               label.webform__label
@@ -24,8 +24,10 @@ section.section.section--account
                                     span.webform__label-title Пароль
                                     span.webform__label-error Обязательное поле
                                  span.webform__label-field.webform__label-field--icon
-                                    input.webform__label-input(type="password" placeholder="Пароль")
-                                    i.btn.btn--eye
+                                    input.webform__label-input(type="password" placeholder="Пароль" name="password" minlength="6" required)
+                                    span.webform__label-icon.webform__label-icon--eye.button-eye
+                                       +svg('icon-eye', 'svg-icon-eye', 22, 16)
+                                       +svg('icon-eye-not', 'svg-icon-eye-not', 24, 18)
                                  span.webform__label-row
                                     span.webform__label-note Минимум 6 символов
                            .webform__controls
@@ -34,6 +36,7 @@ section.section.section--account
                                     input(type="checkbox" name="form-agree" required)
                                     span.agree__checkbox
                                     span.agree__text Запомнить
+                                 span.agree__error Обязательное поле
                               a.webform__controls-btn(href="#") Восстановить пароль
                            +button('Войти', 'button--large webform__button', '', false)
                            p.webform__remark

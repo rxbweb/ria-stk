@@ -17,7 +17,7 @@ section.section.section--feedback
                         li.feedback__item
                            p.feedback__type Почта для связи
                            .feedback__text
-                              a(href="mailto:editor_site@mirq.ru") editor_site@mirq.ru
+                              a(href="mailto:editor_site@mirq.ru?&subject=Заголовок%20письма&body=Содержимое%20письма") editor_site@mirq.ru
                         li.feedback__item
                            p.feedback__type Телефон
                            .feedback__text
@@ -53,16 +53,7 @@ section.section.section--feedback
                               .form__box
                                  .form__label
                                     span.form__type Кому
-                                    .select.select--secondary
-                                       button.select__active
-                                          span Выберетите из списка
-                                       .select__list
-                                          button.select__item Везде
-                                          button.select__item По журналам
-                                          button.select__item По книгам
-                                          button.select__item По статьям
-                                          button.select__item По новостям
-                                          button.select__item По мероприятиям
+                                    +select(false, ['Везде', 'По журналам', 'По книгам', 'По статьям', 'По новостям', 'По мероприятиям'], 'select--secondary')
                                  label.form__label
                                     span.form__type E-mail
                                     input.form__input(type="email" placeholder="E-mail" name="form-email")

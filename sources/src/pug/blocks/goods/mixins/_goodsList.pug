@@ -39,9 +39,9 @@ mixin goodsList(items)
                   p.goods__table-count #{item.quantity}
                else if item.controls
                   .goods__table-controls
-                     button.goods__table-controls-button(aria-label="уменьшить количество этого продукта") -
-                     .goods__table-controls-count #{item.controls}
-                     button.goods__table-controls-button(aria-label="увеличить количество этого продукта") +
+                     button.goods__table-controls-button.goods__table-controls-button--minus(aria-label="уменьшить количество этого продукта") -
+                     input.goods__table-controls-count(value= item.controls)
+                     button.goods__table-controls-button.goods__table-controls-button--plus(aria-label="увеличить количество этого продукта") +
                else
                   p.goods__table-count -
             .goods__table-col
