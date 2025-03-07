@@ -1,0 +1,23 @@
+.material
+   &__main
+      display: flex
+      align-items: flex-start
+      gap: var(--gap)
+   &__box
+      @extend .gray-box
+      @include margin-bottom(var(--gap-2))
+      flex-basis: 660px
+      color: #67686B
+   &__title
+      @extend .title
+      @include fluidFontSize(32px, 40px, 360px, 1920px, 32px)
+   &__info
+      @include margin-bottom(15px)
+   &__content
+      flex-grow: 1
+   @include md
+      &__main
+         flex-direction: column
+         align-items: stretch
+      &__box
+         flex-basis: auto
