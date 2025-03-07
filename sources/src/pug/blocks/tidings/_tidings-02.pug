@@ -65,12 +65,12 @@ section.section.section--tidings
          .section__header-row
             h2.section__header-title Новости
          .section__header-manage
-            .search
+            .section__header-search.search
                button.search__button(aria-label="кнопка поиска")
                   svg(width="26" height="26")
                      use(href='images/sprites/main.stack.svg#svg-icon-loop')
                input.search__input(type="text" placeholder="Искать....")
-            +select(true, ['10 октября - По настоящее время', '11 октября - По настоящее время', '12 октября - По настоящее время'])
+            +select(true, ['10 октября - По настоящее время', '11 октября - По настоящее время', '12 октября - По настоящее время'], '', 'icon-calendar')
          .section__header-bottom
             .tags
                a.tags__button(href="#") Название тегов длинного тега
@@ -93,7 +93,7 @@ section.section.section--tidings
                a.tags__button(href="#") Название тегов длинного тега
       .section__content
          .tidings
-            ul.tidings__list.tidings__list--2
+            ul.tidings__list.tidings__list--2(data-loading="tidings")
                each tiding in tiginds02
                   li.tidings__item
                      if tiding.img
@@ -109,3 +109,6 @@ section.section.section--tidings
                            .tidings__text 
                               p= tiding.text
                         +button-outline('link', 'Читать далее')
+            .tidings__bottom
+               +button-loading('button', 'Загрузить еще', 'button-loading', '', 'tidings')
+               include ../pagination/_pagination
