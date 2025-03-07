@@ -1,8 +1,13 @@
 .select
    color: var(--black)
    position: relative
-   &--lang
-      width: 80px
+   &--wide
+      min-width: 180px
+      .select
+         &__active
+            .svg
+               &-icon-arrow-down
+                  fill: var(--accent)
    &__active
       @extend input
       width: 100%
@@ -14,20 +19,22 @@
       cursor: pointer
       position: relative
       color: #999
-      @include icomoon('\e906', var(--accent), 8px)
+      display: flex
+      align-items: center
+      gap: 10px
       &.is-selected
          color: var(--black)
-      &::after
-         position: absolute
-         right: 18px
-         top: 50%
-         transform: translateY(-50%)
+      .svg
+         &-icon-arrow-down
+            position: absolute
+            right: 18px
+            top: 50%
+            transform: translateY(-50%)
+            fill: currentColor
       span
          .select--lang &
             position: relative
             top: 2px
-            @include xs
-               top: 5px
       .select--secondary &
          min-height: 42px
          padding: 10px
@@ -38,6 +45,7 @@
             color: #47535E
    &__list
       display: none
+      min-width: 100%
       padding: 10px 20px
       border-radius: 4px
       border: 1px solid #CDCDCD
@@ -66,12 +74,26 @@
          color: var(--accent)
       .select--lang &
          text-align: center
+   &--lang
+      width: 80px
+      .svg
+         &-icon-arrow-down
+            fill: var(--accent)
    @include ms
-      &__input
+      &__active
          padding-left: 14px
          padding-right: 34px
-         &::after
-            right: 12px
+         .svg
+            &-icon-arrow-down
+               --size: 12px
+               width: var(--size)
+               height: var(--size)
+               right: 12px
+      &--wide
+         .svg
+            &-icon-arrow-down
+               --size: 16px
+               right: 15px
    @include sm
       &--lang
          width: 64px
@@ -80,13 +102,18 @@
          padding: 8px 10px
          padding-right: 31px
          line-height: 100%
-         &::after
-            right: 10px
-            font-size: 7px
+         .svg
+            &-icon-arrow-down
+               right: 10px
          &-text
             top: 5px
       &__list
          padding: 10px 12px
+      &--wide
+         .svg
+            &-icon-arrow-down
+               --size: 16px
+               right: 15px
    @include xs
       &__active
          .select--secondary &
