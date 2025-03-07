@@ -15,10 +15,6 @@
       max-width: 100%
    &__inner
       @include margin-bottom(var(--elements-padding))
-   &__header
-      padding-bottom: var(--elements-padding)
-      border-bottom: 1px solid #191C23
-      @include margin-bottom(var(--elements-margin))
    &__top
       display: flex
       justify-content: space-between
@@ -34,6 +30,13 @@
       @include border-bottom(#191C23)
       @include margin-bottom(var(--elements-padding))
       @include padding-bottom(var(--elements-padding))
+   &__header
+      padding-bottom: var(--elements-padding)
+      border-bottom: 1px solid #191C23
+      @include margin-bottom(var(--elements-margin))
+      &--secondary
+         padding-bottom: 0
+         border-bottom: none
    &__description
       @extend .title
       @extend .title--second
@@ -105,9 +108,23 @@
          white-space: pre-line
    &__figure
       @include margin-bottom(5px)
+      img,
+      picture
+         border-radius: var(--border-radius-10)
+         overflow: hidden
+      &-picture
+         display: block
+      &--secondary
+         width: fit-content
+         margin-left: auto
+         margin-right: auto
+         display: flex
+         flex-direction: column
+         align-items: center
    &__figcaption
       font-weight: 500
       font-style: italic
+      align-self: flex-start
    &__listing
       li
          position: relative
@@ -263,8 +280,9 @@
             height: 100%
       &-title
          @extend .title
-         @extend .title--second
+         @include fluidFontSize(16px, 22px, 360px, 1920px, 20px)
    .tags
+      width: auto
       display: flex
       flex-wrap: wrap
       overflow: hidden
@@ -332,8 +350,6 @@
          font-size: 13px
    @include xs
       padding: 10px
-      &__top
-         flex-direction: column
       &__title
          white-space: normal
       &__people
@@ -350,3 +366,5 @@
          gap: 15px
       &__numeric
          @include margin-bottom(10px)
+      .tags
+         font-size: 11px
