@@ -1,0 +1,46 @@
+include ../../mixins/_mixins
+
+section.section.section--hero.section--padding-none.section--margin-bottom
+   .section__wrapper
+      .section__content
+         .hero
+            .bg-image
+               img(src="images/hero/hero-bg.jpg", alt="фоновая картинка" width="1920" height="750")
+            .hero__inner.container
+               +breadcrumbs([
+                  { href: '#', title: 'Главная' },
+                  { href: '#', title: 'Консалтинг' }
+               ])
+               .hero__box
+                  form.hero__form.form(action="#" data-validate-form)
+                     .form__header
+                        h2.form__title Консалтинг
+                        p.form__text Наши эксперты проведут консультации по широкому кругу вопросов в сфере технического регулирования, стандартизации и управления качеством. Помогут разобраться, как оптимизировать бизнес-процессы и сократить издержки компании.
+                     .form__main
+                        .form__top
+                           .form__box
+                              label.form__label
+                                 input.form__input(type="text" placeholder="ФИО")
+                              label.form__label
+                                 input.form__input(type="email" placeholder="E-mail" name="form-email" required)
+                                 span.form__error Обязательное поле
+                              label.form__label
+                                 input.form__input(type="tel" placeholder="Телефон" name="form-email" required)
+                                 span.form__error Обязательное поле
+                              label.form__label
+                                 input.form__input(type="text" placeholder="Компания")
+                              label.form__label
+                                 input.form__input(type="text" placeholder="Сообщения")
+                        .form__middle
+                           .agree
+                              label.agree__label
+                                 input(type="checkbox" name="form-agree" required)
+                                 span.agree__checkbox
+                                 span.agree__text
+                                    | Я согласен с 
+                                    a(href="#") Правилами обработки и хранения персональных данных
+                              span.agree__error Обязательное поле
+                        .form__bottom
+                           +button('Отправить', 'form__button', '', false)
+                  .hero__picture
+                     +picture-simple('images/hero/hero-consulting.jpg', 'images/hero/hero-consulting-mob.jpg', 'картинка', 709, 690)
