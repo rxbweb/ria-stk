@@ -94,6 +94,38 @@
          @include margin-bottom(40px)
       .swiper-controls
          margin-bottom: 0
+   &__details
+      @include margin-bottom(20px)
+      padding-top: 20px
+   &__tags
+      display: flex
+      flex-wrap: wrap
+      gap: 10px
+      &-item
+         padding: 10px 15px
+         border-radius: 3px
+         background: #FFD6D4
+         color: var(--accent)
+         font-size: 14px
+         font-weight: 500
+         line-height: 100%
+         white-space: nowrap
+   &__link
+      display: flex
+      align-items: flex-start
+      gap: 10px
+      color: var(--black)
+      font-size: 20px
+      font-weight: 500
+      line-height: 100%
+      &-icon
+         @extend .button__icon
+         background: var(--accent)
+         color: #fff
+   &__footer
+      display: flex
+      flex-direction: column
+      align-items: center
    @media (max-width: 1700px)
       &__manage
          flex-direction: column
@@ -103,6 +135,12 @@
                width: 100%
             & + .button
                width: 100%
+   @include xl
+      &__link
+         font-size: 17px
+      &__tags
+         &-item
+            font-size: 13px
    @include md
       &__list
          grid-template-columns: repeat(3, 1fr)
@@ -114,6 +152,14 @@
    @include sm
       &__manage
          gap: 10px
+      &__details
+         padding-top: 15px
+      &__tags
+         gap: 5px
+         &-item
+            font-size: 11px
+      &__link
+         font-size: 16px
    @include xs
       &__info
          .books--2 &
@@ -130,3 +176,14 @@
          font-size: 12px
       &__bottom
          @include margin-bottom(10px)
+      &__details
+         padding-top: 10px
+         @include margin-bottom(10px)
+      &__link
+         font-size: 14px
+         &-icon
+            display: none
+      &__tags
+         &-item
+            padding: 6px
+            font-size: 8px
