@@ -1,0 +1,10 @@
+mixin webformFile()   
+   label.webform__label
+      span.webform__label-row
+         span.webform__label-title Карточка предприятия
+         a.webform__label-question(href="#")
+            +svg('icon-question', '', 20, 20)
+      span.webform__label-input.webform__label-file
+         input(type="file")
+         span.webform__label-file-choose Выбрать файл
+         span.webform__label-file-name Файл не выбран
