@@ -1,6 +1,5 @@
 .specs
    padding-bottom: 50px
-   position: relative
    .breadcrumbs
       margin-bottom: 0
    &--2
@@ -30,12 +29,17 @@
       border-radius: var(--border-radius-15)
       background: #EFEFEF
       overflow: hidden
+      img,
+      picture
+         width: 100%
+         max-width: 310px
+         border-radius: var(--border-radius)
+         overflow: hidden
    &__info
       padding: 40px 0
       display: flex
       flex-direction: column
       @include margin-bottom(40px)
-      @include mt-auto()
       .specs--2 &
          @include margin-bottom(15px)
          & > *:nth-last-child(2)
@@ -49,6 +53,10 @@
       margin-bottom: 25px
       @extend .title
       @include fluidFontSize(32px, 40px, 360px, 1920px, 32px)
+      &--large
+         @include fluidFontSize(32px, 64px, 360px, 1920px, 32px)
+         & + .specs__manage
+            margin-top: 30px
    &__caption
       @extend .title
    &__table
@@ -63,12 +71,20 @@
    &__manage
       display: flex
       align-items: center
-      @include margin-right(30px)
+      flex-wrap: wrap
+      gap: 10px 30px
+      &-description
+         @extend .title
+         @extend .title--second
+         flex-basis: 100%
    &__price
       @extend .title
       @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)
-      margin-right: 20px
       color: #47535E
+   &__select
+      display: none
+   &__controls
+      @include margin-bottom(10px)
    @include xl
       &__img
          flex-basis: auto
@@ -76,11 +92,13 @@
          gap: var(--gap)
          & > *
             width: calc(50% - var(--gap)/2)
+      &__name
+         &--large
+            & + .specs__manage
+               margin-top: 0
    @media (max-width: 1365px)
       &__manage
-         flex-wrap: wrap
-         gap: 20px
-         @include margin-right(0)
+         gap: 15px
       &__price
          width: 100%
    @include ms
@@ -103,9 +121,9 @@
          .breadcrumbs
             margin-bottom: 10px
       &__img
-         padding: 8px 15px
+         padding: 15px
          img
-            width: 64%
+            width: 60%
       &__info
          padding: 15px
       &__info
@@ -117,6 +135,10 @@
          margin-bottom: 5px
          .specs--2 &
             margin-bottom: 5px
+      &__select
+         display: flex
    @include xs
       &__box
          gap: 15px
+      &__controls
+         @include margin-bottom(5px)
