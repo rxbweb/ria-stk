@@ -2,7 +2,7 @@
    @extend .scroll-hidden
    width: 78px
    position: fixed
-   z-index: var(--z-index-main)
+   z-index: var(--z-index-900)
    left: 0
    top: 50%
    transform: translateY(-50%)
@@ -21,6 +21,10 @@
             opacity: 1
    &__toggle
       @extend .controls__toggle
+      &-icon
+         @extend .controls__toggle-icon
+      &-arrow
+         @extend .controls__toggle-arrow
    &__main
       @include margin-bottom(10px)
       & > *:not(:last-child)
@@ -99,4 +103,4 @@
 
 .section--sidebar
    position: relative
-   z-index: var(--z-index-main)
+   z-index: var(--z-index-900)

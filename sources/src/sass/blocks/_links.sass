@@ -43,7 +43,6 @@
       background: #fff
       @extend .btn
       @extend .btn--small
-      @extend .btn--arrow
    &__list
       width: 100% 
       max-width: 1080px
@@ -65,6 +64,10 @@
                height: 32px
                &::after
                   font-size: 14px
+   @include md
+      &__icon
+         svg
+            width: 50%
    @include sm
       &__button
          min-height: 50px

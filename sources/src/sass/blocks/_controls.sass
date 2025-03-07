@@ -20,14 +20,25 @@
       align-items: center
       gap: 5px
       display: none
-      @include icomoon-before('\e91f', var(--accent), 24px)
-      @include icomoon('\e906', var(--accent), 7px)
-      &::before,
-      &::after
+      &-icon
+         --size: 22px
+         width: var(--size)
+         height: var(--size)
+         display: flex
+         justify-content: center
+         align-items: center
          flex-shrink: 0
          transition: var(--transition)
-      &::after
+         color: var(--accent)
+      &-arrow
+         --size: 16px
+         width: var(--size)
+         height: var(--size)
          margin-left: auto
+         color: var(--accent)
+         transition: var(--transition)
+         .is-active &
+            transform: rotate(-180deg)
    &__btn
       display: flex
       align-items: center
@@ -74,9 +85,6 @@
       background: none
       &__toggle
          display: flex
-         &.is-active
-            &::after
-               transform: rotate(180deg)
       &__main
          display: none
          background: #fff

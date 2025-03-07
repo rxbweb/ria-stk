@@ -18,9 +18,16 @@
          color: var(--accent)
    &__button
       @extend .btn
-      @extend .btn--arrow
+      svg
+         fill: none
+         stroke: currentColor
       &:first-of-type
-         transform: scaleX(-1)
+         svg
+            transform: scaleX(-1)
+   @include md
+      &__button
+         svg
+            width: 50%
    @include ms
       &__page
          font-size: 20px

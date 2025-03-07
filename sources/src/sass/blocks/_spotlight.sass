@@ -1,16 +1,20 @@
 .spotlight
-   min-height: 200px
-   padding: 40px 30px
+   --height: 200px
    background: #d9d9d9 url(../images/spotlight/spotlight-bg.jpg) no-repeat center / cover
    border-radius: 15px
    overflow: hidden
    display: flex
-   flex-direction: column
-   align-items: center
-   justify-content: space-around
    &--large
-      min-height: 600px
+      --height: 600px
       background: #d9d9d9 url(../images/spotlight/spotlight-bg-large.jpg) no-repeat center / cover
+   &__box
+      width: 100%
+      min-height: var(--height)
+      padding: 40px 30px
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-around
    &__title
       @extend .title
       @include fluidFontSize(20px, 30px, 360px, 1920px, 20px)
@@ -18,4 +22,4 @@
    @include xl
       padding: 30px
       &--large
-         min-height: 460px
+         --height: 460px

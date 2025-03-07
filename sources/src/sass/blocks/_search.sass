@@ -20,7 +20,7 @@
       height: 100%
       min-height: 38px
       padding-left: 46px
-      padding-right: 100px
+      padding-right: 15px
    &__select
       .select
          height: 100%
@@ -33,7 +33,8 @@
             line-height: 120%
             color: #999
             border: none
-            @include icomoon('\e906', #999999, 8px)
+            &::after
+               color: #999999
    @include sm
       &__input
          padding-left: 36px

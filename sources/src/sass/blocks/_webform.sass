@@ -8,6 +8,7 @@
       display: flex
       justify-content: space-between
       align-items: center
+      cursor: pointer
    &__toggle
       margin-bottom: 0
    &__close
@@ -117,21 +118,34 @@
          margin-top: auto
          display: block
          position: relative
-         .btn
-            width: auto
-            height: auto
-            position: absolute
-            right: 10px
-            top: 50%
-            transform: translateY(-50%)
-            border: none
-            &:hover,
-            &:focus,
-            &:active
-               background: transparent
-            &--eye
-               &.is-active
-                  @include icomoon('\e90e', #47535E, 13px)
+      &-icon
+         width: 22px
+         height: auto
+         position: absolute
+         right: 10px
+         top: 50%
+         transform: translateY(-50%)
+         transition: var(--transition)
+         cursor: pointer
+         display: flex
+         justify-content: center
+         align-items: center
+         &:hover,
+         &:focus,
+         &:active
+            color: var(--accent)
+         &--eye
+            .svg-icon
+               &-eye
+                  display: block
+               &-eye-not
+                  display: none
+            &.is-active
+               .svg-icon
+                  &-eye
+                     display: none
+                  &-eye-not
+                     display: block
       &-input,
       &-textarea
          width: 100%
@@ -363,19 +377,21 @@
                &-title
                   display: none
       &-info
+         position: relative
          &.is-blocked
             padding-left: 22px
-            position: relative
-            @include icomoon-before('\e91b', var(--black), 15px)
             &::before
-               width: 20px
-               height: 20px
+               --size: 18px
+               content: ''
+               width: var(--size)
+               height: var(--size)
                position: absolute
                left: 2px
                top: -1px
                display: flex
                justify-content: center
                align-items: center
+               background: url('../images/icons/lock.svg') no-repeat center / contain
       &-list
          @include margin-bottom(20px)
       &-controls
@@ -396,14 +412,12 @@
          border: 1px solid currentColor
          border-radius: 4px
          overflow: hidden
-         &-change
-            @include icomoon('\e917', inherit, 15px)
-         &-lock
-            @include icomoon('\e91b', inherit, 18px)
-         &-unlock
-            @include icomoon('\e91a', inherit, 18px)
-         &-delete
-            @include icomoon('\e915', inherit, 22px)
+         svg
+            transform: scale(1.1)
+         &:hover,
+         &:focus,
+         &:active
+            color: var(--accent)
       &-manage
          display: flex
          justify-content: space-between
@@ -416,7 +430,7 @@
             align-items: center
             gap: 20px
          &-box
-            @include margin-bottom(4px)
+            @include margin-bottom(5px)
          &-users
             @extend .title
             @include fluidFontSize(16px, 20px, 360px, 1920px, 16px)
@@ -440,7 +454,7 @@
             &--secondary
                background: #fff
                color: #47535E
-            .icon
+            svg
                display: none
       &-title
          display: none
@@ -466,9 +480,8 @@
             &-btn
                width: 54px
                font-size: 0
-               .icon
+               svg
                   display: block
-                  font-size: 22px
    @include xl
       &__access
          &-col
@@ -497,7 +510,7 @@
             &-btn
                width: calc(50% - 8px)
                font-size: var(--font-size)
-               .icon
+               svg
                   display: none
    @include md
       --webform-padding: 30px
@@ -538,7 +551,7 @@
             &-btn
                width: calc(50% - 8px)
                font-size: var(--font-size)
-               .icon
+               svg
                   display: none
          .webform
             &__label
