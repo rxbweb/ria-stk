@@ -1,0 +1,18 @@
+include ../../mixins/_mixins
+
+section.section.section--readers
+   .section__wrapper.container
+      .section__content
+         .readers
+            .bg-image
+               +picture("images/readers/readers-bg.jpg", "images/readers/readers-bg-mob.jpg", "фоновая картинка", 1640, 500)
+            .readers__main
+               .readers__info
+                  h2.readers__title Читателям
+                  p.readers__text #{'МАКСИМУМ ПОЛЬЗЫ НА ОДНОЙ СТРАНИЦЕ'}
+                     |
+                     | Акции, промокоды, информация о подписке и ответы на все ваши вопросы собраны в разделе "Читателям".
+                     | Покупайте выгодно, читайте с удовольствием!
+                  +button-icon('link', 'Перейти в раздел')
+               .readers__img
+                  +picture('images/readers/readers.png', 'images/readers/readers-mob.png', 'Читатели', 764, 500)
