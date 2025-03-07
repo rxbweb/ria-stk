@@ -1,7 +1,11 @@
+include ../../mixins/_mixins
+
 .pagination
    .pagination__row
       button.pagination__button
+         +svg('icon-arrow-right-large', '', 24, 24)
       .pagination__list
          each page, index in [1, 2, 3, "...", 999]
             a.pagination__page(href="#", class=(index === 0 ? "is-active" : "")) #{page}
       button.pagination__button
+         +svg('icon-arrow-right-large', '', 24, 24)
