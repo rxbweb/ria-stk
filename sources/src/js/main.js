@@ -101,14 +101,12 @@ $('.history__swiper').each(function (index, element) {
          clickable: true,
       },
       on: {
-         // При изменении активного слайда
          slideChange: function () {
             syncActiveButton(swiper.activeIndex);
          },
       },
    });
 });
-
 
 $('.card__table-swiper').each(function (index, element) {
    new Swiper(element, {
@@ -131,18 +129,13 @@ $('.card__table-swiper').each(function (index, element) {
    });
 });
 
-// Синхронизация кнопок и слайдов
 const dateButtons = document.querySelectorAll(".history__dates-btn");
 
-// Клик на кнопку - смена слайда
 dateButtons.forEach((button, index) => {
    button.addEventListener("click", (e) => {
       e.preventDefault();
 
-      // Устанавливаем активный слайд
       swiper.slideTo(index);
-
-      // Удаляем класс is-active у всех кнопок и добавляем только нужной
       setActiveButton(index);
    });
 });
@@ -195,19 +188,17 @@ $('.account__tabs-btn').on('click', function (e) {
    $tabItem.addClass('is-active').siblings('[data-tab]').removeClass('is-active');
 });
 
-// Функция обновления активной кнопки при смене слайда
 function syncActiveButton(activeIndex) {
-   dateButtons.forEach(button => button.classList.remove("is-active")); // Удаляем класс у всех
+   dateButtons.forEach(button => button.classList.remove("is-active"));
    if (dateButtons[activeIndex]) {
-      dateButtons[activeIndex].classList.add("is-active"); // Добавляем только нужной
+      dateButtons[activeIndex].classList.add("is-active");
    }
 }
 
-// Установка активной кнопки вручную
 function setActiveButton(index) {
-   dateButtons.forEach(button => button.classList.remove("is-active")); // Удаляем класс у всех
+   dateButtons.forEach(button => button.classList.remove("is-active"));
    if (dateButtons[index]) {
-      dateButtons[index].classList.add("is-active"); // Добавляем только нужной
+      dateButtons[index].classList.add("is-active");
    }
 }
 
@@ -235,7 +226,6 @@ document.querySelectorAll(".hero__books-swiper").forEach(swiperContainer => {
       loop: true,
       speed: 700,
       centeredSlides: false,
-      // allowTouchMove: false,
       autoplay: {
          delay: 3000,
          disableOnInteraction: false,
@@ -347,35 +337,45 @@ $('.books__swiper-slider').each(function (index, element) {
    });
 });
 
-const isMobile = window.matchMedia("(max-width: 768px)").matches;
+const numbersModule = {
+   isMobile: window.matchMedia("(max-width: 768px)").matches,
 
-const nums = lozad('[data-nums]', {
-   rootMargin: isMobile ? '-20px 0px' : '-100px 0px',
-   threshold: 0.3,
-   loaded: function(el) {
-      $(el).find('[data-value]').each(function() {
-         const text = $(this).attr('data-value').replace(/\s/g, ''); // Убираем пробелы из атрибута
+   init() {
+      this.nums = lozad('[data-nums]', {
+         rootMargin: this.getRootMargin(),
+         threshold: 0.3,
+         loaded: this.onLoaded.bind(this),
+      });
+      this.nums.observe();
+   },
 
-         $(this).prop('Counter', 0).animate({
+   getRootMargin() {
+      return this.isMobile ? '-20px 0px' : '-100px 0px';
+   },
+
+   onLoaded(el) {
+      $(el).find('[data-value]').each((_, elem) => {
+         const text = $(elem).attr('data-value').replace(/\s/g, '');
+
+         $(elem).prop('Counter', 0).animate({
             Counter: text
          }, {
             duration: 1100,
             easing: 'swing',
-            step: function(now) {
-               // Форматирование числа с пробелами
-               const formattedNumber = Math.ceil(now).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-               $(this).text(formattedNumber); // Устанавливаем отформатированное значение
-            }
+            step: this.formatNumber
          });
       });
-   }
-});
+   },
 
-nums.observe();
+   formatNumber(now) {
+      const formattedNumber = Math.ceil(now).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+      $(this).text(formattedNumber);
+   },
+};
 
 const phoneMaskModule = {
    init() {
-      const $phoneElements = $('[data-name="phone"]');
+      const $phoneElements = $('[name="tel"]');
       if ($phoneElements.length === 0) {
          return;
       }
@@ -418,13 +418,11 @@ const mapModule = {
       ];
 
       if (!markers || markers.length === 0) {
-         console.warn('Объект "markers" не найден или пуст.');
          return;
       }
 
       mapElements.forEach((mapElement, index) => {
          if (!mapElement) {
-            console.warn(`Элемент карты с индексом ${index} не найден.`);
             return;
          }
 
@@ -435,7 +433,6 @@ const mapModule = {
 
          markers.forEach((marker, markerIndex) => {
             if (!marker.lat || !marker.lon) {
-               console.warn(`Маркер с индексом ${markerIndex} имеет некорректные координаты.`);
                return;
             }
 
@@ -453,8 +450,8 @@ const navModule = {
    init() {
       const $navList = $('.header__nav-list');
       const $boxNav = $('.header__box-nav');
-      const $headerBox = $boxNav.closest('.header__box'); // Ищем контейнер header__box
-      const $burger = $('.header__burger'); // Находим кнопку бургер
+      const $headerBox = $boxNav.closest('.header__box');
+      const $burger = $('.header__burger');
 
       if (!$navList.length || !$boxNav.length || !$burger.length) {
          return;
@@ -466,7 +463,7 @@ const navModule = {
       this.burger = $burger;
 
       $(window).on('resize', this.checkOverflow.bind(this));
-      $burger.on('click', this.toggleBoxActive.bind(this)); // Добавляем обработчик клика по бургеру
+      $burger.on('click', this.toggleBoxActive.bind(this));
 
       this.checkOverflow();
    },
@@ -476,16 +473,13 @@ const navModule = {
          return;
       }
 
-      // Возвращаем все элементы из boxNav обратно в navList
       while (this.boxNav[0].firstChild) {
          this.navList.append(this.boxNav[0].firstChild);
       }
 
-      // Перемещаем элементы, которые не помещаются
       const navListItems = Array.from(this.navList.children('.header__nav-item'));
       for (let i = navListItems.length - 1; i >= 0; i--) {
          if (this.navList[0].scrollWidth > this.navList[0].clientWidth) {
-            // Убираем последний элемент из navList и добавляем его в начало boxNav
             const item = navListItems[i];
             this.boxNav.prepend(item);
             this.burger.addClass('is-visible');
@@ -496,13 +490,12 @@ const navModule = {
    },
 
    toggleBoxActive() {
-      // Проверяем, есть ли элементы внутри boxNav
       if (this.boxNav.children().length > 0) {
-         this.headerBox.toggleClass('is-active'); // Добавляем класс на header__box
-         this.burger.toggleClass('is-active'); // Добавляем класс на header__burger
+         this.headerBox.toggleClass('is-active');
+         this.burger.toggleClass('is-active');
       } else {
-         this.headerBox.removeClass('is-active'); // Убираем класс с header__box
-         this.burger.removeClass('is-active'); // Убираем класс с header__burger
+         this.headerBox.removeClass('is-active');
+         this.burger.removeClass('is-active');
       }
    },
 };
@@ -562,7 +555,7 @@ const selectModule = {
 
       $selectList.find('.select__item').removeClass('is-active');
       $item.addClass('is-active');
-      $selectActive.html(`<span>${selectedText}</span>`);
+      $selectActive.find('.select__active-text').html(`${selectedText}`);
       $selectActive.addClass('is-selected');
       $selectList.removeClass('is-active');
    },
@@ -645,51 +638,89 @@ const accordionModule = {
    },
 };
 
-$(document).ready(function () {
-   function toggleControls() {
+const controlsModule = {
+   init() {
+      this.$controlsToggle = $(".controls__toggle");
+      this.$document = $(document);
+      this.handleResize();
+      this.bindResizeEvent();
+   },
+
+   handleResize() {
       if ($(window).width() <= 991) {
-         $(".controls__toggle").on('click', function (e) {
-            e.stopPropagation();
-            $(this).toggleClass("is-active").next().stop().slideToggle(300);
-         });
-
-         $(document).on('click', function (e) {
-            if (!$(e.target).closest(".controls").length) {
-                  $(".controls__toggle").removeClass("is-active").next().stop().slideUp(300);
-            }
-         });
+         this.bindEvents();
       } else {
-         $(".controls__toggle").off('click'); // Отключаем обработчики, если ширина больше 1360px
-         $(document).off('click');
+         this.unbindEvents();
       }
-   }
+   },
 
-   toggleControls(); // Запускаем при загрузке
-   $(window).on('resize', toggleControls); // Перезапускаем при изменении размера окна
-});
+   bindResizeEvent() {
+      $(window).on('resize', this.onResize.bind(this));
+   },
 
-$(document).ready(function () {
-   function toggleSidebar() {
-       if ($(window).width() <= 991) {
-           $(".sidebar__toggle").on('click', function (e) {
-               e.stopPropagation();
-               $(this).toggleClass("is-active").next().stop().slideToggle(300);
-           });
+   onResize() {
+      this.handleResize();
+   },
 
-           $(document).on('click', function (e) {
-               if (!$(e.target).closest(".sidebar").length) {
-                   $(".sidebar__toggle").removeClass("is-active").next().stop().slideUp(300);
-               }
-           });
-       } else {
-           $(".sidebar__toggle").off('click'); // Отключаем обработчики, если ширина больше 1360px
-           $(document).off('click');
-       }
-   }
+   bindEvents() {
+      this.$controlsToggle.on('click', this.toggleControls.bind(this));
+      this.$document.on('click', this.closeControls.bind(this));
+   },
 
-   toggleSidebar(); // Запускаем при загрузке
-   $(window).on('resize', toggleSidebar); // Перезапускаем при изменении размера окна
-});
+   unbindEvents() {
+      this.$controlsToggle.off('click');
+      this.$document.off('click');
+   },
+
+   toggleControls(e) {
+      e.stopPropagation();
+      this.$controlsToggle.toggleClass("is-active").next().stop().slideToggle(300);
+   },
+
+   closeControls(e) {
+      if (!$(e.target).closest(".controls").length) {
+         this.$controlsToggle.removeClass("is-active").next().stop().slideUp(300);
+      }
+   },
+};
+
+const sidebarModule = {
+   init() {
+      this.$sidebarToggle = $('.sidebar__toggle');
+      this.$document = $(document);
+      this.handleResize();
+   },
+
+   handleResize() {
+      if ($(window).width() <= 991) {
+         this.bindEvents();
+      } else {
+         this.unbindEvents();
+      }
+   },
+
+   bindEvents() {
+      this.$sidebarToggle.on('click', this.toggleSidebar.bind(this));
+      this.$document.on('click', this.closeSidebar.bind(this));
+   },
+
+   unbindEvents() {
+      this.$sidebarToggle.off('click');
+      this.$document.off('click');
+   },
+
+   toggleSidebar(e) {
+      e.stopPropagation();
+      e.preventDefault();
+      this.$sidebarToggle.toggleClass("is-active").next().stop().slideToggle(300);
+   },
+
+   closeSidebar(e) {
+      if (!$(e.target).closest(".sidebar").length) {
+         this.$sidebarToggle.removeClass("is-active").next().stop().slideUp(300);
+      }
+   },
+};
 
 const fileUploadModule = {
    init() {
@@ -712,80 +743,87 @@ const fileUploadModule = {
    }
 };
 
-// const lozadModule = {
-//    init() {
-//       if (typeof lozad === 'undefined') {
-//          console.warn('Библиотека lozad не подключена.');
-//          return;
-//       }
+const lazyLoadModule = {
+   init() {
+      this.$lazyElements = $('.lazyload');
 
-//       const $lozadElements = $('.lozad');
-//       if ($lozadElements.length === 0) {
-//          console.warn('Нет элементов с классом .lozad на странице.');
-//          return;
-//       }
+      if (!this.$lazyElements.length) return;
 
-//       this.initObserver($lozadElements);
-//    },
+      this.observer = lozad('.lazyload', {
+         rootMargin: '60px 0px',
+         loaded: this.onLoad.bind(this),
+      });
 
-//    initObserver($elements) {
-//       // Убедитесь, что передаем строку селектора для lozad
-//       const observer = lozad($elements.get(0), { // передаем только первый элемент, если их несколько
-//          rootMargin: '10px 0px',
-//          threshold: 0.3,
-//          loaded: function(el) {
-//             // Когда изображение загружено, убираем прелоадер
-//             const $el = $(el);
-//             $el.removeClass('lozad');  // Убираем класс lozad
-//             $el.css('background-image', 'none'); // Убираем фон-прелоадер
-//          }
-//       });
+      this.bindEvents();
+      this.observer.observe();
+   },
 
-//       observer.observe();
-//    }
-// };
+   bindEvents() {
+      this.$lazyElements.on('error', this.onError);
+   },
 
-const observer = lozad('.lozad', {
-   rootMargin: '10px 0px',
-   threshold: 0.3
-});
+   onLoad(el) {
+      const $el = $(el);
 
-observer.observe();
-
-$("[data-validate-form]").each(function () {
-   let $form = $(this);
-
-   $form.validate({
-      errorPlacement: function (error, element) {
-         if (element.closest(".agree").length) {
-            // Если чекбокс внутри .agree — показываем .agree__error
-            element.closest(".agree").find(".agree__error").show();
-         } else if (element.closest(".webform__label").length) {
-            // Если инпут внутри .webform__label — показываем .webform__label-error
-            element.closest(".webform__label").find(".webform__label-error").show();
-         } else {
-            // Для остальных инпутов: добавляем класс и показываем .form__error
-            let $label = element.closest(".form__label");
-            $label.addClass("is-error");
-            $label.find(".form__error").show();
-         }
-      },
-      success: function (label, element) {
-         if ($(element).closest(".agree").length) {
-            // Если чекбокс внутри .agree — скрываем .agree__error
-            $(element).closest(".agree").find(".agree__error").hide();
-         } else if ($(element).closest(".webform__label").length) {
-            // Если инпут внутри .webform__label — скрываем .webform__label-error
-            $(element).closest(".webform__label").find(".webform__label-error").hide();
-         } else {
-            // Для остальных инпутов: убираем класс и скрываем .form__error
-            let $label = $(element).closest(".form__label");
-            $label.removeClass("is-error");
-            $label.find(".form__error").hide();
-         }
+      if ($el.is('img')) {
+         $el.attr('src', $el.data('src')).addClass('is-loaded');
+      } else if ($el.is('picture')) {
+         $el.find('source').each(function () {
+            $(this).attr('srcset', $(this).data('srcset'));
+         });
+         $el.find('img').attr('src', $el.find('img').data('src'));
+         $el.addClass('is-loaded');
       }
-   });
-});
+   },
+
+   onError() {
+      $(this).addClass('is-error');
+   },
+};
+
+const formValidationModule = {
+   init() {
+      this.$forms = $("[data-validate-form]");
+      this.bindEvents();
+   },
+
+   bindEvents() {
+      this.$forms.each((_, form) => {
+         this.setupValidation($(form));
+      });
+   },
+
+   setupValidation($form) {
+      $form.validate({
+         errorPlacement: this.errorPlacement,
+         success: this.success,
+      });
+   },
+
+   errorPlacement(error, element) {
+      if (element.closest(".agree").length) {
+         element.closest(".agree").find(".agree__error").show();
+      } else if (element.closest(".webform__label").length) {
+         element.closest(".webform__label").find(".webform__label-error").show();
+      } else {
+         let $label = element.closest(".form__label");
+         $label.addClass("is-error");
+         $label.find(".form__error").show();
+      }
+   },
+
+   success(label, element) {
+      if ($(element).closest(".agree").length) {
+         $(element).closest(".agree").find(".agree__error").hide();
+      } else if ($(element).closest(".webform__label").length) {
+         $(element).closest(".webform__label").find(".webform__label-error").hide();
+      } else {
+         let $label = $(element).closest(".form__label");
+         $label.removeClass("is-error");
+         $label.find(".form__error").hide();
+      }
+   },
+};
 
 const tabsModule = {
    init() {
@@ -897,6 +935,7 @@ const favoriteButtonModule = {
    bindFavoriteEvents($buttons) {
       $buttons.on('click', function (e) {
          e.preventDefault();
+         e.stopPropagation();
          $(this).toggleClass('is-active');
       });
    }
@@ -904,7 +943,7 @@ const favoriteButtonModule = {
 
 const passwordToggleModule = {
    init() {
-      const $toggleButtons = $('.btn--eye');
+      const $toggleButtons = $('.button-eye');
       if ($toggleButtons.length === 0) {
          return;
       }
@@ -968,10 +1007,187 @@ const webformModule = {
    },
 };
 
+const dateInputModule = {
+   init() {
+      const $dateInput = $('[name="date"]');
+      if ($dateInput.length === 0) {
+         return;
+      }
+
+      this.bindDateEvents($dateInput);
+   },
+
+   bindDateEvents($input) {
+      $input.on("input", (e) => {
+         this.formatDate(e.target);
+      });
+
+      $input.on("keydown", (e) => {
+         this.handleBackspace(e);
+      });
+   },
+
+   formatDate(input) {
+      let value = $(input).val().replace(/\D/g, "");
+      let formattedValue = "";
+
+      let day = value.substring(0, 2);
+      if (parseInt(day) > 31) {
+         day = "31";
+      }
+      formattedValue = day;
+
+      let month = value.substring(2, 4);
+      if (parseInt(month) > 12) {
+         month = "12";
+      }
+      if (month.length > 0) {
+         formattedValue += "." + month;
+      }
+
+      let year = value.substring(4, 8);
+      if (year.length === 4) {
+         if (parseInt(year) < 1900) {
+            year = "1900";
+         } else if (parseInt(year) > 2025) {
+            year = "2025";
+         }
+      }
+
+      if (year.length > 0) {
+         formattedValue += "." + year;
+      }
+
+      $(input).val(formattedValue);
+   },
+
+   handleBackspace(e) {
+      const $input = $(e.target);
+      if (e.key === "Backspace" && $input.val().endsWith(".")) {
+         $input.val($input.val().slice(0, -1));
+         e.preventDefault();
+      }
+   }
+};
+
+const headerModule = {
+   init() {
+      const $headerLogin = $('.header__login');
+      if (!$headerLogin.length) {
+         return;
+      }
+
+      $headerLogin.on('click', this.toggleLoginCabinet);
+   },
+
+   toggleLoginCabinet(e) {
+      e.preventDefault();
+
+      const $loginCabinet = $(e.currentTarget).find('.header__login-cabinet');
+      if ($loginCabinet.length) {
+         $loginCabinet.toggleClass('is-active');
+      }
+   },
+};
+
+const buttonLoadingModule = {
+   init() {
+      const $button = $('.button-loading');
+      if ($button.length === 0) {
+         return;
+      }
+
+      this.handleLoading($button);
+   },
+
+   handleLoading($button) {
+      $button.on('click', function(e) {
+         e.preventDefault();
+
+         const $currentButton = $(this);
+         const dataLoadingValue = $currentButton.data('loading');
+
+         if (!dataLoadingValue) {
+            return;
+         }
+
+         const $targetBlock = $(`[data-loading="${dataLoadingValue}"]`);
+         
+         if ($targetBlock.length) {
+            $targetBlock.addClass('is-active');
+         }
+
+         $currentButton.remove();
+      });
+   }
+};
+
+const glossaryModule = {
+   init() {
+      const $buttons = $('.glossary__listing-theme');
+      if ($buttons.length === 0) {
+         return;
+      }
+
+      this.handleToggle($buttons);
+   },
+
+   handleToggle($buttons) {
+      $buttons.on('click', function () {
+         const $currentButton = $(this);
+         const $parentItem = $currentButton.closest('.glossary__listing-item');
+         const $infoBlock = $parentItem.find('.glossary__listing-info');
+
+         if ($infoBlock.length) {
+            if ($infoBlock.is(':visible')) {
+               $infoBlock.slideUp(300);
+               $parentItem.removeClass('is-active');
+            } else {
+               $infoBlock.slideDown(300);
+               $parentItem.addClass('is-active');
+            }
+         }
+      });
+   }
+};
+
+const goodsTableModule = {
+   init() {
+      const $buttons = $('.goods__table-controls-button');
+      if ($buttons.length === 0) {
+         return;
+      }
+      this.handleCountChange($buttons);
+   },
+
+   handleCountChange($buttons) {
+      $buttons.on('click', function () {
+         const $currentButton = $(this);
+         const $parent = $currentButton.closest('.goods__table-controls');
+         const $countElement = $parent.find('.goods__table-controls-count');
+
+         if ($countElement.length === 0) {
+            return;
+         }
+
+         let count = parseInt($countElement.val(), 10);
+         if (isNaN(count)) {
+            count = 0;
+         }
+
+         if ($currentButton.hasClass('goods__table-controls-button--plus')) {
+            count++;
+         } else if ($currentButton.hasClass('goods__table-controls-button--minus')) {
+            count = Math.max(0, count - 1);
+         }
+
+         $countElement.val(count);
+      });
+   }
+};
 
 $(function () {
-   // numsModule.init();
-   // lozadModule.init();
+   lazyLoadModule.init();
    phoneMaskModule.init();
    mapModule.init();
    selectModule.init();
@@ -985,4 +1201,14 @@ $(function () {
    webformOptionsModule.init();
    tabsModule.init();
    fileUploadModule.init();
+   sidebarModule.init();
+   controlsModule.init();
+   formValidationModule.init();
+   numbersModule.init();
+   dateInputModule.init();
+   headerModule.init();
+   buttonLoadingModule.init();
+   glossaryModule.init();
+   goodsTableModule.init();
+   $(window).on('resize', () => sidebarModule.handleResize());
 });
