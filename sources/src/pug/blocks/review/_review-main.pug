@@ -1,0 +1,57 @@
+include ../../mixins/_mixins
+include ../download/mixins/_downloadList
+
+section.section.section--review
+   .section__bg
+      img(src="images/section/section-bg.jpg", alt="фоновая картинка" width="1920" height="640")
+   .section__wrapper.container
+      .section__content
+         .review
+            .review__inner
+               .review__main
+                  .review__header
+                     .review__info
+                        h2.form__title Заявка на рассмотрение материалов
+                        p Мы принимаем рукописи только в электронном виде и только через форму отправки рукописи. Рукописи, присланные на электронный адрес издательства не рассматриваются.
+                     .review__box
+                        .note
+                           h3.note__title Правила именования файлов
+                           ul.note__list
+                              li только латинские буквы и цифры;
+                              li не используйте пробел;
+                              li осмысленные названия на английском языке.
+                  form.form.form--review(action="#")
+                     .form__main
+                        .form__group
+                           .form__box.form__box--column
+                              label.form__label
+                                 span.form__type Имя
+                                 input.form__input(type="text" placeholder="Ваше имя")
+                              label.form__label
+                                 span.form__type Фамилия
+                                 input.form__input(type="text" placeholder="Ваша фамилия")
+                              label.form__label
+                                 span.form__type Отчество
+                                 input.form__input(type="text" placeholder="Ваше отчество")
+                              label.form__label
+                                 span.form__type Email
+                                 input.form__input(type="email" placeholder="Email")
+                           .form__box.form__box--column
+                              label.form__label
+                                 span.form__type Ученое звание или статус
+                                 input.form__input(type="text" placeholder="Укажите ваше ученое звание или статус")
+                              label.form__label
+                                 span.form__type Должность
+                                 input.form__input(type="text" placeholder="Укажите вашу должность")
+                              .form__label
+                                 span.form__type Для размещения в журнале
+                                 +select(true, ['На усмотрение редакции', 'На усмотрение редакции', 'На усмотрение редакции'], 'select--secondary')
+                              label.form__label
+                                 span.form__type Название рукописи
+                                 input.form__input(type="text" placeholder="Название рукописи")
+                           .form__box.form__box--column.form__box--download
+                              +downloadList('Прикрепить файл')
+                              label.form__label
+                                 span.form__type Дополнительная информация
+                                 textarea.form__textarea(placeholder="Необязательно")
+                              +button('Отправить', 'form__button', '', false)

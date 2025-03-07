@@ -1,0 +1,25 @@
+include ../../mixins/_mixins
+include ../download/mixins/_downloadList
+
+section.section.section--review
+   .section__bg
+      img(src="images/section/section-bg.jpg", alt="фоновая картинка" width="1920" height="640")
+   .section__wrapper.container
+      .section__content
+         .review
+            .review__inner
+               .review__main
+                  .review__header
+                     .review__info
+                        h2.form__title Заявка на рассмотрение материалов
+                        p Мы принимаем рукописи только в электронном виде и только через форму отправки рукописи. Рукописи, присланные на электронный адрес издательства не рассматриваются.
+                     .review__box
+                        .note
+                           h3.note__title Правила именования файлов
+                           ul.note__list
+                              li только латинские буквы и цифры;
+                              li не используйте пробел;
+                              li осмысленные названия на английском языке.
+                  .review__content
+                     p.review__text Чтобы отправить статью, нужно #[a(href="#") зарегистрироваться] как автор или #[a(href="#") войти в Личный кабинет], если вы уже зарегистрированы
+                     +button-icon('button', 'Стать автором')
