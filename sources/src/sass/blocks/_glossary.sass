@@ -4,18 +4,60 @@
       grid-template-columns: repeat(4, 1fr)
       gap: 100px var(--gap)
    &__item
-      @include margin-bottom(30px)
+      @include margin-bottom(var(--gap-2))
    &__letter
       @extend .title
-      @extend .title--fourth
       @extend .title--red
+      @include fluidFontSize(32px, 40px, 360px, 1920px, 32px)
    &__listing
       color: var(--black)
       @include margin-bottom(15px)
-      &-item
-         padding-bottom: 5px
-         border-bottom: 1px solid #CDCDCD
       &-theme
+         width: 100%
+         display: block
+         text-align: left
          font-size: 18px
       &-info
          display: none
+         padding-top: 10px
+         color: #727171
+         @include margin-bottom(20px)
+      &-text
+         font-size: 14px
+      &-item
+         padding-bottom: 5px
+         border-bottom: 1px solid #CDCDCD
+         &.is-active
+            .glossary
+               &__listing
+                  &-theme
+                     color: var(--accent)
+                  &-info
+                     display: block
+   @include xl
+      &__list
+         gap: 80px var(--gap)
+      &__listing
+         &-theme
+            font-size: 17px
+   @include md
+      &__list
+         grid-template-columns: repeat(3, 1fr)
+         gap: var(--gap)
+   @include ms
+      &__list
+         grid-template-columns: repeat(2, 1fr)
+      &__listing
+         &-theme
+            font-size: 16px
+   @include xs
+      &__list
+         grid-template-columns: 1fr
+         gap: 25px
+      &__item
+         @include margin-bottom(15px)
+      &__listing
+         &-theme
+            font-size: 15px
+         &-text
+            font-size: 13px
