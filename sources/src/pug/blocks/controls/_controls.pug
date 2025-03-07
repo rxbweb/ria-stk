@@ -46,7 +46,11 @@ mixin controls(activeIndex)
 
    .controls
       a.controls__toggle(href="#")
+         span.controls__toggle-icon
+            +svg('icon-filter', '', 22, 22)
          span Навигация по личному кабинету
+         span.controls__toggle-arrow
+            +svg('icon-arrow-down', '', 16, 16)
       .controls__main
          .controls__list
             each control, index in controls
