@@ -1,0 +1,47 @@
+include ../../mixins/_mixins
+
+section.section.section--dispatch
+   .section__wrapper
+      .section__content
+         .dispatch.dispatch--secondary
+            .bg-image
+               img(src="images/dispatch/dispatch-bg.jpg", alt="фоновая картинка" width="1920" height="750")
+            .dispatch__inner.container
+               +breadcrumbs([
+                  { href: '#', title: 'Главная' },
+                  { href: '#', title: 'Новости' },
+                  { href: '#', title: 'Quality News' },
+               ])
+               .dispatch__row
+                  form.dispatch__form.form(action="#" data-validate-form)
+                     .form__header
+                        h1.form__title Газета Quality News — качественные новости каждый четверг
+                        p.form__text Электронная рассылка #[a(href="#") «Газета Quality News»] — бесплатный новостной дайджест, результат ежедневного мониторинга деловой жизни профессионального сообщества. Подписывайтесь и будьте в курсе новостей из мира качества!
+                     .form__main
+                        .form__top
+                           .form__box
+                              label.form__label.form__label--half
+                                 input.form__input(type="text" placeholder="Имя" name="form-name" required)
+                                 span.form__error Обязательное поле
+                              label.form__label.form__label--half
+                                 input.form__input(type="text" placeholder="Фамилия" required)
+                              label.form__label
+                                 input.form__input(type="email" placeholder="E-mail" name="form-email" required)
+                                 span.form__error Обязательное поле
+                        .form__middle
+                           .agree
+                              label.agree__label
+                                 input(type="checkbox" name="form-agree" required)
+                                 span.agree__checkbox
+                                 span.agree__text
+                                    | Я согласен с 
+                                    a(href="#") Правилами обработки и хранения персональных данных
+                              span.agree__error Обязательное поле
+                        .form__bottom
+                           +button('Подписаться', 'form__button', '', false)
+                  .dispatch__journal
+                     img(src="images/dispatch/dispatch-journal.png", alt="журнал" width="787" height="750")
+                     .dispatch__label 
+                        p #{'бесплатная'}
+                           |
+                           | подписка

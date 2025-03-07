@@ -1,6 +1,11 @@
 .dispatch
    padding: 20px 0
    position: relative
+   &--secondary
+      padding-top: 0
+      .breadcrumbs
+         &__inner
+            padding-bottom: 0
    &__inner
       position: relative
       z-index: var(--z-index)
@@ -16,17 +21,58 @@
    &__journal
       display: flex
       justify-content: flex-end
+      position: relative
+   &__label
+      @extend .title
+      @extend .title--fourth
+      --size: 244px
+      width: var(--size)
+      height: var(--size)
+      padding: 16px
+      position: absolute
+      top: 10%
+      right: 0
+      transform: translateX(3%)
+      border-radius: 50%
+      background: var(--accent)
+      color: #fff
+      text-align: center
+      white-space: pre-line
+      display: flex
+      justify-content: center
+      align-items: center
+   @media (max-width: 1600px)
+      .breadcrumbs
+         &__inner
+            padding-bottom: 30px      
+   @include xl
+      &__label
+         --size: 200px
+         top: 8%
+         font-size: 28px
    @include md
       padding: 60px 0 40px
+      &--secondary
+         padding-top: 0
       &__row
          flex-direction: column
          gap: var(--gap)
          & > *
             width: 100%
+            max-width: 100%
       &__journal
          max-width: 500px
          margin: 0 auto
          justify-content: center
+      &__label
+         --size: 150px
+         font-size: 22px
+   @include sm
+      &__label
+         --size: 105px
+         font-size: 17px
+         top: 7%
+         transform: translateX(-34%)
    @include xs
       &__journal
          @include width-increase(var(--padding))
