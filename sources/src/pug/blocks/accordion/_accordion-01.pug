@@ -1,4 +1,4 @@
-include ../mixins/_mixins
+include ../../mixins/_mixins
 
 mixin accordionInfoList(list)
    ul.accordion__info-list
@@ -28,12 +28,12 @@ mixin accordionMagazines()
             .accordion__magazines-info
                h4.accordion__magazines-title Business Excellence
 
-mixin accordionItem(data= 'accordion-01', title = 'Название', badge = 'images/badges/badge-04.svg', badgeWidth = '24', badgeHeight = '24')
+mixin accordionItem(data= 'accordion-01', title = 'Название', badge = '04', badgeWidth = '24', badgeHeight = '24')
    li.accordion__item
       a.accordion__button(href="#" data-accordion=data)
          .accordion__button-name
             .badge
-               img(src=badge, alt="иконка" width=badgeWidth height=badgeHeight)
+               +svg(`badge-${badge}`, '', badgeWidth, badgeHeight)
             h3.accordion__button-title= title
          .accordion__button-plus
             img(src="images/icons/plus.svg", alt="раскрыть информацию" width="36" height="36")
@@ -60,16 +60,16 @@ section.section.section--border.section--accordion
          .accordion.accordion--secondary
             .accordion__inner
                .accordion__row
-                  .accordion__left
+                  .accordion__picture
                      .accordion__img
                         img.accordion__pic(src="images/details/details-08.jpg", alt="картинка" width="518" height="487" data-img="accordion-01")
                         img.accordion__pic(src="images/details/details-02.jpg", alt="картинка" width="518" height="487" data-img="accordion-02")
                         img.accordion__pic(src="images/details/details-03.jpg", alt="картинка" width="518" height="487" data-img="accordion-03")
                         img.accordion__pic(src="images/news/news-articles-01.jpg", alt="картинка" width="518" height="487" data-img="accordion-04")
-                  .accordion__right
+                  .accordion__section
                      .info__accordion
                         ul.accordion__list
-                           +accordionItem('accordion-01', 'Техническое регулирование', 'images/badges/badge-04.svg', '24', '24')
-                           +accordionItem('accordion-02', 'Стандартизация', 'images/badges/badge-05.svg', '24', '24')
-                           +accordionItem('accordion-03', 'Управление качеством', 'images/badges/badge-06.svg', '21', '21')
-                           +accordionItem('accordion-04', 'Метрология', 'images/badges/badge-07.svg', '26', '26')
+                           +accordionItem('accordion-01', 'Техническое регулирование', '04', '26', '26')
+                           +accordionItem('accordion-02', 'Стандартизация', '05', '26', '26')
+                           +accordionItem('accordion-03', 'Управление качеством', '06', '23', '23')
+                           +accordionItem('accordion-04', 'Метрология', '07', '28', '28')

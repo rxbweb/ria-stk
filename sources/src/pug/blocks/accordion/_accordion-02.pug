@@ -1,0 +1,41 @@
+include ../../mixins/_mixins
+
+mixin accordionInfoList(list)
+   ul.accordion__info-list
+      each item in list
+         li
+            a.accordion__info-button(href="#")
+               span= item
+               span.accordion__info-button-icon
+                  +svg('icon-arrow-right', 'svg-icon-arrow-right', '14', '14')
+
+mixin accordionItem(data= 'accordion-01', title = 'Название')
+   li.accordion__item
+      a.accordion__button(href="#" data-accordion=data)
+         .accordion__button-name
+            h3.accordion__button-title= title
+         .accordion__button-plus
+            img(src="images/icons/plus.svg", alt="раскрыть информацию" width="36" height="36")
+      .accordion__wrapper
+         .accordion__content
+            .accordion__text
+               p При одновременной подписке на печатную и электронную версии журнала, стоимость эл. версии в составе такого заказа составит 50% от стоимости годовой подписки с учётом специальной скидки. Пример: журнал «Методы менеджмента качества», печатная + электронная версии №№ 1 -12/2024: 35 280 + (35 280 – 50%) = 52 920 руб.
+
+section.section.section--accordion
+   .section__wrapper.container
+      .section__header
+         .section__header-row.section__header-row--center
+            h2.section__header-heading Часто задаваемые вопросы
+      .section__content
+         .accordion.accordion--third
+            .accordion__inner
+               .accordion__row
+                  .accordion__section
+                     .info__accordion
+                        ul.accordion__list
+                           +accordionItem('accordion-01', 'Как оформить подписку?')
+                           +accordionItem('accordion-02', 'Можно ли оформить подписку на юридическое лицо?', '05', '26', '26')
+                           +accordionItem('accordion-03', 'Есть ли скидка для студентов?')
+                           +accordionItem('accordion-04', 'Есть ли скидка при одновременном оформлении подписки на печатную и электронную версии журнала?')
+                           +accordionItem('accordion-05', 'Как отправить рукопись для публикации в журнале?')
+                           +accordionItem('accordion-06', 'Как стать участником бонусной программы?')
