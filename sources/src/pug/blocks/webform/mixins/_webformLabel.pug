@@ -1,10 +1,15 @@
-mixin webformLabel(title, comment, type, placeholder)
-   label.webform__label
-      if title || comment
+mixin webformLabel(title, error, type, placeholder, className = '', name = '')
+   label(class= className ? `webform__label ${className}` : 'webform__label')
+      if title || error
          span.webform__label-row
             if title
                span.webform__label-title= title
-            if comment
-               span.webform__label-error= comment
+            if error
+               span.webform__label-error= error
       span.webform__label-field
-         input.webform__label-input(type=type placeholder=placeholder)
+         input.webform__label-input(
+            type=type 
+            placeholder=placeholder 
+            required=error ? true : false 
+            name=type === 'tel' ? 'tel' : (name != '' ? name : false)
+         )
