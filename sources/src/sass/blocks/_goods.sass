@@ -74,14 +74,26 @@
          position: relative
          picture,
          img
-            width: auto
+            width: 75%
             max-width: 100%
             height: auto
             max-height: 100%
+            img
+               width: 100%
+         picture
+            display: flex
+            justify-content: center
+            align-items: center
          svg
             width: 77%
             height: auto
             fill: #47535E
+         &--disk
+            img,
+            picture
+               width: 90%
+               img
+                  width: 100%
          &--large
             padding: 0
             picture,
@@ -135,12 +147,15 @@
          position: relative
          &-count
             width: 45px
-            padding-top: 2px
+            height: auto
+            padding: 2px
             display: flex
             justify-content: center
             align-items: center
             flex-shrink: 0
+            border: none
             border-right: 1px solid #CDCDCD
+            text-align: center
          &-button
             width: 21px
             height: 21px
@@ -149,6 +164,13 @@
             position: absolute
             right: 0
             bottom: 0
+            transition: var(--transition-2)
+            &:hover,
+            &:focus,
+            &:active
+               background: var(--accent)
+               border-color: var(--accent)
+               color: #fff
             &:last-of-type
                height: 22px
                bottom: auto
@@ -239,8 +261,8 @@
                   height: var(--controls-size)
                   border-bottom: none
             &-count
-               width: auto
-               min-width: var(--controls-size)
+               width: 50px
+               min-width: 50px
          &-bottom
             @include margin-right(auto)
 

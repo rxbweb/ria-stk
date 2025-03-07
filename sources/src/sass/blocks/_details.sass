@@ -18,11 +18,6 @@
                &__list
                   &-date
                      color: var(--accent)
-                  &-info
-                     .button--outline
-                        .icon
-                           background: var(--accent)
-                           color: #fff
                   &-img
                      img
                         transform: scale(1.1)
@@ -41,7 +36,8 @@
          flex-direction: column
          align-items: flex-start
          gap: 10px
-         @include mt-auto()
+         .button
+            margin-top: auto
       &-title
          @extend .title
          @extend .title--second
@@ -122,6 +118,7 @@
                      padding: 40px 0
                      padding-left: 17.1%
                      gap: 140px
+                     align-items: center
                   &-img
                      width: 28%
                      padding-bottom: 15%
@@ -152,11 +149,13 @@
             width: 100%
             position: static
             white-space: normal
+            order: -1
          &--2
             .details
                &__list
                   &-item
                      &::before
+                        position: absolute
                         font-size: 32px
                         top: 15px
                   &-box
