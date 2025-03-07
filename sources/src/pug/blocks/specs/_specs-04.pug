@@ -1,0 +1,33 @@
+include ../../mixins/_mixins
+
+section.section.section--padding-top-none.section--sidebar.section--specs
+   .section__wrapper
+      .section__header.container
+         +breadcrumbs([
+            { href: '#', title: 'Главная' },
+            { href: '#', title: 'Архив' },
+            { href: '#', title: 'Архив 2023' },
+         ])
+         .section__header-row
+            h1.section__header-heading Архив 2023
+            +select(true, ['Год: 2023', 'Год: 2024', 'Год: 2025'], 'select--wide', 'icon-date')
+      .section__content
+         .specs.specs--2
+            .bg-image
+               img(src="images/specs/specs-bg.jpg", alt="фоновая картинка")
+            .specs__inner.container
+               .specs__controls
+                  include ../sidebar/_sidebar
+                  +sidebar()
+                  +select(true, ['Год: 2023', 'Год: 2024', 'Год: 2025'], 'specs__select select--wide', 'icon-calendar')
+               .specs__box
+                  .specs__img
+                     img(src="images/specs/specs-04.png", alt="Методы менеджмента качества")
+                  .specs__info
+                     p.specs__lead Журнал для профессионалов в области качества
+                     h2.specs__name.specs__name--large Методы менеджмента качества
+                     .specs__manage
+                        p.specs__manage-description Все номера ЗА ГОД
+                        p.specs__price 35 000 руб.
+                        +button-icon('link', 'В корзину', 'button--wide', 'icon-cart')
+                        +button-outline('link', 'Купить в 1 клик')

@@ -1,0 +1,33 @@
+include ../../mixins/_mixins
+
+section.section.section--padding-top-none.section--sidebar.section--specs
+   .section__wrapper
+      .section__content
+         .specs.specs--2
+            .bg-image
+               img(src="images/specs/specs-bg.jpg", alt="фоновая картинка")
+            .specs__inner.container
+               +breadcrumbs([
+                  { href: '#', title: 'Главная' },
+                  { href: '#', title: 'Журналы' },
+                  { href: '#', title: 'Архив' },
+                  { href: '#', title: 'Архив 2023' },
+                  { href: '#', title: 'Методы менеджмента качества' },
+               ])
+               .specs__controls
+                  include ../sidebar/_sidebar
+                  +sidebar()
+               .specs__box
+                  .specs__img
+                     img(src="images/specs/specs-03.png", alt="№ 10/2023 (октябрь)")
+                  .specs__info
+                     p.specs__lead Методы менеджмента качества
+                     h1.specs__name.specs__name--large № 10/2023 (октябрь)
+                     ul.specs__table
+                        li Почему стандарт ISO 9001 по-прежнему актуален
+                        li TOWS-анализ — один из инструментов стратегического анализа деятельности предприятий
+                        li ISO Survey 2022: динамика сертификации систем менеджмента
+                     .specs__manage
+                        p.specs__price 35 000 руб.
+                        +button-icon('link', 'В корзину', 'button--wide', 'icon-cart')
+                        +button-outline('link', 'Купить в 1 клик')
