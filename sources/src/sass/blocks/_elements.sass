@@ -27,10 +27,11 @@
       align-items: center
       flex-shrink: 0
       background: #fff
+      color: var(--accent)
       border-radius: 5px
       border: 1px solid transparent
       transition: all var(--duration) ease
-      svg
+      svg:not([class])
          fill: none
          stroke: var(--accent)
          transition: all var(--duration) ease
@@ -64,29 +65,32 @@
    &--slim
       padding: 9px 20px
       gap: 16px
-   &--simple
-      padding: 8px 15px
-      background: rgba(205, 205, 205, 0.28)
-      color: var(--accent)
-      font-weight: 400
-   &--img
-      --size: 46px
-      width: var(--size)
-      height: var(--size)
-      padding: 6px
-      color: #fff
-      @include sm
-         padding: 8px
-      @include xs
-         --size: 36px
    &--white
       gap: 10px
       color: var(--accent)
       background: #fff
       border-radius: 4px
       border: var(--border-red)
+      &:hover,
+      &:focus,
+      &:active
+         color: #fff
+         .button
+            &__icon
+               background: #fff
+               color: var(--accent)
+      .button
+         &__icon
+            background: var(--accent)
+            color: #fff
+   &--reverse
+      .button
+         &__icon
+            order: -1
    &--wide
       padding-inline: 30px
+      @include sm
+         padding-inline: 24px
    &--large
       width: 100%
       min-height: 52px
@@ -98,14 +102,6 @@
       cursor: default
       svg
          stroke: #CDCDCD
-   &__text
-      &-mob
-         display: none
-         @include sm
-            display: inline
-      &-desktop
-         @include sm
-            display: none
 
 .btn
    --size: 48px
@@ -127,22 +123,8 @@
       color: #fff
    img,
    svg
-      max-width: 65%
+      max-width: 70%
       height: auto
-   &--arrow
-      @include icomoon('\e90c', inherit, 20px)
-   &--arrow-left
-      @include icomoon('\e90c', inherit, 20px)
-      transform: scaleX(-1)
-   &--like
-      border-radius: 10px
-      border: #fff
-      background: #fff
-      @include icomoon('\e910', inherit, 20px)
-   &--eye
-      @include icomoon('\e913', #47535E, 20px)
-   &--download
-      @include icomoon('\e914', #47535E, 20px)
    @include md
       --size: 40px
    @include sm
@@ -234,12 +216,9 @@
    flex-shrink: 0
    img,
    svg
-      max-width: 100%
+      max-width: 70%
       max-height: 100%
       height: auto
-   .icon
-      &-lock
-         font-size: 24px
    @include md
       --size: 36px
       img
@@ -250,13 +229,15 @@
       img
          transform: scale(0.8)
       &--second
-         --size: 26px
+         --size: 28px
    &--large
       --size: 60px
       @include md
          --size: 50px
       @include sm
          --size: 40px
+         svg
+            max-width: 60%
          img
             transform: scale(0.65)
    &--label
@@ -351,8 +332,9 @@
    right: 15px
    z-index: var(--z-index)
    border-radius: 10px
-   border: #fff
+   border: 1px solid transparent
    background: #fff
+   cursor: pointer
    svg
       width: 32px
       max-width: 70%
@@ -366,6 +348,7 @@
    &:focus
       background: #fff
       color: var(--accent)
+      border-color: var(--accent)
    @include xs
       width: 32px
       height: 32px
@@ -376,3 +359,45 @@
    padding: var(--box-padding)
    border-radius: 15px
    background: #F3F3F3
+
+.svg
+   &-icon
+      &-arrow-right
+         fill: none
+         stroke: currentColor
+      &-checkmark
+         fill: none
+         stroke: currentColor
+      &-arrow-right-large
+         fill: none
+         stroke: currentColor
+      &-cart
+         fill: currentColor
+         stroke: none
+      &-calendar
+         fill: var(--accent)
+
+.note
+   @extend .gray-box
+   padding: var(--gap-2)
+   color: var(--black)
+   border-radius: var(--border-radius-10)
+   @include margin-bottom(var(--gap-2))
+   &__title
+      @extend .title
+      @extend .title--second
+   &__list
+      @include margin-bottom(10px)
+      li
+         position: relative
+         padding-left: 20px
+         &::before
+            content: '•'
+            position: absolute
+            left: 4px
+   @include sm
+      padding: 15px
+      @include margin-bottom(15px)
+      &__list
+         li
+            padding-left: 15px
