@@ -190,6 +190,16 @@
    @include xs
       font-size: 13px
 
+.fs-20
+   font-size: 20px
+   line-height: 140%
+   @include xl
+      font-size: 18px
+   @include sm
+      font-size: 16px
+   @include xs
+      font-size: 13px
+
 .white-box
    padding: 50px
    box-shadow: 0 4px 15px 0 rgba(62, 62, 62, 0.15)
@@ -401,3 +411,12 @@
       &__list
          li
             padding-left: 15px
+
+.ul-list
+   li
+      position: relative
+      padding-left: 20px
+      &::before
+         content: '•'
+         position: absolute
+         left: 4px

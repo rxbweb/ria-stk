@@ -1,0 +1,21 @@
+include ../../mixins/_mixins
+
+section.section.section--intro
+   .section__wrapper.container
+      .section__content
+         .intro
+            .bg-image
+               +picture-simple("images/intro/intro-bg.jpg", "images/intro/intro-bg-mob.jpg", "фоновая картинка", 1640, 512)
+            .intro__main
+               .intro__info
+                  .intro__top
+                     p Сроки проведения
+                     p.intro__accent 1 сентября 2024 – 31 декабря 2024
+                  h1.intro__title Подписывайтесь на 12 номеров — платите за 9!
+                  p.intro__text #{'При оформлении годовой подписки в редакции, вы оплачиваете только 9 номеров, а 3 номера получаете в подарок. Оформить подписку можно на сайте'}
+                     |
+                     | или по телефону +7 (495) 771-66-52 (доб.142, 143). Также вы можете отправить запрос на электронную почту podpiska@mirq.ru.
+                  .intro__bottom
+                     +button-icon('link', 'Оформить подписку')
+               .intro__img
+                  +picture-simple("images/intro/intro-01.png", "images/intro/intro-01-mob.png", "Картинка", 795, 795)

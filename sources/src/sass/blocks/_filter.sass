@@ -16,3 +16,17 @@
       letter-spacing: var(--letter-spacing)
    &__selection
       @include margin-bottom(10px)
+   &__inputs
+      display: flex
+      flex-direction: column
+      gap: 10px
+   &__year
+      display: flex
+      flex-wrap: wrap
+      gap: 10px
+      &-label
+         display: flex
+         flex-direction: column
+         flex-basis: calc(50% - 5px)
+      &-title
+         @extend .webform__label-title

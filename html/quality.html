@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Quality News</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/android-chrome-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="yandex-tableau-widget" href="images/favicons/yandex-browser-manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__container container">
+          <div class="header__top"><a class="header__logo" href="/"><img class="header__logo-main" src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img class="header__logo-vok" src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
+            <div class="header__manage">
+              <div class="header__search search">
+                <button class="search__button" aria-label="кнопка поиска">
+                  <svg width="26" height="26">
+                    <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                  </svg>
+                </button>
+                <input class="search__input" type="text" placeholder="Искать....">
+                <div class="search__select">
+                      <div class="select">
+                        <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                              <svg class="svg-icon-arrow-down" width="16" height="16">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                              </svg>
+                        </button>
+                        <div class="select__list">
+                          <button class="select__item is-active">Везде</button>
+                          <button class="select__item">По журналам</button>
+                          <button class="select__item">По книгам</button>
+                          <button class="select__item">По статьям</button>
+                          <button class="select__item">По новостям</button>
+                          <button class="select__item">По мероприятиям</button>
+                        </div>
+                      </div>
+                </div>
+              </div>
+                  <div class="select select--lang">
+                    <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                          <svg class="svg-icon-arrow-down" width="16" height="16">
+                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                          </svg>
+                    </button>
+                    <div class="select__list">
+                      <button class="select__item is-active">RU</button>
+                      <button class="select__item">EN</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="header__socials socials">
+              <div class="socials__list socials__list--first"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
+              <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+            </div>
+            <div class="header__controls">
+              <div class="header__basket"><a class="header__button" href="#">
+                      <svg class="svg-icon-cart" width="22" height="22">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                      </svg></a>
+                <div class="header__basket-amount">99</div>
+              </div><a class="header__favorite" href="#">
+                    <svg class="svg-icon-heart" width="26" height="26">
+                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                    </svg></a>
+              <div class="header__login">
+                <div class="header__login-btn">
+                      <svg class="svg-icon-user" width="20" height="20">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-user"></use>
+                      </svg><span class="header__login-text">Войти</span>
+                </div>
+              </div><a class="header__toggle" href="#" aria-label="открыть меню">
+                <div class="header__toggle-icon"><span></span></div></a>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="is-icon" href="#">
+                    <svg width="26" height="26">
+                      <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
+                    </svg><span>Подписка</span></a></li>
+                <li class="header__nav-item"><a href="#">Журналы</a></li>
+                <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
+                <li class="header__nav-item"><a href="#">Электронная библиотека</a></li>
+                <li class="header__nav-item"><a href="#">Абонентский доступ</a></li>
+                <li class="header__nav-item"><a href="#">Услуги</a></li>
+                <li class="header__nav-item"><a href="#">Мероприятия</a></li>
+                <li class="header__nav-item"><a href="#">О нас</a></li>
+                <li class="header__nav-item"><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <button class="header__burger" aria-label="открыть дополнительное меню"><span></span><span></span><span></span></button>
+          </div>
+          <div class="header__box">
+            <ul class="header__box-nav"></ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="menu">
+      <div class="menu__inner">
+        <div class="menu__container container">
+          <div class="menu__manage">
+            <div class="menu__search search">
+              <button class="search__button" aria-label="кнопка поиска">
+                <svg width="26" height="26">
+                  <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                </svg>
+              </button>
+              <input class="search__input" type="text" placeholder="Искать....">
+              <div class="search__select">
+                    <div class="select">
+                      <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                            <svg class="svg-icon-arrow-down" width="16" height="16">
+                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                            </svg>
+                      </button>
+                      <div class="select__list">
+                        <button class="select__item is-active">Везде</button>
+                        <button class="select__item">По журналам</button>
+                        <button class="select__item">По книгам</button>
+                        <button class="select__item">По статьям</button>
+                        <button class="select__item">По новостям</button>
+                        <button class="select__item">По мероприятиям</button>
+                      </div>
+                    </div>
+              </div>
+            </div>
+                <div class="select select--lang">
+                  <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                        <svg class="svg-icon-arrow-down" width="16" height="16">
+                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                        </svg>
+                  </button>
+                  <div class="select__list">
+                    <button class="select__item is-active">RU</button>
+                    <button class="select__item">EN</button>
+                  </div>
+                </div>
+          </div>
+          <nav class="menu__nav">
+            <ul class="menu__nav-list">
+              <li><a class="is-icon" href="#">
+                  <svg width="22" height="22">
+                    <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
+                  </svg><span>Подписка</span></a></li>
+              <li><a href="#">Журналы</a></li>
+              <li><a href="#">Спецвыпуски</a></li>
+              <li><a href="#">Электронная библиотека</a></li>
+              <li><a href="#">Абонементный доступ</a></li>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Мероприятия</a></li>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="menu__logo"><img src="images/icons/vok.png" alt="вок" width="48" height="48"></div>
+          <div class="menu__socials socials">
+            <div class="socials__list"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
+            <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <section class="section section--dispatch">
+        <div class="section__wrapper">
+          <div class="section__content">
+            <div class="dispatch dispatch--secondary">
+              <div class="bg-image"><img src="images/dispatch/dispatch-bg.jpg" alt="фоновая картинка" width="1920" height="750"></div>
+              <div class="dispatch__inner container">
+                      <div class="breadcrumbs">
+                        <div class="breadcrumbs__inner container">
+                          <div class="breadcrumbs__list"><a href="#">Главная</a><a href="#">Новости</a><span>Quality News</span>
+                          </div>
+                        </div>
+                      </div>
+                <div class="dispatch__row">
+                  <form class="dispatch__form form" action="#" data-validate-form>
+                    <div class="form__header">
+                      <h1 class="form__title">Газета Quality News — качественные новости каждый четверг</h1>
+                      <p class="form__text">Электронная рассылка <a href="#">«Газета Quality News»</a> — бесплатный новостной дайджест, результат ежедневного мониторинга деловой жизни профессионального сообщества. Подписывайтесь и будьте в курсе новостей из мира качества!</p>
+                    </div>
+                    <div class="form__main">
+                      <div class="form__top">
+                        <div class="form__box">
+                          <label class="form__label form__label--half">
+                            <input class="form__input" type="text" placeholder="Имя" name="form-name" required><span class="form__error">Обязательное поле</span>
+                          </label>
+                          <label class="form__label form__label--half">
+                            <input class="form__input" type="text" placeholder="Фамилия" required>
+                          </label>
+                          <label class="form__label">
+                            <input class="form__input" type="email" placeholder="E-mail" name="form-email" required><span class="form__error">Обязательное поле</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form__middle">
+                        <div class="agree">
+                          <label class="agree__label">
+                            <input type="checkbox" name="form-agree" required><span class="agree__checkbox"></span><span class="agree__text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
+                          </label><span class="agree__error">Обязательное поле</span>
+                        </div>
+                      </div>
+                      <div class="form__bottom">
+                              <button class="button form__button"><span>Подписаться</span>
+                              </button>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="dispatch__journal"><img src="images/dispatch/dispatch-journal.png" alt="журнал" width="787" height="750">
+                    <div class="dispatch__label"> 
+                      <p>бесплатная
+                        подписка
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--material">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="material">
+              <div class="material__main">
+                <div class="material__content material__box">
+                  <h2 class="material__title">История создания Quality News</h2>
+                  <div class="material__info">
+                    <p>12 января 2007 года вышел первый выпуск ежедневной рассылки «Качественные новости», давший начало процессу мониторинга событий в области качества и менеджмента. Первый номер был посвящен стандартам информационной безопасности и проблемам, связанным с действием этого стандарта. Рассылка стремительно набрала популярность и быстро нашла своего читателя. Редакция всегда очень близко контактировала с подписчиками, оперативно реагируя на конструктивные предложения, благодаря чему в рассылке рассматривались тематики, интересные большинству читателей.</p>
+                    <p>Спустя некоторое время «Качественные новости» переросли статус рассылки, поэтому было принято решение открыть на её базе более интересный и полезный продукт. Так 14 марта 2012 года подписчики получили первый номер еженедельной электронной газеты Quality News. Сейчас электронная газета деловых новостей — это настоящий помощник, пользующийся популярностью среди руководителей государственных структур, высшего менеджмента крупных предприятий и профессионалов самых разных областей, занятых реформированием национальной системы стандартизации и проблемой разработки технических регламентов.</p>
+                  </div>
+                </div>
+                <div class="material__panel material__box">
+                  <h2 class="material__title">Когда выходит газета деловых новостей?</h2>
+                  <div class="material__info">
+                    <p>Каждый четверг, после обеда в Вашем почтовом ящике.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--points"> 
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="points">
+              <div class="points__main">
+                <div class="points__info">
+                  <h2 class="points__title">Основные темы</h2>
+                </div>
+                <div class="points__box">
+                  <ul class="points__list">
+                    <li class="points__item">
+                      <p>Развитие законодательной и нормативной базы национальной и межгосударственной систем стандартизации</p>
+                    </li>
+                    <li class="points__item">
+                      <p>Нормативное обеспечение производственной, экологической, энергетической безопасности, безопасности труда, качества продукции и т.д.</p>
+                    </li>
+                    <li class="points__item">
+                      <p>Отечественный и международный опыт в области стандартизации и менеджмента качества</p>
+                    </li>
+                    <li class="points__item">
+                      <p>Техническое регулирование и стандартизация в рамках Таможенного союза и ЕАЭС</p>
+                    </li>
+                    <li class="points__item">
+                      <p>Новые разработки промышленных стандартов</p>
+                    </li>
+                    <li class="points__item">
+                      <p>Вопросы аккредитации и оценки соответствия</p>
+                    </li>
+                    <li class="points__item">
+                      <p>Импортозамещение</p>
+                    </li>
+                    <li class="points__item">
+                      <p>Управление качеством</p>
+                    </li>
+                    <li class="points__item">
+                      <p>Экологический менеджмент</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--figures">
+        <div class="section__wrapper container">
+          <div class="section__header">
+            <div class="section__header-row">
+              <h2 class="section__header-title">Постоянные рубрики</h2>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="figures">
+              <div class="figures__inner">
+                      <ul class="figures__list">
+                        <li class="figures__item"><a class="figures__link" href="#">
+                            <div class="figures__svg">
+                              <svg>
+                                <use href="images/sprites/main.stack.svg#svg-collection-16"></use>
+                              </svg>
+                            </div>
+                            <div class="figures__info">
+                              <p class="figures__text">В мире</p>
+                            </div></a></li>
+                        <li class="figures__item"><a class="figures__link" href="#">
+                            <div class="figures__svg">
+                              <svg>
+                                <use href="images/sprites/main.stack.svg#svg-collection-17"></use>
+                              </svg>
+                            </div>
+                            <div class="figures__info">
+                              <p class="figures__text">В ЕАЭС и СНГ</p>
+                            </div></a></li>
+                        <li class="figures__item"><a class="figures__link" href="#">
+                            <div class="figures__svg">
+                              <svg>
+                                <use href="images/sprites/main.stack.svg#svg-collection-18"></use>
+                              </svg>
+                            </div>
+                            <div class="figures__info">
+                              <p class="figures__text">В России</p>
+                            </div></a></li>
+                        <li class="figures__item"><a class="figures__link" href="#">
+                            <div class="figures__svg">
+                              <svg>
+                                <use href="images/sprites/main.stack.svg#svg-collection-19"></use>
+                              </svg>
+                            </div>
+                            <div class="figures__info">
+                              <p class="figures__text">В Росстандарте</p>
+                            </div></a></li>
+                        <li class="figures__item"><a class="figures__link" href="#">
+                            <div class="figures__svg">
+                              <svg>
+                                <use href="images/sprites/main.stack.svg#svg-collection-20"></use>
+                              </svg>
+                            </div>
+                            <div class="figures__info">
+                              <p class="figures__text">В ВОК</p>
+                            </div></a></li>
+                        <li class="figures__item"><a class="figures__link" href="#">
+                            <div class="figures__svg">
+                              <svg>
+                                <use href="images/sprites/main.stack.svg#svg-collection-21"></use>
+                              </svg>
+                            </div>
+                            <div class="figures__info">
+                              <p class="figures__text">В Росаккредитации</p>
+                            </div></a></li>
+                        <li class="figures__item"><a class="figures__link" href="#">
+                            <div class="figures__svg">
+                              <svg>
+                                <use href="images/sprites/main.stack.svg#svg-collection-22"></use>
+                              </svg>
+                            </div>
+                            <div class="figures__info">
+                              <p class="figures__text">Календарь событий</p>
+                            </div></a></li>
+                        <li class="figures__item"><a class="figures__link" href="#">
+                            <div class="figures__svg">
+                              <svg>
+                                <use href="images/sprites/main.stack.svg#svg-collection-23"></use>
+                              </svg>
+                            </div>
+                            <div class="figures__info">
+                              <p class="figures__text">Статьи</p>
+                            </div></a></li>
+                      </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--details">
+        <div class="section__wrapper container">
+          <div class="section__header">
+            <div class="section__header-row">
+              <h2 class="section__header-title">Для кого</h2>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="details">
+              <div class="details__inner">
+                <ol class="details__list details__list--nums details__list--2">
+                  <li class="details__list-item"><a class="details__list-box" href="#">
+                      <div class="details__list-img"><img src="images/details/details-05.jpg" alt="Для руководителей" width="380" height="210"></div>
+                      <div class="details__list-info">
+                        <h3 class="details__list-title">Для руководителей</h3>
+                        <div class="details__list-text">
+                          <p>Деловое совершенство и управление персоналом, бизнес-образование и конкурентоспособность, бережливое производство и лидерство, корпоративная социальная ответственность и модернизация, Таможенный союз и ВТО.</p>
+                        </div>
+                      </div></a></li>
+                  <li class="details__list-item"><a class="details__list-box" href="#">
+                      <div class="details__list-img"><img src="images/details/details-06.jpg" alt="Для специалистов в области качества" width="380" height="210"></div>
+                      <div class="details__list-info">
+                        <h3 class="details__list-title">Для специалистов в области качества</h3>
+                        <div class="details__list-text">
+                          <p>Системы менеджмента качества и сертификация, технические регламенты и стандартизация, бенчмаркинг и управление качеством, оценка соответствия и безопасность.</p>
+                        </div>
+                      </div></a></li>
+                  <li class="details__list-item"><a class="details__list-box" href="#">
+                      <div class="details__list-img"><img src="images/details/details-09.jpg" alt="Для каждого, кого волнуют вопросы качества" width="380" height="210"></div>
+                      <div class="details__list-info">
+                        <h3 class="details__list-title">Для каждого, кого волнуют вопросы качества</h3>
+                        <div class="details__list-text">
+                          <p>Качество товаров и услуг, качество бензина и электронные госуслуги, «зеленые технологии» и качество продуктов питания, борьба с контрафактом и качество автодорог; качество жизни, включающее вопросы экологии, осознанного потребления, социальной сферы, традиций, здорового образа жизни.</p>
+                        </div>
+                      </div></a></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--join">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="join">
+              <div class="join__main">
+                <div class="join__info">
+                  <h2 class="join__title">Как оформить подписку?</h2>
+                  <p>Очень просто! Внесите свой электронный адрес в поле «Ваш E-mail» и нажмите кнопку.</p>
+                </div>
+                <form class="join__form" action="#">
+                  <div class="join__form-row">
+                    <input type="email" placeholder="Ваш E-mail"><a class="button" href="#"><span>Подписаться</span><span class="button__icon">
+                              <svg class="svg-icon-arrow-right" width="17" height="17">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                              </svg></span></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--details">
+        <div class="section__wrapper container">
+          <div class="section__header">
+            <div class="section__header-row">
+              <h2 class="section__header-title">Мероприятия</h2><a class="button section__header-button" href="#"><span>Посмотреть все мероприятия</span><span class="button__icon">
+                        <svg class="svg-icon-arrow-right" width="17" height="17">
+                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                        </svg></span></a>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="details">
+              <div class="details__inner">
+                <ul class="details__list">
+                  <li class="details__list-item"><a class="details__list-box" href="#">
+                      <div class="details__list-img"><img src="images/details/details-01.jpg" alt="Общероссийская общественная премия «Стандартизатор года — 2024»" width="520" height="292"></div>
+                      <div class="details__list-info">
+                        <h3 class="details__list-title">Общероссийская общественная премия «Стандартизатор года — 2024»</h3>
+                        <div class="details__list-text">
+                          <p>Место проведения: Город, Адрес, улица номер дома зала или офиса.</p>
+                        </div>
+                        <div class="details__list-tags tags">
+                          <div class="tags__button">Тег мероприятия: например выставка</div>
+                        </div>
+                        <p class="details__list-description">29 октября – 
+                          6 ноября 2024
+                        </p>
+                              <div class="button button--outline details__list-button"><span>Подробнее</span><span class="button__icon">
+                                  <svg class="svg-icon-arrow-right" width="17" height="17">
+                                    <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                  </svg></span>
+                              </div>
+                      </div></a></li>
+                  <li class="details__list-item"><a class="details__list-box" href="#">
+                      <div class="details__list-img"><img src="images/details/details-02.jpg" alt="Форум «Российская неделя стандартизации»" width="520" height="292"></div>
+                      <div class="details__list-info">
+                        <h3 class="details__list-title">Форум «Российская неделя стандартизации»</h3>
+                        <div class="details__list-text">
+                          <p>Место проведения: Город, Адрес, улица номер дома зала или офиса.</p>
+                        </div>
+                        <div class="details__list-tags tags">
+                          <div class="tags__button">Тег мероприятия: например выставка</div>
+                        </div>
+                        <p class="details__list-description">14 октября – 
+                          21 октября 2024
+                        </p>
+                              <div class="button button--outline details__list-button"><span>Подробнее</span><span class="button__icon">
+                                  <svg class="svg-icon-arrow-right" width="17" height="17">
+                                    <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                  </svg></span>
+                              </div>
+                      </div></a></li>
+                  <li class="details__list-item"><a class="details__list-box" href="#">
+                      <div class="details__list-img"><img src="images/details/details-03.jpg" alt="Форум «Лучший опыт для лучшей жизни»" width="520" height="292"></div>
+                      <div class="details__list-info">
+                        <h3 class="details__list-title">Форум «Лучший опыт для лучшей жизни»</h3>
+                        <div class="details__list-text">
+                          <p>Место проведения: Город, Адрес, улица номер дома зала или офиса.</p>
+                        </div>
+                        <div class="details__list-tags tags">
+                          <div class="tags__button">Тег мероприятия: например выставка</div>
+                        </div>
+                        <p class="details__list-description">10 августа 2024</p>
+                              <div class="button button--outline details__list-button"><span>Подробнее</span><span class="button__icon">
+                                  <svg class="svg-icon-arrow-right" width="17" height="17">
+                                    <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                  </svg></span>
+                              </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="section__footer"><a class="button section__footer-button" href="#"><span>Посмотреть все мероприятия</span><span class="button__icon">
+                      <svg class="svg-icon-arrow-right" width="17" height="17">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                      </svg></span></a>
+          </div>
+        </div>
+      </section>
+      <section class="section section--services">
+        <div class="section__wrapper container">
+          <div class="section__header">
+            <div class="section__header-row section__header--border">
+              <h2 class="section__header-title">Ресурсы для бизнеса</h2>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="services">
+              <div class="services__inner">
+                <div class="services__row">
+                  <div class="services__left">
+                    <div class="switcher">
+                      <div class="switcher__list tabs-nav" data-tabs="services"><a class="switcher__btn tabs-link is-active" href="#" data-tabs="tab1">
+                          <div class="badge badge--second">
+                                  <svg class="svg-badge-01" width="22" height="22">
+                                    <use xlink:href="images/sprites/main.stack.svg#svg-badge-01"></use>
+                                  </svg>
+                          </div><span>Реклама и продвижение</span></a><a class="switcher__btn tabs-link" href="#" data-tabs="tab2">
+                          <div class="badge badge--second">
+                                  <svg class="svg-badge-02" width="27" height="22">
+                                    <use xlink:href="images/sprites/main.stack.svg#svg-badge-02"></use>
+                                  </svg>
+                          </div><span>Спецвыпуски на заказ</span></a><a class="switcher__btn tabs-link" href="#" data-tabs="tab3">
+                          <div class="badge badge--second">
+                                  <svg class="svg-badge-03" width="22" height="22">
+                                    <use xlink:href="images/sprites/main.stack.svg#svg-badge-03"></use>
+                                  </svg>
+                          </div><span>Другие услуги</span></a></div>
+                    </div>
+                  </div>
+                  <div class="services__right">
+                    <div class="tabs-content" data-tabs="services">
+                      <div class="tabs-item is-active" data-tabs="tab1">
+                        <div class="listing">
+                          <ol class="listing__list listing__list--2">
+                            <li class="listing__item"><a class="listing__box" href="#">
+                                <h3 class="listing__name">Реклама в журналах</h3>
+                                <div class="listing__img">
+                                                          <picture class="lazyload">
+                                                            <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-01.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-01.jpg" alt="картинка" width="350" height="222">
+                                                          </picture>
+                                </div></a></li>
+                            <li class="listing__item"><a class="listing__box" href="#">
+                                <h3 class="listing__name">Реклама на сайте</h3>
+                                <div class="listing__img">
+                                                          <picture class="lazyload">
+                                                            <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-07.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-07.jpg" alt="картинка" width="350" height="222">
+                                                          </picture>
+                                </div></a></li>
+                          </ol>
+                        </div>
+                      </div>
+                      <div class="tabs-item" data-tabs="tab2">
+                        <div class="listing">
+                          <ol class="listing__list listing__list--2">
+                            <li class="listing__item"><a class="listing__box" href="#">
+                                <h3 class="listing__name">Реклама в журналах</h3>
+                                <div class="listing__img">
+                                                          <picture class="lazyload">
+                                                            <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-03.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-03.jpg" alt="картинка" width="350" height="222">
+                                                          </picture>
+                                </div></a></li>
+                            <li class="listing__item"><a class="listing__box" href="#">
+                                <h3 class="listing__name">Реклама на сайте</h3>
+                                <div class="listing__img">
+                                                          <picture class="lazyload">
+                                                            <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-10.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-10.jpg" alt="картинка" width="350" height="222">
+                                                          </picture>
+                                </div></a></li>
+                          </ol>
+                        </div>
+                      </div>
+                      <div class="tabs-item" data-tabs="tab3">
+                        <div class="listing">
+                          <ol class="listing__list listing__list--2">
+                            <li class="listing__item"><a class="listing__box" href="#">
+                                <h3 class="listing__name">Реклама в журналах</h3>
+                                <div class="listing__img">
+                                                          <picture class="lazyload">
+                                                            <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-11.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-11.jpg" alt="картинка" width="350" height="222">
+                                                          </picture>
+                                </div></a></li>
+                            <li class="listing__item"><a class="listing__box" href="#">
+                                <h3 class="listing__name">Реклама на сайте</h3>
+                                <div class="listing__img">
+                                                          <picture class="lazyload">
+                                                            <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-12.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-12.jpg" alt="картинка" width="350" height="222">
+                                                          </picture>
+                                </div></a></li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="books">
+              <div class="books__inner">
+                <div class="books__section">
+                  <div class="books__header">
+                    <h2 class="books__title">Действующие акции и промокоды</h2>
+                  </div>
+                  <div class="books__content">
+                    <ul class="books__list">
+                      <li class="books__item">
+                        <div class="books__card">
+                          <div class="books__box">
+                            <div class="books__img">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/books/books-29.webp"><img src="images/icons/empty.png" data-src="images/books/books-29.jpg" alt="картинка" width="380" height="380">
+                                    </picture>
+                            </div>
+                          </div>
+                          <div class="books__details">
+                            <div class="books__tags">
+                              <div class="books__tags-item">Лучшая цена</div>
+                              <div class="books__tags-item">Распродажа</div>
+                              <div class="books__tags-item">Хит</div>
+                            </div><a class="books__link" href="#"><span>Подписывайтесь на 12 номеров — платите за 9!</span><span class="books__link-icon">
+                                <svg class="svg-icon-arrow-right" width="17" height="17">
+                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                </svg></span></a>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="books__item">
+                        <div class="books__card">
+                          <div class="books__box">
+                            <div class="books__img">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/books/books-01.webp"><img src="images/icons/empty.png" data-src="images/books/books-01.jpg" alt="картинка" width="380" height="380">
+                                    </picture>
+                            </div>
+                          </div>
+                          <div class="books__details">
+                            <div class="books__tags">
+                              <div class="books__tags-item">Книга месяца</div>
+                              <div class="books__tags-item">Только у нас</div>
+                            </div><a class="books__link" href="#"><span>Хорошая цена. Книга «Цифровое качество. Свод знаний о цифровой трансформации»</span><span class="books__link-icon">
+                                <svg class="svg-icon-arrow-right" width="17" height="17">
+                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                </svg></span></a>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="books__item">
+                        <div class="books__card">
+                          <div class="books__box">
+                            <div class="books__img">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/books/books-30.webp"><img src="images/icons/empty.png" data-src="images/books/books-30.jpg" alt="картинка" width="380" height="380">
+                                    </picture>
+                            </div>
+                          </div>
+                          <div class="books__details">
+                            <div class="books__tags">
+                              <div class="books__tags-item">Лучшая цена</div>
+                              <div class="books__tags-item">Распродажа</div>
+                              <div class="books__tags-item">Хит</div>
+                            </div><a class="books__link" href="#"><span>Бесплатный билет на выставку «Электроника — 2024»</span><span class="books__link-icon">
+                                <svg class="svg-icon-arrow-right" width="17" height="17">
+                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                </svg></span></a>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="books__item">
+                        <div class="books__card">
+                          <div class="books__box">
+                            <div class="books__img">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/books/books-31.webp"><img src="images/icons/empty.png" data-src="images/books/books-31.jpg" alt="картинка" width="380" height="380">
+                                    </picture>
+                            </div>
+                          </div>
+                          <div class="books__details">
+                            <div class="books__tags">
+                              <div class="books__tags-item">Книга месяца</div>
+                              <div class="books__tags-item">Только у нас</div>
+                            </div><a class="books__link" href="#"><span>Книга в подарок для новых подписчиков МКМ</span><span class="books__link-icon">
+                                <svg class="svg-icon-arrow-right" width="17" height="17">
+                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                </svg></span></a>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--contacts">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="contacts">
+              <div class="contacts__inner">
+                <div class="contacts__row">
+                  <div class="contacts__section">
+                    <h2 class="contacts__title">Контакты</h2>
+                    <address class="contacts__address address">
+                      <div class="address__list address__list--second">
+                        <div class="address__item">
+                          <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
+                        </div><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
+                          <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">editor_site@mirq.ru</div></a><a class="address__item" href="tel:+74957716652">
+                          <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">+7 (495) 771 6652</div></a>
+                      </div>
+                    </address>
+                    <div class="contacts__map map"></div>
+                  </div>
+                  <div class="contacts__right">
+                    <form class="contacts__form form" action="#" data-validate-form>
+                      <div class="form__header">
+                        <h2 class="form__title">Остались вопросы?</h2>
+                        <p class="form__text">Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.</p>
+                      </div>
+                      <div class="form__main">
+                        <div class="form__top">
+                          <div class="form__box">
+                            <label class="form__label form__label--half">
+                              <input class="form__input" type="text" placeholder="Имя" name="form-name" required><span class="form__error">Обязательное поле</span>
+                            </label>
+                            <label class="form__label form__label--half">
+                              <input class="form__input" type="text" placeholder="Фамилия">
+                            </label>
+                            <label class="form__label">
+                              <input class="form__input" type="email" placeholder="E-mail" name="form-email" required><span class="form__error">Обязательное поле</span>
+                            </label>
+                            <label class="form__label">
+                              <textarea class="form__textarea" placeholder="Текст сообщения"></textarea>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__middle">
+                          <div class="agree">
+                            <label class="agree__label">
+                              <input type="checkbox" name="form-agree" required><span class="agree__checkbox"></span><span class="agree__text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
+                            </label><span class="agree__error">Обязательное поле</span>
+                          </div>
+                        </div>
+                        <div class="form__bottom">
+                                <button class="button form__button"><span>Подписаться</span>
+                                </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__menu container">
+            <div class="footer__left"><a class="footer__logo" href="#"><img src="images/icons/logo.svg" alt="СК — стандарты и качество"></a>
+              <div class="footer__copy footer__copy--desktop">
+                <div>2000—2024 © РИА «Стандарты и качество»: cтандартизация, метрология, менеджмент качества.</div>
+                <div>Все права защищены и охраняются законом.</div>
+              </div>
+              <div class="footer__links"><a href="#">Карта сайта</a></div>
+            </div>
+            <nav class="footer__nav">
+              <div class="footer__nav-list">
+                <div class="footer__nav-col"><a href="#">Журналы</a><a href="#">Подписка</a><a href="#">Электронная библиотека</a><a href="#">Абонементный доступ</a><a href="#">Quality News</a></div>
+                <div class="footer__nav-col"><a href="#">О нас</a><a href="#">Услуги</a><a href="#">Мероприятия</a><a href="#">Редакционная политика</a><a href="#">Авторам</a></div>
+              </div>
+            </nav>
+            <address class="footer__address address">
+              <div class="address__list"><a class="address__item" href="tel:+74957716652">
+                  <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">+7 (495) 771 6652</div></a><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
+                  <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">editor_site@mirq.ru</div></a>
+                <div class="address__item">
+                  <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
+                </div>
+                <div class="address__item">
+                  <div class="address__icon"><img src="images/address/address-time.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">
+                    <p>Пн-Чт 9:00-18:00 </p>
+                    <p>Пт 9:00-16:45</p>
+                    <p>Сб-Вс выходные</p>
+                  </div>
+                </div>
+              </div>
+            </address>
+            <div class="footer__copy footer__copy--mob">
+              <div>2000—2024 © РИА «Стандарты и качество»: cтандартизация, метрология, менеджмент качества.</div>
+              <div>Все права защищены и охраняются законом.</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__legal container"><a href="#">Права использования электронных журналов</a><a href="#">Правила пользования сайтом</a><a class="footer__legal-mob" href="#">Карта сайта</a><a href="#">Правила обработки и хранения персональных данных</a><a href="#">Соглашение пользователя</a><a href="#"><span>Разработка сайта</span><img src="images/icons/completo.svg" alt="completo" width="63" height="23"></a></div>
+        </div>
+      </div>
+    </footer><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=5e6f3718-a525-41b0-832c-11d7f6b0f8a4"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

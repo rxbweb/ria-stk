@@ -44,41 +44,57 @@
                 </button>
                 <input class="search__input" type="text" placeholder="Искать....">
                 <div class="search__select">
-                  <div class="select">
-                    <button class="select__active is-selected"><span>Везде</span></button>
+                      <div class="select">
+                        <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                              <svg class="svg-icon-arrow-down" width="16" height="16">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                              </svg>
+                        </button>
+                        <div class="select__list">
+                          <button class="select__item is-active">Везде</button>
+                          <button class="select__item">По журналам</button>
+                          <button class="select__item">По книгам</button>
+                          <button class="select__item">По статьям</button>
+                          <button class="select__item">По новостям</button>
+                          <button class="select__item">По мероприятиям</button>
+                        </div>
+                      </div>
+                </div>
+              </div>
+                  <div class="select select--lang">
+                    <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                          <svg class="svg-icon-arrow-down" width="16" height="16">
+                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                          </svg>
+                    </button>
                     <div class="select__list">
-                      <button class="select__item is-active">Везде</button>
-                      <button class="select__item">По журналам</button>
-                      <button class="select__item">По книгам</button>
-                      <button class="select__item">По статьям</button>
-                      <button class="select__item">По новостям</button>
-                      <button class="select__item">По мероприятиям</button>
+                      <button class="select__item is-active">RU</button>
+                      <button class="select__item">EN</button>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="select select--lang">
-                <div class="select__active is-selected"><span>RU</span></div>
-                <div class="select__list">
-                  <button class="select__item is-active">RU</button>
-                  <button class="select__item">EN</button>
-                </div>
-              </div>
             </div>
             <div class="header__socials socials">
               <div class="socials__list socials__list--first"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
-              <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+              <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
             </div>
             <div class="header__controls">
-              <div class="header__basket"><a class="button button--img" href="#">
-                  <svg width="22" height="22">
-                    <use href="images/sprites/main.stack.svg#svg-icon-cart"></use>
-                  </svg></a>
+              <div class="header__basket"><a class="header__button" href="#">
+                      <svg class="svg-icon-cart" width="22" height="22">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                      </svg></a>
                 <div class="header__basket-amount">99</div>
-              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#">
-                <svg width="20" height="20">
-                  <use href="images/sprites/main.stack.svg#svg-icon-user"></use>
-                </svg><span>Войти</span></a><a class="header__toggle button" href="#"><i class="icon"><span></span></i></a>
+              </div><a class="header__favorite" href="#">
+                    <svg class="svg-icon-heart" width="26" height="26">
+                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                    </svg></a>
+              <div class="header__login">
+                <div class="header__login-btn">
+                      <svg class="svg-icon-user" width="20" height="20">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-user"></use>
+                      </svg><span class="header__login-text">Войти</span>
+                </div>
+              </div><a class="header__toggle" href="#" aria-label="открыть меню">
+                <div class="header__toggle-icon"><span></span></div></a>
             </div>
           </div>
           <div class="header__bottom">
@@ -118,26 +134,34 @@
               </button>
               <input class="search__input" type="text" placeholder="Искать....">
               <div class="search__select">
-                <div class="select">
-                  <button class="select__active">Везде</button>
+                    <div class="select">
+                      <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                            <svg class="svg-icon-arrow-down" width="16" height="16">
+                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                            </svg>
+                      </button>
+                      <div class="select__list">
+                        <button class="select__item is-active">Везде</button>
+                        <button class="select__item">По журналам</button>
+                        <button class="select__item">По книгам</button>
+                        <button class="select__item">По статьям</button>
+                        <button class="select__item">По новостям</button>
+                        <button class="select__item">По мероприятиям</button>
+                      </div>
+                    </div>
+              </div>
+            </div>
+                <div class="select select--lang">
+                  <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                        <svg class="svg-icon-arrow-down" width="16" height="16">
+                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                        </svg>
+                  </button>
                   <div class="select__list">
-                    <button class="select__item is-active">Везде</button>
-                    <button class="select__item">По журналам</button>
-                    <button class="select__item">По книгам</button>
-                    <button class="select__item">По статьям</button>
-                    <button class="select__item">По новостям</button>
-                    <button class="select__item">По мероприятиям</button>
+                    <button class="select__item is-active">RU</button>
+                    <button class="select__item">EN</button>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="select select--lang">
-              <div class="select__active"><span>RU</span></div>
-              <div class="select__list">
-                <button class="select__item is-active">RU</button>
-                <button class="select__item">EN</button>
-              </div>
-            </div>
           </div>
           <nav class="menu__nav">
             <ul class="menu__nav-list">
@@ -186,7 +210,7 @@
                             <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством.</p>
                           </div>
                           <div class="hero__bottom"><a class="button" href="#"><span>О компании и награды</span><span class="button__icon">
-                                      <svg width="17" height="17">
+                                      <svg class="svg-icon-arrow-right" width="17" height="17">
                                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                       </svg></span></a>
                           </div>
@@ -241,7 +265,7 @@
                             <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством.</p>
                           </div>
                           <div class="hero__bottom"><a class="button" href="#"><span>О компании и награды</span><span class="button__icon">
-                                      <svg width="17" height="17">
+                                      <svg class="svg-icon-arrow-right" width="17" height="17">
                                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                       </svg></span></a>
                           </div>
@@ -296,7 +320,7 @@
                             <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством.</p>
                           </div>
                           <div class="hero__bottom"><a class="button" href="#"><span>О компании и награды</span><span class="button__icon">
-                                      <svg width="17" height="17">
+                                      <svg class="svg-icon-arrow-right" width="17" height="17">
                                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                       </svg></span></a>
                           </div>
@@ -351,7 +375,7 @@
                             <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством.</p>
                           </div>
                           <div class="hero__bottom"><a class="button" href="#"><span>О компании и награды</span><span class="button__icon">
-                                      <svg width="17" height="17">
+                                      <svg class="svg-icon-arrow-right" width="17" height="17">
                                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                       </svg></span></a>
                           </div>
@@ -464,8 +488,8 @@
                           <h3 class="listing__name">Электронная библиотека</h3>
                           <p class="listing__text">Миссия РИА «Стандарты и качество» — нести людям идеи качества во всем их многообразии.</p>
                           <div class="listing__img">
-                                  <picture>
-                                    <source srcset="images/listing/listing-04.webp"><img src="images/listing/listing-04.jpg" alt="картинка" width="350" height="222">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-04.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-04.jpg" alt="картинка" width="350" height="222">
                                   </picture>
                           </div></a></li>
                       <li class="listing__item"><a class="listing__box" href="#">
@@ -473,8 +497,8 @@
                           <h3 class="listing__name">Тематические подборки</h3>
                           <p class="listing__text">Глобальный информационный центр, база знаний о качестве — доступный, удобный, информативный.</p>
                           <div class="listing__img">
-                                  <picture>
-                                    <source srcset="images/listing/listing-05.webp"><img src="images/listing/listing-05.jpg" alt="картинка" width="350" height="222">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-05.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-05.jpg" alt="картинка" width="350" height="222">
                                   </picture>
                           </div></a></li>
                     </ul>
@@ -505,8 +529,8 @@
                             <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
                           </div>
                           <div class="history__img">
-                                  <picture>
-                                    <source srcset="images/history/history-01.webp"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/history/history-01.webp"><img src="images/icons/empty.png" data-src="images/history/history-01.jpg" alt="1993" width="940" height="530">
                                   </picture>
                           </div>
                         </div>
@@ -518,8 +542,8 @@
                             <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
                           </div>
                           <div class="history__img">
-                                  <picture>
-                                    <source srcset="images/history/history-01.webp"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/history/history-01.webp"><img src="images/icons/empty.png" data-src="images/history/history-01.jpg" alt="1993" width="940" height="530">
                                   </picture>
                           </div>
                         </div>
@@ -531,8 +555,8 @@
                             <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
                           </div>
                           <div class="history__img">
-                                  <picture>
-                                    <source srcset="images/history/history-01.webp"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/history/history-01.webp"><img src="images/icons/empty.png" data-src="images/history/history-01.jpg" alt="1993" width="940" height="530">
                                   </picture>
                           </div>
                         </div>
@@ -544,8 +568,8 @@
                             <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
                           </div>
                           <div class="history__img">
-                                  <picture>
-                                    <source srcset="images/history/history-01.webp"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/history/history-01.webp"><img src="images/icons/empty.png" data-src="images/history/history-01.jpg" alt="1993" width="940" height="530">
                                   </picture>
                           </div>
                         </div>
@@ -557,8 +581,8 @@
                             <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
                           </div>
                           <div class="history__img">
-                                  <picture>
-                                    <source srcset="images/history/history-01.webp"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/history/history-01.webp"><img src="images/icons/empty.png" data-src="images/history/history-01.jpg" alt="1993" width="940" height="530">
                                   </picture>
                           </div>
                         </div>
@@ -570,8 +594,8 @@
                             <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
                           </div>
                           <div class="history__img">
-                                  <picture>
-                                    <source srcset="images/history/history-01.webp"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/history/history-01.webp"><img src="images/icons/empty.png" data-src="images/history/history-01.jpg" alt="1993" width="940" height="530">
                                   </picture>
                           </div>
                         </div>
@@ -583,8 +607,8 @@
                             <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
                           </div>
                           <div class="history__img">
-                                  <picture>
-                                    <source srcset="images/history/history-01.webp"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/history/history-01.webp"><img src="images/icons/empty.png" data-src="images/history/history-01.jpg" alt="1993" width="940" height="530">
                                   </picture>
                           </div>
                         </div>
@@ -596,8 +620,8 @@
                             <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
                           </div>
                           <div class="history__img">
-                                  <picture>
-                                    <source srcset="images/history/history-01.webp"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/history/history-01.webp"><img src="images/icons/empty.png" data-src="images/history/history-01.jpg" alt="1993" width="940" height="530">
                                   </picture>
                           </div>
                         </div>
@@ -609,8 +633,8 @@
                             <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
                           </div>
                           <div class="history__img">
-                                  <picture>
-                                    <source srcset="images/history/history-01.webp"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/history/history-01.webp"><img src="images/icons/empty.png" data-src="images/history/history-01.jpg" alt="1993" width="940" height="530">
                                   </picture>
                           </div>
                         </div>
@@ -622,8 +646,8 @@
                             <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
                           </div>
                           <div class="history__img">
-                                  <picture>
-                                    <source srcset="images/history/history-01.webp"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/history/history-01.webp"><img src="images/icons/empty.png" data-src="images/history/history-01.jpg" alt="1993" width="940" height="530">
                                   </picture>
                           </div>
                         </div>
@@ -635,8 +659,8 @@
                             <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
                           </div>
                           <div class="history__img">
-                                  <picture>
-                                    <source srcset="images/history/history-01.webp"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/history/history-01.webp"><img src="images/icons/empty.png" data-src="images/history/history-01.jpg" alt="1993" width="940" height="530">
                                   </picture>
                           </div>
                         </div>
@@ -648,8 +672,8 @@
                             <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
                           </div>
                           <div class="history__img">
-                                  <picture>
-                                    <source srcset="images/history/history-01.webp"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/history/history-01.webp"><img src="images/icons/empty.png" data-src="images/history/history-01.jpg" alt="1993" width="940" height="530">
                                   </picture>
                           </div>
                         </div>
@@ -661,8 +685,8 @@
                             <p class="history__text">Инженер-физик, к.т.н. Наталия Григорьевна Томсон основывает РИА «Стандарты и качество». Она занимает пост генерального директора до 2015 г.  С 2015 г. и по настоящее время Наталия Григорьевна — председатель Совета директоров РИА «Стандарты и качество».</p>
                           </div>
                           <div class="history__img">
-                                  <picture>
-                                    <source srcset="images/history/history-01.webp"><img src="images/history/history-01.jpg" alt="1993" width="940" height="530">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/history/history-01.webp"><img src="images/icons/empty.png" data-src="images/history/history-01.jpg" alt="1993" width="940" height="530">
                                   </picture>
                           </div>
                         </div>
@@ -671,7 +695,7 @@
                     <div class="history__controls">
                             <div class="swiper-controls">
                               <button class="swiper-button-prev" aria-label="Переключиться на предыдущий слайд"></button>
-                              <div class="swiper-pagination" aria-label="Пагинация слайдера"></div>
+                              <div class="swiper-pagination"></div>
                               <button class="swiper-button-next" aria-label="Переключиться на следующий слайд"></button>
                             </div>
                     </div>
@@ -706,7 +730,7 @@
                   <h2 class="organization__title">Всероссийская организация качества</h2>
                   <p class="organization__text">Миссия Всероссийской организации качества (ВОК) — объединение усилий граждан и общественных организаций, предприятий и органов власти для содействия решению задач в области качества и конкурентоспособности отечественных продукции и услуг, формирование общероссийского движения за качество.</p>
                   <div class="organization__bottom"><a class="button" href="#"><span>Узнать больше</span><span class="button__icon">
-                              <svg width="17" height="17">
+                              <svg class="svg-icon-arrow-right" width="17" height="17">
                                 <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                               </svg></span></a>
                   </div>
@@ -751,84 +775,84 @@
                           <ul class="people__list people__list--3">
                             <li class="people__item">
                               <div class="people__photo">
-                                      <picture>
-                                        <source srcset="images/people/people-01.webp"><img src="images/people/people-01.jpg" alt="Наталия Григорьевна Томсон" width="380" height="460">
+                                      <picture class="lazyload">
+                                        <source srcset="images/icons/empty.png" data-srcset="images/people/people-01.webp"><img src="images/icons/empty.png" data-src="images/people/people-01.jpg" alt="Наталия Григорьевна Томсон" width="380" height="460">
                                       </picture>
                               </div>
                               <div class="people__info">
                                 <p class="people__name">Наталия Григорьевна Томсон</p>
                                 <p class="people__text">Основатель и председатель совета директоров РИА «Стандарты и качество», член Правления Всероссийской организации качества, член Комитета ТПП РФ по качеству продукции, член Международной Гильдии профессионалов качества.</p><a class="button button--outline people__link" href="#"><span>Подробнее</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
                             </li>
                             <li class="people__item">
                               <div class="people__photo">
-                                      <picture>
-                                        <source srcset="images/people/people-02.webp"><img src="images/people/people-02.jpg" alt="Геннадий Петрович Воронин" width="380" height="460">
+                                      <picture class="lazyload">
+                                        <source srcset="images/icons/empty.png" data-srcset="images/people/people-02.webp"><img src="images/icons/empty.png" data-src="images/people/people-02.jpg" alt="Геннадий Петрович Воронин" width="380" height="460">
                                       </picture>
                               </div>
                               <div class="people__info">
                                 <p class="people__name">Геннадий Петрович Воронин</p>
                                 <p class="people__text">Член совета директоров РИА «Стандарты и качество», главный редактор журнала «Стандарты и качество», президент Всероссийской организации качества, действительный государственный советник Российской Федерации I класса, доктор технических наук, доктор экономических наук, профессор.</p><a class="button button--outline people__link" href="#"><span>Подробнее</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
                             </li>
                             <li class="people__item">
                               <div class="people__photo">
-                                      <picture>
-                                        <source srcset="images/people/people-03.webp"><img src="images/people/people-03.jpg" alt="Светлана Сергеевна Антонова" width="380" height="460">
+                                      <picture class="lazyload">
+                                        <source srcset="images/icons/empty.png" data-srcset="images/people/people-03.webp"><img src="images/icons/empty.png" data-src="images/people/people-03.jpg" alt="Светлана Сергеевна Антонова" width="380" height="460">
                                       </picture>
                               </div>
                               <div class="people__info">
                                 <p class="people__name">Светлана Сергеевна Антонова</p>
                                 <p class="people__text">Генеральный директор и член совета директоров РИА «Стандарты и качество», главный редактор журнала «Менеджмент качества в медицине», вице-президент по информационной политике Всероссийской организации качества, эксперт премий Правительства Российской Федерации в области качества.</p><a class="button button--outline people__link" href="#"><span>Подробнее</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
                             </li>
                             <li class="people__item">
                               <div class="people__photo">
-                                      <picture>
-                                        <source srcset="images/people/people-04.webp"><img src="images/people/people-04.jpg" alt="Алексей Игоревич Анискин" width="380" height="460">
+                                      <picture class="lazyload">
+                                        <source srcset="images/icons/empty.png" data-srcset="images/people/people-04.webp"><img src="images/icons/empty.png" data-src="images/people/people-04.jpg" alt="Алексей Игоревич Анискин" width="380" height="460">
                                       </picture>
                               </div>
                               <div class="people__info">
                                 <p class="people__name">Алексей Игоревич Анискин</p>
                                 <p class="people__text">Исполнительный директор, директор по развитию бизнеса и член совета директоров РИА «Стандарты и качество»</p><a class="button button--outline people__link" href="#"><span>Подробнее</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
                             </li>
                             <li class="people__item">
                               <div class="people__photo">
-                                      <picture>
-                                        <source srcset="images/people/people-05.webp"><img src="images/people/people-05.jpg" alt="Татьяна Владимировна Киселева" width="380" height="460">
+                                      <picture class="lazyload">
+                                        <source srcset="images/icons/empty.png" data-srcset="images/people/people-05.webp"><img src="images/icons/empty.png" data-src="images/people/people-05.jpg" alt="Татьяна Владимировна Киселева" width="380" height="460">
                                       </picture>
                               </div>
                               <div class="people__info">
                                 <p class="people__name">Татьяна Владимировна Киселева</p>
                                 <p class="people__text">Главный редактор издательства РИА «Стандарты и качество»</p><a class="button button--outline people__link" href="#"><span>Подробнее</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
                             </li>
                             <li class="people__item">
                               <div class="people__photo">
-                                      <picture>
-                                        <source srcset="images/people/people-06.webp"><img src="images/people/people-06.jpg" alt="Андрей Игоревич Колесников" width="380" height="460">
+                                      <picture class="lazyload">
+                                        <source srcset="images/icons/empty.png" data-srcset="images/people/people-06.webp"><img src="images/icons/empty.png" data-src="images/people/people-06.jpg" alt="Андрей Игоревич Колесников" width="380" height="460">
                                       </picture>
                               </div>
                               <div class="people__info">
                                 <p class="people__name">Андрей Игоревич Колесников</p>
                                 <p class="people__text">Руководитель отдела маркетинга РИА «Стандарты и качество»</p><a class="button button--outline people__link" href="#"><span>Подробнее</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
@@ -856,37 +880,65 @@
                             <div class="links__info">
                               <p class="links__name">Свидетельство о внесении записи в Единый государственный реестр юридических лиц</p>
                             </div>
-                            <div class="links__icon"></div></a></li>
+                            <div class="links__icon">
+                                    <svg class="svg-icon-arrow-right-large" width="24" height="24">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right-large"></use>
+                                    </svg>
+                            </div></a></li>
                         <li><a class="links__button" href="#">
                             <div class="links__info">
                               <p class="links__name">Свидетельство о постановке на учет российской организации в налоговом органе по месту нахождения на территории Российской Федерации</p>
                             </div>
-                            <div class="links__icon"></div></a></li>
+                            <div class="links__icon">
+                                    <svg class="svg-icon-arrow-right-large" width="24" height="24">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right-large"></use>
+                                    </svg>
+                            </div></a></li>
                         <li><a class="links__button" href="#">
                             <div class="links__info">
                               <p class="links__name">Свидетельство о регистрации юридического лица</p>
                             </div>
-                            <div class="links__icon"></div></a></li>
+                            <div class="links__icon">
+                                    <svg class="svg-icon-arrow-right-large" width="24" height="24">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right-large"></use>
+                                    </svg>
+                            </div></a></li>
                         <li><a class="links__button" href="#">
                             <div class="links__info">
                               <p class="links__name">Карточка юридического лица</p>
                             </div>
-                            <div class="links__icon"></div></a></li>
+                            <div class="links__icon">
+                                    <svg class="svg-icon-arrow-right-large" width="24" height="24">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right-large"></use>
+                                    </svg>
+                            </div></a></li>
                         <li><a class="links__button" href="#">
                             <div class="links__info">
                               <p class="links__name">Устав ООО «РИА «Стандарты и качество»</p>
                             </div>
-                            <div class="links__icon"></div></a></li>
+                            <div class="links__icon">
+                                    <svg class="svg-icon-arrow-right-large" width="24" height="24">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right-large"></use>
+                                    </svg>
+                            </div></a></li>
                         <li><a class="links__button" href="#">
                             <div class="links__info">
                               <p class="links__name">Приказ о вступлении в должность генерального директора РИА «Стандарты и качество» </p>
                             </div>
-                            <div class="links__icon"></div></a></li>
+                            <div class="links__icon">
+                                    <svg class="svg-icon-arrow-right-large" width="24" height="24">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right-large"></use>
+                                    </svg>
+                            </div></a></li>
                         <li><a class="links__button" href="#">
                             <div class="links__info">
                               <p class="links__name">Информационное письмо об УСН из ИФНС (подтверждение)</p>
                             </div>
-                            <div class="links__icon"></div></a></li>
+                            <div class="links__icon">
+                                    <svg class="svg-icon-arrow-right-large" width="24" height="24">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right-large"></use>
+                                    </svg>
+                            </div></a></li>
                       </ul>
               </div>
             </div>
@@ -957,7 +1009,7 @@
                         </div>
                               <div class="swiper-controls">
                                 <button class="swiper-button-prev" aria-label="Переключиться на предыдущий слайд"></button>
-                                <div class="swiper-pagination" aria-label="Пагинация слайдера"></div>
+                                <div class="swiper-pagination"></div>
                                 <button class="swiper-button-next" aria-label="Переключиться на следующий слайд"></button>
                               </div>
                       </div>
@@ -979,7 +1031,7 @@
                         <div class="address__item">
                           <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
                           <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
-                        </div><a class="address__item" href="mailto:editor_site@mirq.ru">
+                        </div><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
                           <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
                           <div class="address__text">editor_site@mirq.ru</div></a><a class="address__item" href="tel:+74957716652">
                           <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
@@ -1052,7 +1104,7 @@
             <address class="footer__address address">
               <div class="address__list"><a class="address__item" href="tel:+74957716652">
                   <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
-                  <div class="address__text">+7 (495) 771 6652</div></a><a class="address__item" href="mailto:editor_site@mirq.ru">
+                  <div class="address__text">+7 (495) 771 6652</div></a><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
                   <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
                   <div class="address__text">editor_site@mirq.ru</div></a>
                 <div class="address__item">

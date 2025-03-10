@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Личный кабинет</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/android-chrome-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="yandex-tableau-widget" href="images/favicons/yandex-browser-manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__container container">
+          <div class="header__top"><a class="header__logo" href="/"><img class="header__logo-main" src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img class="header__logo-vok" src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
+            <div class="header__manage">
+              <div class="header__search search">
+                <button class="search__button" aria-label="кнопка поиска">
+                  <svg width="26" height="26">
+                    <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                  </svg>
+                </button>
+                <input class="search__input" type="text" placeholder="Искать....">
+                <div class="search__select">
+                      <div class="select">
+                        <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                              <svg class="svg-icon-arrow-down" width="16" height="16">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                              </svg>
+                        </button>
+                        <div class="select__list">
+                          <button class="select__item is-active">Везде</button>
+                          <button class="select__item">По журналам</button>
+                          <button class="select__item">По книгам</button>
+                          <button class="select__item">По статьям</button>
+                          <button class="select__item">По новостям</button>
+                          <button class="select__item">По мероприятиям</button>
+                        </div>
+                      </div>
+                </div>
+              </div>
+                  <div class="select select--lang">
+                    <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                          <svg class="svg-icon-arrow-down" width="16" height="16">
+                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                          </svg>
+                    </button>
+                    <div class="select__list">
+                      <button class="select__item is-active">RU</button>
+                      <button class="select__item">EN</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="header__socials socials">
+              <div class="socials__list socials__list--first"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
+              <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+            </div>
+            <div class="header__controls">
+              <div class="header__basket"><a class="header__button" href="#">
+                      <svg class="svg-icon-cart" width="22" height="22">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                      </svg></a>
+                <div class="header__basket-amount">99</div>
+              </div><a class="header__favorite" href="#">
+                    <svg class="svg-icon-heart" width="26" height="26">
+                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                    </svg></a>
+              <div class="header__login">
+                <div class="header__login-btn">
+                      <svg class="svg-icon-user" width="20" height="20">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-user"></use>
+                      </svg>
+                      <svg class="svg-icon-arrow-down" width="14" height="14">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                      </svg>
+                </div>
+                <div class="header__login-cabinet">
+                  <div class="header__login-cabinet-item"><span>Иванов Иван</span></div>
+                  <div class="header__login-cabinet-item">
+                    <svg width="20" height="20">
+                      <use href="images/sprites/main.stack.svg#svg-icon-exit"></use>
+                    </svg><span>Выйти</span>
+                  </div>
+                </div>
+              </div><a class="header__toggle" href="#" aria-label="открыть меню">
+                <div class="header__toggle-icon"><span></span></div></a>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="is-icon" href="#">
+                    <svg width="26" height="26">
+                      <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
+                    </svg><span>Подписка</span></a></li>
+                <li class="header__nav-item"><a href="#">Журналы</a></li>
+                <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
+                <li class="header__nav-item"><a href="#">Электронная библиотека</a></li>
+                <li class="header__nav-item"><a href="#">Абонентский доступ</a></li>
+                <li class="header__nav-item"><a href="#">Услуги</a></li>
+                <li class="header__nav-item"><a href="#">Мероприятия</a></li>
+                <li class="header__nav-item"><a href="#">О нас</a></li>
+                <li class="header__nav-item"><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <button class="header__burger" aria-label="открыть дополнительное меню"><span></span><span></span><span></span></button>
+          </div>
+          <div class="header__box">
+            <ul class="header__box-nav"></ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="menu">
+      <div class="menu__inner">
+        <div class="menu__container container">
+          <div class="menu__manage">
+            <div class="menu__search search">
+              <button class="search__button" aria-label="кнопка поиска">
+                <svg width="26" height="26">
+                  <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                </svg>
+              </button>
+              <input class="search__input" type="text" placeholder="Искать....">
+              <div class="search__select">
+                    <div class="select">
+                      <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                            <svg class="svg-icon-arrow-down" width="16" height="16">
+                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                            </svg>
+                      </button>
+                      <div class="select__list">
+                        <button class="select__item is-active">Везде</button>
+                        <button class="select__item">По журналам</button>
+                        <button class="select__item">По книгам</button>
+                        <button class="select__item">По статьям</button>
+                        <button class="select__item">По новостям</button>
+                        <button class="select__item">По мероприятиям</button>
+                      </div>
+                    </div>
+              </div>
+            </div>
+                <div class="select select--lang">
+                  <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                        <svg class="svg-icon-arrow-down" width="16" height="16">
+                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                        </svg>
+                  </button>
+                  <div class="select__list">
+                    <button class="select__item is-active">RU</button>
+                    <button class="select__item">EN</button>
+                  </div>
+                </div>
+          </div>
+          <nav class="menu__nav">
+            <ul class="menu__nav-list">
+              <li><a class="is-icon" href="#">
+                  <svg width="22" height="22">
+                    <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
+                  </svg><span>Подписка</span></a></li>
+              <li><a href="#">Журналы</a></li>
+              <li><a href="#">Спецвыпуски</a></li>
+              <li><a href="#">Электронная библиотека</a></li>
+              <li><a href="#">Абонементный доступ</a></li>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Мероприятия</a></li>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="menu__logo"><img src="images/icons/vok.png" alt="вок" width="48" height="48"></div>
+          <div class="menu__socials socials">
+            <div class="socials__list"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
+            <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+          <div class="breadcrumbs">
+            <div class="breadcrumbs__inner container">
+              <div class="breadcrumbs__list"><a href="#">Главная</a><span>Личный кабинет</span>
+              </div>
+            </div>
+          </div>
+      <section class="section section--account">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="account">
+              <div class="account__inner">
+                <div class="account__main">
+                  <div class="account__aside">
+                    <div class="account__controls">
+                                            <div class="controls"><a class="controls__toggle" href="#"><span class="controls__toggle-icon">
+                                                                        <svg class="svg-icon-filter" width="22" height="22">
+                                                                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-filter"></use>
+                                                                        </svg></span><span>Навигация по личному кабинету</span><span class="controls__toggle-arrow">
+                                                                        <svg class="svg-icon-arrow-down" width="16" height="16">
+                                                                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                                                                        </svg></span></a>
+                                              <div class="controls__main">
+                                                <div class="controls__list"><a class="controls__btn" href="account-ticket-01.html">
+                                                    <svg width="32" height="32">
+                                                      <use href="images/sprites/main.stack.svg#svg-controls-01"></use>
+                                                    </svg><span>Абонементный доступ</span></a><a class="controls__btn" href="account-ticket-02.html">
+                                                    <svg width="32" height="32">
+                                                      <use href="images/sprites/main.stack.svg#svg-controls-02"></use>
+                                                    </svg><span>Электронные журналы</span></a><a class="controls__btn" href="account-favorites.html">
+                                                    <svg width="32" height="32">
+                                                      <use href="images/sprites/main.stack.svg#svg-controls-03"></use>
+                                                    </svg><span>Статьи / Подборки</span></a><a class="controls__btn" href="account-favorites.html">
+                                                    <svg width="32" height="32">
+                                                      <use href="images/sprites/main.stack.svg#svg-controls-04"></use>
+                                                    </svg><span>Книги</span></a><a class="controls__btn">
+                                                    <svg width="32" height="32">
+                                                      <use href="images/sprites/main.stack.svg#svg-controls-05"></use>
+                                                    </svg><span>Мероприятия</span></a><a class="controls__btn" href="account-authors.html">
+                                                    <svg width="32" height="32">
+                                                      <use href="images/sprites/main.stack.svg#svg-controls-06"></use>
+                                                    </svg><span>Для авторов</span></a><a class="controls__btn" href="account-bonus-01.html">
+                                                    <svg width="32" height="32">
+                                                      <use href="images/sprites/main.stack.svg#svg-controls-07"></use>
+                                                    </svg><span>Бонусная система</span></a><a class="controls__btn" href="account-favorites.html">
+                                                    <svg width="32" height="32">
+                                                      <use href="images/sprites/main.stack.svg#svg-controls-08"></use>
+                                                    </svg><span>Избранное</span></a><span class="controls__btn is-active">
+                                                    <svg width="32" height="32">
+                                                      <use href="images/sprites/main.stack.svg#svg-controls-09"></use>
+                                                    </svg><span>Настройки профиля</span></span><a class="controls__btn" href="account-basket-01.html">
+                                                    <svg width="32" height="32">
+                                                      <use href="images/sprites/main.stack.svg#svg-controls-10"></use>
+                                                    </svg><span>Корзина</span></a>
+                                                </div>
+                                              </div>
+                                            </div>
+                    </div>
+                  </div>
+                  <div class="account__info">
+                    <h2 class="account__title">Настройки профиля</h2>
+                    <div class="accordion">
+                      <ul class="accordion__list">
+                        <li class="accordion__item"><a class="accordion__button" href="#">
+                            <div class="accordion__button-name">
+                              <h3 class="accordion__button-title">Персональные данные</h3>
+                            </div>
+                            <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
+                          <div class="accordion__wrapper">
+                            <div class="accordion__content">
+                              <div class="webform">
+                                <div class="webform__layout">
+                                  <div class="webform__area">
+                                    <div class="webform__wrapper">
+                                      <div class="webform__content">
+                                                            <div class="webform__tabs tabs-nav" data-tabs="webform-01">
+                                                              <button class="webform__tabs-button tabs-link is-active" data-tabs="tab1">Физическое лицо</button>
+                                                              <button class="webform__tabs-button tabs-link" data-tabs="tab2">Юридическое лицо</button>
+                                                            </div>
+                                        <div class="webform__section tabs-content" data-tabs="webform-01">
+                                          <form class="webform__form tabs-item is-active" action="#" data-tabs="tab1" data-validate-form>
+                                            <div class="webform__body">
+                                              <div class="webform__box">
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Фамилия</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Фамилия"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Имя</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Имя"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Отчество</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Отчество"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Email</span><span class="webform__label-error">Обязательное поле</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="email" placeholder="Email" required></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Логин</span><span class="webform__label-error">Обязательное поле</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Логин" required name="webform-login"></span>
+                                                                    </label>
+                                              </div>
+                                            </div>
+                                          </form>
+                                          <form class="webform__form tabs-item" action="#" data-tabs="tab2" data-validate-form>
+                                            <div class="webform__body">
+                                              <div class="webform__box">
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Фамилия</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Фамилия"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Имя</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Имя"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Отчество</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Отчество"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Email</span><span class="webform__label-error">Обязательное поле</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="email" placeholder="Email" required></span>
+                                                                    </label>
+                                                <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Логин</span><span class="webform__label-error">Обязательное поле</span></span><span class="webform__label-field">
+                                                    <input class="webform__label-input" type="text" placeholder="Логин" name="login" minlength="3" required></span><span class="webform__label-row"><span class="webform__label-note">Минимум 3 символа</span></span></label>
+                                              </div>
+                                              <h3 class="webform__caption">Реквизиты Юридического лица</h3>
+                                              <div class="webform__box">
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">ИНН</span><span class="webform__label-error">Обязательное поле</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="XXXXXXXXXX" required></span>
+                                                                    </label><span class="webform__empty"></span><span class="webform__empty"></span>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Название компании</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Название компании"></span>
+                                                                    </label>
+                                                                    <label class="webform__label webform__label--large"><span class="webform__label-row"><span class="webform__label-title">Юридический адрес</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Юридический адрес"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">КПП</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="КПП"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Телефон</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="tel" placeholder="Телефон" name="tel"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Email</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="email" placeholder="Email"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Контактное лицо</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="ФИО контактного лица"></span>
+                                                                    </label>
+                                                                    <label class="webform__label webform__label--large"><span class="webform__label-row"><span class="webform__label-title">Почтовый адрес</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Почтовый адрес"></span>
+                                                                    </label>
+                                              </div>
+                                              <div class="webform__footer">
+                                                                    <button class="button"><span>Активация аккаунта</span><span class="button__icon">
+                                                                        <svg class="svg-icon-arrow-right" width="17" height="17">
+                                                                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                                        </svg></span>
+                                                                    </button>
+                                              </div>
+                                            </div>
+                                          </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="webform__area">
+                                    <div class="webform__toggle is-active">
+                                      <h2 class="webform__name">Личные данные</h2>
+                                      <div class="webform__close"></div>
+                                    </div>
+                                    <div class="webform__wrapper">
+                                      <div class="webform__content">
+                                        <div class="webform__section">
+                                          <form class="webform__form tabs-item is-active" action="#" data-tabs="tab1" data-validate-form>
+                                            <div class="webform__body">
+                                              <div class="webform__box">
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Телефон</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="tel" placeholder="Телефон" name="tel"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Пол</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Не выбран"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Дата рождения</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="DD.MM.YYYY" name="date"></span>
+                                                                    </label>
+                                              </div>
+                                              <h3 class="webform__caption">Почтовый адрес</h3>
+                                              <div class="webform__box">
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Страна</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Страна"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Область/Край</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Область/Край"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Город</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Город"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Почтовый индекс</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Введите индекс"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Улица, дом</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Название улицы и номер дома"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Почтовый ящик</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Введите почтовый ящик"></span>
+                                                                    </label>
+                                              </div>
+                                                                  <div class="webform__textarea">
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Дополнительные заметки</span></span>
+                                                                      <textarea class="webform__label-textarea" placeholder="Комментарий к заказу"></textarea>
+                                                                    </label>
+                                                                  </div>
+                                            </div>
+                                          </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="webform__area">
+                                    <div class="webform__toggle is-active">
+                                      <h2 class="webform__name">Информация о работе</h2>
+                                      <div class="webform__close"></div>
+                                    </div>
+                                    <div class="webform__wrapper">
+                                      <div class="webform__content">
+                                        <div class="webform__section">
+                                          <form class="webform__form tabs-item is-active" action="#" data-tabs="tab1" data-validate-form>
+                                            <div class="webform__body">
+                                              <div class="webform__box webform__box--2">
+                                                                    <label class="webform__label webform__label--middle"><span class="webform__label-row"><span class="webform__label-title">Наименование компании</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Введите наименование"></span>
+                                                                    </label>
+                                                                    <label class="webform__label webform__label--middle"><span class="webform__label-row"><span class="webform__label-title">Департамент/Отдел</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Введите департамент или отдел"></span>
+                                                                    </label>
+                                              </div>
+                                              <div class="webform__box">
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Должность</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Введите должность"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Направления деятельности</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Направления деятельности"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Телефон</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="tel" placeholder="+7 XXX XXX XXXX" name="tel"></span>
+                                                                    </label>
+                                              </div>
+                                              <h3 class="webform__caption">Рабочий адрес</h3>
+                                              <div class="webform__box">
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Страна</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Страна"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Область/Край</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Область/Край"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Город</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Город"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Почтовый индекс</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Введите индекс"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Улица, дом</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Название улицы и номер дома"></span>
+                                                                    </label>
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Почтовый ящик</span></span><span class="webform__label-field">
+                                                                        <input class="webform__label-input" type="text" placeholder="Введите почтовый ящик"></span>
+                                                                    </label>
+                                              </div>
+                                                                  <div class="webform__textarea">
+                                                                    <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Дополнительные заметки</span></span>
+                                                                      <textarea class="webform__label-textarea" placeholder="Дополнительная информация о рабочем адресе"></textarea>
+                                                                    </label>
+                                                                  </div>
+                                            </div>
+                                          </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="webform__area">
+                                    <div class="webform__toggle is-active">
+                                      <h2 class="webform__name">Сменить пароль</h2>
+                                      <div class="webform__close"></div>
+                                    </div>
+                                    <div class="webform__wrapper">
+                                      <div class="webform__content">
+                                        <div class="webform__section">
+                                          <form class="webform__form tabs-item is-active" action="#" data-tabs="tab1" data-validate-form>
+                                            <div class="webform__body">
+                                              <div class="webform__box">
+                                                <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Новый пароль</span></span><span class="webform__label-field webform__label-field--icon">
+                                                    <input class="webform__label-input" type="password" placeholder="Пароль"><span class="webform__label-icon webform__label-icon--eye button-eye">
+                                                                          <svg class="svg-icon-eye" width="22" height="16">
+                                                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-eye"></use>
+                                                                          </svg>
+                                                                          <svg class="svg-icon-eye-not" width="24" height="18">
+                                                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-eye-not"></use>
+                                                                          </svg></span></span></label>
+                                                <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Подтвердите новый пароль</span></span><span class="webform__label-field webform__label-field--icon">
+                                                    <input class="webform__label-input" type="password" placeholder="Пароль"><span class="webform__label-icon webform__label-icon--eye button-eye">
+                                                                          <svg class="svg-icon-eye" width="22" height="16">
+                                                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-eye"></use>
+                                                                          </svg>
+                                                                          <svg class="svg-icon-eye-not" width="24" height="18">
+                                                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-eye-not"></use>
+                                                                          </svg></span></span><span class="webform__label-row"><span class="webform__label-error">Пароли не совпадают</span></span></label>
+                                              </div>
+                                            </div>
+                                          </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="webform__footer">
+                                                        <button class="button webform__button"><span>Сохранить изменения</span>
+                                                        </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="accordion__item"><a class="accordion__button" href="#">
+                            <div class="accordion__button-name">
+                              <h3 class="accordion__button-title">Управление доступами</h3>
+                            </div>
+                            <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
+                          <div class="accordion__wrapper">
+                            <div class="accordion__content">
+                              <div class="webform">
+                                <form class="webform__form" action="#" data-validate-form>
+                                  <div class="webform__body">
+                                    <div class="webform__access">
+                                      <div class="webform__access-header">
+                                        <div class="webform__access-col">
+                                          <p class="webform__access-heading">ФИО</p>
+                                        </div>
+                                        <div class="webform__access-col">
+                                          <p class="webform__access-heading">Email</p>
+                                        </div>
+                                        <div class="webform__access-col">
+                                          <p class="webform__access-heading">Пароль</p>
+                                        </div>
+                                        <div class="webform__access-col">
+                                          <p class="webform__access-heading">Действия</p>
+                                        </div>
+                                      </div>
+                                      <ul class="webform__access-list">
+                                        <li class="webform__access-item">
+                                          <div class="webform__access-col">
+                                                                <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">ФИО</span></span><span class="webform__label-field">
+                                                                    <input class="webform__label-input" type="text" placeholder="Иванов Иван Иванович"></span>
+                                                                </label>
+                                          </div>
+                                          <div class="webform__access-col">
+                                                                <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Email</span></span><span class="webform__label-field">
+                                                                    <input class="webform__label-input" type="email" placeholder="Email"></span>
+                                                                </label>
+                                          </div>
+                                          <div class="webform__access-col">
+                                            <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Пароль</span></span><span class="webform__label-field webform__label-field--icon">
+                                                <input class="webform__label-input" type="password" placeholder="Пароль"><span class="webform__label-icon webform__label-icon--eye button-eye">
+                                                                      <svg class="svg-icon-eye" width="22" height="16">
+                                                                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-eye"></use>
+                                                                      </svg>
+                                                                      <svg class="svg-icon-eye-not" width="24" height="18">
+                                                                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-eye-not"></use>
+                                                                      </svg></span></span></label>
+                                          </div>
+                                          <div class="webform__access-col">
+                                            <div class="webform__access-settings">
+                                              <button class="webform__access-settings-btn webform__access-settings-btn--secondary" title="Отменить">
+                                                                    <svg class="svg-icon-close" width="22" height="22">
+                                                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-close"></use>
+                                                                    </svg><span>Отменить</span>
+                                              </button>
+                                              <button class="webform__access-settings-btn" title="Сохранить">
+                                                                    <svg class="svg-icon-checkmark" width="22" height="22">
+                                                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-checkmark"></use>
+                                                                    </svg><span>Сохранить</span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </li>
+                                                            <li class="webform__access-item">
+                                                              <div class="webform__access-col">
+                                                                <p class="webform__access-title">ФИО</p>
+                                                                <p class="webform__access-info">Семенов Семен Семенович</p>
+                                                              </div>
+                                                              <div class="webform__access-col">
+                                                                <p class="webform__access-title">Email</p>
+                                                                <p class="webform__access-info">semen@mail.ru</p>
+                                                              </div>
+                                                              <div class="webform__access-col">
+                                                                <p class="webform__access-title">Пароль</p>
+                                                                <p class="webform__access-info">********</p>
+                                                              </div>
+                                                                                  <div class="webform__access-col">
+                                                                                    <div class="webform__access-row">
+                                                                                      <p class="webform__access-title">Действия</p>
+                                                                                      <div class="webform__access-controls">
+                                                                                        <button class="webform__access-btn" aria-label="изменить данные">
+                                                                                                              <svg class="svg-icon-pencil" width="16" height="16">
+                                                                                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-pencil"></use>
+                                                                                                              </svg>
+                                                                                        </button>
+                                                                                        <button class="webform__access-btn" aria-label="заблокировать данные">
+                                                                                                              <svg class="svg-icon-lock-02" width="16" height="16">
+                                                                                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-lock-02"></use>
+                                                                                                              </svg>
+                                                                                        </button>
+                                                                                        <button class="webform__access-btn" aria-label="удалить данные">
+                                                                                                              <svg class="svg-icon-delete" width="22" height="22">
+                                                                                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-delete"></use>
+                                                                                                              </svg>
+                                                                                        </button>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                  </div>
+                                                            </li>
+                                                            <li class="webform__access-item">
+                                                              <div class="webform__access-col">
+                                                                <p class="webform__access-title">ФИО</p>
+                                                                <p class="webform__access-info is-blocked">Борисов Борис Борисович</p>
+                                                              </div>
+                                                              <div class="webform__access-col">
+                                                                <p class="webform__access-title">Email</p>
+                                                                <p class="webform__access-info">boris@mail.ru</p>
+                                                              </div>
+                                                              <div class="webform__access-col">
+                                                                <p class="webform__access-title">Пароль</p>
+                                                                <p class="webform__access-info">********</p>
+                                                              </div>
+                                                                                  <div class="webform__access-col">
+                                                                                    <div class="webform__access-row">
+                                                                                      <p class="webform__access-title">Действия</p>
+                                                                                      <div class="webform__access-controls">
+                                                                                        <button class="webform__access-btn" aria-label="изменить данные">
+                                                                                                              <svg class="svg-icon-pencil" width="16" height="16">
+                                                                                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-pencil"></use>
+                                                                                                              </svg>
+                                                                                        </button>
+                                                                                        <button class="webform__access-btn" aria-label="разблокировать данные">
+                                                                                                              <svg class="svg-icon-lock-01" width="16" height="16">
+                                                                                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-lock-01"></use>
+                                                                                                              </svg>
+                                                                                        </button>
+                                                                                        <button class="webform__access-btn" aria-label="удалить данные">
+                                                                                                              <svg class="svg-icon-delete" width="22" height="22">
+                                                                                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-delete"></use>
+                                                                                                              </svg>
+                                                                                        </button>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                  </div>
+                                                            </li>
+                                                            <li class="webform__access-item">
+                                                              <div class="webform__access-col">
+                                                                <p class="webform__access-title">ФИО</p>
+                                                                <p class="webform__access-info">Александрова Александра Александровна</p>
+                                                              </div>
+                                                              <div class="webform__access-col">
+                                                                <p class="webform__access-title">Email</p>
+                                                                <p class="webform__access-info">alex@mail.ru</p>
+                                                              </div>
+                                                              <div class="webform__access-col">
+                                                                <p class="webform__access-title">Пароль</p>
+                                                                <p class="webform__access-info">********</p>
+                                                              </div>
+                                                                                  <div class="webform__access-col">
+                                                                                    <div class="webform__access-row">
+                                                                                      <p class="webform__access-title">Действия</p>
+                                                                                      <div class="webform__access-controls">
+                                                                                        <button class="webform__access-btn" aria-label="изменить данные">
+                                                                                                              <svg class="svg-icon-pencil" width="16" height="16">
+                                                                                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-pencil"></use>
+                                                                                                              </svg>
+                                                                                        </button>
+                                                                                        <button class="webform__access-btn" aria-label="заблокировать данные">
+                                                                                                              <svg class="svg-icon-lock-02" width="16" height="16">
+                                                                                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-lock-02"></use>
+                                                                                                              </svg>
+                                                                                        </button>
+                                                                                        <button class="webform__access-btn" aria-label="удалить данные">
+                                                                                                              <svg class="svg-icon-delete" width="22" height="22">
+                                                                                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-delete"></use>
+                                                                                                              </svg>
+                                                                                        </button>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                  </div>
+                                                            </li>
+                                                            <li class="webform__access-item">
+                                                              <div class="webform__access-col">
+                                                                <p class="webform__access-title">ФИО</p>
+                                                                <p class="webform__access-info">Евгеньева Евгения Евгеньевна</p>
+                                                              </div>
+                                                              <div class="webform__access-col">
+                                                                <p class="webform__access-title">Email</p>
+                                                                <p class="webform__access-info">eugenia@mail.ru</p>
+                                                              </div>
+                                                              <div class="webform__access-col">
+                                                                <p class="webform__access-title">Пароль</p>
+                                                                <p class="webform__access-info">********</p>
+                                                              </div>
+                                                                                  <div class="webform__access-col">
+                                                                                    <div class="webform__access-row">
+                                                                                      <p class="webform__access-title">Действия</p>
+                                                                                      <div class="webform__access-controls">
+                                                                                        <button class="webform__access-btn" aria-label="изменить данные">
+                                                                                                              <svg class="svg-icon-pencil" width="16" height="16">
+                                                                                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-pencil"></use>
+                                                                                                              </svg>
+                                                                                        </button>
+                                                                                        <button class="webform__access-btn" aria-label="заблокировать данные">
+                                                                                                              <svg class="svg-icon-lock-02" width="16" height="16">
+                                                                                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-lock-02"></use>
+                                                                                                              </svg>
+                                                                                        </button>
+                                                                                        <button class="webform__access-btn" aria-label="удалить данные">
+                                                                                                              <svg class="svg-icon-delete" width="22" height="22">
+                                                                                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-delete"></use>
+                                                                                                              </svg>
+                                                                                        </button>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                  </div>
+                                                            </li>
+                                                            <li class="webform__access-item">
+                                                              <div class="webform__access-col">
+                                                                <p class="webform__access-title">ФИО</p>
+                                                                <p class="webform__access-info">Дмитриев Дмитрий Дмитриевич</p>
+                                                              </div>
+                                                              <div class="webform__access-col">
+                                                                <p class="webform__access-title">Email</p>
+                                                                <p class="webform__access-info">dmitry@mail.ru</p>
+                                                              </div>
+                                                              <div class="webform__access-col">
+                                                                <p class="webform__access-title">Пароль</p>
+                                                                <p class="webform__access-info">********</p>
+                                                              </div>
+                                                                                  <div class="webform__access-col">
+                                                                                    <div class="webform__access-row">
+                                                                                      <p class="webform__access-title">Действия</p>
+                                                                                      <div class="webform__access-controls">
+                                                                                        <button class="webform__access-btn" aria-label="изменить данные">
+                                                                                                              <svg class="svg-icon-pencil" width="16" height="16">
+                                                                                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-pencil"></use>
+                                                                                                              </svg>
+                                                                                        </button>
+                                                                                        <button class="webform__access-btn" aria-label="заблокировать данные">
+                                                                                                              <svg class="svg-icon-lock-02" width="16" height="16">
+                                                                                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-lock-02"></use>
+                                                                                                              </svg>
+                                                                                        </button>
+                                                                                        <button class="webform__access-btn" aria-label="удалить данные">
+                                                                                                              <svg class="svg-icon-delete" width="22" height="22">
+                                                                                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-delete"></use>
+                                                                                                              </svg>
+                                                                                        </button>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                  </div>
+                                                            </li>
+                                      </ul>
+                                      <div class="webform__access-manage">
+                                        <div class="webform__access-manage-info">
+                                          <div class="badge">
+                                                                <svg class="svg-badge-24" width="33" height="28">
+                                                                  <use xlink:href="images/sprites/main.stack.svg#svg-badge-24"></use>
+                                                                </svg>
+                                          </div>
+                                          <div class="webform__access-manage-box">
+                                            <p class="webform__access-manage-users">6 из 10 пользователей</p><a class="button button--outline" href="#"><span>Докупить доступы</span><span class="button__icon">
+                                                                    <svg class="svg-icon-arrow-right" width="17" height="17">
+                                                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                                    </svg></span></a>
+                                          </div>
+                                        </div>
+                                                            <button class="button svg-icon-plus"><span>Новый пользователь</span><span class="button__icon">
+                                                                <svg class="svg-icon-plus" width="17" height="17">
+                                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-plus"></use>
+                                                                </svg></span>
+                                                            </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="accordion__item"><a class="accordion__button" href="#">
+                            <div class="accordion__button-name">
+                              <h3 class="accordion__button-title">Уведомления и подписки</h3>
+                            </div>
+                            <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
+                          <div class="accordion__wrapper">
+                            <div class="accordion__content">
+                              <div class="webform">
+                                <form class="webform__form" action="#" data-validate-form>
+                                  <div class="webform__body">
+                                    <div class="webform__block">
+                                      <div class="webform__part">
+                                        <div class="webform__selection">
+                                                              <div class="agree">
+                                                                <label class="agree__label">
+                                                                  <input type="checkbox" name="form-agree"><span class="agree__checkbox"></span><span class="agree__text">Отправлять уведомления на почту</span>
+                                                                </label>
+                                                              </div>
+                                                              <div class="agree">
+                                                                <label class="agree__label">
+                                                                  <input type="checkbox" name="form-agree"><span class="agree__checkbox"></span><span class="agree__text">Отправлять уведомления на телефон</span>
+                                                                </label>
+                                                              </div>
+                                                              <div class="agree">
+                                                                <label class="agree__label">
+                                                                  <input type="checkbox" name="form-agree"><span class="agree__checkbox"></span><span class="agree__text">Отправлять уведомления в браузер (Push-уведомления)</span>
+                                                                </label>
+                                                              </div>
+                                        </div>
+                                      </div>
+                                      <div class="webform__part">
+                                        <h3 class="webform__caption">Ваши подписки</h3>
+                                        <div class="webform__selection">
+                                                              <div class="agree">
+                                                                <label class="agree__label">
+                                                                  <input type="checkbox" name="form-agree"><span class="agree__checkbox"></span><span class="agree__text">Подписка на акции</span>
+                                                                </label>
+                                                              </div>
+                                                              <div class="agree">
+                                                                <label class="agree__label">
+                                                                  <input type="checkbox" name="form-agree"><span class="agree__checkbox"></span><span class="agree__text">Новые материалы</span>
+                                                                </label>
+                                                              </div>
+                                                              <div class="agree">
+                                                                <label class="agree__label">
+                                                                  <input type="checkbox" name="form-agree"><span class="agree__checkbox"></span><span class="agree__text">Quality News</span>
+                                                                </label>
+                                                              </div>
+                                                              <div class="agree">
+                                                                <label class="agree__label">
+                                                                  <input type="checkbox" name="form-agree"><span class="agree__checkbox"></span><span class="agree__text">Информирование об окончании подписки / абонементного доступа</span>
+                                                                </label>
+                                                              </div>
+                                        </div>
+                                      </div>
+                                                          <button class="button"><span>Сохранить изменения</span>
+                                                          </button>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__menu container">
+            <div class="footer__left"><a class="footer__logo" href="#"><img src="images/icons/logo.svg" alt="СК — стандарты и качество"></a>
+              <div class="footer__copy footer__copy--desktop">
+                <div>2000—2024 © РИА «Стандарты и качество»: cтандартизация, метрология, менеджмент качества.</div>
+                <div>Все права защищены и охраняются законом.</div>
+              </div>
+              <div class="footer__links"><a href="#">Карта сайта</a></div>
+            </div>
+            <nav class="footer__nav">
+              <div class="footer__nav-list">
+                <div class="footer__nav-col"><a href="#">Журналы</a><a href="#">Подписка</a><a href="#">Электронная библиотека</a><a href="#">Абонементный доступ</a><a href="#">Quality News</a></div>
+                <div class="footer__nav-col"><a href="#">О нас</a><a href="#">Услуги</a><a href="#">Мероприятия</a><a href="#">Редакционная политика</a><a href="#">Авторам</a></div>
+              </div>
+            </nav>
+            <address class="footer__address address">
+              <div class="address__list"><a class="address__item" href="tel:+74957716652">
+                  <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">+7 (495) 771 6652</div></a><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
+                  <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">editor_site@mirq.ru</div></a>
+                <div class="address__item">
+                  <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
+                </div>
+                <div class="address__item">
+                  <div class="address__icon"><img src="images/address/address-time.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">
+                    <p>Пн-Чт 9:00-18:00 </p>
+                    <p>Пт 9:00-16:45</p>
+                    <p>Сб-Вс выходные</p>
+                  </div>
+                </div>
+              </div>
+            </address>
+            <div class="footer__copy footer__copy--mob">
+              <div>2000—2024 © РИА «Стандарты и качество»: cтандартизация, метрология, менеджмент качества.</div>
+              <div>Все права защищены и охраняются законом.</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__legal container"><a href="#">Права использования электронных журналов</a><a href="#">Правила пользования сайтом</a><a class="footer__legal-mob" href="#">Карта сайта</a><a href="#">Правила обработки и хранения персональных данных</a><a href="#">Соглашение пользователя</a><a href="#"><span>Разработка сайта</span><img src="images/icons/completo.svg" alt="completo" width="63" height="23"></a></div>
+        </div>
+      </div>
+    </footer><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=5e6f3718-a525-41b0-832c-11d7f6b0f8a4"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

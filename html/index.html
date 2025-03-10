@@ -44,41 +44,57 @@
                 </button>
                 <input class="search__input" type="text" placeholder="Искать....">
                 <div class="search__select">
-                  <div class="select">
-                    <button class="select__active is-selected"><span>Везде</span></button>
+                      <div class="select">
+                        <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                              <svg class="svg-icon-arrow-down" width="16" height="16">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                              </svg>
+                        </button>
+                        <div class="select__list">
+                          <button class="select__item is-active">Везде</button>
+                          <button class="select__item">По журналам</button>
+                          <button class="select__item">По книгам</button>
+                          <button class="select__item">По статьям</button>
+                          <button class="select__item">По новостям</button>
+                          <button class="select__item">По мероприятиям</button>
+                        </div>
+                      </div>
+                </div>
+              </div>
+                  <div class="select select--lang">
+                    <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                          <svg class="svg-icon-arrow-down" width="16" height="16">
+                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                          </svg>
+                    </button>
                     <div class="select__list">
-                      <button class="select__item is-active">Везде</button>
-                      <button class="select__item">По журналам</button>
-                      <button class="select__item">По книгам</button>
-                      <button class="select__item">По статьям</button>
-                      <button class="select__item">По новостям</button>
-                      <button class="select__item">По мероприятиям</button>
+                      <button class="select__item is-active">RU</button>
+                      <button class="select__item">EN</button>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="select select--lang">
-                <div class="select__active is-selected"><span>RU</span></div>
-                <div class="select__list">
-                  <button class="select__item is-active">RU</button>
-                  <button class="select__item">EN</button>
-                </div>
-              </div>
             </div>
             <div class="header__socials socials">
               <div class="socials__list socials__list--first"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
-              <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+              <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
             </div>
             <div class="header__controls">
-              <div class="header__basket"><a class="button button--img" href="#">
-                  <svg width="22" height="22">
-                    <use href="images/sprites/main.stack.svg#svg-icon-cart"></use>
-                  </svg></a>
+              <div class="header__basket"><a class="header__button" href="#">
+                      <svg class="svg-icon-cart" width="22" height="22">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                      </svg></a>
                 <div class="header__basket-amount">99</div>
-              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#">
-                <svg width="20" height="20">
-                  <use href="images/sprites/main.stack.svg#svg-icon-user"></use>
-                </svg><span>Войти</span></a><a class="header__toggle button" href="#"><i class="icon"><span></span></i></a>
+              </div><a class="header__favorite" href="#">
+                    <svg class="svg-icon-heart" width="26" height="26">
+                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                    </svg></a>
+              <div class="header__login">
+                <div class="header__login-btn">
+                      <svg class="svg-icon-user" width="20" height="20">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-user"></use>
+                      </svg><span class="header__login-text">Войти</span>
+                </div>
+              </div><a class="header__toggle" href="#" aria-label="открыть меню">
+                <div class="header__toggle-icon"><span></span></div></a>
             </div>
           </div>
           <div class="header__bottom">
@@ -118,26 +134,34 @@
               </button>
               <input class="search__input" type="text" placeholder="Искать....">
               <div class="search__select">
-                <div class="select">
-                  <button class="select__active">Везде</button>
+                    <div class="select">
+                      <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                            <svg class="svg-icon-arrow-down" width="16" height="16">
+                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                            </svg>
+                      </button>
+                      <div class="select__list">
+                        <button class="select__item is-active">Везде</button>
+                        <button class="select__item">По журналам</button>
+                        <button class="select__item">По книгам</button>
+                        <button class="select__item">По статьям</button>
+                        <button class="select__item">По новостям</button>
+                        <button class="select__item">По мероприятиям</button>
+                      </div>
+                    </div>
+              </div>
+            </div>
+                <div class="select select--lang">
+                  <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                        <svg class="svg-icon-arrow-down" width="16" height="16">
+                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                        </svg>
+                  </button>
                   <div class="select__list">
-                    <button class="select__item is-active">Везде</button>
-                    <button class="select__item">По журналам</button>
-                    <button class="select__item">По книгам</button>
-                    <button class="select__item">По статьям</button>
-                    <button class="select__item">По новостям</button>
-                    <button class="select__item">По мероприятиям</button>
+                    <button class="select__item is-active">RU</button>
+                    <button class="select__item">EN</button>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="select select--lang">
-              <div class="select__active"><span>RU</span></div>
-              <div class="select__list">
-                <button class="select__item is-active">RU</button>
-                <button class="select__item">EN</button>
-              </div>
-            </div>
           </div>
           <nav class="menu__nav">
             <ul class="menu__nav-list">
@@ -180,7 +204,7 @@
                             <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством, организатор деловых мероприятий, информационно-просветительский центр Всероссийской организации качества.</p>
                           </div>
                           <div class="hero__bottom"><a class="button" href="#"><span>Узнать больше</span><span class="button__icon">
-                                      <svg width="17" height="17">
+                                      <svg class="svg-icon-arrow-right" width="17" height="17">
                                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                       </svg></span></a>
                           </div>
@@ -247,7 +271,7 @@
                             <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством, организатор деловых мероприятий, информационно-просветительский центр Всероссийской организации качества.</p>
                           </div>
                           <div class="hero__bottom"><a class="button" href="#"><span>Узнать больше</span><span class="button__icon">
-                                      <svg width="17" height="17">
+                                      <svg class="svg-icon-arrow-right" width="17" height="17">
                                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                       </svg></span></a>
                           </div>
@@ -314,7 +338,7 @@
                             <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством, организатор деловых мероприятий, информационно-просветительский центр Всероссийской организации качества.</p>
                           </div>
                           <div class="hero__bottom"><a class="button" href="#"><span>Узнать больше</span><span class="button__icon">
-                                      <svg width="17" height="17">
+                                      <svg class="svg-icon-arrow-right" width="17" height="17">
                                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                       </svg></span></a>
                           </div>
@@ -381,7 +405,7 @@
                             <p>РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством, организатор деловых мероприятий, информационно-просветительский центр Всероссийской организации качества.</p>
                           </div>
                           <div class="hero__bottom"><a class="button" href="#"><span>Узнать больше</span><span class="button__icon">
-                                      <svg width="17" height="17">
+                                      <svg class="svg-icon-arrow-right" width="17" height="17">
                                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                       </svg></span></a>
                           </div>
@@ -474,244 +498,440 @@
             <div class="accordion accordion--secondary">
               <div class="accordion__inner">
                 <div class="accordion__row">
-                  <div class="accordion__left">
+                  <div class="accordion__picture">
                     <div class="accordion__img"><img class="accordion__pic" src="images/details/details-08.jpg" alt="картинка" width="518" height="487" data-img="accordion-01"><img class="accordion__pic" src="images/details/details-02.jpg" alt="картинка" width="518" height="487" data-img="accordion-02"><img class="accordion__pic" src="images/details/details-03.jpg" alt="картинка" width="518" height="487" data-img="accordion-03"><img class="accordion__pic" src="images/news/news-articles-01.jpg" alt="картинка" width="518" height="487" data-img="accordion-04"></div>
                   </div>
-                  <div class="accordion__right">
+                  <div class="accordion__section">
                     <div class="info__accordion">
                       <ul class="accordion__list">
-                        <li class="accordion__item"><a class="accordion__button" href="#" data-accordion="accordion-01">
-                            <div class="accordion__button-name">
-                              <div class="badge"><img src="images/badges/badge-04.svg" alt="иконка" width="24" height="24"></div>
-                              <h3 class="accordion__button-title">Техническое регулирование</h3>
-                            </div>
-                            <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
-                          <div class="accordion__wrapper">
-                            <div class="accordion__content">
-                              <div class="accordion__box">
-                                <ul class="accordion__magazines">
-                                  <li class="accordion__magazines-item">
-                                    <div class="accordion__magazines-img"><img src="images/accordion/accordion-magazine-01.jpg" alt="Cтандарты и качество"></div>
-                                    <div class="accordion__magazines-info">
-                                      <h4 class="accordion__magazines-title">Cтандарты и качество</h4>
+                              <li class="accordion__item"><a class="accordion__button" href="#" data-accordion="accordion-01">
+                                  <div class="accordion__button-name">
+                                    <div class="badge">
+                                            <svg class="svg-badge-04" width="26" height="26">
+                                              <use xlink:href="images/sprites/main.stack.svg#svg-badge-04"></use>
+                                            </svg>
                                     </div>
-                                  </li>
-                                  <li class="accordion__magazines-item">
-                                    <div class="accordion__magazines-img"><img src="images/accordion/accordion-magazine-02.jpg" alt="Контроль и качество продукции"></div>
-                                    <div class="accordion__magazines-info">
-                                      <h4 class="accordion__magazines-title">Контроль и качество продукции</h4>
+                                    <h3 class="accordion__button-title">Техническое регулирование</h3>
+                                  </div>
+                                  <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
+                                <div class="accordion__wrapper">
+                                  <div class="accordion__content">
+                                          <div class="accordion__box">
+                                            <ul class="accordion__magazines">
+                                              <li class="accordion__magazines-item">
+                                                <div class="accordion__magazines-img">
+                                                        <picture class="lazyload">
+                                                          <source srcset="images/icons/empty.png" data-srcset="images/accordion/accordion-magazine-01.webp"><img src="images/icons/empty.png" data-src="images/accordion/accordion-magazine-01.jpg" alt="Cтандарты и качество" width="220" height="220">
+                                                        </picture>
+                                                </div>
+                                                <div class="accordion__magazines-info">
+                                                  <h4 class="accordion__magazines-title">Cтандарты и качество</h4>
+                                                </div>
+                                              </li>
+                                              <li class="accordion__magazines-item">
+                                                <div class="accordion__magazines-img">
+                                                        <picture class="lazyload">
+                                                          <source srcset="images/icons/empty.png" data-srcset="images/accordion/accordion-magazine-02.webp"><img src="images/icons/empty.png" data-src="images/accordion/accordion-magazine-02.jpg" alt="Контроль и качество продукции" width="220" height="220">
+                                                        </picture>
+                                                </div>
+                                                <div class="accordion__magazines-info">
+                                                  <h4 class="accordion__magazines-title">Контроль и качество продукции</h4>
+                                                </div>
+                                              </li>
+                                              <li class="accordion__magazines-item">
+                                                <div class="accordion__magazines-img">
+                                                        <picture class="lazyload">
+                                                          <source srcset="images/icons/empty.png" data-srcset="images/accordion/accordion-magazine-03.webp"><img src="images/icons/empty.png" data-src="images/accordion/accordion-magazine-03.jpg" alt="Business Excellence" width="220" height="220">
+                                                        </picture>
+                                                </div>
+                                                <div class="accordion__magazines-info">
+                                                  <h4 class="accordion__magazines-title">Business Excellence</h4>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                    <div class="accordion__info">
+                                      <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Полезное</a>
+                                              <ul class="accordion__info-list">
+                                                <li><a class="accordion__info-button" href="#"><span>Новости</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Статьи</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Тематические подборки</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                              </ul>
+                                      </div>
+                                      <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Мероприятия</a>
+                                              <ul class="accordion__info-list">
+                                                <li><a class="accordion__info-button" href="#"><span>Стандартизатор года — 2024</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Аккредитация. Компетентность</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>ИННОПРОМ</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                              </ul>
+                                      </div>
+                                      <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Услуги</a>
+                                              <ul class="accordion__info-list">
+                                                <li><a class="accordion__info-button" href="#"><span>Реклама и продвижение</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Спецвыпуски на заказ</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Редакционно-издательские услуги</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Организация мероприятий</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Ярмарка вакансий</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                              </ul>
+                                      </div>
                                     </div>
-                                  </li>
-                                  <li class="accordion__magazines-item">
-                                    <div class="accordion__magazines-img"><img src="images/accordion/accordion-magazine-03.jpg" alt="Business Excellence"></div>
-                                    <div class="accordion__magazines-info">
-                                      <h4 class="accordion__magazines-title">Business Excellence</h4>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="accordion__item"><a class="accordion__button" href="#" data-accordion="accordion-02">
+                                  <div class="accordion__button-name">
+                                    <div class="badge">
+                                            <svg class="svg-badge-05" width="26" height="26">
+                                              <use xlink:href="images/sprites/main.stack.svg#svg-badge-05"></use>
+                                            </svg>
                                     </div>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="accordion__info">
-                                <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Полезное</a>
-                                  <ul class="accordion__info-list">
-                                    <li><a class="accordion__info-button" href="#"><span>Новости</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"> <span>Статьи</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Тематические подборки</span><i class="icon icon-arrow-small"> </i></a></li>
-                                  </ul>
-                                </div>
-                                <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Мероприятия</a>
-                                  <ul class="accordion__info-list">
-                                    <li><a class="accordion__info-button" href="#"><span>Стандартизатор года — 2024</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Аккредитация. Компетентность</span><i class="icon icon-arrow-small"> </i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>ИННОПРОМ</span><i class="icon icon-arrow-small"> </i></a></li>
-                                  </ul>
-                                </div>
-                                <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Услуги</a>
-                                  <ul class="accordion__info-list">
-                                    <li><a class="accordion__info-button" href="#"><span>Реклама и продвижение</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Спецвыпуски на заказ</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Редакционно-издательские услуги</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Организация мероприятий</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Ярмарка вакансий</span><i class="icon icon-arrow-small"></i></a></li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="accordion__item"><a class="accordion__button" href="#" data-accordion="accordion-02">
-                            <div class="accordion__button-name">
-                              <div class="badge"><img src="images/badges/badge-05.svg" alt="иконка" width="24" height="24"></div>
-                              <h3 class="accordion__button-title">Стандартизация</h3>
-                            </div>
-                            <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
-                          <div class="accordion__wrapper">
-                            <div class="accordion__content">
-                              <div class="accordion__box">
-                                <ul class="accordion__magazines">
-                                  <li class="accordion__magazines-item">
-                                    <div class="accordion__magazines-img"><img src="images/accordion/accordion-magazine-01.jpg" alt="Cтандарты и качество"></div>
-                                    <div class="accordion__magazines-info">
-                                      <h4 class="accordion__magazines-title">Cтандарты и качество</h4>
+                                    <h3 class="accordion__button-title">Стандартизация</h3>
+                                  </div>
+                                  <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
+                                <div class="accordion__wrapper">
+                                  <div class="accordion__content">
+                                          <div class="accordion__box">
+                                            <ul class="accordion__magazines">
+                                              <li class="accordion__magazines-item">
+                                                <div class="accordion__magazines-img">
+                                                        <picture class="lazyload">
+                                                          <source srcset="images/icons/empty.png" data-srcset="images/accordion/accordion-magazine-01.webp"><img src="images/icons/empty.png" data-src="images/accordion/accordion-magazine-01.jpg" alt="Cтандарты и качество" width="220" height="220">
+                                                        </picture>
+                                                </div>
+                                                <div class="accordion__magazines-info">
+                                                  <h4 class="accordion__magazines-title">Cтандарты и качество</h4>
+                                                </div>
+                                              </li>
+                                              <li class="accordion__magazines-item">
+                                                <div class="accordion__magazines-img">
+                                                        <picture class="lazyload">
+                                                          <source srcset="images/icons/empty.png" data-srcset="images/accordion/accordion-magazine-02.webp"><img src="images/icons/empty.png" data-src="images/accordion/accordion-magazine-02.jpg" alt="Контроль и качество продукции" width="220" height="220">
+                                                        </picture>
+                                                </div>
+                                                <div class="accordion__magazines-info">
+                                                  <h4 class="accordion__magazines-title">Контроль и качество продукции</h4>
+                                                </div>
+                                              </li>
+                                              <li class="accordion__magazines-item">
+                                                <div class="accordion__magazines-img">
+                                                        <picture class="lazyload">
+                                                          <source srcset="images/icons/empty.png" data-srcset="images/accordion/accordion-magazine-03.webp"><img src="images/icons/empty.png" data-src="images/accordion/accordion-magazine-03.jpg" alt="Business Excellence" width="220" height="220">
+                                                        </picture>
+                                                </div>
+                                                <div class="accordion__magazines-info">
+                                                  <h4 class="accordion__magazines-title">Business Excellence</h4>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                    <div class="accordion__info">
+                                      <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Полезное</a>
+                                              <ul class="accordion__info-list">
+                                                <li><a class="accordion__info-button" href="#"><span>Новости</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Статьи</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Тематические подборки</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                              </ul>
+                                      </div>
+                                      <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Мероприятия</a>
+                                              <ul class="accordion__info-list">
+                                                <li><a class="accordion__info-button" href="#"><span>Стандартизатор года — 2024</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Аккредитация. Компетентность</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>ИННОПРОМ</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                              </ul>
+                                      </div>
+                                      <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Услуги</a>
+                                              <ul class="accordion__info-list">
+                                                <li><a class="accordion__info-button" href="#"><span>Реклама и продвижение</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Спецвыпуски на заказ</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Редакционно-издательские услуги</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Организация мероприятий</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Ярмарка вакансий</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                              </ul>
+                                      </div>
                                     </div>
-                                  </li>
-                                  <li class="accordion__magazines-item">
-                                    <div class="accordion__magazines-img"><img src="images/accordion/accordion-magazine-02.jpg" alt="Контроль и качество продукции"></div>
-                                    <div class="accordion__magazines-info">
-                                      <h4 class="accordion__magazines-title">Контроль и качество продукции</h4>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="accordion__item"><a class="accordion__button" href="#" data-accordion="accordion-03">
+                                  <div class="accordion__button-name">
+                                    <div class="badge">
+                                            <svg class="svg-badge-06" width="23" height="23">
+                                              <use xlink:href="images/sprites/main.stack.svg#svg-badge-06"></use>
+                                            </svg>
                                     </div>
-                                  </li>
-                                  <li class="accordion__magazines-item">
-                                    <div class="accordion__magazines-img"><img src="images/accordion/accordion-magazine-03.jpg" alt="Business Excellence"></div>
-                                    <div class="accordion__magazines-info">
-                                      <h4 class="accordion__magazines-title">Business Excellence</h4>
+                                    <h3 class="accordion__button-title">Управление качеством</h3>
+                                  </div>
+                                  <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
+                                <div class="accordion__wrapper">
+                                  <div class="accordion__content">
+                                          <div class="accordion__box">
+                                            <ul class="accordion__magazines">
+                                              <li class="accordion__magazines-item">
+                                                <div class="accordion__magazines-img">
+                                                        <picture class="lazyload">
+                                                          <source srcset="images/icons/empty.png" data-srcset="images/accordion/accordion-magazine-01.webp"><img src="images/icons/empty.png" data-src="images/accordion/accordion-magazine-01.jpg" alt="Cтандарты и качество" width="220" height="220">
+                                                        </picture>
+                                                </div>
+                                                <div class="accordion__magazines-info">
+                                                  <h4 class="accordion__magazines-title">Cтандарты и качество</h4>
+                                                </div>
+                                              </li>
+                                              <li class="accordion__magazines-item">
+                                                <div class="accordion__magazines-img">
+                                                        <picture class="lazyload">
+                                                          <source srcset="images/icons/empty.png" data-srcset="images/accordion/accordion-magazine-02.webp"><img src="images/icons/empty.png" data-src="images/accordion/accordion-magazine-02.jpg" alt="Контроль и качество продукции" width="220" height="220">
+                                                        </picture>
+                                                </div>
+                                                <div class="accordion__magazines-info">
+                                                  <h4 class="accordion__magazines-title">Контроль и качество продукции</h4>
+                                                </div>
+                                              </li>
+                                              <li class="accordion__magazines-item">
+                                                <div class="accordion__magazines-img">
+                                                        <picture class="lazyload">
+                                                          <source srcset="images/icons/empty.png" data-srcset="images/accordion/accordion-magazine-03.webp"><img src="images/icons/empty.png" data-src="images/accordion/accordion-magazine-03.jpg" alt="Business Excellence" width="220" height="220">
+                                                        </picture>
+                                                </div>
+                                                <div class="accordion__magazines-info">
+                                                  <h4 class="accordion__magazines-title">Business Excellence</h4>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                    <div class="accordion__info">
+                                      <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Полезное</a>
+                                              <ul class="accordion__info-list">
+                                                <li><a class="accordion__info-button" href="#"><span>Новости</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Статьи</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Тематические подборки</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                              </ul>
+                                      </div>
+                                      <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Мероприятия</a>
+                                              <ul class="accordion__info-list">
+                                                <li><a class="accordion__info-button" href="#"><span>Стандартизатор года — 2024</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Аккредитация. Компетентность</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>ИННОПРОМ</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                              </ul>
+                                      </div>
+                                      <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Услуги</a>
+                                              <ul class="accordion__info-list">
+                                                <li><a class="accordion__info-button" href="#"><span>Реклама и продвижение</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Спецвыпуски на заказ</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Редакционно-издательские услуги</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Организация мероприятий</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Ярмарка вакансий</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                              </ul>
+                                      </div>
                                     </div>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="accordion__info">
-                                <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Полезное</a>
-                                  <ul class="accordion__info-list">
-                                    <li><a class="accordion__info-button" href="#"><span>Новости</span><i class="icon icon-arrow-small"> </i></a></li>
-                                    <li><a class="accordion__info-button" href="#"> <span>Статьи</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Тематические подборки</span><i class="icon icon-arrow-small"> </i></a></li>
-                                  </ul>
+                                  </div>
                                 </div>
-                                <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Мероприятия</a>
-                                  <ul class="accordion__info-list">
-                                    <li><a class="accordion__info-button" href="#"><span>Стандартизатор года — 2024</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Аккредитация. Компетентность</span><i class="icon icon-arrow-small"> </i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>ИННОПРОМ</span><i class="icon icon-arrow-small"> </i></a></li>
-                                  </ul>
-                                </div>
-                                <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Услуги</a>
-                                  <ul class="accordion__info-list">
-                                    <li><a class="accordion__info-button" href="#"><span>Реклама и продвижение</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Спецвыпуски на заказ</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Редакционно-издательские услуги</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Организация мероприятий</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Ярмарка вакансий</span><i class="icon icon-arrow-small"></i></a></li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="accordion__item"><a class="accordion__button" href="#" data-accordion="accordion-03">
-                            <div class="accordion__button-name">
-                              <div class="badge"><img src="images/badges/badge-06.svg" alt="иконка" width="21" height="21"></div>
-                              <h3 class="accordion__button-title">Управление качеством</h3>
-                            </div>
-                            <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
-                          <div class="accordion__wrapper">
-                            <div class="accordion__content">
-                              <div class="accordion__box">
-                                <ul class="accordion__magazines">
-                                  <li class="accordion__magazines-item">
-                                    <div class="accordion__magazines-img"><img src="images/accordion/accordion-magazine-01.jpg" alt="Cтандарты и качество"></div>
-                                    <div class="accordion__magazines-info">
-                                      <h4 class="accordion__magazines-title">Cтандарты и качество</h4>
+                              </li>
+                              <li class="accordion__item"><a class="accordion__button" href="#" data-accordion="accordion-04">
+                                  <div class="accordion__button-name">
+                                    <div class="badge">
+                                            <svg class="svg-badge-07" width="28" height="28">
+                                              <use xlink:href="images/sprites/main.stack.svg#svg-badge-07"></use>
+                                            </svg>
                                     </div>
-                                  </li>
-                                  <li class="accordion__magazines-item">
-                                    <div class="accordion__magazines-img"><img src="images/accordion/accordion-magazine-02.jpg" alt="Контроль и качество продукции"></div>
-                                    <div class="accordion__magazines-info">
-                                      <h4 class="accordion__magazines-title">Контроль и качество продукции</h4>
+                                    <h3 class="accordion__button-title">Метрология</h3>
+                                  </div>
+                                  <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
+                                <div class="accordion__wrapper">
+                                  <div class="accordion__content">
+                                          <div class="accordion__box">
+                                            <ul class="accordion__magazines">
+                                              <li class="accordion__magazines-item">
+                                                <div class="accordion__magazines-img">
+                                                        <picture class="lazyload">
+                                                          <source srcset="images/icons/empty.png" data-srcset="images/accordion/accordion-magazine-01.webp"><img src="images/icons/empty.png" data-src="images/accordion/accordion-magazine-01.jpg" alt="Cтандарты и качество" width="220" height="220">
+                                                        </picture>
+                                                </div>
+                                                <div class="accordion__magazines-info">
+                                                  <h4 class="accordion__magazines-title">Cтандарты и качество</h4>
+                                                </div>
+                                              </li>
+                                              <li class="accordion__magazines-item">
+                                                <div class="accordion__magazines-img">
+                                                        <picture class="lazyload">
+                                                          <source srcset="images/icons/empty.png" data-srcset="images/accordion/accordion-magazine-02.webp"><img src="images/icons/empty.png" data-src="images/accordion/accordion-magazine-02.jpg" alt="Контроль и качество продукции" width="220" height="220">
+                                                        </picture>
+                                                </div>
+                                                <div class="accordion__magazines-info">
+                                                  <h4 class="accordion__magazines-title">Контроль и качество продукции</h4>
+                                                </div>
+                                              </li>
+                                              <li class="accordion__magazines-item">
+                                                <div class="accordion__magazines-img">
+                                                        <picture class="lazyload">
+                                                          <source srcset="images/icons/empty.png" data-srcset="images/accordion/accordion-magazine-03.webp"><img src="images/icons/empty.png" data-src="images/accordion/accordion-magazine-03.jpg" alt="Business Excellence" width="220" height="220">
+                                                        </picture>
+                                                </div>
+                                                <div class="accordion__magazines-info">
+                                                  <h4 class="accordion__magazines-title">Business Excellence</h4>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                    <div class="accordion__info">
+                                      <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Полезное</a>
+                                              <ul class="accordion__info-list">
+                                                <li><a class="accordion__info-button" href="#"><span>Новости</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Статьи</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Тематические подборки</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                              </ul>
+                                      </div>
+                                      <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Мероприятия</a>
+                                              <ul class="accordion__info-list">
+                                                <li><a class="accordion__info-button" href="#"><span>Стандартизатор года — 2024</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Аккредитация. Компетентность</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>ИННОПРОМ</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                              </ul>
+                                      </div>
+                                      <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Услуги</a>
+                                              <ul class="accordion__info-list">
+                                                <li><a class="accordion__info-button" href="#"><span>Реклама и продвижение</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Спецвыпуски на заказ</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Редакционно-издательские услуги</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Организация мероприятий</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                                <li><a class="accordion__info-button" href="#"><span>Ярмарка вакансий</span><span class="accordion__info-button-icon">
+                                                            <svg class="svg-icon-arrow-right" width="14" height="14">
+                                                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                            </svg></span></a></li>
+                                              </ul>
+                                      </div>
                                     </div>
-                                  </li>
-                                  <li class="accordion__magazines-item">
-                                    <div class="accordion__magazines-img"><img src="images/accordion/accordion-magazine-03.jpg" alt="Business Excellence"></div>
-                                    <div class="accordion__magazines-info">
-                                      <h4 class="accordion__magazines-title">Business Excellence</h4>
-                                    </div>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="accordion__info">
-                                <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Полезное</a>
-                                  <ul class="accordion__info-list">
-                                    <li><a class="accordion__info-button" href="#"><span>Новости</span><i class="icon icon-arrow-small"> </i></a></li>
-                                    <li><a class="accordion__info-button" href="#"> <span>Статьи</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Тематические подборки</span><i class="icon icon-arrow-small"> </i></a></li>
-                                  </ul>
+                                  </div>
                                 </div>
-                                <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Мероприятия</a>
-                                  <ul class="accordion__info-list">
-                                    <li><a class="accordion__info-button" href="#"><span>Стандартизатор года — 2024</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Аккредитация. Компетентность</span><i class="icon icon-arrow-small"> </i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>ИННОПРОМ</span><i class="icon icon-arrow-small"> </i></a></li>
-                                  </ul>
-                                </div>
-                                <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Услуги</a>
-                                  <ul class="accordion__info-list">
-                                    <li><a class="accordion__info-button" href="#"><span>Реклама и продвижение</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Спецвыпуски на заказ</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Редакционно-издательские услуги</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Организация мероприятий</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Ярмарка вакансий</span><i class="icon icon-arrow-small"></i></a></li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="accordion__item"><a class="accordion__button" href="#" data-accordion="accordion-04">
-                            <div class="accordion__button-name">
-                              <div class="badge"><img src="images/badges/badge-07.svg" alt="иконка" width="26" height="26"></div>
-                              <h3 class="accordion__button-title">Метрология</h3>
-                            </div>
-                            <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
-                          <div class="accordion__wrapper">
-                            <div class="accordion__content">
-                              <div class="accordion__box">
-                                <ul class="accordion__magazines">
-                                  <li class="accordion__magazines-item">
-                                    <div class="accordion__magazines-img"><img src="images/accordion/accordion-magazine-01.jpg" alt="Cтандарты и качество"></div>
-                                    <div class="accordion__magazines-info">
-                                      <h4 class="accordion__magazines-title">Cтандарты и качество</h4>
-                                    </div>
-                                  </li>
-                                  <li class="accordion__magazines-item">
-                                    <div class="accordion__magazines-img"><img src="images/accordion/accordion-magazine-02.jpg" alt="Контроль и качество продукции"></div>
-                                    <div class="accordion__magazines-info">
-                                      <h4 class="accordion__magazines-title">Контроль и качество продукции</h4>
-                                    </div>
-                                  </li>
-                                  <li class="accordion__magazines-item">
-                                    <div class="accordion__magazines-img"><img src="images/accordion/accordion-magazine-03.jpg" alt="Business Excellence"></div>
-                                    <div class="accordion__magazines-info">
-                                      <h4 class="accordion__magazines-title">Business Excellence</h4>
-                                    </div>
-                                  </li>
-                                </ul>
-                              </div>
-                              <div class="accordion__info">
-                                <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Полезное</a>
-                                  <ul class="accordion__info-list">
-                                    <li><a class="accordion__info-button" href="#"><span>Новости</span><i class="icon icon-arrow-small"> </i></a></li>
-                                    <li><a class="accordion__info-button" href="#"> <span>Статьи</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Тематические подборки</span><i class="icon icon-arrow-small"> </i></a></li>
-                                  </ul>
-                                </div>
-                                <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Мероприятия</a>
-                                  <ul class="accordion__info-list">
-                                    <li><a class="accordion__info-button" href="#"><span>Стандартизатор года — 2024</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Аккредитация. Компетентность</span><i class="icon icon-arrow-small"> </i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>ИННОПРОМ</span><i class="icon icon-arrow-small"> </i></a></li>
-                                  </ul>
-                                </div>
-                                <div class="accordion__info-col"><a class="accordion__info-tag" href="#">Услуги</a>
-                                  <ul class="accordion__info-list">
-                                    <li><a class="accordion__info-button" href="#"><span>Реклама и продвижение</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Спецвыпуски на заказ</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Редакционно-издательские услуги</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Организация мероприятий</span><i class="icon icon-arrow-small"></i></a></li>
-                                    <li><a class="accordion__info-button" href="#"><span>Ярмарка вакансий</span><i class="icon icon-arrow-small"></i></a></li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
+                              </li>
                       </ul>
                     </div>
                   </div>
@@ -726,7 +946,7 @@
           <div class="section__header">
             <div class="section__header-row">
               <h2 class="section__header-title">Новости</h2><a class="button section__header-button" href="#"><span>Посмотреть все новости</span><span class="button__icon">
-                        <svg width="17" height="17">
+                        <svg class="svg-icon-arrow-right" width="17" height="17">
                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                         </svg></span></a>
             </div>
@@ -749,7 +969,7 @@
                             <p class="news__mark">Международное сотрудничество</p>
                           </div>
                           <h3 class="news__title">РИА «Стандарты и качество» отмечено благодарственным письмом от руководителя Росстандарта</h3><a class="button button--outline news__button" href="#"><span>Читать новость</span><span class="button__icon">
-                                    <svg width="17" height="17">
+                                    <svg class="svg-icon-arrow-right" width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </div>
@@ -765,7 +985,7 @@
                             <p class="news__mark">Международное сотрудничество</p>
                           </div>
                           <h3 class="news__title">В России появятся цифровые паспорта промышленной продукции</h3><a class="button button--outline news__button" href="#"><span>Читать новость</span><span class="button__icon">
-                                    <svg width="17" height="17">
+                                    <svg class="svg-icon-arrow-right" width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </div>
@@ -781,7 +1001,7 @@
                             <p class="news__mark">Международное сотрудничество</p>
                           </div>
                           <h3 class="news__title">Опубликован новый рейтинг эффективности технических комитетов</h3><a class="button button--outline news__button" href="#"><span>Читать новость</span><span class="button__icon">
-                                    <svg width="17" height="17">
+                                    <svg class="svg-icon-arrow-right" width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </div>
@@ -793,19 +1013,19 @@
                       <ul class="news__articles-list">
                         <li class="news__articles-item">
                           <h3 class="news__articles-title">Обязательную маркировку медицинских перчаток введут в России с 2025 года</h3><a class="button button--outline news__articles-button" href="#"><span>Читать новость</span><span class="button__icon">
-                                    <svg width="17" height="17">
+                                    <svg class="svg-icon-arrow-right" width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </li>
                         <li class="news__articles-item">
                           <h3 class="news__articles-title">В России предложили выдавать предостережения бизнесу через систему маркировки</h3><a class="button button--outline news__articles-button" href="#"><span>Читать новость</span><span class="button__icon">
-                                    <svg width="17" height="17">
+                                    <svg class="svg-icon-arrow-right" width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </li>
                         <li class="news__articles-item">
                           <h3 class="news__articles-title">РИА «Стандарты и качество» отмечено благодарственным письмом от руководителя Росстандарта</h3><a class="button button--outline news__articles-button" href="#"><span>Читать новость</span><span class="button__icon">
-                                    <svg width="17" height="17">
+                                    <svg class="svg-icon-arrow-right" width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </li>
@@ -817,7 +1037,7 @@
             </div>
           </div>
           <div class="section__footer"><a class="button section__footer-button" href="#"><span>Посмотреть все новости</span><span class="button__icon">
-                      <svg width="17" height="17">
+                      <svg class="svg-icon-arrow-right" width="17" height="17">
                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                       </svg></span></a>
           </div>
@@ -833,7 +1053,7 @@
                   <form class="dispatch__form form" action="#" data-validate-form>
                     <div class="form__header">
                       <h2 class="form__title">Газета Quality News — качественные новости каждый четверг</h2>
-                      <p class="form__text">Электронная рассылка «Газета Quality News» — бесплатный новостной дайджест, результат ежедневного мониторинга деловой жизни профессионального сообщества. Подписывайтесь и будьте в курсе новостей из мира качества!</p>
+                      <p class="form__text">Электронная рассылка <a href="#">«Газета Quality News»</a> — бесплатный новостной дайджест, результат ежедневного мониторинга деловой жизни профессионального сообщества. Подписывайтесь и будьте в курсе новостей из мира качества!</p>
                     </div>
                     <div class="form__main">
                       <div class="form__top">
@@ -874,7 +1094,7 @@
           <div class="section__header">
             <div class="section__header-row">
               <h2 class="section__header-title">Мероприятия</h2><a class="button section__header-button" href="#"><span>Посмотреть все мероприятия</span><span class="button__icon">
-                        <svg width="17" height="17">
+                        <svg class="svg-icon-arrow-right" width="17" height="17">
                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                         </svg></span></a>
             </div>
@@ -895,10 +1115,12 @@
                         </div>
                         <p class="details__list-description">29 октября – 
                           6 ноября 2024
-                        </p><a class="button button--outline details__list-button" href="#"><span>Подробнее</span><span class="button__icon">
-                                  <svg width="17" height="17">
+                        </p>
+                              <div class="button button--outline details__list-button"><span>Подробнее</span><span class="button__icon">
+                                  <svg class="svg-icon-arrow-right" width="17" height="17">
                                     <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                  </svg></span></a>
+                                  </svg></span>
+                              </div>
                       </div></a></li>
                   <li class="details__list-item"><a class="details__list-box" href="#">
                       <div class="details__list-img"><img src="images/details/details-02.jpg" alt="Форум «Российская неделя стандартизации»" width="520" height="292"></div>
@@ -912,10 +1134,12 @@
                         </div>
                         <p class="details__list-description">14 октября – 
                           21 октября 2024
-                        </p><a class="button button--outline details__list-button" href="#"><span>Подробнее</span><span class="button__icon">
-                                  <svg width="17" height="17">
+                        </p>
+                              <div class="button button--outline details__list-button"><span>Подробнее</span><span class="button__icon">
+                                  <svg class="svg-icon-arrow-right" width="17" height="17">
                                     <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                  </svg></span></a>
+                                  </svg></span>
+                              </div>
                       </div></a></li>
                   <li class="details__list-item"><a class="details__list-box" href="#">
                       <div class="details__list-img"><img src="images/details/details-03.jpg" alt="Форум «Лучший опыт для лучшей жизни»" width="520" height="292"></div>
@@ -927,17 +1151,19 @@
                         <div class="details__list-tags tags">
                           <div class="tags__button">Тег мероприятия: например выставка</div>
                         </div>
-                        <p class="details__list-description">10 августа 2024</p><a class="button button--outline details__list-button" href="#"><span>Подробнее</span><span class="button__icon">
-                                  <svg width="17" height="17">
+                        <p class="details__list-description">10 августа 2024</p>
+                              <div class="button button--outline details__list-button"><span>Подробнее</span><span class="button__icon">
+                                  <svg class="svg-icon-arrow-right" width="17" height="17">
                                     <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                  </svg></span></a>
+                                  </svg></span>
+                              </div>
                       </div></a></li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="section__footer"><a class="button section__footer-button" href="#"><span>Посмотреть все мероприятия</span><span class="button__icon">
-                      <svg width="17" height="17">
+                      <svg class="svg-icon-arrow-right" width="17" height="17">
                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                       </svg></span></a>
           </div>
@@ -973,7 +1199,7 @@
           <div class="section__header">
             <div class="section__header-row">
               <h2 class="section__header-title">Статьи</h2><a class="button section__header-button" href="#"><span>Посмотреть все статьи</span><span class="button__icon">
-                        <svg width="17" height="17">
+                        <svg class="svg-icon-arrow-right" width="17" height="17">
                           <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                         </svg></span></a>
             </div>
@@ -986,18 +1212,22 @@
                     <li class="news__posts-item"><a class="news__posts-box" href="#">
                         <div class="news__posts-img"><img src="images/news/news-articles-01.jpg" alt="картинка статьи" width="519" height="390"></div>
                         <div class="news__posts-info">
-                          <h3 class="news__posts-title">Надежная доказательная база для оценки инвестпроектов</h3><a class="button button--outline news__posts-button" href="#"><span>Читать статью</span><span class="button__icon">
-                                    <svg width="17" height="17">
+                          <h3 class="news__posts-title">Надежная доказательная база для оценки инвестпроектов</h3>
+                                <div class="button button--outline news__posts-button"><span>Читать статью</span><span class="button__icon">
+                                    <svg class="svg-icon-arrow-right" width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                    </svg></span></a>
+                                    </svg></span>
+                                </div>
                         </div></a></li>
                     <li class="news__posts-item"><a class="news__posts-box" href="#">
                         <div class="news__posts-img"><img src="images/news/news-articles-02.jpg" alt="картинка статьи" width="519" height="390"></div>
                         <div class="news__posts-info">
-                          <h3 class="news__posts-title">О нормативном регулировании в области использования атомной энергии</h3><a class="button button--outline news__posts-button" href="#"><span>Читать статью</span><span class="button__icon">
-                                    <svg width="17" height="17">
+                          <h3 class="news__posts-title">О нормативном регулировании в области использования атомной энергии</h3>
+                                <div class="button button--outline news__posts-button"><span>Читать статью</span><span class="button__icon">
+                                    <svg class="svg-icon-arrow-right" width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                    </svg></span></a>
+                                    </svg></span>
+                                </div>
                         </div></a></li>
                   </ul>
                   <aside class="news__aside">
@@ -1005,19 +1235,19 @@
                       <ul class="news__articles-list">
                         <li class="news__articles-item">
                           <h3 class="news__articles-title">Обязательную маркировку медицинских перчаток введут в России с 2025 года</h3><a class="button button--outline news__articles-button" href="#"><span>Читать новость</span><span class="button__icon">
-                                    <svg width="17" height="17">
+                                    <svg class="svg-icon-arrow-right" width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </li>
                         <li class="news__articles-item">
                           <h3 class="news__articles-title">В России предложили выдавать предостережения бизнесу через систему маркировки</h3><a class="button button--outline news__articles-button" href="#"><span>Читать новость</span><span class="button__icon">
-                                    <svg width="17" height="17">
+                                    <svg class="svg-icon-arrow-right" width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </li>
                         <li class="news__articles-item">
                           <h3 class="news__articles-title">РИА «Стандарты и качество» отмечено благодарственным письмом от руководителя Росстандарта</h3><a class="button button--outline news__articles-button" href="#"><span>Читать новость</span><span class="button__icon">
-                                    <svg width="17" height="17">
+                                    <svg class="svg-icon-arrow-right" width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </li>
@@ -1029,7 +1259,7 @@
             </div>
           </div>
           <div class="section__footer"><a class="button section__footer-button" href="#"><span>Посмотреть все статьи</span><span class="button__icon">
-                      <svg width="17" height="17">
+                      <svg class="svg-icon-arrow-right" width="17" height="17">
                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                       </svg></span></a>
           </div>
@@ -1049,22 +1279,22 @@
                       <li class="listing__item"><a class="listing__box" href="#">
                           <h3 class="listing__name">Электронная библиотека</h3>
                           <div class="listing__img">
-                                  <picture>
-                                    <source srcset="images/listing/listing-01.webp"><img src="images/listing/listing-01.jpg" alt="картинка" width="350" height="222">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-01.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-01.jpg" alt="картинка" width="350" height="222">
                                   </picture>
                           </div></a></li>
                       <li class="listing__item"><a class="listing__box" href="#">
                           <h3 class="listing__name">Тематические подборки</h3>
                           <div class="listing__img">
-                                  <picture>
-                                    <source srcset="images/listing/listing-07.webp"><img src="images/listing/listing-07.jpg" alt="картинка" width="350" height="222">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-07.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-07.jpg" alt="картинка" width="350" height="222">
                                   </picture>
                           </div></a></li>
                       <li class="listing__item"><a class="listing__box" href="#">
                           <h3 class="listing__name">Глоссарий</h3>
                           <div class="listing__img">
-                                  <picture>
-                                    <source srcset="images/listing/listing-03.webp"><img src="images/listing/listing-03.jpg" alt="картинка" width="350" height="222">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-03.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-03.jpg" alt="картинка" width="350" height="222">
                                   </picture>
                           </div></a></li>
                     </ol>
@@ -1091,7 +1321,7 @@
                           <div class="projects__item swiper-slide">
                             <div class="projects__img"><img src="images/projects/projects-01.jpg" alt="Спецвыпуски">
                               <div class="projects__panel"><a class="button" href="#"><span>Узнать больше</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
@@ -1103,7 +1333,7 @@
                           <div class="projects__item swiper-slide">
                             <div class="projects__img"><img src="images/projects/projects-02.jpg" alt="Зеленые проекты">
                               <div class="projects__panel"><a class="button" href="#"><span>Узнать больше</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
@@ -1115,7 +1345,7 @@
                           <div class="projects__item swiper-slide">
                             <div class="projects__img"><img src="images/projects/projects-03.jpg" alt="Стандарты для устойчивого развития">
                               <div class="projects__panel"><a class="button" href="#"><span>Узнать больше</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
@@ -1127,7 +1357,7 @@
                           <div class="projects__item swiper-slide">
                             <div class="projects__img"><img src="images/projects/projects-04.jpg" alt="Модель EFQM - путь к совершенству">
                               <div class="projects__panel"><a class="button" href="#"><span>Узнать больше</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
@@ -1139,7 +1369,7 @@
                           <div class="projects__item swiper-slide">
                             <div class="projects__img"><img src="images/projects/projects-01.jpg" alt="Спецвыпуски">
                               <div class="projects__panel"><a class="button" href="#"><span>Узнать больше</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
@@ -1151,7 +1381,7 @@
                           <div class="projects__item swiper-slide">
                             <div class="projects__img"><img src="images/projects/projects-02.jpg" alt="Зеленые проекты">
                               <div class="projects__panel"><a class="button" href="#"><span>Узнать больше</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
@@ -1163,7 +1393,7 @@
                           <div class="projects__item swiper-slide">
                             <div class="projects__img"><img src="images/projects/projects-03.jpg" alt="Стандарты для устойчивого развития">
                               <div class="projects__panel"><a class="button" href="#"><span>Узнать больше</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
@@ -1175,7 +1405,7 @@
                           <div class="projects__item swiper-slide">
                             <div class="projects__img"><img src="images/projects/projects-04.jpg" alt="Модель EFQM - путь к совершенству">
                               <div class="projects__panel"><a class="button" href="#"><span>Узнать больше</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
@@ -1187,7 +1417,7 @@
                         </div>
                               <div class="swiper-controls">
                                 <button class="swiper-button-prev" aria-label="Переключиться на предыдущий слайд"></button>
-                                <div class="swiper-pagination" aria-label="Пагинация слайдера"></div>
+                                <div class="swiper-pagination"></div>
                                 <button class="swiper-button-next" aria-label="Переключиться на следующий слайд"></button>
                               </div>
                       </div>
@@ -1248,9 +1478,21 @@
                   <div class="services__left">
                     <div class="switcher">
                       <div class="switcher__list tabs-nav" data-tabs="services"><a class="switcher__btn tabs-link is-active" href="#" data-tabs="tab1">
-                          <div class="badge badge--second"><img src="images/badges/badge-01.svg" alt="иконка" width="20" height="20"></div><span>Реклама и продвижение</span></a><a class="switcher__btn tabs-link" href="#" data-tabs="tab2">
-                          <div class="badge badge--second"><img src="images/badges/badge-02.svg" alt="иконка" width="25" height="20"></div><span>Спецвыпуски на заказ</span></a><a class="switcher__btn tabs-link" href="#" data-tabs="tab3">
-                          <div class="badge badge--second"><img src="images/badges/badge-03.svg" alt="иконка" width="20" height="20"></div><span>Другие услуги</span></a></div>
+                          <div class="badge badge--second">
+                                  <svg class="svg-badge-01" width="22" height="22">
+                                    <use xlink:href="images/sprites/main.stack.svg#svg-badge-01"></use>
+                                  </svg>
+                          </div><span>Реклама и продвижение</span></a><a class="switcher__btn tabs-link" href="#" data-tabs="tab2">
+                          <div class="badge badge--second">
+                                  <svg class="svg-badge-02" width="27" height="22">
+                                    <use xlink:href="images/sprites/main.stack.svg#svg-badge-02"></use>
+                                  </svg>
+                          </div><span>Спецвыпуски на заказ</span></a><a class="switcher__btn tabs-link" href="#" data-tabs="tab3">
+                          <div class="badge badge--second">
+                                  <svg class="svg-badge-03" width="22" height="22">
+                                    <use xlink:href="images/sprites/main.stack.svg#svg-badge-03"></use>
+                                  </svg>
+                          </div><span>Другие услуги</span></a></div>
                     </div>
                   </div>
                   <div class="services__right">
@@ -1261,15 +1503,15 @@
                             <li class="listing__item"><a class="listing__box" href="#">
                                 <h3 class="listing__name">Реклама в журналах</h3>
                                 <div class="listing__img">
-                                                          <picture>
-                                                            <source srcset="images/listing/listing-01.webp"><img src="images/listing/listing-01.jpg" alt="картинка" width="350" height="222">
+                                                          <picture class="lazyload">
+                                                            <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-01.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-01.jpg" alt="картинка" width="350" height="222">
                                                           </picture>
                                 </div></a></li>
                             <li class="listing__item"><a class="listing__box" href="#">
                                 <h3 class="listing__name">Реклама на сайте</h3>
                                 <div class="listing__img">
-                                                          <picture>
-                                                            <source srcset="images/listing/listing-07.webp"><img src="images/listing/listing-07.jpg" alt="картинка" width="350" height="222">
+                                                          <picture class="lazyload">
+                                                            <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-07.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-07.jpg" alt="картинка" width="350" height="222">
                                                           </picture>
                                 </div></a></li>
                           </ol>
@@ -1281,15 +1523,15 @@
                             <li class="listing__item"><a class="listing__box" href="#">
                                 <h3 class="listing__name">Реклама в журналах</h3>
                                 <div class="listing__img">
-                                                          <picture>
-                                                            <source srcset="images/listing/listing-03.webp"><img src="images/listing/listing-03.jpg" alt="картинка" width="350" height="222">
+                                                          <picture class="lazyload">
+                                                            <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-03.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-03.jpg" alt="картинка" width="350" height="222">
                                                           </picture>
                                 </div></a></li>
                             <li class="listing__item"><a class="listing__box" href="#">
                                 <h3 class="listing__name">Реклама на сайте</h3>
                                 <div class="listing__img">
-                                                          <picture>
-                                                            <source srcset="images/listing/listing-10.webp"><img src="images/listing/listing-10.jpg" alt="картинка" width="350" height="222">
+                                                          <picture class="lazyload">
+                                                            <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-10.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-10.jpg" alt="картинка" width="350" height="222">
                                                           </picture>
                                 </div></a></li>
                           </ol>
@@ -1301,15 +1543,15 @@
                             <li class="listing__item"><a class="listing__box" href="#">
                                 <h3 class="listing__name">Реклама в журналах</h3>
                                 <div class="listing__img">
-                                                          <picture>
-                                                            <source srcset="images/listing/listing-11.webp"><img src="images/listing/listing-11.jpg" alt="картинка" width="350" height="222">
+                                                          <picture class="lazyload">
+                                                            <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-11.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-11.jpg" alt="картинка" width="350" height="222">
                                                           </picture>
                                 </div></a></li>
                             <li class="listing__item"><a class="listing__box" href="#">
                                 <h3 class="listing__name">Реклама на сайте</h3>
                                 <div class="listing__img">
-                                                          <picture>
-                                                            <source srcset="images/listing/listing-12.webp"><img src="images/listing/listing-12.jpg" alt="картинка" width="350" height="222">
+                                                          <picture class="lazyload">
+                                                            <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-12.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-12.jpg" alt="картинка" width="350" height="222">
                                                           </picture>
                                 </div></a></li>
                           </ol>
@@ -1340,7 +1582,7 @@
                   <h2 class="organization__title">Всероссийская организация качества</h2>
                   <p class="organization__text">Миссия Всероссийской организации качества (ВОК) — объединение усилий граждан и общественных организаций, предприятий и органов власти для содействия решению задач в области качества и конкурентоспособности отечественных продукции и услуг, формирование общероссийского движения за качество.</p>
                   <div class="organization__bottom"><a class="button" href="#"><span>Узнать больше</span><span class="button__icon">
-                              <svg width="17" height="17">
+                              <svg class="svg-icon-arrow-right" width="17" height="17">
                                 <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                               </svg></span></a>
                   </div>
@@ -1436,7 +1678,7 @@
                         </div>
                               <div class="swiper-controls">
                                 <button class="swiper-button-prev" aria-label="Переключиться на предыдущий слайд"></button>
-                                <div class="swiper-pagination" aria-label="Пагинация слайдера"></div>
+                                <div class="swiper-pagination"></div>
                                 <button class="swiper-button-next" aria-label="Переключиться на следующий слайд"></button>
                               </div>
                       </div>
@@ -1458,7 +1700,7 @@
                         <div class="address__item">
                           <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
                           <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
-                        </div><a class="address__item" href="mailto:editor_site@mirq.ru">
+                        </div><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
                           <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
                           <div class="address__text">editor_site@mirq.ru</div></a><a class="address__item" href="tel:+74957716652">
                           <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
@@ -1531,7 +1773,7 @@
             <address class="footer__address address">
               <div class="address__list"><a class="address__item" href="tel:+74957716652">
                   <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
-                  <div class="address__text">+7 (495) 771 6652</div></a><a class="address__item" href="mailto:editor_site@mirq.ru">
+                  <div class="address__text">+7 (495) 771 6652</div></a><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
                   <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
                   <div class="address__text">editor_site@mirq.ru</div></a>
                 <div class="address__item">

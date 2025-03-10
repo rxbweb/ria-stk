@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Детальная страница акции</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/android-chrome-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="yandex-tableau-widget" href="images/favicons/yandex-browser-manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__container container">
+          <div class="header__top"><a class="header__logo" href="/"><img class="header__logo-main" src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img class="header__logo-vok" src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
+            <div class="header__manage">
+              <div class="header__search search">
+                <button class="search__button" aria-label="кнопка поиска">
+                  <svg width="26" height="26">
+                    <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                  </svg>
+                </button>
+                <input class="search__input" type="text" placeholder="Искать....">
+                <div class="search__select">
+                      <div class="select">
+                        <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                              <svg class="svg-icon-arrow-down" width="16" height="16">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                              </svg>
+                        </button>
+                        <div class="select__list">
+                          <button class="select__item is-active">Везде</button>
+                          <button class="select__item">По журналам</button>
+                          <button class="select__item">По книгам</button>
+                          <button class="select__item">По статьям</button>
+                          <button class="select__item">По новостям</button>
+                          <button class="select__item">По мероприятиям</button>
+                        </div>
+                      </div>
+                </div>
+              </div>
+                  <div class="select select--lang">
+                    <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                          <svg class="svg-icon-arrow-down" width="16" height="16">
+                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                          </svg>
+                    </button>
+                    <div class="select__list">
+                      <button class="select__item is-active">RU</button>
+                      <button class="select__item">EN</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="header__socials socials">
+              <div class="socials__list socials__list--first"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
+              <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+            </div>
+            <div class="header__controls">
+              <div class="header__basket"><a class="header__button" href="#">
+                      <svg class="svg-icon-cart" width="22" height="22">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                      </svg></a>
+                <div class="header__basket-amount">99</div>
+              </div><a class="header__favorite" href="#">
+                    <svg class="svg-icon-heart" width="26" height="26">
+                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                    </svg></a>
+              <div class="header__login">
+                <div class="header__login-btn">
+                      <svg class="svg-icon-user" width="20" height="20">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-user"></use>
+                      </svg><span class="header__login-text">Войти</span>
+                </div>
+              </div><a class="header__toggle" href="#" aria-label="открыть меню">
+                <div class="header__toggle-icon"><span></span></div></a>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="is-icon" href="#">
+                    <svg width="26" height="26">
+                      <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
+                    </svg><span>Подписка</span></a></li>
+                <li class="header__nav-item"><a href="#">Журналы</a></li>
+                <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
+                <li class="header__nav-item"><a href="#">Электронная библиотека</a></li>
+                <li class="header__nav-item"><a href="#">Абонентский доступ</a></li>
+                <li class="header__nav-item"><a href="#">Услуги</a></li>
+                <li class="header__nav-item"><a href="#">Мероприятия</a></li>
+                <li class="header__nav-item"><a href="#">О нас</a></li>
+                <li class="header__nav-item"><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <button class="header__burger" aria-label="открыть дополнительное меню"><span></span><span></span><span></span></button>
+          </div>
+          <div class="header__box">
+            <ul class="header__box-nav"></ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="menu">
+      <div class="menu__inner">
+        <div class="menu__container container">
+          <div class="menu__manage">
+            <div class="menu__search search">
+              <button class="search__button" aria-label="кнопка поиска">
+                <svg width="26" height="26">
+                  <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                </svg>
+              </button>
+              <input class="search__input" type="text" placeholder="Искать....">
+              <div class="search__select">
+                    <div class="select">
+                      <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                            <svg class="svg-icon-arrow-down" width="16" height="16">
+                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                            </svg>
+                      </button>
+                      <div class="select__list">
+                        <button class="select__item is-active">Везде</button>
+                        <button class="select__item">По журналам</button>
+                        <button class="select__item">По книгам</button>
+                        <button class="select__item">По статьям</button>
+                        <button class="select__item">По новостям</button>
+                        <button class="select__item">По мероприятиям</button>
+                      </div>
+                    </div>
+              </div>
+            </div>
+                <div class="select select--lang">
+                  <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                        <svg class="svg-icon-arrow-down" width="16" height="16">
+                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                        </svg>
+                  </button>
+                  <div class="select__list">
+                    <button class="select__item is-active">RU</button>
+                    <button class="select__item">EN</button>
+                  </div>
+                </div>
+          </div>
+          <nav class="menu__nav">
+            <ul class="menu__nav-list">
+              <li><a class="is-icon" href="#">
+                  <svg width="22" height="22">
+                    <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
+                  </svg><span>Подписка</span></a></li>
+              <li><a href="#">Журналы</a></li>
+              <li><a href="#">Спецвыпуски</a></li>
+              <li><a href="#">Электронная библиотека</a></li>
+              <li><a href="#">Абонементный доступ</a></li>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Мероприятия</a></li>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="menu__logo"><img src="images/icons/vok.png" alt="вок" width="48" height="48"></div>
+          <div class="menu__socials socials">
+            <div class="socials__list"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
+            <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+          <div class="breadcrumbs">
+            <div class="breadcrumbs__inner container">
+              <div class="breadcrumbs__list"><a href="#">Главная</a><a href="#">Акции</a><span>Подписывайтесь на 12 номеров — платите за 9!</span>
+              </div>
+            </div>
+          </div>
+      <section class="section section--intro">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="intro">
+              <div class="bg-image">
+                      <picture>
+                        <source srcset="images/intro/intro-bg-mob.webp" media="(max-width: 575px)" type="image/webp">
+                        <source srcset="images/intro/intro-bg-mob.jpg" media="(max-width: 575px)">
+                        <source srcset="images/intro/intro-bg.webp"><img src="images/intro/intro-bg.jpg" alt="фоновая картинка" width="1640" height="512">
+                      </picture>
+              </div>
+              <div class="intro__main">
+                <div class="intro__info">
+                  <div class="intro__top">
+                    <p>Сроки проведения</p>
+                    <p class="intro__accent">1 сентября 2024 – 31 декабря 2024</p>
+                  </div>
+                  <h1 class="intro__title">Подписывайтесь на 12 номеров — платите за 9!</h1>
+                  <p class="intro__text">При оформлении годовой подписки в редакции, вы оплачиваете только 9 номеров, а 3 номера получаете в подарок. Оформить подписку можно на сайте
+                    или по телефону +7 (495) 771-66-52 (доб.142, 143). Также вы можете отправить запрос на электронную почту podpiska@mirq.ru.
+                  </p>
+                  <div class="intro__bottom"><a class="button" href="#"><span>Оформить подписку</span><span class="button__icon">
+                              <svg class="svg-icon-arrow-right" width="17" height="17">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                              </svg></span></a>
+                  </div>
+                </div>
+                <div class="intro__img">
+                        <picture>
+                          <source srcset="images/intro/intro-01-mob.webp" media="(max-width: 575px)" type="image/webp">
+                          <source srcset="images/intro/intro-01-mob.png" media="(max-width: 575px)">
+                          <source srcset="images/intro/intro-01.webp"><img src="images/intro/intro-01.png" alt="Картинка" width="795" height="795">
+                        </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="books">
+              <div class="books__inner">
+                <div class="books__section">
+                  <div class="books__header">
+                    <h2 class="books__heading">В акции участвуют</h2>
+                  </div>
+                  <div class="books__content">
+                    <ul class="books__list">
+                      <li class="books__item">
+                        <div class="books__card">
+                          <div class="books__box">
+                            <div class="books__img">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/books/books-54.webp"><img src="images/icons/empty.png" data-src="images/books/books-54.jpg" alt="Комплект журналов «Стандарты и качество» и Business Excellence" width="380" height="380">
+                                    </picture>
+                            </div>
+                          </div>
+                          <div class="books__info">
+                            <div class="books__tags">
+                              <div class="books__tags-item">Выгода 23 880,00 руб.</div>
+                            </div>
+                            <h3 class="books__name">Комплект журналов «Стандарты и качество» и Business Excellence</h3>
+                            <div class="books__bottom">
+                              <div class="books__cost">
+                                <p class="books__price">71 400,00 руб.</p>
+                                <p class="books__price books__price--old">95 280,00 руб.</p>
+                              </div>
+                              <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                          <svg class="svg-icon-cart" width="17" height="17">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                          </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                          </svg></span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="books__item">
+                        <div class="books__card">
+                          <div class="books__box">
+                            <div class="books__img">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/books/books-55.webp"><img src="images/icons/empty.png" data-src="images/books/books-55.jpg" alt="Журнал «Методы менеджмента качества»" width="380" height="380">
+                                    </picture>
+                            </div>
+                          </div>
+                          <div class="books__info">
+                            <div class="books__tags">
+                              <div class="books__tags-item">Выгода 16 680,00 руб.</div>
+                            </div>
+                            <h3 class="books__name">Журнал «Методы менеджмента качества»</h3>
+                            <div class="books__bottom">
+                              <div class="books__cost">
+                                <p class="books__price">49 800,00 руб.</p>
+                                <p class="books__price books__price--old">66 480,00 руб.</p>
+                              </div>
+                              <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                          <svg class="svg-icon-cart" width="17" height="17">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                          </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                          </svg></span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="books__item">
+                        <div class="books__card">
+                          <div class="books__box">
+                            <div class="books__img">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/books/books-56.webp"><img src="images/icons/empty.png" data-src="images/books/books-56.jpg" alt="Журнал «Контроль качества продукции»" width="380" height="380">
+                                    </picture>
+                            </div>
+                          </div>
+                          <div class="books__info">
+                            <div class="books__tags">
+                              <div class="books__tags-item">Выгода 13 800,00 руб.</div>
+                            </div>
+                            <h3 class="books__name">Журнал «Контроль качества продукции»</h3>
+                            <div class="books__bottom">
+                              <div class="books__cost">
+                                <p class="books__price">44 880,00 руб.</p>
+                                <p class="books__price books__price--old">58 680,00 руб.</p>
+                              </div>
+                              <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                          <svg class="svg-icon-cart" width="17" height="17">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                          </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                          </svg></span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="books__item">
+                        <div class="books__card">
+                          <div class="books__box">
+                            <div class="books__img">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/books/books-54.webp"><img src="images/icons/empty.png" data-src="images/books/books-54.jpg" alt="Комплект журналов «Стандарты и качество» и Business Excellence" width="380" height="380">
+                                    </picture>
+                            </div>
+                          </div>
+                          <div class="books__info">
+                            <div class="books__tags">
+                              <div class="books__tags-item">Выгода 23 880,00 руб.</div>
+                            </div>
+                            <h3 class="books__name">Комплект журналов «Стандарты и качество» и Business Excellence</h3>
+                            <div class="books__bottom">
+                              <div class="books__cost">
+                                <p class="books__price">71 400,00 руб.</p>
+                                <p class="books__price books__price--old">95 280,00 руб.</p>
+                              </div>
+                              <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                          <svg class="svg-icon-cart" width="17" height="17">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                          </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                          </svg></span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--accordion">
+        <div class="section__wrapper container">
+          <div class="section__header">
+            <div class="section__header-row section__header-row--center">
+              <h2 class="section__header-title">Часто задаваемые вопросы</h2>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="accordion accordion--third">
+              <div class="accordion__inner">
+                <div class="accordion__row">
+                  <div class="accordion__section">
+                    <div class="info__accordion">
+                      <ul class="accordion__list">
+                              <li class="accordion__item"><a class="accordion__button" href="#" data-accordion="accordion-01">
+                                  <div class="accordion__button-name">
+                                    <h3 class="accordion__button-title">Как оформить подписку?</h3>
+                                  </div>
+                                  <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
+                                <div class="accordion__wrapper">
+                                  <div class="accordion__content">
+                                    <div class="accordion__text">
+                                      <p>При одновременной подписке на печатную и электронную версии журнала, стоимость эл. версии в составе такого заказа составит 50% от стоимости годовой подписки с учётом специальной скидки. Пример: журнал «Методы менеджмента качества», печатная + электронная версии №№ 1 -12/2024: 35 280 + (35 280 – 50%) = 52 920 руб.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="accordion__item"><a class="accordion__button" href="#" data-accordion="accordion-02">
+                                  <div class="accordion__button-name">
+                                    <h3 class="accordion__button-title">Можно ли оформить подписку на юридическое лицо?</h3>
+                                  </div>
+                                  <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
+                                <div class="accordion__wrapper">
+                                  <div class="accordion__content">
+                                    <div class="accordion__text">
+                                      <p>При одновременной подписке на печатную и электронную версии журнала, стоимость эл. версии в составе такого заказа составит 50% от стоимости годовой подписки с учётом специальной скидки. Пример: журнал «Методы менеджмента качества», печатная + электронная версии №№ 1 -12/2024: 35 280 + (35 280 – 50%) = 52 920 руб.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="accordion__item"><a class="accordion__button" href="#" data-accordion="accordion-03">
+                                  <div class="accordion__button-name">
+                                    <h3 class="accordion__button-title">Есть ли скидка для студентов?</h3>
+                                  </div>
+                                  <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
+                                <div class="accordion__wrapper">
+                                  <div class="accordion__content">
+                                    <div class="accordion__text">
+                                      <p>При одновременной подписке на печатную и электронную версии журнала, стоимость эл. версии в составе такого заказа составит 50% от стоимости годовой подписки с учётом специальной скидки. Пример: журнал «Методы менеджмента качества», печатная + электронная версии №№ 1 -12/2024: 35 280 + (35 280 – 50%) = 52 920 руб.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="accordion__item"><a class="accordion__button" href="#" data-accordion="accordion-04">
+                                  <div class="accordion__button-name">
+                                    <h3 class="accordion__button-title">Есть ли скидка при одновременном оформлении подписки на печатную и электронную версии журнала?</h3>
+                                  </div>
+                                  <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
+                                <div class="accordion__wrapper">
+                                  <div class="accordion__content">
+                                    <div class="accordion__text">
+                                      <p>При одновременной подписке на печатную и электронную версии журнала, стоимость эл. версии в составе такого заказа составит 50% от стоимости годовой подписки с учётом специальной скидки. Пример: журнал «Методы менеджмента качества», печатная + электронная версии №№ 1 -12/2024: 35 280 + (35 280 – 50%) = 52 920 руб.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="accordion__item"><a class="accordion__button" href="#" data-accordion="accordion-05">
+                                  <div class="accordion__button-name">
+                                    <h3 class="accordion__button-title">Как отправить рукопись для публикации в журнале?</h3>
+                                  </div>
+                                  <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
+                                <div class="accordion__wrapper">
+                                  <div class="accordion__content">
+                                    <div class="accordion__text">
+                                      <p>При одновременной подписке на печатную и электронную версии журнала, стоимость эл. версии в составе такого заказа составит 50% от стоимости годовой подписки с учётом специальной скидки. Пример: журнал «Методы менеджмента качества», печатная + электронная версии №№ 1 -12/2024: 35 280 + (35 280 – 50%) = 52 920 руб.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="accordion__item"><a class="accordion__button" href="#" data-accordion="accordion-06">
+                                  <div class="accordion__button-name">
+                                    <h3 class="accordion__button-title">Как стать участником бонусной программы?</h3>
+                                  </div>
+                                  <div class="accordion__button-plus"><img src="images/icons/plus.svg" alt="раскрыть информацию" width="36" height="36"></div></a>
+                                <div class="accordion__wrapper">
+                                  <div class="accordion__content">
+                                    <div class="accordion__text">
+                                      <p>При одновременной подписке на печатную и электронную версии журнала, стоимость эл. версии в составе такого заказа составит 50% от стоимости годовой подписки с учётом специальной скидки. Пример: журнал «Методы менеджмента качества», печатная + электронная версии №№ 1 -12/2024: 35 280 + (35 280 – 50%) = 52 920 руб.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion__bottom"><a class="button" href="#"><span>Перейти в FAQ</span><span class="button__icon">
+                            <svg class="svg-icon-arrow-right" width="17" height="17">
+                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                            </svg></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--contacts">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="contacts">
+              <div class="contacts__inner">
+                <div class="contacts__row">
+                  <div class="contacts__section">
+                    <h2 class="contacts__title">Контакты</h2>
+                    <address class="contacts__address address">
+                      <div class="address__list address__list--second">
+                        <div class="address__item">
+                          <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
+                        </div><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
+                          <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">editor_site@mirq.ru</div></a><a class="address__item" href="tel:+74957716652">
+                          <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">+7 (495) 771 6652</div></a>
+                      </div>
+                    </address>
+                    <div class="contacts__map map"></div>
+                  </div>
+                  <div class="contacts__right">
+                    <form class="contacts__form form" action="#" data-validate-form>
+                      <div class="form__header">
+                        <h2 class="form__title">Остались вопросы?</h2>
+                        <p class="form__text">Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.</p>
+                      </div>
+                      <div class="form__main">
+                        <div class="form__top">
+                          <div class="form__box">
+                            <label class="form__label form__label--half">
+                              <input class="form__input" type="text" placeholder="Имя" name="form-name" required><span class="form__error">Обязательное поле</span>
+                            </label>
+                            <label class="form__label form__label--half">
+                              <input class="form__input" type="text" placeholder="Фамилия">
+                            </label>
+                            <label class="form__label">
+                              <input class="form__input" type="email" placeholder="E-mail" name="form-email" required><span class="form__error">Обязательное поле</span>
+                            </label>
+                            <label class="form__label">
+                              <textarea class="form__textarea" placeholder="Текст сообщения"></textarea>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__middle">
+                          <div class="agree">
+                            <label class="agree__label">
+                              <input type="checkbox" name="form-agree" required><span class="agree__checkbox"></span><span class="agree__text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
+                            </label><span class="agree__error">Обязательное поле</span>
+                          </div>
+                        </div>
+                        <div class="form__bottom">
+                                <button class="button form__button"><span>Подписаться</span>
+                                </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__menu container">
+            <div class="footer__left"><a class="footer__logo" href="#"><img src="images/icons/logo.svg" alt="СК — стандарты и качество"></a>
+              <div class="footer__copy footer__copy--desktop">
+                <div>2000—2024 © РИА «Стандарты и качество»: cтандартизация, метрология, менеджмент качества.</div>
+                <div>Все права защищены и охраняются законом.</div>
+              </div>
+              <div class="footer__links"><a href="#">Карта сайта</a></div>
+            </div>
+            <nav class="footer__nav">
+              <div class="footer__nav-list">
+                <div class="footer__nav-col"><a href="#">Журналы</a><a href="#">Подписка</a><a href="#">Электронная библиотека</a><a href="#">Абонементный доступ</a><a href="#">Quality News</a></div>
+                <div class="footer__nav-col"><a href="#">О нас</a><a href="#">Услуги</a><a href="#">Мероприятия</a><a href="#">Редакционная политика</a><a href="#">Авторам</a></div>
+              </div>
+            </nav>
+            <address class="footer__address address">
+              <div class="address__list"><a class="address__item" href="tel:+74957716652">
+                  <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">+7 (495) 771 6652</div></a><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
+                  <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">editor_site@mirq.ru</div></a>
+                <div class="address__item">
+                  <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
+                </div>
+                <div class="address__item">
+                  <div class="address__icon"><img src="images/address/address-time.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">
+                    <p>Пн-Чт 9:00-18:00 </p>
+                    <p>Пт 9:00-16:45</p>
+                    <p>Сб-Вс выходные</p>
+                  </div>
+                </div>
+              </div>
+            </address>
+            <div class="footer__copy footer__copy--mob">
+              <div>2000—2024 © РИА «Стандарты и качество»: cтандартизация, метрология, менеджмент качества.</div>
+              <div>Все права защищены и охраняются законом.</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__legal container"><a href="#">Права использования электронных журналов</a><a href="#">Правила пользования сайтом</a><a class="footer__legal-mob" href="#">Карта сайта</a><a href="#">Правила обработки и хранения персональных данных</a><a href="#">Соглашение пользователя</a><a href="#"><span>Разработка сайта</span><img src="images/icons/completo.svg" alt="completo" width="63" height="23"></a></div>
+        </div>
+      </div>
+    </footer><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=5e6f3718-a525-41b0-832c-11d7f6b0f8a4"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

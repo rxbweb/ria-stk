@@ -1,0 +1,18 @@
+extends base/_layout
+block head
+   title Детальная страница акции
+block page
+
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Акции' },
+      { href: '#', title: 'Подписывайтесь на 12 номеров — платите за 9!' },
+   ])
+
+   include blocks/intro/_intro-01
+
+   include blocks/books/_books-21
+
+   include blocks/accordion/_accordion-03
+
+   include blocks/contacts/_contacts

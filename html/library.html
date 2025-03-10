@@ -44,41 +44,57 @@
                 </button>
                 <input class="search__input" type="text" placeholder="Искать....">
                 <div class="search__select">
-                  <div class="select">
-                    <button class="select__active is-selected"><span>Везде</span></button>
+                      <div class="select">
+                        <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                              <svg class="svg-icon-arrow-down" width="16" height="16">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                              </svg>
+                        </button>
+                        <div class="select__list">
+                          <button class="select__item is-active">Везде</button>
+                          <button class="select__item">По журналам</button>
+                          <button class="select__item">По книгам</button>
+                          <button class="select__item">По статьям</button>
+                          <button class="select__item">По новостям</button>
+                          <button class="select__item">По мероприятиям</button>
+                        </div>
+                      </div>
+                </div>
+              </div>
+                  <div class="select select--lang">
+                    <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                          <svg class="svg-icon-arrow-down" width="16" height="16">
+                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                          </svg>
+                    </button>
                     <div class="select__list">
-                      <button class="select__item is-active">Везде</button>
-                      <button class="select__item">По журналам</button>
-                      <button class="select__item">По книгам</button>
-                      <button class="select__item">По статьям</button>
-                      <button class="select__item">По новостям</button>
-                      <button class="select__item">По мероприятиям</button>
+                      <button class="select__item is-active">RU</button>
+                      <button class="select__item">EN</button>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="select select--lang">
-                <div class="select__active is-selected"><span>RU</span></div>
-                <div class="select__list">
-                  <button class="select__item is-active">RU</button>
-                  <button class="select__item">EN</button>
-                </div>
-              </div>
             </div>
             <div class="header__socials socials">
               <div class="socials__list socials__list--first"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
-              <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+              <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
             </div>
             <div class="header__controls">
-              <div class="header__basket"><a class="button button--img" href="#">
-                  <svg width="22" height="22">
-                    <use href="images/sprites/main.stack.svg#svg-icon-cart"></use>
-                  </svg></a>
+              <div class="header__basket"><a class="header__button" href="#">
+                      <svg class="svg-icon-cart" width="22" height="22">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                      </svg></a>
                 <div class="header__basket-amount">99</div>
-              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#">
-                <svg width="20" height="20">
-                  <use href="images/sprites/main.stack.svg#svg-icon-user"></use>
-                </svg><span>Войти</span></a><a class="header__toggle button" href="#"><i class="icon"><span></span></i></a>
+              </div><a class="header__favorite" href="#">
+                    <svg class="svg-icon-heart" width="26" height="26">
+                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                    </svg></a>
+              <div class="header__login">
+                <div class="header__login-btn">
+                      <svg class="svg-icon-user" width="20" height="20">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-user"></use>
+                      </svg><span class="header__login-text">Войти</span>
+                </div>
+              </div><a class="header__toggle" href="#" aria-label="открыть меню">
+                <div class="header__toggle-icon"><span></span></div></a>
             </div>
           </div>
           <div class="header__bottom">
@@ -118,26 +134,34 @@
               </button>
               <input class="search__input" type="text" placeholder="Искать....">
               <div class="search__select">
-                <div class="select">
-                  <button class="select__active">Везде</button>
+                    <div class="select">
+                      <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                            <svg class="svg-icon-arrow-down" width="16" height="16">
+                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                            </svg>
+                      </button>
+                      <div class="select__list">
+                        <button class="select__item is-active">Везде</button>
+                        <button class="select__item">По журналам</button>
+                        <button class="select__item">По книгам</button>
+                        <button class="select__item">По статьям</button>
+                        <button class="select__item">По новостям</button>
+                        <button class="select__item">По мероприятиям</button>
+                      </div>
+                    </div>
+              </div>
+            </div>
+                <div class="select select--lang">
+                  <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                        <svg class="svg-icon-arrow-down" width="16" height="16">
+                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                        </svg>
+                  </button>
                   <div class="select__list">
-                    <button class="select__item is-active">Везде</button>
-                    <button class="select__item">По журналам</button>
-                    <button class="select__item">По книгам</button>
-                    <button class="select__item">По статьям</button>
-                    <button class="select__item">По новостям</button>
-                    <button class="select__item">По мероприятиям</button>
+                    <button class="select__item is-active">RU</button>
+                    <button class="select__item">EN</button>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="select select--lang">
-              <div class="select__active"><span>RU</span></div>
-              <div class="select__list">
-                <button class="select__item is-active">RU</button>
-                <button class="select__item">EN</button>
-              </div>
-            </div>
           </div>
           <nav class="menu__nav">
             <ul class="menu__nav-list">
@@ -184,7 +208,7 @@
                         <p>Включает полный архив выпускаемых РИА «Стандарты и качество» изданий. Удобный поиск и детальная сортировка сэкономят ваше время и сделают процесс доступа к информации быстрым и удобным.</p>
                       </div>
                       <div class="hero__bottom"><a class="button" href="#"><span>Подробнее</span><span class="button__icon">
-                                  <svg width="17" height="17">
+                                  <svg class="svg-icon-arrow-right" width="17" height="17">
                                     <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                   </svg></span></a>
                       </div>
@@ -255,7 +279,7 @@
                                 <p class="ticket__table-primary">700 руб.</p>
                               </div>
                               <div class="ticket__table-col"><a class="button" href="#"><span>В корзину</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-cart" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                           </svg></span></a>
                               </div>
@@ -274,7 +298,7 @@
                                 <p class="ticket__table-primary">1000 руб.</p>
                               </div>
                               <div class="ticket__table-col"><a class="button" href="#"><span>В корзину</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-cart" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                           </svg></span></a>
                               </div>
@@ -293,7 +317,7 @@
                                 <p class="ticket__table-primary">30 000 руб.</p>
                               </div>
                               <div class="ticket__table-col"><a class="button" href="#"><span>В корзину</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-cart" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                                           </svg></span></a>
                               </div>
@@ -473,13 +497,13 @@
                         <div class="books__card">
                           <div class="books__box">
                                   <button class="favorite-button" aria-label="добавить этот продукт в избранное">
-                                          <svg width="32" height="30">
+                                          <svg class="svg-icon-heart" width="32" height="30">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
                                           </svg>
                                   </button>
                             <div class="books__img">
-                                    <picture>
-                                      <source srcset="images/books/books-01.webp"><img src="images/books/books-01.jpg" alt="Цифровое качество. Свод знаний о цифровой трансформации" width="380" height="380">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/books/books-01.webp"><img src="images/icons/empty.png" data-src="images/books/books-01.jpg" alt="Цифровое качество. Свод знаний о цифровой трансформации" width="380" height="380">
                                     </picture>
                             </div>
                           </div>
@@ -487,8 +511,11 @@
                             <h3 class="books__name">Цифровое качество. Свод знаний о цифровой трансформации</h3>
                             <div class="books__bottom">
                               <p class="books__price">3 500 руб.</p>
-                              <div class="books__manage"><a class="button button--slim" href="#"><span class="button__text-desktop">Купить книгу</span><span class="button__text-mob">В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                              <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                          <svg class="svg-icon-cart" width="17" height="17">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                          </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
@@ -500,13 +527,13 @@
                         <div class="books__card">
                           <div class="books__box">
                                   <button class="favorite-button" aria-label="добавить этот продукт в избранное">
-                                          <svg width="32" height="30">
+                                          <svg class="svg-icon-heart" width="32" height="30">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
                                           </svg>
                                   </button>
                             <div class="books__img">
-                                    <picture>
-                                      <source srcset="images/books/books-02.webp"><img src="images/books/books-02.jpg" alt="Процессный подход в требованиях ISO 45001:2018" width="380" height="380">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/books/books-02.webp"><img src="images/icons/empty.png" data-src="images/books/books-02.jpg" alt="Процессный подход в требованиях ISO 45001:2018" width="380" height="380">
                                     </picture>
                             </div>
                           </div>
@@ -514,8 +541,11 @@
                             <h3 class="books__name">Процессный подход в требованиях ISO 45001:2018</h3>
                             <div class="books__bottom">
                               <p class="books__price">5 600 руб.</p>
-                              <div class="books__manage"><a class="button button--slim" href="#"><span class="button__text-desktop">Купить книгу</span><span class="button__text-mob">В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                              <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                          <svg class="svg-icon-cart" width="17" height="17">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                          </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
@@ -527,13 +557,13 @@
                         <div class="books__card">
                           <div class="books__box">
                                   <button class="favorite-button" aria-label="добавить этот продукт в избранное">
-                                          <svg width="32" height="30">
+                                          <svg class="svg-icon-heart" width="32" height="30">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
                                           </svg>
                                   </button>
                             <div class="books__img">
-                                    <picture>
-                                      <source srcset="images/books/books-03.webp"><img src="images/books/books-03.jpg" alt="Внедрение системы энергетического менеджмента на соответствие международному стандарту ISO 50001:2011" width="380" height="380">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/books/books-03.webp"><img src="images/icons/empty.png" data-src="images/books/books-03.jpg" alt="Внедрение системы энергетического менеджмента на соответствие международному стандарту ISO 50001:2011" width="380" height="380">
                                     </picture>
                             </div>
                           </div>
@@ -541,8 +571,11 @@
                             <h3 class="books__name">Внедрение системы энергетического менеджмента на соответствие международному стандарту ISO 50001:2011</h3>
                             <div class="books__bottom">
                               <p class="books__price">14 900 руб.</p>
-                              <div class="books__manage"><a class="button button--slim" href="#"><span class="button__text-desktop">Купить книгу</span><span class="button__text-mob">В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                              <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                          <svg class="svg-icon-cart" width="17" height="17">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                          </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
@@ -554,13 +587,13 @@
                         <div class="books__card">
                           <div class="books__box">
                                   <button class="favorite-button" aria-label="добавить этот продукт в избранное">
-                                          <svg width="32" height="30">
+                                          <svg class="svg-icon-heart" width="32" height="30">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
                                           </svg>
                                   </button>
                             <div class="books__img">
-                                    <picture>
-                                      <source srcset="images/books/books-04.webp"><img src="images/books/books-04.jpg" alt="ISO 9001:2015. Международный стандарт на системы менеджмента качества. Наблюдения, интерпретация...." width="380" height="380">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/books/books-04.webp"><img src="images/icons/empty.png" data-src="images/books/books-04.jpg" alt="ISO 9001:2015. Международный стандарт на системы менеджмента качества. Наблюдения, интерпретация...." width="380" height="380">
                                     </picture>
                             </div>
                           </div>
@@ -568,8 +601,11 @@
                             <h3 class="books__name">ISO 9001:2015. Международный стандарт на системы менеджмента качества. Наблюдения, интерпретация....</h3>
                             <div class="books__bottom">
                               <p class="books__price">3 800 руб.</p>
-                              <div class="books__manage"><a class="button button--slim" href="#"><span class="button__text-desktop">Купить книгу</span><span class="button__text-mob">В корзину</span><i class="icon icon-cart"></i></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                              <div class="books__manage"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                          <svg class="svg-icon-cart" width="17" height="17">
+                                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                          </svg></span></a><a class="button button--outline" href="#"><span>Купить в 1 клик</span><span class="button__icon">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
@@ -601,7 +637,7 @@
                           <div class="projects__item swiper-slide">
                             <div class="projects__img"><img src="images/projects/projects-01.jpg" alt="Процессный подход">
                               <div class="projects__panel"><a class="button" href="#"><span>Узнать больше</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
@@ -613,7 +649,7 @@
                           <div class="projects__item swiper-slide">
                             <div class="projects__img"><img src="images/projects/projects-02.jpg" alt="Зеленые проекты">
                               <div class="projects__panel"><a class="button" href="#"><span>Узнать больше</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
@@ -625,7 +661,7 @@
                           <div class="projects__item swiper-slide">
                             <div class="projects__img"><img src="images/projects/projects-05.jpg" alt="Модель EFQM - путь к совершенству">
                               <div class="projects__panel"><a class="button" href="#"><span>Узнать больше</span><span class="button__icon">
-                                          <svg width="17" height="17">
+                                          <svg class="svg-icon-arrow-right" width="17" height="17">
                                             <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                           </svg></span></a>
                               </div>
@@ -637,7 +673,7 @@
                         </div>
                               <div class="swiper-controls">
                                 <button class="swiper-button-prev" aria-label="Переключиться на предыдущий слайд"></button>
-                                <div class="swiper-pagination" aria-label="Пагинация слайдера"></div>
+                                <div class="swiper-pagination"></div>
                                 <button class="swiper-button-next" aria-label="Переключиться на следующий слайд"></button>
                               </div>
                       </div>
@@ -667,15 +703,15 @@
                               </div><span class="authors__label-text">Эксперт журнала</span>
                             </div>
                             <div class="authors__img">
-                                    <picture>
-                                      <source srcset="images/authors/authors-01.webp"><img src="images/authors/authors-01.jpg" alt="Аронов Иосиф Зиновьевич" width="256" height="310">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/authors/authors-01.webp"><img src="images/icons/empty.png" data-src="images/authors/authors-01.jpg" alt="Аронов Иосиф Зиновьевич" width="256" height="310">
                                     </picture>
                             </div>
                           </div>
                           <div class="authors__info">
                             <p class="authors__description">профессор МГИМО</p>
                             <p class="authors__name">Аронов Иосиф Зиновьевич</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
-                                      <svg width="17" height="17">
+                                      <svg class="svg-icon-arrow-right" width="17" height="17">
                                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                       </svg></span></a>
                           </div>
@@ -683,15 +719,15 @@
                         <li class="authors__item">
                           <div class="authors__top">
                             <div class="authors__img">
-                                    <picture>
-                                      <source srcset="images/authors/authors-02.webp"><img src="images/authors/authors-02.jpg" alt="Лапидус Вадим Аркадьевич" width="256" height="310">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/authors/authors-02.webp"><img src="images/icons/empty.png" data-src="images/authors/authors-02.jpg" alt="Лапидус Вадим Аркадьевич" width="256" height="310">
                                     </picture>
                             </div>
                           </div>
                           <div class="authors__info">
                             <p class="authors__description">Доктор техн. наук</p>
                             <p class="authors__name">Лапидус Вадим Аркадьевич</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
-                                      <svg width="17" height="17">
+                                      <svg class="svg-icon-arrow-right" width="17" height="17">
                                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                       </svg></span></a>
                           </div>
@@ -706,15 +742,15 @@
                               </div><span class="authors__label-text">Эксперт журнала</span>
                             </div>
                             <div class="authors__img">
-                                    <picture>
-                                      <source srcset="images/authors/authors-03.webp"><img src="images/authors/authors-03.jpg" alt="Адлер Юрий Павлович" width="256" height="310">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/authors/authors-03.webp"><img src="images/icons/empty.png" data-src="images/authors/authors-03.jpg" alt="Адлер Юрий Павлович" width="256" height="310">
                                     </picture>
                             </div>
                           </div>
                           <div class="authors__info">
                             <p class="authors__description">Профессор МИСИС</p>
                             <p class="authors__name">Адлер Юрий Павлович</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
-                                      <svg width="17" height="17">
+                                      <svg class="svg-icon-arrow-right" width="17" height="17">
                                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                       </svg></span></a>
                           </div>
@@ -722,15 +758,15 @@
                         <li class="authors__item">
                           <div class="authors__top">
                             <div class="authors__img">
-                                    <picture>
-                                      <source srcset="images/authors/authors-04.webp"><img src="images/authors/authors-04.jpg" alt="Фалкин Дмитрий Владимирович" width="256" height="310">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/authors/authors-04.webp"><img src="images/icons/empty.png" data-src="images/authors/authors-04.jpg" alt="Фалкин Дмитрий Владимирович" width="256" height="310">
                                     </picture>
                             </div>
                           </div>
                           <div class="authors__info">
                             <p class="authors__description">профессор МГИМО</p>
                             <p class="authors__name">Фалкин Дмитрий Владимирович</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
-                                      <svg width="17" height="17">
+                                      <svg class="svg-icon-arrow-right" width="17" height="17">
                                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                       </svg></span></a>
                           </div>
@@ -745,15 +781,15 @@
                               </div><span class="authors__label-text">Эксперт журнала</span>
                             </div>
                             <div class="authors__img">
-                                    <picture>
-                                      <source srcset="images/authors/authors-01.webp"><img src="images/authors/authors-01.jpg" alt="Аронов Иосиф Зиновьевич" width="256" height="310">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/authors/authors-01.webp"><img src="images/icons/empty.png" data-src="images/authors/authors-01.jpg" alt="Аронов Иосиф Зиновьевич" width="256" height="310">
                                     </picture>
                             </div>
                           </div>
                           <div class="authors__info">
                             <p class="authors__description">профессор МГИМО</p>
                             <p class="authors__name">Аронов Иосиф Зиновьевич</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
-                                      <svg width="17" height="17">
+                                      <svg class="svg-icon-arrow-right" width="17" height="17">
                                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                       </svg></span></a>
                           </div>
@@ -761,15 +797,15 @@
                         <li class="authors__item">
                           <div class="authors__top">
                             <div class="authors__img">
-                                    <picture>
-                                      <source srcset="images/authors/authors-01.webp"><img src="images/authors/authors-01.jpg" alt="Аронов Иосиф Зиновьевич" width="256" height="310">
+                                    <picture class="lazyload">
+                                      <source srcset="images/icons/empty.png" data-srcset="images/authors/authors-01.webp"><img src="images/icons/empty.png" data-src="images/authors/authors-01.jpg" alt="Аронов Иосиф Зиновьевич" width="256" height="310">
                                     </picture>
                             </div>
                           </div>
                           <div class="authors__info">
                             <p class="authors__description">профессор МГИМО</p>
                             <p class="authors__name">Аронов Иосиф Зиновьевич</p><a class="button button--outline" href="#"><span>Подробнее</span><span class="button__icon">
-                                      <svg width="17" height="17">
+                                      <svg class="svg-icon-arrow-right" width="17" height="17">
                                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                       </svg></span></a>
                           </div>
@@ -796,13 +832,13 @@
                   <div class="status__info">
                     <h2 class="status__title">Хотите подтвердить свой экспертный статус?</h2>
                     <p class="status__text">Станьте автором журналов РИА «Стандарты и качество». Ждем как опытных, так и начинающих специалистов. Важна польза и подача материала. Приоритет отдается статьям практической направленности.</p><a class="button" href="#"><span>Подробнее</span><span class="button__icon">
-                              <svg width="17" height="17">
+                              <svg class="svg-icon-arrow-right" width="17" height="17">
                                 <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                               </svg></span></a>
                   </div>
                   <div class="status__img">
-                          <picture>
-                            <source srcset="images/status/status-img.webp"><img src="images/status/status-img.png" alt="картинка" width="570" height="500">
+                          <picture class="lazyload">
+                            <source srcset="images/icons/empty.png" data-srcset="images/status/status-img.webp"><img src="images/icons/empty.png" data-src="images/status/status-img.png" alt="картинка" width="570" height="500">
                           </picture>
                   </div>
                 </div>
@@ -824,7 +860,7 @@
                         <div class="address__item">
                           <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
                           <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
-                        </div><a class="address__item" href="mailto:editor_site@mirq.ru">
+                        </div><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
                           <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
                           <div class="address__text">editor_site@mirq.ru</div></a><a class="address__item" href="tel:+74957716652">
                           <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
@@ -897,7 +933,7 @@
             <address class="footer__address address">
               <div class="address__list"><a class="address__item" href="tel:+74957716652">
                   <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
-                  <div class="address__text">+7 (495) 771 6652</div></a><a class="address__item" href="mailto:editor_site@mirq.ru">
+                  <div class="address__text">+7 (495) 771 6652</div></a><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
                   <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
                   <div class="address__text">editor_site@mirq.ru</div></a>
                 <div class="address__item">

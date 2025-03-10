@@ -44,41 +44,57 @@
                 </button>
                 <input class="search__input" type="text" placeholder="Искать....">
                 <div class="search__select">
-                  <div class="select">
-                    <button class="select__active is-selected"><span>Везде</span></button>
+                      <div class="select">
+                        <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                              <svg class="svg-icon-arrow-down" width="16" height="16">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                              </svg>
+                        </button>
+                        <div class="select__list">
+                          <button class="select__item is-active">Везде</button>
+                          <button class="select__item">По журналам</button>
+                          <button class="select__item">По книгам</button>
+                          <button class="select__item">По статьям</button>
+                          <button class="select__item">По новостям</button>
+                          <button class="select__item">По мероприятиям</button>
+                        </div>
+                      </div>
+                </div>
+              </div>
+                  <div class="select select--lang">
+                    <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                          <svg class="svg-icon-arrow-down" width="16" height="16">
+                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                          </svg>
+                    </button>
                     <div class="select__list">
-                      <button class="select__item is-active">Везде</button>
-                      <button class="select__item">По журналам</button>
-                      <button class="select__item">По книгам</button>
-                      <button class="select__item">По статьям</button>
-                      <button class="select__item">По новостям</button>
-                      <button class="select__item">По мероприятиям</button>
+                      <button class="select__item is-active">RU</button>
+                      <button class="select__item">EN</button>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="select select--lang">
-                <div class="select__active is-selected"><span>RU</span></div>
-                <div class="select__list">
-                  <button class="select__item is-active">RU</button>
-                  <button class="select__item">EN</button>
-                </div>
-              </div>
             </div>
             <div class="header__socials socials">
               <div class="socials__list socials__list--first"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
-              <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+              <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
             </div>
             <div class="header__controls">
-              <div class="header__basket"><a class="button button--img" href="#">
-                  <svg width="22" height="22">
-                    <use href="images/sprites/main.stack.svg#svg-icon-cart"></use>
-                  </svg></a>
+              <div class="header__basket"><a class="header__button" href="#">
+                      <svg class="svg-icon-cart" width="22" height="22">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                      </svg></a>
                 <div class="header__basket-amount">99</div>
-              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#">
-                <svg width="20" height="20">
-                  <use href="images/sprites/main.stack.svg#svg-icon-user"></use>
-                </svg><span>Войти</span></a><a class="header__toggle button" href="#"><i class="icon"><span></span></i></a>
+              </div><a class="header__favorite" href="#">
+                    <svg class="svg-icon-heart" width="26" height="26">
+                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                    </svg></a>
+              <div class="header__login">
+                <div class="header__login-btn">
+                      <svg class="svg-icon-user" width="20" height="20">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-user"></use>
+                      </svg><span class="header__login-text">Войти</span>
+                </div>
+              </div><a class="header__toggle" href="#" aria-label="открыть меню">
+                <div class="header__toggle-icon"><span></span></div></a>
             </div>
           </div>
           <div class="header__bottom">
@@ -118,26 +134,34 @@
               </button>
               <input class="search__input" type="text" placeholder="Искать....">
               <div class="search__select">
-                <div class="select">
-                  <button class="select__active">Везде</button>
+                    <div class="select">
+                      <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                            <svg class="svg-icon-arrow-down" width="16" height="16">
+                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                            </svg>
+                      </button>
+                      <div class="select__list">
+                        <button class="select__item is-active">Везде</button>
+                        <button class="select__item">По журналам</button>
+                        <button class="select__item">По книгам</button>
+                        <button class="select__item">По статьям</button>
+                        <button class="select__item">По новостям</button>
+                        <button class="select__item">По мероприятиям</button>
+                      </div>
+                    </div>
+              </div>
+            </div>
+                <div class="select select--lang">
+                  <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                        <svg class="svg-icon-arrow-down" width="16" height="16">
+                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                        </svg>
+                  </button>
                   <div class="select__list">
-                    <button class="select__item is-active">Везде</button>
-                    <button class="select__item">По журналам</button>
-                    <button class="select__item">По книгам</button>
-                    <button class="select__item">По статьям</button>
-                    <button class="select__item">По новостям</button>
-                    <button class="select__item">По мероприятиям</button>
+                    <button class="select__item is-active">RU</button>
+                    <button class="select__item">EN</button>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="select select--lang">
-              <div class="select__active"><span>RU</span></div>
-              <div class="select__list">
-                <button class="select__item is-active">RU</button>
-                <button class="select__item">EN</button>
-              </div>
-            </div>
           </div>
           <nav class="menu__nav">
             <ul class="menu__nav-list">
@@ -164,12 +188,12 @@
       </div>
     </div>
     <main class="main">
-      <div class="breadcrumbs">
-        <div class="breadcrumbs__inner container">
-          <div class="breadcrumbs__list"><a href="#">Главная</a><span>Документы</span>
+          <div class="breadcrumbs">
+            <div class="breadcrumbs__inner container">
+              <div class="breadcrumbs__list"><a href="#">Главная</a><span>Документы</span>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
       <section class="section section--links">
         <div class="section__wrapper container">
           <div class="section__header section__header--border">
@@ -185,37 +209,65 @@
                             <div class="links__info">
                               <p class="links__name">Свидетельство о внесении записи в Единый государственный реестр юридических лиц</p>
                             </div>
-                            <div class="links__icon"></div></a></li>
+                            <div class="links__icon">
+                                    <svg class="svg-icon-arrow-right-large" width="24" height="24">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right-large"></use>
+                                    </svg>
+                            </div></a></li>
                         <li><a class="links__button" href="#">
                             <div class="links__info">
                               <p class="links__name">Свидетельство о постановке на учет российской организации в налоговом органе по месту нахождения на территории Российской Федерации</p>
                             </div>
-                            <div class="links__icon"></div></a></li>
+                            <div class="links__icon">
+                                    <svg class="svg-icon-arrow-right-large" width="24" height="24">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right-large"></use>
+                                    </svg>
+                            </div></a></li>
                         <li><a class="links__button" href="#">
                             <div class="links__info">
                               <p class="links__name">Свидетельство о регистрации юридического лица</p>
                             </div>
-                            <div class="links__icon"></div></a></li>
+                            <div class="links__icon">
+                                    <svg class="svg-icon-arrow-right-large" width="24" height="24">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right-large"></use>
+                                    </svg>
+                            </div></a></li>
                         <li><a class="links__button" href="#">
                             <div class="links__info">
                               <p class="links__name">Карточка юридического лица</p>
                             </div>
-                            <div class="links__icon"></div></a></li>
+                            <div class="links__icon">
+                                    <svg class="svg-icon-arrow-right-large" width="24" height="24">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right-large"></use>
+                                    </svg>
+                            </div></a></li>
                         <li><a class="links__button" href="#">
                             <div class="links__info">
                               <p class="links__name">Устав ООО «РИА «Стандарты и качество»</p>
                             </div>
-                            <div class="links__icon"></div></a></li>
+                            <div class="links__icon">
+                                    <svg class="svg-icon-arrow-right-large" width="24" height="24">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right-large"></use>
+                                    </svg>
+                            </div></a></li>
                         <li><a class="links__button" href="#">
                             <div class="links__info">
                               <p class="links__name">Приказ о вступлении в должность генерального директора РИА «Стандарты и качество» </p>
                             </div>
-                            <div class="links__icon"></div></a></li>
+                            <div class="links__icon">
+                                    <svg class="svg-icon-arrow-right-large" width="24" height="24">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right-large"></use>
+                                    </svg>
+                            </div></a></li>
                         <li><a class="links__button" href="#">
                             <div class="links__info">
                               <p class="links__name">Информационное письмо об УСН из ИФНС (подтверждение)</p>
                             </div>
-                            <div class="links__icon"></div></a></li>
+                            <div class="links__icon">
+                                    <svg class="svg-icon-arrow-right-large" width="24" height="24">
+                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right-large"></use>
+                                    </svg>
+                            </div></a></li>
                       </ul>
               </div>
             </div>
@@ -235,7 +287,7 @@
                         <div class="address__item">
                           <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
                           <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
-                        </div><a class="address__item" href="mailto:editor_site@mirq.ru">
+                        </div><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
                           <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
                           <div class="address__text">editor_site@mirq.ru</div></a><a class="address__item" href="tel:+74957716652">
                           <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
@@ -308,7 +360,7 @@
             <address class="footer__address address">
               <div class="address__list"><a class="address__item" href="tel:+74957716652">
                   <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
-                  <div class="address__text">+7 (495) 771 6652</div></a><a class="address__item" href="mailto:editor_site@mirq.ru">
+                  <div class="address__text">+7 (495) 771 6652</div></a><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
                   <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
                   <div class="address__text">editor_site@mirq.ru</div></a>
                 <div class="address__item">

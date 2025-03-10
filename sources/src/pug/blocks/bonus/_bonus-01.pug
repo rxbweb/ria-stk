@@ -1,0 +1,89 @@
+include ../../mixins/_mixins
+
+-
+   const bonusList = [
+      {
+         name: 'Доступ к архиву',
+         icon: 'icon-star'
+      },
+      {
+         name: 'Реклама вашей компании',
+         text: 'Копите баллы за подписку и оплачивайте ими рекламу',
+         icon: 'icon-star',
+      },
+      {
+         name: 'Доступ к электронной библиотеке',
+         icon: 'icon-star'
+      },
+      {
+         name: 'Доступ к видеоархиву',
+         text: 'Доступ к видеоархиву прошедших семинаров, конференций, а также к презентациям ведущих специалистов отрасли.',
+         icon: 'icon-star'
+      },
+      {
+         name: '«Практика аудита»',
+         text: 'Сборник электронных материалов. Сборник состоит из вопросов, присланных читателями, о ситуациях, возникающих в ходе проведения аудитов на предприятиях, и ответов на них компетентных специалистов. ',
+         icon: 'icon-gift'
+      },
+      {
+         name: 'коллекция методических материалов \n по программе «20 ключей»',
+         icon: 'icon-gift'
+      },
+      {
+         name: '«Основы стандартизации», учебное пособие',
+         icon: 'icon-gift'
+      },
+      {
+         name: 'дайджест «Безопасное цифровое производство 2019»',
+         icon: 'icon-gift'
+      },
+      {
+         name: 'Возможность напрямую задать вопрос эксперту',
+         icon: 'icon-star'
+      },
+      {
+         name: 'Персональная рабочая тетрадь',
+         text: 'Персональная рабочая тетрадь сотрудника производственной компании.',
+         icon: 'icon-star'
+      },
+      {
+         name: 'Льготное посещение мероприятий РИА «Стандарты \n и качество»',
+         icon: 'icon-star'
+      },
+   ]
+
+section.section.section--bonus
+   .section__wrapper.container
+      .section__content
+         .bonus
+            .bonus__main
+               .bonus__info
+                  h2.bonus__title Бонусы
+                  .bonus__text
+                     p Участником программы лояльности РИА «Стандарты и качество» — (далее, Программа лояльности) может стать любой подписчик РИА «Стандарты и качество».
+                     p Для доступа к Программе лояльности необходимо оформить подписку на любое периодическое издание ООО «РИА «Стандарты и качество» один из периодов по вашему выбору: январь — декабрь, январь — июнь или июль — декабрь.
+                     p Доступ к программе лояльности предоставляется в личном кабинете на сайте www.ria-stk.ru
+               .bonus__content
+                  .bonus__content-header
+                     p.bonus__content-name Расшифровка символов
+                     .bonus__content-labels
+                        .bonus__content-label
+                           .badge
+                              +svg('icon-star', '', 26, 26)
+                           span Доступ
+                        .bonus__content-label
+                           .badge
+                              +svg('icon-gift', '', 26, 26)
+                           span Подарок
+                  ol.bonus__content-list
+                     each item in bonusList
+                        li.bonus__content-item
+                           if item.name || item.text
+                              .bonus__content-info
+                                 if item.name
+                                    h3.bonus__content-name= item.name
+                                 if item.text
+                                    p= item.text
+                           if item.icon
+                              .badge
+                                 +svg(item.icon, '', 26, 26)

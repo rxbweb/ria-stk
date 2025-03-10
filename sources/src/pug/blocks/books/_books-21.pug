@@ -1,0 +1,73 @@
+include ../../mixins/_mixins
+
+-
+   const books21 = [
+      {
+         img: 'images/books/books-54.jpg',
+         tags: [
+            'Выгода 23 880,00 руб.',
+         ],
+         title: 'Комплект журналов «Стандарты и качество» и Business Excellence',
+         price: '71 400,00 руб.',
+         priceOld: '95 280,00 руб.'
+      },
+      {
+         img: 'images/books/books-55.jpg',
+         tags: [
+            'Выгода 16 680,00 руб.',
+         ],
+         title: 'Журнал «Методы менеджмента качества»',
+         price: '49 800,00 руб.',
+         priceOld: '66 480,00 руб.'
+      },
+      {
+         img: 'images/books/books-56.jpg',
+         tags: [
+            'Выгода 13 800,00 руб.',
+         ],
+         title: 'Журнал «Контроль качества продукции»',
+         price: '44 880,00 руб.',
+         priceOld: '58 680,00 руб.'
+      },
+      {
+         img: 'images/books/books-54.jpg',
+         tags: [
+            'Выгода 23 880,00 руб.',
+         ],
+         title: 'Комплект журналов «Стандарты и качество» и Business Excellence',
+         price: '71 400,00 руб.',
+         priceOld: '95 280,00 руб.'
+      },
+   ]
+
+
+section.section
+   .section__wrapper.container
+      .section__content
+         .books
+            .books__inner
+               .books__section
+                  .books__header
+                     h2.books__heading В акции участвуют
+                  .books__content
+                     ul.books__list
+                        each book in books21
+                           li.books__item
+                              .books__card
+                                 .books__box
+                                    .books__img
+                                       +picture(book.img, false, book.title, 380, 380)
+                                 .books__info
+                                    if book.tags
+                                       .books__tags
+                                          each tag in book.tags
+                                             .books__tags-item= tag
+                                    h3.books__name= book.title
+                                    .books__bottom
+                                       if book.price || book.oldPrice
+                                          .books__cost
+                                             p.books__price= book.price
+                                             p.books__price.books__price--old= book.priceOld
+                                       .books__manage
+                                          +button-icon('link', 'В корзину', 'button--slim', 'icon-cart')
+                                          +button-outline('link', 'Купить в 1 клик')

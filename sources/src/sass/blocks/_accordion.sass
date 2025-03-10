@@ -1,6 +1,6 @@
 .accordion
    &__inner
-      @include margin-bottom(--gap-2)
+      @include margin-bottom(var(--gap-2))
    &__row
       display: flex
       gap: var(--gap)
@@ -130,6 +130,10 @@
    &__text
       @extend .fs-18
       color: var(--black)
+   &__bottom
+      display: flex
+      flex-direction: column
+      align-items: center
    &--secondary
       .accordion
          &__button
@@ -159,6 +163,7 @@
             padding: var(--accordion-padding) 0
             &-title
                @include fluidFontSize(16px, 24px, 360px, 1920px, 16px)
+               letter-spacing: var(--letter-spacing)
          &__content
             padding-bottom: var(--accordion-padding)
    @include xl

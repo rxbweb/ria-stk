@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Консалтинг</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/android-chrome-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="yandex-tableau-widget" href="images/favicons/yandex-browser-manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__container container">
+          <div class="header__top"><a class="header__logo" href="/"><img class="header__logo-main" src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img class="header__logo-vok" src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
+            <div class="header__manage">
+              <div class="header__search search">
+                <button class="search__button" aria-label="кнопка поиска">
+                  <svg width="26" height="26">
+                    <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                  </svg>
+                </button>
+                <input class="search__input" type="text" placeholder="Искать....">
+                <div class="search__select">
+                      <div class="select">
+                        <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                              <svg class="svg-icon-arrow-down" width="16" height="16">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                              </svg>
+                        </button>
+                        <div class="select__list">
+                          <button class="select__item is-active">Везде</button>
+                          <button class="select__item">По журналам</button>
+                          <button class="select__item">По книгам</button>
+                          <button class="select__item">По статьям</button>
+                          <button class="select__item">По новостям</button>
+                          <button class="select__item">По мероприятиям</button>
+                        </div>
+                      </div>
+                </div>
+              </div>
+                  <div class="select select--lang">
+                    <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                          <svg class="svg-icon-arrow-down" width="16" height="16">
+                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                          </svg>
+                    </button>
+                    <div class="select__list">
+                      <button class="select__item is-active">RU</button>
+                      <button class="select__item">EN</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="header__socials socials">
+              <div class="socials__list socials__list--first"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
+              <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+            </div>
+            <div class="header__controls">
+              <div class="header__basket"><a class="header__button" href="#">
+                      <svg class="svg-icon-cart" width="22" height="22">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                      </svg></a>
+                <div class="header__basket-amount">99</div>
+              </div><a class="header__favorite" href="#">
+                    <svg class="svg-icon-heart" width="26" height="26">
+                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                    </svg></a>
+              <div class="header__login">
+                <div class="header__login-btn">
+                      <svg class="svg-icon-user" width="20" height="20">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-user"></use>
+                      </svg><span class="header__login-text">Войти</span>
+                </div>
+              </div><a class="header__toggle" href="#" aria-label="открыть меню">
+                <div class="header__toggle-icon"><span></span></div></a>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="is-icon" href="#">
+                    <svg width="26" height="26">
+                      <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
+                    </svg><span>Подписка</span></a></li>
+                <li class="header__nav-item"><a href="#">Журналы</a></li>
+                <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
+                <li class="header__nav-item"><a href="#">Электронная библиотека</a></li>
+                <li class="header__nav-item"><a href="#">Абонентский доступ</a></li>
+                <li class="header__nav-item"><a href="#">Услуги</a></li>
+                <li class="header__nav-item"><a href="#">Мероприятия</a></li>
+                <li class="header__nav-item"><a href="#">О нас</a></li>
+                <li class="header__nav-item"><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <button class="header__burger" aria-label="открыть дополнительное меню"><span></span><span></span><span></span></button>
+          </div>
+          <div class="header__box">
+            <ul class="header__box-nav"></ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="menu">
+      <div class="menu__inner">
+        <div class="menu__container container">
+          <div class="menu__manage">
+            <div class="menu__search search">
+              <button class="search__button" aria-label="кнопка поиска">
+                <svg width="26" height="26">
+                  <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                </svg>
+              </button>
+              <input class="search__input" type="text" placeholder="Искать....">
+              <div class="search__select">
+                    <div class="select">
+                      <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                            <svg class="svg-icon-arrow-down" width="16" height="16">
+                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                            </svg>
+                      </button>
+                      <div class="select__list">
+                        <button class="select__item is-active">Везде</button>
+                        <button class="select__item">По журналам</button>
+                        <button class="select__item">По книгам</button>
+                        <button class="select__item">По статьям</button>
+                        <button class="select__item">По новостям</button>
+                        <button class="select__item">По мероприятиям</button>
+                      </div>
+                    </div>
+              </div>
+            </div>
+                <div class="select select--lang">
+                  <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                        <svg class="svg-icon-arrow-down" width="16" height="16">
+                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                        </svg>
+                  </button>
+                  <div class="select__list">
+                    <button class="select__item is-active">RU</button>
+                    <button class="select__item">EN</button>
+                  </div>
+                </div>
+          </div>
+          <nav class="menu__nav">
+            <ul class="menu__nav-list">
+              <li><a class="is-icon" href="#">
+                  <svg width="22" height="22">
+                    <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
+                  </svg><span>Подписка</span></a></li>
+              <li><a href="#">Журналы</a></li>
+              <li><a href="#">Спецвыпуски</a></li>
+              <li><a href="#">Электронная библиотека</a></li>
+              <li><a href="#">Абонементный доступ</a></li>
+              <li><a href="#">Услуги</a></li>
+              <li><a href="#">Мероприятия</a></li>
+              <li><a href="#">О нас</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="menu__logo"><img src="images/icons/vok.png" alt="вок" width="48" height="48"></div>
+          <div class="menu__socials socials">
+            <div class="socials__list"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
+            <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <section class="section section--hero section--padding-none section--margin-bottom">
+        <div class="section__wrapper">
+          <div class="section__content">
+            <div class="hero">
+              <div class="bg-image"><img src="images/hero/hero-bg.jpg" alt="фоновая картинка" width="1920" height="750"></div>
+              <div class="hero__inner container">
+                      <div class="breadcrumbs">
+                        <div class="breadcrumbs__inner container">
+                          <div class="breadcrumbs__list"><a href="#">Главная</a><span>Консалтинг</span>
+                          </div>
+                        </div>
+                      </div>
+                <div class="hero__box">
+                  <form class="hero__form form" action="#" data-validate-form>
+                    <div class="form__header">
+                      <h2 class="form__title">Консалтинг</h2>
+                      <p class="form__text">Наши эксперты проведут консультации по широкому кругу вопросов в сфере технического регулирования, стандартизации и управления качеством. Помогут разобраться, как оптимизировать бизнес-процессы и сократить издержки компании.</p>
+                    </div>
+                    <div class="form__main">
+                      <div class="form__top">
+                        <div class="form__box">
+                          <label class="form__label">
+                            <input class="form__input" type="text" placeholder="ФИО">
+                          </label>
+                          <label class="form__label">
+                            <input class="form__input" type="email" placeholder="E-mail" name="form-email" required><span class="form__error">Обязательное поле</span>
+                          </label>
+                          <label class="form__label">
+                            <input class="form__input" type="tel" placeholder="Телефон" name="form-email" required><span class="form__error">Обязательное поле</span>
+                          </label>
+                          <label class="form__label">
+                            <input class="form__input" type="text" placeholder="Компания">
+                          </label>
+                          <label class="form__label">
+                            <input class="form__input" type="text" placeholder="Сообщения">
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form__middle">
+                        <div class="agree">
+                          <label class="agree__label">
+                            <input type="checkbox" name="form-agree" required><span class="agree__checkbox"></span><span class="agree__text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
+                          </label><span class="agree__error">Обязательное поле</span>
+                        </div>
+                      </div>
+                      <div class="form__bottom">
+                              <button class="button form__button"><span>Отправить</span>
+                              </button>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="hero__picture">
+                          <picture>
+                            <source srcset="images/hero/hero-consulting-mob.webp" media="(max-width: 575px)" type="image/webp">
+                            <source srcset="images/hero/hero-consulting-mob.jpg" media="(max-width: 575px)">
+                            <source srcset="images/hero/hero-consulting.webp"><img src="images/hero/hero-consulting.jpg" alt="картинка" width="709" height="690">
+                          </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--listing">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="listing">
+              <div class="listing__inner">
+                <div class="listing__row">
+                  <div class="listing__aside">
+                    <h2 class="listing__title">Сервисы 
+                      партнеров
+                    </h2>
+                  </div>
+                  <div class="listing__content">
+                    <ol class="listing__list">
+                      <li class="listing__item"><a class="listing__box" href="#">
+                          <h3 class="listing__name">Консалтинг</h3>
+                          <div class="listing__img">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-13.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-13.jpg" alt="картинка" width="350" height="222">
+                                  </picture>
+                          </div></a></li>
+                      <li class="listing__item"><a class="listing__box" href="#">
+                          <h3 class="listing__name">Обучение</h3>
+                          <div class="listing__img">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-14.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-14.jpg" alt="картинка" width="350" height="222">
+                                  </picture>
+                          </div></a></li>
+                      <li class="listing__item"><a class="listing__box" href="#">
+                          <h3 class="listing__name">Оценка соответствия</h3>
+                          <div class="listing__img">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/listing/listing-15.webp"><img src="images/icons/empty.png" data-src="images/listing/listing-15.jpg" alt="картинка" width="350" height="222">
+                                  </picture>
+                          </div></a></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--listing">
+        <div class="section__wrapper container">
+          <div class="section__header">
+            <div class="section__header-row">
+              <h2 class="section__header-title">Преимущества подписки</h2><a class="button section__header-button" href="#"><span>Подписка</span><span class="button__icon">
+                        <svg class="svg-icon-arrow-right" width="17" height="17">
+                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                        </svg></span></a>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="listing">
+              <div class="listing__inner">
+                <ul class="listing__list listing__list--4 listing__list--default">
+                  <li class="listing__item">
+                    <div class="listing__box">
+                      <div class="badge badge--large">
+                              <svg class="svg-badge-10" width="40" height="40">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-badge-10"></use>
+                              </svg>
+                      </div>
+                      <h3 class="listing__name">Регулярное поступление актуальной информации</h3>
+                    </div>
+                  </li>
+                  <li class="listing__item">
+                    <div class="listing__box">
+                      <div class="badge badge--large">
+                              <svg class="svg-badge-11" width="40" height="40">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-badge-11"></use>
+                              </svg>
+                      </div>
+                      <h3 class="listing__name">Постоянный и непрерывный процесс совершенствования компетенций</h3>
+                    </div>
+                  </li>
+                  <li class="listing__item">
+                    <div class="listing__box">
+                      <div class="badge badge--large">
+                              <svg class="svg-badge-12" width="40" height="40">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-badge-12"></use>
+                              </svg>
+                      </div>
+                      <h3 class="listing__name">Формирование корпоративной базы знаний</h3>
+                    </div>
+                  </li>
+                  <li class="listing__item">
+                    <div class="listing__box">
+                      <div class="badge badge--large">
+                              <svg class="svg-badge-13" width="40" height="40">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-badge-13"></use>
+                              </svg>
+                      </div>
+                      <h3 class="listing__name">Доступ к системе привилегий</h3>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="section__footer"><a class="button" href="#"><span>Подписка</span><span class="button__icon">
+                      <svg class="svg-icon-arrow-right" width="17" height="17">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                      </svg></span></a>
+          </div>
+        </div>
+      </section>
+      <section class="section section--details">
+        <div class="section__wrapper container">
+          <div class="section__header">
+            <div class="section__header-row">
+              <h2 class="section__header-title">Ближайшие мероприятия</h2><a class="button section__header-button" href="#"><span>Все мероприятия</span><span class="button__icon">
+                        <svg class="svg-icon-arrow-right" width="17" height="17">
+                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                        </svg></span></a>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="details">
+              <div class="details__inner">
+                <ul class="details__list">
+                  <li class="details__list-item"><a class="details__list-box" href="#">
+                      <div class="details__list-img">
+                              <picture class="lazyload">
+                                <source srcset="images/icons/empty.png" data-srcset="images/details/details-events-01.webp"><img src="images/icons/empty.png" data-src="images/details/details-events-01.jpg" alt="Институт технического регулирования, стандартизации и сертификации" width="520" height="292">
+                              </picture>
+                      </div>
+                      <div class="details__list-info">
+                        <p class="details__list-description">13.01.2025 — 
+ 14.01.2025</p>
+                        <h3 class="details__list-title">Институт технического регулирования, стандартизации и сертификации</h3>
+                        <div class="details__list-text">
+                          <p>Институт технического регулирования, стандартизации и сертификации</p>
+                        </div>
+                        <div class="details__list-tags tags">
+                          <div class="tags__button">Мероприятие</div>
+                        </div>
+                              <div class="button button--outline details__list-button"><span>Подробнее</span><span class="button__icon">
+                                  <svg class="svg-icon-arrow-right" width="17" height="17">
+                                    <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                  </svg></span>
+                              </div>
+                      </div></a></li>
+                  <li class="details__list-item"><a class="details__list-box" href="#">
+                      <div class="details__list-img">
+                              <picture class="lazyload">
+                                <source srcset="images/icons/empty.png" data-srcset="images/details/details-events-02.webp"><img src="images/icons/empty.png" data-src="images/details/details-events-02.jpg" alt="VIII Всероссийская научно-практическая конференция «Практика разработки и внедрения системы менеджмента качества в медицинской организации»" width="520" height="292">
+                              </picture>
+                      </div>
+                      <div class="details__list-info">
+                        <p class="details__list-description">18-19 
+ сентября 2024</p>
+                        <h3 class="details__list-title">VIII Всероссийская научно-практическая конференция «Практика разработки и внедрения системы менеджмента качества в медицинской организации»</h3>
+                        <div class="details__list-text">
+                          <p>Место проведения: город Красноярск</p>
+                        </div>
+                        <div class="details__list-tags tags">
+                          <div class="tags__button">Мероприятие</div>
+                        </div>
+                              <div class="button button--outline details__list-button"><span>Подробнее</span><span class="button__icon">
+                                  <svg class="svg-icon-arrow-right" width="17" height="17">
+                                    <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                  </svg></span>
+                              </div>
+                      </div></a></li>
+                  <li class="details__list-item"><a class="details__list-box" href="#">
+                      <div class="details__list-img">
+                              <picture class="lazyload">
+                                <source srcset="images/icons/empty.png" data-srcset="images/details/details-events-03.webp"><img src="images/icons/empty.png" data-src="images/details/details-events-03.jpg" alt="III Научно-практическая конференция 
+ «Территория энергетического обмена»" width="520" height="292">
+                              </picture>
+                      </div>
+                      <div class="details__list-info">
+                        <p class="details__list-description">25 сентября 2024</p>
+                        <h3 class="details__list-title">III Научно-практическая конференция 
+ «Территория энергетического обмена»</h3>
+                        <div class="details__list-text">
+                          <p>Место проведения: город Москва</p>
+                        </div>
+                        <div class="details__list-tags tags">
+                          <div class="tags__button">Мероприятие</div>
+                        </div>
+                              <div class="button button--outline details__list-button"><span>Подробнее</span><span class="button__icon">
+                                  <svg class="svg-icon-arrow-right" width="17" height="17">
+                                    <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                  </svg></span>
+                              </div>
+                      </div></a></li>
+                  <li class="details__list-item"><a class="details__list-box" href="#">
+                      <div class="details__list-img">
+                              <picture class="lazyload">
+                                <source srcset="images/icons/empty.png" data-srcset="images/details/details-events-04.webp"><img src="images/icons/empty.png" data-src="images/details/details-events-04.jpg" alt="Российский диагностический саммит" width="520" height="292">
+                              </picture>
+                      </div>
+                      <div class="details__list-info">
+                        <p class="details__list-description">02-04 
+ октября 2024</p>
+                        <h3 class="details__list-title">Российский диагностический саммит</h3>
+                        <div class="details__list-text">
+                          <p>Место проведения: город Москва</p>
+                        </div>
+                        <div class="details__list-tags tags">
+                          <div class="tags__button">Мероприятие</div>
+                        </div>
+                              <div class="button button--outline details__list-button"><span>Подробнее</span><span class="button__icon">
+                                  <svg class="svg-icon-arrow-right" width="17" height="17">
+                                    <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                  </svg></span>
+                              </div>
+                      </div></a></li>
+                </ul>
+                <div class="pagination">
+                  <div class="pagination__row">
+                    <button class="pagination__button">
+                                      <svg class="svg-icon-arrow-right-large" width="24" height="24">
+                                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right-large"></use>
+                                      </svg>
+                    </button>
+                    <div class="pagination__list"><a class="pagination__page is-active" href="#">1</a><a class="pagination__page" href="#">2</a><a class="pagination__page" href="#">3</a><a class="pagination__page" href="#">...</a><a class="pagination__page" href="#">999</a>
+                    </div>
+                    <button class="pagination__button">
+                                      <svg class="svg-icon-arrow-right-large" width="24" height="24">
+                                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right-large"></use>
+                                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="books">
+              <div class="books__inner">
+                <div class="books__section">
+                  <div class="books__header">
+                    <h2 class="books__title">рекомендации</h2>
+                  </div>
+                  <div class="books__content">
+                          <ul class="books__list">
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg class="svg-icon-heart" width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
+                                  <div class="books__img">
+                                          <picture class="lazyload">
+                                            <source srcset="images/icons/empty.png" data-srcset="images/books/books-18.webp"><img src="images/icons/empty.png" data-src="images/books/books-18.jpg" alt="Выбор программного обеспечения для СМК" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <h3 class="books__name">Выбор программного обеспечения для СМК</h3>
+                                  <div class="books__bottom">
+                                    <div class="books__manage"><a class="button button--outline" href="#"><span>Читать статью</span><span class="button__icon">
+                                                <svg class="svg-icon-arrow-right" width="17" height="17">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg class="svg-icon-heart" width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
+                                  <div class="books__img">
+                                          <picture class="lazyload">
+                                            <source srcset="images/icons/empty.png" data-srcset="images/books/books-19.webp"><img src="images/icons/empty.png" data-src="images/books/books-19.jpg" alt="Практическое применение АИСМК для проведения анализа измерительных систем (MSA)" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <h3 class="books__name">Практическое применение АИСМК для проведения анализа измерительных систем (MSA)</h3>
+                                  <div class="books__bottom">
+                                    <div class="books__manage"><a class="button button--outline" href="#"><span>Читать статью</span><span class="button__icon">
+                                                <svg class="svg-icon-arrow-right" width="17" height="17">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg class="svg-icon-heart" width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
+                                  <div class="books__img">
+                                          <picture class="lazyload">
+                                            <source srcset="images/icons/empty.png" data-srcset="images/books/books-20.webp"><img src="images/icons/empty.png" data-src="images/books/books-20.jpg" alt="Цифровизация аудита и наблюдений систем менеджмента" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <h3 class="books__name">Цифровизация аудита и наблюдений систем менеджмента</h3>
+                                  <div class="books__bottom">
+                                    <div class="books__manage"><a class="button button--outline" href="#"><span>Читать статью</span><span class="button__icon">
+                                                <svg class="svg-icon-arrow-right" width="17" height="17">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="books__item">
+                              <div class="books__card">
+                                <div class="books__box">
+                                        <button class="favorite-button" aria-label="добавить этот продукт в избранное">
+                                                <svg class="svg-icon-heart" width="32" height="30">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                                                </svg>
+                                        </button>
+                                  <div class="books__img">
+                                          <picture class="lazyload">
+                                            <source srcset="images/icons/empty.png" data-srcset="images/books/books-21.webp"><img src="images/icons/empty.png" data-src="images/books/books-21.jpg" alt="Российские методики и подходы к работе с системами менеджмента имеют свои преимущества" width="380" height="380">
+                                          </picture>
+                                  </div>
+                                </div>
+                                <div class="books__info">
+                                  <h3 class="books__name">Российские методики и подходы к работе с системами менеджмента имеют свои преимущества</h3>
+                                  <div class="books__bottom">
+                                    <div class="books__manage"><a class="button button--outline" href="#"><span>Читать статью</span><span class="button__icon">
+                                                <svg class="svg-icon-arrow-right" width="17" height="17">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--newspaper">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="newspaper">
+              <div class="bg-image">
+                      <picture class="lazyload">
+                        <source srcset="images/icons/empty.png" data-srcset="images/newspaper/newspaper-bg-mob.webp" media="(max-width: 575px)" type="image/webp">
+                        <source srcset="images/icons/empty.png" data-srcset="images/newspaper/newspaper-bg-mob.jpg" media="(max-width: 575px)">
+                        <source srcset="images/icons/empty.png" data-srcset="images/newspaper/newspaper-bg.webp"><img src="images/icons/empty.png" data-src="images/newspaper/newspaper-bg.jpg" alt="фоновая картинка" width="1640" height="550">
+                      </picture>
+              </div>
+              <div class="newspaper__inner">
+                <div class="newspaper__row">
+                  <div class="newspaper__info">
+                    <h2 class="newspaper__title">Газета Quality News — качественные новости каждый четверг</h2><a class="button" href="#"><span>Подробнее</span><span class="button__icon">
+                              <svg class="svg-icon-arrow-right" width="17" height="17">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                              </svg></span></a>
+                  </div>
+                  <div class="newspaper__img">
+                          <picture class="lazyload">
+                            <source srcset="images/icons/empty.png" data-srcset="images/newspaper/newspaper-mob.webp" media="(max-width: 575px)" type="image/webp">
+                            <source srcset="images/icons/empty.png" data-srcset="images/newspaper/newspaper-mob.png" media="(max-width: 575px)">
+                            <source srcset="images/icons/empty.png" data-srcset="images/newspaper/newspaper.webp"><img src="images/icons/empty.png" data-src="images/newspaper/newspaper.png" alt="Газета Quality News" width="700" height="550">
+                          </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--contacts">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="contacts">
+              <div class="contacts__inner">
+                <div class="contacts__row">
+                  <div class="contacts__section">
+                    <h2 class="contacts__title">Контакты</h2>
+                    <address class="contacts__address address">
+                      <div class="address__list address__list--second">
+                        <div class="address__item">
+                          <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
+                        </div><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
+                          <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">editor_site@mirq.ru</div></a><a class="address__item" href="tel:+74957716652">
+                          <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">+7 (495) 771 6652</div></a>
+                      </div>
+                    </address>
+                    <div class="contacts__map map"></div>
+                  </div>
+                  <div class="contacts__right">
+                    <form class="contacts__form form" action="#" data-validate-form>
+                      <div class="form__header">
+                        <h2 class="form__title">Остались вопросы?</h2>
+                        <p class="form__text">Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.</p>
+                      </div>
+                      <div class="form__main">
+                        <div class="form__top">
+                          <div class="form__box">
+                            <label class="form__label form__label--half">
+                              <input class="form__input" type="text" placeholder="Имя" name="form-name" required><span class="form__error">Обязательное поле</span>
+                            </label>
+                            <label class="form__label form__label--half">
+                              <input class="form__input" type="text" placeholder="Фамилия">
+                            </label>
+                            <label class="form__label">
+                              <input class="form__input" type="email" placeholder="E-mail" name="form-email" required><span class="form__error">Обязательное поле</span>
+                            </label>
+                            <label class="form__label">
+                              <textarea class="form__textarea" placeholder="Текст сообщения"></textarea>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__middle">
+                          <div class="agree">
+                            <label class="agree__label">
+                              <input type="checkbox" name="form-agree" required><span class="agree__checkbox"></span><span class="agree__text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
+                            </label><span class="agree__error">Обязательное поле</span>
+                          </div>
+                        </div>
+                        <div class="form__bottom">
+                                <button class="button form__button"><span>Подписаться</span>
+                                </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__menu container">
+            <div class="footer__left"><a class="footer__logo" href="#"><img src="images/icons/logo.svg" alt="СК — стандарты и качество"></a>
+              <div class="footer__copy footer__copy--desktop">
+                <div>2000—2024 © РИА «Стандарты и качество»: cтандартизация, метрология, менеджмент качества.</div>
+                <div>Все права защищены и охраняются законом.</div>
+              </div>
+              <div class="footer__links"><a href="#">Карта сайта</a></div>
+            </div>
+            <nav class="footer__nav">
+              <div class="footer__nav-list">
+                <div class="footer__nav-col"><a href="#">Журналы</a><a href="#">Подписка</a><a href="#">Электронная библиотека</a><a href="#">Абонементный доступ</a><a href="#">Quality News</a></div>
+                <div class="footer__nav-col"><a href="#">О нас</a><a href="#">Услуги</a><a href="#">Мероприятия</a><a href="#">Редакционная политика</a><a href="#">Авторам</a></div>
+              </div>
+            </nav>
+            <address class="footer__address address">
+              <div class="address__list"><a class="address__item" href="tel:+74957716652">
+                  <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">+7 (495) 771 6652</div></a><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
+                  <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">editor_site@mirq.ru</div></a>
+                <div class="address__item">
+                  <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
+                </div>
+                <div class="address__item">
+                  <div class="address__icon"><img src="images/address/address-time.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">
+                    <p>Пн-Чт 9:00-18:00 </p>
+                    <p>Пт 9:00-16:45</p>
+                    <p>Сб-Вс выходные</p>
+                  </div>
+                </div>
+              </div>
+            </address>
+            <div class="footer__copy footer__copy--mob">
+              <div>2000—2024 © РИА «Стандарты и качество»: cтандартизация, метрология, менеджмент качества.</div>
+              <div>Все права защищены и охраняются законом.</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__legal container"><a href="#">Права использования электронных журналов</a><a href="#">Правила пользования сайтом</a><a class="footer__legal-mob" href="#">Карта сайта</a><a href="#">Правила обработки и хранения персональных данных</a><a href="#">Соглашение пользователя</a><a href="#"><span>Разработка сайта</span><img src="images/icons/completo.svg" alt="completo" width="63" height="23"></a></div>
+        </div>
+      </div>
+    </footer><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=5e6f3718-a525-41b0-832c-11d7f6b0f8a4"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

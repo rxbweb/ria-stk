@@ -44,41 +44,57 @@
                 </button>
                 <input class="search__input" type="text" placeholder="Искать....">
                 <div class="search__select">
-                  <div class="select">
-                    <button class="select__active is-selected"><span>Везде</span></button>
+                      <div class="select">
+                        <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                              <svg class="svg-icon-arrow-down" width="16" height="16">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                              </svg>
+                        </button>
+                        <div class="select__list">
+                          <button class="select__item is-active">Везде</button>
+                          <button class="select__item">По журналам</button>
+                          <button class="select__item">По книгам</button>
+                          <button class="select__item">По статьям</button>
+                          <button class="select__item">По новостям</button>
+                          <button class="select__item">По мероприятиям</button>
+                        </div>
+                      </div>
+                </div>
+              </div>
+                  <div class="select select--lang">
+                    <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                          <svg class="svg-icon-arrow-down" width="16" height="16">
+                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                          </svg>
+                    </button>
                     <div class="select__list">
-                      <button class="select__item is-active">Везде</button>
-                      <button class="select__item">По журналам</button>
-                      <button class="select__item">По книгам</button>
-                      <button class="select__item">По статьям</button>
-                      <button class="select__item">По новостям</button>
-                      <button class="select__item">По мероприятиям</button>
+                      <button class="select__item is-active">RU</button>
+                      <button class="select__item">EN</button>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="select select--lang">
-                <div class="select__active is-selected"><span>RU</span></div>
-                <div class="select__list">
-                  <button class="select__item is-active">RU</button>
-                  <button class="select__item">EN</button>
-                </div>
-              </div>
             </div>
             <div class="header__socials socials">
               <div class="socials__list socials__list--first"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
-              <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+              <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
             </div>
             <div class="header__controls">
-              <div class="header__basket"><a class="button button--img" href="#">
-                  <svg width="22" height="22">
-                    <use href="images/sprites/main.stack.svg#svg-icon-cart"></use>
-                  </svg></a>
+              <div class="header__basket"><a class="header__button" href="#">
+                      <svg class="svg-icon-cart" width="22" height="22">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                      </svg></a>
                 <div class="header__basket-amount">99</div>
-              </div><a class="header__favorite button button--img" href="#"><i class="icon icon-heart"></i></a><a class="header__login button button--white" href="#">
-                <svg width="20" height="20">
-                  <use href="images/sprites/main.stack.svg#svg-icon-user"></use>
-                </svg><span>Войти</span></a><a class="header__toggle button" href="#"><i class="icon"><span></span></i></a>
+              </div><a class="header__favorite" href="#">
+                    <svg class="svg-icon-heart" width="26" height="26">
+                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                    </svg></a>
+              <div class="header__login">
+                <div class="header__login-btn">
+                      <svg class="svg-icon-user" width="20" height="20">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-user"></use>
+                      </svg><span class="header__login-text">Войти</span>
+                </div>
+              </div><a class="header__toggle" href="#" aria-label="открыть меню">
+                <div class="header__toggle-icon"><span></span></div></a>
             </div>
           </div>
           <div class="header__bottom">
@@ -118,26 +134,34 @@
               </button>
               <input class="search__input" type="text" placeholder="Искать....">
               <div class="search__select">
-                <div class="select">
-                  <button class="select__active">Везде</button>
+                    <div class="select">
+                      <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                            <svg class="svg-icon-arrow-down" width="16" height="16">
+                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                            </svg>
+                      </button>
+                      <div class="select__list">
+                        <button class="select__item is-active">Везде</button>
+                        <button class="select__item">По журналам</button>
+                        <button class="select__item">По книгам</button>
+                        <button class="select__item">По статьям</button>
+                        <button class="select__item">По новостям</button>
+                        <button class="select__item">По мероприятиям</button>
+                      </div>
+                    </div>
+              </div>
+            </div>
+                <div class="select select--lang">
+                  <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                        <svg class="svg-icon-arrow-down" width="16" height="16">
+                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                        </svg>
+                  </button>
                   <div class="select__list">
-                    <button class="select__item is-active">Везде</button>
-                    <button class="select__item">По журналам</button>
-                    <button class="select__item">По книгам</button>
-                    <button class="select__item">По статьям</button>
-                    <button class="select__item">По новостям</button>
-                    <button class="select__item">По мероприятиям</button>
+                    <button class="select__item is-active">RU</button>
+                    <button class="select__item">EN</button>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="select select--lang">
-              <div class="select__active"><span>RU</span></div>
-              <div class="select__list">
-                <button class="select__item is-active">RU</button>
-                <button class="select__item">EN</button>
-              </div>
-            </div>
           </div>
           <nav class="menu__nav">
             <ul class="menu__nav-list">
@@ -164,12 +188,12 @@
       </div>
     </div>
     <main class="main">
-      <div class="breadcrumbs">
-        <div class="breadcrumbs__inner container">
-          <div class="breadcrumbs__list"><a href="#">Главная</a><span>Авторизация</span>
+          <div class="breadcrumbs">
+            <div class="breadcrumbs__inner container">
+              <div class="breadcrumbs__list"><a href="#">Главная</a><span>Авторизация</span>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
       <section class="section section--account">
         <div class="section__wrapper container">
           <div class="section__content">
@@ -178,7 +202,7 @@
                 <div class="account__form">
                   <div class="webform">
                     <h2 class="webform__title">Регистрация</h2>
-                    <form class="webform__form webform__form--narrow" action="#">
+                    <form class="webform__form webform__form--narrow" action="#" data-validate-form>
                       <div class="webform__body">
                         <div class="webform__top">
                           <div class="webform__accounts"><a class="webform__accounts-btn" href="#" aria-label="vkontakte"><img src="images/icons/vk.svg" alt="vk" width="39" height="23"></a><a class="webform__accounts-btn" href="#" aria-label="yandex"><img src="images/icons/yandex.svg" alt="yandex" width="40" height="40"></a><a class="webform__accounts-btn" href="#" aria-label="gmail"><img src="images/icons/gmail.svg" alt="gmail" width="34" height="36"></a></div>
@@ -186,28 +210,41 @@
                         </div>
                         <div class="webform__inputs">
                           <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Логин</span><span class="webform__label-error">Обязательное поле</span></span><span class="webform__label-field">
-                              <input class="webform__label-input" type="text" placeholder="Логин"></span><span class="webform__label-row"><span class="webform__label-note">Минимум 3 символа</span></span></label>
+                              <input class="webform__label-input" type="text" placeholder="Логин" name="login" minlength="3" required></span><span class="webform__label-row"><span class="webform__label-note">Минимум 3 символа</span></span></label>
                           <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Email</span><span class="webform__label-error">Обязательное поле</span></span><span class="webform__label-field">
-                              <input class="webform__label-input" type="text" placeholder="Электронная почта"></span></label>
+                              <input class="webform__label-input" type="email" placeholder="Электронная почта" name="email" required></span></label>
                           <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Пароль</span><span class="webform__label-error">Обязательное поле</span></span><span class="webform__label-field webform__label-field--icon">
-                              <input class="webform__label-input" type="password" placeholder="Пароль"><i class="btn btn--eye"></i></span><span class="webform__label-row"><span class="webform__label-note">Минимум 6 символов</span></span></label>
+                              <input class="webform__label-input" type="password" placeholder="Пароль" name="password" minlength="6" required><span class="webform__label-icon webform__label-icon--eye button-eye">
+                                                  <svg class="svg-icon-eye" width="22" height="16">
+                                                    <use xlink:href="images/sprites/main.stack.svg#svg-icon-eye"></use>
+                                                  </svg>
+                                                  <svg class="svg-icon-eye-not" width="24" height="18">
+                                                    <use xlink:href="images/sprites/main.stack.svg#svg-icon-eye-not"></use>
+                                                  </svg></span></span><span class="webform__label-row"><span class="webform__label-note">Минимум 6 символов</span></span></label>
                           <label class="webform__label"><span class="webform__label-row"><span class="webform__label-title">Подтверждение пароля</span><span class="webform__label-error">Обязательное поле</span></span><span class="webform__label-field webform__label-field--icon">
-                              <input class="webform__label-input" type="password" placeholder="Пароль"><i class="btn btn--eye"></i></span></label>
+                              <input class="webform__label-input" type="password" placeholder="Пароль" name="password" required><span class="webform__label-icon webform__label-icon--eye button-eye">
+                                                  <svg class="svg-icon-eye" width="22" height="16">
+                                                    <use xlink:href="images/sprites/main.stack.svg#svg-icon-eye"></use>
+                                                  </svg>
+                                                  <svg class="svg-icon-eye-not" width="24" height="18">
+                                                    <use xlink:href="images/sprites/main.stack.svg#svg-icon-eye-not"></use>
+                                                  </svg></span></span></label>
                         </div>
                         <div class="agree agree--secondary">
                           <label class="agree__label">
                             <input type="checkbox" name="form-agree" required><span class="agree__checkbox"></span><span class="agree__text">Даю согласие на отправку мне издательством РИА СТК электронных рассылок</span>
                           </label>
+                          <div class="agree__error">Обязательное поле</div>
                         </div>
-                              <button class="button button--large"><span>Зарегистрироваться</span>
-                              </button>
+                                          <button class="button button--large"><span>Зарегистрироваться</span>
+                                          </button>
                         <p class="webform__description">Нажимая кнопку, вы принимаете условия <a href="#">политики</a> и <a href="#">пользовательского соглашения</a></p>
                       </div>
                       <div class="webform__bottom">
                         <div class="webform__manage"><span>Уже есть аккаунт?</span><a class="button button--outline" href="#"><span>Войти</span><span class="button__icon">
-                                    <svg width="17" height="17">
-                                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                                    </svg></span></a>
+                                                <svg class="svg-icon-arrow-right" width="17" height="17">
+                                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                                </svg></span></a>
                         </div>
                       </div>
                     </form>
@@ -239,7 +276,7 @@
             <address class="footer__address address">
               <div class="address__list"><a class="address__item" href="tel:+74957716652">
                   <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
-                  <div class="address__text">+7 (495) 771 6652</div></a><a class="address__item" href="mailto:editor_site@mirq.ru">
+                  <div class="address__text">+7 (495) 771 6652</div></a><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
                   <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
                   <div class="address__text">editor_site@mirq.ru</div></a>
                 <div class="address__item">

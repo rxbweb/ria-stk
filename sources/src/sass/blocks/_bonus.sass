@@ -1,0 +1,66 @@
+.bonus
+   &__main
+      display: flex
+      flex-wrap: wrap
+      gap: var(--gap)
+      & > *
+         flex-basis: calc(50% - var(--gap))
+         flex-shrink: 0
+         flex-grow: 1
+   &__info
+      @include margin-bottom(var(--gap-2))
+   &__title
+      @extend .title
+   &__text
+      @extend .fs-20
+      @include margin-bottom(var(--gap-2))
+   &__content
+      @extend .gray-box
+      padding: 25px
+      & > *
+         &:not(:last-child)
+            border-bottom: 1px solid #CDCDCD
+      &-header
+         padding-bottom: 15px
+         display: flex
+         align-items: center
+         justify-content: space-between
+         gap: var(--gap-3)
+      &-labels
+         display: flex
+         flex-wrap: wrap
+         gap: var(--gap-2)
+      &-label
+         @extend .title
+         @extend .title--second
+         padding: 9px 15px
+         display: flex
+         align-items: center
+         gap: 15px
+         border-radius: var(--border-radius)
+         border: 1px solid var(--accent)
+         background: #fff
+      &-list
+         @include ol
+         & > *
+            border-bottom: 1px solid #CDCDCD
+      &-item
+         padding: 15px 0
+         padding-left: 94px
+         display: flex
+         align-items: flex-start
+         gap: var(--gap-2)
+         &::before
+            @extend .title
+            @extend .title--second
+            @extend .title--red
+            width: 50px
+            left: 0
+      &-info
+         @include margin-bottom(5px)
+      &-name
+         @extend .title
+         @extend .title--second
+         white-space: pre-line
+      .badge
+         margin-left: auto

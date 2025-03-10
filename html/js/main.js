@@ -98,7 +98,6 @@ $('.history__swiper').each(function (index, element) {
       clickable: true
     },
     on: {
-      // При изменении активного слайда
       slideChange: function slideChange() {
         syncActiveButton(swiper.activeIndex);
       }
@@ -125,19 +124,11 @@ $('.card__table-swiper').each(function (index, element) {
     }
   });
 });
-
-// Синхронизация кнопок и слайдов
 var dateButtons = document.querySelectorAll(".history__dates-btn");
-
-// Клик на кнопку - смена слайда
 dateButtons.forEach(function (button, index) {
   button.addEventListener("click", function (e) {
     e.preventDefault();
-
-    // Устанавливаем активный слайд
     swiper.slideTo(index);
-
-    // Удаляем класс is-active у всех кнопок и добавляем только нужной
     setActiveButton(index);
   });
 });
@@ -182,24 +173,20 @@ $('.account__tabs-btn').on('click', function (e) {
   $tabsContent.addClass('is-changed');
   $tabItem.addClass('is-active').siblings('[data-tab]').removeClass('is-active');
 });
-
-// Функция обновления активной кнопки при смене слайда
 function syncActiveButton(activeIndex) {
   dateButtons.forEach(function (button) {
     return button.classList.remove("is-active");
-  }); // Удаляем класс у всех
+  });
   if (dateButtons[activeIndex]) {
-    dateButtons[activeIndex].classList.add("is-active"); // Добавляем только нужной
+    dateButtons[activeIndex].classList.add("is-active");
   }
 }
-
-// Установка активной кнопки вручную
 function setActiveButton(index) {
   dateButtons.forEach(function (button) {
     return button.classList.remove("is-active");
-  }); // Удаляем класс у всех
+  });
   if (dateButtons[index]) {
-    dateButtons[index].classList.add("is-active"); // Добавляем только нужной
+    dateButtons[index].classList.add("is-active");
   }
 }
 new Swiper(".hero__slider", {
@@ -225,7 +212,6 @@ document.querySelectorAll(".hero__books-swiper").forEach(function (swiperContain
     loop: true,
     speed: 700,
     centeredSlides: false,
-    // allowTouchMove: false,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false
@@ -336,32 +322,40 @@ $('.books__swiper-slider').each(function (index, element) {
     }
   });
 });
-var isMobile = window.matchMedia("(max-width: 768px)").matches;
-var nums = lozad('[data-nums]', {
-  rootMargin: isMobile ? '-20px 0px' : '-100px 0px',
-  threshold: 0.3,
-  loaded: function loaded(el) {
-    $(el).find('[data-value]').each(function () {
-      var text = $(this).attr('data-value').replace(/\s/g, ''); // Убираем пробелы из атрибута
-
-      $(this).prop('Counter', 0).animate({
+var numbersModule = {
+  isMobile: window.matchMedia("(max-width: 768px)").matches,
+  init: function init() {
+    this.nums = lozad('[data-nums]', {
+      rootMargin: this.getRootMargin(),
+      threshold: 0.3,
+      loaded: this.onLoaded.bind(this)
+    });
+    this.nums.observe();
+  },
+  getRootMargin: function getRootMargin() {
+    return this.isMobile ? '-20px 0px' : '-100px 0px';
+  },
+  onLoaded: function onLoaded(el) {
+    var _this = this;
+    $(el).find('[data-value]').each(function (_, elem) {
+      var text = $(elem).attr('data-value').replace(/\s/g, '');
+      $(elem).prop('Counter', 0).animate({
         Counter: text
       }, {
         duration: 1100,
         easing: 'swing',
-        step: function step(now) {
-          // Форматирование числа с пробелами
-          var formattedNumber = Math.ceil(now).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-          $(this).text(formattedNumber); // Устанавливаем отформатированное значение
-        }
+        step: _this.formatNumber
       });
     });
+  },
+  formatNumber: function formatNumber(now) {
+    var formattedNumber = Math.ceil(now).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    $(this).text(formattedNumber);
   }
-});
-nums.observe();
+};
 var phoneMaskModule = {
   init: function init() {
-    var $phoneElements = $('[data-name="phone"]');
+    var $phoneElements = $('[name="tel"]');
     if ($phoneElements.length === 0) {
       return;
     }
@@ -397,12 +391,10 @@ var mapModule = {
       title: 'Метка 1'
     }];
     if (!markers || markers.length === 0) {
-      console.warn('Объект "markers" не найден или пуст.');
       return;
     }
     mapElements.forEach(function (mapElement, index) {
       if (!mapElement) {
-        console.warn("\u042D\u043B\u0435\u043C\u0435\u043D\u0442 \u043A\u0430\u0440\u0442\u044B \u0441 \u0438\u043D\u0434\u0435\u043A\u0441\u043E\u043C ".concat(index, " \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D."));
         return;
       }
       var map = new ymaps.Map(mapElement, {
@@ -411,7 +403,6 @@ var mapModule = {
       });
       markers.forEach(function (marker, markerIndex) {
         if (!marker.lat || !marker.lon) {
-          console.warn("\u041C\u0430\u0440\u043A\u0435\u0440 \u0441 \u0438\u043D\u0434\u0435\u043A\u0441\u043E\u043C ".concat(markerIndex, " \u0438\u043C\u0435\u0435\u0442 \u043D\u0435\u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u044B\u0435 \u043A\u043E\u043E\u0440\u0434\u0438\u043D\u0430\u0442\u044B."));
           return;
         }
         var placemark = new ymaps.Placemark([marker.lat, marker.lon], {
@@ -426,9 +417,8 @@ var navModule = {
   init: function init() {
     var $navList = $('.header__nav-list');
     var $boxNav = $('.header__box-nav');
-    var $headerBox = $boxNav.closest('.header__box'); // Ищем контейнер header__box
-    var $burger = $('.header__burger'); // Находим кнопку бургер
-
+    var $headerBox = $boxNav.closest('.header__box');
+    var $burger = $('.header__burger');
     if (!$navList.length || !$boxNav.length || !$burger.length) {
       return;
     }
@@ -437,25 +427,19 @@ var navModule = {
     this.headerBox = $headerBox;
     this.burger = $burger;
     $(window).on('resize', this.checkOverflow.bind(this));
-    $burger.on('click', this.toggleBoxActive.bind(this)); // Добавляем обработчик клика по бургеру
-
+    $burger.on('click', this.toggleBoxActive.bind(this));
     this.checkOverflow();
   },
   checkOverflow: function checkOverflow() {
     if (!this.navList.length || !this.boxNav.length) {
       return;
     }
-
-    // Возвращаем все элементы из boxNav обратно в navList
     while (this.boxNav[0].firstChild) {
       this.navList.append(this.boxNav[0].firstChild);
     }
-
-    // Перемещаем элементы, которые не помещаются
     var navListItems = Array.from(this.navList.children('.header__nav-item'));
     for (var i = navListItems.length - 1; i >= 0; i--) {
       if (this.navList[0].scrollWidth > this.navList[0].clientWidth) {
-        // Убираем последний элемент из navList и добавляем его в начало boxNav
         var item = navListItems[i];
         this.boxNav.prepend(item);
         this.burger.addClass('is-visible');
@@ -465,13 +449,12 @@ var navModule = {
     }
   },
   toggleBoxActive: function toggleBoxActive() {
-    // Проверяем, есть ли элементы внутри boxNav
     if (this.boxNav.children().length > 0) {
-      this.headerBox.toggleClass('is-active'); // Добавляем класс на header__box
-      this.burger.toggleClass('is-active'); // Добавляем класс на header__burger
+      this.headerBox.toggleClass('is-active');
+      this.burger.toggleClass('is-active');
     } else {
-      this.headerBox.removeClass('is-active'); // Убираем класс с header__box
-      this.burger.removeClass('is-active'); // Убираем класс с header__burger
+      this.headerBox.removeClass('is-active');
+      this.burger.removeClass('is-active');
     }
   }
 };
@@ -516,7 +499,7 @@ var selectModule = {
     }
     $selectList.find('.select__item').removeClass('is-active');
     $item.addClass('is-active');
-    $selectActive.html("<span>".concat(selectedText, "</span>"));
+    $selectActive.find('.select__active-text').html("".concat(selectedText));
     $selectActive.addClass('is-selected');
     $selectList.removeClass('is-active');
   },
@@ -581,46 +564,76 @@ var accordionModule = {
     }
   }
 };
-$(document).ready(function () {
-  function toggleControls() {
+var controlsModule = {
+  init: function init() {
+    this.$controlsToggle = $(".controls__toggle");
+    this.$document = $(document);
+    this.handleResize();
+    this.bindResizeEvent();
+  },
+  handleResize: function handleResize() {
     if ($(window).width() <= 991) {
-      $(".controls__toggle").on('click', function (e) {
-        e.stopPropagation();
-        $(this).toggleClass("is-active").next().stop().slideToggle(300);
-      });
-      $(document).on('click', function (e) {
-        if (!$(e.target).closest(".controls").length) {
-          $(".controls__toggle").removeClass("is-active").next().stop().slideUp(300);
-        }
-      });
+      this.bindEvents();
     } else {
-      $(".controls__toggle").off('click'); // Отключаем обработчики, если ширина больше 1360px
-      $(document).off('click');
+      this.unbindEvents();
+    }
+  },
+  bindResizeEvent: function bindResizeEvent() {
+    $(window).on('resize', this.onResize.bind(this));
+  },
+  onResize: function onResize() {
+    this.handleResize();
+  },
+  bindEvents: function bindEvents() {
+    this.$controlsToggle.on('click', this.toggleControls.bind(this));
+    this.$document.on('click', this.closeControls.bind(this));
+  },
+  unbindEvents: function unbindEvents() {
+    this.$controlsToggle.off('click');
+    this.$document.off('click');
+  },
+  toggleControls: function toggleControls(e) {
+    e.stopPropagation();
+    this.$controlsToggle.toggleClass("is-active").next().stop().slideToggle(300);
+  },
+  closeControls: function closeControls(e) {
+    if (!$(e.target).closest(".controls").length) {
+      this.$controlsToggle.removeClass("is-active").next().stop().slideUp(300);
     }
   }
-  toggleControls(); // Запускаем при загрузке
-  $(window).on('resize', toggleControls); // Перезапускаем при изменении размера окна
-});
-$(document).ready(function () {
-  function toggleSidebar() {
+};
+var sidebarModule = {
+  init: function init() {
+    this.$sidebarToggle = $('.sidebar__toggle');
+    this.$document = $(document);
+    this.handleResize();
+  },
+  handleResize: function handleResize() {
     if ($(window).width() <= 991) {
-      $(".sidebar__toggle").on('click', function (e) {
-        e.stopPropagation();
-        $(this).toggleClass("is-active").next().stop().slideToggle(300);
-      });
-      $(document).on('click', function (e) {
-        if (!$(e.target).closest(".sidebar").length) {
-          $(".sidebar__toggle").removeClass("is-active").next().stop().slideUp(300);
-        }
-      });
+      this.bindEvents();
     } else {
-      $(".sidebar__toggle").off('click'); // Отключаем обработчики, если ширина больше 1360px
-      $(document).off('click');
+      this.unbindEvents();
+    }
+  },
+  bindEvents: function bindEvents() {
+    this.$sidebarToggle.on('click', this.toggleSidebar.bind(this));
+    this.$document.on('click', this.closeSidebar.bind(this));
+  },
+  unbindEvents: function unbindEvents() {
+    this.$sidebarToggle.off('click');
+    this.$document.off('click');
+  },
+  toggleSidebar: function toggleSidebar(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    this.$sidebarToggle.toggleClass("is-active").next().stop().slideToggle(300);
+  },
+  closeSidebar: function closeSidebar(e) {
+    if (!$(e.target).closest(".sidebar").length) {
+      this.$sidebarToggle.removeClass("is-active").next().stop().slideUp(300);
     }
   }
-  toggleSidebar(); // Запускаем при загрузке
-  $(window).on('resize', toggleSidebar); // Перезапускаем при изменении размера окна
-});
+};
 var fileUploadModule = {
   init: function init() {
     var $fileInputs = $('.webform__label-file input');
@@ -637,78 +650,76 @@ var fileUploadModule = {
     $input.closest('.webform__label-file').find('.webform__label-file-name').text(fileName);
   }
 };
-
-// const lozadModule = {
-//    init() {
-//       if (typeof lozad === 'undefined') {
-//          console.warn('Библиотека lozad не подключена.');
-//          return;
-//       }
-
-//       const $lozadElements = $('.lozad');
-//       if ($lozadElements.length === 0) {
-//          console.warn('Нет элементов с классом .lozad на странице.');
-//          return;
-//       }
-
-//       this.initObserver($lozadElements);
-//    },
-
-//    initObserver($elements) {
-//       // Убедитесь, что передаем строку селектора для lozad
-//       const observer = lozad($elements.get(0), { // передаем только первый элемент, если их несколько
-//          rootMargin: '10px 0px',
-//          threshold: 0.3,
-//          loaded: function(el) {
-//             // Когда изображение загружено, убираем прелоадер
-//             const $el = $(el);
-//             $el.removeClass('lozad');  // Убираем класс lozad
-//             $el.css('background-image', 'none'); // Убираем фон-прелоадер
-//          }
-//       });
-
-//       observer.observe();
-//    }
-// };
-
-var observer = lozad('.lozad', {
-  rootMargin: '10px 0px',
-  threshold: 0.3
-});
-observer.observe();
-$("[data-validate-form]").each(function () {
-  var $form = $(this);
-  $form.validate({
-    errorPlacement: function errorPlacement(error, element) {
-      if (element.closest(".agree").length) {
-        // Если чекбокс внутри .agree — показываем .agree__error
-        element.closest(".agree").find(".agree__error").show();
-      } else if (element.closest(".webform__label").length) {
-        // Если инпут внутри .webform__label — показываем .webform__label-error
-        element.closest(".webform__label").find(".webform__label-error").show();
-      } else {
-        // Для остальных инпутов: добавляем класс и показываем .form__error
-        var $label = element.closest(".form__label");
-        $label.addClass("is-error");
-        $label.find(".form__error").show();
-      }
-    },
-    success: function success(label, element) {
-      if ($(element).closest(".agree").length) {
-        // Если чекбокс внутри .agree — скрываем .agree__error
-        $(element).closest(".agree").find(".agree__error").hide();
-      } else if ($(element).closest(".webform__label").length) {
-        // Если инпут внутри .webform__label — скрываем .webform__label-error
-        $(element).closest(".webform__label").find(".webform__label-error").hide();
-      } else {
-        // Для остальных инпутов: убираем класс и скрываем .form__error
-        var $label = $(element).closest(".form__label");
-        $label.removeClass("is-error");
-        $label.find(".form__error").hide();
-      }
+var lazyLoadModule = {
+  init: function init() {
+    this.$lazyElements = $('.lazyload');
+    if (!this.$lazyElements.length) return;
+    this.observer = lozad('.lazyload', {
+      rootMargin: '60px 0px',
+      loaded: this.onLoad.bind(this)
+    });
+    this.bindEvents();
+    this.observer.observe();
+  },
+  bindEvents: function bindEvents() {
+    this.$lazyElements.on('error', this.onError);
+  },
+  onLoad: function onLoad(el) {
+    var $el = $(el);
+    if ($el.is('img')) {
+      $el.attr('src', $el.data('src')).addClass('is-loaded');
+    } else if ($el.is('picture')) {
+      $el.find('source').each(function () {
+        $(this).attr('srcset', $(this).data('srcset'));
+      });
+      $el.find('img').attr('src', $el.find('img').data('src'));
+      $el.addClass('is-loaded');
     }
-  });
-});
+  },
+  onError: function onError() {
+    $(this).addClass('is-error');
+  }
+};
+var formValidationModule = {
+  init: function init() {
+    this.$forms = $("[data-validate-form]");
+    this.bindEvents();
+  },
+  bindEvents: function bindEvents() {
+    var _this2 = this;
+    this.$forms.each(function (_, form) {
+      _this2.setupValidation($(form));
+    });
+  },
+  setupValidation: function setupValidation($form) {
+    $form.validate({
+      errorPlacement: this.errorPlacement,
+      success: this.success
+    });
+  },
+  errorPlacement: function errorPlacement(error, element) {
+    if (element.closest(".agree").length) {
+      element.closest(".agree").find(".agree__error").show();
+    } else if (element.closest(".webform__label").length) {
+      element.closest(".webform__label").find(".webform__label-error").show();
+    } else {
+      var $label = element.closest(".form__label");
+      $label.addClass("is-error");
+      $label.find(".form__error").show();
+    }
+  },
+  success: function success(label, element) {
+    if ($(element).closest(".agree").length) {
+      $(element).closest(".agree").find(".agree__error").hide();
+    } else if ($(element).closest(".webform__label").length) {
+      $(element).closest(".webform__label").find(".webform__label-error").hide();
+    } else {
+      var $label = $(element).closest(".form__label");
+      $label.removeClass("is-error");
+      $label.find(".form__error").hide();
+    }
+  }
+};
 var tabsModule = {
   init: function init() {
     var $tabsLinks = $('.tabs-link');
@@ -745,10 +756,10 @@ var webformOptionsModule = {
     this.bindEvents();
   },
   bindEvents: function bindEvents() {
-    var _this = this;
+    var _this3 = this;
     this.$options.on('click', function (e) {
       e.preventDefault();
-      _this.toggleActiveClass($(e.currentTarget));
+      _this3.toggleActiveClass($(e.currentTarget));
     });
   },
   toggleActiveClass: function toggleActiveClass($clickedOption) {
@@ -797,13 +808,14 @@ var favoriteButtonModule = {
   bindFavoriteEvents: function bindFavoriteEvents($buttons) {
     $buttons.on('click', function (e) {
       e.preventDefault();
+      e.stopPropagation();
       $(this).toggleClass('is-active');
     });
   }
 };
 var passwordToggleModule = {
   init: function init() {
-    var $toggleButtons = $('.btn--eye');
+    var $toggleButtons = $('.button-eye');
     if ($toggleButtons.length === 0) {
       return;
     }
@@ -855,9 +867,155 @@ var webformModule = {
     }
   }
 };
+var dateInputModule = {
+  init: function init() {
+    var $dateInput = $('[name="date"]');
+    if ($dateInput.length === 0) {
+      return;
+    }
+    this.bindDateEvents($dateInput);
+  },
+  bindDateEvents: function bindDateEvents($input) {
+    var _this4 = this;
+    $input.on("input", function (e) {
+      _this4.formatDate(e.target);
+    });
+    $input.on("keydown", function (e) {
+      _this4.handleBackspace(e);
+    });
+  },
+  formatDate: function formatDate(input) {
+    var value = $(input).val().replace(/\D/g, "");
+    var formattedValue = "";
+    var day = value.substring(0, 2);
+    if (parseInt(day) > 31) {
+      day = "31";
+    }
+    formattedValue = day;
+    var month = value.substring(2, 4);
+    if (parseInt(month) > 12) {
+      month = "12";
+    }
+    if (month.length > 0) {
+      formattedValue += "." + month;
+    }
+    var year = value.substring(4, 8);
+    if (year.length === 4) {
+      if (parseInt(year) < 1900) {
+        year = "1900";
+      } else if (parseInt(year) > 2025) {
+        year = "2025";
+      }
+    }
+    if (year.length > 0) {
+      formattedValue += "." + year;
+    }
+    $(input).val(formattedValue);
+  },
+  handleBackspace: function handleBackspace(e) {
+    var $input = $(e.target);
+    if (e.key === "Backspace" && $input.val().endsWith(".")) {
+      $input.val($input.val().slice(0, -1));
+      e.preventDefault();
+    }
+  }
+};
+var headerModule = {
+  init: function init() {
+    var $headerLogin = $('.header__login');
+    if (!$headerLogin.length) {
+      return;
+    }
+    $headerLogin.on('click', this.toggleLoginCabinet);
+  },
+  toggleLoginCabinet: function toggleLoginCabinet(e) {
+    e.preventDefault();
+    var $loginCabinet = $(e.currentTarget).find('.header__login-cabinet');
+    if ($loginCabinet.length) {
+      $loginCabinet.toggleClass('is-active');
+    }
+  }
+};
+var buttonLoadingModule = {
+  init: function init() {
+    var $button = $('.button-loading');
+    if ($button.length === 0) {
+      return;
+    }
+    this.handleLoading($button);
+  },
+  handleLoading: function handleLoading($button) {
+    $button.on('click', function (e) {
+      e.preventDefault();
+      var $currentButton = $(this);
+      var dataLoadingValue = $currentButton.data('loading');
+      if (!dataLoadingValue) {
+        return;
+      }
+      var $targetBlock = $("[data-loading=\"".concat(dataLoadingValue, "\"]"));
+      if ($targetBlock.length) {
+        $targetBlock.addClass('is-active');
+      }
+      $currentButton.remove();
+    });
+  }
+};
+var glossaryModule = {
+  init: function init() {
+    var $buttons = $('.glossary__listing-theme');
+    if ($buttons.length === 0) {
+      return;
+    }
+    this.handleToggle($buttons);
+  },
+  handleToggle: function handleToggle($buttons) {
+    $buttons.on('click', function () {
+      var $currentButton = $(this);
+      var $parentItem = $currentButton.closest('.glossary__listing-item');
+      var $infoBlock = $parentItem.find('.glossary__listing-info');
+      if ($infoBlock.length) {
+        if ($infoBlock.is(':visible')) {
+          $infoBlock.slideUp(300);
+          $parentItem.removeClass('is-active');
+        } else {
+          $infoBlock.slideDown(300);
+          $parentItem.addClass('is-active');
+        }
+      }
+    });
+  }
+};
+var goodsTableModule = {
+  init: function init() {
+    var $buttons = $('.goods__table-controls-button');
+    if ($buttons.length === 0) {
+      return;
+    }
+    this.handleCountChange($buttons);
+  },
+  handleCountChange: function handleCountChange($buttons) {
+    $buttons.on('click', function () {
+      var $currentButton = $(this);
+      var $parent = $currentButton.closest('.goods__table-controls');
+      var $countElement = $parent.find('.goods__table-controls-count');
+      if ($countElement.length === 0) {
+        return;
+      }
+      var count = parseInt($countElement.val(), 10);
+      if (isNaN(count)) {
+        count = 0;
+      }
+      if ($currentButton.hasClass('goods__table-controls-button--plus')) {
+        count++;
+      } else if ($currentButton.hasClass('goods__table-controls-button--minus')) {
+        count = Math.max(0, count - 1);
+      }
+      $countElement.val(count);
+    });
+  }
+};
 $(function () {
-  // numsModule.init();
-  // lozadModule.init();
+  lazyLoadModule.init();
   phoneMaskModule.init();
   mapModule.init();
   selectModule.init();
@@ -871,4 +1029,16 @@ $(function () {
   webformOptionsModule.init();
   tabsModule.init();
   fileUploadModule.init();
+  sidebarModule.init();
+  controlsModule.init();
+  formValidationModule.init();
+  numbersModule.init();
+  dateInputModule.init();
+  headerModule.init();
+  buttonLoadingModule.init();
+  glossaryModule.init();
+  goodsTableModule.init();
+  $(window).on('resize', function () {
+    return sidebarModule.handleResize();
+  });
 });

@@ -44,6 +44,9 @@
          left: 0
       &-next
          right: 0
+   &__list
+      @extend .ul-list
+      @include margin-bottom(15px)
    @include md
       &__row
          grid-template-columns: 1fr

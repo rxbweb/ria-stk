@@ -16,7 +16,6 @@ yarn-error.log
 package-lock.json
 .vscode/
 pnpm-lock.yaml
-html
 
 # Remove below if you push to customer's git
 /sources/src/libs/*

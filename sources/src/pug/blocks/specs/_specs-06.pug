@@ -1,0 +1,19 @@
+include ../../mixins/_mixins
+
+section.section.section--padding-top-none.section--sidebar.section--specs
+   .section__wrapper
+      .section__content
+         .specs.specs--2
+            .bg-image
+               img(src="images/specs/specs-bg.jpg", alt="фоновая картинка")
+            .specs__inner.container
+               .specs__box
+                  .specs__img
+                     img(src="images/specs/specs-04.png", alt="Бизнес-план — стань хозяином своего дела")
+                  .specs__info
+                     p.specs__lead Название подборки
+                     h2.specs__name.specs__name--large Бизнес-план — стань хозяином своего дела
+                     .specs__manage
+                        p.specs__price 1 900 руб.
+                        +button-icon('link', 'В корзину', 'button--wide', 'icon-cart')
+                        +favorite-button()

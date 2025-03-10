@@ -10,6 +10,9 @@
       @extend .title
       &--red
          @extend .title--red
+   &__heading
+      @extend .title
+      @extend .title--main
    &__content
       @include margin-bottom(60px)
    &__list
@@ -77,10 +80,17 @@
       @include line-clamp(3)
       letter-spacing: var(--letter-spacing)
       line-height: 140%
+   &__cost
+      display: flex
+      gap: 15px
    &__price
       @extend .title
       @extend .title--fifth
       color: #47535E
+      white-space: nowrap
+      &--old
+         opacity: 0.5
+         text-decoration: line-through
    &__manage
       display: flex
       gap: 20px

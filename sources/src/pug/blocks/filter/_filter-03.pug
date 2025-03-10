@@ -1,0 +1,40 @@
+include ../../mixins/_mixins
+
+.filter
+   .filter__main
+      ul.filter__list
+         li.filter__item
+            a.filter__btn(href="#")
+               p.filter__name Тематика
+            .filter__content
+               .filter__inputs
+                  input(type="text" placeholder="Искать по рубрике" minlength="3" required) 
+         li.filter__item
+            a.filter__btn(href="#")
+               p.filter__name Рубрика
+            .filter__content
+               .filter__inputs
+                  input(type="text" placeholder="Искать по рубрике" minlength="3" required) 
+         li.filter__item
+            a.filter__btn(href="#")
+               p.filter__name Рефоративные базы и индекс
+            .filter__content
+               .filter__inputs
+                  input(type="text" placeholder="Искать по индексу" minlength="3" required) 
+         li.filter__item
+            a.filter__btn(href="#")
+               p.filter__name Авторы
+            .filter__content
+               .filter__inputs
+                  input(type="text" placeholder="Искать по фамилии автора" minlength="3" required) 
+         li.filter__item
+            a.filter__btn(href="#")
+               p.filter__name Год публикации
+            .filter__content
+               .filter__year
+                  label.filter__year-label
+                     span.filter__year-title От
+                     input(type="text" placeholder="1927" minlength="4")
+                  label.filter__year-label
+                     span.filter__year-title До
+                     input(type="text" placeholder="2025" minlength="4")
