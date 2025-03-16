@@ -68,11 +68,11 @@ section.section.section--bonus
                      p.bonus__content-name Расшифровка символов
                      .bonus__content-labels
                         .bonus__content-label
-                           .badge
+                           .badge.badge--second
                               +svg('icon-star', '', 26, 26)
                            span Доступ
                         .bonus__content-label
-                           .badge
+                           .badge.badge--second
                               +svg('icon-gift', '', 26, 26)
                            span Подарок
                   ol.bonus__content-list
@@ -85,5 +85,5 @@ section.section.section--bonus
                                  if item.text
                                     p= item.text
                            if item.icon
-                              .badge
+                              .badge.badge--third
                                  +svg(item.icon, '', 26, 26)
