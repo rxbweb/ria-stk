@@ -3,16 +3,27 @@
       @include margin-bottom(var(--gap))
    &__main
       padding: var(--gap)
-      display: grid
-      grid-template-columns: 480px 1fr
+      display: flex
       gap: var(--gap)
       border-radius: var(--border-radius-20)
       background: #ffffff
       overflow: hidden
       &--2
          background: #E0E0E0
-   &__box
-      @include align-block(30px)
+   &__info
+      flex-basis: 480px
+      flex-shrink: 0
+   &__info,
+   &__content
+      @include align-block(var(--gap-4))
+   &__content
+      flex-grow: 1
+   &__top
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+      gap: var(--gap-4)
    &__title
       @extend .title
       @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)
@@ -66,6 +77,7 @@
          height: var(--size)
          border: 1px solid #C8C8C8
       &__info
+         max-width: 300px
          gap: 15px
       &__text
          margin-top: 0
@@ -79,11 +91,8 @@
          &__img
             --size: 130px
    @include xl
-      &__main
-         grid-template-columns: 460px 1fr
-      &__person
-         &-img
-            padding-bottom: 120%
+      &__info
+         flex-basis: 460px
       .board
          &__list
             grid-template-columns: 1fr
@@ -101,11 +110,11 @@
          &__list
             padding: 15px
    @media (max-width: 1100px)
-      &__box
-         gap: 20px
       &__main
-         grid-template-columns: 1fr
+         flex-direction: column
          gap: 30px
+      &__info
+         flex-basis: auto
       &__person
          @include margin-bottom(20px)
          &-info
@@ -114,6 +123,11 @@
             max-width: 500px
             padding-bottom: 60%
    @include sm
+      &__top
+         align-items: flex-start
+         flex-direction: column
+         .button
+            display: none
       &__manage
          display: none
       &__controls
@@ -123,8 +137,6 @@
    @include xs
       &__main
          padding: 15px
-      &__box
-         gap: 15px
       &__person
          &-img
             padding-bottom: 76%

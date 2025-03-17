@@ -39,16 +39,18 @@ section.section.section--edition.section--padding-top-none
          .edition
             .edition__inner
                .edition__main
-                  .edition__box
-                     h2.edition__title Главный редактор
+                  .edition__info
+                     .edition__top
+                        h2.edition__title Главный редактор
                      figure.edition__person
                         .edition__person-img
-                           img(src="images/board/board-03.jpg", alt="Воронин Геннадий Петрович" width="480" height="360")
+                           +picture('images/edition/edition-01.jpg', false, "Воронин Геннадий Петрович", 480, 360)
                         figcaption.edition__person-info
                            h3.edition__person-title Воронин Геннадий Петрович
                            p.edition__person-text Президент Всероссийской организации качества, действительный государственный советник Российской Федерации I класса, доктор технических наук, доктор экономических наук, профессор
-                  .edition__box
-                     h2.edition__title Сотрудники редакции
+                  .edition__content
+                     .edition__top
+                        h2.edition__title Сотрудники редакции
                      .edition__board.board
                         .board__inner
                            ul.board__list
@@ -57,7 +59,7 @@ section.section.section--edition.section--padding-top-none
                                     a.board__box(href="#")
                                        .board__img
                                           if board.photo
-                                             img(src=board.photo, alt=board.name width="180" height="200")
+                                             +picture(board.photo, false, board.name, 180, 200)
                                        .board__info
                                           p.board__name=board.name
                                           p.board__text=board.text
