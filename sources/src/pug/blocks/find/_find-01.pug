@@ -1,6 +1,6 @@
 include ../../mixins/_mixins
 
-- 
+-
    const findResults = [
       {
          type: 'Cтатья',
@@ -55,7 +55,7 @@ include ../../mixins/_mixins
       {
          img: 'images/find/find-01.png',
          type: 'Мероприятие',
-         title: 'VII Всероссийская научно-практическая конференция «Построение системы менеджмента качества медицинской организации. Лучшие практики»',
+         title: 'VII Всероссийская научно-практическая конференция «Построение системы \n менеджмента качества медицинской организации. Лучшие практики»',
          listing: [
             'Дата: <span>6-7 октября 2024 года</span>',
             'Место: <span>Москва, Мичуринский пр-т, д. 6, стр.1, ФГБУ «Объединенная больница с поликлиникой» УДП РФ</span>'
@@ -64,7 +64,7 @@ include ../../mixins/_mixins
       {
          img: 'images/find/find-02.png',
          type: 'Книга',
-         title: 'ISO 9001:2015. Международный стандарт на системы менеджмента качества. Наблюдения, интерпретация, анализ, критика, советы: в 2 т.',
+         title: 'ISO 9001:2015. Международный стандарт на системы менеджмента качества. \n Наблюдения, интерпретация, анализ, критика, советы: в 2 т.',
          listing: [
             'Автор: Качалов В.А.',
             'Дата публикации: <span>2020</span>',
@@ -90,9 +90,14 @@ section.section.section--find
                               else
                                  img.find__img-icon(src="images/icons/photo.svg" alt="нет картинки" width="96" height="96")
                            .find__info
-                              p.find__type #{item.type}
-                              h3.find__name #{item.title}
-                              ul.find__table
-                                 each value in item.listing
-                                    li!= value
+                              if item.type
+                                 p.find__type #{item.type}
+                              if item.title
+                                 h3.find__name #{item.title}
+                              if item.text
+                                 p.find__text #{item.text}
+                              if item.listing
+                                 ul.find__table
+                                    each value in item.listing
+                                       li!= value
                include ../pagination/_pagination
