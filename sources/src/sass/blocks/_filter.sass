@@ -1,18 +1,39 @@
 .filter
    width: 380px
-   padding: 30px
+   padding: 40px 30px
    border-radius: 15px
    background: #F5F5F5
    overflow: hidden
+   &__toggle
+      @extend .controls__toggle
+      &-icon
+         @extend .controls__toggle-icon
+      &-arrow
+         @extend .controls__toggle-arrow
+   &__main,
    &__list
-      @include margin-bottom(40px)
+      @include margin-bottom(var(--gap))
    &__item
       @include margin-bottom(10px)
    &__btn
+      margin-bottom: 0
       display: flex
+      justify-content: space-between
+      align-items: center
+      svg
+         fill: var(--accent)
+         flex-shrink: 0
+         transition: var(--transition)
+         transform: rotate(180deg)
+      &.is-active
+         svg
+            transform: rotate(0deg)
+   &__content
+      padding-top: 10px
    &__name
       @extend .title
       @extend .title--second
+      margin-bottom: 0
       letter-spacing: var(--letter-spacing)
    &__selection
       @include margin-bottom(10px)
@@ -27,6 +48,49 @@
       &-label
          display: flex
          flex-direction: column
-         flex-basis: calc(50% - 5px)
+         width: calc(50% - 5px)
       &-title
          @extend .webform__label-title
+   &__bottom
+      display: none
+      flex-direction: column
+   .select
+      &__active
+         min-height: 40px
+         padding-inline: 15px
+         background: #fff
+         &:not(.is-selected)
+            color: var(--placeholder-color)
+   @include ms
+      width: 100%
+      padding: 0
+      background: none
+      border-radius: 0
+      &__main
+         display: none
+         padding: 0 var(--padding)
+         border-radius: var(--border-radius)
+         border: 1px solid var(--accent)
+         border-top: none
+         background: #F5F5F5
+         overflow: hidden
+         position: absolute
+         z-index: var(--z-index)
+         left: var(--padding)
+         right: var(--padding)
+      &__box
+         padding: var(--padding) 0
+      &__main,
+      &__box,
+      &__list
+         @include margin-bottom(25px)
+      &__bottom
+         display: flex
+   @include sm
+      &__btn
+         svg
+            width: 16px
+            height: 16px
+      .select
+         &__active
+            padding: 6px 10px
