@@ -1,0 +1,28 @@
+.noUi
+   &-target
+      background: #D9D9D9
+      border-radius: 100px
+   &-horizontal
+      height: 10px
+      border: none
+      .noUi
+         &-handle
+            width: 24px
+            height: 24px
+            border-radius: 50%
+            background: var(--accent)
+            box-shadow: none
+            border: none
+            cursor: pointer
+            &::before
+               width: 14px
+               height: 14px
+               background: #fff
+               border-radius: 50%
+               left: 50%
+               top: 50%
+               transform: translate(-50%, -50%)
+            &::after
+               display: none
+   &-connect
+      background: var(--accent)
