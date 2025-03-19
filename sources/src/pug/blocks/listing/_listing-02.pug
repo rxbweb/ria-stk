@@ -5,15 +5,15 @@ include ../../mixins/_mixins
       {
          title: 'Электронная библиотека',
          text: 'Миссия РИА «Стандарты и качество» — нести людям идеи качества во всем их многообразии.',
-         badge: 'images/badges/badge-08.svg',
-         badgeSize: '32',
+         badge: 'badge-08',
+         badgeSize: '34',
          img: 'images/listing/listing-04.jpg'
       },
       {
          title: 'Тематические подборки',
          text: 'Глобальный информационный центр, база знаний о качестве — доступный, удобный, информативный.',
-         badge: 'images/badges/badge-09.svg',
-         badgeSize: '43',
+         badge: 'badge-09',
+         badgeSize: '46',
          img: 'images/listing/listing-05.jpg'
       }
    ]
@@ -32,7 +32,7 @@ section.section.section--listing
                            li.listing__item
                               a.listing__box(href="#")
                                  .badge.badge--large
-                                    img(src=listing.badge, alt="иконка" width=listing.badgeSize height=listing.badgeSize)
+                                    +svg(listing.badge, '', listing.badgeSize, listing.badgeSize)
                                  h3.listing__name=listing.title
                                  p.listing__text=listing.text
                                  .listing__img

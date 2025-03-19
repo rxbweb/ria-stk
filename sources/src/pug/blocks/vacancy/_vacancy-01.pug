@@ -10,14 +10,14 @@ section.section.section--vacancy
                .vacancy__main
                   .vacancy__filter
                      include ../filter/_filter-01
-                  .vacancy__main
+                  .vacancy__box
                      .vacancy__section
                         ul.vacancy__list
                            - for (let i = 0; i < 5; i++)
                               li.vacancy__item
                                  .vacancy__item-info
                                     .vacancy__meta
-                                       time.vacancy__meta-time 01.01.2024
+                                       time.vacancy__meta-time(datetime="2024-01-01") 01.01.2024
                                        span.vacancy__meta-location Москва
                                     .vacancy__heading
                                        p Название компании
@@ -25,15 +25,14 @@ section.section.section--vacancy
                                     .vacancy__item-text
                                        p Специализация: Перечисление специализаций, возможно длинное написание в несколько строк
                                     .vacancy__item-bottom
+                                       p.vacancy__item-price 100 000 руб.
                                        +button-outline('link', 'Подробнее')
-                                 .vacancy__item-aside
-                                    p.vacancy__price 100 000 руб.
 
                      .vacancy__aside
                         - for (let i = 0; i < 3; i++)
                            .vacancy__post
                               .vacancy__meta
-                                 time.vacancy__meta-time 01.01.2024
+                                 time.vacancy__meta-time(datetime="2024-01-01") 01.01.2024
                                  span.vacancy__meta-location Москва
                               .vacancy__heading
                                  p Название компании
@@ -41,3 +40,13 @@ section.section.section--vacancy
                               .vacancy__manage
                                  p.vacancy__price 100 000 руб.
                                  +button-outline('link', 'Подробнее')
+                        .vacancy__spotlight.vacancy__spotlight--narrow
+                           a.vacancy__spotlight-box(href="#")
+                              img.vacancy__spotlight-bg(src="images/vacancy/vacancy-01.jpg", alt="фоновая картинка" width="520" height="50")
+                              .vacancy__spotlight-info
+                                 h3.vacancy__spotlight-title #{'Текст для баннера '}
+                                    |
+                                    |в 2 строки
+                                 .vacancy__spotlight-icon
+                                    span
+                                       +svg('icon-arrow-right', 'svg-icon-arrow-right', 22, 22)

@@ -20,13 +20,14 @@ section.section.section--review
                               li только латинские буквы и цифры;
                               li не используйте пробел;
                               li осмысленные названия на английском языке.
-                  form.form.form--review(action="#")
+                  form.form.form--review(action="#" data-validate-form)
                      .form__main
                         .form__group
                            .form__box.form__box--column
                               label.form__label
                                  span.form__type Имя
-                                 input.form__input(type="text" placeholder="Ваше имя")
+                                 input.form__input(type="text" placeholder="Ваше имя" name="form-name" required)
+                                 span.form__error Обязательное поле
                               label.form__label
                                  span.form__type Фамилия
                                  input.form__input(type="text" placeholder="Ваша фамилия")
@@ -35,7 +36,8 @@ section.section.section--review
                                  input.form__input(type="text" placeholder="Ваше отчество")
                               label.form__label
                                  span.form__type Email
-                                 input.form__input(type="email" placeholder="Email")
+                                 input.form__input(type="email" placeholder="Email" name="form-email" required)
+                                 span.form__error Обязательное поле
                            .form__box.form__box--column
                               label.form__label
                                  span.form__type Ученое звание или статус

@@ -1,7 +1,7 @@
 include ../../../mixins/_mixins
 
-mixin peopleList(people, extraClass)
-   ul.people__list(class=extraClass)
+mixin peopleList(people, className)
+   ul.people__list(class=className)
       each person in people
          li.people__item
             .people__photo

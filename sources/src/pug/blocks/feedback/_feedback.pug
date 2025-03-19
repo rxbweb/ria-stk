@@ -45,7 +45,7 @@ section.section.section--feedback
                                  a.socials__link(href="#")
                                     img(src="images/icons/socials-dzen.svg", alt="dzen" width="40" height="40")
                   .feedback__content
-                     form.feedback__form.form.form--2(action="#")
+                     form.feedback__form.form.form--2(action="#" data-validate-form)
                         .form__header
                            h2.form__title Форма для связи
                         .form__main
@@ -56,10 +56,12 @@ section.section.section--feedback
                                     +select(false, ['Везде', 'По журналам', 'По книгам', 'По статьям', 'По новостям', 'По мероприятиям'], 'select--secondary')
                                  label.form__label
                                     span.form__type E-mail
-                                    input.form__input(type="email" placeholder="E-mail" name="form-email")
+                                    input.form__input(type="email" placeholder="E-mail" name="form-email" minlength="3" required)
+                                    span.form__error Обязательное поле
                                  label.form__label.form__label--half
                                     span.form__type Имя
-                                    input.form__input(type="text" placeholder="Ваше имя")
+                                    input.form__input(type="text" placeholder="Ваше имя" name="form-name" required)
+                                    span.form__error Обязательное поле
                                  label.form__label.form__label--half
                                     span.form__type Фамилия
                                     input.form__input(type="text" placeholder="Ваша фамилия")
@@ -69,11 +71,12 @@ section.section.section--feedback
                            .form__middle
                               .agree
                                  label.agree__label
-                                    input(type="checkbox")
+                                    input(type="checkbox" name="form-agree" required)
                                     span.agree__checkbox
                                     span.agree__text
                                        | Я согласен с 
                                        a(href="#") Правилами обработки и хранения персональных данных
+                                 span.agree__error Обязательное поле
                            .form__bottom
                               +button('Отправить', 'button--large form__button', '', false)
                .feedback__box
