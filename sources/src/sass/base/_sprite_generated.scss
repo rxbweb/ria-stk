@@ -2732,13 +2732,13 @@
 
 .svg-svg-icon-lock-01 {
 	@extend %svg-common;
-	background-position: 33.00330033003301% 99.30313588850174%;
+	background-position: 36.633663366336634% 99.30313588850174%;
 	background-size: math.div(622, 16)*100% auto;
 	width: 16px;
 
 }
 @mixin svg-pos-svg-icon-lock-01 {
-	background-position: 33.00330033003301% 99.30313588850174%;
+	background-position: 36.633663366336634% 99.30313588850174%;
 }
 @mixin svg-svg-icon-lock-01-hover {
 	.svg-svg-icon-lock-01 {
@@ -2761,13 +2761,13 @@
 
 .svg-svg-icon-lock-02 {
 	@extend %svg-common;
-	background-position: 35.64356435643565% 99.30313588850174%;
+	background-position: 39.273927392739274% 99.30313588850174%;
 	background-size: math.div(622, 16)*100% auto;
 	width: 16px;
 
 }
 @mixin svg-pos-svg-icon-lock-02 {
-	background-position: 35.64356435643565% 99.30313588850174%;
+	background-position: 39.273927392739274% 99.30313588850174%;
 }
 @mixin svg-svg-icon-lock-02-hover {
 	.svg-svg-icon-lock-02 {
@@ -2935,13 +2935,13 @@
 
 .svg-svg-icon-question {
 	@extend %svg-common;
-	background-position: 29.78369384359401% 99.47643979057591%;
+	background-position: 33.44425956738769% 99.47643979057591%;
 	background-size: math.div(622, 21)*100% auto;
 	width: 21px;
 
 }
 @mixin svg-pos-svg-icon-question {
-	background-position: 29.78369384359401% 99.47643979057591%;
+	background-position: 33.44425956738769% 99.47643979057591%;
 }
 @mixin svg-svg-icon-question-hover {
 	.svg-svg-icon-question {
@@ -2960,6 +2960,35 @@
 .svg-svg-icon-question-dims {
 	width: 21px;
 	height: 21px;
+}
+
+.svg-svg-icon-sort {
+	@extend %svg-common;
+	background-position: 26.166666666666668% 99.65034965034965%;
+	background-size: math.div(622, 22)*100% auto;
+	width: 22px;
+
+}
+@mixin svg-pos-svg-icon-sort {
+	background-position: 26.166666666666668% 99.65034965034965%;
+}
+@mixin svg-svg-icon-sort-hover {
+	.svg-svg-icon-sort {
+		@include svg-pos-svg-icon-sort-hover
+	}
+}
+
+.svg-svg-icon-sort:before {
+	content:"";
+	display:block;
+	font-size:0;
+	line-height:0;
+	padding-top: math.div(22, 22)*100%;
+}
+
+.svg-svg-icon-sort-dims {
+	width: 22px;
+	height: 22px;
 }
 
 .svg-svg-icon-star {
@@ -3051,13 +3080,13 @@
 
 .svg-svg-icon-user {
 	@extend %svg-common;
-	background-position: 26.166666666666668% 99.65034965034965%;
+	background-position: 29.833333333333332% 99.65034965034965%;
 	background-size: math.div(622, 22)*100% auto;
 	width: 22px;
 
 }
 @mixin svg-pos-svg-icon-user {
-	background-position: 26.166666666666668% 99.65034965034965%;
+	background-position: 29.833333333333332% 99.65034965034965%;
 }
 @mixin svg-svg-icon-user-hover {
 	.svg-svg-icon-user {
@@ -3283,13 +3312,13 @@
 
 .svg-svg-sidebar-05 {
 	@extend %svg-common;
-	background-position: 38.538205980066444% 99.30313588850174%;
+	background-position: 42.19269102990033% 99.30313588850174%;
 	background-size: math.div(622, 20)*100% auto;
 	width: 20px;
 
 }
 @mixin svg-pos-svg-sidebar-05 {
-	background-position: 38.538205980066444% 99.30313588850174%;
+	background-position: 42.19269102990033% 99.30313588850174%;
 }
 @mixin svg-svg-sidebar-05-hover {
 	.svg-svg-sidebar-05 {
