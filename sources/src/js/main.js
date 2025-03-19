@@ -337,6 +337,32 @@ $('.books__swiper-slider').each(function (index, element) {
    });
 });
 
+$('.article__process-slider').each(function (index, element) {
+   new Swiper(element, {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      keyboard: true,
+      pagination: {
+         el: $(element).find('.swiper-pagination')[0],
+         clickable: true,
+      },
+      navigation: {
+         prevEl: $(element).find('.swiper-button-prev')[0],
+         nextEl: $(element).find('.swiper-button-next')[0],
+      },
+      breakpoints: {
+         768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+         },
+         1200: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+         },
+      },
+   });
+});
+
 const numbersModule = {
    isMobile: window.matchMedia("(max-width: 768px)").matches,
 
@@ -673,12 +699,107 @@ const controlsModule = {
    },
 
    toggleControls(e) {
+      e.preventDefault();
       e.stopPropagation();
       this.$controlsToggle.toggleClass("is-active").next().stop().slideToggle(300);
    },
 
    closeControls(e) {
       if (!$(e.target).closest(".controls").length) {
+         this.$controlsToggle.removeClass("is-active").next().stop().slideUp(300);
+      }
+   },
+};
+
+const filterModule = {
+   init() {
+      this.$controlsToggle = $(".filter__toggle");
+      this.$document = $(document);
+      this.handleResize();
+      this.bindResizeEvent();
+   },
+
+   handleResize() {
+      if ($(window).width() <= 991) {
+         this.bindEvents();
+      } else {
+         this.unbindEvents();
+      }
+   },
+
+   bindResizeEvent() {
+      $(window).on('resize', this.onResize.bind(this));
+   },
+
+   onResize() {
+      this.handleResize();
+   },
+
+   bindEvents() {
+      this.$controlsToggle.on('click', this.toggleControls.bind(this));
+      this.$document.on('click', this.closeControls.bind(this));
+   },
+
+   unbindEvents() {
+      this.$controlsToggle.off('click');
+      this.$document.off('click');
+   },
+
+   toggleControls(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      this.$controlsToggle.toggleClass("is-active").next().stop().slideToggle(300);
+   },
+
+   closeControls(e) {
+      if (!$(e.target).closest(".filter").length) {
+         this.$controlsToggle.removeClass("is-active").next().stop().slideUp(300);
+      }
+   },
+};
+
+const sortModule = {
+   init() {
+      this.$controlsToggle = $(".sort__toggle");
+      this.$document = $(document);
+      this.handleResize();
+      this.bindResizeEvent();
+   },
+
+   handleResize() {
+      if ($(window).width() <= 991) {
+         this.bindEvents();
+      } else {
+         this.unbindEvents();
+      }
+   },
+
+   bindResizeEvent() {
+      $(window).on('resize', this.onResize.bind(this));
+   },
+
+   onResize() {
+      this.handleResize();
+   },
+
+   bindEvents() {
+      this.$controlsToggle.on('click', this.toggleControls.bind(this));
+      this.$document.on('click', this.closeControls.bind(this));
+   },
+
+   unbindEvents() {
+      this.$controlsToggle.off('click');
+      this.$document.off('click');
+   },
+
+   toggleControls(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      this.$controlsToggle.toggleClass("is-active").next().stop().slideToggle(300);
+   },
+
+   closeControls(e) {
+      if (!$(e.target).closest(".sort").length) {
          this.$controlsToggle.removeClass("is-active").next().stop().slideUp(300);
       }
    },
@@ -1186,6 +1307,101 @@ const goodsTableModule = {
    }
 };
 
+const rangeSliderModule = {
+   init() {
+      const $sliders = $('.range__slider');
+      if ($sliders.length === 0) {
+         return;
+      }
+      this.setupSliders($sliders);
+   },
+
+   setupSliders($sliders) {
+      $sliders.each((_, slider) => {
+         const $slider = $(slider);
+         const $parent = $slider.closest('.range');
+         const $minInput = $parent.find('[data-range="min"]');
+         const $maxInput = $parent.find('[data-range="max"]');
+
+         if ($minInput.length === 0 || $maxInput.length === 0) {
+            return;
+         }
+
+         const minValue = 10000;
+         const maxValue = 1000000;
+         const stepValue = 10000;
+
+         noUiSlider.create(slider, {
+            start: [minValue, maxValue / 2],
+            connect: true,
+            step: stepValue,
+            range: {
+               min: minValue,
+               max: maxValue
+            },
+            format: {
+               to: value => Math.round(value).toLocaleString('ru-RU'),
+               from: value => Number(value.replace(/\s/g, ''))
+            }
+         });
+
+         const sliderInstance = slider.noUiSlider;
+
+         sliderInstance.on('update', values => {
+            $minInput.val(values[0]);
+            $maxInput.val(values[1]);
+         });
+
+         this.handleInputChange($minInput, sliderInstance, 0, minValue, maxValue);
+         this.handleInputChange($maxInput, sliderInstance, 1, minValue, maxValue);
+      });
+   },
+
+   handleInputChange($input, sliderInstance, handleIndex, minValue, maxValue) {
+      $input.on('change', function () {
+         let min = parseInt($input.closest('.range').find('[data-range="min"]').val().replace(/\s/g, ''), 10) || minValue;
+         let max = parseInt($input.closest('.range').find('[data-range="max"]').val().replace(/\s/g, ''), 10) || maxValue;
+
+         if (min < minValue) min = minValue;
+         if (min > max) min = max;
+         if (max > maxValue) max = maxValue;
+         if (max < min) max = min;
+
+         sliderInstance.set([min, max]);
+      });
+
+      $input.on('input', function () {
+         $(this).val($(this).val().replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ' '));
+      });
+   }
+};
+
+const filterToggleModule = {
+   init() {
+      const $buttons = $('.filter__btn');
+      if ($buttons.length === 0) {
+         return;
+      }
+      this.handleToggle($buttons);
+   },
+
+   handleToggle($buttons) {
+      $buttons.on('click', function (e) {
+         e.preventDefault();
+
+         const $currentButton = $(this);
+         const $nextBlock = $currentButton.next();
+
+         if ($nextBlock.length === 0) {
+            return;
+         }
+
+         $currentButton.toggleClass('is-active');
+         $nextBlock.stop(true, true).slideToggle(300);
+      });
+   }
+};
+
 $(function () {
    lazyLoadModule.init();
    phoneMaskModule.init();
@@ -1203,6 +1419,8 @@ $(function () {
    fileUploadModule.init();
    sidebarModule.init();
    controlsModule.init();
+   filterModule.init();
+   sortModule.init();
    formValidationModule.init();
    numbersModule.init();
    dateInputModule.init();
@@ -1210,5 +1428,7 @@ $(function () {
    buttonLoadingModule.init();
    glossaryModule.init();
    goodsTableModule.init();
+   rangeSliderModule.init();
+   filterToggleModule.init();
    $(window).on('resize', () => sidebarModule.handleResize());
 });
