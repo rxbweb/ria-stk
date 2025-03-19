@@ -1,11 +1,32 @@
 .response
+   --response-gap: 100px
    &__main
-      display: grid
-      grid-template-columns: auto auto
+      display: flex
       justify-content: space-between
-      gap: 100px
+      gap: var(--response-gap)
+      &--second
+         gap: var(--gap)
+         .response
+            &__form
+               flex-basis: 39.6%
    &__form
       max-width: none
+      flex-basis: 51%
+      flex-grow: 1
+      flex-shrink: 0
    &__img
-      border-radius: var(--border-radius-10)
+      border-radius: var(--border-radius-20)
       overflow: hidden
+      flex-basis: calc(49% - var(--response-gap))
+      flex-grow: 1
+      flex-shrink: 0
+      picture,
+      img
+         width: 100%
+         height: 100%
+         min-height: 175px
+         object-fit: cover
+         object-position: center
+   @include ms
+      &__main
+         flex-direction: column

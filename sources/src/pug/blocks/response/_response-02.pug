@@ -1,0 +1,35 @@
+include ../../mixins/_mixins
+
+section.section.section--response
+   .section__wrapper.container
+      .section__content
+         .response
+            .response__main.response__main--second
+               .response__img
+                  +picture('images/ventures/ventures-01.jpg', 'images/ventures/ventures-01-mob.jpg', 'картинка', 830, 436)
+               form.response__form.form(action="#" data-validate-form)
+                  .form__header
+                     h2.form__title Подписаться на рассылку
+                     p.form__text Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.
+                  .form__main
+                     .form__top
+                        .form__box
+                           label.form__label.form__label--half
+                              input.form__input(type="text" placeholder="Имя" name="form-name" required)
+                              span.form__error Обязательное поле
+                           label.form__label.form__label--half
+                              input.form__input(type="text" placeholder="Фамилия")
+                           label.form__label
+                              input.form__input(type="email" placeholder="E-mail" name="form-email" required)
+                              span.form__error Обязательное поле
+                     .form__middle
+                        .agree
+                           label.agree__label
+                              input(type="checkbox" name="form-agree" required)
+                              span.agree__checkbox
+                              span.agree__text
+                                 | Я согласен с 
+                                 a(href="#") Правилами обработки и хранения персональных данных
+                           span.agree__error Обязательное поле
+                     .form__bottom
+                        +button('Подписаться', 'form__button', '', false)
