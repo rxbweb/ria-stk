@@ -25,6 +25,7 @@
          display: flex
          align-items: center
          justify-content: space-between
+         flex-wrap: wrap
          gap: var(--gap-3)
       &-labels
          display: flex
@@ -64,3 +65,34 @@
          white-space: pre-line
       .badge
          margin-left: auto
+   @include xl
+      &__content
+         &-item
+            padding-left: 60px
+   @include md
+      &__main
+         flex-direction: column
+         gap: 30px
+      &__content
+         padding: 20px
+         &-item
+            padding-left: 50px
+   @include ms
+      &__content
+         &-labels
+            gap: 30px
+         &-label
+            padding: 7px 10px
+   @include sm
+      &__content
+         padding: 15px
+         &-header
+            flex-direction: column
+            align-items: flex-start
+         &-item
+            padding-left: 42px
+            gap: var(--gap-3)
+            &::before
+               width: 32px
+         &-label
+            padding: 3px 5px

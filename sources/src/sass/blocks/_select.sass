@@ -8,6 +8,21 @@
             .svg
                &-icon-arrow-down
                   fill: var(--accent)
+   &--default
+      width: auto
+      display: inline-block
+      .select
+         &__active
+            padding: 0
+            padding-right: 20px
+            border: none
+            font-size: var(--font-size)
+            svg
+               --size: 14px
+               width: var(--size)
+               height: var(--size)
+               fill: var(--accent)
+               right: 0
    &__active
       @extend input
       width: 100%
@@ -25,12 +40,16 @@
       &.is-selected
          color: var(--black)
       .svg
-         &-icon-arrow-down
-            position: absolute
-            right: 18px
-            top: 50%
-            transform: translateY(-50%)
-            fill: currentColor
+         &-icon
+            &-arrow-down
+               position: absolute
+               right: 18px
+               top: 50%
+               transform: translateY(-50%)
+               fill: currentColor
+            &-date
+               fill: var(--accent)
+               color: var(--accent)
       span
          .select--lang &
             position: relative

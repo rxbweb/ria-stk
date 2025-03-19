@@ -12,6 +12,13 @@
       display: flex
       gap: 20px
       align-items: flex-start
+      &:hover,
+      &:focus,
+      &:active
+         .button
+            &__icon
+               background: var(--accent)
+               color: #fff
    &__img
       width: 180px
       height: 200px
@@ -30,6 +37,8 @@
    &__info
       align-self: stretch
       @include align-block(10px)
+      .button
+         align-self: flex-start
    &__name
       @extend .title
       @extend .title--second

@@ -69,12 +69,25 @@
          @extend .title
          @extend .title--main
          white-space: pre-line
+      &-text
+         white-space: pre-line
+         color: var(--black)
+         font-size: 20px
+         line-height: 140%
       &-search
          flex-basis: 420px
       &-manage
          display: flex
          flex-wrap: wrap
          gap: 10px var(--gap)
+      &-label
+         @extend .title
+         @extend .title--second
+         @extend .title--red
+         padding: 20px 25px
+         border-radius: 10px
+         background: rgba(194, 37, 33, 0.20)
+         letter-spacing: var(--letter-spacing)
    &__footer
       padding-top: 25px
       display: none
@@ -96,7 +109,16 @@
          &-search
             width: 100%
             flex-basis: auto
+         &-text
+            font-size: 18px
+         &-label
+            padding: 15px
+            letter-spacing: -0.48px
          .select
             display: none
       &__footer
          display: flex
+   @include xs
+      &__header
+         &-text
+            font-size: 16px

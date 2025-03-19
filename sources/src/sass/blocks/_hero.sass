@@ -52,12 +52,16 @@
    &__text
       margin-bottom: 50px
       @include margin-bottom(15px)
+      & > *
+         white-space: pre-line
    &__content
       max-width: 100%
       width: calc(1640px - var(--info-width) - var(--row-gap))
    &__img
       padding-top: 80px
       padding-bottom: 70px
+      display: flex
+      justify-content: flex-end
    &__books
       &-figure
          width: 396px
@@ -290,6 +294,10 @@
             &__bullets
                justify-content: center
                bottom: 30px
+      &__img
+         padding: 0
+         padding-bottom: var(--gap)
+         justify-content: flex-start
    @include ms
       &--default
          .hero
