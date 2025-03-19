@@ -1,0 +1,8 @@
+.range
+   @include margin-bottom(16px)
+   &__controls
+      display: flex
+      flex-wrap: wrap
+      gap: 20px var(--gap)
+      & > *
+         width: calc(50% - var(--gap) / 2)
