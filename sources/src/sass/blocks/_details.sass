@@ -43,7 +43,7 @@
          @extend .title--second
          white-space: pre-line
       &-text
-         color: #67686B
+         color: var(--gray)
       &-description
          @extend .title
          @extend .title--third
@@ -51,13 +51,13 @@
          position: absolute
          left: 0
          top: 25px
-         color: #cdcdcd
+         color: var(--gray-300)
          transition: var(--transition)
          white-space: pre-line
       &-price
          @extend .title
          @extend .title--second
-         color: #47535E
+         color: var(--dark)
       &-manage
          display: flex
          align-items: center
@@ -69,7 +69,7 @@
          margin-left: auto
          display: flex
          gap: 8px
-         background: #EFEFEF url('../images/details/details-images-bg.jpg') no-repeat center / cover
+         background: #efefef url('../images/details/details-images-bg.jpg') no-repeat center / cover
          border-radius: var(--border-radius-15)
          overflow: hidden
          &--large

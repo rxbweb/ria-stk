@@ -62,7 +62,7 @@
             position: absolute
             left: 15px
             top: 10px
-            color: #cdcdcd
+            color: var(--gray-300)
             transition: all var(--duration) ease
          &:hover,
          &:focus
@@ -90,6 +90,7 @@
    &__name
       @extend .title
       @extend .title--second
+      white-space: pre-line
    &__company
       @extend .title
       @extend .title--small

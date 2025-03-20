@@ -32,7 +32,7 @@
    &__text
       @include margin-bottom(15px)
       a
-         color: #9D7D4B
+         color: var(--bronze)
          text-decoration: underline
       ol
          counter-reset: num
@@ -58,7 +58,7 @@
          flex-direction: column
          align-items: center
          gap: 20px
-         background: #F0F0F0
+         background: var(--gray-100)
          border-radius: 15px
          border: 1px solid transparent
          text-align: center
@@ -152,7 +152,7 @@
       &-btn
          @extend .title
          @extend .title--second
-         color: #67686B
+         color: var(--gray)
          letter-spacing: var(--letter-spacing)
          border-bottom: 1px solid transparent
          &.is-active

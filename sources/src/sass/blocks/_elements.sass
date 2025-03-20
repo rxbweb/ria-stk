@@ -102,10 +102,10 @@
          min-height: 40px
    &--disabled,
    &[disabled]
-      background: #CDCDCD
+      background: var(--gray-300)
       cursor: default
       svg
-         stroke: #CDCDCD
+         stroke: var(--gray-300)
 
 .btn
    --size: 48px
@@ -374,7 +374,7 @@
 .gray-box
    padding: var(--box-padding)
    border-radius: 15px
-   background: #F3F3F3
+   background: var(--gray-bg)
 
 .svg
    &-icon
@@ -452,7 +452,7 @@
    display: block
 
 .agree
-   color: #47535E
+   color: var(--dark)
    user-select: none
    line-height: 110%
    position: relative
@@ -504,7 +504,7 @@
       gap: 8px
       .agree
          &__checkbox
-            border-color: #CDCDCD
+            border-color: var(--gray-300)
    @include sm
       font-size: 14px
    @include xs

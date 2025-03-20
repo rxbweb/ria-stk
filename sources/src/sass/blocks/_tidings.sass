@@ -11,7 +11,7 @@
                padding-bottom: 0
       & > *
          padding: 15px 0
-         border-bottom: 1px solid #D5D3CB
+         border-bottom: 1px solid var(--border-color)
          &:first-child
             padding-top: 0
          &:last-child
@@ -40,7 +40,7 @@
       @extend .title--sixth
       letter-spacing: var(--letter-spacing)
    &__text
-      color: #67686B
+      color: var(--gray)
       @include line-clamp(3)
    &__bottom
       flex-direction: column
@@ -54,7 +54,7 @@
             & > *
                &:last-child,
                &:nth-last-child(2)
-                  border-bottom: 1px solid #D5D3CB
+                  border-bottom: 1px solid var(--border-color)
                   padding-bottom: 15px
    @include sm
       &__list

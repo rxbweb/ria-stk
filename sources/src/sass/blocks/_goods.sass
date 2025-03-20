@@ -7,7 +7,7 @@
       overflow: hidden
       position: relative
       & > *
-         border-top: 1px solid #CDCDCD
+         border-top: 1px solid var(--gray-300)
          &:first-child
             border-top: none
       &--disabled
@@ -19,7 +19,7 @@
             z-index: 500
    &__box
       padding: var(--box-padding)
-      background: #F3F3F3
+      background: var(--gray-bg)
       overflow: hidden
       @include margin-bottom(var(--gap))
       .webform
@@ -33,7 +33,7 @@
       @include fluidFontSize(20px, 40px, 360px, 1920px, 40px)
    &__table
       --item-padding: 40px
-      color: #191C23
+      color: var(--black)
       @include margin-bottom(20px)
       &-header,
       &-item
@@ -46,10 +46,10 @@
                padding-left: 0
       &-header
          padding-bottom: 20px
-         border-bottom: 1px solid #D9D9D9
+         border-bottom: 1px solid var(--gray-200)
       &-heading
          font-weight: 500
-         color: #47535E
+         color: var(--dark)
       &-list
          @include margin-bottom(20px)
       &-col
@@ -87,7 +87,7 @@
          svg
             width: 77%
             height: auto
-            fill: #47535E
+            fill: var(--dark)
          &--disk
             img,
             picture
@@ -112,7 +112,7 @@
          gap: 2px
          &-old
             padding-right: 8px
-            color: #47535E
+            color: var(--dark)
             font-size: 14px
             line-height: 140%
             text-decoration-line: line-through
@@ -121,14 +121,14 @@
             color: #fff
             font-size: 14px
             border-radius: 5px
-            background: #9D7D4B
+            background: var(--bronze)
             position: absolute
             right: 0
             transform: translateX(85%) translateY(-2px)
       &-delete
          width: 24px
          height: 24px
-         color: #47535E
+         color: var(--dark)
          svg
             --size: 26px
             width: var(--size)
@@ -138,10 +138,10 @@
       &-controls
          height: 46px
          padding-right: 21px
-         border: 1px solid #CDCDCD
+         border: 1px solid var(--gray-300)
          border-radius: var(--border-radius)
          background: #fff
-         color: #191C23
+         color: var(--black)
          overflow: hidden
          display: flex
          position: relative
@@ -154,7 +154,7 @@
             align-items: center
             flex-shrink: 0
             border: none
-            border-right: 1px solid #CDCDCD
+            border-right: 1px solid var(--gray-300)
             text-align: center
          &-button
             width: 21px
@@ -175,7 +175,7 @@
                height: 22px
                bottom: auto
                top: 0
-               border-bottom: 1px solid #CDCDCD
+               border-bottom: 1px solid var(--gray-300)
       &-bottom
          display: flex
          justify-content: flex-end
@@ -211,7 +211,7 @@
             @include margin-bottom(15px)
             & > *
                padding-bottom: 15px
-               border-bottom: 1px solid #D9D9D9
+               border-bottom: 1px solid var(--gray-200)
          &-col
             position: relative
             padding-top: 20px
@@ -252,7 +252,7 @@
                width: var(--controls-size)
                height: var(--controls-size)
                padding: 5px
-               border-right: 1px solid #cdcdcd
+               border-right: 1px solid var(--gray-300)
                &:last-child
                   border-right: none
             &-button

@@ -21,7 +21,7 @@
          width: calc(100% - var(--padding) * 2)
          max-width: calc(var(--container-width) - var(--padding) * 2)
          height: 1px
-         background: #D5D3CB
+         background: var(--border-color)
       &::before
          top: 0
       &::after
@@ -47,7 +47,7 @@
          margin-bottom: 0
       &--border
          padding-bottom: 30px
-         border-bottom: 1px solid #cdcdcd
+         border-bottom: 1px solid var(--gray-300)
       &--margin
          margin-bottom: var(--gap-large)
       &-row
@@ -86,7 +86,7 @@
          @extend .title--red
          padding: 20px 25px
          border-radius: 10px
-         background: rgba(194, 37, 33, 0.20)
+         background: var(--soft-red)
          letter-spacing: var(--letter-spacing)
    &__footer
       padding-top: 25px
@@ -95,7 +95,7 @@
       align-items: flex-start
    &__bg
       @extend .bg-image
-      background-color: #cdcdcd
+      background-color: var(--gray-300)
    @include sm
       &__header
          margin-bottom: 30px

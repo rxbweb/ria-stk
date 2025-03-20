@@ -5,7 +5,7 @@
    max-width: 1160px
    margin: 0 auto
    padding: 40px
-   background: #F4F4F4
+   background: #f4f4f4
    border-radius: var(--border-radius-15)
    overflow: hidden
    &--wide
@@ -27,12 +27,12 @@
          max-width: 600px
          white-space: pre-line
    &__body
-      @include border-bottom(#191C23)
+      @include border-bottom(var(--black))
       @include margin-bottom(var(--elements-padding))
       @include padding-bottom(var(--elements-padding))
    &__header
       padding-bottom: var(--elements-padding)
-      border-bottom: 1px solid #191C23
+      border-bottom: 1px solid var(--black)
       @include margin-bottom(var(--elements-margin))
       &--secondary
          padding-bottom: 0
@@ -275,7 +275,7 @@
       &--secondary
          padding: var(--gap-2)
          border-radius: var(--border-radius-15)
-         background: rgba(194, 37, 33, 0.20)
+         background: var(--soft-red)
    &__name
       @extend .title
       @include fluidFontSize(24px, 40px, 360px, 1920px, 32px)
@@ -317,7 +317,7 @@
          min-height: 170px
          padding: 10px
          border-radius: var(--border-radius-10)
-         border: 1px solid #CDCDCD
+         border: 1px solid var(--gray-300)
          background: #fff
          display: flex
          justify-content: center

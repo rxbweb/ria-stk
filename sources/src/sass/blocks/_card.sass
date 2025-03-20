@@ -35,13 +35,13 @@
       padding: 15px
       height: 100%
       border-radius: 15px
-      background: #F5F5F5
+      background: var(--gray-50)
       display: flex
       flex-direction: column
       .swiper-slide &
          background: #fff
    &__box
-      background: #F5F5F5
+      background: var(--gray-50)
       position: relative
       @include img-cover(60%, var(--border-radius-15))
       .swiper-slide &
@@ -90,7 +90,7 @@
          margin-top: auto
    &__text
       margin-bottom: 5px
-      color: #67686B
+      color: var(--gray)
       font-size: 13px
    &__name
       @extend .title
@@ -101,7 +101,7 @@
    &__price
       @extend .title
       @extend .title--fifth
-      color: #47535E
+      color: var(--dark)
    &__manage
       display: flex
       align-items: center
@@ -122,14 +122,14 @@
    &__table
       padding: 20px
       border-radius: 15px
-      background: #F3F3F3
+      background: var(--gray-bg)
       overflow: hidden
       &-header
          padding-bottom: var(--cardTableMargin)
          display: flex
          flex-wrap: wrap
          gap: 20px
-         border-bottom: 1px solid #CDCDCD
+         border-bottom: 1px solid var(--gray-300)
       &-section
          padding-top: 20px
          overflow: hidden

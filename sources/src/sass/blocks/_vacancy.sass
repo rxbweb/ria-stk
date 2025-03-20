@@ -10,14 +10,14 @@
       flex-shrink: 0
    &__content
       flex-grow: 1
-      color: #67686B
+      color: var(--gray)
    &__header
       padding-bottom: 25px
       display: flex
       flex-wrap: wrap
       justify-content: space-between
       gap: var(--vacancy-gap)
-      border-bottom: 1px solid #CDCDCD
+      border-bottom: 1px solid var(--gray-300)
       &-left
          display: flex
          flex-wrap: wrap
@@ -31,7 +31,7 @@
          justify-content: center
          align-items: center
          border-radius: 15px
-         border: 1px solid #CDCDCD
+         border: 1px solid var(--gray-300)
          background: #fff
          overflow: hidden
       &-details
@@ -50,7 +50,7 @@
          gap: 20px
    &__meta
       --vacancy-meta-margin: 17px
-      color: #67686B
+      color: var(--gray)
       @include margin-right(var(--vacancy-meta-margin))
       & > *
          &:not(:last-child)
@@ -108,7 +108,7 @@
    &__item
       padding: 25px
       border-radius: 15px
-      background: #F0F0F0
+      background: var(--gray-100)
       color: var(--black)
       overflow: hidden
       &-info
@@ -121,7 +121,7 @@
       &-text
          width: 100%
          max-width: 466px
-         color: #67686B
+         color: var(--gray)
       &-bottom
          display: flex
          align-items: center
@@ -141,7 +141,7 @@
    &__post
       padding: 25px
       border-radius: 15px
-      background: rgba(194, 37, 33, 0.20)
+      background: var(--soft-red)
       overflow: hidden
       @include margin-bottom(15px)
    &__manage

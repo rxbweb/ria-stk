@@ -32,7 +32,7 @@
       flex-direction: column
    &__box
       @include img-cover(100%, var(--border-radius-15))
-      background: #F5F5F5
+      background: var(--gray-50)
       position: relative
    &__icon
       position: absolute
@@ -73,7 +73,7 @@
    &__bottom
       @include margin-bottom(15px)
    &__text
-      color: #67686B
+      color: var(--gray)
    &__name
       @extend .title
       @extend .title--sixth
@@ -86,7 +86,7 @@
    &__price
       @extend .title
       @extend .title--fifth
-      color: #47535E
+      color: var(--dark)
       white-space: nowrap
       &--old
          opacity: 0.5
@@ -114,7 +114,7 @@
       &-item
          padding: 10px 15px
          border-radius: 3px
-         background: #FFD6D4
+         background: #ffd6d4
          color: var(--accent)
          font-size: 14px
          font-weight: 500
