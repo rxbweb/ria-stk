@@ -1,0 +1,41 @@
+include ../../mixins/_mixins
+
+section.section.section--products
+   .section__wrapper.container
+      .section__header
+         .section__header-row
+            h2.section__header-heading Защита продукта
+         p.section__header-text #{'Сохранность продукции в условиях воздействия климатических или других'}
+            |
+            | неблагоприятных факторов при ее использовании, транспортировке или хранении.
+      .section__content
+         .products
+            .products__inner
+               .products__header
+                  h2.products__title Статьи с этим термином
+               .products__section
+                  .products__top
+                     h3.products__top-title Фильтры
+                     .products__sort
+                        .sort
+                           a.sort__toggle(href="#")
+                              span.sort__toggle-icon
+                                 +svg('icon-sort', '', 22, 22)
+                              span Сортировка
+                              span.sort__toggle-arrow
+                                 +svg('icon-arrow-down', '', 16, 16)
+                           .sort__main
+                              .sort__box
+                                 .sort__list
+                                    +select(false, ['2020', '2021', '2022', '2023', '2024', '2025'], 'select--default', '', 'По дате')
+                                    +select(false, ['Автор 1', 'Автор 2', 'Автор 3', 'Автор 4', 'Автор 5', 'Автор 6'], 'select--default', '', 'По автору')
+                                    +select(false, ['Название 1', 'Название 2', 'Название 3', 'Название 4', 'Название 5', 'Название 6'], 'select--default', '', 'По названию')
+                     .search
+                        button.search__button(aria-label="кнопка поиска")
+                           svg(width="26" height="26")
+                              use(href='images/sprites/main.stack.svg#svg-icon-loop')
+                        input.search__input(type="text" placeholder="Искать по названию")
+                  .products__filter
+                     include ../filter/_filter-03
+                  .products__main
+                     include ../overview/_overview-02
