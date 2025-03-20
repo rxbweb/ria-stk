@@ -1,8 +1,12 @@
 .content
    &__row
-      display: grid
-      grid-template-columns: repeat(2, 1fr)
+      display: flex
+      flex-wrap: wrap
       gap: var(--gap)
+      & > *
+         flex-basis: calc(50% - var(--gap) / 2)
+         flex-grow: 1
+         flex-shrink: 0
    &__block
       overflow: hidden
       display: flex
@@ -49,8 +53,9 @@
       @include margin-bottom(15px)
    @include md
       &__row
-         grid-template-columns: 1fr
-         gap: 60px
+         flex-direction: column
+         & > *
+            flex-basis: auto
    @include sm
       &__box
          padding: 20px
