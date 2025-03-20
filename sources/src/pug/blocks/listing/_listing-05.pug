@@ -1,26 +1,28 @@
+include ../../mixins/_mixins
+
 -
    const listings05 = [
       {
          text: 'Экспертные статьи, позволяющие знаниям стать навыками',
-         badge: 'images/badges/badge-15.svg',
+         badge: 'badge-15',
          badgeWidth: '32',
          badgeHeight: '32',
       },
       {
          text: 'Междисциплинарный подход к исследованию темы',
-         badge: 'images/badges/badge-16.svg',
+         badge: 'badge-16',
          badgeWidth: '34',
          badgeHeight: '32',
       },
       {
          text: 'Авторы, чье <br> мнение интересно',
-         badge: 'images/badges/badge-17.svg',
+         badge: 'badge-17',
          badgeWidth: '34',
          badgeHeight: '34',
       },
       {
          text: 'Образцы лучших <br> практик',
-         badge: 'images/badges/badge-18.svg',
+         badge: 'badge-18',
          badgeWidth: '36',
          badgeHeight: '36',
       },
@@ -40,5 +42,5 @@ section.section.section--listing
                            li.listing__item
                               .listing__box
                                  .badge.badge--large
-                                    img(src=listing.badge, alt="иконка" width=listing.badgeWidth height=listing.badgeHeight)
+                                    +svg(listing.badge, '', listing.badgeWidth + 2, listing.badgeHeight + 2)
                                  h3.listing__name!=listing.text
