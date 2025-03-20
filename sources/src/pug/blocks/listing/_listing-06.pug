@@ -1,44 +1,46 @@
+include ../../mixins/_mixins
+
 -
    const listings06 = [
       {
-         badge: 'images/badges/badge-15.svg',
+         badge: 'badge-15',
          badgeSize: '32',
          title: 'Экспертные статьи, позволяющие знаниям стать навыками'
       },
       {
-         badge: 'images/badges/badge-16.svg',
+         badge: 'badge-16',
          badgeSize: '34',
          title: 'Междисциплинарный подход к исследованию темы'
       },
       {
-         badge: 'images/badges/badge-17.svg',
+         badge: 'badge-17',
          badgeSize: '34',
-         title: 'Авторы, чье <br> мнение интересно'
+         title: 'Авторы, чье \n мнение интересно'
       },
       {
-         badge: 'images/badges/badge-18.svg',
+         badge: 'badge-18',
          badgeSize: '36',
-         title: 'Образцы лучших <br> практик'
+         title: 'Образцы лучших \n практик'
       },
       {
-         badge: 'images/badges/badge-15.svg',
+         badge: 'badge-15',
          badgeSize: '32',
          title: 'Экспертные статьи, позволяющие знаниям стать навыками'
       },
       {
-         badge: 'images/badges/badge-16.svg',
+         badge: 'badge-16',
          badgeSize: '34',
          title: 'Междисциплинарный подход к исследованию темы'
       },
       {
-         badge: 'images/badges/badge-17.svg',
+         badge: 'badge-17',
          badgeSize: '34',
-         title: 'Авторы, чье <br> мнение интересно'
+         title: 'Авторы, чье \n мнение интересно'
       },
       {
-         badge: 'images/badges/badge-18.svg',
+         badge: 'badge-18',
          badgeSize: '36',
-         title: 'Образцы лучших <br> практик'
+         title: 'Образцы лучших \n практик'
       },
    ]
 
@@ -56,5 +58,5 @@ section.section.section--listing
                         li.listing__item
                            .listing__box
                               .badge.badge--large
-                                 img(src=listing.badge, alt="иконка" width=listing.badgeSize height=listing.badgeSize)
+                                 +svg(listing.badge, '', listing.badgeWidth + 2, listing.badgeHeight + 2)
                               h3.listing__name=listing.title

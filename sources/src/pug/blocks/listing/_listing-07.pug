@@ -1,37 +1,39 @@
+include ../../mixins/_mixins
+
 -
    const listings07 = [
       {
-         badge: 'images/badges/badge-19.svg',
+         badge: 'badge-19',
          badgeWidth: '35',
          badgeHeight: '36',
          title: 'Старейшее бизнес-издание современной <br> России — издается с 1996 г.'
       },
       {
-         badge: 'images/badges/badge-20.svg',
+         badge: 'badge-20',
          badgeWidth: '40',
          badgeHeight: '46',
          title: 'Площадка для общения и обмена <br> опытом'
       },
       {
-         badge: 'images/badges/badge-21.svg',
+         badge: 'badge-21',
          badgeWidth: '44',
          badgeHeight: '42',
          title: 'В каждом номере успешные кейсы <br> и готовые бизнес-решения'
       },
       {
-         badge: 'images/badges/badge-22.svg',
+         badge: 'badge-22',
          badgeWidth: '41',
          badgeHeight: '40',
          title: 'Выпускается в печатном и <br> электронном виде'
       },
       {
-         badge: 'images/badges/badge-23.svg',
+         badge: 'badge-23',
          badgeWidth: '36',
          badgeHeight: '36',
          title: 'Многократный победитель <br> профессиональных конкурсов'
       },
       {
-         badge: 'images/badges/badge-24.svg',
+         badge: 'badge-24',
          badgeWidth: '36',
          badgeHeight: '30',
          title: 'Суммарная аудитория одного <br> выпуска 91 000+ специалистов'
@@ -52,5 +54,5 @@ section.section.section--listing
                         li.listing__item
                            .listing__box
                               .badge.badge--large
-                                 img(src=listing.badge, alt="иконка" width=listing.badgeWidth height=listing.badgeHeight)
+                                 +svg(listing.badge, '', listing.badgeWidth + 2, listing.badgeHeight + 2)
                               h3.listing__name!=listing.title
