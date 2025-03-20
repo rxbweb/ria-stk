@@ -1,0 +1,30 @@
+.pane
+   color: #47535E
+   &__main
+      display: flex
+      flex-wrap: wrap
+      gap: var(--gap)
+      & > *
+         flex-basis: calc(50% - var(--gap) / 2)
+         flex-grow: 1
+         flex-shrink: 0
+   &__info
+      @include margin-bottom(var(--gap))
+      @include mt-auto()
+      height: 100%
+      display: flex
+      flex-direction: column
+   &__title
+      @extend .title
+   &__img
+      border-radius: var(--border-radius-15)
+      overflow: hidden
+      img,
+      picture
+         border-radius: var(--border-radius-15)
+         overflow: hidden
+   @include ms
+      &__main
+         flex-direction: column
+         & > *
+            flex-basis: auto

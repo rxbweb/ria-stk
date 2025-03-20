@@ -1,0 +1,26 @@
+include ../../mixins/_mixins
+
+-
+   const pointsList = [
+      {
+         title: 'Тематические подборки доступны только после покупки. \n Они не участвуют в абонементах.'
+      },
+   ]
+
+section.section.section--pane
+   .section__wrapper.container
+      .pane
+         .pane__inner
+            .pane__main
+               .pane__col
+                  .pane__info
+                     h2.pane__title Тематическая подборка
+                     p.pane__text Мы систематизировали лучшие публикации из журналов РИА «Стандарты и качество» по темам и авторам. Таким образом, вы сможете в ретроспективе проследить эволюцию решений основополагающих проблем в области стандартизации и качества, а также получите комплексный срез обоснованных и эффективных управленческих решений на основе анализа лучших практик совершенствования бизнес-процессов.
+                     .points
+                        ul.points__list.points__list--2
+                           each point in pointsList
+                              li.points__item
+                                 p= point.title
+               .pane__col
+                  .pane__img
+                     +picture('images/pane/pane-01.jpg', 'images/pane/pane-01-mob.jpg', 'Тематическая подборка', 800, 440)
