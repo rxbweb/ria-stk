@@ -44,59 +44,93 @@ include ../../mixins/_mixins
       },
    ]
 
+   const articleAuthors03 = [
+      {
+         name: 'Ольга Абрамова, Светлана Черемухина',
+         info: [
+            {text: 'Тел. +7 495 771 66 52,  доб. 170, 142, 143,'},
+            {text: 'e-mail: abc@mirq.ru; www.ria-stk.ru'}
+         ]
+      },
+   ]
+
+   const articleProcess = [
+      {
+         img: 'images/article/article-process-01.jpg'
+      },
+      {
+         img: 'images/article/article-process-02.jpg'
+      },
+      {
+         img: 'images/article/article-process-02.jpg'
+      },
+      {
+         img: 'images/article/article-process-01.jpg'
+      },
+      {
+         img: 'images/article/article-process-02.jpg'
+      },
+      {
+         img: 'images/article/article-process-02.jpg'
+      },
+   ]
+
 article.section.section--article.section--padding-top-none
    .section__wrapper.container
       .section__content
          .article.article--large
             .article__inner
                .article__body
-                  .article__row
-                     .article__col
-                        ul.article__details
-                           li.article__details-item
-                              p Дата мероприятия
-                              p.article__details-name 6–7 октября 2025
-                           li.article__details-item
-                              p Формат
-                              p.article__details-name офлайн и онлайн
-                           li.article__details-item
-                              p Место проведения
-                              p.article__details-name Москва, Инновационный центр «Сколково»
-                        h1.article__name VIII Всероссийская научно-практическая конференция «Построение системы менеджмента качества медицинской организации. Лучшие практики»
-                        .article__bottom
-                           +button-icon('link', 'Подробнее на сайте мероприятия')
-                     .article__col
-                        .article__img
-                           +picture("images/article/article-04.jpg", false, "картинка", 792, 446)
-                  .article__row
-                     .article__col
-                        h2.article__heading Описание
-                        p Программа конференции направлена на формирование практических компетенций в области управления процессами медицинской организации. На конференции будут представлены лучшие региональные практики по обеспечению качества и безопасности медицинской деятельности. Слушатели смогут применить полученные знания в своей практике, получат возможность обменяться опытом с коллегами и установить новые полезные контакты.
-                        p Программа конференции проходит аккредитацию в системе непрерывного медицинского образования (НМО)
-                     .article__col
-                        .article__note
-                           .article__note-icon
-                              img(src="images/icons/exclamation.svg", alt="иконка" width="50" height="50")
-                           h3.article__note-title Оплачивайте участие до 15 августа и экономьте 10 000 рублей.
-                  .article__row
-                     .article__col
-                        h2.article__heading Программа мероприятия
-                        p В программу первого дня конференции вошли пленарные выступления, панельная дискуссия, бенчмарк-сессия «Лучшие практики управления качеством в медицинской организации», мастер-классы, посвященные менеджменту в сестринском деле и управлению персоналом как фактором построения эффективной системы менеджмента качества и безопасности медицинской деятельности в медицинской организации. 
-                        p Во второй день состоятся профессиональные экскурсии в ведущие медицинские организации Москвы. По завершении экскурсий конференция продолжится в клинике академика Ройтберга. Вторая часть бенчмарк-сессии пройдет в форме видеодокладов: специалисты продемонстрируют и прокомментируют видеоматериалы по определенной теме, отснятые в своей медорганизации. В завершение конференции состоится дискуссия — участники обменяются мнениями, получат ответы экспертов на свои вопросы.
-                        .article__bottom
-                           +button-icon('link', 'Подробнее на сайте мероприятия')
-                     .article__col
-                        h2.article__heading К участию приглашаются
-                        ul.article__listing
-                           li руководители и специалисты органов исполнительной власти в сфере здравоохранения всех уровней;
-                           li главные врачи, заместители главного врача, главные медицинские сестры, заведующие отделениями медицинских организаций всех типов, размеров и организационно-правовых форм;
-                           li руководители лечебно-диагностических лабораторий;
-                           li специалисты, уполномоченные лица по качеству;
-                           li руководители медицинских НИИ, высших и средних профессиональных медицинских  учебных учреждений;
-                           li специалисты ФОМС, медицинских страховых компаний;
-                           li эксперты, аудиторы, консультанты в области сертификации медицинских организаций, стандартизации процессов, аккредитации медицинских специалистов, другие заинтересованные лица.
+                  .article__box
+                     .article__row
+                        .article__col
+                           ul.article__details
+                              li.article__details-item
+                                 p Дата мероприятия
+                                 p.article__details-name 6–7 октября 2025
+                              li.article__details-item
+                                 p Формат
+                                 p.article__details-name офлайн и онлайн
+                              li.article__details-item
+                                 p Место проведения
+                                 p.article__details-name Москва, Инновационный центр «Сколково»
+                           h1.article__name VIII Всероссийская научно-практическая конференция «Построение системы менеджмента качества медицинской организации. Лучшие практики»
+                           .article__bottom
+                              +button-icon('link', 'Подробнее на сайте мероприятия')
+                        .article__col
+                           .article__img
+                              +picture("images/article/article-04.jpg", false, "картинка", 792, 446)
+                  .article__box
+                     .article__row
+                        .article__col
+                           h2.article__heading Описание
+                           p Программа конференции направлена на формирование практических компетенций в области управления процессами медицинской организации. На конференции будут представлены лучшие региональные практики по обеспечению качества и безопасности медицинской деятельности. Слушатели смогут применить полученные знания в своей практике, получат возможность обменяться опытом с коллегами и установить новые полезные контакты.
+                           p Программа конференции проходит аккредитацию в системе непрерывного медицинского образования (НМО)
+                        .article__col
+                           .article__note
+                              .article__note-icon
+                                 img(src="images/icons/exclamation.svg", alt="иконка" width="50" height="50")
+                              h3.article__note-title Оплачивайте участие до 15 августа и экономьте 10 000 рублей.
+                  .article__box
+                     .article__row
+                        .article__col
+                           h2.article__heading Программа мероприятия
+                           p В программу первого дня конференции вошли пленарные выступления, панельная дискуссия, бенчмарк-сессия «Лучшие практики управления качеством в медицинской организации», мастер-классы, посвященные менеджменту в сестринском деле и управлению персоналом как фактором построения эффективной системы менеджмента качества и безопасности медицинской деятельности в медицинской организации. 
+                           p Во второй день состоятся профессиональные экскурсии в ведущие медицинские организации Москвы. По завершении экскурсий конференция продолжится в клинике академика Ройтберга. Вторая часть бенчмарк-сессии пройдет в форме видеодокладов: специалисты продемонстрируют и прокомментируют видеоматериалы по определенной теме, отснятые в своей медорганизации. В завершение конференции состоится дискуссия — участники обменяются мнениями, получат ответы экспертов на свои вопросы.
+                        .article__col
+                           h2.article__heading К участию приглашаются
+                           ul.article__listing
+                              li руководители и специалисты органов исполнительной власти в сфере здравоохранения всех уровней;
+                              li главные врачи, заместители главного врача, главные медицинские сестры, заведующие отделениями медицинских организаций всех типов, размеров и организационно-правовых форм;
+                              li руководители лечебно-диагностических лабораторий;
+                              li специалисты, уполномоченные лица по качеству;
+                              li руководители медицинских НИИ, высших и средних профессиональных медицинских  учебных учреждений;
+                              li специалисты ФОМС, медицинских страховых компаний;
+                              li эксперты, аудиторы, консультанты в области сертификации медицинских организаций, стандартизации процессов, аккредитации медицинских специалистов, другие заинтересованные лица.
+                     .article__bottom
+                        +button-icon('link', 'Подробнее на сайте мероприятия')
                   .article__people
-                     h2.article__people-title Спикеры
+                     h2.article__heading Спикеры
                      ul.article__people-list.article__people-list--3
                         each author in articleAuthors02
                            li.article__people-item
@@ -123,3 +157,54 @@ article.section.section--article.section--padding-top-none
                            p.article__details-name 33 000 руб.
                      .article__bottom
                         +button-icon('link', 'Подробнее на сайте мероприятия')
+                  .article__box
+                     h2.article__heading.article__heading--center Как это было
+                     .article__process
+                        .article__process-slider
+                           .swiper-wrapper
+                              each slide in articleProcess
+                                 .swiper-slide
+                                    a.article__process-slide(href=slide.img data-fancybox)
+                                       +picture(slide.img, false, 'картинка', 520, 346)
+                           +swiperControls()
+                  .article__box
+                     .article__row
+                        .article__col
+                           .article__companies
+                              h2.article__heading Партнеры
+                              ul.article__companies-list
+                                 li.article__companies-item
+                                    img(src="images/article/article-companies-01.png", width="208" height="64" alt="Кодекс Техэксперт")
+                                 li.article__companies-item
+                                    img(src="images/article/article-companies-02.png", width="208" height="54" alt="МКМ")
+                        .article__col
+                           .article__companies
+                              h2.article__heading Организаторы
+                              ul.article__companies-list
+                                 li.article__companies-item
+                                    img(src="images/article/article-companies-03.png", width="208" height="66" alt="Стандарты и качество")
+                                 li.article__companies-item
+                                    img(src="images/article/article-companies-04.png", width="208" height="101" alt="Клиника Академика Ройтбрега")
+                                 li.article__companies-item
+                                    img(src="images/article/article-companies-05.png", width="208" height="101" alt="Всероссийская Организация Качества")
+                                 li.article__companies-item
+                                    img(src="images/article/article-companies-06.png", width="208" height="101" alt="ФГАУ")
+                                 li.article__companies-item
+                                    img(src="images/article/article-companies-07.png", width="208" height="46" alt="Национальный Институт Качества")
+                                 li.article__companies-item
+                                    img(src="images/article/article-companies-08.png", width="208" height="101" alt="ОБП")
+                  .article__people
+                     h2.article__heading Оргкомитет
+                     ul.article__people-list.article__people-list--1
+                        each author in articleAuthors03
+                           li.article__people-item
+                              .article__people-img
+                                 if author.img 
+                                    img(src=author.img , alt=author.name width="140" height="140")
+                              if author.name || author.text
+                                 .article__people-info
+                                    if author.name
+                                       p.article__people-name= author.name
+                                    if author.info
+                                       each item in author.info
+                                          p.article__people-text= item.text
