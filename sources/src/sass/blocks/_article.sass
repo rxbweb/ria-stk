@@ -57,6 +57,8 @@
    &__heading
       @extend .title
       @extend .title--second
+      &--center
+         text-align: center
    &__caption
       margin-bottom: var(--gap-2)
       white-space: pre-line
@@ -75,6 +77,18 @@
          display: grid
          grid-template-columns: repeat(2, 1fr)
          gap: 15px 25px
+         &--1
+            padding-right: 0
+            grid-template-columns: 1fr
+            .article
+               &__people
+                  &-item
+                     width: 100%
+                     max-width: 1080px
+                     padding: var(--gap-2)
+                     gap: var(--gap-2)
+                     border-radius: var(--border-radius-15)
+                     background: #fff
          &--3
             padding-right: 0
             grid-template-columns: repeat(3, 1fr)
@@ -94,6 +108,9 @@
       &-title
          @extend .title
          font-size: 24px
+      &-name
+         @extend .title
+         @include fluidFontSize(16px, 20px, 360px, 1920px, 20px)
    &__info
       &-inner
          padding: 30px
@@ -256,14 +273,14 @@
          @extend .title--second
          @extend .title--red
       &--secondary
-         padding: 30px
+         padding: var(--gap-2)
          border-radius: var(--border-radius-15)
          background: rgba(194, 37, 33, 0.20)
    &__name
       @extend .title
       @include fluidFontSize(24px, 40px, 360px, 1920px, 32px)
    &__note
-      padding: 30px
+      padding: var(--gap-2)
       border-radius: 20px
       border: 1px solid var(--accent)
       background: #fff
@@ -281,6 +298,30 @@
       &-title
          @extend .title
          @include fluidFontSize(16px, 22px, 360px, 1920px, 20px)
+   &__process
+      overflow: hidden
+      &-slider
+         @include margin-bottom(15px)
+      &-slide
+         @include img-cover(68%, var(--border-radius-15))
+         display: block
+   &__companies
+      width: 100%
+      max-width: 900px
+      @include margin-bottom(var(--elements-margin))
+      &-list
+         display: grid
+         grid-template-columns: repeat(3, 1fr)
+         gap: var(--gap-4)
+      &-item
+         min-height: 170px
+         padding: 10px
+         border-radius: var(--border-radius-10)
+         border: 1px solid #CDCDCD
+         background: #fff
+         display: flex
+         justify-content: center
+         align-items: center
    .tags
       width: auto
       display: flex
@@ -288,12 +329,24 @@
       overflow: hidden
       color: var(--black)
       white-space: normal
+   @include xl
+      &__people
+         &-list
+            &--3
+               grid-template-columns: repeat(2, 1fr)
+      &__companies
+         &-item
+            min-height: 160px
+            padding: 5px
    @include md
       padding: 30px
       &__subscribe
          &-content,
          &-info
             width: calc(50% - 10px)
+      &__companies
+         &-item
+            min-height: 140px
    @include ms
       width: 100%
       &__shop
@@ -317,6 +370,10 @@
       &__info
          &-inner
             padding: 20px
+      &__row
+         flex-direction: column
+         & > *
+            flex-basis: auto
    @include sm
       --elements-padding: 20px
       padding: 20px
@@ -346,6 +403,17 @@
             --size: 40px
          &-item
             min-width: 290px
+      &__row
+         --article-row-gap: 20px
+      &__companies
+         &-list
+            grid-template-columns: repeat(2, 1fr)
+         &-item
+            min-height: 110px
+      &__note
+         border-radius: 10px
+         &-icon
+            --size: 36px
       .tags
          font-size: 13px
    @include xs
@@ -359,6 +427,15 @@
             --size: 80px
          &-info
             @include margin-bottom(5px)
+         &-list
+            &--1
+               .article
+                  &__people
+                     &-item
+                        padding: 0
+                        gap: 15px
+                        border-radius: 0
+                        background: none
       &__materials
          &-img
             --size: 40px
@@ -366,5 +443,22 @@
          gap: 15px
       &__numeric
          @include margin-bottom(10px)
+      &__details
+         flex-direction: column
+         gap: 15px
+         &--secondary
+            padding: 15px 10px
+      &__img
+         border-radius: 5px
+      &__bottom
+         .button
+            width: 100%
+      &__note
+         padding: 10px
+         &-icon
+            --size: 24px
+         &-title
+            letter-spacing: -0.48px
+            line-height: 140%
       .tags
          font-size: 11px

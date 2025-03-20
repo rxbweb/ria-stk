@@ -15,15 +15,21 @@
       flex-grow: 1
    &__list
       @include margin-bottom(18px)
+      &--2
+         padding: 15px 0
+         border-top: 1px solid #CDCDCD
+         border-bottom: 1px solid #CDCDCD
    &__item
       @extend .title
-      @include fluidFontSize(14px, 20, 360px, 1920px, 16px)
+      @include fluidFontSize(14px, 20px, 360px, 1920px, 16px)
       padding-left: 32px
       padding-bottom: 15px
       letter-spacing: -0.6px
       border-bottom: 1px solid #CDCDCD
       position: relative
       line-height: 140%
+      & > *
+         white-space: pre-line
       &:last-child
          padding-bottom: 0
          border-bottom: none
