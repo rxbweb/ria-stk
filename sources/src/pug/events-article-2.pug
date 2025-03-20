@@ -1,0 +1,14 @@
+extends base/_layout
+block head
+   title Детальная страница статьи
+block page
+
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Мепроприятия' },
+      { href: '#', title: 'VIII Всероссийская научно-практическая конференция «Построение системы менеджмента качества медицинской организации. Лучшие практики»' }
+   ])
+
+   include blocks/article/_article-04
+
+   include blocks/contacts/_contacts
