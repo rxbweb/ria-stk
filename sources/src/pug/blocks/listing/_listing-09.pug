@@ -1,37 +1,39 @@
+include ../../mixins/_mixins
+
 -
    const listings09 = [
       {
-         badge: 'images/badges/badge-35.svg',
+         badge: 'badge-35',
          badgeWidth: '32',
          badgeHeight: '32',
          title: 'Экспертные  статьи, позволяющие <br> знаниям стать навыками'
       },
       {
-         badge: 'images/badges/badge-36.svg',
+         badge: 'badge-36',
          badgeWidth: '40',
          badgeHeight: '40',
          title: 'Междисциплинарный подход <br> к исследованию темы'
       },
       {
-         badge: 'images/badges/badge-37.svg',
+         badge: 'badge-37',
          badgeWidth: '34',
          badgeHeight: '34',
          title: 'Авторы, чье  мнение интересно'
       },
       {
-         badge: 'images/badges/badge-38.svg',
+         badge: 'badge-38',
          badgeWidth: '41',
          badgeHeight: '40',
          title: 'Печатная и электронная версии <br> журналов и книг'
       },
       {
-         badge: 'images/badges/badge-39.svg',
+         badge: 'badge-39',
          badgeWidth: '36',
          badgeHeight: '46',
          title: 'Бонусная система для постоянных <br> подписчиков'
       },
       {
-         badge: 'images/badges/badge-40.svg',
+         badge: 'badge-40',
          badgeWidth: '46',
          badgeHeight: '34',
          title: 'Удобные сервисы — электронная библиотека, <br> абонементный доступ и др.'
@@ -52,5 +54,5 @@ section.section.section--listing
                         li.listing__item
                            .listing__box
                               .badge.badge--large
-                                 img(src=listing.badge, alt="иконка" width=listing.badgeWidth height=listing.badgeHeight)
+                                 +svg(listing.badge, '', listing.badgeWidth + 2, listing.badgeHeight + 2)
                               h3.listing__name!=listing.title
