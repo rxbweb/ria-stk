@@ -1,10 +1,23 @@
 .specs
-   padding-bottom: 50px
+   --specs-padding: 50px
+   padding-bottom: var(--specs-padding)
    .breadcrumbs
       margin-bottom: 0
    &--2
       .breadcrumbs
          margin-bottom: 20px
+   &--3
+      --specs-padding: 60px
+      padding-top: (var(--specs-padding))
+      .specs
+         &__box
+            gap: 100px
+         &__img
+            flex-basis: 560px
+            img
+               max-width: 290px
+         &__name
+            max-width: 100%
    &__inner
       @include margin-bottom(30px)
    &__header
@@ -51,6 +64,7 @@
    &__name
       max-width: 650px
       margin-bottom: 25px
+      white-space: pre-line
       @extend .title
       @include fluidFontSize(32px, 40px, 360px, 1920px, 32px)
       &--large
@@ -77,6 +91,13 @@
          @extend .title
          @extend .title--second
          flex-basis: 100%
+      &-box
+         display: flex
+         gap: 5px
+      .favorite-button
+         --size: 52px
+         border: 1px solid var(--accent)
+         position: static
    &__price
       @extend .title
       @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)
@@ -117,6 +138,7 @@
       &__table
          max-width: none
    @include sm
+      --specs-padding: 30px
       &--2
          .breadcrumbs
             margin-bottom: 10px
