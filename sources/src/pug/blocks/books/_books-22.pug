@@ -1,0 +1,52 @@
+include mixins/_booksList
+
+-
+   const books22 = [
+      {
+         img: 'images/books/books-40.jpg',
+         title: 'Январь 2023',
+         price: '100 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-40.jpg',
+         title: 'Январь 2023',
+         price: '100 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-40.jpg',
+         title: 'Январь 2023',
+         price: '100 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-40.jpg',
+         title: 'Январь 2023',
+         price: '100 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+   ];
+
+section.section.section--books
+   .section__wrapper.container
+      .section__content
+         .books
+            .books__inner
+               .books__section
+                  .books__header
+                     h2.books__heading Журналы
+                  .books__content
+                     +booksList(books22)

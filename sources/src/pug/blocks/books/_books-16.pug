@@ -27,13 +27,12 @@ include mixins/_booksList
 
 section.section.section--books
    .section__wrapper.container
-      .section__header.section__header--border
-         .section__header-row
-            h2.section__header-title Все выпуски года
       .section__content
          .books.books--2
             .books__inner
                .books__section
+                  .books__header
+                     h2.books__title Все выпуски года
                   .books__content
                      ul.books__list
                         each book in books08

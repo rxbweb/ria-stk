@@ -114,12 +114,11 @@ include mixins/_booksList
 
 section.section.section--books
    .section__wrapper.container
-      .section__header.vusially-hidden
-         .section__header-row
-            h2.section__header-title Архив книг
       .section__content
          .books
             .books__inner
                .books__section
+                  .books__header.vusially-hidden
+                     h2.books__title Архив книг
                   .books__content
                      +booksList(books19)

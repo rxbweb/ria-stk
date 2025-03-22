@@ -1,0 +1,52 @@
+include mixins/_booksList
+
+-
+   const books23 = [
+      {
+         img: 'images/books/books-28.jpg',
+         title: 'Модель устойчивого прибыльного роста. Выпуск 1',
+         price: '1 990,00 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-28.jpg',
+         title: 'Модель устойчивого прибыльного роста. Выпуск 1',
+         price: '1 990,00 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-28.jpg',
+         title: 'Модель устойчивого прибыльного роста. Выпуск 1',
+         price: '1 990,00 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/books/books-28.jpg',
+         title: 'Модель устойчивого прибыльного роста. Выпуск 1',
+         price: '1 990,00 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+   ];
+
+section.section.section--books
+   .section__wrapper.container
+      .section__content
+         .books
+            .books__inner
+               .books__section
+                  .books__header
+                     h2.books__heading Подборки
+                  .books__content
+                     +booksList(books23)
