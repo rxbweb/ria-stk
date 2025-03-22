@@ -130,9 +130,7 @@
          display: flex
          justify-content: center
          align-items: center
-         &:hover,
-         &:focus,
-         &:active
+         @include hover()
             color: var(--accent)
          &--eye
             .svg-icon
@@ -414,9 +412,7 @@
          overflow: hidden
          svg
             transform: scale(1.1)
-         &:hover,
-         &:focus,
-         &:active
+         @include hover()
             color: var(--accent)
       &-manage
          display: flex

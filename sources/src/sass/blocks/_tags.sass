@@ -15,10 +15,10 @@
       transition: all var(--duration) ease
       &--2
          background: #fff
-      &:hover,
-      &:focus
-         background: #ffefef
-         color: var(--accent)
+      @at-root a#{&}, button#{&}
+         @include hover()
+            background: #ffefef
+            color: var(--accent)
    @include ms
       @include scroll-x(var(--padding))
       flex-wrap: nowrap

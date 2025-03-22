@@ -83,8 +83,7 @@
       svg
          fill: none
          stroke: currentColor
-      &:hover,
-      &:focus
+      @include hover()
          background: var(--accent)
          color: #fff
    &__login
@@ -99,8 +98,7 @@
          align-items: center
          cursor: pointer
          position: relative
-         &:hover,
-         &:focus
+         @include hover()
             background: var(--accent)
             color: #fff
       svg
@@ -132,8 +130,7 @@
             gap: 5px
             cursor: pointer
             transition: var(--transition)
-            &:hover,
-            &:focus
+            @include hover()
                background: var(--accent)
                color: #fff
             &:last-child

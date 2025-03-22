@@ -32,9 +32,7 @@
       svg
          color: var(--accent)
          transition: var(--transition)
-      &:hover,
-      &:focus,
-      &:active
+      @include hover()
          background: var(--accent)
          color: #fff
          svg

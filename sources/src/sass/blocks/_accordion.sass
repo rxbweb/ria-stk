@@ -95,9 +95,7 @@
          background: rgba(205, 205, 205, 0.28)
          color: var(--accent)
          font-weight: 400
-         &:hover,
-         &:focus,
-         &:active
+         @include hover()
             background: var(--accent)
             color: #fff
       &-list
@@ -120,8 +118,7 @@
             border-radius: 3px
             background: #fff
             color: var(--accent)
-         &:hover,
-         &:focus
+         @include hover()
             border-color: var(--accent)
             .accordion__info-button
                &-icon

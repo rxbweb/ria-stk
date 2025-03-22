@@ -12,8 +12,7 @@
          gap: var(--gap)
          position: relative
          overflow: hidden
-         &:hover,
-         &:focus
+         @include hover()
             .details
                &__list
                   &-date
@@ -23,6 +22,10 @@
                         transform: scale(1.1)
                   &-description
                      color: var(--accent)
+            .button
+               &__icon
+                  background: var(--accent)
+                  color: #fff
       &-img
          @include img-cover(20%, var(--border-radius-15))
          width: 42.7%

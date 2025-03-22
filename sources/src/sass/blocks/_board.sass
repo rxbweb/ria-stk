@@ -12,9 +12,7 @@
       display: flex
       gap: 20px
       align-items: flex-start
-      &:hover,
-      &:focus,
-      &:active
+      @include hover()
          .button
             &__icon
                background: var(--accent)

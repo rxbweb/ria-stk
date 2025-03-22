@@ -64,8 +64,7 @@
             top: 10px
             color: var(--gray-300)
             transition: all var(--duration) ease
-         &:hover,
-         &:focus
+         @include hover()
             &::before
                color: var(--accent)
       &:nth-child(n+10)::before
@@ -90,7 +89,6 @@
    &__name
       @extend .title
       @extend .title--second
-      white-space: pre-line
    &__company
       @extend .title
       @extend .title--small
