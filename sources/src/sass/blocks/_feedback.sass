@@ -15,8 +15,13 @@
    &__item
       @include margin-bottom(15px)
    &__info
+      flex-basis: 50%
       flex-grow: 1
+      flex-shrink: 0
       @include margin-bottom(50px)
+   &__content
+      flex-basis: 40.2%
+      flex-shrink: 0
    &__type
       @extend .title
       @include fluidFontSize(14px, 20px, 360px, 1920px, 20px)
@@ -35,13 +40,16 @@
       @extend .title
    &__map
       min-height: 490px
-
+      
    @include xl
       &__main
          gap: var(--gap)
       &__info,
       &__box
          @include margin-bottom(var(--gap))
+      &__info,
+      &__content
+         flex-basis: 45%
 
    @include ms
       &__main
@@ -54,6 +62,9 @@
          @include margin-bottom(20px)
       &__item
          @include margin-bottom(10px)
+      &__info,
+      &__content
+         flex-basis: auto
 
    @include xs
       &__list
