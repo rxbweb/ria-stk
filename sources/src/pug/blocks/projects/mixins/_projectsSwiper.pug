@@ -16,7 +16,7 @@ mixin projectsSwiper(title, list, bottom)
                         each project in list
                            .projects__item.swiper-slide
                               .projects__img
-                                 img(src=project.src, alt=project.title)
+                                 +picture(project.img, false, project.title, 518, 349)
                                  .projects__panel
                                     +button-icon('link', 'Узнать больше')
                               .projects__info
