@@ -1,0 +1,12 @@
+include ../../mixins/_mixins
+
+.advert
+   .advert__inner.container
+      .advert__main
+         .bg-image
+            +picture-simple("images/global/global-bg.jpg", "images/global/global-bg-mob.jpg", "фоновая картинка", 1640, 512)
+         .advert__logo
+            img(src="images/icons/logo.svg", alt="логотип" width="178" height="50")
+         .advert__info
+            h2.advert__title Баннер о старте компании
+         +button-icon('link', 'Подробнее')

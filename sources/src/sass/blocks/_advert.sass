@@ -1,0 +1,20 @@
+.advert
+   &__main
+      padding: 64px var(--padding) 80px
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: calc(var(--gap) + 10px)
+      position: relative
+      border-radius: 20px
+      overflow: hidden
+   &__title
+      @extend .title
+      text-align: center
+   @include xl
+      &__main
+         padding: var(--gap) var(--padding)
+         gap: var(--gap)
+   @include xs
+      .button
+         width: 100%
