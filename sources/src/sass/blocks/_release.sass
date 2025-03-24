@@ -1,0 +1,131 @@
+.release
+   &__main
+      padding-top: calc(var(--section-padding) + 10px)
+      padding-bottom: 10px
+      position: relative
+   &__section
+      @extend .container
+      display: flex
+      align-items: flex-start
+   &__info
+      position: relative
+      z-index: var(--z-index)
+      @include margin-bottom(var(--gap-2))
+   &__title
+      @extend .title
+   &__text
+      @extend .fs-18
+   &__list
+      margin-bottom: 20px
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: var(--gap-4)
+      &-item
+         padding: 15px
+         border-radius: var(--border-radius-15)
+         background: #fff
+         @include margin-bottom(15px)
+      &-title
+         @extend .title
+         @include fluidFontSize(14px, 20px, 360px, 1920px, 16px)
+   &__notice
+      @extend .title
+      @extend .title--second
+      @extend .title--red
+      max-width: 800px
+   &__img
+      width: fit-content
+      max-width: 43%
+      flex-shrink: 0
+      picture,
+      & > img
+         width: 125%
+         max-width: 125%
+         margin-top: -10%
+         margin-left: -5%
+   &__features
+      @extend .container
+      width: calc(100% - var(--padding) * 2)
+      max-width: calc(var(--container-width) - var(--padding) * 2)
+      --release-features-margin: 25px
+      padding: 25px
+      border-radius: var(--border-radius-15)
+      background: #fff
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15)
+      @include margin-bottom(var(--release-features-margin))
+      &-top
+         padding-bottom: var(--release-features-margin)
+         border-bottom: 1px solid var(--gray-200)
+         display: flex
+         justify-content: space-between
+         flex-wrap: wrap
+         gap: 15px
+      &-title
+         @extend .title
+         @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)
+      &-description
+         display: flex
+         flex-wrap: wrap
+         gap: 20px
+         li
+            @extend .fs-18
+            padding: 10px 15px
+            color: var(--accent)
+            border-radius: var(--border-radius-10)
+            background: rgba(177, 177, 177, 0.20)
+            text-align: center
+      &-list
+         display: grid
+         grid-template-columns: repeat(5, 1fr)
+         gap: var(--gap)
+         li
+            --square-size: 24px
+            @extend .fs-18
+            padding-left: calc(var(--square-size) + 10px)
+            position: relative
+            &::before
+               content: ''
+               position: absolute
+               left: 0
+               top: 0
+               width: var(--square-size)
+               height: var(--square-size)
+               border-radius: var(--border-radius)
+               background: var(--accent)
+   @media (max-width: 1900px)
+      &__section
+         align-items: center
+      &__img
+         picture,
+         & > img
+            width: 100%
+            max-width: 100%
+            margin: 0
+   @include md
+      &__list
+         grid-template-columns: 1fr
+      &__img
+         flex-basis: 45%
+      &__features
+         &-top
+            flex-direction: column
+         &-list
+            grid-template-columns: 1fr
+   @include sm
+      &__section
+         flex-direction: column
+      &__img
+         width: 100%
+         max-width: 100%
+         flex-basis: auto
+      &__features
+         --release-features-margin: 15px
+         padding: 15px
+         &-description
+            gap: 10px
+            li
+               padding: 10px
+         &-list
+            li
+               --square-size: 16px
+               padding-left: calc(var(--square-size) + 5px)

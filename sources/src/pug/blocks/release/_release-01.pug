@@ -1,0 +1,51 @@
+include ../../mixins/_mixins
+
+section.section.section--release.section--padding-top-none
+   .section__wrapper
+      .section__content
+         .release
+            .release__inner
+               .release__main
+                  .bg-image
+                     +picture-simple("images/release/release-bg.jpg", "images/release/release-bg-mob.jpg", "фоновая картинка", 1920, 624)
+                  .release__section
+                     .release__info
+                        h2.release__title Спецвыпуск
+                        p.release__text Заказ и подготовка спецвыпуска — это всегда индивидуальный проект. Журнал может полностью или частично состоять из ваших материалов и быть оформлен в корпоративных цветах.
+                        ul.release__list
+                           li.release__list-item
+                              .badge.badge--large
+                                 +svg('badge-41', '', 34, 34)
+                              .release__list-info
+                                 p.release__list-title Самая мощная имиджевая реклама
+                           li.release__list-item
+                              .badge.badge--large
+                                 +svg('badge-42', '', 38, 38)
+                              .release__list-info
+                                 p.release__list-title Может состоять из ваших материалов полностью или частично
+                           li.release__list-item
+                              .badge.badge--large
+                                 +svg('badge-43', '', 38, 38)
+                              .release__list-info
+                                 p.release__list-title Может быть бесплатно выложен на сайте издательства
+                        p.release__notice Расскажите, какие задачи стоят перед вами, и мы предложим лучшее решение — от идеи до реализации.
+                     .release__img
+                        +picture("images/release/release-img.png", false, "журналы", 884, 592)
+               
+               .release__features
+                  .release__features-top
+                     h3.release__features-title Почему мы
+                     ul.release__features-description
+                        li Минимальный тираж от 100 экземпляров.
+                        li Срок подготовки спецвыпуска от 25-30 дней.
+                  ul.release__features-list
+                     li
+                        | Престижные издания. Каждый журнал — лидер в своей тематике.
+                     li
+                        | Богатый опыт подготовки спецвыпусков.
+                     li
+                        | Обширная база авторов и экспертов.
+                     li
+                        | Знание аудитории.
+                     li
+                        | Прозрачный учет всех расходов — вы можете контролировать ход работ в любую минуту.
