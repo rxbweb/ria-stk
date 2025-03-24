@@ -2,6 +2,11 @@
    border-radius: 20px
    position: relative
    overflow: hidden
+   .bg-image
+      border-radius: 20px
+      overflow: hidden
+   &--third
+      overflow: visible
    &__main
       display: flex
    &__info
@@ -10,6 +15,16 @@
       position: relative
       z-index: var(--z-index)
       @include margin-bottom(20px)
+      &--second
+         align-self: center
+         @include margin-bottom(var(--gap-large))
+      &--third,
+      &--fourth
+         align-self: center
+         flex-basis: 57%
+         @include margin-bottom(var(--gap))
+      &--center
+         align-self: center
    &__top
       margin-bottom: 15px
    &__accent
@@ -19,10 +34,19 @@
       white-space: pre-line
    &__title
       @extend .title
+   &__heading
+      @extend .title
+      @extend .title--main
    &__text
       @extend .fs-18
       color: var(--black)
       white-space: pre-line
+   &__content
+      @extend .fs-18
+   &__lead
+      max-width: 450px
+      line-height: 140%
+      @include fluidFontSize(16px, 36px, 360px, 1920px, 16px)
    &__img
       margin-left: auto
       flex-basis: 48.5%
@@ -34,6 +58,109 @@
          height: 100%
          object-fit: cover
          object-position: top left
+      &--fortune
+         position: relative
+         display: flex
+         picture,
+         & > img
+            --fortune-width: 125%
+            width: var(--fortune-width)
+            max-width: var(--fortune-width)
+            position: absolute
+            top: 0
+            bottom: 0
+            right: var(--gap)
+      &--card
+         picture,
+         & > img
+            transform: scale(1.2)
+            transform-origin: center center
+   &__specialists
+      flex-grow: 1
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      transform: translateX(-75px)
+      &-img
+         width: 100%
+         position: relative
+         padding-bottom: 80%
+         picture,
+         & > img
+            object-fit: cover
+            object-position: center
+            position: absolute
+            inset: 0
+         picture
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+   &__books
+      width: fit-content
+      flex-basis: 668px
+      &-img
+         width: 100%
+         position: relative
+         padding-bottom: 86%
+         picture,
+         & > img
+            object-fit: cover
+            object-position: center
+            position: absolute
+            inset: 0
+   &__label
+      width: 240px
+      padding: 20px
+      border-radius: 15px
+      background: var(--dark)
+      backdrop-filter: blur(2px)
+      position: absolute
+      z-index: var(--z-index)
+      bottom: var(--gap-2)
+      right: var(--gap-2)
+      color: #fff
+      font-size: 26px
+      line-height: 114%
+      font-weight: 500
+      text-align: center
+      @include margin-bottom(20px)
+      &-year
+         font-size: 56px
+         line-height: 110%
+         font-family: var(--second-font-family)
+   &__note
+      @include fluidFontSize(16px, 24px, 360px, 1920px, 20px)
+      width: fit-content
+      padding: 20px
+      border-radius: 10px
+      background: rgba(194, 37, 33, 0.50)
+      color: #fff
+      font-weight: 700
+   &__notice
+      @extend .title
+      @extend .title--second
+      white-space: pre-line
+      span
+         display: block
+         color: var(--accent)
+   @media (max-width: 1600px)
+      &__img
+         &--fortune
+            picture,
+            & > img
+               --fortune-width: 100%
+               right: 0
+         &--card
+            picture,
+            & > img
+               transform: scale(1)
+      &__label
+         width: 180px
+         font-size: 20px
+         &-year
+            font-size: 42px
+      &__specialists
+         transform: translateX(-15px)
    @include xl
       &__info
          padding: var(--gap)
@@ -46,8 +173,47 @@
          flex-direction: column
       &__info,
       &__img
+         width: 100%
          flex-basis: auto
+         &--fortune
+            picture,
+            & > img
+               --fortune-width: 100%
+               position: static
+      &__info
+         &--fourth
+            padding-bottom: 0
+      &__label
+         width: 130px
+         right: 10px
+         bottom: 10px
+         font-size: 15px
+         @include margin-bottom(10px)
+         &-year
+            font-size: 24px
+      &__specialists,
+      &__books
+         width: 100%
+         padding-top: 40px
+         transform: translateX(0)
+         flex-basis: auto
+         &-img
+            padding-bottom: 0
+            picture
+               align-items: center
+            picture,
+            & > img
+               position: static
+      &__books
+         padding-top: 0
+         &-img
+            picture
+               display: flex
+               justify-content: center
    @include xs
       &__info
+         padding: 30px var(--padding)
          padding-bottom: 0
          @include margin-bottom(15px)
+      &__note
+         padding: 10px
