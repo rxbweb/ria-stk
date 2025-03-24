@@ -1,0 +1,51 @@
+.choice
+   &__main
+      display: flex
+      gap: var(--gap)
+   &__content
+      flex-basis: 380px
+      flex-shrink: 0
+   &__img
+      border-radius: var(--border-radius-15)
+      overflow: hidden
+   &__info
+      flex-grow: 1
+      @include margin-bottom(var(--gap))
+   &__item
+      @extend .fs-18
+      padding: var(--gap) 0
+      border-bottom: 1px solid var(--gray-300)
+      display: flex
+      justify-content: space-between
+      gap: var(--gap-2)
+      &:first-child
+         padding-top: 0
+   &__name
+      @extend .title
+      @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)
+   &__text
+      max-width: 800px
+      flex-grow: 1
+   @include ms
+      &__main
+         flex-direction: column
+      &__content
+         display: none
+      &__item
+         padding: var(--gap) 0
+         &:first-child
+            padding-top: var(--gap)
+   @include sm
+      &__item
+         padding: 15px 0
+         flex-direction: column
+         gap: 15px
+         &:first-child
+            padding-top: 15px
+
+.section
+   &--choice
+      .section
+         &__header
+            @include sm
+               margin-bottom: 0
