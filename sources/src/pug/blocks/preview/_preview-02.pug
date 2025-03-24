@@ -1,0 +1,19 @@
+include ../../mixins/_mixins
+
+section.section.section--preview
+   .section__wrapper.container
+      .section__content
+         .preview
+            .preview__inner
+               .preview__row.preview__row--reverse
+                  .preview__visual
+                     .preview__img
+                        +picture("images/preview/preview-02.jpg", false, "картинка", 800, 400)
+                  .preview__info.preview__info--secondary
+                     h2.preview__title Бонусная программа
+                     p.preview__lead Программа привилегий для подписчиков РИА «Стандарты и качество» — это возможность:
+                     ul.preview__list
+                        li получить бесплатный доступ к электронной библиотеке и архиву научных статей издательства
+                        li задавать вопросы экспертам, и оперативно получать ответ
+                        li обменять бонусы на рекламу
+                     +button-icon('link', 'Подробнее')

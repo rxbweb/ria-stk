@@ -1,0 +1,63 @@
+.preview
+   &__row
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: var(--gap)
+   &__img
+      height: 100%
+      overflow: hidden
+      picture,
+      & > img
+         border-radius: var(--border-radius-15)
+         overflow: hidden
+   &__info
+      padding-right: 10%
+      align-self: center
+      @include margin-bottom(30px)
+      & > *:last-child
+         margin-top: 10px
+      &--secondary
+         @include margin-bottom(20px)
+         padding-right: 0
+         & > *:last-child
+            margin-top: 0
+   &__title
+      @extend .title
+   &__text
+      @extend .fs-14
+   &__list
+      border-top: 1px solid var(--gray-300)
+      li
+         @extend .title
+         @include fluidFontSize(14px, 20px, 360px, 1920px, 16px)
+         padding: 15px 0
+         padding-left: 26px
+         border-bottom: 1px solid var(--gray-300)
+         position: relative
+         &::before
+            --size: 16px
+            content: ''
+            position: absolute
+            left: 0
+            top: 15px
+            width: var(--size)
+            height: var(--size)
+            border-radius: 2px
+            background: var(--accent)
+   &__lead
+      @extend .fs-18
+   @include ms
+      &__row
+         grid-template-columns: 1fr
+         .preview
+            &__visual
+               order: 1
+   @include sm
+      &__info
+         & > *:last-child
+            margin-top: 0
+      &__title
+         margin-bottom: 15px
+   @include xs
+      &__img
+         @include img-cover(85%, var(--border-radius-15))
