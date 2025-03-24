@@ -1,0 +1,16 @@
+include ../../mixins/_mixins
+
+section.section.section--intro
+   .section__wrapper.container
+      .section__content
+         .intro
+            .bg-image
+               +picture-simple("images/intro/intro-bg.jpg", "images/intro/intro-bg-mob.jpg", "фоновая картинка", 1640, 512)
+            .intro__main
+               .intro__info.intro__info--second
+                  h1.intro__heading Подписка 2025
+                  p.intro__note Подписывайтесь на 12 номеров — платите за 9!
+                  .intro__bottom
+                     +button-icon('link', 'Подробнее')
+               .intro__img
+                  +picture-simple("images/intro/intro-01.png", "images/intro/intro-01-mob.png", "Картинка", 795, 795)

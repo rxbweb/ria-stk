@@ -1,0 +1,19 @@
+include ../../mixins/_mixins
+
+section.section.section--intro
+   .section__wrapper.container
+      .section__content
+         .intro
+            .bg-image
+               +picture-simple("images/intro/intro-bg.jpg", "images/intro/intro-bg-mob.jpg", "фоновая картинка", 1640, 512)
+            .intro__main
+               .intro__info.intro__info--second
+                  h1.intro__heading Ловите удачу!
+                  p.intro__lead Подписывайтесь на 12 номеров — платите за 9
+                  .intro__bottom
+                     +button-icon('link', 'Подробнее')
+               .intro__img.intro__img--fortune
+                  .intro__label
+                     p Стартовала подписная кампания
+                     p.intro__label-year 2025
+                  +picture-simple("images/intro/intro-03.png", "images/intro/intro-03-mob.png", "Картинка", 1083, 512)
