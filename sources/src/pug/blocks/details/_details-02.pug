@@ -3,22 +3,22 @@ include ../../mixins/_mixins
 -
    const details02 = [
       {
-         src: "images/details/details-04.jpg",
+         img: "images/details/details-04.jpg",
          title: "Специалистам",
          text: "Профессиональные журналы, освещающие наиболее актуальные вопросы в сфере технического регулирования, стандартизации, обеспечения единства измерений и управления качеством для различных областей экономики. Созданные практиками для практиков.",
       },
       {
-         src: "images/details/details-05.jpg",
+         img: "images/details/details-05.jpg",
          title: "Руководителям",
          text: "Передовой инструментарий для развития бизнеса и совершенствования операционных процессов, управления персоналом, создания эффективной команды, формирования лидерских качеств руководителя.",
       },
       {
-         src: "images/details/details-06.jpg",
+         img: "images/details/details-06.jpg",
          title: "Медицинским организациям",
          text: "Подробные руководства по внедрению эффективных систем управления медицинскими организациями, передовой опыт от российских и зарубежных профессионалов, новости законодательства и нормативно-технического обеспечения контроля качества медицинской деятельности.",
       },
       {
-         src: "images/details/details-07.jpg",
+         img: "images/details/details-07.jpg",
          title: "ВУЗам",
          text: "Научные статьи, тематические подборки, комментарии экспертов, передовые идеи, новейшие теории, современные методологии и образцы лучших практик в области обеспечения и контроля качества.",
       }
@@ -37,7 +37,7 @@ section.section.section--details
                         li.details__list-item
                            a.details__list-box(href="#")
                               .details__list-img
-                                 img(src=detail.src, alt=detail.title, width="380", height="210")
+                                 +picture(detail.img, false, detail.title, 380, 210)
                               .details__list-info
                                  h3.details__list-title #{detail.title}
                                  .details__list-text

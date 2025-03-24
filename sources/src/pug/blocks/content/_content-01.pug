@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 section.section.section--content
    .section__wrapper.container
       .section__content
@@ -28,12 +30,12 @@ section.section.section--content
                               .swiper-wrapper
                                  .swiper-slide
                                     a.content__swiper-img(data-fancybox="content" href="images/content/content-01.jpg" data-caption="Глава 1")
-                                       img(src="images/content/content-01.jpg", alt="Содержание" width="379" height="584")
+                                       +picture("images/content/content-01.jpg", false, "Содержание", 379, 584)
                                  .swiper-slide
                                     a.content__swiper-img(data-fancybox="content" href="images/content/content-01.jpg" data-caption="Глава 2")
-                                       img(src="images/content/content-01.jpg", alt="Содержание" width="379" height="584")
+                                       +picture("images/content/content-01.jpg", false, "Содержание", 379, 584)
                                  .swiper-slide
                                     a.content__swiper-img(data-fancybox="content" href="images/content/content-01.jpg" data-caption="Глава 3")
-                                       img(src="images/content/content-01.jpg", alt="Содержание" width="379" height="584")
+                                       +picture("images/content/content-01.jpg", false, "Содержание", 379, 584)
                            button.content__swiper-prev.swiper-button-prev
                            button.content__swiper-next.swiper-button-next

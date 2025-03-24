@@ -10,7 +10,7 @@ mixin booksSwiper(list, sliceNum = list.length)
                      .books__box
                         +favorite-button()
                         .books__img
-                           img(src=book.img, alt=book.title width="380" height="380")
+                           +picture(book.img, false, book.title, 380, 380)
                      .books__info
                         h3.books__name= book.title
          +swiperControls()

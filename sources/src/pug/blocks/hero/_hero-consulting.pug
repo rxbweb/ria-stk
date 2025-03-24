@@ -5,7 +5,7 @@ section.section.section--hero.section--padding-none.section--margin-bottom
       .section__content
          .hero
             .bg-image
-               img(src="images/hero/hero-bg.jpg", alt="фоновая картинка" width="1920" height="750")
+               +picture-simple("images/hero/hero-bg.jpg", "images/hero/hero-bg-mob.jpg", "фоновая картинка", 1920, 750)
             .hero__inner.container
                +breadcrumbs([
                   { href: '#', title: 'Главная' },

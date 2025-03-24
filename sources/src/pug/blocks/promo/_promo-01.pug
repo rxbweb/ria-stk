@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 section.section.section--promo
    .section__wrapper.container
       .section__header.visually-hidden
@@ -9,4 +11,4 @@ section.section.section--promo
                ul.promo__list
                   li.promo__item
                      .promo__img
-                        img(src="images/promo/promo-03.jpg", alt="картинка" width="1640" height="468")
+                        +picture("images/promo/promo-03.jpg", false, "картинка", 1640, 468)

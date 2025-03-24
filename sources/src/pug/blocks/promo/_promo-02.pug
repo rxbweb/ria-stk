@@ -1,3 +1,5 @@
+include ../../mixins/_mixins
+
 section.section.section--promo
    .section__wrapper.container
       .section__header.visually-hidden
@@ -9,12 +11,12 @@ section.section.section--promo
                ul.promo__list
                   li.promo__item
                      .promo__img
-                        img(src="images/promo/promo-01.jpg", alt="картинка" width="800" height="468")
+                        +picture("images/promo/promo-01.jpg", false, "картинка", 800, 468)
                      .promo__info
                         h2.promo__title Стандартизатор года
                   li.promo__item
                      .promo__img
-                        img(src="images/promo/promo-02.jpg", alt="картинка" width="800" height="468")
+                        +picture("images/promo/promo-02.jpg", false, "картинка", 800, 468)
                      .promo__info
                         p.promo__description 28-29 ноября 2024 года, Ярославль
                         h2.promo__title Лучший опыт - #[br] для лучшей жизни

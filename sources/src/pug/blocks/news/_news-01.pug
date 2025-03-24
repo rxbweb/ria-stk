@@ -3,17 +3,17 @@ include ../../mixins/_mixins
 -
    const news01 = [
       {
-         src: 'images/news/news-01.jpg',
+         img: 'images/news/news-01.jpg',
          mark: 'Международное сотрудничество',
          title: 'РИА «Стандарты и качество» отмечено благодарственным письмом от руководителя Росстандарта'
       },
       {
-         src: 'images/news/news-02.jpg',
+         img: 'images/news/news-02.jpg',
          mark: 'Международное сотрудничество',
          title: 'В России появятся цифровые паспорта промышленной продукции'
       },
       {
-         src: 'images/news/news-03.jpg',
+         img: 'images/news/news-03.jpg',
          mark: 'Международное сотрудничество',
          title: 'Опубликован новый рейтинг эффективности технических комитетов'
       }
@@ -54,7 +54,7 @@ section.section.section--news
                         li.news__item
                            .news__left
                               .news__img
-                                 img(src=news.src, alt="Новости")
+                                 +picture(news.img, false, "Новости", 380, 180)
                            .news__right
                               .news__info
                                  .news__top

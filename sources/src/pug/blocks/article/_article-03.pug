@@ -136,7 +136,7 @@ article.section.section--article.section--padding-top-none
                            li.article__people-item
                               .article__people-img
                                  if author.img 
-                                    img(src=author.img , alt=author.name width="140" height="140")
+                                    +picture(author.img, false, author.name, 140, 140)
                               if author.name || author.text
                                  .article__people-info
                                     if author.name
@@ -174,25 +174,25 @@ article.section.section--article.section--padding-top-none
                               h2.article__heading Партнеры
                               ul.article__companies-list
                                  li.article__companies-item
-                                    img(src="images/article/article-companies-01.png", width="208" height="64" alt="Кодекс Техэксперт")
+                                    +picture("images/article/article-companies-01.png", false, "Кодекс Техэксперт", 208, 64)
                                  li.article__companies-item
-                                    img(src="images/article/article-companies-02.png", width="208" height="54" alt="МКМ")
+                                    +picture("images/article/article-companies-02.png", false, "МКМ", 208, 64)
                         .article__col
                            .article__companies
                               h2.article__heading Организаторы
                               ul.article__companies-list
                                  li.article__companies-item
-                                    img(src="images/article/article-companies-03.png", width="208" height="66" alt="Стандарты и качество")
+                                    +picture("images/article/article-companies-03.png", false, "Стандарты и качество", 208, 66)
                                  li.article__companies-item
-                                    img(src="images/article/article-companies-04.png", width="208" height="101" alt="Клиника Академика Ройтбрега")
+                                    +picture("images/article/article-companies-04.png", false, "Клиника Академика Ройтбрега", 208, 101)
                                  li.article__companies-item
-                                    img(src="images/article/article-companies-05.png", width="208" height="101" alt="Всероссийская Организация Качества")
+                                    +picture("images/article/article-companies-05.png", false, "Всероссийская Организация Качества", 208, 101)
                                  li.article__companies-item
-                                    img(src="images/article/article-companies-06.png", width="208" height="101" alt="ФГАУ")
+                                    +picture("images/article/article-companies-06.png", false, "ФГАУ", 208, 101)
                                  li.article__companies-item
-                                    img(src="images/article/article-companies-07.png", width="208" height="46" alt="Национальный Институт Качества")
+                                    +picture("images/article/article-companies-07.png", false, "Национальный Институт Качества", 208, 46)
                                  li.article__companies-item
-                                    img(src="images/article/article-companies-08.png", width="208" height="101" alt="ОБП")
+                                    +picture("images/article/article-companies-08.png", false, "ОБП", 208, 101)
                   .article__people
                      h2.article__heading Оргкомитет
                      ul.article__people-list.article__people-list--1
@@ -200,7 +200,7 @@ article.section.section--article.section--padding-top-none
                            li.article__people-item
                               .article__people-img
                                  if author.img 
-                                    img(src=author.img , alt=author.name width="140" height="140")
+                                    +picture(author.img, false, author.name, 140, 140)
                               if author.name || author.text
                                  .article__people-info
                                     if author.name

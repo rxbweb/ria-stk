@@ -3,11 +3,11 @@ include ../../mixins/_mixins
 -
    const news02 = [
       {
-         src: 'images/news/news-articles-01.jpg',
+         img: 'images/news/news-articles-01.jpg',
          title: 'Надежная доказательная база для оценки инвестпроектов'
       },
       {
-         src: 'images/news/news-articles-02.jpg',
+         img: 'images/news/news-articles-02.jpg',
          title: 'О нормативном регулировании в области использования атомной энергии'
       }
    ]
@@ -27,7 +27,7 @@ section.section.section--news
                         li.news__posts-item
                            a.news__posts-box(href="#")
                               .news__posts-img
-                                 img(src=news.src, alt="картинка статьи" width="519" height="390")
+                                 +picture(news.img, false, "картинка статьи", 519, 390)
                               .news__posts-info
                                  h3.news__posts-title #{news.title}
                                  +button-outline('div', 'Читать статью', 'news__posts-button')
