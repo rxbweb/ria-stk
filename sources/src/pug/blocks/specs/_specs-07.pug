@@ -1,0 +1,24 @@
+include ../../mixins/_mixins
+
+section.section.section--specs
+   .section__wrapper
+      .section__content
+         .specs.specs--4
+            .bg-image
+               +picture("images/global/global-bg-02.jpg", "images/global/global-bg-mob.jpg", "фоновая картинка", 1920, 640)
+            .specs__inner.container
+               .specs__box
+                  .specs__img
+                     +picture("images/specs/specs-05.png", false, "Ознакомительный номер", 310, 428)
+                  .specs__info
+                     p.specs__lead Стандарты и качество
+                     h1.specs__name.specs__name--large Ознакомительный номер
+                     ul.specs__table
+                        li Развитие межгосударственной системы стандартизации в целях активизации евразийского партнерства
+                        li Странный государственный стандарт
+                        li Циркулярная экономика начинается с упаковки. Обзор стратегий
+                        li Внимание к проблемам устойчивого развития — не прихоть, а необходимость
+                        li Научные основы обеспечения экономики замкнутого цикла
+                        li Международный стандарт ISO/TS 19677:2019. Совершенствование лесного законодательства
+                     .specs__manage
+                        +button-icon('link', 'Содержание выпуска')

@@ -1,0 +1,69 @@
+include ../../mixins/_mixins
+
+-
+   const specsList = [
+      {
+         img: 'images/specs/specs-list-01.jpg',
+         title: 'Стандарты и качество'
+      },
+      {
+         img: 'images/specs/specs-list-02.jpg',
+         title: 'Методы менеджмента качества'
+      },
+      {
+         img: 'images/specs/specs-list-03.jpg',
+         title: 'Контроль качества продукции'
+      },
+      {
+         img: 'images/specs/specs-list-04.jpg',
+         title: 'Мир измерений'
+      },
+      {
+         img: 'images/specs/specs-list-05.jpg',
+         title: 'Business Excellence'
+      },
+      {
+         img: 'images/specs/specs-list-06.jpg',
+         title: 'Менеджмент качества в медицине'
+      },
+   ]
+
+section.section.section--padding-top-none.section--sidebar.section--specs
+   .section__wrapper
+      .section__content
+         .specs.specs--4
+            .bg-image
+               +picture("images/global/global-bg-02.jpg", "images/global/global-bg-mob.jpg", "фоновая картинка", 1920, 640)
+            .specs__inner.container
+               +breadcrumbs([
+                  { href: '#', title: 'Главная' },
+                  { href: '#', title: 'Журналы' },
+                  { href: '#', title: 'Страница журнала' },
+               ])
+               .specs__controls
+                  include ../sidebar/_sidebar
+                  +sidebar()
+               .specs__row
+                  ul.specs__list
+                     each item in specsList
+                        li.specs__list-item
+                           a.specs__list-link(href="#")
+                              .specs__list-img
+                                 img(src=item.img, alt=item.title, width="90", height="123")
+                              p.specs__list-title= item.title
+                  .specs__box
+                     .specs__img
+                        img(src="images/specs/specs-05.png", alt="Стандарты и качество")
+                     .specs__info
+                        p.specs__lead Стандарты и качество
+                        h1.specs__name.specs__name--large № 10/2023 (октябрь)
+                        ul.specs__table
+                           li Развитие межгосударственной системы стандартизации в целях активизации евразийского партнерства
+                           li Странный государственный стандарт
+                           li Циркулярная экономика начинается с упаковки. Обзор стратегий
+                           li Внимание к проблемам устойчивого развития — не прихоть, а необходимость
+                           li Научные основы обеспечения экономики замкнутого цикла
+                           li Международный стандарт ISO/TS 19677:2019. Совершенствование лесного законодательства
+                        .specs__manage
+                           +button-icon('link', 'Подписаться')
+                           +button-outline('link', 'Содержание выпуска', 'specs__manage-btn')
