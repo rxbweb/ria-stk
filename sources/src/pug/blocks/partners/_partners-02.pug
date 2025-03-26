@@ -1,0 +1,28 @@
+
+include mixins/_partnersList
+
+-
+   const partners02 = [
+      { 
+         img: 'images/partners/partners-07.png', 
+         alt: 'росстандарт' 
+      },
+      { 
+         img: 'images/partners/partners-08.png', 
+         alt: 'вок' 
+      },
+      { 
+         img: 'images/partners/partners-09.png', 
+         alt: 'стандарты и качество' 
+      },
+   ]
+
+section.section.section--partners
+   .section__wrapper
+      .section__content
+         .partners.partners--secondary
+            .partners__inner.container
+               .partners__row
+                  .partners__header
+                     .partners__title Учредители
+                  +partnersList(partners02)

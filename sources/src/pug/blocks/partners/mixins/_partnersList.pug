@@ -1,0 +1,7 @@
+include ../../../mixins/_mixins
+
+mixin partnersList(partners)   
+   ul.partners__list
+      each partner in partners
+         li.partners__slide
+            +picture-simple(partner.img, false, partner.title, 169, 120)
