@@ -1,0 +1,57 @@
+.sort
+   &__box
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      flex-wrap: wrap
+      gap: 30px
+   &__list
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      gap: 50px
+   &__toggle
+      @extend .controls__toggle
+      &-icon
+         @extend .controls__toggle-icon
+      &-arrow
+         @extend .controls__toggle-arrow
+   .search
+      min-width: 380px
+   @include lg
+      &__list
+         gap: 30px
+      .search
+         min-width: 300px
+   @include ms
+      width: 100%
+      padding: 0
+      background: none
+      border-radius: 0
+      &__main
+         display: none
+         padding: 0 var(--padding)
+         border-radius: var(--border-radius)
+         border: 1px solid var(--accent)
+         border-top: none
+         background: #fff
+         overflow: hidden
+         position: absolute
+         z-index: var(--z-index)
+         left: var(--padding)
+         right: var(--padding)
+      &__box
+         padding: var(--padding) 0
+         justify-content: flex-start
+      &__list
+         flex-direction: column
+         align-items: flex-start
+         gap: 15px
+      &__main,
+      &__box
+         @include margin-bottom(25px)
+   @include xs
+      &__main
+         padding: 0 20px
+      &__box
+         padding: 10px 0
