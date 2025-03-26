@@ -104,7 +104,11 @@
       &--wide
          width: 520px
    &__list
-      @include margin-bottom(20px)
+      display: grid
+      grid-template-columns: 1fr
+      gap: 20px var(--gap)
+      &--2
+         grid-template-columns: repeat(2, 1fr)
    &__item
       padding: 25px
       border-radius: 15px
@@ -264,6 +268,9 @@
       &__aside
          &--wide
             display: none
+      &__list
+         &--2
+            grid-template-columns: 1fr
       &__item
          &-info
             padding-right: 0

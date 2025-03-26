@@ -6,18 +6,8 @@
    &--2
       .breadcrumbs
          margin-bottom: 20px
-   &--3
-      --specs-padding: 60px
-      padding-top: (var(--specs-padding))
-      .specs
-         &__box
-            gap: 100px
-         &__img
-            flex-basis: 560px
-            img
-               max-width: 290px
-         &__name
-            max-width: 100%
+   &--4
+      padding-top: var(--specs-padding)
    &__inner
       @include margin-bottom(30px)
    &__header
@@ -27,6 +17,8 @@
       @extend .title--main
    &__box
       padding: 35px
+      margin-left: auto
+      margin-right: auto
       border-radius: 15px
       background: #fff
       overflow: hidden
@@ -40,7 +32,7 @@
       justify-content: center
       align-items: center
       border-radius: var(--border-radius-15)
-      background: #EFEFEF
+      background: var(--gray-400)
       overflow: hidden
       img,
       picture
@@ -106,6 +98,60 @@
       display: none
    &__controls
       @include margin-bottom(10px)
+   &__row
+      display: flex
+      gap: var(--gap)
+   &__list
+      --list-margin: 20px
+      padding: var(--list-margin)
+      border-radius: 15px
+      background: #fff
+      flex-basis: 520px
+      flex-shrink: 0
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: var(--list-margin)
+      &-link
+         height: 100%
+         padding: 10px 10px 14px
+         border-radius: 10px
+         border: 1px solid transparent
+         background: var(--gray-400)
+         overflow: hidden
+         display: flex
+         flex-direction: column
+         align-items: center
+         justify-content: center
+         gap: 10px
+         transition: var(--transition)
+         color: var(--dark)
+         @include hover()
+            border-color: var(--accent)
+            background: rgba(194, 37, 33, 0.05)
+            color: var(--accent)
+      &-title
+         @extend .title
+         max-width: 100%
+         text-overflow: ellipsis
+         overflow: hidden
+         font-size: 11px
+         color: inherit
+   @media (min-width: 1600px)
+      &--3
+         --specs-padding: 60px
+         padding-top: (var(--specs-padding))
+         .specs
+            &__box
+               gap: 100px
+            &__img
+               flex-basis: 560px
+               img
+                  max-width: 290px
+            &__name
+               max-width: 100%
+   @media (max-width: 1599px)
+      &__list
+         flex-basis: 470px
    @include xl
       &__img
          flex-basis: auto
@@ -117,14 +163,40 @@
          &--large
             & + .specs__manage
                margin-top: 0
+      &__row
+         flex-direction: column
+         align-items: stretch
+      &__list
+         display: none
    @media (max-width: 1365px)
       &__manage
          gap: 15px
       &__price
          width: 100%
+   @media (min-width: 992px)
+      &--4
+         .specs
+            &__box
+               max-width: 1360px
+               gap: var(--gap)
+            &__img
+               flex-basis: 385px
+            &__info
+               max-width: 760px
+               padding: 10px 0
+               flex-grow: 1
+               @include mt-auto()
+            &__lead
+               margin-bottom: 15px
+            &__name
+               max-width: 100%
+            &__table
+               max-width: 100%
    @include ms
       &__box
+         width: 100%
          padding: 0
+         margin: 0 auto
          flex-direction: column
          gap: var(--gap)
          background: transparent
@@ -144,7 +216,8 @@
             margin-bottom: 10px
       &__img
          padding: 15px
-         img
+         & > img,
+         picture
             width: 60%
       &__info
          padding: 15px
@@ -159,8 +232,15 @@
             margin-bottom: 5px
       &__select
          display: flex
+      &__manage
+         .favorite-button
+            --size: 40px
    @include xs
       &__box
          gap: 15px
       &__controls
          @include margin-bottom(5px)
+   @include micro
+      &__manage
+         &-btn
+            display: none

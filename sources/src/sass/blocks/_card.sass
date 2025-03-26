@@ -173,6 +173,9 @@
                width: 100%
             .button
                align-self: flex-start
+      &__list
+         &--3
+            grid-template-columns: repeat(2, 1fr)
    @include md
       &__table
          &-col
@@ -231,3 +234,6 @@
       &__favorite
          width: 40px
          height: 40px
+      &__list
+         &--3
+            grid-template-columns: 1fr

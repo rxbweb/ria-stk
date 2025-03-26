@@ -22,7 +22,7 @@
                         transform: scale(1.1)
                   &-description
                      color: var(--accent)
-            .button
+            .button--outline
                &__icon
                   background: var(--accent)
                   color: #fff
@@ -66,17 +66,12 @@
          align-items: center
          flex-wrap: wrap
          gap: 40px
-      &-images
-         width: 700px
-         padding: 25px 17px
+      &-picture
+         flex-basis: 700px
          margin-left: auto
-         display: flex
-         gap: 8px
-         background: #efefef url('../images/details/details-images-bg.jpg') no-repeat center / cover
+         background: var(--gray-400) url('../images/details/details-images-bg.jpg') no-repeat center / cover
          border-radius: var(--border-radius-15)
          overflow: hidden
-         &--large
-            padding: 0
       &--nums
          @include ol()
          .details
@@ -94,20 +89,12 @@
             &__list
                &-item
                   &::before
-                     width: 6%
                      @extend .details__list-description
                      @extend .title
                      @include fluidFontSize(32px, 64px, 360px, 1920px, 32px)
-               &-box
-                  padding-left: 10.4%
-               &-info
-                  width: 50%
-                  max-width: 670px
-                  gap: 20px
-                  & > *:last-child
-                     margin-top: 40px
                &-title
                   @extend .title--fourth
+
    @media (min-width: 1201px)
       &__list
          &--2
@@ -129,6 +116,20 @@
                      width: 57%
                      max-width: 770px
                      gap: 30px
+         &--advert
+            .details
+               &__list
+                  &-item
+                     &::before
+                        width: 6%
+                  &-box
+                     padding-left: 10.4%
+                  &-info
+                     width: 50%
+                     max-width: 670px
+                     gap: 20px
+                     & > *:last-child
+                        margin-top: 40px
    @include md
       &__list
          &-box
@@ -163,6 +164,28 @@
                         top: 15px
                   &-box
                      padding-top: 65px
+   @include ms
+      .details
+         &__list
+            &--advert
+               .details
+                  &__list
+                     &-item
+                        padding-top: var(--gap-4)
+                        &::before
+                           margin-bottom: var(--gap-4)
+                     &-box
+                        padding-top: 0
+                        flex-direction: column
+                        align-items: flex-start
+                     &-info
+                        width: 100%
+                        max-width: 100%
+      &__list
+         &-picture
+            margin-left: 0
+            flex-basis: auto
+            order: -1
    @include sm
       &__inner
          @include margin-bottom(25px)
