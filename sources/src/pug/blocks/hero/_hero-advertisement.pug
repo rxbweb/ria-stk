@@ -1,0 +1,21 @@
+include ../../mixins/_mixins
+
+section.section.section--hero.section--padding-none.section--margin-bottom
+   .section__wrapper
+      .section__content
+         .hero.hero--primary
+            .bg-image
+               +picture-simple("images/hero/hero-bg.jpg", "images/hero/hero-bg-mob.jpg", "фоновая картинка", 1920, 750)
+            .hero__inner.container
+               +breadcrumbs([
+                  { href: '#', title: 'Главная' },
+                  { href: '#', title: 'Реклама и продвижение' }
+               ])
+               .hero__layout
+                  .hero__info
+                     h1.hero__title Реклама и продвижение
+                     p.hero__label Реклама различных форматов на разных носителях, бьющая точно в цель
+                     .hero__description
+                        p Мы предлагаем полный спектр услуг по рекламе и продвижению на ресурсах РИА «Стандарты и качество» — от разработки стратегии до ее реализации.
+                  .hero__figure
+                     +picture-simple("images/hero/hero-advertisement.png", "images/hero/hero-advertisement-mob.png", "Картинка", 889, 556)
