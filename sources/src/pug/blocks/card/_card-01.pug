@@ -58,27 +58,22 @@ include ../../mixins/_mixins
       },
    ]
 
-section.section.section--card
-   .section__wrapper.container
-      .section__content
-         .card
-            .card__inner
-               .card__row
-                  .card__filter
-                     include ../filter/_filter-02
-                  .card__main
-                     .card__section
-                        ul.card__list.card__list--3
-                           each card in accountCard01
-                              .card__item
-                                 .card__block
-                                    .card__box
-                                       +favorite-button()
-                                       .card__img
-                                          img(src=card.img, alt=card.title width="350" height="210")
-                                    .card__info
-                                       p.card__text= card.text
-                                       h3.card__name= card.title
-                                       .card__manage
-                                          p.card__price= card.price
-                                          +favorite-button('card__favorite')
+.card
+   .card__main
+      .card__section
+         ul.card__list.card__list--3
+            each card in accountCard01
+               .card__item
+                  .card__block
+                     .card__box
+                        .card__icon
+                           +svg('icon-lock-03', '', 22, 26)
+                        .card__img
+                           +picture(card.img, false, card.title, 350, 210)
+                     .card__info
+                        p.card__text= card.text
+                        h3.card__name= card.title
+                        .card__manage
+                           p.card__price= card.price
+                           +button-icon('link', 'В корзину', 'button--slim', 'icon-cart')
+                           +favorite-button('card__favorite')
