@@ -1,0 +1,47 @@
+include ../../mixins/_mixins
+
+-
+   const books25 = [
+      { 
+         img: 'images/books/books-36.jpg',
+         title: 'Стандарты и качество',
+         date: 'Сентябрь 2024'
+      },
+      { 
+         img: 'images/books/books-37.jpg',
+         title: 'Стандарты и качество',
+         date: 'Август 2024'
+      },
+      { 
+         img: 'images/books/books-38.jpg',
+         title: 'Стандарты и качество',
+         date: 'Июль 2024'
+      },
+      { 
+         img: 'images/books/books-39.jpg',
+         title: 'Стандарты и качество',
+         date: 'Июнь 2024'
+      }
+   ]
+
+section.section.section--books
+   .section__wrapper.container
+      .section__content
+         .books.books--2
+            .books__inner
+               .books__section
+                  .books__header
+                     h2.books__title Предыдущие выпуски
+                  .books__content
+                     ul.books__list
+                        each book in books25
+                           li.books__item
+                              a.books__card(href="#")
+                                 .books__box
+                                    .books__img
+                                       +picture(book.img, false, book.title, 380, 380)
+                                 .books__info
+                                    h3.books__name= book.title
+                                    p.books__date= book.date
+                     .books__footer
+                        +button-icon('link', 'Архив журналов')

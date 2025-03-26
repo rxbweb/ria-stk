@@ -59,11 +59,12 @@ section.section.section--books
                               each book in books11
                                  .swiper-slide
                                     .books__item
-                                       .books__box
-                                          +favorite-button()
-                                          .books__img
-                                             +picture(book.img, false, book.title, 380, 380)
-                                       .books__info
-                                          h3.books__name= book.title
-                                          p.books__date= book.date
+                                       a.books__card(href="#")
+                                          .books__box
+                                             +favorite-button()
+                                             .books__img
+                                                +picture(book.img, false, book.title, 380, 380)
+                                          .books__info
+                                             h3.books__name= book.title
+                                             p.books__date= book.date
                            +swiperControls()

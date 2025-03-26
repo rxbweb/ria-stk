@@ -1,0 +1,198 @@
+include mixins/_booksList
+
+-
+   const books27 = [
+      {
+         img: 'images/archive/archive-01.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-02.png',
+         date: '2022 год',
+         title: 'Методы менеджмента качества',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-03.png',
+         date: '2022 год',
+         title: 'Контроль качества продукции',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-04.png',
+         date: '2024 год',
+         title: 'МИР измерений',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-05.png',
+         date: '2022 год',
+         title: 'Business Excellence',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-06.png',
+         date: '2022 год',
+         title: 'Менеджмент качества в медицине',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-07.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-08.png',
+         date: '2024 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-09.png',
+         date: '2023 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-10.png',
+         date: '2023 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-11.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-12.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-13.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-14.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+      {
+         img: 'images/archive/archive-15.png',
+         date: '2022 год',
+         title: 'стандарты и качество',
+         price: '30 000 руб.',
+         buttons: {
+            basket: true,
+            click: true
+         }
+      },
+   ];
+
+section.section.section--books
+   .section__wrapper.container
+      .section__content
+         .books
+            .books__inner
+               .books__section
+                  .books__header
+                     h2.books__title Архив журналов
+                     +button-icon('link', 'Смотреть все')
+                  .books__content
+                     .books__swiper
+                        .books__swiper-slider
+                           .swiper-wrapper
+                              each book in books27
+                                 .swiper-slide
+                                    .books__item
+                                       .books__card
+                                          .books__box
+                                             +favorite-button()
+                                             .books__img
+                                                if book.img
+                                                   +picture(book.img, false, book.title, 380, 380)
+                                          .books__info
+                                             if book.date
+                                                p.books__text= book.date
+                                             if book.title
+                                                h3.books__name= book.title
+                                             if book.price || book.buttons
+                                                .books__bottom
+                                                   if book.price
+                                                      p.books__price= book.price
+                                                   if book.buttons
+                                                      .books__manage
+                                                         if book.buttons.read
+                                                            +button-outline('link', 'Читать статью')
+                                                         if book.buttons.buy
+                                                            +button-icon('link', 'В корзину', 'button--slim', 'icon-cart')
+                                                         if book.buttons.basket
+                                                            +button-icon('link', 'В корзину', 'button--slim', 'icon-cart')
+                                                         if book.buttons.click
+                                                            +button-outline('link', 'Купить в 1 клик')
+                           +swiperControls()

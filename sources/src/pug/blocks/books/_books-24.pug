@@ -1,0 +1,46 @@
+include ../../mixins/_mixins
+
+-
+   const books24 = [
+      { 
+         img: 'images/books/books-17.jpg',
+         title: 'Методы менеджмента качества',
+         date: '№10 октябрь 2024'
+      },
+      { 
+         img: 'images/books/books-16.jpg',
+         title: 'Business Excellence',
+         date: '№10 декабрь 2024'
+      },
+      { 
+         img: 'images/books/books-14.jpg',
+         title: 'Контроль качества продукции',
+         date: '№ 8 август 2024'
+      },
+      { 
+         img: 'images/books/books-15.jpg',
+         title: 'Мир измерений',
+         date: '№2 май 2024'
+      }
+   ]
+
+section.section.section--books
+   .section__wrapper.container
+      .section__content
+         .books.books--2
+            .books__inner
+               .books__section
+                  .books__header
+                     h2.books__title Рекомендации
+                  .books__content
+                     ul.books__list
+                        each book in books24
+                           li.books__item
+                              a.books__card(href="#")
+                                 .books__box
+                                    +favorite-button()
+                                    .books__img
+                                       +picture(book.img, false, book.title, 380, 380)
+                                 .books__info
+                                    p.books__date= book.date
+                                    h3.books__name= book.title

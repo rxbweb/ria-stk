@@ -1,0 +1,46 @@
+include ../../mixins/_mixins
+
+-
+   const books28 = [
+      {
+         img: 'images/books/books-22.jpg',
+         title: 'Бизнес-план — стань хозяином своего дела',
+      },
+      {
+         img: 'images/books/books-23.jpg',
+         title: 'Финансовый ликбез',
+      },
+      {
+         img: 'images/books/books-24.jpg',
+         title: 'Процессный подход / проектное управление',
+      },
+      {
+         img: 'images/books/books-25.jpg',
+         title: 'Модель EFQM - путь к совершенству',
+      },
+   ]
+
+section.section
+   .section__wrapper.container
+      .section__content
+         .books
+            .books__inner
+               .books__section
+                  .books__header
+                     h2.books__title Тематические подборки
+                     +button-icon('link', 'Все подборки')
+                  .books__content
+                     ul.books__list
+                        each book in books28
+                           li.books__item
+                              .books__card
+                                 .books__box
+                                    +favorite-button()
+                                    .books__img
+                                       +picture(book.img, false, book.title, 380, 380)
+                                 .books__info
+                                    h3.books__name= book.title
+                                    .books__bottom
+                                       .books__manage
+                                          +button-icon('link', 'В корзину', 'button--slim', 'icon-cart')
+                                          +button-outline('link', 'Купить в 1 клик')
