@@ -1,0 +1,21 @@
+extends base/_layout
+block head
+   title Инновационные решения
+block page
+
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Электронная библиотека' },
+      { href: '#', title: 'Специальные проекты' },
+      { href: '#', title: 'Спецвыпуски журналов' },
+   ])
+   
+   include blocks/annotation/_annotation
+
+   include blocks/books/_books-17
+
+   include blocks/books/_books-22
+
+   include blocks/books/_books-23
+
+   include blocks/response/_response-02
