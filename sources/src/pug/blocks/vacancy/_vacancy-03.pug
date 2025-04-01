@@ -1,0 +1,48 @@
+include ../../mixins/_mixins
+
+-
+   const vacancyList03 = [
+      {
+         title: 'Директор по качеству (пищевое производство)',
+         company: 'Компания «ЮТИМ»'
+      },
+      {
+         title: 'Специалист по СМК',
+         company: 'АО «Российские космические системы»'
+      },
+      {
+         title: 'Инженер-метролог по линейно-угловым измерениям',
+         company: 'Метрологический центр «Севр групп»'
+      },
+      {
+         title: 'Специалист отдела стандартизации и сертификации',
+         company: 'ООО НПО «СпецПолимер»'
+      },
+   ]
+
+section.section.section--vacancy
+   .section__wrapper.container
+      .section__header.section__header--margin
+         .section__header-row
+            h1.section__header-heading Вакансии
+            +button-icon('link', 'Все вакансии')
+      .section__content
+         .vacancy
+            .vacancy__inner
+               .vacancy__main
+                  .vacancy__box
+                     .vacancy__section
+                        ul.vacancy__list.vacancy__list--2
+                           each vacancy in vacancyList03
+                              li.vacancy__item
+                                 .vacancy__item-info
+                                    .vacancy__meta
+                                       time.vacancy__meta-time(datetime="2024-01-01") 01.01.2024
+                                       span.vacancy__meta-location Москва
+                                    .vacancy__heading
+                                       h3.vacancy__heading-title= vacancy.title
+                                    .vacancy__item-text
+                                       p= vacancy.company
+                                    .vacancy__item-bottom
+                                       p.vacancy__item-price 100 000 руб.
+                                       +button-outline('link', 'Подробнее')
