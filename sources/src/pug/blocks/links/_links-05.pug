@@ -1,0 +1,27 @@
+include mixins/_linksList
+
+-
+   const links05 = [
+      {
+         name: "Развитие законодательной и нормативной базы национальной и межгосударственной систем стандартизации"
+      },
+      {
+         name: "Новые разработки промышленных стандартов"
+      },
+      {
+         name: "Нормативное обеспечение производственной, экологической, энергетической безопасности, безопасности труда, качества продукции и т.д"
+      },
+      {
+         name: "Техническое регулирование и стандартизация в рамках Таможенного союза и ЕАЭС"
+      },
+   ]
+
+section.section.section--links
+   .section__wrapper.container
+      .section__header.section__header--border
+         .section__header-row
+            h2.section__header-title Тематика журнала
+      .section__content
+         .links
+            .links__inner
+               +linksList(links05)

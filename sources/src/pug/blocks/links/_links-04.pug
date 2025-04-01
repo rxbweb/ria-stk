@@ -1,0 +1,30 @@
+include mixins/_linksList
+
+-
+   const links04 = [
+      {
+         name: "Структура стандартов ИСО и виды стандартов ИСО по менеджменту"
+      },
+      {
+         name: "Нормативы"
+      },
+      {
+         name: "Органы по сертификации"
+      },
+      {
+         name: "Официальные документы"
+      },
+      {
+         name: "Лауреаты, дипломанты премий Правительства РФ в области качества"
+      },
+   ]
+
+section.section.section--links
+   .section__wrapper.container
+      .section__header.section__header--border
+         .section__header-row
+            h2.section__header-title Справочная информация
+      .section__content
+         .links
+            .links__inner
+               +linksList(links04)
