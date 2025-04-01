@@ -1,0 +1,47 @@
+include ../../mixins/_mixins
+
+-
+   const journals03 = [
+      { 
+         img: 'images/journals/journals-01.jpg', 
+         title: 'стандарты и качество' 
+      },
+      { 
+         img: 'images/journals/journals-02.jpg', 
+         title: 'Менеджмент качества' 
+      },
+      { 
+         img: 'images/journals/journals-03.jpg', 
+         title: 'Контроль качества продукции' 
+      },
+      { 
+         img: 'images/journals/journals-04.jpg', 
+         title: 'Мир измерений' 
+      },
+      { 
+         img: 'images/journals/journals-05.jpg', 
+         title: 'Business Excellence' 
+      },
+      { 
+         img: 'images/journals/journals-06.jpg', 
+         title: 'Методы менеджмента качества' 
+      },
+   ]
+
+section.section
+   .section__wrapper.container
+      .section__header
+         .section__header-row
+            h2.section__header-title Реклама в журналах
+      .section__content
+         .journals
+            .journals__inner
+               ul.journals__list
+                  each journal in journals03
+                     li.journals__item
+                        .journals__top
+                           .journals__img
+                              +picture(journal.img, false, journal.title, 240, 340)
+                        .journals__info
+                           h3.journals__name #{journal.title}
+                           +button-outline('link', 'Подробнее')
