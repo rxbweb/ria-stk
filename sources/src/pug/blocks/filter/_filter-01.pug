@@ -11,55 +11,53 @@ include ../../mixins/_mixins
       .filter__box
          ul.filter__list
             li.filter__item
-               p.filter__name Город
-               .filter__block
-                  .filter__content
-                     .search
-                        button.search__button(aria-label="кнопка поиска")
-                           svg(width="26" height="26")
-                              use(href='images/sprites/main.stack.svg#svg-icon-loop')
-                        input.search__input(type="text" placeholder="Искать....")
+               p.filter__name Тематика
+               .filter__content
+                  .filter__inputs
+                     +select(false, ['Везде', 'По журналам', 'По книгам', 'По статьям', 'По новостям', 'По мероприятиям'], '', '', 'Выберите тематику')
             li.filter__item
-               a.filter__btn(href="#")
-                  p.filter__name Специализация
-                  +svg('icon-arrow-down', '', 22, 22)
-               .filter__block
-                  .filter__content
-                     .filter__selection
-                        +agree('Специализация 1', '', 'form-agree')
-                        +agree('Специализация 2', '', 'form-agree')
-                        +agree('Специализация 3', '', 'form-agree')
-                        +agree('Специализация 4', '', 'form-agree')
-                        +agree('Специализация 5', '', 'form-agree')
+               p.filter__name Рубрика
+               .filter__content
+                  .filter__inputs
+                     .filter__input
+                        .filter__selected 
+                           span.filter__selected-text Безопасность. Практика
+                           button.filter__delete(aria-label="удалить выбранный элемент")
+                              +svg('icon-close', '', 18, 18)
             li.filter__item
-               a.filter__btn(href="#")
-                  p.filter__name Тип занятости
-                  +svg('icon-arrow-down', '', 22, 22)
-               .filter__block
-                  .filter__content
-                     .filter__selection
-                        +agree('Полная занятость', '', 'form-agree')
-                        +agree('Частичная занятость', '', 'form-agree')
-                        +agree('Проектная работа', '', 'form-agree')
-                        +agree('Стажировка', '', 'form-agree')
-                        +agree('Волонтерство', '', 'form-agree')
+               p.filter__name Рефоративные базы и индекс
+               .filter__content
+                  .filter__inputs
+                     .filter__input
+                        input(type="text" placeholder="Искать по индексу" minlength="3" required)
+                        .filter__search
+                           .filter__search-item Андреев Б.В.
+                           .filter__search-item Андрианов А.А.
+                           .filter__search-item Андриашина Г.С.
+                           .filter__search-item Андронов П.Б.
+                           .filter__search-item Андрухович А.А.
+                           .filter__search-item Андреев Б.В.
+                           .filter__search-item Андрианов А.А.
+                           .filter__search-item Андриашина Г.С.
+                           .filter__search-item Андронов П.Б.
+                           .filter__search-item Андрухович А.А.
             li.filter__item
-               a.filter__btn(href="#")
-                  p.filter__name Опыт
-                  +svg('icon-arrow-down', '', 22, 22)
-               .filter__block
-                  .filter__content
-                     .filter__selection
-                        +agree('Нет опыта', '', 'form-agree')
-                        +agree('от 1 до 3 лет', '', 'form-agree')
-                        +agree('от 3 до 6 лет', '', 'form-agree')
-                        +agree('более 6 лет', '', 'form-agree')
+               p.filter__name Авторы
+               .filter__content
+                  .filter__inputs
+                     .filter__input
+                        input(type="text" placeholder="Искать по фамилии автора" minlength="3" required)
+                        .filter__search
+                           .filter__search-empty Вариантов не найдено
             li.filter__item
-               p.filter__name Ежемесячный доход
-               .filter__block
-                  .filter__content
-                     .range
-                        .range__controls
-                           input(type="text" data-range="min")
-                           input(type="text" data-range="max")
-                        .range__slider
+               p.filter__name Год публикации
+               .filter__content
+                  .filter__year
+                     label.filter__year-label
+                        span.filter__year-title От
+                        input(type="text" placeholder="1927" minlength="4")
+                     label.filter__year-label
+                        span.filter__year-title До
+                        input(type="text" placeholder="2025" minlength="4")
+         .filter__bottom
+            +button-icon('button', 'Применить фильтры')
