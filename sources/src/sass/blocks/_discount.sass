@@ -1,0 +1,39 @@
+.discount
+   &__main
+      @include margin-bottom(var(--gap))
+   &__section
+      @extend .two-col
+      padding-bottom: var(--gap)
+      border-bottom: 1px solid var(--gray-300)
+   &__title
+      @extend .title
+      @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)
+   &__list
+      --discount-margin: calc(var(--gap) / 2)
+      @include margin-bottom(var(--discount-margin))
+   &__item
+      @extend .fs-18
+      padding-bottom: var(--discount-margin)
+      display: flex
+      gap: var(--gap-4)
+      border-bottom: 1px solid var(--gray-300)
+   &__accent
+      @extend .title
+      @extend .title--second
+      @extend .title--red
+      min-width: 60px
+      flex-shrink: 0
+   &__text
+      align-self: center
+   @include md
+      &__section
+         flex-direction: column
+         & > *
+            width: 100%
+            flex-basis: auto
+            flex-shrink: auto
+   @include xs
+      &__section
+         gap: 15px
+      &__accent
+         min-width: 30px
