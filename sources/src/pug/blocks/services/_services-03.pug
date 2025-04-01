@@ -1,0 +1,34 @@
+include ../../mixins/_mixins
+
+section.section.section--services
+   .section__wrapper.container
+      .section__header
+         .section__header-row.section__header--border
+            h2.section__header-title Реклама на ресурсах РИА
+      .section__content
+         .services
+            .services__inner
+               .services__row
+                  .services__left
+                     .switcher
+                        .switcher__list.tabs-nav(data-tabs="services")
+                           a.switcher__btn.tabs-link.is-active(href="#" data-tabs="tab1")
+                              .badge.badge--second
+                                 +svg('badge-01', '', 22, 22)
+                              span Реклама и продвижение
+                           a.switcher__btn.tabs-link(href="#" data-tabs="tab2")
+                              .badge.badge--second
+                                 +svg('badge-02', '', 27, 22)
+                              span Спецвыпуски на заказ
+                           a.switcher__btn.tabs-link(href="#" data-tabs="tab3")
+                              .badge.badge--second
+                                 +svg('badge-03', '', 22, 22)
+                              span Другие услуги
+                  .services__right
+                     .tabs-content(data-tabs="services")
+                        .tabs-item.is-active(data-tabs="tab1")
+                           include ../listing/_listing-10
+                        .tabs-item(data-tabs="tab2")
+                           include ../listing/_listing-13
+                        .tabs-item(data-tabs="tab3")
+                           include ../listing/_listing-14
