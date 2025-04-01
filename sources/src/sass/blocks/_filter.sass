@@ -14,7 +14,10 @@
    &__list
       @include margin-bottom(var(--gap))
    &__item
+      position: relative
       @include margin-bottom(10px)
+      &:has(.is-active)
+         z-index: 10
    &__btn
       margin-bottom: 0
       display: flex
@@ -41,6 +44,57 @@
       display: flex
       flex-direction: column
       gap: 10px
+   &__input
+      position: relative
+      input
+         width: 100%
+         padding-right: 46px
+   &__search
+      max-height: 202px
+      padding: 6px 0
+      position: absolute
+      z-index: var(--z-index)
+      top: 100%
+      left: 0
+      right: 0
+      transform: translateY(-1px)
+      border-radius: 4px
+      border: 1px solid var(--gray-300)
+      background: #fff
+      color: var(--black)
+      overflow-y: auto
+      display: none
+      &.is-active
+         display: block
+      &-item
+         padding: 9px 10px 7px
+         cursor: pointer
+         transition: var(--transition)
+         @include hover()
+            background: var(--gray-400)
+      &-empty
+         padding: 8px 10px
+         color: var(--gray)
+         font-size: 14px
+   &__delete
+      --size: 16px
+      width: var(--size)
+      height: var(--size)
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: 18px
+   &__selected
+      @extend input
+      display: flex
+      align-items: center
+      justify-content: space-between
+      background: #fff
+      &-text
+         max-width: 100%
+         white-space: nowrap
+         overflow: hidden
+         text-overflow: ellipsis
    &__year
       display: flex
       flex-wrap: wrap
@@ -58,6 +112,7 @@
       &__active
          min-height: 40px
          padding-inline: 15px
+         padding-right: 40px
          background: #fff
          &:not(.is-selected)
             color: var(--placeholder-color)
@@ -86,6 +141,8 @@
          @include margin-bottom(25px)
       &__bottom
          display: flex
+      &__delete
+         right: 10px
    @include sm
       &__btn
          svg
