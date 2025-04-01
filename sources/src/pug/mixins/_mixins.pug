@@ -186,20 +186,29 @@ mixin favorite-button(className = '', type = 'button', ariaLabel = 'добави
    else
       a.favorite-button(class=className, href='#')
 
-mixin select(selected, list, className, iconLeft, defaultText = 'Выберите из списка')
+mixin select(selected, list, className, iconLeft, defaultText = 'Выберите из списка', type = 'button')
    - var activeText = selected ? list[0] : defaultText;
    - var isSelected = selected ? 'is-selected' : '';
    - var isActive = selected ? 'is-active' : '';
 
    .select(class=className)
-      button.select__active(class=isSelected)
-         if iconLeft
-            +svg(iconLeft, '', 22, 22)
-         span.select__active-text= activeText
-         +svg('icon-arrow-down', '', 16, 16)
-      .select__list
-         each item, index in list
-            - var itemClass = index === 0 && isActive ? 'is-active' : '';
-            button.select__item(class=itemClass)= item
-
-
+      if type == 'button'
+         button.select__active(class=isSelected)
+            if iconLeft
+               +svg(iconLeft, '', 22, 22)
+            span.select__active-text= activeText
+            +svg('icon-arrow-down', '', 16, 16)
+         .select__list
+            each item, index in list
+               - var itemClass = index === 0 && isActive ? 'is-active' : '';
+               button.select__item(class=itemClass)= item
+      else
+         button.select__active(class=isSelected)
+            if iconLeft
+               +svg(iconLeft, '', 22, 22)
+            span.select__active-text= activeText
+            +svg('icon-arrow-down', '', 16, 16)
+         .select__list
+            each item, index in list
+               - var itemClass = index === 0 && isActive ? 'is-active' : '';
+               a.select__item(class=itemClass href="index.html")= item
