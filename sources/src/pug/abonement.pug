@@ -1,0 +1,23 @@
+extends base/_layout
+block head
+   title Абонементный доступ
+block page
+
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Абонементный доступ' }
+   ])
+
+   include blocks/intro/_intro-02
+
+   include blocks/ticket/_ticket-03
+
+   include blocks/figures/_figures-03
+
+   include blocks/intro/_intro-03
+
+   include blocks/listing/_listing-16
+
+   include blocks/accordion/_accordion-03
+
+   include blocks/contacts/_contacts
