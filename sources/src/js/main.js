@@ -12,8 +12,6 @@ $('.partners__swiper').each(function (index, element) {
       pagination: {
          el: $(element).find('.swiper-pagination')[0],
          clickable: true,
-         dynamicBullets: true,
-         dynamicMainBullets: 8,
       },
       breakpoints: {
          0: {
@@ -89,6 +87,7 @@ $('.history__swiper').each(function (index, element) {
       spaceBetween: 20,
       effect: "fade",
       speed: 500,
+      keyboard: true,
       fadeEffect: {
          crossFade: true
       },
@@ -144,6 +143,7 @@ $('.account__products-swiper').each(function (index, element) {
    new Swiper(element, {
       slidesPerView: 2,
       spaceBetween: 20,
+      keyboard: true,
       navigation: {
          nextEl: $(element).find('.swiper-button-next')[0],
          prevEl: $(element).find('.swiper-button-prev')[0],
@@ -323,8 +323,8 @@ $(".content__swiper-slider").each(function (index, element) {
 
 $('.books__swiper-slider').each(function (index, element) {
    new Swiper(element, {
-      slidesPerView: 4,
-      spaceBetween: 40,
+      slidesPerView: 2,
+      spaceBetween: 20,
       keyboard: true,
       pagination: {
          el: $(element).find('.swiper-pagination')[0],
@@ -333,6 +333,16 @@ $('.books__swiper-slider').each(function (index, element) {
       navigation: {
          prevEl: $(element).find('.swiper-button-prev')[0],
          nextEl: $(element).find('.swiper-button-next')[0],
+      },
+      breakpoints: {
+         768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+         },
+         1200: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+         },
       },
    });
 });
@@ -564,21 +574,24 @@ const selectModule = {
    },
 
    selectItem(e) {
-      e.preventDefault();
-
       const $item = $(e.currentTarget);
+   
+      if (!$item.is('a')) {
+         e.preventDefault();
+      }
+   
       const selectedText = $item.text();
       const $selectList = $item.closest('.select__list');
       const $selectActive = $selectList.prev('.select__active');
-
+   
       if (!$selectActive.length) {
          return;
       }
-
+   
       if (!$selectList.length) {
          return;
       }
-
+   
       $selectList.find('.select__item').removeClass('is-active');
       $item.addClass('is-active');
       $selectActive.find('.select__active-text').html(`${selectedText}`);
