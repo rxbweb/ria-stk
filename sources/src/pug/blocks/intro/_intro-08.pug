@@ -1,0 +1,17 @@
+include ../../mixins/_mixins
+
+section.section.section--intro
+   .section__wrapper.container
+      .section__content
+         .intro
+            .bg-image
+               +picture-simple("images/intro/intro-bg-02.jpg", "images/intro/intro-bg-mob.jpg", "фоновая картинка", 1640, 512)
+            .intro__main
+               .intro__info.intro__info--center
+                  p.intro__accent Стандарты и качество + Business Excellence
+                  h1.intro__title Комплект — в два раза больше пользы
+                  p.intro__content Печатная версия журнала «Стандарты и качество» продается в комплекте с журналом Business Excellence — ежемесячным деловым журналом для управленцев любого уровня. В каждом номере собраны успешные кейсы и готовые бизнес-решения, что наделяет журнал высокой практической ценностью.
+                  .intro__bottom
+                     +button-icon('link', 'Узнать больше')
+               .intro__img.intro__img--journal
+                  +picture("images/intro/intro-07.png", "images/intro/intro-07-mob.png", "Картинка", 1026, 685)
