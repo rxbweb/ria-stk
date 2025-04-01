@@ -1,6 +1,8 @@
 .partners
    padding: 120px 0 100px
    position: relative
+   &--secondary
+      padding: 0
    &__inner
       @include margin-bottom(var(--gap))
    &__title
@@ -23,11 +25,59 @@
          display: flex
          justify-content: center
          align-items: center
-      @include sm
-         width: 54%
+         margin: 0 auto
+   &__row
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      gap: var(--gap)
+   &__list
+      display: flex
+      flex-wrap: wrap
+      flex-grow: 1
+      flex-shrink: 0
+      justify-content: flex-end
+      gap: calc(var(--gap) - 4px)
+      & > *
+         flex-shrink: 0
+         flex-basis: 250px
+   @include md
+      &__row
+         flex-direction: column
+         align-items: flex-start
+         .partners
+            &__title
+               text-align: left
+      &__list
+         width: 100%
+         justify-content: flex-start
+         & > *
+            padding: 20px
+            flex-basis: 200px
+            height: 120px
          img
+            width: auto
+            max-height: 100%
+   @include sm
+      &__slide
+         width: 54%
+         picture,
+         & > img
             width: 77%
+      &__list
+         padding-top: 10px
+         padding-bottom: 15px
+         gap: 10px
+         @include scroll-x()
+         & > *
+            padding: 10px
+            flex-basis: 180px
+            height: 100px
    @include xl
       padding: var(--section-padding) 0
+      &--secondary
+         padding: 0
    @include sm
       padding: 50px 0 38px
+      &--secondary
+         padding: 0
