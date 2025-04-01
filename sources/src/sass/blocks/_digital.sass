@@ -1,0 +1,37 @@
+.digital
+   &__main
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      gap: var(--gap)
+   &__content
+      max-width: 350px
+   &__section
+      flex-grow: 1
+   &__list
+      display: grid
+      grid-template-columns: repeat(3, minmax(200px, 380px))
+      gap: var(--gap)
+   &__title
+      @extend .title
+   &__img
+      @include img-cover(75%, var(--border-radius-15))
+   &__info
+      padding-top: 15px
+   &__text
+      @extend .title
+      @extend .title--second
+      letter-spacing: var(--letter-spacing)
+      a
+         text-decoration: underline
+   @include xl
+      &__main
+         display: block
+         @include margin-bottom(var(--gap))
+      &__content
+         max-width: 100%
+   @include sm
+      &__list
+         grid-template-columns: 1fr
+      &__section
+         flex-grow: 0
