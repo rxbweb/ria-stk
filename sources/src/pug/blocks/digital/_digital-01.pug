@@ -1,0 +1,26 @@
+include ../../mixins/_mixins
+
+section.section.section--digital
+   .section__wrapper.container
+      .digital
+         .digital__inner
+            .digital__main
+               .digital__content
+                  h2.digital__title Диджитал-реклама
+               .digital__section
+                  ul.digital__list
+                     li.digital__item
+                        .digital__img
+                           +picture("images/digital/digital-01.jpg", false, "Cайт  https://ria-stk.ru/", 380, 285)
+                        .digital__info
+                           p.digital__text Cайт  #[a(href="#") https://ria-stk.ru/]
+                     li.digital__item
+                        .digital__img
+                           +picture("images/digital/digital-02.jpg", false, "Электронная газета Quality News", 380, 285)
+                        .digital__info
+                           p.digital__text Электронная газета Quality News
+                     li.digital__item
+                        .digital__img
+                           +picture("images/digital/digital-03.jpg", false, "E-mail рассылки", 380, 285)
+                        .digital__info
+                           p.digital__text E-mail рассылки
