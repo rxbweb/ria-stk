@@ -44,7 +44,7 @@
               </ul>
             </div>
             <div class="feedback__content">
-              <form class="feedback__form form form--2" action="#">
+              <form class="feedback__form form form--2" action="#" data-validate-form="data-validate-form">
                 <div class="form__header">
                   <h2 class="form__title">Форма для связи</h2>
                 </div>
@@ -69,10 +69,10 @@
                         </div>
                       </div>
                       <label class="form__label"><span class="form__type">E-mail</span>
-                        <input class="form__input" type="email" placeholder="E-mail" name="form-email"/>
+                        <input class="form__input" type="email" placeholder="E-mail" name="form-email" minlength="3" required="required"/><span class="form__error">Обязательное поле</span>
                       </label>
                       <label class="form__label form__label--half"><span class="form__type">Имя</span>
-                        <input class="form__input" type="text" placeholder="Ваше имя"/>
+                        <input class="form__input" type="text" placeholder="Ваше имя" name="form-name" required="required"/><span class="form__error">Обязательное поле</span>
                       </label>
                       <label class="form__label form__label--half"><span class="form__type">Фамилия</span>
                         <input class="form__input" type="text" placeholder="Ваша фамилия"/>
@@ -85,8 +85,8 @@
                   <div class="form__middle">
                     <div class="agree">
                       <label class="agree__label">
-                        <input type="checkbox"/><span class="agree__checkbox"></span><span class="agree__text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
-                      </label>
+                        <input type="checkbox" name="form-agree" required="required"/><span class="agree__checkbox"></span><span class="agree__text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
+                      </label><span class="agree__error">Обязательное поле</span>
                     </div>
                   </div>
                   <div class="form__bottom">

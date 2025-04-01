@@ -11,9 +11,7 @@ $('.partners__swiper').each(function (index, element) {
     },
     pagination: {
       el: $(element).find('.swiper-pagination')[0],
-      clickable: true,
-      dynamicBullets: true,
-      dynamicMainBullets: 8
+      clickable: true
     },
     breakpoints: {
       0: {
@@ -86,6 +84,7 @@ $('.history__swiper').each(function (index, element) {
     spaceBetween: 20,
     effect: "fade",
     speed: 500,
+    keyboard: true,
     fadeEffect: {
       crossFade: true
     },
@@ -136,6 +135,7 @@ $('.account__products-swiper').each(function (index, element) {
   new Swiper(element, {
     slidesPerView: 2,
     spaceBetween: 20,
+    keyboard: true,
     navigation: {
       nextEl: $(element).find('.swiper-button-next')[0],
       prevEl: $(element).find('.swiper-button-prev')[0]
@@ -309,8 +309,8 @@ $(".content__swiper-slider").each(function (index, element) {
 });
 $('.books__swiper-slider').each(function (index, element) {
   new Swiper(element, {
-    slidesPerView: 4,
-    spaceBetween: 40,
+    slidesPerView: 2,
+    spaceBetween: 20,
     keyboard: true,
     pagination: {
       el: $(element).find('.swiper-pagination')[0],
@@ -319,6 +319,41 @@ $('.books__swiper-slider').each(function (index, element) {
     navigation: {
       prevEl: $(element).find('.swiper-button-prev')[0],
       nextEl: $(element).find('.swiper-button-next')[0]
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 40
+      }
+    }
+  });
+});
+$('.article__process-slider').each(function (index, element) {
+  new Swiper(element, {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    keyboard: true,
+    pagination: {
+      el: $(element).find('.swiper-pagination')[0],
+      clickable: true
+    },
+    navigation: {
+      prevEl: $(element).find('.swiper-button-prev')[0],
+      nextEl: $(element).find('.swiper-button-next')[0]
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 40
+      }
     }
   });
 });
@@ -486,8 +521,10 @@ var selectModule = {
     $selectList.toggleClass('is-active');
   },
   selectItem: function selectItem(e) {
-    e.preventDefault();
     var $item = $(e.currentTarget);
+    if (!$item.is('a')) {
+      e.preventDefault();
+    }
     var selectedText = $item.text();
     var $selectList = $item.closest('.select__list');
     var $selectActive = $selectList.prev('.select__active');
@@ -593,11 +630,90 @@ var controlsModule = {
     this.$document.off('click');
   },
   toggleControls: function toggleControls(e) {
+    e.preventDefault();
     e.stopPropagation();
     this.$controlsToggle.toggleClass("is-active").next().stop().slideToggle(300);
   },
   closeControls: function closeControls(e) {
     if (!$(e.target).closest(".controls").length) {
+      this.$controlsToggle.removeClass("is-active").next().stop().slideUp(300);
+    }
+  }
+};
+var filterModule = {
+  init: function init() {
+    this.$controlsToggle = $(".filter__toggle");
+    this.$document = $(document);
+    this.handleResize();
+    this.bindResizeEvent();
+  },
+  handleResize: function handleResize() {
+    if ($(window).width() <= 991) {
+      this.bindEvents();
+    } else {
+      this.unbindEvents();
+    }
+  },
+  bindResizeEvent: function bindResizeEvent() {
+    $(window).on('resize', this.onResize.bind(this));
+  },
+  onResize: function onResize() {
+    this.handleResize();
+  },
+  bindEvents: function bindEvents() {
+    this.$controlsToggle.on('click', this.toggleControls.bind(this));
+    this.$document.on('click', this.closeControls.bind(this));
+  },
+  unbindEvents: function unbindEvents() {
+    this.$controlsToggle.off('click');
+    this.$document.off('click');
+  },
+  toggleControls: function toggleControls(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    this.$controlsToggle.toggleClass("is-active").next().stop().slideToggle(300);
+  },
+  closeControls: function closeControls(e) {
+    if (!$(e.target).closest(".filter").length) {
+      this.$controlsToggle.removeClass("is-active").next().stop().slideUp(300);
+    }
+  }
+};
+var sortModule = {
+  init: function init() {
+    this.$controlsToggle = $(".sort__toggle");
+    this.$document = $(document);
+    this.handleResize();
+    this.bindResizeEvent();
+  },
+  handleResize: function handleResize() {
+    if ($(window).width() <= 991) {
+      this.bindEvents();
+    } else {
+      this.unbindEvents();
+    }
+  },
+  bindResizeEvent: function bindResizeEvent() {
+    $(window).on('resize', this.onResize.bind(this));
+  },
+  onResize: function onResize() {
+    this.handleResize();
+  },
+  bindEvents: function bindEvents() {
+    this.$controlsToggle.on('click', this.toggleControls.bind(this));
+    this.$document.on('click', this.closeControls.bind(this));
+  },
+  unbindEvents: function unbindEvents() {
+    this.$controlsToggle.off('click');
+    this.$document.off('click');
+  },
+  toggleControls: function toggleControls(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    this.$controlsToggle.toggleClass("is-active").next().stop().slideToggle(300);
+  },
+  closeControls: function closeControls(e) {
+    if (!$(e.target).closest(".sort").length) {
       this.$controlsToggle.removeClass("is-active").next().stop().slideUp(300);
     }
   }
@@ -1014,6 +1130,89 @@ var goodsTableModule = {
     });
   }
 };
+var rangeSliderModule = {
+  init: function init() {
+    var $sliders = $('.range__slider');
+    if ($sliders.length === 0) {
+      return;
+    }
+    this.setupSliders($sliders);
+  },
+  setupSliders: function setupSliders($sliders) {
+    var _this5 = this;
+    $sliders.each(function (_, slider) {
+      var $slider = $(slider);
+      var $parent = $slider.closest('.range');
+      var $minInput = $parent.find('[data-range="min"]');
+      var $maxInput = $parent.find('[data-range="max"]');
+      if ($minInput.length === 0 || $maxInput.length === 0) {
+        return;
+      }
+      var minValue = 10000;
+      var maxValue = 1000000;
+      var stepValue = 10000;
+      noUiSlider.create(slider, {
+        start: [minValue, maxValue / 2],
+        connect: true,
+        step: stepValue,
+        range: {
+          min: minValue,
+          max: maxValue
+        },
+        format: {
+          to: function to(value) {
+            return Math.round(value).toLocaleString('ru-RU');
+          },
+          from: function from(value) {
+            return Number(value.replace(/\s/g, ''));
+          }
+        }
+      });
+      var sliderInstance = slider.noUiSlider;
+      sliderInstance.on('update', function (values) {
+        $minInput.val(values[0]);
+        $maxInput.val(values[1]);
+      });
+      _this5.handleInputChange($minInput, sliderInstance, 0, minValue, maxValue);
+      _this5.handleInputChange($maxInput, sliderInstance, 1, minValue, maxValue);
+    });
+  },
+  handleInputChange: function handleInputChange($input, sliderInstance, handleIndex, minValue, maxValue) {
+    $input.on('change', function () {
+      var min = parseInt($input.closest('.range').find('[data-range="min"]').val().replace(/\s/g, ''), 10) || minValue;
+      var max = parseInt($input.closest('.range').find('[data-range="max"]').val().replace(/\s/g, ''), 10) || maxValue;
+      if (min < minValue) min = minValue;
+      if (min > max) min = max;
+      if (max > maxValue) max = maxValue;
+      if (max < min) max = min;
+      sliderInstance.set([min, max]);
+    });
+    $input.on('input', function () {
+      $(this).val($(this).val().replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ' '));
+    });
+  }
+};
+var filterToggleModule = {
+  init: function init() {
+    var $buttons = $('.filter__btn');
+    if ($buttons.length === 0) {
+      return;
+    }
+    this.handleToggle($buttons);
+  },
+  handleToggle: function handleToggle($buttons) {
+    $buttons.on('click', function (e) {
+      e.preventDefault();
+      var $currentButton = $(this);
+      var $nextBlock = $currentButton.next();
+      if ($nextBlock.length === 0) {
+        return;
+      }
+      $currentButton.toggleClass('is-active');
+      $nextBlock.stop(true, true).slideToggle(300);
+    });
+  }
+};
 $(function () {
   lazyLoadModule.init();
   phoneMaskModule.init();
@@ -1031,6 +1230,8 @@ $(function () {
   fileUploadModule.init();
   sidebarModule.init();
   controlsModule.init();
+  filterModule.init();
+  sortModule.init();
   formValidationModule.init();
   numbersModule.init();
   dateInputModule.init();
@@ -1038,6 +1239,8 @@ $(function () {
   buttonLoadingModule.init();
   glossaryModule.init();
   goodsTableModule.init();
+  rangeSliderModule.init();
+  filterToggleModule.init();
   $(window).on('resize', function () {
     return sidebarModule.handleResize();
   });

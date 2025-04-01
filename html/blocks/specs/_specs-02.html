@@ -3,7 +3,13 @@
   <div class="section__wrapper">
     <div class="section__content">
       <div class="specs">
-        <div class="bg-image"><img src="images/specs/specs-bg.jpg" alt="фоновая картинка"/></div>
+        <div class="bg-image">
+          <picture class="lazyload">
+            <source srcset="images/icons/empty.png" data-srcset="images/global/global-bg-mob.webp" media="(max-width: 575px)" type="image/webp"/>
+            <source srcset="images/icons/empty.png" data-srcset="images/global/global-bg-mob.jpg" media="(max-width: 575px)"/>
+            <source srcset="images/icons/empty.png" data-srcset="images/global/global-bg-02.webp"/><img src="images/icons/empty.png" data-src="images/global/global-bg-02.jpg" alt="фоновая картинка" width="1920" height="640"/>
+          </picture>
+        </div>
         <div class="specs__inner container">
           <div class="breadcrumbs">
             <div class="breadcrumbs__inner container">

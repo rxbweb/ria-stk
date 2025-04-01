@@ -78,12 +78,12 @@
               <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
             </div>
             <div class="header__controls">
-              <div class="header__basket"><a class="header__button" href="#">
+              <div class="header__basket"><a class="header__button" href="account-basket-01.html">
                       <svg class="svg-icon-cart" width="22" height="22">
                         <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
                       </svg></a>
                 <div class="header__basket-amount">99</div>
-              </div><a class="header__favorite" href="#">
+              </div><a class="header__favorite" href="account-favorites.html">
                     <svg class="svg-icon-heart" width="26" height="26">
                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
                     </svg></a>
@@ -100,18 +100,18 @@
           <div class="header__bottom">
             <nav class="header__nav">
               <ul class="header__nav-list">
-                <li class="header__nav-item"><a class="is-icon" href="#">
+                <li class="header__nav-item"><a class="is-icon" href="subscription.html">
                     <svg width="26" height="26">
                       <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
                     </svg><span>Подписка</span></a></li>
-                <li class="header__nav-item"><a href="#">Журналы</a></li>
-                <li class="header__nav-item"><a href="#">Спецвыпуски</a></li>
-                <li class="header__nav-item"><a href="#">Электронная библиотека</a></li>
-                <li class="header__nav-item"><a href="#">Абонентский доступ</a></li>
-                <li class="header__nav-item"><a href="#">Услуги</a></li>
-                <li class="header__nav-item"><a href="#">Мероприятия</a></li>
-                <li class="header__nav-item"><a href="#">О нас</a></li>
-                <li class="header__nav-item"><a href="#">Контакты</a></li>
+                <li class="header__nav-item"><a href="magazines.html">Журналы</a></li>
+                <li class="header__nav-item"><a href="special.html">Спецвыпуски</a></li>
+                <li class="header__nav-item"><a href="library.html">Электронная библиотека</a></li>
+                <li class="header__nav-item"><a href="abonement.html">Абонентский доступ</a></li>
+                <li class="header__nav-item"><a href="services.html">Услуги</a></li>
+                <li class="header__nav-item"><a href="events.html">Мероприятия</a></li>
+                <li class="header__nav-item"><a href="about.html">О нас</a></li>
+                <li class="header__nav-item"><a href="feedback.html">Контакты</a></li>
               </ul>
             </nav>
             <button class="header__burger" aria-label="открыть дополнительное меню"><span></span><span></span><span></span></button>
@@ -165,18 +165,18 @@
           </div>
           <nav class="menu__nav">
             <ul class="menu__nav-list">
-              <li><a class="is-icon" href="#">
+              <li><a class="is-icon" href="subscription.html">
                   <svg width="22" height="22">
                     <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
                   </svg><span>Подписка</span></a></li>
-              <li><a href="#">Журналы</a></li>
-              <li><a href="#">Спецвыпуски</a></li>
-              <li><a href="#">Электронная библиотека</a></li>
-              <li><a href="#">Абонементный доступ</a></li>
-              <li><a href="#">Услуги</a></li>
-              <li><a href="#">Мероприятия</a></li>
-              <li><a href="#">О нас</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="magazines.html">Журналы</a></li>
+              <li><a href="special.html">Спецвыпуски</a></li>
+              <li><a href="library.html">Электронная библиотека</a></li>
+              <li><a href="abonement.html">Абонементный доступ</a></li>
+              <li><a href="services.html">Услуги</a></li>
+              <li><a href="event.html">Мероприятия</a></li>
+              <li><a href="about.html">О нас</a></li>
+              <li><a href="feedback.html">Контакты</a></li>
             </ul>
           </nav>
           <div class="menu__logo"><img src="images/icons/vok.png" alt="вок" width="48" height="48"></div>
@@ -192,7 +192,13 @@
         <div class="section__wrapper">
           <div class="section__content">
             <div class="specs">
-              <div class="bg-image"><img src="images/specs/specs-bg.jpg" alt="фоновая картинка"></div>
+              <div class="bg-image">
+                      <picture class="lazyload">
+                        <source srcset="images/icons/empty.png" data-srcset="images/global/global-bg-mob.webp" media="(max-width: 575px)" type="image/webp">
+                        <source srcset="images/icons/empty.png" data-srcset="images/global/global-bg-mob.jpg" media="(max-width: 575px)">
+                        <source srcset="images/icons/empty.png" data-srcset="images/global/global-bg-02.webp"><img src="images/icons/empty.png" data-src="images/global/global-bg-02.jpg" alt="фоновая картинка" width="1920" height="640">
+                      </picture>
+              </div>
               <div class="specs__inner container">
                       <div class="breadcrumbs">
                         <div class="breadcrumbs__inner container">
@@ -240,40 +246,64 @@
             <div class="listing">
               <div class="listing__inner">
                 <div class="listing__content">
-                  <ul class="listing__list listing__list--secondary listing__list--3">
+                  <ul class="listing__list listing__list--secondary listing__list--3 listing__list--default">
                     <li class="listing__item">
                       <div class="listing__box">
-                        <div class="badge badge--large"><img src="images/badges/badge-19.svg" alt="иконка" width="35" height="36"></div>
+                        <div class="badge badge--large">
+                                <svg class="svg-badge-19" width="352" height="362">
+                                  <use xlink:href="images/sprites/main.stack.svg#svg-badge-19"></use>
+                                </svg>
+                        </div>
                         <h3 class="listing__name">Старейшее бизнес-издание современной <br> России — издается с 1996 г.</h3>
                       </div>
                     </li>
                     <li class="listing__item">
                       <div class="listing__box">
-                        <div class="badge badge--large"><img src="images/badges/badge-20.svg" alt="иконка" width="40" height="46"></div>
+                        <div class="badge badge--large">
+                                <svg class="svg-badge-20" width="402" height="462">
+                                  <use xlink:href="images/sprites/main.stack.svg#svg-badge-20"></use>
+                                </svg>
+                        </div>
                         <h3 class="listing__name">Площадка для общения и обмена <br> опытом</h3>
                       </div>
                     </li>
                     <li class="listing__item">
                       <div class="listing__box">
-                        <div class="badge badge--large"><img src="images/badges/badge-21.svg" alt="иконка" width="44" height="42"></div>
+                        <div class="badge badge--large">
+                                <svg class="svg-badge-21" width="442" height="422">
+                                  <use xlink:href="images/sprites/main.stack.svg#svg-badge-21"></use>
+                                </svg>
+                        </div>
                         <h3 class="listing__name">В каждом номере успешные кейсы <br> и готовые бизнес-решения</h3>
                       </div>
                     </li>
                     <li class="listing__item">
                       <div class="listing__box">
-                        <div class="badge badge--large"><img src="images/badges/badge-22.svg" alt="иконка" width="41" height="40"></div>
+                        <div class="badge badge--large">
+                                <svg class="svg-badge-22" width="412" height="402">
+                                  <use xlink:href="images/sprites/main.stack.svg#svg-badge-22"></use>
+                                </svg>
+                        </div>
                         <h3 class="listing__name">Выпускается в печатном и <br> электронном виде</h3>
                       </div>
                     </li>
                     <li class="listing__item">
                       <div class="listing__box">
-                        <div class="badge badge--large"><img src="images/badges/badge-23.svg" alt="иконка" width="36" height="36"></div>
+                        <div class="badge badge--large">
+                                <svg class="svg-badge-23" width="362" height="362">
+                                  <use xlink:href="images/sprites/main.stack.svg#svg-badge-23"></use>
+                                </svg>
+                        </div>
                         <h3 class="listing__name">Многократный победитель <br> профессиональных конкурсов</h3>
                       </div>
                     </li>
                     <li class="listing__item">
                       <div class="listing__box">
-                        <div class="badge badge--large"><img src="images/badges/badge-24.svg" alt="иконка" width="36" height="30"></div>
+                        <div class="badge badge--large">
+                                <svg class="svg-badge-24" width="362" height="302">
+                                  <use xlink:href="images/sprites/main.stack.svg#svg-badge-24"></use>
+                                </svg>
+                        </div>
                         <h3 class="listing__name">Суммарная аудитория одного <br> выпуска 91 000+ специалистов</h3>
                       </div>
                     </li>
@@ -309,11 +339,11 @@
                                     </svg></span></a>
                         </div>
                       </div>
-                      <ul class="details__list-images">
-                        <li><img src="images/details/details-images-01.png" alt="Модульная реклама" width="219" height="309"></li>
-                        <li><img src="images/details/details-images-02.png" alt="Модульная реклама" width="219" height="309"></li>
-                        <li><img src="images/details/details-images-03.png" alt="Модульная реклама" width="219" height="309"></li>
-                      </ul>
+                      <div class="details__list-picture">
+                              <picture class="lazyload">
+                                <source srcset="images/icons/empty.png" data-srcset="images/details/details-list-01.webp"><img src="images/icons/empty.png" data-src="images/details/details-list-01.jpg" alt="Картинка" width="700" height="360">
+                              </picture>
+                      </div>
                     </div>
                   </li>
                   <li class="details__list-item">
@@ -330,11 +360,11 @@
                                     </svg></span></a>
                         </div>
                       </div>
-                      <ul class="details__list-images">
-                        <li><img src="images/details/details-images-04.png" alt="Текстовая реклама" width="219" height="309"></li>
-                        <li><img src="images/details/details-images-05.png" alt="Текстовая реклама" width="219" height="309"></li>
-                        <li><img src="images/details/details-images-06.png" alt="Текстовая реклама" width="219" height="309"></li>
-                      </ul>
+                      <div class="details__list-picture">
+                              <picture class="lazyload">
+                                <source srcset="images/icons/empty.png" data-srcset="images/details/details-list-02.webp"><img src="images/icons/empty.png" data-src="images/details/details-list-02.jpg" alt="Картинка" width="700" height="360">
+                              </picture>
+                      </div>
                     </div>
                   </li>
                   <li class="details__list-item">
@@ -351,11 +381,11 @@
                                     </svg></span></a>
                         </div>
                       </div>
-                      <ul class="details__list-images">
-                        <li><img src="images/details/details-images-07.png" alt="Интервью с фото спикера на обложке" width="219" height="309"></li>
-                        <li><img src="images/details/details-images-08.png" alt="Интервью с фото спикера на обложке" width="219" height="309"></li>
-                        <li><img src="images/details/details-images-09.png" alt="Интервью с фото спикера на обложке" width="219" height="309"></li>
-                      </ul>
+                      <div class="details__list-picture">
+                              <picture class="lazyload">
+                                <source srcset="images/icons/empty.png" data-srcset="images/details/details-list-03.webp"><img src="images/icons/empty.png" data-src="images/details/details-list-03.jpg" alt="Картинка" width="700" height="360">
+                              </picture>
+                      </div>
                     </div>
                   </li>
                   <li class="details__list-item">
@@ -372,11 +402,11 @@
                                     </svg></span></a>
                         </div>
                       </div>
-                      <ul class="details__list-images">
-                        <li><img src="images/details/details-images-10.png" alt="Брендирование" width="219" height="309"></li>
-                        <li><img src="images/details/details-images-11.png" alt="Брендирование" width="219" height="309"></li>
-                        <li><img src="images/details/details-images-12.png" alt="Брендирование" width="219" height="309"></li>
-                      </ul>
+                      <div class="details__list-picture">
+                              <picture class="lazyload">
+                                <source srcset="images/icons/empty.png" data-srcset="images/details/details-list-04.webp"><img src="images/icons/empty.png" data-src="images/details/details-list-04.jpg" alt="Картинка" width="700" height="360">
+                              </picture>
+                      </div>
                     </div>
                   </li>
                   <li class="details__list-item">
@@ -393,11 +423,11 @@
                                     </svg></span></a>
                         </div>
                       </div>
-                      <ul class="details__list-images">
-                        <li><img src="images/details/details-images-13.png" alt="Вложения" width="266" height="266"></li>
-                        <li><img src="images/details/details-images-14.png" alt="Вложения" width="198" height="266"></li>
-                        <li><img src="images/details/details-images-15.png" alt="Вложения" width="198" height="266"></li>
-                      </ul>
+                      <div class="details__list-picture">
+                              <picture class="lazyload">
+                                <source srcset="images/icons/empty.png" data-srcset="images/details/details-list-05.webp"><img src="images/icons/empty.png" data-src="images/details/details-list-05.jpg" alt="Картинка" width="700" height="360">
+                              </picture>
+                      </div>
                     </div>
                   </li>
                   <li class="details__list-item">
@@ -410,15 +440,17 @@
                           <p>Срок подготовки спецвыпуска от 25-30 дней.</p>
                         </div>
                         <div class="details__list-manage">
-                          <p class="details__list-price">Стоимость рассчитывается индивидуально</p><a class="button" href="#"><span>Связаться</span><span class="button__icon">
+                          <p class="details__list-price">Стоимость рассчитывается <br> индивидуально</p><a class="button" href="#"><span>Связаться</span><span class="button__icon">
                                     <svg class="svg-icon-arrow-right" width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </div>
                       </div>
-                      <ul class="details__list-images details__list-images--large">
-                        <li><img src="images/details/details-images-16.jpg" alt="Спецвыпуск на заказ" width="700" height="360"></li>
-                      </ul>
+                      <div class="details__list-picture">
+                              <picture class="lazyload">
+                                <source srcset="images/icons/empty.png" data-srcset="images/details/details-list-06.webp"><img src="images/icons/empty.png" data-src="images/details/details-list-06.jpg" alt="Картинка" width="700" height="360">
+                              </picture>
+                      </div>
                     </div>
                   </li>
                   <li class="details__list-item">
@@ -429,17 +461,17 @@
                           <p>Рекламные публикации с использованием дополнительных полиграфических возможностей — более плотная бумага, выборочное лакирование, конверт, раскладные страницы и пр.</p>
                         </div>
                         <div class="details__list-manage">
-                          <p class="details__list-price">Стоимость рассчитывается индивидуально</p><a class="button" href="#"><span>Связаться</span><span class="button__icon">
+                          <p class="details__list-price">Стоимость рассчитывается <br> индивидуально</p><a class="button" href="#"><span>Связаться</span><span class="button__icon">
                                     <svg class="svg-icon-arrow-right" width="17" height="17">
                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
                                     </svg></span></a>
                         </div>
                       </div>
-                      <ul class="details__list-images">
-                        <li><img src="images/details/details-images-17.png" alt="Дополнительные возможности" width="173" height="244"></li>
-                        <li><img src="images/details/details-images-18.png" alt="Дополнительные возможности" width="320" height="244"></li>
-                        <li><img src="images/details/details-images-19.png" alt="Дополнительные возможности" width="171" height="244"></li>
-                      </ul>
+                      <div class="details__list-picture">
+                              <picture class="lazyload">
+                                <source srcset="images/icons/empty.png" data-srcset="images/details/details-list-07.webp"><img src="images/icons/empty.png" data-src="images/details/details-list-07.jpg" alt="Картинка" width="700" height="360">
+                              </picture>
+                      </div>
                     </div>
                   </li>
                 </ol>
@@ -469,7 +501,11 @@
                                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
                                                     </svg>
                                             </button>
-                                      <div class="books__img"><img src="images/books/books-13.jpg" alt="Диджитал реклама" width="380" height="380"></div>
+                                      <div class="books__img">
+                                              <picture class="lazyload">
+                                                <source srcset="images/icons/empty.png" data-srcset="images/books/books-13.webp"><img src="images/icons/empty.png" data-src="images/books/books-13.jpg" alt="Диджитал реклама" width="380" height="380">
+                                              </picture>
+                                      </div>
                                     </div>
                                     <div class="books__info">
                                       <h3 class="books__name">Диджитал реклама</h3>
@@ -484,7 +520,11 @@
                                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
                                                     </svg>
                                             </button>
-                                      <div class="books__img"><img src="images/books/books-14.jpg" alt="Методы менеджмента качества" width="380" height="380"></div>
+                                      <div class="books__img">
+                                              <picture class="lazyload">
+                                                <source srcset="images/icons/empty.png" data-srcset="images/books/books-14.webp"><img src="images/icons/empty.png" data-src="images/books/books-14.jpg" alt="Методы менеджмента качества" width="380" height="380">
+                                              </picture>
+                                      </div>
                                     </div>
                                     <div class="books__info">
                                       <h3 class="books__name">Методы менеджмента качества</h3>
@@ -499,7 +539,11 @@
                                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
                                                     </svg>
                                             </button>
-                                      <div class="books__img"><img src="images/books/books-15.jpg" alt="Контроль качества продукции" width="380" height="380"></div>
+                                      <div class="books__img">
+                                              <picture class="lazyload">
+                                                <source srcset="images/icons/empty.png" data-srcset="images/books/books-15.webp"><img src="images/icons/empty.png" data-src="images/books/books-15.jpg" alt="Контроль качества продукции" width="380" height="380">
+                                              </picture>
+                                      </div>
                                     </div>
                                     <div class="books__info">
                                       <h3 class="books__name">Контроль качества продукции</h3>
@@ -514,7 +558,11 @@
                                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
                                                     </svg>
                                             </button>
-                                      <div class="books__img"><img src="images/books/books-16.jpg" alt="Мир измерений" width="380" height="380"></div>
+                                      <div class="books__img">
+                                              <picture class="lazyload">
+                                                <source srcset="images/icons/empty.png" data-srcset="images/books/books-16.webp"><img src="images/icons/empty.png" data-src="images/books/books-16.jpg" alt="Мир измерений" width="380" height="380">
+                                              </picture>
+                                      </div>
                                     </div>
                                     <div class="books__info">
                                       <h3 class="books__name">Мир измерений</h3>
@@ -529,7 +577,11 @@
                                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
                                                     </svg>
                                             </button>
-                                      <div class="books__img"><img src="images/books/books-13.jpg" alt="Диджитал реклама" width="380" height="380"></div>
+                                      <div class="books__img">
+                                              <picture class="lazyload">
+                                                <source srcset="images/icons/empty.png" data-srcset="images/books/books-13.webp"><img src="images/icons/empty.png" data-src="images/books/books-13.jpg" alt="Диджитал реклама" width="380" height="380">
+                                              </picture>
+                                      </div>
                                     </div>
                                     <div class="books__info">
                                       <h3 class="books__name">Диджитал реклама</h3>
@@ -544,7 +596,11 @@
                                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
                                                     </svg>
                                             </button>
-                                      <div class="books__img"><img src="images/books/books-14.jpg" alt="Методы менеджмента качества" width="380" height="380"></div>
+                                      <div class="books__img">
+                                              <picture class="lazyload">
+                                                <source srcset="images/icons/empty.png" data-srcset="images/books/books-14.webp"><img src="images/icons/empty.png" data-src="images/books/books-14.jpg" alt="Методы менеджмента качества" width="380" height="380">
+                                              </picture>
+                                      </div>
                                     </div>
                                     <div class="books__info">
                                       <h3 class="books__name">Методы менеджмента качества</h3>
@@ -559,7 +615,11 @@
                                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
                                                     </svg>
                                             </button>
-                                      <div class="books__img"><img src="images/books/books-15.jpg" alt="Контроль качества продукции" width="380" height="380"></div>
+                                      <div class="books__img">
+                                              <picture class="lazyload">
+                                                <source srcset="images/icons/empty.png" data-srcset="images/books/books-15.webp"><img src="images/icons/empty.png" data-src="images/books/books-15.jpg" alt="Контроль качества продукции" width="380" height="380">
+                                              </picture>
+                                      </div>
                                     </div>
                                     <div class="books__info">
                                       <h3 class="books__name">Контроль качества продукции</h3>
@@ -574,7 +634,11 @@
                                                       <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
                                                     </svg>
                                             </button>
-                                      <div class="books__img"><img src="images/books/books-16.jpg" alt="Мир измерений" width="380" height="380"></div>
+                                      <div class="books__img">
+                                              <picture class="lazyload">
+                                                <source srcset="images/icons/empty.png" data-srcset="images/books/books-16.webp"><img src="images/icons/empty.png" data-src="images/books/books-16.jpg" alt="Мир измерений" width="380" height="380">
+                                              </picture>
+                                      </div>
                                     </div>
                                     <div class="books__info">
                                       <h3 class="books__name">Мир измерений</h3>
@@ -691,7 +755,7 @@
                     </address>
                     <div class="contacts__map map"></div>
                   </div>
-                  <div class="contacts__right">
+                  <div class="contacts__content">
                     <form class="contacts__form form" action="#" data-validate-form>
                       <div class="form__header">
                         <h2 class="form__title">Остались вопросы?</h2>
@@ -739,7 +803,7 @@
       <div class="footer__inner">
         <div class="footer__top">
           <div class="footer__menu container">
-            <div class="footer__left"><a class="footer__logo" href="#"><img src="images/icons/logo.svg" alt="СК — стандарты и качество"></a>
+            <div class="footer__left"><a class="footer__logo" href="#"><img src="images/icons/logo.svg" alt="СК — стандарты и качество" width="210" height="60"></a>
               <div class="footer__copy footer__copy--desktop">
                 <div>2000—2024 © РИА «Стандарты и качество»: cтандартизация, метрология, менеджмент качества.</div>
                 <div>Все права защищены и охраняются законом.</div>

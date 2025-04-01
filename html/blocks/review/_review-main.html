@@ -22,12 +22,12 @@
                 </div>
               </div>
             </div>
-            <form class="form form--review" action="#">
+            <form class="form form--review" action="#" data-validate-form="data-validate-form">
               <div class="form__main">
                 <div class="form__group">
                   <div class="form__box form__box--column">
                     <label class="form__label"><span class="form__type">Имя</span>
-                      <input class="form__input" type="text" placeholder="Ваше имя"/>
+                      <input class="form__input" type="text" placeholder="Ваше имя" name="form-name" required="required"/><span class="form__error">Обязательное поле</span>
                     </label>
                     <label class="form__label"><span class="form__type">Фамилия</span>
                       <input class="form__input" type="text" placeholder="Ваша фамилия"/>
@@ -36,7 +36,7 @@
                       <input class="form__input" type="text" placeholder="Ваше отчество"/>
                     </label>
                     <label class="form__label"><span class="form__type">Email</span>
-                      <input class="form__input" type="email" placeholder="Email"/>
+                      <input class="form__input" type="email" placeholder="Email" name="form-email" required="required"/><span class="form__error">Обязательное поле</span>
                     </label>
                   </div>
                   <div class="form__box form__box--column">

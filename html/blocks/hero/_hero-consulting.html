@@ -3,7 +3,13 @@
   <div class="section__wrapper">
     <div class="section__content">
       <div class="hero">
-        <div class="bg-image"><img src="images/hero/hero-bg.jpg" alt="фоновая картинка" width="1920" height="750"/></div>
+        <div class="bg-image">
+          <picture>
+            <source srcset="images/hero/hero-bg-mob.webp" media="(max-width: 575px)" type="image/webp"/>
+            <source srcset="images/hero/hero-bg-mob.jpg" media="(max-width: 575px)"/>
+            <source srcset="images/hero/hero-bg.webp"/><img src="images/hero/hero-bg.jpg" alt="фоновая картинка" width="1920" height="750"/>
+          </picture>
+        </div>
         <div class="hero__inner container">
           <div class="breadcrumbs">
             <div class="breadcrumbs__inner container">
