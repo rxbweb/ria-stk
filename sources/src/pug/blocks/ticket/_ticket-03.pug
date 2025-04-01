@@ -1,0 +1,14 @@
+include mixins/_ticketTable
+
+section.section.section--ticket
+   .section__wrapper.container
+      .section__content
+         .ticket
+            .ticket__inner
+               .ticket__row
+                  .ticket__info
+                     h2.ticket__title.visually-hidden Абонементный доступ
+                     .ticket__text
+                        p Приобретая абонемент, вы получаете полный доступ к фонду электронной библиотеки на ограниченный период времени. Абонемент будет выгоден при подготовке дипломных и научных работ, лекций и презентаций.
+                  .ticket__content
+                     +ticketTable()
