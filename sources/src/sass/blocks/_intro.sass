@@ -23,6 +23,9 @@
          align-self: center
          flex-basis: 57%
          @include margin-bottom(var(--gap))
+      &--fifth
+         padding-right: calc(var(--gap) - 10px)
+         align-self: center
       &--center
          align-self: center
    &__top
@@ -75,6 +78,25 @@
          & > img
             transform: scale(1.2)
             transform-origin: center center
+      &--journal
+         picture,
+         & > img
+            transform: scale(1.3) translateX(-5%)
+            transform-origin: center center
+      &--macbook
+         padding: 80px 100px 80px 0
+         picture,
+         & > img
+            transform: scale(1.15)
+            transform-origin: top center
+      &--subscription
+         display: flex
+         justify-content: center
+         picture,
+         & > img
+            --subscription-width: 500px
+            width: var(--subscription-width)
+            max-width: var(--subscription-width)
    &__specialists
       flex-grow: 1
       display: flex
@@ -140,9 +162,22 @@
       @extend .title
       @extend .title--second
       white-space: pre-line
+      &--secondary
+         @include fluidFontSize(20px, 40px, 360px, 1920px, 24px)
       span
          display: block
          color: var(--accent)
+   &__row
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      gap: var(--gap)
+      .button
+         flex-shrink: 0
+   &__description
+      @extend .title
+      @include fluidFontSize(20px, 40px, 360px, 1920px, 24px)
+      width: fit-content
    @media (max-width: 1600px)
       &__img
          &--fortune
@@ -154,6 +189,13 @@
             picture,
             & > img
                transform: scale(1)
+         &--macbook
+            padding: 40px
+            padding-left: 0
+            picture,
+            & > img
+               transform: scale(1)
+               transform-origin: top center
       &__label
          width: 180px
          font-size: 20px
@@ -165,6 +207,11 @@
       &__info
          padding: var(--gap)
          padding-right: 20px
+      &__img
+         &--journal
+            picture,
+            & > img
+               transform: none
    @include lg
       &__info
          padding: var(--gap-2)
@@ -180,6 +227,8 @@
             & > img
                --fortune-width: 100%
                position: static
+         &--subscription
+            padding-top: var(--gap)
       &__info
          &--fourth
             padding-bottom: 0
@@ -210,6 +259,20 @@
             picture
                display: flex
                justify-content: center
+   @include sm
+      &__row
+         flex-direction: column
+         align-items: flex-start
+         gap: 15px
+      &__img
+         &--journal
+            picture,
+            & > img
+               transform: scale(1.2)
+               transform-origin: center
+         &--macbook
+            padding: 20px
+            padding-top: 40px
    @include xs
       &__info
          padding: 30px var(--padding)

@@ -129,6 +129,7 @@
    background: #fff
    overflow: hidden
    position: relative
+   picture,
    img
       position: absolute
       z-index: var(--z-index)
@@ -190,6 +191,25 @@
             position: absolute
          &:nth-child(-n+9)::after
             content: '0' counter(num)
+
+@mixin ol-letter($pseudo: 'before')
+   list-style-type: none
+   counter-reset: num
+   & > li
+      position: relative
+      @if $pseudo == 'before'
+         &::before
+            content: counter(num, lower-alpha) '.'
+            counter-increment: num
+            display: inline-block
+            position: absolute
+      @else
+         &::after
+            content: counter(num, lower-alpha) '.'
+            counter-increment: num
+            display: inline-block
+            position: absolute
+
 
 @mixin align-block($gap: 0)
    display: flex

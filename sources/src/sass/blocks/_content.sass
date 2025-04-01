@@ -1,17 +1,11 @@
 .content
    &__row
-      display: flex
-      flex-wrap: wrap
-      gap: var(--gap)
-      & > *
-         flex-basis: calc(50% - var(--gap) / 2)
-         flex-grow: 1
-         flex-shrink: 0
+      @extend .two-col
    &__block
       overflow: hidden
       display: flex
       flex-direction: column
-      @include margin-bottom(30px)
+      @include margin-bottom(var(--gap-2))
    &__title
       @extend .title
    &__box
@@ -51,10 +45,43 @@
    &__list
       @extend .ul-list
       @include margin-bottom(15px)
+   &__listing
+      --li-padding: 40px
+      @include ol()
+      @include margin-bottom(2px)
+      color: var(--black)
+      & > li
+         padding-left: var(--li-padding)
+         &::before
+            content: counter(num) '.'
+            left: 0
+         &:nth-child(-n+9)::before
+            content: counter(num) '.'
+      ol,
+      ul
+         color: var(--font-color)
+         li
+            padding-left: var(--li-padding)
+            &::before
+               position: absolute
+               left: 0
+      ol
+         @include ol-letter()
+   &__description
+      @extend .title
+      @include fluidFontSize(20px, 40px, 360px, 1920px, 28px)
+      margin-bottom: var(--gap-2)
+      padding-bottom: var(--gap-2)
+      border-bottom: 1px solid var(--black)
+      white-space: pre-line
+      a
+         text-decoration: underline
    @include md
       &__row
          flex-direction: column
          & > *
+            width: 100%
+            max-width: 100%
             flex-basis: auto
    @include sm
       &__box
@@ -66,6 +93,8 @@
             padding: 0 50px
       &__text
          @include line-clamp(20)
+      &__listing
+         --li-padding: 30px
    @include xs
       &__box
          padding: 15px
@@ -78,3 +107,7 @@
             height: 30px
             &::after
                font-size: 13px
+      &__listing
+         --li-padding: 20px
+      &__description
+         white-space: normal

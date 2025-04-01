@@ -62,6 +62,18 @@
       display: flex
       flex-wrap: wrap
       gap: 25px
+   &__stock
+      .button
+         &__icon
+            background: #fff
+            svg
+               color: var(--accent)
+      @include hover()
+         .button
+            &__icon
+               background: var(--hover-color)
+         svg
+            color: #fff
    @include xl
       &__content
          flex-basis: 480px

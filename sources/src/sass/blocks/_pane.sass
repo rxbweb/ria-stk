@@ -1,13 +1,7 @@
 .pane
    color: var(--dark)
    &__main
-      display: flex
-      flex-wrap: wrap
-      gap: var(--gap)
-      & > *
-         flex-basis: calc(50% - var(--gap) / 2)
-         flex-grow: 1
-         flex-shrink: 0
+      @extend .two-col
    &__info
       @include margin-bottom(var(--gap))
       @include mt-auto()

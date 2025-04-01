@@ -62,6 +62,11 @@
          background: #fff
          &::after
             color: var(--dark)
+      &-text
+         max-width: 100%
+         white-space: nowrap
+         overflow: hidden
+         text-overflow: ellipsis
    &__list
       display: none
       min-width: 100%
@@ -103,7 +108,7 @@
          padding-right: 34px
          .svg
             &-icon-arrow-down
-               --size: 12px
+               --size: 14px
                width: var(--size)
                height: var(--size)
                right: 12px

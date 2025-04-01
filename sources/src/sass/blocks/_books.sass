@@ -6,6 +6,7 @@
    &__header
       @extend .section__header-row
       @extend .section__header--border
+      color: var(--black)
    &__title
       @extend .title
       &--red
@@ -15,6 +16,19 @@
       @extend .title--main
    &__content
       @include margin-bottom(60px)
+   &__top
+      padding-bottom: var(--gap-2)
+      margin-bottom: var(--gap)
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      gap: var(--gap)
+      border-bottom: 1px solid var(--gray-300)
+   &__description
+      padding-top: 10px
+      max-width: 940px
+      flex-grow: 1
+      color: var(--black)
    &__list
       display: grid
       grid-template-columns: repeat(4, 1fr)
@@ -102,8 +116,11 @@
       @include margin-bottom(40px)
       &-slider
          @include margin-bottom(40px)
-      .swiper-controls
-         margin-bottom: 0
+      .swiper
+         &-controls
+            margin-bottom: 0
+         &-slide
+            height: auto
    &__details
       @include margin-bottom(20px)
       padding-top: 20px
@@ -136,6 +153,16 @@
       display: flex
       flex-direction: column
       align-items: center
+   &__segment
+      display: flex
+      align-items: center
+      gap: var(--gap-2)
+   &__figure
+      --size: var(--gap-large)
+      width: var(--size)
+      height: var(--size)
+      color: var(--accent)
+      flex-shrink: 0
    @media (max-width: 1700px)
       &__manage
          flex-direction: column
@@ -170,6 +197,13 @@
             font-size: 11px
       &__link
          font-size: 16px
+      &__top
+         flex-direction: column
+         align-items: stretch
+      &__segment
+         display: none
+      &__description
+         padding-top: 0
    @include xs
       &__info
          .books--2 &
