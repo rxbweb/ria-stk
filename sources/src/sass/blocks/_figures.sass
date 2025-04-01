@@ -1,4 +1,15 @@
 .figures
+   &--secondary
+      .figures
+         &__list
+            grid-template-columns: 1fr
+         &__item
+            display: none
+            &.is-active
+               display: block
+         &__link
+            height: auto
+            display: none
    &__list
       display: grid
       grid-template-columns: repeat(5, 1fr)
@@ -52,11 +63,31 @@
          grid-template-columns: repeat(2, 1fr)
       &__link
          gap: 10px
+         .figures__item.is-active &
+            color: var(--accent)
+            background: #fff
+            border-color: var(--accent)
+            svg
+               fill: var(--accent)
+      &__content
+         display: none
+         .is-active &
+            display: block
+      &__books
+         padding-top: var(--gap-2)
+         padding-bottom: calc(var(--gap-2) - 10px)
+      &--secondary
+         .figures
+            &__item
+               display: block
+            &__link
+               display: flex
    @include xs
       &__list
          grid-template-columns: 1fr
          gap: 10px
       &__link
+         height: auto
          padding: 20px
          flex-direction: row
          gap: 30px

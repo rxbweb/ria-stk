@@ -1,0 +1,60 @@
+include mixins/_figuresList
+
+-
+   const figures03 = [
+      {
+         text: "Техническое регулирование"
+      },
+      {
+         text: "Стандартизация"
+      },
+      {
+         text: "Аккредитация"
+      },
+      {
+         text: "Менеджмент качества"
+      },
+      {
+         text: "Интегрированные системы менеджмента"
+      },
+      {
+         text: "Оценка соответствия"
+      },
+      {
+         text: "Бережливое производство"
+      },
+      {
+         text: "Метрология"
+      },
+      {
+         text: "Построение эффективного бизнеса"
+      },
+      {
+         text: "Практический опыт"
+      },
+      {
+         text: "Надежность и безопасность"
+      },
+      {
+         text: "Статистическое мышление"
+      },
+      {
+         text: "Системы менеджмента качества"
+      },
+      {
+         text: "Экологический менеджмент"
+      },
+      {
+         text: "Устойчивое развитие"
+      }
+   ]
+
+section.section.section--figures
+   .section__wrapper.container
+      .section__header.section__header--border
+         .section__header-row
+            h2.section__header-title Тематики
+      .section__content
+         .figures
+            .figures__inner
+               +figuresList(figures03)

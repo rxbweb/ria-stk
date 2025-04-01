@@ -1,0 +1,56 @@
+include ../../mixins/_mixins
+include mixins/_figuresList
+
+-
+   const figures04 = [
+      {
+         text: "Отраслевая"
+      },
+      {
+         text: "Авторская"
+      },
+      {
+         text: "Качество менеджмента"
+      },
+      {
+         text: "Лучшие практики"
+      },
+      {
+         text: "Производственная экскурсия"
+      },
+      {
+         text: "Проектное управление"
+      },
+      {
+         text: "Бережливое производство"
+      },
+      {
+         text: "Вопросы экономики"
+      },
+      {
+         text: "Устойчивое развитие"
+      },
+      {
+         text: "Стандартизация и техрегулирование"
+      },
+      {
+         text: "Метрология"
+      },
+      {
+         text: "Оценка соответствия"
+      },
+      {
+         text: "Государство и бизнес"
+      },
+   ]
+
+section.section.section--figures
+   .section__wrapper.container
+      .section__header.section__header--border
+         .section__header-row
+            h1.section__header-heading Тематические подборки
+            +button('Показать все подборки')
+      .section__content
+         .figures
+            .figures__inner
+               +figuresList(figures04, 23)

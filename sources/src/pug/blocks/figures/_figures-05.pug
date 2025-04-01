@@ -1,0 +1,105 @@
+include ../../mixins/_mixins
+
+-
+   const figures05 = [
+      {
+         text: "Отраслевая"
+      },
+      {
+         text: "Авторская"
+      },
+      {
+         text: "Качество менеджмента"
+      },
+      {
+         text: "Лучшие практики"
+      },
+      {
+         text: "Производственная экскурсия"
+      },
+      {
+         text: "Проектное управление"
+      },
+      {
+         text: "Бережливое производство"
+      },
+      {
+         text: "Вопросы экономики"
+      },
+      {
+         text: "Устойчивое развитие"
+      },
+      {
+         text: "Стандартизация и техрегулирование"
+      },
+      {
+         text: "Метрология"
+      },
+      {
+         text: "Оценка соответствия"
+      },
+      {
+         text: "Государство и бизнес"
+      },
+   ]
+
+   const figuresBooks = [
+      {
+         img: 'images/books/books-22.jpg',
+         title: 'Бизнес-план — стань хозяином своего дела',
+      },
+      {
+         img: 'images/books/books-23.jpg',
+         title: 'Финансовый ликбез',
+      },
+      {
+         img: 'images/books/books-24.jpg',
+         title: 'Процессный подход / проектное управление',
+      },
+      {
+         img: 'images/books/books-25.jpg',
+         title: 'Модель EFQM - путь к совершенству',
+      },
+   ]
+
+section.section.section--figures
+   .section__wrapper.container
+      .section__content
+         .figures.figures--secondary
+            .figures__inner
+               ul.figures__list
+                  each figure, index in figures05
+                     li.figures__item(class=index === 0 ? "is-active" : "")
+                        a.figures__link(href="#")
+                           .figures__svg
+                              svg
+                                 use(href=`images/sprites/main.stack.svg#svg-collection-${(23 + index + 1).toString().padStart(2, '0')}`)
+                           .figures__info
+                              p.figures__text= figure.text
+                        .figures__content
+                           .figures__books
+                              .books
+                                 .books__inner
+                                    .books__section
+                                       .books__top
+                                          .books__segment
+                                             .books__figure
+                                                svg
+                                                   use(href=`images/sprites/main.stack.svg#svg-collection-${(23 + index + 1).toString().padStart(2, '0')}`)
+                                             h2.books__title= figure.text
+                                          p.books__description В рубрике представлены материалы, посвященные либо целиком проблемам одной из отраслей, либо механизмам построения бизнеса и оптимизации производства, одинаково применимым и эффективным в самых разных сферах экономики. Так, вы узнаете об основных принципах создания «с нуля», источниках финансирования, организационно-правовой форме и т.п. в бизнес-планах по открытию мини-пекарни, автосервиса, салона красоты и др.
+                                       .books__content
+                                          ul.books__list
+                                             each book in figuresBooks
+                                                li.books__item
+                                                   .books__card
+                                                      .books__box
+                                                         +favorite-button()
+                                                         .books__img
+                                                            +picture(book.img, false, book.title, 380, 380)
+                                                      .books__info
+                                                         h3.books__name= book.title
+                                                         .books__bottom
+                                                            .books__manage
+                                                               +button-icon('link', 'В корзину', 'button--slim', 'icon-cart')
+                                                               +button-outline('link', 'Купить в 1 клик')
