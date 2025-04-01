@@ -1,0 +1,39 @@
+include ../../mixins/_mixins
+
+-
+   const listings02 = [
+      {
+         title: 'Миссия',
+         text: 'Объединение усилий науки, органов власти, промышленности и бизнеса для содействия решению задач в области качества и конкурентоспособности отечественных продукции и услуг.',
+         badge: 'badge-08',
+         badgeSize: '34',
+         img: 'images/listing/listing-04.jpg'
+      },
+      {
+         title: 'Ценности',
+         text: 'Только качественная информация: достоверная, актуальная, объективная, полная и ценная для читательской аудитории.',
+         badge: 'badge-09',
+         badgeSize: '46',
+         img: 'images/listing/listing-05.jpg'
+      }
+   ]
+
+section.section.section--listing
+   .section__wrapper.container
+      .section__content
+         .listing
+            .listing__inner
+               .listing__row
+                  .listing__aside.listing__aside--big
+                     h2.listing__title Миссия и ценности
+                  .listing__content
+                     ul.listing__list.listing__list--2
+                        each listing in listings02
+                           li.listing__item
+                              a.listing__box(href="#")
+                                 .badge.badge--large
+                                    +svg(listing.badge, '', listing.badgeSize, listing.badgeSize)
+                                 h3.listing__name=listing.title
+                                 p.listing__text=listing.text
+                                 .listing__img
+                                    +picture(listing.img, false, "картинка", 350, 222)

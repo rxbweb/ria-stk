@@ -1,0 +1,30 @@
+include ../../mixins/_mixins
+
+-
+   const listings18 = [
+      {
+         title: 'Спецвыпуск журнала',
+         img: 'images/listing/listing-06.jpg'
+      },
+      {
+         title: 'Реклама в журналах',
+         img: 'images/listing/listing-07.jpg'
+      },
+   ]
+
+section.section.section--listing
+   .section__wrapper.container
+      .section__content
+         .listing
+            .listing__inner
+               .listing__row
+                  .listing__aside.listing__aside--big
+                     h2.listing__title Рекламные возможности
+                  .listing__content
+                     ol.listing__list.listing__list--2
+                        each listing in listings18
+                           li.listing__item
+                              a.listing__box(href="#")
+                                 h3.listing__name=listing.title
+                                 .listing__img
+                                    +picture(listing.img, false, "картинка", 350, 222)

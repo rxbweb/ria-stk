@@ -1,0 +1,43 @@
+include ../../mixins/_mixins
+
+-
+   const listings16 = [
+      {
+         name: 'Печатная',
+         text: 'Подписка на бумажную версию позволит всегда иметь журнал под рукой вне зависимости от наличия гаджетов. Развитая сеть распространения и отлаженные логистические цепочки гарантируют доставку журнала в течение 7 дней.',
+         img: 'images/listing/listing-16.jpg'
+      },
+      {
+         name: 'Электронная',
+         text: 'Подписка на электронную версию делает журнал доступным для подписчиков почти сразу после сдачи в печать.',
+         img: 'images/listing/listing-03.jpg'
+      },
+      {
+         name: 'Мобильная',
+         text: 'Удобна для тех, кто часто бывает в дороге. Чтобы получить доступ к журналам, вам нужен только гаджет и интернет.',
+         img: 'images/listing/listing-17.jpg'
+      }
+   ]
+
+section.section.section--listing
+   .section__wrapper.container
+      .section__header.section__header--border
+         .section__header-row
+            h2.section__header-title Подписка на любой вкус
+            p.section__header-label Для вашего удобства мы предусмотрели разные форматы подписки.
+      .section__content
+         .listing
+            .listing__inner
+               .listing__row
+                  .listing__aside.listing__aside--narrow
+                     p.listing__lead Вы можете подписаться на одну версию журнала, а можете выбрать две или три и получить отличные скидки. Но это еще не все — подписываясь на журналы РИА «Стандарты и качество», вы получаете доступ к системе привилегий.
+                     +button-icon('link', 'Подробнее')
+                  .listing__content
+                     ul.listing__list.listing__list--6
+                        each listing in listings16
+                           li.listing__item
+                              a.listing__box(href="#")
+                                 h3.listing__name=listing.name
+                                 p.listing__text=listing.text
+                                 .listing__img
+                                    +picture(listing.img, false, "картинка", 350, 222)

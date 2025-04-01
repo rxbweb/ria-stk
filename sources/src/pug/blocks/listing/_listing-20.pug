@@ -1,0 +1,58 @@
+include ../../mixins/_mixins
+
+-
+   const listings20 = [
+      {
+         badge: 'badge-19',
+         badgeWidth: '35',
+         badgeHeight: '36',
+         title: 'Авторитетное профессиональное издание. <br> Издается с 1927 года'
+      },
+      {
+         badge: 'badge-44',
+         badgeWidth: '40',
+         badgeHeight: '46',
+         title: 'Входит в перечень рецензируемых научных изданий ВАК при Минобрнауки России'
+      },
+      {
+         badge: 'badge-24',
+         badgeWidth: '44',
+         badgeHeight: '42',
+         title: 'Учредители Росстандарт, ВОК, <br> РИА «Стандарты и качество»'
+      },
+      {
+         badge: 'badge-45',
+         badgeWidth: '41',
+         badgeHeight: '40',
+         title: 'ВВыпускается в печатном <br> и электронном виде'
+      },
+      {
+         badge: 'badge-23',
+         badgeWidth: '36',
+         badgeHeight: '36',
+         title: 'победитель профессиональных конкурсов, <br> лауреат премии “Золотой фонд российской прессы”'
+      },
+      {
+         badge: 'badge-46',
+         badgeWidth: '36',
+         badgeHeight: '30',
+         title: 'Суммарная аудитория одного выпуска 38 000+ специалистов'
+      },
+   ]
+
+section.section.section--listing
+   .section__wrapper.container
+      .section__header
+         .section__header-row
+            h2.section__header-title Кратко о журнале
+      .section__content
+         .listing
+            .listing__inner
+               .listing__content
+                  ul.listing__list.listing__list--secondary.listing__list--3.listing__list--default
+                     each listing in listings20
+                        li.listing__item
+                           .listing__box
+                              .badge.badge--large
+                                 +svg(listing.badge, '', listing.badgeWidth + 2, listing.badgeHeight + 2)
+                              h3.listing__name!=listing.title
