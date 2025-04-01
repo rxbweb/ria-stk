@@ -1,9 +1,16 @@
 extends base/_layout
 block head
-   title Рекламодателям
+   title Каталог статей
 block page
+
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Каталог статей' }
+   ])
    
-   include blocks/card/_card-01
+   include blocks/advert/_advert-01
+
+   include blocks/products/_products-02
 
    include blocks/ticket/_ticket-01
    
