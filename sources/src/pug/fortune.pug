@@ -1,0 +1,20 @@
+extends base/_layout
+block head
+   title Тематическая подборка «Бизнес-план — стань хозяином своего дела»
+block page
+   
+   +breadcrumbs([
+      { href: '#', title: 'Главная' },
+      { href: '#', title: 'Тематические подборки' },
+      { href: '#', title: 'Тематическая подборка «Бизнес-план — стань хозяином своего дела»' },
+   ])
+
+   include blocks/intro/_intro-04
+
+   include blocks/pane/_pane-01
+
+   include blocks/specs/_specs-06
+
+   include blocks/content/_content-02
+
+   include blocks/contacts/_contacts
