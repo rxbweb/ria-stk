@@ -1,0 +1,26 @@
+include ../../mixins/_mixins
+
+section.section.section--hero.section--padding-none.section--margin-bottom
+   .section__wrapper
+      .section__content
+         .hero.hero--default
+            .bg-image
+               +picture-simple("images/hero/hero-bg.jpg", "images/hero/hero-bg-mob.jpg", "фоновая картинка", 1920, 750)
+            .hero__inner.container
+               +breadcrumbs([
+                  { href: '#', title: 'Главная' },
+                  { href: '#', title: 'Бонусная программа' }
+               ])
+               .hero__bonus
+                  .hero__row
+                     .hero__info
+                        h1.hero__title БОНУСНАЯ ПРОГРАММА
+                        .hero__text
+                           p #{'Подписывайтесь на журналы и получайте баллы и привилегии'} 
+                              |
+                              | Оплачивайте баллами рекламу
+                        .hero__bottom
+                           +button-icon('link', 'Подробнее о подписке')
+                     .hero__content
+                        .hero__img
+                           img(src="images/hero/hero-bonus.png", alt="БОНУСНАЯ ПРОГРАММА" width="874" height="603")

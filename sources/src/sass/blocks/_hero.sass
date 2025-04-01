@@ -3,6 +3,9 @@
    --info-width: 640px
    padding: 0
    position: relative
+   &--secondary
+      border-radius: var(--gap-2)
+      overflow: hidden
    .breadcrumbs
       position: absolute
       top: 0
@@ -30,6 +33,10 @@
             display: flex
             flex-direction: column
             justify-content: center
+            .hero--secondary &
+               padding: calc(var(--gap) + 10px)
+               padding-bottom: 0
+               padding-right: 0
          &__bullets
             position: absolute
             z-index: var(--z-index)
@@ -45,15 +52,27 @@
       grid-template-columns: var(--info-width) 1fr
       gap: var(--row-gap)
    &__info
-      @include margin-bottom(30px)
+      @include margin-bottom(var(--gap-2))
    &__title
       @extend .title
       @extend .title--main
+      &--large
+         @include fluidFontSize(38px, 105px, 360px, 1920px, 52px)
    &__text
       margin-bottom: 50px
       @include margin-bottom(15px)
       & > *
          white-space: pre-line
+      &--large
+         @extend .fs-24
+   &__description
+      @extend .fs-24
+   &__label
+      @extend .title
+      @extend .title--second
+      @extend .title--red
+      width: fit-content
+      background: var(--soft-red)
    &__content
       max-width: 100%
       width: calc(1640px - var(--info-width) - var(--row-gap))
@@ -203,6 +222,12 @@
          img
             width: 115%
             max-width: 115%
+   &__layout
+      display: flex
+      align-items: center
+      & > *
+         flex-basis: 50%
+         flex-shrink: 0
    &__default
       padding-top: 38px
       padding-right: 12%
@@ -221,6 +246,25 @@
             display: flex
             flex-direction: column
             justify-content: center
+   &--primary
+      .breadcrumbs
+         position: absolute
+         top: 0
+         left: var(--padding)
+      .hero
+         &__inner
+            min-height: 750px
+            display: flex
+            flex-direction: column
+            justify-content: center
+   &__label
+      @extend .title
+      @extend .title--red
+      padding: 20px 25px
+      letter-spacing: var(--letter-spacing)
+      background: var(--soft-red)
+      border-radius: var(--border-radius-10)
+      @include fluidFontSize(16px, 23px, 360px, 1920px, 16px)
    &__box
       padding: 90px 0 50px
       display: flex
@@ -238,6 +282,11 @@
       picture
          width: 100%
          max-width: 100%
+   &__figure
+      &--books
+         picture,
+         & > img
+            transform: scale(1.2)
    @media (max-width: 1700px)
       &__content
          width: calc(100vw - var(--info-width) - var(--row-gap) - var(--padding)*2)
@@ -298,6 +347,12 @@
          padding: 0
          padding-bottom: var(--gap)
          justify-content: flex-start
+      &--primary
+         .hero
+            &__inner
+               padding-top: 90px
+               padding-bottom: 40px
+               min-height: auto
    @include ms
       &--default
          .hero
@@ -306,6 +361,13 @@
                @include margin-bottom(15px)
          .breadcrumbs
             position: static
+      &--primary
+         .breadcrumbs
+            margin-bottom: 10px
+            position: static
+         .hero
+            &__inner
+               padding-top: 0
       &__box
          flex-direction: column
          gap: var(--gap)
@@ -316,6 +378,9 @@
          flex-basis: 100%
       &__picture
          flex-basis: 100%
+      &__layout
+         flex-direction: column
+         gap: var(--gap)
    @include sm
       &__books
          overflow: hidden
@@ -334,9 +399,11 @@
       &__journals
          &-card
             min-width: 202px
+      &__label
+         padding: 10px
    @include xs
       &__box
-         padding: 70px 0 34px
+         padding: 80px 0 34px
 
 @keyframes magazines-down-to-up
    0%

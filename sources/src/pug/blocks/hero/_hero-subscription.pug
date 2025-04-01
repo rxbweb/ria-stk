@@ -1,0 +1,22 @@
+include ../../mixins/_mixins
+
+section.section.section--hero.section--padding-none.section--margin-bottom
+   .section__wrapper
+      .section__content
+         .hero.hero--primary
+            .bg-image
+               +picture-simple("images/hero/hero-bg.jpg", "images/hero/hero-bg-mob.jpg", "фоновая картинка", 1920, 750)
+            .hero__inner.container
+               +breadcrumbs([
+                  { href: '#', title: 'Главная' },
+                  { href: '#', title: 'Подписка' }
+               ])
+               .hero__layout
+                  .hero__info
+                     h1.hero__title Подписка
+                     .hero__description
+                        p По вопросам подписки на журналы издательства РИА «Стандарты и качество» обращайтесь по телефону +7 (495) 771 6652, доб.143 или на email: #[a(href="mailto:podpiska@mirq.ru") podpiska@mirq.ru] Также оформить подписку можно, заполнив форму ниже.
+                     .hero__bottom
+                        +button-icon('link', 'Выбрать журналы')
+                  .hero__figure.hero__figure--books
+                     +picture-simple("images/hero/hero-books.png", false, "Картинка", 1031, 687)
