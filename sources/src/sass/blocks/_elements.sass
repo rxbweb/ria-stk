@@ -197,6 +197,16 @@
    @include xs
       font-size: 13px
 
+.fs-24
+   font-size: 24px
+   line-height: 140%
+   @include xl
+      font-size: 20px
+   @include sm
+      font-size: 18px
+   @include xs
+      font-size: 13px
+
 .white-box
    padding: 50px
    box-shadow: 0 4px 15px 0 rgba(62, 62, 62, 0.15)
@@ -207,6 +217,15 @@
       padding: 30px
    @include sm
       padding: 20px 15px
+
+.two-col
+   display: flex
+   flex-wrap: wrap
+   gap: var(--gap)
+   & > *
+      flex-basis: calc(50% - var(--gap) / 2)
+      flex-shrink: 0
+      flex-grow: 1
 
 .badge
    --size: 40px
@@ -354,8 +373,7 @@
       color: var(--accent)
       border-color: var(--accent)
    @include xs
-      width: 32px
-      height: 32px
+      --size: 32px
       top: 5px
       right: 5px
 
