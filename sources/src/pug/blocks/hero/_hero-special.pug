@@ -1,0 +1,26 @@
+include ../../mixins/_mixins
+
+section.section.section--hero.section--padding-none.section--margin-bottom
+   .section__wrapper
+      .section__content
+         .hero.hero--default
+            .bg-image
+               +picture-simple("images/hero/hero-bg.jpg", "images/hero/hero-bg-mob.jpg", "фоновая картинка", 1920, 750)
+            .hero__inner.container
+               +breadcrumbs([
+                  { href: '#', title: 'Главная' },
+                  { href: '#', title: 'Электронная библиотека' },
+                  { href: '#', title: 'Специальные проекты' },
+                  { href: '#', title: 'Спецвыпуски журналов' }
+               ])
+               .hero__bonus
+                  .hero__row
+                     .hero__info
+                        h1.hero__title Спецвыпуски журналов
+                        .hero__text
+                           p Подготовка спецвыпуска – это всегда индивидуальный проект. Расскажите, какие задачи стоят перед вами, и мы предложим лучшее решение — от идеи до реализации.
+                        .hero__bottom
+                           +button-icon('link', 'Связаться с нами')
+                     .hero__content
+                        .hero__img.hero__img--special
+                           img(src="images/hero/hero-special.jpg", alt="Спецвыпуски журналов" width="795" height="400")
