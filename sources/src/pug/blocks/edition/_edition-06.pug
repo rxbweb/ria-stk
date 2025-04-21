@@ -1,0 +1,48 @@
+include ../../mixins/_mixins
+
+-
+   const boardEdition02 = [
+      {
+         photo: 'images/board/board-33.jpg',
+         name: 'Киселева Татьяна Владимировна',
+         text: 'Главный редактор издательства',
+      },
+      {
+         photo: 'images/board/board-13.jpg',
+         name: 'Быкова Наталья Георгиевна',
+         text: 'Заместитель главного редактора журнала «Стандарты и качество»',
+      },
+      {
+         photo: 'images/board/board-15.jpg',
+         name: 'Варфоломеева Наталья Рашитовна',
+         text: 'Ответственный секретарь издательства',
+      },
+      {
+         photo: 'images/board/board-34.jpg',
+         name: 'Боткина Виктория Владимировна',
+         text: 'Ведущий дизайнер издательства',
+      },
+   ]
+
+section.section
+   .section__wrapper.container
+      .section__header
+         .section__header-row.section__header--border
+            h1.section__header-title Команда, которая делает спецвыпуски
+      .section__content
+         .edition
+            .edition__inner
+               .edition__main.edition__main--2
+                  .edition__content
+                     .edition__board.board
+                        .board__inner
+                           ul.board__list
+                              each board in boardEdition02
+                                 li.board__item
+                                    a.board__box(href="#")
+                                       .board__img
+                                          if board.photo
+                                             +picture(board.photo, false, board.name, 180, 200)
+                                       .board__info
+                                          p.board__name=board.name
+                                          p.board__text=board.text

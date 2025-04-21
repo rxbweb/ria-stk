@@ -38,6 +38,12 @@
       align-items: center
       gap: 40px
       transition: var(--transition)
+      &.is-active
+         color: var(--accent)
+         background: #fff
+         border-color: var(--accent)
+         svg
+            fill: var(--accent)
       @include hover()
          color: var(--accent)
          background: #fff
@@ -63,12 +69,6 @@
          grid-template-columns: repeat(2, 1fr)
       &__link
          gap: 10px
-         .figures__item.is-active &
-            color: var(--accent)
-            background: #fff
-            border-color: var(--accent)
-            svg
-               fill: var(--accent)
       &__content
          display: none
          .is-active &
@@ -95,3 +95,9 @@
          line-height: 140%
       &__svg
          --size: 40px
+
+.section
+   &--figures
+      &-desktop
+         @include sm
+            display: none

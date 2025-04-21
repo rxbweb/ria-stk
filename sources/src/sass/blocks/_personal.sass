@@ -1,0 +1,49 @@
+.personal
+   &__inner
+      padding: var(--gap)
+      background: var(--gray-50)
+      border-radius: var(--border-radius-15)
+      @include margin-bottom(var(--gap))
+   &__section
+      display: flex
+      gap: var(--gap-large)
+      color: var(--black)
+   &__box
+      flex-basis: 42.5%
+      flex-shrink: 0
+   &__img
+      width: 100%
+      height: 100%
+      @include img-cover(0, var(--border-radius-15))
+   &__title
+      @extend .title
+   &__info
+      @include align-block()
+      @include margin-bottom(var(--gap))
+      flex-basis: 760px
+      align-items: flex-start
+   &__list
+      width: 100%
+      @include margin-bottom(6px)
+      @include padding-bottom(5px)
+      @include border-bottom(var(--gray-300))
+      & > *
+         &:last-child
+            padding-bottom: 5px
+            border-bottom: 1px solid var(--gray-300)
+   @include xl
+      &__section
+         gap: var(--gap)
+   @include ms
+      &__section
+         flex-direction: column
+      &__box,
+      &__info
+         flex-basis: auto
+      &__img
+         padding-bottom: 67%
+      &__title
+         overflow-wrap: anywhere
+   @include xs
+      &__inner
+         padding: var(--gap) var(--gap-4)

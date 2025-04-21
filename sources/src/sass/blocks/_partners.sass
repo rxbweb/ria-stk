@@ -3,6 +3,9 @@
    position: relative
    &--secondary
       padding: 0
+   &--gray
+      padding: 0
+      background: var(--gray-50)
    &__inner
       @include margin-bottom(var(--gap))
    &__title
@@ -15,6 +18,7 @@
             margin-bottom: 60px
    &__slide
       padding: 10px
+      height: auto
       box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25)
       background: #fff
       border-radius: 10px
@@ -41,6 +45,51 @@
       & > *
          flex-shrink: 0
          flex-basis: 250px
+   &__section
+      height: 480px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      gap: var(--gap)
+      overflow: hidden
+   &__info
+      flex-basis: 38%
+      .partners
+         &__title
+            text-align: left
+   &__box
+      max-width: 830px
+      flex-basis: 62%
+      padding-right: 30px
+      display: flex
+      justify-content: space-between
+      gap: var(--gap)
+   &__slider
+      animation: scrollUp 20s linear infinite
+      .partners__col:nth-child(2n) &
+         animation: scrollDown 20s linear infinite
+   &__slider,
+   &__track
+      display: flex
+      flex-direction: column
+      gap: 32px
+   &__item
+      width: 240px
+      height: 134px
+      padding: 4px
+      display: flex
+      justify-content: center
+      align-items: center
+      overflow: hidden
+      border-radius: var(--border-radius-10)
+      background: #fff
+      box-shadow: 0px 3.84px 14.4px 0px rgba(0, 0, 0, 0.25)
+      picture,
+      & > img
+         width: 70%
+         height: auto
+   &__carousel
+      display: none
    @include md
       &__row
          flex-direction: column
@@ -75,9 +124,43 @@
             height: 100px
    @include xl
       padding: var(--section-padding) 0
+      &--gray,
       &--secondary
          padding: 0
+   @media (max-width: 1365px)
+      &__section
+         height: auto
+         padding: 50px 0 30px
+         flex-direction: column
+         align-items: center
+         overflow: visible
+      &__box
+         display: none
+      &__info
+         flex-basis: auto
+         .partners
+            &__title
+               text-align: center
+      &__carousel
+         max-width: 95%
+         margin: 0 auto
+         display: block
    @include sm
       padding: 50px 0 38px
+      &--gray,
       &--secondary
          padding: 0
+      &__carousel
+         max-width: 100%
+
+@keyframes scrollUp
+   0%
+      transform: translateY(0)
+   100%
+      transform: translateY(calc(-50% + 240px))
+
+@keyframes scrollDown
+   0%
+      transform: translateY(0)
+   100%
+      transform: translateY(calc(50% - 240px))

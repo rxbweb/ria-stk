@@ -1213,6 +1213,40 @@ var filterToggleModule = {
     });
   }
 };
+var figuresModule = {
+  init: function init() {
+    var $links = $('.figures__link');
+    if ($links.length === 0) {
+      return;
+    }
+    this.handleClick($links);
+  },
+  handleClick: function handleClick($links) {
+    $links.on('click', function (e) {
+      e.preventDefault();
+      var $link = $(this);
+      var $content = $link.next('.figures__content');
+      $links.removeClass('is-active');
+      if ($content.length) {
+        $('.figures__content').not($content).stop(true, true).slideUp(300);
+        $content.stop(true, true).slideToggle(300);
+        $link.toggleClass('is-active');
+        return;
+      }
+      var dataId = $link.data('id');
+      if (!dataId) return;
+      var dataName = $link.closest('[data-name]').data('name');
+      if (!dataName) return;
+      var $categoryBlock = $('[data-category="' + dataName + '"]');
+      if (!$categoryBlock.length) return;
+      var $items = $categoryBlock.find('.figures__item');
+      $items.removeClass('is-active');
+      var $targetItem = $items.filter('[data-tab="' + dataId + '"]');
+      $targetItem.addClass('is-active');
+      $link.addClass('is-active');
+    });
+  }
+};
 $(function () {
   lazyLoadModule.init();
   phoneMaskModule.init();
@@ -1241,6 +1275,7 @@ $(function () {
   goodsTableModule.init();
   rangeSliderModule.init();
   filterToggleModule.init();
+  figuresModule.init();
   $(window).on('resize', function () {
     return sidebarModule.handleResize();
   });

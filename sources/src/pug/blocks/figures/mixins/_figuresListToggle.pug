@@ -1,0 +1,10 @@
+mixin figuresListToggle(figures, count = 0)   
+   ul.figures__list(data-name="figures")
+      each figure, index in figures
+         li.figures__item
+            a.figures__link(href="#" data-id=`tab-${index + 1}`)
+               .figures__svg
+                  svg
+                     use(href=`images/sprites/main.stack.svg#svg-collection-${(count + index + 1).toString().padStart(2, '0')}`)
+               .figures__info
+                  p.figures__text= figure.text

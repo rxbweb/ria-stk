@@ -1,0 +1,52 @@
+include ../../mixins/_mixins
+
+-
+   const listings21 = [
+      {
+         badge: 'badge-47',
+         badgeWidth: '42',
+         badgeHeight: '45',
+         title: 'Престижные издания. Каждый <br> журнал — лидер в своей тематике.'
+      },
+      {
+         badge: 'badge-48',
+         badgeWidth: '36',
+         badgeHeight: '36',
+         title: 'Богатый опыт подготовки <br> спецвыпусков.'
+      },
+      {
+         badge: 'badge-49',
+         badgeWidth: '34',
+         badgeHeight: '34',
+         title: 'Обширная база авторов <br> и экспертов.'
+      },
+      {
+         badge: 'badge-50',
+         badgeWidth: '45',
+         badgeHeight: '36',
+         title: 'Знание аудитории'
+      },
+      {
+         badge: 'badge-51',
+         badgeWidth: '45',
+         badgeHeight: '45',
+         title: 'Прозрачный учет всех расходов — вы можете <br> контролировать ход работ в любую минуту.'
+      },
+   ]
+
+section.section.section--listing
+   .section__wrapper.container
+      .section__header
+         .section__header-row
+            h2.section__header-title Почему мы?
+      .section__content
+         .listing
+            .listing__inner
+               .listing__content
+                  ul.listing__list.listing__list--secondary.listing__list--3.listing__list--default
+                     each listing in listings21
+                        li.listing__item
+                           .listing__box
+                              .badge.badge--large
+                                 +svg(listing.badge, '', listing.badgeWidth + 2, listing.badgeHeight + 2)
+                              h3.listing__name!=listing.title

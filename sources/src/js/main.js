@@ -1415,6 +1415,51 @@ const filterToggleModule = {
    }
 };
 
+const figuresModule = {
+   init() {
+      const $links = $('.figures__link');
+      if ($links.length === 0) {
+         return;
+      }
+      this.handleClick($links);
+   },
+
+   handleClick($links) {
+      $links.on('click', function (e) {
+         e.preventDefault();
+   
+         const $link = $(this);
+         const $content = $link.next('.figures__content');
+   
+         $links.removeClass('is-active');
+   
+         if ($content.length) {
+            $('.figures__content').not($content).stop(true, true).slideUp(300);
+            $content.stop(true, true).slideToggle(300);
+            $link.toggleClass('is-active');
+            return;
+         }
+   
+         const dataId = $link.data('id');
+         if (!dataId) return;
+   
+         const dataName = $link.closest('[data-name]').data('name');
+         if (!dataName) return;
+   
+         const $categoryBlock = $('[data-category="' + dataName + '"]');
+         if (!$categoryBlock.length) return;
+   
+         const $items = $categoryBlock.find('.figures__item');
+         $items.removeClass('is-active');
+   
+         const $targetItem = $items.filter('[data-tab="' + dataId + '"]');
+         $targetItem.addClass('is-active');
+   
+         $link.addClass('is-active');
+      });
+   }
+};
+
 $(function () {
    lazyLoadModule.init();
    phoneMaskModule.init();
@@ -1443,5 +1488,6 @@ $(function () {
    goodsTableModule.init();
    rangeSliderModule.init();
    filterToggleModule.init();
+   figuresModule.init();
    $(window).on('resize', () => sidebarModule.handleResize());
 });

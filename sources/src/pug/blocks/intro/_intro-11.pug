@@ -1,0 +1,15 @@
+include ../../mixins/_mixins
+
+section.section.section--intro
+   .section__wrapper.container
+      .section__content
+         .intro
+            .bg-image
+               +picture("images/intro/intro-bg-02.jpg", "images/intro/intro-bg-mob.jpg", "фоновая картинка", 1640, 512)
+            .intro__main
+               .intro__info.intro__info--special
+                  h2.intro__title Какие бонусы получает заказчик спецвыпуска?
+                  p.intro__content Заказывайте спецвыпуск и получайте подарки!
+                  p.intro__content Дарим публикацию рекламы на обложке любого журнала РИА «Стандарты и качество» на ваш выбор. В акции участвуют регулярные выпуски.
+               .intro__img.intro__img--special
+                  +picture-simple("images/intro/intro-10.png", false, "Картинка", 638, 440)

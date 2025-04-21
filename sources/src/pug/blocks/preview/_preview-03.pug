@@ -1,0 +1,16 @@
+include ../../mixins/_mixins
+
+section.section.section--preview
+   .section__wrapper.container
+      .section__content
+         .preview
+            .preview__inner
+               .preview__row
+                  .preview__visual
+                     .preview__img
+                        +picture("images/preview/preview-03.jpg", false, "картинка", 800, 450)
+                  .preview__info
+                     h2.preview__title Корпоративные издания
+                     p.preview__text Корпоративные издания — мощный инструмент для внутренних и внешних коммуникаций.
+                     p.preview__text Мы разрабатываем и выпускаем корпоративные издания. Оставьте заявку, если вам нужна консультация на выполнение части работ или организацию всего издательского процесса.
+                     +button-icon('link', 'Оставить заявку')

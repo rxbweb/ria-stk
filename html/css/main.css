@@ -2446,6 +2446,11 @@ template {
 .svg-svg-badge-44,
 .svg-svg-badge-45,
 .svg-svg-badge-46,
+.svg-svg-badge-47,
+.svg-svg-badge-48,
+.svg-svg-badge-49,
+.svg-svg-badge-50,
+.svg-svg-badge-51,
 .svg-svg-collection-01,
 .svg-svg-collection-02,
 .svg-svg-collection-03,
@@ -2544,8 +2549,8 @@ template {
   background: url(../images/sprites/main.svg) no-repeat
 }
 .svg-svg-badge-01 {
-  background-position: 99.1631799163% 92.6865671642%;
-  background-size: 3359.0909090909% auto;
+  background-position: 99.1655076495% 93.2432432432%;
+  background-size: 3368.1818181818% auto;
   width: 22px
 }
 .svg-svg-badge-01:before {
@@ -2560,8 +2565,8 @@ template {
   height: 22px
 }
 .svg-svg-badge-02 {
-  background-position: 99.8595505618% 4.1791044776%;
-  background-size: 2737.037037037% auto;
+  background-position: 99.8599439776% 4.2042042042%;
+  background-size: 2744.4444444444% auto;
   width: 27px
 }
 .svg-svg-badge-02:before {
@@ -2576,8 +2581,8 @@ template {
   height: 22px
 }
 .svg-svg-badge-03 {
-  background-position: 99.1631799163% 95.9701492537%;
-  background-size: 3359.0909090909% auto;
+  background-position: 99.1655076495% 96.5465465465%;
+  background-size: 3368.1818181818% auto;
   width: 22px
 }
 .svg-svg-badge-03:before {
@@ -2592,8 +2597,8 @@ template {
   height: 22px
 }
 .svg-svg-badge-04 {
-  background-position: 99.7194950912% 19.5195195195%;
-  background-size: 2842.3076923077% auto;
+  background-position: 99.7202797203% 19.6374622356%;
+  background-size: 2850% auto;
   width: 26px
 }
 .svg-svg-badge-04:before {
@@ -2608,8 +2613,8 @@ template {
   height: 26px
 }
 .svg-svg-badge-05 {
-  background-position: 99.7194950912% 23.4234234234%;
-  background-size: 2842.3076923077% auto;
+  background-position: 99.7202797203% 23.5649546828%;
+  background-size: 2850% auto;
   width: 26px
 }
 .svg-svg-badge-05:before {
@@ -2624,8 +2629,8 @@ template {
   height: 26px
 }
 .svg-svg-badge-06 {
-  background-position: 99.3016759777% 89.3871449925%;
-  background-size: 3213.0434782609% auto;
+  background-position: 99.3036211699% 89.9248120301%;
+  background-size: 3221.7391304348% auto;
   width: 23px
 }
 .svg-svg-badge-06:before {
@@ -2640,8 +2645,8 @@ template {
   height: 23px
 }
 .svg-svg-badge-07 {
-  background-position: 33.7552742616% 98.4939759036%;
-  background-size: 2639.2857142857% auto;
+  background-position: 62.5525946704% 99.0909090909%;
+  background-size: 2646.4285714286% auto;
   width: 28px
 }
 .svg-svg-badge-07:before {
@@ -2656,8 +2661,8 @@ template {
   height: 28px
 }
 .svg-svg-badge-08 {
-  background-position: 95.7446808511% 43.1610942249%;
-  background-size: 2173.5294117647% auto;
+  background-position: 95.4738330976% 71.25382263%;
+  background-size: 2179.4117647059% auto;
   width: 34px
 }
 .svg-svg-badge-08:before {
@@ -2672,8 +2677,8 @@ template {
   height: 34px
 }
 .svg-svg-badge-09 {
-  background-position: 88.1844380403% 59.3508500773%;
-  background-size: 1642.2222222222% auto;
+  background-position: 87.9310344828% 80.7153965785%;
+  background-size: 1646.6666666667% auto;
   width: 45px
 }
 .svg-svg-badge-09:before {
@@ -2688,8 +2693,8 @@ template {
   height: 45px
 }
 .svg-svg-badge-10 {
-  background-position: 35.5206847361% 93.5779816514%;
-  background-size: 1944.7368421053% auto;
+  background-position: 53.7695590327% 94.1538461538%;
+  background-size: 1950% auto;
   width: 38px
 }
 .svg-svg-badge-10:before {
@@ -2704,8 +2709,8 @@ template {
   height: 38px
 }
 .svg-svg-badge-11 {
-  background-position: 40.9415121255% 93.5779816514%;
-  background-size: 1944.7368421053% auto;
+  background-position: 59.1749644381% 94.1538461538%;
+  background-size: 1950% auto;
   width: 38px
 }
 .svg-svg-badge-11:before {
@@ -2720,8 +2725,8 @@ template {
   height: 38px
 }
 .svg-svg-badge-12 {
-  background-position: 46.362339515% 93.5779816514%;
-  background-size: 1944.7368421053% auto;
+  background-position: 64.5803698435% 94.1538461538%;
+  background-size: 1950% auto;
   width: 38px
 }
 .svg-svg-badge-12:before {
@@ -2736,8 +2741,8 @@ template {
   height: 38px
 }
 .svg-svg-badge-13 {
-  background-position: 51.7831669044% 93.5779816514%;
-  background-size: 1944.7368421053% auto;
+  background-position: 69.9857752489% 94.1538461538%;
+  background-size: 1950% auto;
   width: 38px
 }
 .svg-svg-badge-13:before {
@@ -2752,8 +2757,8 @@ template {
   height: 38px
 }
 .svg-svg-badge-14 {
-  background-position: 94.6704067321% 94.2598187311%;
-  background-size: 2842.3076923077% auto;
+  background-position: 42.7972027972% 99.3920972644%;
+  background-size: 2850% auto;
   width: 26px
 }
 .svg-svg-badge-14:before {
@@ -2768,8 +2773,8 @@ template {
   height: 30px
 }
 .svg-svg-badge-15 {
-  background-position: 95.7446808511% 48.3282674772%;
-  background-size: 2173.5294117647% auto;
+  background-position: 95.4738330976% 76.4525993884%;
+  background-size: 2179.4117647059% auto;
   width: 34px
 }
 .svg-svg-badge-15:before {
@@ -2784,8 +2789,8 @@ template {
   height: 34px
 }
 .svg-svg-badge-16 {
-  background-position: 96.0170697013% 5.7750759878%;
-  background-size: 2052.7777777778% auto;
+  background-position: 95.7446808511% 28.1345565749%;
+  background-size: 2058.3333333333% auto;
   width: 36px
 }
 .svg-svg-badge-16:before {
@@ -2800,8 +2805,8 @@ template {
   height: 34px
 }
 .svg-svg-badge-17 {
-  background-position: 96.0170697013% 10.9756097561%;
-  background-size: 2052.7777777778% auto;
+  background-position: 95.7446808511% 33.4355828221%;
+  background-size: 2058.3333333333% auto;
   width: 36px
 }
 .svg-svg-badge-17:before {
@@ -2816,8 +2821,8 @@ template {
   height: 36px
 }
 .svg-svg-badge-18 {
-  background-position: 57.2039942939% 93.5779816514%;
-  background-size: 1944.7368421053% auto;
+  background-position: 75.3911806543% 94.1538461538%;
+  background-size: 1950% auto;
   width: 38px
 }
 .svg-svg-badge-18:before {
@@ -2832,8 +2837,8 @@ template {
   height: 38px
 }
 .svg-svg-badge-19 {
-  background-position: 62.5356125356% 93.5779816514%;
-  background-size: 1997.2972972973% auto;
+  background-position: 80.6818181818% 94.1538461538%;
+  background-size: 2002.7027027027% auto;
   width: 37px
 }
 .svg-svg-badge-19:before {
@@ -2848,8 +2853,8 @@ template {
   height: 38px
 }
 .svg-svg-badge-20 {
-  background-position: 87.8048780488% 17.3913043478%;
-  background-size: 1759.5238095238% auto;
+  background-position: 87.5536480687% 17.5%;
+  background-size: 1764.2857142857% auto;
   width: 42px
 }
 .svg-svg-badge-20:before {
@@ -2864,8 +2869,8 @@ template {
   height: 48px
 }
 .svg-svg-badge-21 {
-  background-position: 88.3116883117% 52.4691358025%;
-  background-size: 1606.5217391304% auto;
+  background-position: 88.0575539568% 73.7577639752%;
+  background-size: 1610.8695652174% auto;
   width: 46px
 }
 .svg-svg-badge-21:before {
@@ -2880,8 +2885,8 @@ template {
   height: 44px
 }
 .svg-svg-badge-22 {
-  background-position: 87.9310344828% 72.7692307692%;
-  background-size: 1718.6046511628% auto;
+  background-position: 0 94.7368421053%;
+  background-size: 1723.2558139535% auto;
   width: 43px
 }
 .svg-svg-badge-22:before {
@@ -2896,8 +2901,8 @@ template {
   height: 42px
 }
 .svg-svg-badge-23 {
-  background-position: 67.9029957204% 93.5779816514%;
-  background-size: 1944.7368421053% auto;
+  background-position: 86.0597439545% 94.1538461538%;
+  background-size: 1950% auto;
   width: 38px
 }
 .svg-svg-badge-23:before {
@@ -2912,8 +2917,8 @@ template {
   height: 38px
 }
 .svg-svg-badge-24 {
-  background-position: 73.3238231098% 92.7272727273%;
-  background-size: 1944.7368421053% auto;
+  background-position: 96.0170697013% 0;
+  background-size: 1950% auto;
   width: 38px
 }
 .svg-svg-badge-24:before {
@@ -2928,8 +2933,8 @@ template {
   height: 32px
 }
 .svg-svg-badge-25 {
-  background-position: 87.9310344828% 79.2307692308%;
-  background-size: 1718.6046511628% auto;
+  background-position: 6.1604584527% 94.7368421053%;
+  background-size: 1723.2558139535% auto;
   width: 43px
 }
 .svg-svg-badge-25:before {
@@ -2944,8 +2949,8 @@ template {
   height: 42px
 }
 .svg-svg-badge-26 {
-  background-position: 87.9310344828% 85.6923076923%;
-  background-size: 1718.6046511628% auto;
+  background-position: 12.3209169054% 94.7368421053%;
+  background-size: 1723.2558139535% auto;
   width: 43px
 }
 .svg-svg-badge-26:before {
@@ -2960,8 +2965,8 @@ template {
   height: 42px
 }
 .svg-svg-badge-27 {
-  background-position: 18.3499288762% 94.1538461538%;
-  background-size: 2052.7777777778% auto;
+  background-position: 36.5957446809% 94.7368421053%;
+  background-size: 2058.3333333333% auto;
   width: 36px
 }
 .svg-svg-badge-27:before {
@@ -2976,8 +2981,8 @@ template {
   height: 42px
 }
 .svg-svg-badge-28 {
-  background-position: 87.3038516405% 24.8447204969%;
-  background-size: 1944.7368421053% auto;
+  background-position: 87.0554765292% 25%;
+  background-size: 1950% auto;
   width: 38px
 }
 .svg-svg-badge-28:before {
@@ -2992,8 +2997,8 @@ template {
   height: 48px
 }
 .svg-svg-badge-29 {
-  background-position: 96.0170697013% 0;
-  background-size: 2052.7777777778% auto;
+  background-position: 95.7446808511% 4.9230769231%;
+  background-size: 2058.3333333333% auto;
   width: 36px
 }
 .svg-svg-badge-29:before {
@@ -3008,8 +3013,8 @@ template {
   height: 38px
 }
 .svg-svg-badge-30 {
-  background-position: 0 94.1538461538%;
-  background-size: 1718.6046511628% auto;
+  background-position: 18.4813753582% 94.7368421053%;
+  background-size: 1723.2558139535% auto;
   width: 43px
 }
 .svg-svg-badge-30:before {
@@ -3024,8 +3029,8 @@ template {
   height: 42px
 }
 .svg-svg-badge-31 {
-  background-position: 87.3038516405% 32.298136646%;
-  background-size: 1944.7368421053% auto;
+  background-position: 87.0554765292% 32.5%;
+  background-size: 1950% auto;
   width: 38px
 }
 .svg-svg-badge-31:before {
@@ -3040,8 +3045,8 @@ template {
   height: 48px
 }
 .svg-svg-badge-32 {
-  background-position: 96.0170697013% 16.3884673748%;
-  background-size: 2052.7777777778% auto;
+  background-position: 95.7446808511% 38.7786259542%;
+  background-size: 2058.3333333333% auto;
   width: 36px
 }
 .svg-svg-badge-32:before {
@@ -3056,8 +3061,8 @@ template {
   height: 33px
 }
 .svg-svg-badge-33 {
-  background-position: 6.1781609195% 94.1538461538%;
-  background-size: 1718.6046511628% auto;
+  background-position: 24.6418338109% 94.7368421053%;
+  background-size: 1723.2558139535% auto;
   width: 43px
 }
 .svg-svg-badge-33:before {
@@ -3072,8 +3077,8 @@ template {
   height: 42px
 }
 .svg-svg-badge-34 {
-  background-position: 78.0763790665% 92.7272727273%;
-  background-size: 2309.375% auto;
+  background-position: 90.6911142454% 93.2926829268%;
+  background-size: 2315.625% auto;
   width: 32px
 }
 .svg-svg-badge-34:before {
@@ -3088,8 +3093,8 @@ template {
   height: 32px
 }
 .svg-svg-badge-35 {
-  background-position: 95.7446808511% 53.4954407295%;
-  background-size: 2173.5294117647% auto;
+  background-position: 95.4738330976% 81.6513761468%;
+  background-size: 2179.4117647059% auto;
   width: 34px
 }
 .svg-svg-badge-35:before {
@@ -3104,8 +3109,8 @@ template {
   height: 34px
 }
 .svg-svg-badge-36 {
-  background-position: 23.6728837877% 94.1538461538%;
-  background-size: 1759.5238095238% auto;
+  background-position: 42.0600858369% 94.7368421053%;
+  background-size: 1764.2857142857% auto;
   width: 42px
 }
 .svg-svg-badge-36:before {
@@ -3120,8 +3125,8 @@ template {
   height: 42px
 }
 .svg-svg-badge-37 {
-  background-position: 96.0170697013% 21.493902439%;
-  background-size: 2052.7777777778% auto;
+  background-position: 95.7446808511% 44.018404908%;
+  background-size: 2058.3333333333% auto;
   width: 36px
 }
 .svg-svg-badge-37:before {
@@ -3136,8 +3141,8 @@ template {
   height: 36px
 }
 .svg-svg-badge-38 {
-  background-position: 12.3563218391% 94.1538461538%;
-  background-size: 1718.6046511628% auto;
+  background-position: 30.8022922636% 94.7368421053%;
+  background-size: 1723.2558139535% auto;
   width: 43px
 }
 .svg-svg-badge-38:before {
@@ -3152,8 +3157,8 @@ template {
   height: 42px
 }
 .svg-svg-badge-39 {
-  background-position: 87.3038516405% 39.751552795%;
-  background-size: 1944.7368421053% auto;
+  background-position: 87.0554765292% 40%;
+  background-size: 1950% auto;
   width: 38px
 }
 .svg-svg-badge-39:before {
@@ -3168,8 +3173,8 @@ template {
   height: 48px
 }
 .svg-svg-badge-40 {
-  background-position: 88.5672937771% 46.3414634146%;
-  background-size: 1539.5833333333% auto;
+  background-position: 88.3116883117% 46.6257668712%;
+  background-size: 1543.75% auto;
   width: 48px
 }
 .svg-svg-badge-40:before {
@@ -3184,8 +3189,8 @@ template {
   height: 36px
 }
 .svg-svg-badge-41 {
-  background-position: 95.7446808511% 58.6626139818%;
-  background-size: 2173.5294117647% auto;
+  background-position: 95.4738330976% 86.8501529052%;
+  background-size: 2179.4117647059% auto;
   width: 34px
 }
 .svg-svg-badge-41:before {
@@ -3200,8 +3205,8 @@ template {
   height: 34px
 }
 .svg-svg-badge-42 {
-  background-position: 0 100%;
-  background-size: 1944.7368421053% auto;
+  background-position: 96.0170697013% 10.7692307692%;
+  background-size: 1950% auto;
   width: 38px
 }
 .svg-svg-badge-42:before {
@@ -3216,8 +3221,8 @@ template {
   height: 38px
 }
 .svg-svg-badge-43 {
-  background-position: 5.4208273894% 100%;
-  background-size: 1944.7368421053% auto;
+  background-position: 96.0170697013% 16.6153846154%;
+  background-size: 1950% auto;
   width: 38px
 }
 .svg-svg-badge-43:before {
@@ -3232,8 +3237,8 @@ template {
   height: 38px
 }
 .svg-svg-badge-44 {
-  background-position: 96.0170697013% 26.9817073171%;
-  background-size: 2052.7777777778% auto;
+  background-position: 95.7446808511% 49.5398773006%;
+  background-size: 2058.3333333333% auto;
   width: 36px
 }
 .svg-svg-badge-44:before {
@@ -3248,8 +3253,8 @@ template {
   height: 36px
 }
 .svg-svg-badge-45 {
-  background-position: 96.0170697013% 32.4695121951%;
-  background-size: 2052.7777777778% auto;
+  background-position: 95.7446808511% 55.0613496933%;
+  background-size: 2058.3333333333% auto;
   width: 36px
 }
 .svg-svg-badge-45:before {
@@ -3264,8 +3269,8 @@ template {
   height: 36px
 }
 .svg-svg-badge-46 {
-  background-position: 88.0575539568% 66.2037037037%;
-  background-size: 1679.5454545455% auto;
+  background-position: 87.8048780488% 87.5776397516%;
+  background-size: 1684.0909090909% auto;
   width: 44px
 }
 .svg-svg-badge-46:before {
@@ -3279,9 +3284,89 @@ template {
   width: 44px;
   height: 44px
 }
+.svg-svg-badge-47 {
+  background-position: 88.0575539568% 53.125%;
+  background-size: 1610.8695652174% auto;
+  width: 46px
+}
+.svg-svg-badge-47:before {
+  content: "";
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  padding-top: 104.347826087%
+}
+.svg-svg-badge-47-dims {
+  width: 46px;
+  height: 48px
+}
+.svg-svg-badge-48 {
+  background-position: 96.0170697013% 22.4615384615%;
+  background-size: 1950% auto;
+  width: 38px
+}
+.svg-svg-badge-48:before {
+  content: "";
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  padding-top: 100%
+}
+.svg-svg-badge-48-dims {
+  width: 38px;
+  height: 38px
+}
+.svg-svg-badge-49 {
+  background-position: 95.7446808511% 60.5828220859%;
+  background-size: 2058.3333333333% auto;
+  width: 36px
+}
+.svg-svg-badge-49:before {
+  content: "";
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  padding-top: 100%
+}
+.svg-svg-badge-49-dims {
+  width: 36px;
+  height: 36px
+}
+.svg-svg-badge-50 {
+  background-position: 88.3116883117% 59.7842835131%;
+  background-size: 1543.75% auto;
+  width: 48px
+}
+.svg-svg-badge-50:before {
+  content: "";
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  padding-top: 81.25%
+}
+.svg-svg-badge-50-dims {
+  width: 48px;
+  height: 39px
+}
+.svg-svg-badge-51 {
+  background-position: 88.3116883117% 66.71875%;
+  background-size: 1543.75% auto;
+  width: 48px
+}
+.svg-svg-badge-51:before {
+  content: "";
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  padding-top: 100%
+}
+.svg-svg-badge-51-dims {
+  width: 48px;
+  height: 48px
+}
 .svg-svg-collection-01 {
   background-position: 0 0;
-  background-size: 724.5098039216% auto;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-01:before {
@@ -3296,8 +3381,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-02 {
-  background-position: 16.0125588697% 0;
-  background-size: 724.5098039216% auto;
+  background-position: 15.9624413146% 0;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-02:before {
@@ -3312,8 +3397,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-03 {
-  background-position: 0 17.2881355932%;
-  background-size: 724.5098039216% auto;
+  background-position: 0 17.4061433447%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-03:before {
@@ -3328,8 +3413,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-04 {
-  background-position: 16.0125588697% 17.2881355932%;
-  background-size: 724.5098039216% auto;
+  background-position: 15.9624413146% 17.4061433447%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-04:before {
@@ -3344,8 +3429,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-05 {
-  background-position: 32.0251177394% 0;
-  background-size: 724.5098039216% auto;
+  background-position: 31.9248826291% 0;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-05:before {
@@ -3360,8 +3445,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-06 {
-  background-position: 32.0251177394% 17.2881355932%;
-  background-size: 724.5098039216% auto;
+  background-position: 31.9248826291% 17.4061433447%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-06:before {
@@ -3376,8 +3461,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-07 {
-  background-position: 0 34.5762711864%;
-  background-size: 724.5098039216% auto;
+  background-position: 0 34.8122866894%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-07:before {
@@ -3392,8 +3477,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-08 {
-  background-position: 16.0125588697% 34.5762711864%;
-  background-size: 724.5098039216% auto;
+  background-position: 15.9624413146% 34.8122866894%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-08:before {
@@ -3408,8 +3493,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-09 {
-  background-position: 32.0251177394% 34.5762711864%;
-  background-size: 724.5098039216% auto;
+  background-position: 31.9248826291% 34.8122866894%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-09:before {
@@ -3424,8 +3509,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-10 {
-  background-position: 48.0376766091% 0;
-  background-size: 724.5098039216% auto;
+  background-position: 47.8873239437% 0;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-10:before {
@@ -3440,8 +3525,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-11 {
-  background-position: 48.0376766091% 17.2881355932%;
-  background-size: 724.5098039216% auto;
+  background-position: 47.8873239437% 17.4061433447%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-11:before {
@@ -3456,8 +3541,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-12 {
-  background-position: 48.0376766091% 34.5762711864%;
-  background-size: 724.5098039216% auto;
+  background-position: 47.8873239437% 34.8122866894%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-12:before {
@@ -3472,8 +3557,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-13 {
-  background-position: 0 51.8644067797%;
-  background-size: 724.5098039216% auto;
+  background-position: 0 52.2184300341%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-13:before {
@@ -3488,8 +3573,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-14 {
-  background-position: 16.0125588697% 51.8644067797%;
-  background-size: 724.5098039216% auto;
+  background-position: 15.9624413146% 52.2184300341%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-14:before {
@@ -3504,8 +3589,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-15 {
-  background-position: 32.0251177394% 51.8644067797%;
-  background-size: 724.5098039216% auto;
+  background-position: 31.9248826291% 52.2184300341%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-15:before {
@@ -3520,8 +3605,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-16 {
-  background-position: 48.0376766091% 51.8644067797%;
-  background-size: 724.5098039216% auto;
+  background-position: 47.8873239437% 52.2184300341%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-16:before {
@@ -3536,8 +3621,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-17 {
-  background-position: 64.0502354788% 0;
-  background-size: 724.5098039216% auto;
+  background-position: 63.8497652582% 0;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-17:before {
@@ -3552,8 +3637,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-18 {
-  background-position: 64.0502354788% 17.2881355932%;
-  background-size: 724.5098039216% auto;
+  background-position: 63.8497652582% 17.4061433447%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-18:before {
@@ -3568,8 +3653,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-19 {
-  background-position: 64.0502354788% 34.5762711864%;
-  background-size: 724.5098039216% auto;
+  background-position: 63.8497652582% 34.8122866894%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-19:before {
@@ -3584,8 +3669,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-20 {
-  background-position: 64.0502354788% 51.8644067797%;
-  background-size: 724.5098039216% auto;
+  background-position: 63.8497652582% 52.2184300341%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-20:before {
@@ -3600,8 +3685,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-21 {
-  background-position: 0 69.1525423729%;
-  background-size: 724.5098039216% auto;
+  background-position: 0 69.6245733788%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-21:before {
@@ -3616,8 +3701,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-22 {
-  background-position: 16.0125588697% 69.1525423729%;
-  background-size: 724.5098039216% auto;
+  background-position: 15.9624413146% 69.6245733788%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-22:before {
@@ -3632,8 +3717,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-23 {
-  background-position: 32.0251177394% 69.1525423729%;
-  background-size: 724.5098039216% auto;
+  background-position: 31.9248826291% 69.6245733788%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-23:before {
@@ -3648,8 +3733,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-24 {
-  background-position: 48.0376766091% 69.1525423729%;
-  background-size: 724.5098039216% auto;
+  background-position: 47.8873239437% 69.6245733788%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-24:before {
@@ -3664,8 +3749,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-25 {
-  background-position: 64.0502354788% 69.1525423729%;
-  background-size: 724.5098039216% auto;
+  background-position: 63.8497652582% 69.6245733788%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-25:before {
@@ -3680,8 +3765,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-26 {
-  background-position: 80.0627943485% 0;
-  background-size: 724.5098039216% auto;
+  background-position: 79.8122065728% 0;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-26:before {
@@ -3696,8 +3781,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-27 {
-  background-position: 80.0627943485% 17.2881355932%;
-  background-size: 724.5098039216% auto;
+  background-position: 79.8122065728% 17.4061433447%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-27:before {
@@ -3712,8 +3797,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-28 {
-  background-position: 80.0627943485% 34.5762711864%;
-  background-size: 724.5098039216% auto;
+  background-position: 79.8122065728% 34.8122866894%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-28:before {
@@ -3728,8 +3813,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-29 {
-  background-position: 80.0627943485% 51.8644067797%;
-  background-size: 724.5098039216% auto;
+  background-position: 79.8122065728% 52.2184300341%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-29:before {
@@ -3744,8 +3829,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-30 {
-  background-position: 80.0627943485% 69.1525423729%;
-  background-size: 724.5098039216% auto;
+  background-position: 79.8122065728% 69.6245733788%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-30:before {
@@ -3760,8 +3845,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-31 {
-  background-position: 0 86.4406779661%;
-  background-size: 769.7916666667% auto;
+  background-position: 0 87.0307167235%;
+  background-size: 771.875% auto;
   width: 96px
 }
 .svg-svg-collection-31:before {
@@ -3776,8 +3861,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-32 {
-  background-position: 15.0706436421% 86.4406779661%;
-  background-size: 724.5098039216% auto;
+  background-position: 15.0234741784% 87.0307167235%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-32:before {
@@ -3792,8 +3877,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-33 {
-  background-position: 31.0832025118% 86.4406779661%;
-  background-size: 724.5098039216% auto;
+  background-position: 30.985915493% 87.0307167235%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-33:before {
@@ -3808,8 +3893,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-34 {
-  background-position: 47.0957613815% 86.4406779661%;
-  background-size: 724.5098039216% auto;
+  background-position: 46.9483568075% 87.0307167235%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-34:before {
@@ -3824,8 +3909,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-35 {
-  background-position: 63.1083202512% 86.4406779661%;
-  background-size: 724.5098039216% auto;
+  background-position: 62.9107981221% 87.0307167235%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-35:before {
@@ -3840,8 +3925,8 @@ template {
   height: 102px
 }
 .svg-svg-collection-36 {
-  background-position: 79.1208791209% 86.4406779661%;
-  background-size: 724.5098039216% auto;
+  background-position: 78.8732394366% 87.0307167235%;
+  background-size: 726.4705882353% auto;
   width: 102px
 }
 .svg-svg-collection-36:before {
@@ -3856,8 +3941,8 @@ template {
   height: 102px
 }
 .svg-svg-controls-01 {
-  background-position: 95.7446808511% 63.829787234%;
-  background-size: 2173.5294117647% auto;
+  background-position: 95.4738330976% 92.0489296636%;
+  background-size: 2179.4117647059% auto;
   width: 34px
 }
 .svg-svg-controls-01:before {
@@ -3872,8 +3957,8 @@ template {
   height: 34px
 }
 .svg-svg-controls-02 {
-  background-position: 95.7446808511% 68.9969604863%;
-  background-size: 2173.5294117647% auto;
+  background-position: 0 100%;
+  background-size: 2179.4117647059% auto;
   width: 34px
 }
 .svg-svg-controls-02:before {
@@ -3888,8 +3973,8 @@ template {
   height: 34px
 }
 .svg-svg-controls-03 {
-  background-position: 95.7446808511% 74.1641337386%;
-  background-size: 2173.5294117647% auto;
+  background-position: 4.8090523338% 100%;
+  background-size: 2179.4117647059% auto;
   width: 34px
 }
 .svg-svg-controls-03:before {
@@ -3904,8 +3989,8 @@ template {
   height: 34px
 }
 .svg-svg-controls-04 {
-  background-position: 95.7446808511% 79.3313069909%;
-  background-size: 2173.5294117647% auto;
+  background-position: 9.6181046676% 100%;
+  background-size: 2179.4117647059% auto;
   width: 34px
 }
 .svg-svg-controls-04:before {
@@ -3920,8 +4005,8 @@ template {
   height: 34px
 }
 .svg-svg-controls-05 {
-  background-position: 95.7446808511% 84.4984802432%;
-  background-size: 2173.5294117647% auto;
+  background-position: 14.4271570014% 100%;
+  background-size: 2179.4117647059% auto;
   width: 34px
 }
 .svg-svg-controls-05:before {
@@ -3936,8 +4021,8 @@ template {
   height: 34px
 }
 .svg-svg-controls-06 {
-  background-position: 95.7446808511% 89.6656534954%;
-  background-size: 2173.5294117647% auto;
+  background-position: 19.2362093352% 100%;
+  background-size: 2179.4117647059% auto;
   width: 34px
 }
 .svg-svg-controls-06:before {
@@ -3952,8 +4037,8 @@ template {
   height: 34px
 }
 .svg-svg-controls-07 {
-  background-position: 10.780141844% 99.3920972644%;
-  background-size: 2173.5294117647% auto;
+  background-position: 24.045261669% 100%;
+  background-size: 2179.4117647059% auto;
   width: 34px
 }
 .svg-svg-controls-07:before {
@@ -3968,8 +4053,8 @@ template {
   height: 34px
 }
 .svg-svg-controls-08 {
-  background-position: 15.6028368794% 99.3920972644%;
-  background-size: 2173.5294117647% auto;
+  background-position: 28.8543140028% 100%;
+  background-size: 2179.4117647059% auto;
   width: 34px
 }
 .svg-svg-controls-08:before {
@@ -3984,8 +4069,8 @@ template {
   height: 34px
 }
 .svg-svg-controls-09 {
-  background-position: 20.4255319149% 99.3920972644%;
-  background-size: 2173.5294117647% auto;
+  background-position: 33.6633663366% 100%;
+  background-size: 2179.4117647059% auto;
   width: 34px
 }
 .svg-svg-controls-09:before {
@@ -4000,8 +4085,8 @@ template {
   height: 34px
 }
 .svg-svg-controls-10 {
-  background-position: 25.2482269504% 99.3920972644%;
-  background-size: 2173.5294117647% auto;
+  background-position: 38.4724186704% 100%;
+  background-size: 2179.4117647059% auto;
   width: 34px
 }
 .svg-svg-controls-10:before {
@@ -4016,8 +4101,8 @@ template {
   height: 34px
 }
 .svg-svg-icon-arrow-down {
-  background-position: 91.196698762% 11.9883040936%;
-  background-size: 6158.3333333333% auto;
+  background-position: 90.9465020576% 14.1176470588%;
+  background-size: 6175% auto;
   width: 12px
 }
 .svg-svg-icon-arrow-down:before {
@@ -4032,8 +4117,8 @@ template {
   height: 8px
 }
 .svg-svg-icon-arrow-right {
-  background-position: 96.0273972603% 93.8235294118%;
-  background-size: 8211.1111111111% auto;
+  background-position: 90.9836065574% 37.8698224852%;
+  background-size: 8233.3333333333% auto;
   width: 9px
 }
 .svg-svg-icon-arrow-right:before {
@@ -4048,8 +4133,8 @@ template {
   height: 12px
 }
 .svg-svg-icon-arrow-right-large {
-  background-position: 91.196698762% 9.2261904762%;
-  background-size: 6158.3333333333% auto;
+  background-position: 90.9465020576% 9.2814371257%;
+  background-size: 6175% auto;
   width: 12px
 }
 .svg-svg-icon-arrow-right-large:before {
@@ -4064,8 +4149,8 @@ template {
   height: 20px
 }
 .svg-svg-icon-arrow-small-down {
-  background-position: 91.196698762% 13.1578947368%;
-  background-size: 6158.3333333333% auto;
+  background-position: 90.9465020576% 15.2941176471%;
+  background-size: 6175% auto;
   width: 12px
 }
 .svg-svg-icon-arrow-small-down:before {
@@ -4080,8 +4165,8 @@ template {
   height: 8px
 }
 .svg-svg-icon-arrow-small-right {
-  background-position: 96.159122085% 92.0353982301%;
-  background-size: 7390% auto;
+  background-position: 90.6976744186% 12.1661721068%;
+  background-size: 7410% auto;
   width: 10px
 }
 .svg-svg-icon-arrow-small-right:before {
@@ -4096,8 +4181,8 @@ template {
   height: 14px
 }
 .svg-svg-icon-calendar {
-  background-position: 99.1631799163% 99.2537313433%;
-  background-size: 3359.0909090909% auto;
+  background-position: 99.1655076495% 99.8498498498%;
+  background-size: 3368.1818181818% auto;
   width: 22px
 }
 .svg-svg-icon-calendar:before {
@@ -4112,8 +4197,8 @@ template {
   height: 22px
 }
 .svg-svg-icon-camera {
-  background-position: 90.5325443787% 0;
-  background-size: 1173.0158730159% auto;
+  background-position: 90.2654867257% 0;
+  background-size: 1176.1904761905% auto;
   width: 63px
 }
 .svg-svg-icon-camera:before {
@@ -4128,8 +4213,8 @@ template {
   height: 62px
 }
 .svg-svg-icon-cart {
-  background-position: 99.4405594406% 54.1916167665%;
-  background-size: 3079.1666666667% auto;
+  background-position: 99.4421199442% 54.5180722892%;
+  background-size: 3087.5% auto;
   width: 24px
 }
 .svg-svg-icon-cart:before {
@@ -4144,8 +4229,8 @@ template {
   height: 24px
 }
 .svg-svg-icon-check {
-  background-position: 91.0096818811% 53.3333333333%;
-  background-size: 4618.75% auto;
+  background-position: 96.1379310345% 94.78390462%;
+  background-size: 4631.25% auto;
   width: 16px
 }
 .svg-svg-icon-check:before {
@@ -4160,8 +4245,8 @@ template {
   height: 17px
 }
 .svg-svg-icon-checkmark {
-  background-position: 99.4405594406% 57.7844311377%;
-  background-size: 3079.1666666667% auto;
+  background-position: 99.4421199442% 58.1325301205%;
+  background-size: 3087.5% auto;
   width: 24px
 }
 .svg-svg-icon-checkmark:before {
@@ -4176,8 +4261,8 @@ template {
   height: 24px
 }
 .svg-svg-icon-close {
-  background-position: 99.4405594406% 61.377245509%;
-  background-size: 3079.1666666667% auto;
+  background-position: 99.4421199442% 61.7469879518%;
+  background-size: 3087.5% auto;
   width: 24px
 }
 .svg-svg-icon-close:before {
@@ -4192,8 +4277,8 @@ template {
   height: 24px
 }
 .svg-svg-icon-date {
-  background-position: 90.9596662031% 16.7164179104%;
-  background-size: 3695% auto;
+  background-position: 90.7073509015% 16.8168168168%;
+  background-size: 3705% auto;
   width: 20px
 }
 .svg-svg-icon-date:before {
@@ -4208,8 +4293,8 @@ template {
   height: 22px
 }
 .svg-svg-icon-delete {
-  background-position: 99.8595505618% 7.5075075075%;
-  background-size: 2737.037037037% auto;
+  background-position: 99.8599439776% 7.5528700906%;
+  background-size: 2744.4444444444% auto;
   width: 27px
 }
 .svg-svg-icon-delete:before {
@@ -4224,8 +4309,8 @@ template {
   height: 26px
 }
 .svg-svg-icon-doc {
-  background-position: 99.7194950912% 11.4285714286%;
-  background-size: 2842.3076923077% auto;
+  background-position: 99.7202797203% 11.497730711%;
+  background-size: 2850% auto;
   width: 26px
 }
 .svg-svg-icon-doc:before {
@@ -4240,8 +4325,8 @@ template {
   height: 27px
 }
 .svg-svg-icon-download {
-  background-position: 95.7446808511% 37.899543379%;
-  background-size: 2173.5294117647% auto;
+  background-position: 95.4738330976% 66.0030627871%;
+  background-size: 2179.4117647059% auto;
   width: 34px
 }
 .svg-svg-icon-download:before {
@@ -4256,8 +4341,8 @@ template {
   height: 35px
 }
 .svg-svg-icon-exit {
-  background-position: 90.6555090656% 23.8805970149%;
-  background-size: 3359.0909090909% auto;
+  background-position: 90.4033379694% 24.024024024%;
+  background-size: 3368.1818181818% auto;
   width: 22px
 }
 .svg-svg-icon-exit:before {
@@ -4272,8 +4357,8 @@ template {
   height: 22px
 }
 .svg-svg-icon-eye {
-  background-position: 29.6987087518% 94.1538461538%;
-  background-size: 1759.5238095238% auto;
+  background-position: 48.0686695279% 94.7368421053%;
+  background-size: 1764.2857142857% auto;
   width: 42px
 }
 .svg-svg-icon-eye:before {
@@ -4288,8 +4373,8 @@ template {
   height: 42px
 }
 .svg-svg-icon-eye-not {
-  background-position: 90.6555090656% 27.0029673591%;
-  background-size: 3359.0909090909% auto;
+  background-position: 93.8803894298% 94.9253731343%;
+  background-size: 3368.1818181818% auto;
   width: 22px
 }
 .svg-svg-icon-eye-not:before {
@@ -4304,8 +4389,8 @@ template {
   height: 18px
 }
 .svg-svg-icon-filter {
-  background-position: 90.6555090656% 31.0447761194%;
-  background-size: 3359.0909090909% auto;
+  background-position: 90.4033379694% 27.3273273273%;
+  background-size: 3368.1818181818% auto;
   width: 22px
 }
 .svg-svg-icon-filter:before {
@@ -4320,8 +4405,8 @@ template {
   height: 22px
 }
 .svg-svg-icon-gift {
-  background-position: 99.7194950912% 27.3273273273%;
-  background-size: 2842.3076923077% auto;
+  background-position: 99.7202797203% 27.4924471299%;
+  background-size: 2850% auto;
   width: 26px
 }
 .svg-svg-icon-gift:before {
@@ -4336,8 +4421,8 @@ template {
   height: 26px
 }
 .svg-svg-icon-heart {
-  background-position: 37.6933895921% 98.1981981982%;
-  background-size: 2639.2857142857% auto;
+  background-position: 66.4796633941% 98.7915407855%;
+  background-size: 2646.4285714286% auto;
   width: 28px
 }
 .svg-svg-icon-heart:before {
@@ -4352,8 +4437,8 @@ template {
   height: 26px
 }
 .svg-svg-icon-lock-01 {
-  background-position: 89.9031811895% 41.369047619%;
-  background-size: 4618.75% auto;
+  background-position: 89.6551724138% 38.3233532934%;
+  background-size: 4631.25% auto;
   width: 16px
 }
 .svg-svg-icon-lock-01:before {
@@ -4368,8 +4453,8 @@ template {
   height: 20px
 }
 .svg-svg-icon-lock-02 {
-  background-position: 91.0096818811% 50.5952380952%;
-  background-size: 4618.75% auto;
+  background-position: 89.6551724138% 41.3173652695%;
+  background-size: 4631.25% auto;
   width: 16px
 }
 .svg-svg-icon-lock-02:before {
@@ -4384,8 +4469,8 @@ template {
   height: 20px
 }
 .svg-svg-icon-lock-03 {
-  background-position: 98.8873435327% 31.2312312312%;
-  background-size: 3695% auto;
+  background-position: 98.8904299584% 31.419939577%;
+  background-size: 3705% auto;
   width: 20px
 }
 .svg-svg-icon-lock-03:before {
@@ -4400,8 +4485,8 @@ template {
   height: 26px
 }
 .svg-svg-icon-loop {
-  background-position: 99.5798319328% 50.5988023952%;
-  background-size: 2956% auto;
+  background-position: 99.5810055866% 50.9036144578%;
+  background-size: 2964% auto;
   width: 25px
 }
 .svg-svg-icon-loop:before {
@@ -4416,8 +4501,8 @@ template {
   height: 24px
 }
 .svg-svg-icon-pencil {
-  background-position: 91.1234396671% 56.9732937685%;
-  background-size: 4105.5555555556% auto;
+  background-position: 90.8713692946% 77.4626865672%;
+  background-size: 4116.6666666667% auto;
   width: 18px
 }
 .svg-svg-icon-pencil:before {
@@ -4432,8 +4517,8 @@ template {
   height: 18px
 }
 .svg-svg-icon-percent {
-  background-position: 82.3695345557% 92.4471299094%;
-  background-size: 2463.3333333333% auto;
+  background-position: 46.6947960619% 99.3920972644%;
+  background-size: 2470% auto;
   width: 30px
 }
 .svg-svg-icon-percent:before {
@@ -4448,8 +4533,8 @@ template {
   height: 30px
 }
 .svg-svg-icon-plus {
-  background-position: 91.1234396671% 59.6439169139%;
-  background-size: 4105.5555555556% auto;
+  background-position: 90.8713692946% 80.1492537313%;
+  background-size: 4116.6666666667% auto;
   width: 18px
 }
 .svg-svg-icon-plus:before {
@@ -4464,8 +4549,8 @@ template {
   height: 18px
 }
 .svg-svg-icon-question {
-  background-position: 91.0863509749% 19.9701937407%;
-  background-size: 3519.0476190476% auto;
+  background-position: 90.8333333333% 20.0899550225%;
+  background-size: 3528.5714285714% auto;
   width: 21px
 }
 .svg-svg-icon-question:before {
@@ -4480,8 +4565,8 @@ template {
   height: 21px
 }
 .svg-svg-icon-sort {
-  background-position: 90.6555090656% 34.328358209%;
-  background-size: 3359.0909090909% auto;
+  background-position: 90.4033379694% 31.2312312312%;
+  background-size: 3368.1818181818% auto;
   width: 22px
 }
 .svg-svg-icon-sort:before {
@@ -4496,8 +4581,8 @@ template {
   height: 22px
 }
 .svg-svg-icon-star {
-  background-position: 99.7194950912% 35.1351351351%;
-  background-size: 2842.3076923077% auto;
+  background-position: 99.7202797203% 35.3474320242%;
+  background-size: 2850% auto;
   width: 26px
 }
 .svg-svg-icon-star:before {
@@ -4512,8 +4597,8 @@ template {
   height: 26px
 }
 .svg-svg-icon-telegram {
-  background-position: 86.3572433193% 92.3076923077%;
-  background-size: 2639.2857142857% auto;
+  background-position: 50.7713884993% 99.2412746586%;
+  background-size: 2646.4285714286% auto;
   width: 28px
 }
 .svg-svg-icon-telegram:before {
@@ -4528,8 +4613,8 @@ template {
   height: 29px
 }
 .svg-svg-icon-text {
-  background-position: 99.8595505618% 15.4887218045%;
-  background-size: 2737.037037037% auto;
+  background-position: 99.8599439776% 15.5824508321%;
+  background-size: 2744.4444444444% auto;
   width: 27px
 }
 .svg-svg-icon-text:before {
@@ -4544,8 +4629,8 @@ template {
   height: 27px
 }
 .svg-svg-icon-user {
-  background-position: 90.6555090656% 38.2089552239%;
-  background-size: 3359.0909090909% auto;
+  background-position: 90.4033379694% 34.5345345345%;
+  background-size: 3368.1818181818% auto;
   width: 22px
 }
 .svg-svg-icon-user:before {
@@ -4560,8 +4645,8 @@ template {
   height: 22px
 }
 .svg-svg-icon-users {
-  background-position: 88.9534883721% 9.6573208723%;
-  background-size: 1449.0196078431% auto;
+  background-position: 88.6956521739% 9.7178683386%;
+  background-size: 1452.9411764706% auto;
   width: 51px
 }
 .svg-svg-icon-users:before {
@@ -4576,8 +4661,8 @@ template {
   height: 50px
 }
 .svg-svg-icon-vk {
-  background-position: 90.2953586498% 92.3076923077%;
-  background-size: 2639.2857142857% auto;
+  background-position: 54.698457223% 99.2412746586%;
+  background-size: 2646.4285714286% auto;
   width: 28px
 }
 .svg-svg-icon-vk:before {
@@ -4592,8 +4677,8 @@ template {
   height: 29px
 }
 .svg-svg-icon-whatsapp {
-  background-position: 29.8171589311% 98.6425339367%;
-  background-size: 2639.2857142857% auto;
+  background-position: 58.6255259467% 99.2412746586%;
+  background-size: 2646.4285714286% auto;
   width: 28px
 }
 .svg-svg-icon-whatsapp:before {
@@ -4608,8 +4693,8 @@ template {
   height: 29px
 }
 .svg-svg-sidebar-01 {
-  background-position: 99.7194950912% 39.039039039%;
-  background-size: 2842.3076923077% auto;
+  background-position: 99.7202797203% 39.2749244713%;
+  background-size: 2850% auto;
   width: 26px
 }
 .svg-svg-sidebar-01:before {
@@ -4624,8 +4709,8 @@ template {
   height: 26px
 }
 .svg-svg-sidebar-02 {
-  background-position: 99.7194950912% 42.9429429429%;
-  background-size: 2842.3076923077% auto;
+  background-position: 99.7202797203% 43.2024169184%;
+  background-size: 2850% auto;
   width: 26px
 }
 .svg-svg-sidebar-02:before {
@@ -4640,8 +4725,8 @@ template {
   height: 26px
 }
 .svg-svg-sidebar-03 {
-  background-position: 99.4405594406% 64.9700598802%;
-  background-size: 3079.1666666667% auto;
+  background-position: 99.4421199442% 65.3614457831%;
+  background-size: 3087.5% auto;
   width: 24px
 }
 .svg-svg-sidebar-03:before {
@@ -4656,8 +4741,8 @@ template {
   height: 24px
 }
 .svg-svg-sidebar-04 {
-  background-position: 99.7194950912% 46.8468468468%;
-  background-size: 2842.3076923077% auto;
+  background-position: 99.7202797203% 47.1299093656%;
+  background-size: 2850% auto;
   width: 26px
 }
 .svg-svg-sidebar-04:before {
@@ -4672,8 +4757,8 @@ template {
   height: 26px
 }
 .svg-svg-sidebar-05 {
-  background-position: 91.0987482615% 70.3869047619%;
-  background-size: 3695% auto;
+  background-position: 69.625520111% 97.9041916168%;
+  background-size: 3705% auto;
   width: 20px
 }
 .svg-svg-sidebar-05:before {
@@ -4688,8 +4773,8 @@ template {
   height: 20px
 }
 .svg-svg-sidebar-06 {
-  background-position: 99.4405594406% 68.5628742515%;
-  background-size: 3079.1666666667% auto;
+  background-position: 99.4421199442% 68.9759036145%;
+  background-size: 3087.5% auto;
   width: 24px
 }
 .svg-svg-sidebar-06:before {
@@ -4704,8 +4789,8 @@ template {
   height: 24px
 }
 .svg-svg-sidebar-07 {
-  background-position: 99.4405594406% 72.1556886228%;
-  background-size: 3079.1666666667% auto;
+  background-position: 99.4421199442% 72.5903614458%;
+  background-size: 3087.5% auto;
   width: 24px
 }
 .svg-svg-sidebar-07:before {
@@ -4720,8 +4805,8 @@ template {
   height: 24px
 }
 .svg-svg-sidebar-08 {
-  background-position: 99.4405594406% 75.748502994%;
-  background-size: 3079.1666666667% auto;
+  background-position: 99.4421199442% 76.2048192771%;
+  background-size: 3087.5% auto;
   width: 24px
 }
 .svg-svg-sidebar-08:before {
@@ -4736,8 +4821,8 @@ template {
   height: 24px
 }
 .svg-svg-sidebar-09 {
-  background-position: 99.4405594406% 79.3413173653%;
-  background-size: 3079.1666666667% auto;
+  background-position: 99.4421199442% 79.8192771084%;
+  background-size: 3087.5% auto;
   width: 24px
 }
 .svg-svg-sidebar-09:before {
@@ -4752,8 +4837,8 @@ template {
   height: 24px
 }
 .svg-svg-sidebar-10 {
-  background-position: 99.4405594406% 82.4404761905%;
-  background-size: 3079.1666666667% auto;
+  background-position: 99.4421199442% 82.9341317365%;
+  background-size: 3087.5% auto;
   width: 24px
 }
 .svg-svg-sidebar-10:before {
@@ -4769,7 +4854,7 @@ template {
 }
 .svg-svg-sidebar-11 {
   background-position: 100% 0;
-  background-size: 2639.2857142857% auto;
+  background-size: 2646.4285714286% auto;
   width: 28px
 }
 .svg-svg-sidebar-11:before {
@@ -4784,8 +4869,8 @@ template {
   height: 28px
 }
 .svg-svg-sidebar-12 {
-  background-position: 99.4405594406% 85.9281437126%;
-  background-size: 3079.1666666667% auto;
+  background-position: 99.4421199442% 86.4457831325%;
+  background-size: 3087.5% auto;
   width: 24px
 }
 .svg-svg-sidebar-12:before {
@@ -5703,6 +5788,7 @@ figure {
 .partners__title,
 .people__name,
 .people__title,
+.personal__title,
 .points__item,
 .points__title,
 .post__description-title,
@@ -5716,6 +5802,7 @@ figure {
 .readers__title,
 .release__features-title,
 .release__list-title,
+.release__listing li::before,
 .release__notice,
 .release__title,
 .section__header-heading,
@@ -5865,6 +5952,7 @@ ol.listing__list .listing__box::before {
   .partners__title,
   .people__name,
   .people__title,
+  .personal__title,
   .points__item,
   .points__title,
   .post__description-title,
@@ -5878,6 +5966,7 @@ ol.listing__list .listing__box::before {
   .readers__title,
   .release__features-title,
   .release__list-title,
+  .release__listing li::before,
   .release__notice,
   .release__title,
   .section__header-heading,
@@ -6024,6 +6113,7 @@ ol.listing__list .listing__box::before {
   .partners__title,
   .people__name,
   .people__title,
+  .personal__title,
   .points__item,
   .points__title,
   .post__description-title,
@@ -6037,6 +6127,7 @@ ol.listing__list .listing__box::before {
   .readers__title,
   .release__features-title,
   .release__list-title,
+  .release__listing li::before,
   .release__notice,
   .release__title,
   .section__header-heading,
@@ -6146,6 +6237,7 @@ ol.listing__list .listing__box::before {
 .products__top-title,
 .projects__title,
 .quiz__result-name,
+.release__listing li::before,
 .release__notice,
 .section__header-label,
 .specs__lead,
@@ -6200,6 +6292,7 @@ ol.listing__list .listing__box::before {
   .products__top-title,
   .projects__title,
   .quiz__result-name,
+  .release__listing li::before,
   .release__notice,
   .section__header-label,
   .specs__lead,
@@ -6255,6 +6348,7 @@ ol.listing__list .listing__box::before {
   .products__top-title,
   .projects__title,
   .quiz__result-name,
+  .release__listing li::before,
   .release__notice,
   .section__header-label,
   .specs__lead,
@@ -6424,6 +6518,7 @@ ol.listing__list .listing__box::before {
 .listing__company,
 .numbers__num,
 .people__name,
+.release__listing li::before,
 .release__notice,
 .section__header-label,
 .specs__lead,
@@ -9889,6 +9984,12 @@ input:checked ~ .form__radio-field::after {
   -ms-flex-pack: end;
   justify-content: flex-end
 }
+.hero__img--special {
+  padding-top: 140px
+}
+.hero__img--special img {
+  border-radius: var(--border-radius-20)
+}
 .hero__books-figure {
   width: 396px
 }
@@ -10364,6 +10465,9 @@ input:checked ~ .form__radio-field::after {
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start
+  }
+  .hero__img--special {
+    padding-bottom: 60px
   }
   .hero--primary .hero__inner {
     padding-top: 90px;
@@ -11659,6 +11763,10 @@ ol.listing__list .listing__box::before {
 .partners--secondary {
   padding: 0
 }
+.partners--gray {
+  padding: 0;
+  background: var(--gray-50)
+}
 .partners__inner > * {
   margin-bottom: var(--gap)
 }
@@ -11679,6 +11787,7 @@ ol.listing__list .listing__box::before {
 }
 .partners__slide {
   padding: 10px;
+  height: auto;
   box-shadow: 0 4px 15px 0 rgba(0,0,0,.25);
   background: #fff;
   border-radius: 10px;
@@ -11735,6 +11844,86 @@ ol.listing__list .listing__box::before {
   -webkit-flex-basis: 250px;
   -ms-flex-preferred-size: 250px;
   flex-basis: 250px
+}
+.partners__section {
+  height: 480px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: var(--gap);
+  overflow: hidden
+}
+.partners__info {
+  -webkit-flex-basis: 38%;
+  -ms-flex-preferred-size: 38%;
+  flex-basis: 38%
+}
+.partners__info .partners__title {
+  text-align: left
+}
+.partners__box {
+  max-width: 830px;
+  -webkit-flex-basis: 62%;
+  -ms-flex-preferred-size: 62%;
+  flex-basis: 62%;
+  padding-right: 30px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: var(--gap)
+}
+.partners__slider {
+  -webkit-animation: scrollUp 20s linear infinite;
+  animation: scrollUp 20s linear infinite
+}
+.partners__col:nth-child(2n) .partners__slider {
+  -webkit-animation: scrollDown 20s linear infinite;
+  animation: scrollDown 20s linear infinite
+}
+.partners__slider,
+.partners__track {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 32px
+}
+.partners__item {
+  width: 240px;
+  height: 134px;
+  padding: 4px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: var(--border-radius-10);
+  background: #fff;
+  box-shadow: 0 3.84px 14.4px 0 rgba(0,0,0,.25)
+}
+.partners__item > img,
+.partners__item picture {
+  width: 70%;
+  height: auto
+}
+.partners__carousel {
+  display: none
 }
 @media (max-width:1200px) {
   .partners__row {
@@ -11809,16 +11998,90 @@ ol.listing__list .listing__box::before {
   .partners {
     padding: var(--section-padding) 0
   }
+  .partners--gray,
   .partners--secondary {
     padding: 0
+  }
+}
+@media (max-width:1365px) {
+  .partners__section {
+    height: auto;
+    padding: 50px 0 30px;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: visible
+  }
+  .partners__box {
+    display: none
+  }
+  .partners__info {
+    -webkit-flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto
+  }
+  .partners__info .partners__title {
+    text-align: center
+  }
+  .partners__carousel {
+    max-width: 95%;
+    margin: 0 auto;
+    display: block
   }
 }
 @media (max-width:767px) {
   .partners {
     padding: 50px 0 38px
   }
+  .partners--gray,
   .partners--secondary {
     padding: 0
+  }
+  .partners__carousel {
+    max-width: 100%
+  }
+}
+@-webkit-keyframes scrollUp {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+  100% {
+    -webkit-transform: translateY(calc(-50% + 240px));
+    transform: translateY(calc(-50% + 240px))
+  }
+}
+@keyframes scrollUp {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+  100% {
+    -webkit-transform: translateY(calc(-50% + 240px));
+    transform: translateY(calc(-50% + 240px))
+  }
+}
+@-webkit-keyframes scrollDown {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+  100% {
+    -webkit-transform: translateY(calc(50% - 240px));
+    transform: translateY(calc(50% - 240px))
+  }
+}
+@keyframes scrollDown {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+  100% {
+    -webkit-transform: translateY(calc(50% - 240px));
+    transform: translateY(calc(50% - 240px))
   }
 }
 .numbers__main {
@@ -14015,15 +14278,16 @@ ol.listing__list .listing__box::before {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   gap: var(--gap-2)
 }
 .books__figure {
   --size: var(--gap-large);
   width: var(--size);
   height: var(--size);
+  margin-top: 10px;
   color: var(--accent);
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -17193,6 +17457,14 @@ ol.listing__list .listing__box::before {
   gap: 40px;
   transition: var(--transition)
 }
+.figures__link.is-active {
+  color: var(--accent);
+  background: #fff;
+  border-color: var(--accent)
+}
+.figures__link.is-active svg {
+  fill: var(--accent)
+}
 @media (hover:hover) {
   .figures__link:focus,
   .figures__link:hover {
@@ -17244,14 +17516,6 @@ ol.listing__list .listing__box::before {
   .figures__link {
     gap: 10px
   }
-  .figures__item.is-active .figures__link {
-    color: var(--accent);
-    background: #fff;
-    border-color: var(--accent)
-  }
-  .figures__item.is-active .figures__link svg {
-    fill: var(--accent)
-  }
   .figures__content {
     display: none
   }
@@ -17288,6 +17552,11 @@ ol.listing__list .listing__box::before {
   }
   .figures__svg {
     --size: 40px
+  }
+}
+@media (max-width:767px) {
+  .section--figures-desktop {
+    display: none
   }
 }
 .controls {
@@ -23039,6 +23308,17 @@ ol.listing__list .listing__box::before {
   -ms-flex-item-align: center;
   align-self: center
 }
+.intro__info--special {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center
+}
+.intro__info--special > * {
+  margin-bottom: var(--gap)
+}
+.intro__info--special > :last-child {
+  margin-bottom: 0
+}
 .intro__top {
   margin-bottom: 15px
 }
@@ -23135,6 +23415,19 @@ ol.listing__list .listing__box::before {
   --subscription-width: 500px;
   width: var(--subscription-width);
   max-width: var(--subscription-width)
+}
+.intro__img--special {
+  max-width: 100%;
+  width: 638px;
+  -webkit-flex-basis: 638px;
+  -ms-flex-preferred-size: 638px;
+  flex-basis: 638px;
+  margin-right: 30px
+}
+.intro__img--special img {
+  max-width: 100%;
+  -o-object-position: center;
+  object-position: center
 }
 .intro__specialists {
   -webkit-flex-grow: 1;
@@ -23824,6 +24117,34 @@ ol.listing__list .listing__box::before {
     font-size: 20px
   }
 }
+.release__listing {
+  list-style-type: none;
+  counter-reset: num;
+  width: 100%;
+  max-width: 800px
+}
+.release__listing > li {
+  position: relative
+}
+.release__listing > li::before {
+  content: counter(num);
+  counter-increment: num;
+  display: inline-block;
+  position: absolute
+}
+.release__listing > li:nth-child(-n+9)::before {
+  content: "0" counter(num)
+}
+.release__listing li {
+  padding: 20px 0 15px 55px;
+  border-bottom: 1px solid var(--gray-300)
+}
+.release__listing li::before {
+  font-size: 24px;
+  letter-spacing: var(--letter-spacing);
+  top: 13px;
+  left: 0
+}
 .release__notice {
   max-width: 800px
 }
@@ -23842,6 +24163,16 @@ ol.listing__list .listing__box::before {
   max-width: 125%;
   margin-top: -10%;
   margin-left: -5%
+}
+.release__img--magazine {
+  max-width: 38%
+}
+.release__img--magazine > img,
+.release__img--magazine picture {
+  width: 158%;
+  max-width: 158%;
+  margin-top: -6%;
+  margin-left: -40%
 }
 .release__features {
   width: calc(100% - var(--padding) * 2);
@@ -23903,12 +24234,16 @@ ol.listing__list .listing__box::before {
   text-align: center
 }
 .release__features-list {
-  display: grid;
-  grid-template-columns: repeat(5,1fr);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: var(--gap)
 }
 .release__features-list li {
   --square-size: 24px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   padding-left: calc(var(--square-size) + 10px);
   position: relative
 }
@@ -23921,6 +24256,9 @@ ol.listing__list .listing__box::before {
   height: var(--square-size);
   border-radius: var(--border-radius);
   background: var(--accent)
+}
+.release__features-list-notice {
+  font-size: var(--font-size)
 }
 @media (max-width:1900px) {
   .release__section {
@@ -23950,7 +24288,9 @@ ol.listing__list .listing__box::before {
     flex-direction: column
   }
   .release__features-list {
-    grid-template-columns: 1fr
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
   }
 }
 @media (max-width:767px) {
@@ -23979,6 +24319,12 @@ ol.listing__list .listing__box::before {
   .release__features-list li {
     --square-size: 16px;
     padding-left: calc(var(--square-size) + 5px)
+  }
+}
+@media (max-width:575px) {
+  .release__listing li {
+    padding-top: 15px;
+    padding-left: 45px
   }
 }
 .advert__main {
@@ -24186,6 +24532,131 @@ ol.listing__list .listing__box::before {
   }
   .discount__accent {
     min-width: 30px
+  }
+}
+.personal__inner {
+  padding: var(--gap);
+  background: var(--gray-50);
+  border-radius: var(--border-radius-15)
+}
+.personal__inner > * {
+  margin-bottom: var(--gap)
+}
+.personal__inner > :last-child {
+  margin-bottom: 0
+}
+.personal__section {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--gap-large);
+  color: var(--black)
+}
+.personal__box {
+  -webkit-flex-basis: 42.5%;
+  -ms-flex-preferred-size: 42.5%;
+  flex-basis: 42.5%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0
+}
+.personal__img {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0;
+  border-radius: var(--border-radius-15);
+  position: relative;
+  overflow: hidden
+}
+.personal__img iframe,
+.personal__img img,
+.personal__img picture,
+.personal__img video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  position: absolute;
+  inset: 0
+}
+.personal__info {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0;
+  -webkit-flex-basis: 760px;
+  -ms-flex-preferred-size: 760px;
+  flex-basis: 760px;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start
+}
+.personal__info > :last-child {
+  margin-top: auto
+}
+.personal__info > * {
+  margin-bottom: var(--gap)
+}
+.personal__info > :last-child {
+  margin-bottom: 0
+}
+.personal__list {
+  width: 100%
+}
+.personal__list > * {
+  margin-bottom: 6px
+}
+.personal__list > :last-child {
+  margin-bottom: 0
+}
+.personal__list > * {
+  padding-bottom: 5px
+}
+.personal__list > :last-child {
+  padding-bottom: 0
+}
+.personal__list > * {
+  border-bottom: 1px solid var(--gray-300)
+}
+.personal__list > :last-child {
+  border-bottom: 0
+}
+.personal__list > :last-child {
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--gray-300)
+}
+@media (max-width:1440px) {
+  .personal__section {
+    gap: var(--gap)
+  }
+}
+@media (max-width:991px) {
+  .personal__section {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  .personal__box,
+  .personal__info {
+    -webkit-flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto
+  }
+  .personal__img {
+    padding-bottom: 67%
+  }
+  .personal__title {
+    overflow-wrap: anywhere
+  }
+}
+@media (max-width:575px) {
+  .personal__inner {
+    padding: var(--gap) var(--gap-4)
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
