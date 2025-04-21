@@ -1,0 +1,161 @@
+include mixins/_partnersSwiper
+
+-
+   const partnersTrack01 = [
+      { 
+         img: 'images/partners/partners-01.png', 
+         alt: 'russian register' 
+      },
+      { 
+         img: 'images/partners/partners-02.png', 
+         alt: 'минпромторг России' 
+      },
+      { 
+         img: 'images/partners/partners-03.png', 
+         alt: 'bureau veritas' 
+      },
+      { 
+         img: 'images/partners/partners-04.png', 
+         alt: 'рст' 
+      },
+      { 
+         img: 'images/partners/partners-05.png', 
+         alt: 'академия' 
+      },
+      { 
+         img: 'images/partners/partners-06.png', 
+         alt: 'ростехсерт' 
+      },
+      { 
+         img: 'images/partners/partners-07.png', 
+         alt: 'рст росстандарт' 
+      },
+      { 
+         img: 'images/partners/partners-08.png', 
+         alt: 'ВОК' 
+      },
+      { 
+         img: 'images/partners/partners-09.png', 
+         alt: 'стандарты и качество' 
+      },
+   ]
+
+   const partnersTrack02 = [
+      { 
+         img: 'images/partners/partners-03.png', 
+         alt: 'bureau veritas' 
+      },
+      { 
+         img: 'images/partners/partners-04.png', 
+         alt: 'рст' 
+      },
+      { 
+         img: 'images/partners/partners-05.png', 
+         alt: 'академия' 
+      },
+      { 
+         img: 'images/partners/partners-06.png', 
+         alt: 'ростехсерт' 
+      },
+      { 
+         img: 'images/partners/partners-01.png', 
+         alt: 'russian register' 
+      },
+      { 
+         img: 'images/partners/partners-02.png', 
+         alt: 'минпромторг России' 
+      },
+      { 
+         img: 'images/partners/partners-07.png', 
+         alt: 'рст росстандарт' 
+      },
+      { 
+         img: 'images/partners/partners-08.png', 
+         alt: 'ВОК' 
+      },
+      { 
+         img: 'images/partners/partners-09.png', 
+         alt: 'стандарты и качество' 
+      },
+   ]
+
+   const partnersTrack03 = [
+      { 
+         img: 'images/partners/partners-06.png', 
+         alt: 'ростехсерт' 
+      },
+      { 
+         img: 'images/partners/partners-07.png', 
+         alt: 'рст росстандарт' 
+      },
+      { 
+         img: 'images/partners/partners-08.png', 
+         alt: 'ВОК' 
+      },
+      { 
+         img: 'images/partners/partners-09.png', 
+         alt: 'стандарты и качество' 
+      },
+      { 
+         img: 'images/partners/partners-01.png', 
+         alt: 'russian register' 
+      },
+      { 
+         img: 'images/partners/partners-02.png', 
+         alt: 'минпромторг России' 
+      },
+      { 
+         img: 'images/partners/partners-03.png', 
+         alt: 'bureau veritas' 
+      },
+      { 
+         img: 'images/partners/partners-04.png', 
+         alt: 'рст' 
+      },
+      { 
+         img: 'images/partners/partners-05.png', 
+         alt: 'академия' 
+      },
+   ]
+
+section.section.section--partners
+   .section__wrapper
+      .section__content
+         .partners.partners--gray
+            .partners__inner.container
+               .partners__section
+                  .partners__info
+                     h2.partners__title Наши партнеры, которые заказывают спецвыпуски
+                  .partners__box
+                     .partners__col
+                        .partners__slider
+                           .partners__track
+                              each partners in partnersTrack01
+                                 .partners__item
+                                    +picture-simple(partners.img, false, partners.title)
+                           .partners__track
+                              each partners in partnersTrack01
+                                 .partners__item
+                                    +picture-simple(partners.img, false, partners.title)
+                     .partners__col
+                        .partners__slider
+                           .partners__track
+                              each partners in partnersTrack02
+                                 .partners__item
+                                    +picture-simple(partners.img, false, partners.title)
+                           .partners__track
+                              each partners in partnersTrack02
+                                 .partners__item
+                                    +picture-simple(partners.img, false, partners.title)
+                     .partners__col
+                        .partners__slider
+                           .partners__track
+                              each partners in partnersTrack03
+                                 .partners__item
+                                    +picture-simple(partners.img, false, partners.title)
+                           .partners__track
+                              each partners in partnersTrack03
+                                 .partners__item
+                                    +picture-simple(partners.img, false, partners.title)
+                  .partners__carousel
+                     +partnersSwiper(partnersTrack01)
