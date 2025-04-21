@@ -65,12 +65,12 @@ include ../../mixins/_mixins
 section.section.section--figures
    .section__wrapper.container
       .section__content
-         .figures.figures--secondary
+         .figures.figures--secondary(data-category="figures")
             .figures__inner
                ul.figures__list
                   each figure, index in figures05
-                     li.figures__item(class=index === 0 ? "is-active" : "")
-                        a.figures__link(href="#")
+                     li.figures__item(class=index === 0 ? "is-active" : "", data-tab=`tab-${index + 1}`)
+                        a.figures__link(class=index === 0 ? "is-active" : "", href="#")
                            .figures__svg
                               svg
                                  use(href=`images/sprites/main.stack.svg#svg-collection-${(23 + index + 1).toString().padStart(2, '0')}`)

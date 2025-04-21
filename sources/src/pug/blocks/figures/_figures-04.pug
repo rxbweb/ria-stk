@@ -1,5 +1,5 @@
 include ../../mixins/_mixins
-include mixins/_figuresList
+include mixins/_figuresListToggle
 
 -
    const figures04 = [
@@ -44,7 +44,7 @@ include mixins/_figuresList
       },
    ]
 
-section.section.section--figures
+section.section.section--figures.section--figures-desktop
    .section__wrapper.container
       .section__header.section__header--border
          .section__header-row
@@ -53,4 +53,4 @@ section.section.section--figures
       .section__content
          .figures
             .figures__inner
-               +figuresList(figures04, 23)
+               +figuresListToggle(figures04, 23)
