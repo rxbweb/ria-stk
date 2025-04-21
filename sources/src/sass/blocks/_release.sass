@@ -28,6 +28,21 @@
       &-title
          @extend .title
          @include fluidFontSize(14px, 20px, 360px, 1920px, 16px)
+   &__listing
+      @include ol
+      width: 100%
+      max-width: 800px
+      li
+         padding: 20px 0 15px 55px
+         border-bottom: 1px solid var(--gray-300)
+         &::before
+            @extend .title
+            @extend .title--second
+            @extend .title--red
+            font-size: 24px
+            letter-spacing: var(--letter-spacing)
+            top: 13px
+            left: 0
    &__notice
       @extend .title
       @extend .title--second
@@ -43,6 +58,14 @@
          max-width: 125%
          margin-top: -10%
          margin-left: -5%
+      &--magazine
+         max-width: 38%
+         picture,
+         & > img
+            width: 158%
+            max-width: 158%
+            margin-top: -6%
+            margin-left: -40%
    &__features
       @extend .container
       width: calc(100% - var(--padding) * 2)
@@ -75,12 +98,12 @@
             background: rgba(177, 177, 177, 0.20)
             text-align: center
       &-list
-         display: grid
-         grid-template-columns: repeat(5, 1fr)
+         display: flex
          gap: var(--gap)
          li
-            --square-size: 24px
             @extend .fs-18
+            --square-size: 24px
+            flex: 1
             padding-left: calc(var(--square-size) + 10px)
             position: relative
             &::before
@@ -92,6 +115,8 @@
                height: var(--square-size)
                border-radius: var(--border-radius)
                background: var(--accent)
+         &-notice
+            font-size: var(--font-size)
    @media (max-width: 1900px)
       &__section
          align-items: center
@@ -110,7 +135,7 @@
          &-top
             flex-direction: column
          &-list
-            grid-template-columns: 1fr
+            flex-direction: column
    @include sm
       &__section
          flex-direction: column
@@ -129,3 +154,8 @@
             li
                --square-size: 16px
                padding-left: calc(var(--square-size) + 5px)
+   @include xs
+      &__listing
+         li
+            padding-top: 15px
+            padding-left: 45px
