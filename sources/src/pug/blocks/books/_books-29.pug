@@ -1,0 +1,111 @@
+include mixins/_booksList
+
+-
+   const books27 = [
+      {
+         img: 'images/books/books-57.jpg',
+         date: '2024 год',
+         title: 'Business Excellence',
+         buttons: {
+            download: true
+         }
+      },
+      {
+         img: 'images/books/books-58.jpg',
+         date: '2023 год',
+         title: 'Стандарты и качество',
+         buttons: {
+            download: true
+         }
+      },
+      {
+         img: 'images/books/books-59.jpg',
+         date: '2023 год',
+         title: 'МИР Измерений',
+         buttons: {
+            download: true
+         }
+      },
+      {
+         img: 'images/books/books-60.jpg',
+         date: '2022 год',
+         title: 'Стандарты и качество',
+         buttons: {
+            download: true
+         }
+      },
+      {
+         img: 'images/books/books-57.jpg',
+         date: '2024 год',
+         title: 'Business Excellence',
+         buttons: {
+            download: true
+         }
+      },
+      {
+         img: 'images/books/books-58.jpg',
+         date: '2023 год',
+         title: 'Стандарты и качество',
+         buttons: {
+            download: true
+         }
+      },
+      {
+         img: 'images/books/books-59.jpg',
+         date: '2023 год',
+         title: 'МИР Измерений',
+         buttons: {
+            download: true
+         }
+      },
+      {
+         img: 'images/books/books-60.jpg',
+         date: '2022 год',
+         title: 'Стандарты и качество',
+         buttons: {
+            download: true
+         }
+      },
+   ];
+
+section.section.section--books
+   .section__wrapper.container
+      .section__content
+         .books
+            .books__inner
+               .books__section
+                  .books__header
+                     h2.books__title Примеры спецвыпусков
+                  .books__content
+                     .books__swiper
+                        .books__swiper-slider
+                           .swiper-wrapper
+                              each book in books27
+                                 .swiper-slide
+                                    .books__item
+                                       .books__card
+                                          .books__box
+                                             +favorite-button()
+                                             .books__img
+                                                if book.img
+                                                   +picture(book.img, false, book.title, 380, 380)
+                                          .books__info
+                                             if book.date
+                                                p.books__text= book.date
+                                             if book.title
+                                                h3.books__name= book.title
+                                             if book.price || book.buttons
+                                                .books__bottom
+                                                   if book.price
+                                                      p.books__price= book.price
+                                                   if book.buttons
+                                                      .books__manage
+                                                         if book.buttons.download
+                                                            +button-outline('link', 'Скачать выпуск')
+                                                         if book.buttons.buy
+                                                            +button-icon('link', 'В корзину', 'button--slim', 'icon-cart')
+                                                         if book.buttons.basket
+                                                            +button-icon('link', 'В корзину', 'button--slim', 'icon-cart')
+                                                         if book.buttons.click
+                                                            +button-outline('link', 'Купить в 1 клик')
+                           +swiperControls()
