@@ -1,0 +1,214 @@
+.unit
+   --unit-content-width: 520px
+   --unit-table-width-1: 44%
+   --unit-table-width-2: 28%
+   --unit-table-width-3: 28%
+   --unit-main-gap: 15px
+   &__content
+      width: var(--unit-content-width)
+      position: absolute
+      left: 0
+      top: 0
+   &__img
+      width: 100%
+      padding: 10px
+      padding-bottom: calc(100% - 10px)
+      border-radius: 30px
+      overflow: hidden
+      position: relative
+      & > picture,
+      & > img
+         max-width: 80%
+         height: auto
+         position: absolute
+         top: 50%
+         left: 50%
+         transform: translate(-50%, -50%)
+         display: flex
+         justify-content: center
+         align-items: center
+   &__info
+      padding-left: calc(var(--gap-large) + var(--unit-content-width))
+      position: relative
+      @include margin-bottom(var(--gap))
+   &__name
+      @extend .title
+      @extend .title--fourth
+      padding-right: 40px
+   &__table
+      @include margin-bottom(var(--gap))
+      &-top
+         padding-bottom: var(--unit-main-gap)
+         margin-bottom: 0
+         display: flex
+         border-bottom: 1px solid #d9d9d9
+         & > *
+            padding-right: 10px
+            &:nth-child(1)
+               width: var(--unit-table-width-1)
+            &:nth-child(2)
+               width: var(--unit-table-width-2)
+            &:nth-child(3)
+               width: var(--unit-table-width-3)
+      &-plan
+         @extend .title
+         @extend .title--second
+         color: #47535E
+      &-main
+         & > *
+            padding: var(--unit-main-gap) 0
+            border-bottom: 1px solid #D9D9D9
+      &-package
+         display: flex
+         & > *
+            &:nth-child(1)
+               width: var(--unit-table-width-1)
+            &:nth-child(2)
+               width: var(--unit-table-width-2)
+            &:nth-child(3)
+               width: var(--unit-table-width-3)
+      &-name
+         @extend .title
+         @extend .title--second
+      &-description
+         @extend .title
+         @extend .title--sixth
+         @extend .title--red
+      &-label
+         cursor: pointer
+         &-box
+            @extend .title
+            @extend .title--second
+            padding: 10px
+            padding-left: 40px
+            display: block
+            letter-spacing: -0.72px
+            border: 1px solid transparent
+            border-radius: var(--border-radius)
+            position: relative
+            transition: var(--transition)
+            @include margin-bottom(3px)
+            @include hover()
+               border-color: var(--accent)
+         &-checkbox
+            --size: 20px
+            width: var(--size)
+            height: var(--size)
+            position: absolute
+            left: 10px
+            top: 16px
+            border-radius: 50%
+            border: 1px solid var(--accent)
+            &::after
+               --size: 14px
+               content: ''
+               width: var(--size)
+               height: var(--size)
+               position: absolute
+               left: 50%
+               top: 50%
+               transform: translate(-50%, -50%)
+               background: var(--accent)
+               border-radius: 50%
+               opacity: 0
+               transition: var(--transition)
+         &-current
+            display: block
+         &-old
+            display: block
+            font-weight: 300
+            text-decoration-line: line-through
+            color: #727171
+         input
+            @extend .visually-hidden
+            &:checked
+               & ~ .unit__table-label-box
+                  border-color: var(--accent)
+                  background: #F1F1F1
+                  .unit__table-label-checkbox
+                     &::after
+                        opacity: 1
+      &-bottom
+         display: flex
+         justify-content: space-between
+         align-items: center
+         flex-wrap: wrap
+         gap: 20px
+      &-promotion
+         padding: 20px 25px
+         flex-basis: 412px
+         border-radius: var(--border-radius-10)
+         background: rgba(173, 173, 173, 0.10)
+         color: var(--black)
+         font-size: 16px
+         &-notice
+            @extend .title
+            @extend .title--second
+            @extend .title--red
+            letter-spacing: -0.72px
+      &-manage
+         flex-basis: 348px
+         flex-shrink: 0
+         display: flex
+         flex-direction: column
+   @include md
+      --unit-content-width: 400px
+   @include ms
+      .modal &
+         margin-bottom: 0
+      &__info
+         padding-left: 0
+      &__content
+         position: static
+      &__table
+         &-bottom
+            flex-direction: column
+         &-promotion
+            width: 100%
+            padding: 15px
+            flex-basis: auto
+         &-manage
+            width: 100%
+            flex-basis: auto
+            order: 1
+   @include xs
+      --unit-table-width-1: 34%
+      --unit-table-width-2: 33%
+      --unit-table-width-3: 33%
+      &__name
+         font-size: 20px
+      &__content
+         width: 100%
+         border-radius: 15px
+      &__img
+         border-radius: 15px
+      &__table
+         &-main
+            padding-top: 15px
+            border-bottom: 1px solid #d9d9d9
+            & > *
+               padding-top: 0
+               border: none
+         &-name,
+         &-description
+            text-transform: none
+         &-name
+            font-size: 14px
+            line-height: 120%
+         &-description
+            font-size: 10px
+         &-label
+            &-box
+               padding: 10px
+               padding-top: 34px
+               font-size: 14px
+               background: #f1f1f1
+            &-checkbox
+               --size: 14px
+               top: 10px
+               left: 10px
+               &::after
+                  --size: 10px
+         &-top,
+         &-package
+            gap: 24px

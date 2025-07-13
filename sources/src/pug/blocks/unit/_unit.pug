@@ -1,0 +1,96 @@
+include ../../mixins/_mixins
+
+-
+   const unitList = [
+      {
+         name: 'Печатная',
+         description: '(комплект с business Excellence)',
+         labelFirst: {
+            priceCurrent: '47 640 ₽',
+            priceOld: '47 640 ₽',
+         },
+         labelSecond: {
+            priceCurrent: '71 400 ₽',
+            priceOld: '47 640 ₽',
+         },
+      },
+      {
+         name: 'Электронная',
+         description: '(комплект с business Excellence)',
+         labelFirst: {
+            priceCurrent: '47 640 ₽',
+            priceOld: '47 640 ₽',
+         },
+         labelSecond: {
+            priceCurrent: '71 400 ₽',
+            priceOld: '47 640 ₽',
+         },
+      },
+      {
+         name: 'Электронная',
+         labelFirst: {
+            priceCurrent: '47 640 ₽',
+            priceOld: '47 640 ₽',
+         },
+         labelSecond: {
+            priceCurrent: '71 400 ₽',
+            priceOld: '47 640 ₽',
+         },
+      },
+      {
+         name: 'Печатная + электронная',
+         description: '(комплект с business Excellence)',
+         labelFirst: {
+            priceCurrent: '47 640 ₽',
+            priceOld: '47 640 ₽',
+         },
+         labelSecond: {
+            priceCurrent: '71 400 ₽',
+            priceOld: '47 640 ₽',
+         },
+      },
+   ]
+
+.unit
+   .unit__inner
+      .unit__main
+         .unit__info
+            .unit__top
+               h2.unit__name Стандарты и качество
+            .unit__content
+               .unit__img
+                  .bg-image
+                     +picture("images/unit/unit-bg.jpg", false, "фоновая картинка", 520, 520)
+                  +picture("images/unit/unit.png", false, "Стандарты и качество", 240, 340)
+            .unit__table
+               .unit__table-top
+                  p.unit__table-plan варианты подписки
+                  p.unit__table-plan 6 месяцев
+                  p.unit__table-plan 12 месяцев
+               .unit__table-main
+                  each unit in unitList
+                     .unit__table-package
+                        .unit__table-info
+                           h3.unit__table-name= unit.name
+                           if unit.description
+                              p.unit__table-description= unit.description
+                        .unit__table-controls
+                           label.unit__table-label
+                              input(type="radio" name="unit")
+                              span.unit__table-label-box
+                                 span.unit__table-label-checkbox
+                                 span.unit__table-label-current= unit.labelFirst.priceCurrent
+                                 span.unit__table-label-old= unit.labelFirst.priceOld
+                        .unit__table-controls
+                           label.unit__table-label
+                              input(type="radio" name="unit")
+                              span.unit__table-label-box
+                                 span.unit__table-label-checkbox
+                                 span.unit__table-label-current= unit.labelSecond.priceCurrent
+                                 span.unit__table-label-old= unit.labelSecond.priceOld
+               .unit__table-bottom
+                  .unit__table-promotion
+                     p Акция
+                     p.unit__table-promotion-notice Подписывайтесь на 12 номеров — платите&nbsp;за 9!
+                  .unit__table-manage
+                     +button-icon('link', 'В корзину', 'button--slim button--basket', 'icon-cart')
