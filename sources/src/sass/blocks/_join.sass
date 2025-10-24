@@ -18,10 +18,20 @@
       &-row
          display: flex
          gap: 10px
+         position: relative
          input
             min-height: 46px
             height: auto
             flex-grow: 1
+            &.error ~ .join__form-error
+               display: block
+      &-error
+         position: absolute
+         top: calc(100% + 2px)
+         left: 0
+         font-size: 12px
+         color: var(--accent)
+         display: none
    @include xl
       &__main
          gap: var(--gap)

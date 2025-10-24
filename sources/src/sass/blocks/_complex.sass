@@ -1,0 +1,110 @@
+.complex
+   --complex-gap: 15px
+   &__inner
+      @include margin-bottom(30px)
+   &__top
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      gap: 30px
+   &__title
+      @extend .title
+      @extend .title--fourth
+   &__description
+      @extend .title
+      @extend .title--second
+      @extend .title--red
+   &__list
+      margin-bottom: var(--gap-large)
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: var(--gap)
+   &__box
+      display: block
+      overflow: hidden
+   &__img
+      @include img-cover(104%, var(--border-radius-15))
+   &__info
+      padding-top: 24px
+      @include margin-bottom(var(--complex-gap))
+   &__controls
+      @include margin-bottom(var(--complex-gap))
+   &__name
+      @extend .title
+      @extend .title--second
+      @extend .title--red
+   &__tabs
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      gap: 10px 20px
+      &-item
+         position: relative
+         cursor: pointer
+         flex-grow: 1
+         &:hover,
+         &:focus
+            .complex__tabs-btn
+               border-color: var(--accent)
+               color: var(--accent)
+               background: #FFEFEF
+         input
+            width: 100%
+            height: 100%
+            position: absolute
+            inset: 0
+            opacity: 0
+            cursor: pointer
+      &-btn
+         width: 100%
+         padding: 12px 12px 11px
+         display: block
+         text-align: center
+         font-size: 14px
+         color: var(--black)
+         border-radius: var(--border-radius)
+         border: 1px solid transparent
+         background: #F2F2F2
+         transition: var(--transition)
+         &.is-active
+            border-color: var(--accent)
+            color: var(--accent)
+            background: #FFEFEF
+   &__bottom
+      display: flex
+      flex-direction: column
+      gap: var(--complex-gap)
+   &__controls
+      & > input[type="radio"]
+         @extend .visually-hidden
+   &__cost
+      &-plan
+         @include margin-bottom(var(--complex-gap))
+         display: none
+         &.is-active
+            display: block
+            animation: fadeIn 0.4s ease forwards
+      &-item
+         display: flex
+         justify-content: space-between
+         align-items: center
+         gap: 10px
+      &-price
+         @extend .title
+         @extend .title--red
+         font-size: 20px
+         color: var(--accent)
+         letter-spacing: -0.6px
+         text-transform: uppercase
+         white-space: nowrap
+         &--old
+            text-decoration-line: line-through
+            color: #47535E
+   @include ms
+      display: none
+
+@keyframes fadeIn
+   from
+      opacity: 0
+   to
+      opacity: 1

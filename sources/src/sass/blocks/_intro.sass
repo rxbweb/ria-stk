@@ -31,6 +31,22 @@
       &--special
          @include margin-bottom(var(--gap))
          align-self: center
+   &__list
+      @extend .fs-24
+      color: var(--black)
+      @include margin-bottom(4px)
+      li
+         padding-left: 36px
+         position: relative
+         &::before
+            content: ''
+            position: absolute
+            left: 12px
+            top: 12px
+            width: 4px
+            height: 4px
+            border-radius: 50%
+            background: var(--black)
    &__top
       margin-bottom: 15px
    &__accent
@@ -284,6 +300,12 @@
          &--macbook
             padding: 20px
             padding-top: 40px
+      &__list
+         li
+            padding-left: 24px
+            &::before
+               top: 9px
+               left: 10px
    @include xs
       &__info
          padding: 30px var(--padding)
@@ -291,3 +313,5 @@
          @include margin-bottom(15px)
       &__note
          padding: 10px
+      &__list
+         font-size: 16px

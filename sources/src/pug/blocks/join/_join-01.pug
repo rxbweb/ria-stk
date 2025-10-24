@@ -8,7 +8,8 @@ section.section.section--join
                .join__info
                   h2.join__title Как оформить подписку?
                   p Очень просто! Внесите свой электронный адрес в поле «Ваш E-mail» и нажмите кнопку.
-               form.join__form(action="#")
+               form.join__form(action="#" data-validate-form)
                   .join__form-row
-                     input(type="email" placeholder="Ваш E-mail")
-                     +button-icon('link', 'Подписаться')
+                     input(type="email" name="email" placeholder="Ваш E-mail" required)
+                     span.join__form-error Неправильное поле
+                     +button-icon('button', 'Подписаться')

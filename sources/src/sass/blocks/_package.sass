@@ -1,0 +1,76 @@
+.package
+   &__inner
+      @include margin-bottom(30px)
+   &__list
+      display: grid
+      grid-template-columns: repeat(5, 1fr)
+      gap: 20px
+   &__title
+      @extend .title
+      @extend .title--fourth
+   &__img
+      @include img-cover(100%)
+   &__info
+      padding-top: 16px
+      @include margin-bottom(6px)
+   &__name
+      @extend .title
+      font-size: 16px
+   &__table
+      @extend .title
+      font-size: 14px
+      @include margin-bottom(5px)
+      &-header
+         padding: 2px 0
+         font-size: 15px
+         color: var(--accent)
+         background: #F4F4F4
+         border-top: 1px solid #D9D9D9
+         border-bottom: 1px solid #D9D9D9
+      &-col
+         display: grid
+         grid-template-columns: 32% 31% 31%
+         gap: 10px
+         justify-content: space-between
+         overflow: hidden
+      &-manage
+         display: flex
+         align-items: flex-start
+         gap: 4px
+         cursor: pointer
+         input[type="radio"]
+            @extend .visually-hidden
+            &:checked
+               & ~ .package__table-checkbox::after
+                  opacity: 1
+      &-checkbox
+         --size: 10px
+         margin-top: 4px
+         width: var(--size)
+         height: var(--size)
+         border: 1px solid var(--accent)
+         border-radius: 50%
+         flex-shrink: 0
+         position: relative
+         &::after
+            --size: 5px
+            content: ''
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+            width: var(--size)
+            height: var(--size)
+            border-radius: 50%
+            background: var(--accent)
+            opacity: 0
+      &-prices
+         white-space: nowrap
+   @media (max-width: 1500px)
+      &__list
+         grid-template-columns: repeat(4, 1fr)
+   @include md
+      &__list
+         grid-template-columns: repeat(3, 1fr)
+   @include ms
+      display: none

@@ -1,5 +1,21 @@
 include ../../mixins/_mixins
 
+-
+   const choiceList = [
+      {
+         name: 'Печатная',
+         text: 'Подписка на бумажную версию позволит всегда иметь журнал под рукой вне зависимости от наличия гаджетов и интернета.',
+      },
+      {
+         name: 'Электронная',
+         text: 'Подписка на бумажную версию позволит всегда иметь журнал под рукой вне зависимости от наличия гаджетов и интернета.',
+      },
+      {
+         name: 'Мобильная',
+         text: 'Подписка на бумажную версию позволит всегда иметь журнал под рукой вне зависимости от наличия гаджетов и интернета.',
+      },
+   ]
+
 section.section.section--choice
    .section__wrapper.container
       .section__header.section__header--border
@@ -14,14 +30,9 @@ section.section.section--choice
                         +picture("images/choice/choice-01.jpg", false, "Картинка", 380, 440)
                   .choice__info
                      ul.choice__list
-                        li.choice__item
-                           p.choice__name Печатная
-                           p.choice__text Подписка на бумажную версию позволит всегда иметь журнал под рукой вне зависимости от наличия гаджетов и интернета.
-                        li.choice__item
-                           p.choice__name Электронная
-                           p.choice__text Подписка на электронную версию делает журнал доступным для подписчиков почти сразу после сдачи в печать.
-                        li.choice__item
-                           p.choice__name Мобильная
-                           p.choice__text Удобна для тех, кто часто бывает в дороге. Чтобы получить доступ к журналам, вам нужен только гаджет и интернет.
+                        each choice in choiceList
+                           li.choice__item
+                              p.choice__name= choice.name
+                              p.choice__text= choice.text
                      .choice__bottom
                         +button-icon('link', 'Подробнее')

@@ -1,0 +1,64 @@
+include ../../mixins/_mixins
+
+-
+   const packageList = [
+      {
+         img: 'images/package/package-01.jpg',
+         name: 'Методы менеджмента качества',
+      },
+      {
+         img: 'images/package/package-02.jpg',
+         name: 'Контроль качества продукции',
+      },
+      {
+         img: 'images/package/package-03.jpg',
+         name: 'Мир измерений',
+      },
+      {
+         img: 'images/package/package-04.jpg',
+         name: 'Business excellence',
+      },
+      {
+         img: 'images/package/package-05.jpg',
+         name: 'Менеджмент качества в медицине',
+      },
+   ]
+
+mixin packageTableManage()
+   label.package__table-manage
+      input(type="radio" name="package")
+      .package__table-checkbox
+      .package__table-prices
+         p.package__table-current 71 400 ₽
+         p.package__table-old 99 640 ₽
+
+mixin packageTableHeader()
+   .package__table-col.package__table-header
+      p.package__table-title Версия
+      p.package__table-title 6 мес.
+      p.package__table-title 12 мес.
+
+mixin packageTableCol(title)
+   .package__table-col
+      p.package__table-title= title
+      +packageTableManage
+      +packageTableManage
+
+.package
+   .package__inner
+      .package__top
+         h2.package__title Соберите свой комплект
+      ul.package__list
+         each package in packageList
+            li.package__item
+               .package__box
+                  .package__img
+                     +picture(package.img, false, package.name, 268, 268)
+                  .package__info
+                     .package__name= package.name
+                     .package__table
+                        +packageTableHeader()
+                        +packageTableCol('Печатная')
+                        +packageTableCol('Электронная')
+                        +packageTableCol('Печатная + электронная')
+      include ../notice/_notice-01

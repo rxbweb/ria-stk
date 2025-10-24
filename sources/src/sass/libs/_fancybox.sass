@@ -1,4 +1,9 @@
 .fancybox
+   &__content
+      .f-button.is-close-btn
+         @include hover()
+            background: none
+            color: var(--accent)
    &__caption
       color: #fff
       @extend .title
@@ -8,3 +13,23 @@
          color: #fff
       &-text
          font-size: 12px
+   &__slide
+      padding: var(--padding)
+      .is-close-btn
+         --position-x: 40px
+         --position-y: 40px
+         --size: 40px
+         width: var(--size)
+         height: var(--size)
+         right: var(--position-x) !important
+         top: var(--position-y) !important
+         background: none
+         color: var(--accent)
+         svg
+            width: 100%
+            height: auto
+         @include ms
+            --size: 30px
+         @include sm
+            --position-x: 15px
+            --position-y: 24px

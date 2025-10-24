@@ -39,7 +39,6 @@
       border-radius: 15px
       background: var(--gray-bg)
       box-shadow: none
-      overflow: hidden
       & > *
          padding: 40px
          &:not(:last-child)
@@ -200,8 +199,20 @@
          align-items: center
          color: var(--gray-500)
          position: relative
+         cursor: pointer
          &-text
+            width: 350px
             display: none
+            position: absolute
+            top: -88%
+            right: 0
+            font-size: 12px
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+            text-align: right
+            &.is-active
+               display: block
    &__caption
       @extend .title
       @include fluidFontSize(20px, 24px, 360px, 1920px, 24px)

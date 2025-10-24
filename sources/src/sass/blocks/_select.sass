@@ -1,6 +1,7 @@
 .select
    color: var(--black)
    position: relative
+   z-index: var(--z-index-main)
    &--wide
       min-width: 180px
       .select
@@ -79,7 +80,7 @@
       top: calc(100% - 1px)
       left: 50%
       transform: translateX(-50%)
-      z-index: var(--z-index)
+      z-index: var(--z-index-10)
       user-select: none
       @include margin-bottom(5px)
       .select--secondary &

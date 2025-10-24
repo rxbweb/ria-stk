@@ -29,10 +29,14 @@ section.section.section--listing
                      h2.listing__title Отзывы
                   .listing__content
                      ul.listing__list.listing__list--5
-                        each listing in listings08
+                        each listing, index in listings08
                            li.listing__item
                               .listing__box
                                  p.listing__company=listing.company
                                  p.listing__name=listing.name
                                  p.listing__description=listing.text
-                                 +button-outline('link', 'Показать полностью')
+                                 a.button.button--outline(href=`#modal-review-${index + 1}` data-fancybox)
+                                    span Показать полностью
+                                    span.button__icon
+                                       svg.svg-icon-arrow-right(width="17", height="17")
+                                          use(xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right")

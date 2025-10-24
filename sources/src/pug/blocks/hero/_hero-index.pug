@@ -26,10 +26,6 @@ include ../../mixins/_mixins
          src: "images/hero/hero-slider-06.png",
          title: "МКМ"
       },
-      {
-         src: "images/hero/hero-slider-06.png",
-         title: "МКМ"
-      }
    ]
 
 section.section.section--hero.section--padding-none
@@ -49,7 +45,14 @@ section.section.section--hero.section--padding-none
                                     .hero__text
                                        p РИА «Стандарты и качество» — лидер рынка профессиональных периодических изданий для специалистов в области технического регулирования, стандартизации, обеспечения единства измерений и управления качеством, организатор деловых мероприятий, информационно-просветительский центр Всероссийской организации качества.
                                     .hero__bottom
-                                       +button-icon('link', 'Узнать больше')
+                                       <a class="button" href="#modal-success" data-fancybox>
+                                          <span>Узнать больше</span>
+                                          <span class="button__icon">
+                                             <svg class="svg-icon-arrow-right" width="17" height="17">
+                                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                             </svg>
+                                          </span>
+                                       </a>
                                  .hero__content
                                     .hero__books
                                        .hero__books-inner

@@ -5,6 +5,15 @@
       @extend .two-col
       padding-bottom: var(--gap)
       border-bottom: 1px solid var(--gray-300)
+      &--second
+         padding-bottom: 0
+         border-bottom: none
+         .discount
+            &__item
+               gap: 10px
+   &__info,
+   &__content
+      @include margin-bottom(var(--gap))
    &__title
       @extend .title
       @include fluidFontSize(20px, 40px, 360px, 1920px, 32px)

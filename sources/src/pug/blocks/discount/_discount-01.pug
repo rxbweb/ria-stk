@@ -1,5 +1,57 @@
 include ../../mixins/_mixins
 
+-
+   const discountList01 = [
+      {
+         accent: '5%',
+         text: 'при подписке на два наименования журналов',
+      },
+      {
+         accent: '10%',
+         text: 'при подписке на три и более наименования журналов',
+      },
+      {
+         accent: '15%',
+         text: 'образовательным учреждениям, а также студентам, аспирантам и преподавателям',
+      },
+      {
+         accent: '15%',
+         text: 'постоянным подписчикам журналов, оформлявшим подписку в издательстве в течение последних трех лет подряд, а также подписчикам, документально подтвердившим факт подписки в указанные годы через подписные агентства или «Почту России»',
+      },
+      {
+         accent: '50%',
+         text: 'на электронную версию журнала при одновременной подписке на печатную и электронную версии',
+      },
+   ]
+
+   const discountList02 = [
+      {
+         accent: '40%',
+         text: 'На второй экземпляр',
+      },
+      {
+         accent: '60%',
+         text: 'На третий экземпляр',
+      },
+      {
+         accent: '75%',
+         text: 'На четвертый экземпляр',
+      },
+   ]
+
+   const discountList03 = [
+      {
+         accent: 'Скидки не суммируются.',
+      },
+   ]
+
+mixin discountItem(discount)
+   li.discount__item
+      if discount.accent
+         p.discount__accent= discount.accent
+      if discount.text
+         p.discount__text= discount.text
+
 section.section.section--discount
    .section__wrapper.container
       .section__header.section__header--border
@@ -14,39 +66,19 @@ section.section.section--discount
                         h3.discount__title При оформлении подписки на год в издательстве предоставляются скидки:
                      .discount__content
                         ul.discount__list
-                           li.discount__item
-                              p.discount__accent 5%
-                              p.discount__text при подписке на два наименования журналов
-                           li.discount__item
-                              p.discount__accent 10%
-                              p.discount__text при подписке на три и более наименования журналов
-                           li.discount__item
-                              p.discount__accent 15%
-                              p.discount__text образовательным учреждениям, а также студентам, аспирантам и преподавателям
-                           li.discount__item
-                              p.discount__accent 15%
-                              p.discount__text постоянным подписчикам журналов, оформлявшим подписку в издательстве в течение последних трех лет подряд, а также подписчикам, документально подтвердившим факт подписки в указанные годы через подписные агентства или «Почту России»
-                           li.discount__item
-                              p.discount__accent 50%
-                              p.discount__text на электронную версию журнала при одновременной подписке на печатную и электронную версии
+                           each discount in discountList01
+                              +discountItem(discount)
                   .discount__section
                      .discount__info
                         h3.discount__title При подписке на два и более экземпляра журнала действует специальное предложение. Ваша выгода при подписке:
                      .discount__content
                         ul.discount__list
-                           li.discount__item
-                              p.discount__accent 40%
-                              p.discount__text На второй экземпляр
-                           li.discount__item
-                              p.discount__accent 60%
-                              p.discount__text На третий экземпляр
-                           li.discount__item
-                              p.discount__accent 75%
-                              p.discount__text На четвертый экземпляр
+                           each discount in discountList02
+                              +discountItem(discount)
                   .discount__section
                      .discount__info
                         h3.discount__title При подписке на электронную версию журнала: создание личного кабинета для каждого сотрудника.
                      .discount__content
                         ul.discount__list
-                           li.discount__item
-                              p.discount__accent Скидки не суммируются.
+                           each discount in discountList02
+                              +discountItem(discount)

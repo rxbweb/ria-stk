@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Подписка</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicons/android-chrome-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/manifest.json">
+    <link rel="yandex-tableau-widget" href="images/favicons/yandex-browser-manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/pragmatica/pragmatica-bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswald-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__container container">
+          <div class="header__top"><a class="header__logo" href="/"><img class="header__logo-main" src="images/icons/logo.svg" alt="логотип" width="178" height="50"><img class="header__logo-vok" src="images/icons/vok.png" alt="вок" width="48" height="48"></a>
+            <div class="header__manage">
+              <div class="header__search search">
+                <button class="search__button" aria-label="кнопка поиска">
+                  <svg width="26" height="26">
+                    <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                  </svg>
+                </button>
+                <input class="search__input" type="text" placeholder="Искать....">
+                <div class="search__select">
+                      <div class="select">
+                        <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                              <svg class="svg-icon-arrow-down" width="16" height="16">
+                                <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                              </svg>
+                        </button>
+                        <div class="select__list">
+                          <button class="select__item is-active">Везде</button>
+                          <button class="select__item">По журналам</button>
+                          <button class="select__item">По книгам</button>
+                          <button class="select__item">По статьям</button>
+                          <button class="select__item">По новостям</button>
+                          <button class="select__item">По мероприятиям</button>
+                        </div>
+                      </div>
+                </div>
+              </div>
+                  <div class="select select--lang">
+                    <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                          <svg class="svg-icon-arrow-down" width="16" height="16">
+                            <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                          </svg>
+                    </button>
+                    <div class="select__list">
+                      <button class="select__item is-active">RU</button>
+                      <button class="select__item">EN</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="header__socials socials">
+              <div class="socials__list socials__list--first"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
+              <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+            </div>
+            <div class="header__controls">
+              <div class="header__basket"><a class="header__button" href="account-basket-01.html">
+                      <svg class="svg-icon-cart" width="22" height="22">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                      </svg></a>
+                <div class="header__basket-amount">99</div>
+              </div><a class="header__favorite" href="account-favorites.html">
+                    <svg class="svg-icon-heart" width="26" height="26">
+                      <use xlink:href="images/sprites/main.stack.svg#svg-icon-heart"></use>
+                    </svg></a>
+              <div class="header__login">
+                <div class="header__login-btn">
+                      <svg class="svg-icon-user" width="20" height="20">
+                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-user"></use>
+                      </svg><span class="header__login-text">Войти</span>
+                </div>
+              </div><a class="header__toggle" href="#" aria-label="открыть меню">
+                <div class="header__toggle-icon"><span></span></div></a>
+            </div>
+          </div>
+          <div class="header__bottom">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="is-icon" href="subscription.html">
+                    <svg width="26" height="26">
+                      <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
+                    </svg><span>Подписка</span></a></li>
+                <li class="header__nav-item"><a href="magazines.html">Журналы</a></li>
+                <li class="header__nav-item"><a href="special.html">Спецвыпуски</a></li>
+                <li class="header__nav-item"><a href="library.html">Электронная библиотека</a></li>
+                <li class="header__nav-item"><a href="abonement.html">Абонентский доступ</a></li>
+                <li class="header__nav-item"><a href="services.html">Услуги</a></li>
+                <li class="header__nav-item"><a href="events.html">Мероприятия</a></li>
+                <li class="header__nav-item"><a href="about.html">О нас</a></li>
+                <li class="header__nav-item"><a href="feedback.html">Контакты</a></li>
+              </ul>
+            </nav>
+            <button class="header__burger" aria-label="открыть дополнительное меню"><span></span><span></span><span></span></button>
+          </div>
+          <div class="header__box">
+            <ul class="header__box-nav"></ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="menu">
+      <div class="menu__inner">
+        <div class="menu__container container">
+          <div class="menu__manage">
+            <div class="menu__search search">
+              <button class="search__button" aria-label="кнопка поиска">
+                <svg width="26" height="26">
+                  <use href="images/sprites/main.stack.svg#svg-icon-loop"></use>
+                </svg>
+              </button>
+              <input class="search__input" type="text" placeholder="Искать....">
+              <div class="search__select">
+                    <div class="select">
+                      <button class="select__active is-selected"><span class="select__active-text">Везде</span>
+                            <svg class="svg-icon-arrow-down" width="16" height="16">
+                              <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                            </svg>
+                      </button>
+                      <div class="select__list">
+                        <button class="select__item is-active">Везде</button>
+                        <button class="select__item">По журналам</button>
+                        <button class="select__item">По книгам</button>
+                        <button class="select__item">По статьям</button>
+                        <button class="select__item">По новостям</button>
+                        <button class="select__item">По мероприятиям</button>
+                      </div>
+                    </div>
+              </div>
+            </div>
+                <div class="select select--lang">
+                  <button class="select__active is-selected"><span class="select__active-text">RU</span>
+                        <svg class="svg-icon-arrow-down" width="16" height="16">
+                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-down"></use>
+                        </svg>
+                  </button>
+                  <div class="select__list">
+                    <button class="select__item is-active">RU</button>
+                    <button class="select__item">EN</button>
+                  </div>
+                </div>
+          </div>
+          <nav class="menu__nav">
+            <ul class="menu__nav-list">
+              <li><a class="is-icon" href="subscription.html">
+                  <svg width="22" height="22">
+                    <use href="images/sprites/main.stack.svg#svg-icon-text"></use>
+                  </svg><span>Подписка</span></a></li>
+              <li><a href="magazines.html">Журналы</a></li>
+              <li><a href="special.html">Спецвыпуски</a></li>
+              <li><a href="library.html">Электронная библиотека</a></li>
+              <li><a href="abonement.html">Абонементный доступ</a></li>
+              <li><a href="services.html">Услуги</a></li>
+              <li><a href="event.html">Мероприятия</a></li>
+              <li><a href="about.html">О нас</a></li>
+              <li><a href="feedback.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="menu__logo"><img src="images/icons/vok.png" alt="вок" width="48" height="48"></div>
+          <div class="menu__socials socials">
+            <div class="socials__list"><a class="socials__link" href="#"><img src="images/icons/socials-vk.svg" alt="vkontakte" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-tg.svg" alt="telegram" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-yt.svg" alt="youtube" width="26" height="26"></a><a class="socials__link" href="#"><img src="images/icons/socials-dzen.svg" alt="dzen" width="26" height="26"></a></div>
+            <div class="socials__list socials__list--second"><a class="socials__link" href="mailto:editor_site@mirq.ru"><img src="images/icons/socials-mail.svg" alt="mail" width="26" height="26"><span>editor_site@mirq.ru</span></a><a class="socials__link" href="tel:+74957716652"><img src="images/icons/socials-phone.svg" alt="phone" width="26" height="26"><span>+7 (495) 771 6652</span></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <section class="section section--intro">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="intro">
+              <div class="bg-image">
+                      <picture>
+                        <source srcset="images/intro/intro-bg-mob.webp" media="(max-width: 575px)" type="image/webp">
+                        <source srcset="images/intro/intro-bg-mob.jpg" media="(max-width: 575px)">
+                        <source srcset="images/intro/intro-bg.webp"><img src="images/intro/intro-bg.jpg" alt="фоновая картинка" width="1640" height="512">
+                      </picture>
+              </div>
+              <div class="intro__main">
+                <div class="intro__info intro__info--third">
+                  <h1 class="intro__title">Ловите выгоду!</h1>
+                  <ul class="intro__list">
+                    <li>Подписывайтесь на год и экономьте до 25% за каждый журнал.</li>
+                    <li>Выбирайте комплект журналов и экономьте еще до 15%.</li>
+                  </ul>
+                </div>
+                <div class="intro__img">
+                        <picture>
+                          <source srcset="images/intro/intro-01-mob.webp" media="(max-width: 575px)" type="image/webp">
+                          <source srcset="images/intro/intro-01-mob.png" media="(max-width: 575px)">
+                          <source srcset="images/intro/intro-01.webp"><img src="images/intro/intro-01.png" alt="Картинка" width="795" height="795">
+                        </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--journals">
+        <div class="section__wrapper container">
+          <div class="section__header section__header--border">
+            <div class="section__header-row">
+              <h2 class="section__header-title">Оформите подписку</h2>
+              <p class="section__header-description">Если у вас возникли трудности при оформлении подписки, свяжитесь с менеджером отдела продаж: +7 (495) 771 6652, доб. 142, 143 или на e-mail: podpiska@mirq.ru</p>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="journals">
+              <div class="journals__inner">
+                <ul class="journals__list">
+                  <li class="journals__item">
+                    <div class="journals__top">
+                      <div class="journals__img">
+                              <picture class="lazyload">
+                                <source srcset="images/icons/empty.png" data-srcset="images/journals/journals-01.webp"><img src="images/icons/empty.png" data-src="images/journals/journals-01.jpg" alt="стандарты и качество" width="240" height="340">
+                              </picture>
+                      </div>
+                    </div>
+                    <div class="journals__info">
+                      <h3 class="journals__name">стандарты и качество</h3><a class="button" href="#modal-product" data-fancybox><span>Подписаться</span><span class="button__icon">
+                                <svg class="svg-icon-arrow-right" width="17" height="17">
+                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                </svg></span></a>
+                    </div>
+                  </li>
+                  <li class="journals__item">
+                    <div class="journals__top">
+                      <div class="journals__img">
+                              <picture class="lazyload">
+                                <source srcset="images/icons/empty.png" data-srcset="images/journals/journals-02.webp"><img src="images/icons/empty.png" data-src="images/journals/journals-02.jpg" alt="Менеджмент качества" width="240" height="340">
+                              </picture>
+                      </div>
+                    </div>
+                    <div class="journals__info">
+                      <h3 class="journals__name">Менеджмент качества</h3><a class="button" href="#modal-product" data-fancybox><span>Подписаться</span><span class="button__icon">
+                                <svg class="svg-icon-arrow-right" width="17" height="17">
+                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                </svg></span></a>
+                    </div>
+                  </li>
+                  <li class="journals__item">
+                    <div class="journals__top">
+                      <div class="journals__img">
+                              <picture class="lazyload">
+                                <source srcset="images/icons/empty.png" data-srcset="images/journals/journals-03.webp"><img src="images/icons/empty.png" data-src="images/journals/journals-03.jpg" alt="Контроль качества продукции" width="240" height="340">
+                              </picture>
+                      </div>
+                    </div>
+                    <div class="journals__info">
+                      <h3 class="journals__name">Контроль качества продукции</h3><a class="button" href="#modal-product" data-fancybox><span>Подписаться</span><span class="button__icon">
+                                <svg class="svg-icon-arrow-right" width="17" height="17">
+                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                </svg></span></a>
+                    </div>
+                  </li>
+                  <li class="journals__item">
+                    <div class="journals__top">
+                      <div class="journals__img">
+                              <picture class="lazyload">
+                                <source srcset="images/icons/empty.png" data-srcset="images/journals/journals-04.webp"><img src="images/icons/empty.png" data-src="images/journals/journals-04.jpg" alt="Мир измерений" width="240" height="340">
+                              </picture>
+                      </div>
+                    </div>
+                    <div class="journals__info">
+                      <h3 class="journals__name">Мир измерений</h3><a class="button" href="#modal-product" data-fancybox><span>Подписаться</span><span class="button__icon">
+                                <svg class="svg-icon-arrow-right" width="17" height="17">
+                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                </svg></span></a>
+                    </div>
+                  </li>
+                  <li class="journals__item">
+                    <div class="journals__top">
+                      <div class="journals__img">
+                              <picture class="lazyload">
+                                <source srcset="images/icons/empty.png" data-srcset="images/journals/journals-05.webp"><img src="images/icons/empty.png" data-src="images/journals/journals-05.jpg" alt="Business Excellence" width="240" height="340">
+                              </picture>
+                      </div>
+                    </div>
+                    <div class="journals__info">
+                      <h3 class="journals__name">Business Excellence</h3><a class="button" href="#modal-product" data-fancybox><span>Подписаться</span><span class="button__icon">
+                                <svg class="svg-icon-arrow-right" width="17" height="17">
+                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                </svg></span></a>
+                    </div>
+                  </li>
+                  <li class="journals__item">
+                    <div class="journals__top">
+                      <div class="journals__img">
+                              <picture class="lazyload">
+                                <source srcset="images/icons/empty.png" data-srcset="images/journals/journals-06.webp"><img src="images/icons/empty.png" data-src="images/journals/journals-06.jpg" alt="Методы менеджмента качества" width="240" height="340">
+                              </picture>
+                      </div>
+                    </div>
+                    <div class="journals__info">
+                      <h3 class="journals__name">Методы менеджмента качества</h3><a class="button" href="#modal-product" data-fancybox><span>Подписаться</span><span class="button__icon">
+                                <svg class="svg-icon-arrow-right" width="17" height="17">
+                                  <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
+                                </svg></span></a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--discount">
+        <div class="section__wrapper container">
+          <div class="section__header section__header--border">
+            <div class="section__header-row">
+              <h2 class="section__header-title">Скидки</h2>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="discount">
+              <div class="discount__inner">
+                <div class="discount__main">
+                  <div class="discount__section discount__section--second">
+                    <div class="discount__info">
+                      <h3 class="discount__title">При оформлении подписки на год в издательстве предоставляются скидки:</h3>
+                      <ul class="discount__list">
+                              <li class="discount__item">
+                                <p class="discount__accent">5%</p>
+                                <p class="discount__text">при подписке на два наименования журналов</p>
+                              </li>
+                              <li class="discount__item">
+                                <p class="discount__accent">10%</p>
+                                <p class="discount__text">при подписке на три и более наименования журналов</p>
+                              </li>
+                              <li class="discount__item">
+                                <p class="discount__accent">15%</p>
+                                <p class="discount__text">при подписке на четыре и более наименования журнала</p>
+                              </li>
+                              <li class="discount__item">
+                                <p class="discount__accent">15%</p>
+                                <p class="discount__text">постоянным подписчикам журналов, оформлявшим подписку в издательстве в течение последних трех лет подряд, а также подписчикам, документально подтвердившим факт подписки в указанные годы через подписные агентства или «Почту России»</p>
+                              </li>
+                              <li class="discount__item">
+                                <p class="discount__accent">15%</p>
+                                <p class="discount__text">образовательным учреждениям, а также студентам, аспирантам и преподавателям</p>
+                              </li>
+                      </ul>
+                    </div>
+                    <div class="discount__content">
+                      <h3 class="discount__title">При подписке на два и более экземпляра журнала действует специальное предложение. Ваша выгода при подписке:</h3>
+                      <ul class="discount__list">
+                              <li class="discount__item">
+                                <p class="discount__accent">50%</p>
+                                <p class="discount__text">на электронную версию журнала при одновременной подписке на печатную и электронную версии</p>
+                              </li>
+                              <li class="discount__item">
+                                <p class="discount__accent">40%</p>
+                                <p class="discount__text">на второй экземпляр</p>
+                              </li>
+                              <li class="discount__item">
+                                <p class="discount__accent">60%</p>
+                                <p class="discount__text">на третий экземпляр</p>
+                              </li>
+                              <li class="discount__item">
+                                <p class="discount__accent">75%</p>
+                                <p class="discount__text">на четвертый экземпляр</p>
+                              </li>
+                              <li class="discount__item">
+                                <p class="discount__accent">Скидки не суммируются</p>
+                              </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--place">
+        <div class="section__wrapper container">
+          <div class="section__header section__header--border">
+            <div class="section__header-row">
+              <h2 class="section__header-title">Где еще можно подписаться на журналы РИА&nbsp;«Стандарты и качество»</h2>
+            </div>
+          </div>
+          <div class="section__content">
+            <div class="place">
+              <div class="place__inner">
+                <div class="place__swiper swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="place__item">
+                        <div class="place__box">
+                          <div class="place__img">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/place/place-01.webp"><img src="images/icons/empty.png" data-src="images/place/place-01.png" alt="Почта России" width="257" height="182">
+                                  </picture>
+                          </div>
+                          <div class="place__info">
+                            <h3 class="place__title">Почта России</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="place__item">
+                        <div class="place__box">
+                          <div class="place__img">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/place/place-02.webp"><img src="images/icons/empty.png" data-src="images/place/place-02.png" alt="Урал-Пресс" width="183" height="130">
+                                  </picture>
+                          </div>
+                          <div class="place__info">
+                            <h3 class="place__title">Урал-Пресс</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="place__item">
+                        <div class="place__box">
+                          <div class="place__img">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/place/place-03.webp"><img src="images/icons/empty.png" data-src="images/place/place-03.png" alt="Прессинформ" width="257" height="182">
+                                  </picture>
+                          </div>
+                          <div class="place__info">
+                            <h3 class="place__title">Прессинформ</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="place__item">
+                        <div class="place__box">
+                          <div class="place__img">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/place/place-04.webp"><img src="images/icons/empty.png" data-src="images/place/place-04.png" alt="Агентство «Книга-Сервис»" width="257" height="182">
+                                  </picture>
+                          </div>
+                          <div class="place__info">
+                            <h3 class="place__title">Агентство «Книга-Сервис»</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                        <div class="swiper-controls">
+                          <button class="swiper-button-prev" aria-label="Переключиться на предыдущий слайд"></button>
+                          <div class="swiper-pagination"></div>
+                          <button class="swiper-button-next" aria-label="Переключиться на следующий слайд"></button>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--contacts">
+        <div class="section__wrapper container">
+          <div class="section__content">
+            <div class="contacts">
+              <div class="contacts__inner">
+                <div class="contacts__row">
+                  <div class="contacts__section">
+                    <h2 class="contacts__title">Контакты</h2>
+                    <address class="contacts__address address">
+                      <div class="address__list address__list--second">
+                        <div class="address__item">
+                          <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
+                        </div><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
+                          <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">editor_site@mirq.ru</div></a><a class="address__item" href="tel:+74957716652">
+                          <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
+                          <div class="address__text">+7 (495) 771 6652</div></a>
+                      </div>
+                    </address>
+                    <div class="contacts__map map"></div>
+                  </div>
+                  <div class="contacts__content">
+                    <form class="contacts__form form" action="#" data-validate-form>
+                      <div class="form__header">
+                        <h2 class="form__title">Остались вопросы?</h2>
+                        <p class="form__text">Оставьте свои данные в форме ниже. Наши менеджеры ответят вам в скором времени.</p>
+                      </div>
+                      <div class="form__main">
+                        <div class="form__top">
+                          <div class="form__box">
+                            <label class="form__label form__label--half">
+                              <input class="form__input" type="text" placeholder="Имя" name="form-name" required><span class="form__error">Обязательное поле</span>
+                            </label>
+                            <label class="form__label form__label--half">
+                              <input class="form__input" type="text" placeholder="Фамилия">
+                            </label>
+                            <label class="form__label">
+                              <input class="form__input" type="email" placeholder="E-mail" name="form-email" required><span class="form__error">Обязательное поле</span>
+                            </label>
+                            <label class="form__label">
+                              <textarea class="form__textarea" placeholder="Текст сообщения"></textarea>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__middle">
+                          <div class="agree">
+                            <label class="agree__label">
+                              <input type="checkbox" name="form-agree" required><span class="agree__checkbox"></span><span class="agree__text">Я согласен с <a href="#">Правилами обработки и хранения персональных данных</a></span>
+                            </label><span class="agree__error">Обязательное поле</span>
+                          </div>
+                        </div>
+                        <div class="form__bottom">
+                                <button class="button form__button"><span>Подписаться</span>
+                                </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="modal modal--product" id="modal-product">
+        <div class="modal__inner">
+          <div class="unit">
+            <div class="unit__inner">
+              <div class="unit__main">
+                <div class="unit__info">
+                  <div class="unit__top">
+                    <h2 class="unit__name">Стандарты и качество</h2>
+                  </div>
+                  <div class="unit__content">
+                    <div class="unit__img">
+                      <div class="bg-image">
+                                  <picture class="lazyload">
+                                    <source srcset="images/icons/empty.png" data-srcset="images/unit/unit-bg.webp"><img src="images/icons/empty.png" data-src="images/unit/unit-bg.jpg" alt="фоновая картинка" width="520" height="520">
+                                  </picture>
+                      </div>
+                                <picture class="lazyload">
+                                  <source srcset="images/icons/empty.png" data-srcset="images/unit/unit.webp"><img src="images/icons/empty.png" data-src="images/unit/unit.png" alt="Стандарты и качество" width="240" height="340">
+                                </picture>
+                    </div>
+                  </div>
+                  <div class="unit__table">
+                    <div class="unit__table-top">
+                      <p class="unit__table-plan">варианты подписки</p>
+                      <p class="unit__table-plan">6 месяцев</p>
+                      <p class="unit__table-plan">12 месяцев</p>
+                    </div>
+                    <div class="unit__table-main">
+                      <div class="unit__table-package">
+                        <div class="unit__table-info">
+                          <h3 class="unit__table-name">Печатная</h3>
+                          <p class="unit__table-description">(комплект с business Excellence)</p>
+                        </div>
+                        <div class="unit__table-controls">
+                          <label class="unit__table-label">
+                            <input type="radio" name="unit"><span class="unit__table-label-box"><span class="unit__table-label-checkbox"></span><span class="unit__table-label-current">47 640 ₽</span><span class="unit__table-label-old">47 640 ₽</span></span>
+                          </label>
+                        </div>
+                        <div class="unit__table-controls">
+                          <label class="unit__table-label">
+                            <input type="radio" name="unit"><span class="unit__table-label-box"><span class="unit__table-label-checkbox"></span><span class="unit__table-label-current">71 400 ₽</span><span class="unit__table-label-old">47 640 ₽</span></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="unit__table-package">
+                        <div class="unit__table-info">
+                          <h3 class="unit__table-name">Электронная</h3>
+                          <p class="unit__table-description">(комплект с business Excellence)</p>
+                        </div>
+                        <div class="unit__table-controls">
+                          <label class="unit__table-label">
+                            <input type="radio" name="unit"><span class="unit__table-label-box"><span class="unit__table-label-checkbox"></span><span class="unit__table-label-current">47 640 ₽</span><span class="unit__table-label-old">47 640 ₽</span></span>
+                          </label>
+                        </div>
+                        <div class="unit__table-controls">
+                          <label class="unit__table-label">
+                            <input type="radio" name="unit"><span class="unit__table-label-box"><span class="unit__table-label-checkbox"></span><span class="unit__table-label-current">71 400 ₽</span><span class="unit__table-label-old">47 640 ₽</span></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="unit__table-package">
+                        <div class="unit__table-info">
+                          <h3 class="unit__table-name">Электронная</h3>
+                        </div>
+                        <div class="unit__table-controls">
+                          <label class="unit__table-label">
+                            <input type="radio" name="unit"><span class="unit__table-label-box"><span class="unit__table-label-checkbox"></span><span class="unit__table-label-current">47 640 ₽</span><span class="unit__table-label-old">47 640 ₽</span></span>
+                          </label>
+                        </div>
+                        <div class="unit__table-controls">
+                          <label class="unit__table-label">
+                            <input type="radio" name="unit"><span class="unit__table-label-box"><span class="unit__table-label-checkbox"></span><span class="unit__table-label-current">71 400 ₽</span><span class="unit__table-label-old">47 640 ₽</span></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="unit__table-package">
+                        <div class="unit__table-info">
+                          <h3 class="unit__table-name">Печатная + электронная</h3>
+                          <p class="unit__table-description">(комплект с business Excellence)</p>
+                        </div>
+                        <div class="unit__table-controls">
+                          <label class="unit__table-label">
+                            <input type="radio" name="unit"><span class="unit__table-label-box"><span class="unit__table-label-checkbox"></span><span class="unit__table-label-current">47 640 ₽</span><span class="unit__table-label-old">47 640 ₽</span></span>
+                          </label>
+                        </div>
+                        <div class="unit__table-controls">
+                          <label class="unit__table-label">
+                            <input type="radio" name="unit"><span class="unit__table-label-box"><span class="unit__table-label-checkbox"></span><span class="unit__table-label-current">71 400 ₽</span><span class="unit__table-label-old">47 640 ₽</span></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="unit__table-bottom">
+                      <div class="unit__table-promotion">
+                        <p>Акция</p>
+                        <p class="unit__table-promotion-notice">Подписывайтесь на 12 номеров — платите&nbsp;за 9!</p>
+                      </div>
+                      <div class="unit__table-manage"><a class="button button--slim button--basket" href="#"><span>В корзину</span><span class="button__icon">
+                                      <svg class="svg-icon-cart" width="17" height="17">
+                                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                      </svg></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="package">
+            <div class="package__inner">
+              <div class="package__top">
+                <h2 class="package__title">Соберите свой комплект</h2>
+              </div>
+              <ul class="package__list">
+                <li class="package__item">
+                  <div class="package__box">
+                    <div class="package__img">
+                                <picture class="lazyload">
+                                  <source srcset="images/icons/empty.png" data-srcset="images/package/package-01.webp"><img src="images/icons/empty.png" data-src="images/package/package-01.jpg" alt="Методы менеджмента качества" width="268" height="268">
+                                </picture>
+                    </div>
+                    <div class="package__info">
+                      <div class="package__name">Методы менеджмента качества</div>
+                      <div class="package__table">
+                                  <div class="package__table-col package__table-header">
+                                    <p class="package__table-title">Версия</p>
+                                    <p class="package__table-title">6 мес.</p>
+                                    <p class="package__table-title">12 мес.</p>
+                                  </div>
+                                  <div class="package__table-col">
+                                    <p class="package__table-title">Печатная</p>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                  </div>
+                                  <div class="package__table-col">
+                                    <p class="package__table-title">Электронная</p>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                  </div>
+                                  <div class="package__table-col">
+                                    <p class="package__table-title">Печатная + электронная</p>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                  </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="package__item">
+                  <div class="package__box">
+                    <div class="package__img">
+                                <picture class="lazyload">
+                                  <source srcset="images/icons/empty.png" data-srcset="images/package/package-02.webp"><img src="images/icons/empty.png" data-src="images/package/package-02.jpg" alt="Контроль качества продукции" width="268" height="268">
+                                </picture>
+                    </div>
+                    <div class="package__info">
+                      <div class="package__name">Контроль качества продукции</div>
+                      <div class="package__table">
+                                  <div class="package__table-col package__table-header">
+                                    <p class="package__table-title">Версия</p>
+                                    <p class="package__table-title">6 мес.</p>
+                                    <p class="package__table-title">12 мес.</p>
+                                  </div>
+                                  <div class="package__table-col">
+                                    <p class="package__table-title">Печатная</p>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                  </div>
+                                  <div class="package__table-col">
+                                    <p class="package__table-title">Электронная</p>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                  </div>
+                                  <div class="package__table-col">
+                                    <p class="package__table-title">Печатная + электронная</p>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                  </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="package__item">
+                  <div class="package__box">
+                    <div class="package__img">
+                                <picture class="lazyload">
+                                  <source srcset="images/icons/empty.png" data-srcset="images/package/package-03.webp"><img src="images/icons/empty.png" data-src="images/package/package-03.jpg" alt="Мир измерений" width="268" height="268">
+                                </picture>
+                    </div>
+                    <div class="package__info">
+                      <div class="package__name">Мир измерений</div>
+                      <div class="package__table">
+                                  <div class="package__table-col package__table-header">
+                                    <p class="package__table-title">Версия</p>
+                                    <p class="package__table-title">6 мес.</p>
+                                    <p class="package__table-title">12 мес.</p>
+                                  </div>
+                                  <div class="package__table-col">
+                                    <p class="package__table-title">Печатная</p>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                  </div>
+                                  <div class="package__table-col">
+                                    <p class="package__table-title">Электронная</p>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                  </div>
+                                  <div class="package__table-col">
+                                    <p class="package__table-title">Печатная + электронная</p>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                  </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="package__item">
+                  <div class="package__box">
+                    <div class="package__img">
+                                <picture class="lazyload">
+                                  <source srcset="images/icons/empty.png" data-srcset="images/package/package-04.webp"><img src="images/icons/empty.png" data-src="images/package/package-04.jpg" alt="Business excellence" width="268" height="268">
+                                </picture>
+                    </div>
+                    <div class="package__info">
+                      <div class="package__name">Business excellence</div>
+                      <div class="package__table">
+                                  <div class="package__table-col package__table-header">
+                                    <p class="package__table-title">Версия</p>
+                                    <p class="package__table-title">6 мес.</p>
+                                    <p class="package__table-title">12 мес.</p>
+                                  </div>
+                                  <div class="package__table-col">
+                                    <p class="package__table-title">Печатная</p>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                  </div>
+                                  <div class="package__table-col">
+                                    <p class="package__table-title">Электронная</p>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                  </div>
+                                  <div class="package__table-col">
+                                    <p class="package__table-title">Печатная + электронная</p>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                  </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="package__item">
+                  <div class="package__box">
+                    <div class="package__img">
+                                <picture class="lazyload">
+                                  <source srcset="images/icons/empty.png" data-srcset="images/package/package-05.webp"><img src="images/icons/empty.png" data-src="images/package/package-05.jpg" alt="Менеджмент качества в медицине" width="268" height="268">
+                                </picture>
+                    </div>
+                    <div class="package__info">
+                      <div class="package__name">Менеджмент качества в медицине</div>
+                      <div class="package__table">
+                                  <div class="package__table-col package__table-header">
+                                    <p class="package__table-title">Версия</p>
+                                    <p class="package__table-title">6 мес.</p>
+                                    <p class="package__table-title">12 мес.</p>
+                                  </div>
+                                  <div class="package__table-col">
+                                    <p class="package__table-title">Печатная</p>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                  </div>
+                                  <div class="package__table-col">
+                                    <p class="package__table-title">Электронная</p>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                  </div>
+                                  <div class="package__table-col">
+                                    <p class="package__table-title">Печатная + электронная</p>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                              <label class="package__table-manage">
+                                                <input type="radio" name="package">
+                                                <div class="package__table-checkbox"></div>
+                                                <div class="package__table-prices">
+                                                  <p class="package__table-current">71 400 ₽</p>
+                                                  <p class="package__table-old">99 640 ₽</p>
+                                                </div>
+                                              </label>
+                                  </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="notice">
+                <div class="notice__inner">
+                  <form class="notice__form" action="#">
+                    <div class="notice__checkboxes">
+                      <div class="agree">
+                        <label class="agree__label">
+                          <input type="checkbox" name="form-agree"><span class="agree__checkbox"></span><span class="agree__text">вы представитель образовательного учреждения</span>
+                        </label>
+                      </div>
+                      <div class="agree">
+                        <label class="agree__label">
+                          <input type="checkbox" name="form-agree"><span class="agree__checkbox"></span><span class="agree__text">вы подписываетесь на журналы РИА «Стандарты и качество» более 3 лет</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="notice__manage">
+                      <div class="notice__prices">
+                        <div class="notice__price">К оплате<span>999 999 руб.</span></div>
+                        <div class="notice__price notice__price--economy">Вы сэкономили<span>999 999 руб.</span></div>
+                      </div>
+                                    <button class="button button--slim"><span>В корзину</span><span class="button__icon">
+                                        <svg class="svg-icon-cart" width="17" height="17">
+                                          <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                        </svg></span>
+                                    </button>
+                    </div>
+                    <div class="notice__info">
+                      <p class="notice__description">Итоговая стоимость будет определена после авторизации</p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="complex">
+            <div class="complex__inner">
+              <div class="complex__top">
+                <h2 class="complex__title">Комплексная подписка</h2>
+                <p class="complex__description">Цена указана за год!</p>
+              </div>
+              <ul class="complex__list">
+                <li class="complex__item">
+                  <div class="complex__box">
+                    <div class="complex__img">
+                                <picture class="lazyload">
+                                  <source srcset="images/icons/empty.png" data-srcset="images/complex/complex-01.webp"><img src="images/icons/empty.png" data-src="images/complex/complex-01.jpg" alt="Мини" width="446" height="466">
+                                </picture>
+                    </div>
+                    <div class="complex__info">
+                      <h3 class="complex__name">Мини</h3>
+                      <div class="complex__controls">
+                        <input type="radio" name="complex-price-1" id="complex-id-1-1" checked>
+                        <input type="radio" name="complex-price-1" id="complex-id-1-2">
+                        <input type="radio" name="complex-price-1" id="complex-id-1-3">
+                        <div class="complex__tabs">
+                          <div class="complex__tabs-item">
+                            <label class="complex__tabs-btn is-active" for="complex-id-1-1">Электронная</label>
+                          </div>
+                          <div class="complex__tabs-item">
+                            <label class="complex__tabs-btn" for="complex-id-1-2">Печатная</label>
+                          </div>
+                          <div class="complex__tabs-item">
+                            <label class="complex__tabs-btn" for="complex-id-1-3">Печатная + Электронная</label>
+                          </div>
+                        </div>
+                        <div class="complex__cost">
+                          <div class="complex__cost-plan is-active">
+                            <div class="complex__cost-item">
+                              <p>Цена журналов по отдельности</p>
+                              <p class="complex__cost-price complex__cost-price--old">121 200 руб.</p>
+                            </div>
+                            <div class="complex__cost-item">
+                              <p>Цена комплекта</p>
+                              <p class="complex__cost-price">115 140 руб.</p>
+                            </div>
+                          </div>
+                          <div class="complex__cost-plan">
+                            <div class="complex__cost-item">
+                              <p>Цена журналов по отдельности</p>
+                              <p class="complex__cost-price complex__cost-price--old">166 080 руб.</p>
+                            </div>
+                            <div class="complex__cost-item">
+                              <p>Цена комплекта</p>
+                              <p class="complex__cost-price">149 472 руб.</p>
+                            </div>
+                          </div>
+                          <div class="complex__cost-plan">
+                            <div class="complex__cost-item">
+                              <p>Цена журналов по отдельности</p>
+                              <p class="complex__cost-price complex__cost-price--old">177 640 руб.</p>
+                            </div>
+                            <div class="complex__cost-item">
+                              <p>Цена комплекта</p>
+                              <p class="complex__cost-price">150 994 руб.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="complex__bottom"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                      <svg class="svg-icon-cart" width="17" height="17">
+                                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                      </svg></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="complex__item">
+                  <div class="complex__box">
+                    <div class="complex__img">
+                                <picture class="lazyload">
+                                  <source srcset="images/icons/empty.png" data-srcset="images/complex/complex-02.webp"><img src="images/icons/empty.png" data-src="images/complex/complex-02.jpg" alt="Миди" width="446" height="466">
+                                </picture>
+                    </div>
+                    <div class="complex__info">
+                      <h3 class="complex__name">Миди</h3>
+                      <div class="complex__controls">
+                        <input type="radio" name="complex-price-2" id="complex-id-2-1" checked>
+                        <input type="radio" name="complex-price-2" id="complex-id-2-2">
+                        <input type="radio" name="complex-price-2" id="complex-id-2-3">
+                        <div class="complex__tabs">
+                          <div class="complex__tabs-item">
+                            <label class="complex__tabs-btn is-active" for="complex-id-2-1">Электронная</label>
+                          </div>
+                          <div class="complex__tabs-item">
+                            <label class="complex__tabs-btn" for="complex-id-2-2">Печатная</label>
+                          </div>
+                          <div class="complex__tabs-item">
+                            <label class="complex__tabs-btn" for="complex-id-2-3">Печатная + Электронная</label>
+                          </div>
+                        </div>
+                        <div class="complex__cost">
+                          <div class="complex__cost-plan is-active">
+                            <div class="complex__cost-item">
+                              <p>Цена журналов по отдельности</p>
+                              <p class="complex__cost-price complex__cost-price--old">166 080 руб.</p>
+                            </div>
+                            <div class="complex__cost-item">
+                              <p>Цена комплекта</p>
+                              <p class="complex__cost-price">149 472 руб.</p>
+                            </div>
+                          </div>
+                          <div class="complex__cost-plan">
+                            <div class="complex__cost-item">
+                              <p>Цена журналов по отдельности</p>
+                              <p class="complex__cost-price complex__cost-price--old">177 640 руб.</p>
+                            </div>
+                            <div class="complex__cost-item">
+                              <p>Цена комплекта</p>
+                              <p class="complex__cost-price">150 994 руб.</p>
+                            </div>
+                          </div>
+                          <div class="complex__cost-plan">
+                            <div class="complex__cost-item">
+                              <p>Цена журналов по отдельности</p>
+                              <p class="complex__cost-price complex__cost-price--old">121 200 руб.</p>
+                            </div>
+                            <div class="complex__cost-item">
+                              <p>Цена комплекта</p>
+                              <p class="complex__cost-price">115 140 руб.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="complex__bottom"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                      <svg class="svg-icon-cart" width="17" height="17">
+                                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                      </svg></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="complex__item">
+                  <div class="complex__box">
+                    <div class="complex__img">
+                                <picture class="lazyload">
+                                  <source srcset="images/icons/empty.png" data-srcset="images/complex/complex-03.webp"><img src="images/icons/empty.png" data-src="images/complex/complex-03.jpg" alt="Макси" width="446" height="466">
+                                </picture>
+                    </div>
+                    <div class="complex__info">
+                      <h3 class="complex__name">Макси</h3>
+                      <div class="complex__controls">
+                        <input type="radio" name="complex-price-3" id="complex-id-3-1" checked>
+                        <input type="radio" name="complex-price-3" id="complex-id-3-2">
+                        <input type="radio" name="complex-price-3" id="complex-id-3-3">
+                        <div class="complex__tabs">
+                          <div class="complex__tabs-item">
+                            <label class="complex__tabs-btn is-active" for="complex-id-3-1">Электронная</label>
+                          </div>
+                          <div class="complex__tabs-item">
+                            <label class="complex__tabs-btn" for="complex-id-3-2">Печатная</label>
+                          </div>
+                          <div class="complex__tabs-item">
+                            <label class="complex__tabs-btn" for="complex-id-3-3">Печатная + Электронная</label>
+                          </div>
+                        </div>
+                        <div class="complex__cost">
+                          <div class="complex__cost-plan is-active">
+                            <div class="complex__cost-item">
+                              <p>Цена журналов по отдельности</p>
+                              <p class="complex__cost-price complex__cost-price--old">166 080 руб.</p>
+                            </div>
+                            <div class="complex__cost-item">
+                              <p>Цена комплекта</p>
+                              <p class="complex__cost-price">149 472 руб.</p>
+                            </div>
+                          </div>
+                          <div class="complex__cost-plan">
+                            <div class="complex__cost-item">
+                              <p>Цена журналов по отдельности</p>
+                              <p class="complex__cost-price complex__cost-price--old">121 200 руб.</p>
+                            </div>
+                            <div class="complex__cost-item">
+                              <p>Цена комплекта</p>
+                              <p class="complex__cost-price">115 140 руб.</p>
+                            </div>
+                          </div>
+                          <div class="complex__cost-plan">
+                            <div class="complex__cost-item">
+                              <p>Цена журналов по отдельности</p>
+                              <p class="complex__cost-price complex__cost-price--old">177 640 руб.</p>
+                            </div>
+                            <div class="complex__cost-item">
+                              <p>Цена комплекта</p>
+                              <p class="complex__cost-price">150 994 руб.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="complex__bottom"><a class="button button--slim" href="#"><span>В корзину</span><span class="button__icon">
+                                      <svg class="svg-icon-cart" width="17" height="17">
+                                        <use xlink:href="images/sprites/main.stack.svg#svg-icon-cart"></use>
+                                      </svg></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="notice">
+                <div class="notice__inner">
+                  <div class="notice__info">
+                    <p class="notice__description">Итоговая стоимость будет определена после авторизации</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <div class="footer__menu container">
+            <div class="footer__left"><a class="footer__logo" href="#"><img src="images/icons/logo.svg" alt="СК — стандарты и качество" width="210" height="60"></a>
+              <div class="footer__copy footer__copy--desktop">
+                <div>2000—2024 © РИА «Стандарты и качество»: cтандартизация, метрология, менеджмент качества.</div>
+                <div>Все права защищены и охраняются законом.</div>
+              </div>
+              <div class="footer__links"><a href="#">Карта сайта</a></div>
+            </div>
+            <nav class="footer__nav">
+              <div class="footer__nav-list">
+                <div class="footer__nav-col"><a href="#">Журналы</a><a href="#">Подписка</a><a href="#">Электронная библиотека</a><a href="#">Абонементный доступ</a><a href="#">Quality News</a></div>
+                <div class="footer__nav-col"><a href="#">О нас</a><a href="#">Услуги</a><a href="#">Мероприятия</a><a href="#">Редакционная политика</a><a href="#">Авторам</a></div>
+              </div>
+            </nav>
+            <address class="footer__address address">
+              <div class="address__list"><a class="address__item" href="tel:+74957716652">
+                  <div class="address__icon"><img src="images/address/address-phone.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">+7 (495) 771 6652</div></a><a class="address__item" href="mailto:editor_site@mirq.ru?&amp;subject=Заголовок%20письма&amp;body=Содержимое%20письма">
+                  <div class="address__icon"><img src="images/address/address-email.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">editor_site@mirq.ru</div></a>
+                <div class="address__item">
+                  <div class="address__icon"><img src="images/address/address-location.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">115280 г. Москва, ул. Мастеркова, дом 4. Бизнес-центр «Панорама»</div>
+                </div>
+                <div class="address__item">
+                  <div class="address__icon"><img src="images/address/address-time.svg" alt="иконка" width="31" height="31"></div>
+                  <div class="address__text">
+                    <p>Пн-Чт 9:00-18:00 </p>
+                    <p>Пт 9:00-16:45</p>
+                    <p>Сб-Вс выходные</p>
+                  </div>
+                </div>
+              </div>
+            </address>
+            <div class="footer__copy footer__copy--mob">
+              <div>2000—2024 © РИА «Стандарты и качество»: cтандартизация, метрология, менеджмент качества.</div>
+              <div>Все права защищены и охраняются законом.</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__legal container"><a href="#">Права использования электронных журналов</a><a href="#">Правила пользования сайтом</a><a class="footer__legal-mob" href="#">Карта сайта</a><a href="#">Правила обработки и хранения персональных данных</a><a href="#">Соглашение пользователя</a><a href="#"><span>Разработка сайта</span><img src="images/icons/completo.svg" alt="completo" width="63" height="23"></a></div>
+        </div>
+      </div>
+    </footer><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=5e6f3718-a525-41b0-832c-11d7f6b0f8a4"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

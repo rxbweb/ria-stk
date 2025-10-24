@@ -1,5 +1,25 @@
 include ../../mixins/_mixins
 
+-
+   const numbersList02 = [
+      {
+         num: '100+',
+         text: 'Отраслевых комитета',
+      },
+      {
+         num: '1000+',
+         text: 'Членов организации',
+      },
+      {
+         num: '12',
+         text: 'Отраслевых комитета',
+      },
+      {
+         num: '73',
+         text: 'Отделения по всей России',
+      },
+   ]
+
 section.section.section--organization
    .section__wrapper
       .organization.organization--secondary
@@ -17,15 +37,7 @@ section.section.section--organization
                .organization__right
                   .numbers
                      ul.numbers__list.numbers__list--2
-                        li.numbers__item
-                           .numbers__num 100+
-                           .numbers__text Отраслевых комитета
-                        li.numbers__item
-                           .numbers__num 1000+
-                           .numbers__text Членов организации
-                        li.numbers__item
-                           .numbers__num 12
-                           .numbers__text Отраслевых комитета
-                        li.numbers__item
-                           .numbers__num 73
-                           .numbers__text Отделения по всей России
+                        each number in numbersList02
+                           li.numbers__item
+                              .numbers__num= number.num
+                              .numbers__text= number.text

@@ -1,0 +1,119 @@
+include ../../mixins/_mixins
+
+-
+   const complexList = [
+      {
+         id: 1,
+         img: 'images/complex/complex-01.jpg',
+         name: 'Мини',
+         priceOne: {
+            current: '121 200 руб.',
+            total: '115 140 руб.'
+         },
+         priceTwo: {
+            current: '166 080 руб.',
+            total: '149 472 руб.'
+         },
+         priceThree: {
+            current: '177 640 руб.',
+            total: '150 994 руб.'
+         }
+      },
+      {
+         id: 2,
+         img: 'images/complex/complex-02.jpg',
+         name: 'Миди',
+         priceOne: {
+            current: '166 080 руб.',
+            total: '149 472 руб.'
+         },
+         priceTwo: {
+            current: '177 640 руб.',
+            total: '150 994 руб.'
+         },
+         priceThree: {
+            current: '121 200 руб.',
+            total: '115 140 руб.'
+         },
+      },
+      {
+         id: 3,
+         img: 'images/complex/complex-03.jpg',
+         name: 'Макси',
+         priceOne: {
+            current: '166 080 руб.',
+            total: '149 472 руб.'
+         },
+         priceTwo: {
+            current: '121 200 руб.',
+            total: '115 140 руб.'
+         },
+         priceThree: {
+            current: '177 640 руб.',
+            total: '150 994 руб.'
+         },
+      },
+   ]
+
+.complex
+   .complex__inner
+      .complex__top
+         h2.complex__title Комплексная подписка
+         p.complex__description Цена указана за год!
+      ul.complex__list
+         each complex, index in complexList
+            li.complex__item
+               .complex__box
+                  .complex__img
+                     +picture(complex.img, false, complex.name, 446, 466)
+                  .complex__info
+                     h3.complex__name= complex.name
+                     .complex__controls
+                        input(
+                           type="radio", 
+                           name=`complex-price-${complex.id}`, 
+                           id=`complex-id-${complex.id}-1`, 
+                           checked
+                        )
+                        input(
+                           type="radio", 
+                           name=`complex-price-${complex.id}`, 
+                           id=`complex-id-${complex.id}-2`
+                        )
+                        input(
+                           type="radio", 
+                           name=`complex-price-${complex.id}`, 
+                           id=`complex-id-${complex.id}-3`
+                        )
+                        .complex__tabs
+                           .complex__tabs-item
+                              label.complex__tabs-btn.is-active(for=`complex-id-${complex.id}-1`) Электронная
+                           .complex__tabs-item
+                              label.complex__tabs-btn(for=`complex-id-${complex.id}-2`) Печатная
+                           .complex__tabs-item
+                              label.complex__tabs-btn(for=`complex-id-${complex.id}-3`) Печатная + Электронная
+                        .complex__cost
+                           .complex__cost-plan.is-active
+                              .complex__cost-item
+                                 p Цена журналов по отдельности
+                                 p.complex__cost-price.complex__cost-price--old= complex.priceOne.current
+                              .complex__cost-item
+                                 p Цена комплекта
+                                 p.complex__cost-price= complex.priceOne.total
+                           .complex__cost-plan
+                              .complex__cost-item
+                                 p Цена журналов по отдельности
+                                 p.complex__cost-price.complex__cost-price--old= complex.priceTwo.current
+                              .complex__cost-item
+                                 p Цена комплекта
+                                 p.complex__cost-price= complex.priceTwo.total
+                           .complex__cost-plan
+                              .complex__cost-item
+                                 p Цена журналов по отдельности
+                                 p.complex__cost-price.complex__cost-price--old= complex.priceThree.current
+                              .complex__cost-item
+                                 p Цена комплекта
+                                 p.complex__cost-price= complex.priceThree.total
+                     .complex__bottom
+                        +button-icon('link', 'В корзину', 'button--slim', 'icon-cart')
+      include ../notice/_notice-02

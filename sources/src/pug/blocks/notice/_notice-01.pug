@@ -1,0 +1,28 @@
+include ../../mixins/_mixins
+
+.notice
+   .notice__inner
+      form.notice__form(action="#")
+         .notice__checkboxes
+            .agree
+               label.agree__label
+                  input(type="checkbox" name="form-agree")
+                  span.agree__checkbox
+                  span.agree__text вы представитель образовательного учреждения
+            .agree
+               label.agree__label
+                  input(type="checkbox" name="form-agree")
+                  span.agree__checkbox
+                  span.agree__text вы подписываетесь на журналы РИА «Стандарты и качество» более 3 лет
+         .notice__manage
+            .notice__prices
+               .notice__price
+                  | К оплате
+                  span 999 999 руб.
+               .notice__price.notice__price--economy
+                  | Вы сэкономили
+                  span 999 999 руб.
+            +button-icon('button', 'В корзину', 'button--slim', 'icon-cart')
+         .notice__info
+            p.notice__description Итоговая стоимость будет определена после авторизации
+

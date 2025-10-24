@@ -467,12 +467,14 @@
                   <h2 class="join__title">Как оформить подписку?</h2>
                   <p>Очень просто! Внесите свой электронный адрес в поле «Ваш E-mail» и нажмите кнопку.</p>
                 </div>
-                <form class="join__form" action="#">
+                <form class="join__form" action="#" data-validate-form>
                   <div class="join__form-row">
-                    <input type="email" placeholder="Ваш E-mail"><a class="button" href="#"><span>Подписаться</span><span class="button__icon">
+                    <input type="email" name="email" placeholder="Ваш E-mail" required><span class="join__form-error">Неправильное поле</span>
+                          <button class="button"><span>Подписаться</span><span class="button__icon">
                               <svg class="svg-icon-arrow-right" width="17" height="17">
                                 <use xlink:href="images/sprites/main.stack.svg#svg-icon-arrow-right"></use>
-                              </svg></span></a>
+                              </svg></span>
+                          </button>
                   </div>
                 </form>
               </div>

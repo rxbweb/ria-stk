@@ -1,0 +1,46 @@
+include ../../mixins/_mixins
+
+-
+   const discountList01 = [
+      { accent: '5%', text: 'при подписке на два наименования журналов' },
+      { accent: '10%', text: 'при подписке на три и более наименования журналов' },
+      { accent: '15%', text: 'при подписке на четыре и более наименования журнала' },
+      { accent: '15%', text: 'постоянным подписчикам журналов, оформлявшим подписку в издательстве в течение последних трех лет подряд, а также подписчикам, документально подтвердившим факт подписки в указанные годы через подписные агентства или «Почту России»' },
+      { accent: '15%', text: 'образовательным учреждениям, а также студентам, аспирантам и преподавателям' }
+   ]
+
+   const discountList02 = [
+      { accent: '50%', text: 'на электронную версию журнала при одновременной подписке на печатную и электронную версии' },
+      { accent: '40%', text: 'на второй экземпляр' },
+      { accent: '60%', text: 'на третий экземпляр' },
+      { accent: '75%', text: 'на четвертый экземпляр' },
+      { accent: 'Скидки не суммируются' }
+   ]
+
+mixin discountItem(discount)
+   li.discount__item
+      if discount.accent
+         p.discount__accent= discount.accent
+      if discount.text
+         p.discount__text= discount.text
+
+section.section.section--discount
+   .section__wrapper.container
+      .section__header.section__header--border
+         .section__header-row
+            h2.section__header-title Скидки
+      .section__content
+         .discount
+            .discount__inner
+               .discount__main
+                  .discount__section.discount__section--second
+                     .discount__info
+                        h3.discount__title При оформлении подписки на год в издательстве предоставляются скидки:
+                        ul.discount__list
+                           each discount in discountList01
+                              +discountItem(discount)
+                     .discount__content
+                        h3.discount__title При подписке на два и более экземпляра журнала действует специальное предложение. Ваша выгода при подписке:
+                        ul.discount__list
+                           each discount in discountList02
+                              +discountItem(discount)

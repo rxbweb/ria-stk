@@ -1,0 +1,49 @@
+include ../../mixins/_mixins
+
+-
+   const placeList = [
+      {
+         img: 'images/place/place-01.png',
+         title: 'Почта России',
+         width: 257,
+         height: 182
+      },
+      {
+         img: 'images/place/place-02.png',
+         title: 'Урал-Пресс',
+         width: 183,
+         height: 130
+      },
+      {
+         img: 'images/place/place-03.png',
+         title: 'Прессинформ',
+         width: 257,
+         height: 182
+      },
+      {
+         img: 'images/place/place-04.png',
+         title: 'Агентство «Книга-Сервис»',
+         width: 257,
+         height: 182
+      },
+   ]
+
+section.section.section--place
+   .section__wrapper.container
+      .section__header.section__header--border
+         .section__header-row
+            h2.section__header-title Где еще можно подписаться на журналы РИА&nbsp;«Стандарты и качество»
+      .section__content
+         .place
+            .place__inner
+               .place__swiper.swiper
+                  .swiper-wrapper
+                     each place in placeList
+                        .swiper-slide
+                           .place__item
+                              .place__box
+                                 .place__img
+                                    +picture(place.img, false, place.title, place.width, place.height)
+                                 .place__info
+                                    h3.place__title= place.title
+                  +swiperControls()
